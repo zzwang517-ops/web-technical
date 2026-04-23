@@ -19,9 +19,11 @@ We will generate routes dynamically based on data to improve application flexibi
 ### 21.1.1 Task Description
 This task implements a Web Maze: Route Escape based on Vue 3. Using the reactive features and dynamic routing mechanism of Vue 3, an immersive web maze is constructed. Each level of logic in the maze is driven by nested routes and dynamic parameters of Vue Router.
 The effect is shown in Figure 21-1.
-![Image](../../assets/images/project-21/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-21/image-001.png" alt="Image">
+</p>
 
-_Figure 21-1 Web Maze: Route Escape_
+<p align="center"><em>Figure 21-1 Web Maze: Route Escape</em></p>
 
 ### 21.1.2 Knowledge Preparation
 In HTML, the &lt;a&gt; tag is used for page navigation. The &lt;a&gt; tag has an attribute called href; when assigned a corresponding web address or path, it navigates to the target page.
@@ -122,10 +124,10 @@ Dynamic parameters are accessed through the $route object. Sample code is as fol
 ```vue
 // User.vue (Options API)
 export default {
-mounted() {
-console.log(this.$route.params.id) // Get dynamic parameter id
-console.log(this.$route.query.name) // Get query parameter name
-}
+  mounted() {
+    console.log(this.$route.params.id) // Get dynamic parameter id
+    console.log(this.$route.query.name) // Get query parameter name
+  }
 }
 ```
 
@@ -134,11 +136,11 @@ Gets the current route information. Sample code is as follows.
 
 ```html
 <script setup>
-import { useRoute } from 'vue-router'
-const route = useRoute()
-console.log(route.params.id) // Dynamic parameter
-console.log(route.query.name) // Query parameter
-console.log(route.path) // Current path
+  import { useRoute } from 'vue-router'
+  const route = useRoute()
+  console.log(route.params.id) // Dynamic parameter
+  console.log(route.query.name) // Query parameter
+  console.log(route.path) // Current path
 </script>
 ```
 
@@ -173,10 +175,10 @@ import { RouterView } from 'vue-router';
 </template>
 <style>
 body {
-margin: 0;
-font-family: 'Segoe UI', system-ui, sans-serif;
-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
 }
 </style>
 ```
@@ -188,13 +190,13 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Room from '../views/Room.vue';
 const routes = [
-{ path: '/', component: Home },
-{ path: '/room', component: Room }
+  { path: '/', component: Home },
+  { path: '/room', component: Room }
 ];
 const router = createRouter({
-history: createWebHistory(import.meta.env.BASE_URL),
-routes
-});
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes
+  });
 export default router;
 ```
 
@@ -219,59 +221,59 @@ Enter the depths of the maze.
 </template>
 <style scoped>
 .maze-container {
-text-align: center;
-padding: 2rem;
-max-width: 800px;
-margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .maze-grid {
-position: relative;
-width: 300px;
-height: 300px;
-margin: 2rem auto;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 2rem auto;
 }
 .wall {
-position: absolute;
-background: linear-gradient(to bottom, #2c3e50, #34495e);
-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: absolute;
+  background: linear-gradient(to bottom, #2c3e50, #34495e);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 .path {
-position: absolute;
-top: 20px;
-left: 20px;
-right: 20px;
-bottom: 20px;
-display: flex;
-align-items: center;
-justify-content: center;
-background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-border-radius: 12px;
-box-shadow: inset 0 0 20px rgba(255,255,255,0.5);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 12px;
+  box-shadow: inset 0 0 20px rgba(255,255,255,0.5);
 }
 .escape-btn {
-padding: 0.75rem 1.5rem;
-background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-color: white;
-border-radius: 25px;
-text-decoration: none;
-font-weight: bold;
-box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-transition: all 0.3s ease;
-display: inline-flex;
-align-items: center;
-gap: 8px;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 .escape-btn:hover {
-transform: translateY(-5px) scale(1.05);
-box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 .key-icon {
-font-size: 1.2rem;
-animation: float 2s ease-in-out infinite;
+  font-size: 1.2rem;
+  animation: float 2s ease-in-out infinite;
 }
 @keyframes float {
-0%, 100% { transform: translateY(0); }
-50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 </style>
 ```
@@ -294,59 +296,59 @@ animation: float 2s ease-in-out infinite;
 </template>
 <style scoped>
 .room-container {
-max-width: 600px;
-margin: 3rem auto;
-padding: 2rem;
-background: rgba(255, 255, 255, 0.9);
-border-radius: 16px;
-box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-text-align: center;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  text-align: center;
 }
 .room-content {
-margin: 2rem 0;
-padding: 2rem;
-background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-border-radius: 12px;
-box-shadow: inset 0 0 15px rgba(255,255,255,0.7);
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  border-radius: 12px;
+  box-shadow: inset 0 0 15px rgba(255,255,255,0.7);
 }
 .rune-circle {
-width: 100px;
-height: 100px;
-margin: 1rem auto;
-background: radial-gradient(circle, #ffd3b6 0%, #ffaaa5 100%);
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 2rem;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-animation: pulse 3s infinite;
+  width: 100px;
+  height: 100px;
+  margin: 1rem auto;
+  background: radial-gradient(circle, #ffd3b6 0%, #ffaaa5 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: pulse 3s infinite;
 }
 @keyframes pulse {
-0%, 100% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-50% { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+  0%, 100% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+  50% { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
 }
 .back-btn {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-padding: 0.75rem 1.5rem;
-background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-color: #333;
-border-radius: 25px;
-text-decoration: none;
-font-weight: bold;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: #333;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 .back-btn:hover {
-transform: translateY(-3px);
-box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 .arrow-icon {
-font-size: 1.2rem;
-display: inline-block;
-transition: transform 0.3s;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: transform 0.3s;
 }
 </style>
 ```
@@ -358,9 +360,11 @@ This practical project implements the image file loading module in the photo sli
 
 ### 21.2.2 Effect Display
 The effect of the switching operation is shown in Figure 21-2.
-![Image](../../assets/images/project-21/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-21/image-002.png" alt="Image">
+</p>
 
-_Figure 21-2 Switch Themes_
+<p align="center"><em>Figure 21-2 Switch Themes</em></p>
 
 ### 21.2.3 Task Implementation
 
@@ -406,8 +410,8 @@ The code is as follows:
 
 ```html
 <script setup>
-import {appImages, appMode, appTheme} from "@/store.js";
-import {convertFilename, getId} from "@/helper.js";
+  import {appImages, appMode, appTheme} from "@/store.js";
+  import {convertFilename, getId} from "@/helper.js";
 </script>
 ```
 
@@ -418,26 +422,26 @@ The code is as follows:
 <!--Switching theme-->
 <p class="mb-2">Switching theme</p>
 <div class="border rounded-pill p-2 d-flex align-items-center mb-4">
-<div class="row gx-1 w-100">
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'A')" @click="appTheme = 'A'">A</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'B')" @click="appTheme = 'B'">B</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'C')" @click="appTheme = 'C'">C</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'D')" @click="appTheme = 'D'">D</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'E')" @click="appTheme = 'E'">E</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'F')" @click="appTheme = 'F'">F</button>
-</div>
-</div>
+  <div class="row gx-1 w-100">
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'A')" @click="appTheme = 'A'">A</button>
+    </div>
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'B')" @click="appTheme = 'B'">B</button>
+    </div>
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'C')" @click="appTheme = 'C'">C</button>
+    </div>
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'D')" @click="appTheme = 'D'">D</button>
+    </div>
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'E')" @click="appTheme = 'E'">E</button>
+    </div>
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'F')" @click="appTheme = 'F'">F</button>
+    </div>
+  </div>
 </div>
 <!--Import Photo-->
 ```
@@ -458,14 +462,14 @@ import EffectE from "@/components/EffectE.vue";
 import EffectF from "@/components/EffectF.vue";
 /* theme component */
 const themeComponent = computed(() => {
-return {
-A: EffectA,
-B: EffectB,
-C: EffectC,
-D: EffectD,
-E: EffectE,
-F: EffectF,
-} [appTheme.value];
+    return {
+      A: EffectA,
+      B: EffectB,
+      C: EffectC,
+      D: EffectD,
+      E: EffectE,
+      F: EffectF,
+    } [appTheme.value];
 })
 ```
 
@@ -491,18 +495,18 @@ import {currentImage, currentImageIndex} from "@/store.js";
 .B-image-leave-active,
 .B-caption-enter-active,
 .B-caption-leave-active {
-transition: .3s;
+  transition: .3s;
 }
 .B-image-enter-from,
 .B-caption-enter-from {
-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 .B-image-leave-to,
 .B-caption-leave-to {
-transform: translateX(100%);
+  transform: translateX(100%);
 }
 .B-caption-enter-active {
-transition-delay: .3s;
+  transition-delay: .3s;
 }
 </style>
 ```
@@ -518,19 +522,19 @@ const wordCount = ref(0);
 const maxCount = ref(0);
 let wordTimeout = null;
 watch(currentImageIndex, () => {
-const tmpWords = currentImage.value.caption.split(" ");
-maxCount.value = tmpWords.length;
-wordCount.value = 0;
-setTimeout(addWord, 300)
-}, {immediate: true})
+    const tmpWords = currentImage.value.caption.split(" ");
+    maxCount.value = tmpWords.length;
+    wordCount.value = 0;
+    setTimeout(addWord, 300)
+  }, {immediate: true})
 function addWord() {
-clearTimeout(wordTimeout);
-if (wordCount.value === maxCount.value) return;
-wordCount.value += 1;
-wordTimeout = setTimeout(addWord, 300);
+  clearTimeout(wordTimeout);
+  if (wordCount.value === maxCount.value) return;
+  wordCount.value += 1;
+  wordTimeout = setTimeout(addWord, 300);
 }
 function getWords(caption) {
-return caption.split(" ").map(item => item + " ");
+  return caption.split(" ").map(item => item + " ");
 }
 </script>
 <template>
@@ -548,27 +552,27 @@ return caption.split(" ").map(item => item + " ");
 <style scoped>
 .C-image-enter-active,
 .C-image-leave-active {
-transition: .3s;
+  transition: .3s;
 }
 .C-image-enter-from {
-transform: translateY(100%);
+  transform: translateY(100%);
 }
 .C-image-leave-to {
-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 .C-caption {
-overflow: hidden;
+  overflow: hidden;
 }
 .C-caption span {
-display: inline-block;
-transition: .3s;
+  display: inline-block;
+  transition: .3s;
 }
 .C-caption span:not(:last-child) {
-margin-right: .5em;
+  margin-right: .5em;
 }
 .C-caption span:not(.show) {
-transform: translateY(200%);
-opacity: 0;
+  transform: translateY(200%);
+  opacity: 0;
 }
 </style>
 ```
@@ -582,20 +586,20 @@ import {ref, watch} from "vue";
 import {getId} from "@/helper.js";
 const stack = ref([]);
 watch(currentImageIndex, () => {
-stack.value.push({
-id: getId(),
-image: currentImage.value.image,
-caption: currentImage.value.caption,
-deg: getRandomDeg()
-})
+    stack.value.push({
+        id: getId(),
+        image: currentImage.value.image,
+        caption: currentImage.value.caption,
+        deg: getRandomDeg()
+      })
 }, {immediate: true});
 function getRandomDeg() {
-return (~~(Math.random() * 11) - 5) + "deg";
+  return (~~(Math.random() * 11) - 5) + "deg";
 }
 function getRotateStyle(item) {
-return {
-transform: `rotate(${item.deg})`
-}
+  return {
+    transform: `rotate(${item.deg})`
+  }
 }
 </script>
 <template>
@@ -614,37 +618,37 @@ transform: `rotate(${item.deg})`
 </template>
 <style scoped>
 .D-stack-enter-active {
-transition: .3s;
-.D-stack-enter-from {
-transform: translateX(-150%);
-}
+  transition: .3s;
+  .D-stack-enter-from {
+    transform: translateX(-150%);
+  }
 #theme-d.stackContainer {
-position: relative;
-width: 85%;
-height: 85%;
+  position: relative;
+  width: 85%;
+  height: 85%;
 }
 #theme-d .stackBox {
-position: absolute;
-left: 0;
-top: 0;
-right: 0;
-bottom: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 #theme-d .stackItem {
-width: 100%;
-height: 100%;
-border: 3px solid #fff;
-border-radius: 5px !important;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #fff;
+  border-radius: 5px !important;
 }
 #theme-d .stackItem img {
-border-radius: 0;
+  border-radius: 0;
 }
 #theme-d .captionBox {
-padding: 0;
+  padding: 0;
 }
 #theme-d .captionBox .caption {
-width: 100%;
-border-radius: 0;
+  width: 100%;
+  border-radius: 0;
 }
 </style>
 ```
@@ -658,9 +662,9 @@ import {ref, watch} from "vue";
 import {currentImage, currentImageIndex} from "@/store.js";
 const tmpImage = ref(null);
 watch(currentImage, (value, oldValue, onCleanup) => {
-if (oldValue) {
-tmpImage.value = oldValue
-}
+    if (oldValue) {
+      tmpImage.value = oldValue
+    }
 })
 </script>
 <template>
@@ -672,29 +676,29 @@ tmpImage.value = oldValue
 </template>
 <style scoped>
 .e-half {
-z-index: 2;
+  z-index: 2;
 }
 .e-half.left {
-left: 0;
-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-transform-origin: left;
-animation: halfLeftAnimation 1s forwards;
+  left: 0;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  transform-origin: left;
+  animation: halfLeftAnimation 1s forwards;
 }
 @keyframes halfLeftAnimation {
-to {
-transform: rotateY(-100deg);
-}
+  to {
+    transform: rotateY(-100deg);
+  }
 }
 .e-half.right {
-right: 0;
-clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
-transform-origin: right;
-animation: halfRightAnimation 1s forwards;
+  right: 0;
+  clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+  transform-origin: right;
+  animation: halfRightAnimation 1s forwards;
 }
 @keyframes halfRightAnimation {
-to {
-transform: rotateY(100deg);
-}
+  to {
+    transform: rotateY(100deg);
+  }
 }
 </style>
 ```
@@ -708,15 +712,15 @@ import {computed, ref, watch} from "vue";
 import {currentImage, currentImageIndex} from "@/store.js";
 const tmpImage = ref(null);
 watch(currentImage, (value, oldValue, onCleanup) => {
-if (oldValue) {
-tmpImage.value = oldValue
-}
+    if (oldValue) {
+      tmpImage.value = oldValue
+    }
 })
 function cellImage(x, y) {
-return {
-left: -y * 100 + "%",
-top: -x * 100 + "%",
-}
+  return {
+    left: -y * 100 + "%",
+    top: -x * 100 + "%",
+  }
 }
 </script>
 <template>
@@ -755,39 +759,39 @@ top: -x * 100 + "%",
 </template>
 <style scoped>
 #theme-f.gridBox {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 #theme-f .cell {
-perspective: 1000px;
+  perspective: 1000px;
 }
 #theme-f .wrapper {
-transform-style: preserve-3d;
-animation: turnAnimation 1s forwards;
+  transform-style: preserve-3d;
+  animation: turnAnimation 1s forwards;
 }
 @keyframes turnAnimation {
-to {
-transform: rotateY(.5turn);
-}
+  to {
+    transform: rotateY(.5turn);
+  }
 }
 #theme-f .wrapper > div {
-backface-visibility: hidden;
-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  backface-visibility: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 #theme-f .wrapper > div img {
-width: 400%;
-height: 300%
+  width: 400%;
+  height: 300%
 }
 #theme-f .back {
-transform: rotateY(.5turn);
+  transform: rotateY(.5turn);
 }
 #theme-f .captionBox .front {
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 </style>
 ```

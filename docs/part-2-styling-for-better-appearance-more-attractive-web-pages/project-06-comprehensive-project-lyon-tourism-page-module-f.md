@@ -26,9 +26,11 @@ The Lyon tourism page includes text, images, hyperlinks, lists, forms, navigatio
 #### 6.3 Requirement Analysis
 The Lyon tourism page is divided into nine major modules: website header, call-to-action section, map attractions, video playback, basic information, latest activities, information tabs, contact form, and footer. The functional description of each module is as follows.
 The project function structure diagram is shown in Figure 7-1.
-![Image](../../assets/images/project-06/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-001.png" alt="Image">
+</p>
 
-_Figure 6-1 Functional Structure Diagram_
+<p align="center"><em>Figure 6-1 Functional Structure Diagram</em></p>
 
 #### 1. Lyon Tourism Page
 The Lyon Tourism Page includes common effects such as images, text, layout, and hyperlinks, as well as elements like video playback and font effects. It is the most comprehensive page in the comprehensive project in terms of both effects and functions.
@@ -83,49 +85,65 @@ The project is named "module_f", and the resource folder contains the files as s
 ##### (1) Navigation and Footer
 The navigation and footer sections are consistent throughout the project and appear on every page, so they can be designed and developed separately.
 ① The navigation is implemented using sequential layout and hyperlinks, as shown in Figure 6-2.
-![Image](../../assets/images/project-06/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-002.png" alt="Image">
+</p>
 
-_Figure 6-2 Website Navigation_
+<p align="center"><em>Figure 6-2 Website Navigation</em></p>
 ② Footer information is laid out in centered alignment, as shown in Figure 6-3.
-![Image](../../assets/images/project-06/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-003.png" alt="Image">
+</p>
 
-_Figure 6-3 Footer Display_
+<p align="center"><em>Figure 6-3 Footer Display</em></p>
 
 ##### (2) Call-to-Action Section
 The call-to-action section consists of the heading, navigation with frosted glass effect, cover background image, call-to-action button, and hover effects for the button, as shown in Figure 6-4.
-![Image](../../assets/images/project-06/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-004.png" alt="Image">
+</p>
 
-_Figure 6-4 Call-to-Action_
+<p align="center"><em>Figure 6-4 Call-to-Action</em></p>
 
 ##### (3) Map Attractions Section
 The map attractions section includes a static graphic on the right and three attraction cards on the left. It implements focus effects, box shadows, zoom effects, offset, blur, opacity, highlight effects, and gradient effects, as shown in Figure 6-5.
-![Image](../../assets/images/project-06/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-005.png" alt="Image">
+</p>
 
-_Figure 6-5 Map Attractions_
+<p align="center"><em>Figure 6-5 Map Attractions</em></p>
 
 ##### (4) Video Playback Section
 The video playback section includes video loading, autoplay when the video enters the viewport, auto-pause when it leaves the viewport, autoplay when 50% visible, pause when the webpage is hidden, and resume playback when the webpage becomes visible again, as shown in Figure 6-6.
-![Image](../../assets/images/project-06/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-006.png" alt="Image">
+</p>
 
-_Figure 6-6 Video Playback_
+<p align="center"><em>Figure 6-6 Video Playback</em></p>
 
 ##### (5) Basic Information and Latest Activities Section
 The basic information and latest activities module includes layout for basic information, plus focus effects, box shadows, zoom effects, offset, blur, opacity, highlight effects, and gradient effects, as shown in Figure 6-7.
-![Image](../../assets/images/project-06/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-007.png" alt="Image">
+</p>
 
-_Figure 6-7 Service Overview_
+<p align="center"><em>Figure 6-7 Service Overview</em></p>
 
 ##### (6) Information Tabs
 The information tabs module is mainly implemented with custom tab elements. Users can switch tabs by clicking. It uses aria-selected, aria-hidden, and aria-labelledby to associate tab titles with corresponding content, as shown in Figure 6-8.
-![Image](../../assets/images/project-06/image-008.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-008.png" alt="Image">
+</p>
 
-_Figure 6-8 Information Tabs_
+<p align="center"><em>Figure 6-8 Information Tabs</em></p>
 
 ##### (7) Contact Form
 The contact form module includes the following fields: first name, last name, contact email address, and contact phone number, as shown in Figure 6-9.
-![Image](../../assets/images/project-06/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-009.png" alt="Image">
+</p>
 
-_Figure 6-9 Contact Form_
+<p align="center"><em>Figure 6-9 Contact Form</em></p>
 
 #### 6.5 Project Implementation
 Task 1: Call-to-Action
@@ -143,15 +161,15 @@ Create a new HTML page named index.html, and after successful creation, change t
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-</head>
-<body>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -167,25 +185,25 @@ Create a new HTML page named index.html, and after successful creation, change t
 *,
 *::before,
 *::after {
-box-sizing: border-box;
-padding: 0;
-margin: 0;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: 400;
-font-size: 1rem;
-text-decoration: none;
-border: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 0;
 }
 body {
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 img {
-max-width: 100%;
-object-fit: cover;
-object-position: center;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 ```
 
@@ -194,28 +212,28 @@ object-position: center;
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<header>
-<div class="header-container">
-<h1 class="logo">WELCOME LYON</h1>
-<!-- Navigation -->
-<nav>
-<a href="#">Link</a>
-<a href="#">Link</a>
-<a href="#">Link</a>
-</nav>
-</div>
-</header>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <h1 class="logo">WELCOME LYON</h1>
+        <!-- Navigation -->
+        <nav>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+        </nav>
+      </div>
+    </header>
+  </body>
 </html>
 ```
 
@@ -224,34 +242,34 @@ object-position: center;
 ```css
 /* Styles for the header */
 header {
-background-color: rgba(255, 255, 255, 0.85);
-position: fixed;
-top: 0;
-width: 100%;
-backdrop-filter: blur(2rem);
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.85);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
 }
 .header-container {
-margin: 0 auto;
-padding: 1rem;
-width: min(100%, 860px);
-display: flex;
-align-items: center;
-justify-content: space-between;
+  margin: 0 auto;
+  padding: 1rem;
+  width: min(100%, 860px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .header-content .logo {
-color: black;
-text-transform: uppercase;
+  color: black;
+  text-transform: uppercase;
 }
 /* Navigation */
 header nav {
-display: flex;
-align-items: center;
-gap: 150px;
+  display: flex;
+  align-items: center;
+  gap: 150px;
 }
 header nav a {
-color: #0504c8;
+  color: #0504c8;
 }
 ```
 
@@ -267,26 +285,26 @@ color: #0504c8;
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<div class="hero">
-<img src="assets/images/cover-low-res.jpg" alt="Hero" style="min-width: 760px"/>
-<div class="cta-container" id="cta-container">
-<button class="cta">Call to Action</button>
-</div>
-</div>
-</main>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <div class="hero">
+        <img src="assets/images/cover-low-res.jpg" alt="Hero" style="min-width: 760px"/>
+        <div class="cta-container" id="cta-container">
+          <button class="cta">Call to Action</button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
 ```
 
@@ -294,40 +312,40 @@ color: #0504c8;
 
 ```css
 .hero {
-height: 1023px;
-padding: 1rem;
-position: relative;
+  height: 1023px;
+  padding: 1rem;
+  position: relative;
 }
 .hero img {
-width: 100%;
-position: absolute;
-inset: 0;
-height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  height: 100%;
 }
 /* Hero Button */
 .cta-container {
-height: 112px;
-width: 278px;
-background: transparent;
-border-radius: 0.5rem;
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-z-index: 10;
-padding: 3px;
-transition: 0.2s;
+  height: 112px;
+  width: 278px;
+  background: transparent;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 3px;
+  transition: 0.2s;
 }
 .cta-container button {
-width: 100%;
-height: 100%;
-border-radius: 0.5rem;
-background-color: #e0e0e0;
-font-size: 1.2rem;
-cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: #e0e0e0;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 .cta-container:hover {
-transform: scale(1.03) translate(-50%, -50%);
+  transform: scale(1.03) translate(-50%, -50%);
 }
 ```
 
@@ -340,7 +358,9 @@ transform: scale(1.03) translate(-50%, -50%);
 ```
 
 #### Step 11: Run the index.html file to check the effect.
-![Image](../../assets/images/project-06/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-004.png" alt="Image">
+</p>
 
 Task 2: Map Attractions
 
@@ -349,29 +369,29 @@ Task 2: Map Attractions
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<!-- Map attraction section -->
-<section class="map">
-<h2>Map Attractions</h2>
-<div class="map-container">
-<!-- Attractions -->
-<div class="attractions">
-<a class="card" href="#" id="attraction-a">
-<picture>
-<source
-srcset="assets/images/attraction-a.jpg"
-media="(min-width: 760px)"
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <!-- Map attraction section -->
+      <section class="map">
+        <h2>Map Attractions</h2>
+        <div class="map-container">
+          <!-- Attractions -->
+          <div class="attractions">
+            <a class="card" href="#" id="attraction-a">
+              <picture>
+                <source
+                srcset="assets/images/attraction-a.jpg"
+                media="(min-width: 760px)"
 ```
 
 /&gt;
@@ -385,10 +405,10 @@ alt="Parce de la Tete"
 <span>Parc de la Tete d'Or</span>
 </a>
 <a class="card" href="#" id="attraction-b">
-<picture>
-<source
-srcset="assets/images/attraction-b.jpg"
-media="(min-width: 760px)"
+  <picture>
+    <source
+    srcset="assets/images/attraction-b.jpg"
+    media="(min-width: 760px)"
 ```
 
 /&gt;
@@ -402,20 +422,20 @@ alt="Street"
 <span>Street</span>
 </a>
 <a class="card" href="#" id="attraction-c">
-<picture>
-<source
-srcset="assets/images/attraction-c.jpg"
-media="(min-width: 760px)"
-/>
-<img src="assets/images/attraction-c-low-res.jpg" alt="River" />
-</picture>
-<span>River</span>
+  <picture>
+    <source
+    srcset="assets/images/attraction-c.jpg"
+    media="(min-width: 760px)"
+    />
+    <img src="assets/images/attraction-c-low-res.jpg" alt="River" />
+  </picture>
+  <span>River</span>
 </a>
 <a class="card" href="#">
-<picture>
-<source
-srcset="assets/images/all-attractions.jpg"
-media="(min-width: 760px)"
+  <picture>
+    <source
+    srcset="assets/images/all-attractions.jpg"
+    media="(min-width: 760px)"
 ```
 
 /&gt;
@@ -456,11 +476,11 @@ tabindex="0"
 </div>
 <!-- Image -->
 <picture>
-<source
-srcset="assets/images/lyon-map.jpg"
-media="(min-width: 760px)"
-/>
-<img src="assets/images/lyon-map-low-res.jpg" alt="MDN" />
+  <source
+  srcset="assets/images/lyon-map.jpg"
+  media="(min-width: 760px)"
+  />
+  <img src="assets/images/lyon-map-low-res.jpg" alt="MDN" />
 </picture>
 </div>
 </section>
@@ -474,112 +494,112 @@ media="(min-width: 760px)"
 ```css
 /* Styles for the map section */
 .map {
-width: min(100%, 890px);
-margin: 0 auto;
-margin-bottom: 38px;
-margin-top: 60px;
-display: flex;
-flex-direction: column;
-gap: 40px;
+  width: min(100%, 890px);
+  margin: 0 auto;
+  margin-bottom: 38px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .map-container {
-width: 100%;
-height: 466px;
-position: relative;
+  width: 100%;
+  height: 466px;
+  position: relative;
 }
 /* Map image */
 .map-container image,
 .map-container > img {
-position: absolute;
-width: 100%;
-height: 100%;
-inset: 0;
-object-position: center top;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-position: center top;
 }
 /* Map dots */
 .map-dot {
-position: absolute;
-z-index: 5;
-background-color: #fbbdc8;
-width: 35px;
-height: 35px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  background-color: #fbbdc8;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .map-dot span {
-position: relative;
-z-index: 6;
+  position: relative;
+  z-index: 6;
 }
 .map-dot::before {
-content: "";
-position: 0;
-width: 20px;
-z-index: 4;
-height: 20px;
-position: absolute;
-background-color: #fbbdc8;
-transform: translateY(20%) rotate(45deg);
-bottom: 0;
+  content: "";
+  position: 0;
+  width: 20px;
+  z-index: 4;
+  height: 20px;
+  position: absolute;
+  background-color: #fbbdc8;
+  transform: translateY(20%) rotate(45deg);
+  bottom: 0;
 }
 #map-dot-1 {
-top: 23px;
-right: 54px;
+  top: 23px;
+  right: 54px;
 }
 #map-dot-3 {
-top: 14px;
-right: 308px;
+  top: 14px;
+  right: 308px;
 }
 #map-dot-2 {
-top: 209px;
-right: 180px;
+  top: 209px;
+  right: 180px;
 }
 /* Attractions */
 .attractions {
-gap: 16px 20px;
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-position: absolute;
-left: 34px;
-z-index: 10;
-top: 26px;
+  gap: 16px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+  left: 34px;
+  z-index: 10;
+  top: 26px;
 }
 .events-container .card,
 .attractions .card {
-box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
-width: 170px;
-min-width: 170px;
-border-radius: 0.5rem;
-min-height: 188px;
-background-color: white;
-padding: 8px;
-display: flex;
-flex-direction: column;
-gap: 0.25rem;
-transition: 0.15s;
-overflow: hidden;
-position: relative;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  width: 170px;
+  min-width: 170px;
+  border-radius: 0.5rem;
+  min-height: 188px;
+  background-color: white;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: 0.15s;
+  overflow: hidden;
+  position: relative;
 }
 .events-container .card img,
 .events-container .card picture,
 .attractions .card img,
 .attractions .card picture {
-width: 100%;
-height: 120px;
+  width: 100%;
+  height: 120px;
 }
 .events-container .card span,
 .attractions .card span {
-font-size: 1.1rem;
-color: black;
-line-height: 1;
+  font-size: 1.1rem;
+  color: black;
+  line-height: 1;
 }
 /* Title */
 .map h2 {
-font-size: 4rem;
-text-align: center;
-font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
 }
 ```
 
@@ -590,28 +610,28 @@ font-weight: bold;
 ```css
 .attractions .card:hover,
 .events-container .card:hover {
-transform: scale(1.05);
-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 .attractions .card::before,
 .events-container .card::before {
-content: "";
-position: absolute;
-top: 0;
-left: -80px;
-height: 100%;
-width: 50px;
-background: linear-gradient(
-to bottom,
-rgba(255, 255, 255, 0.75),
-rgba(255, 255, 255, 0.25)
-);
-transform: rotate(8deg);
-transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80px;
+  height: 100%;
+  width: 50px;
+  background: linear-gradient(
+  to bottom,
+  rgba(255, 255, 255, 0.75),
+  rgba(255, 255, 255, 0.25)
+  );
+  transform: rotate(8deg);
+  transition: 0.5s;
 }
 .events-container .card:hover::before,
 .attractions .card:hover::before {
-left: 200px;
+  left: 200px;
 }
 ```
 
@@ -625,7 +645,9 @@ left: 200px;
 ```
 
 #### Step 4: Run the index.html file to check the effect.
-![Image](../../assets/images/project-06/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-005.png" alt="Image">
+</p>
 
 Task 3: Video Playback
 
@@ -634,27 +656,27 @@ Task 3: Video Playback
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<!-- Map attraction section -->
-<!-- Video Section -->
-<section class="video">
-<video autoplay muted>
-<source src="assets/lyon.mp4" />
-</video>
-</section>
-</main>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <!-- Map attraction section -->
+      <!-- Video Section -->
+      <section class="video">
+        <video autoplay muted>
+          <source src="assets/lyon.mp4" />
+        </video>
+      </section>
+    </main>
+  </body>
 </html>
 ```
 
@@ -663,14 +685,14 @@ Task 3: Video Playback
 ```css
 /* Styles for the video section */
 .video {
-width: min(100%, 1920px);
-margin: 0 auto;
-height: 936px;
+  width: min(100%, 1920px);
+  margin: 0 auto;
+  height: 936px;
 }
 .video video {
-height: 100%;
-width: 100%;
-object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 ```
 
@@ -685,7 +707,9 @@ object-fit: cover;
 ```
 
 #### Step 4: Run the index.html file to check the effect.
-![Image](../../assets/images/project-06/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-006.png" alt="Image">
+</p>
 
 Task 4 Basic Information and Latest Events
 
@@ -694,38 +718,38 @@ Task 4 Basic Information and Latest Events
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<!-- Map attraction section -->
-<!-- Video Section -->
-<!-- Section for the essential information and the events -->
-<section class="info">
-<!-- Essential Information -->
-<div class="essential">
-<h2>Essential Information</h2>
-<span>Contact: 04 72 10 30 30</span>
-<span>Address: Mairie de Lyon, 69205 Lyon cedex 01</span>
-<button class="read" id="read">Read it Loud</button>
-</div>
-<!-- Latest Events -->
-<div class="events">
-<h2>Latest Events</h2>
-<div class="events-container" tabindex="0">
-<!-- Event Card -->
-<div class="card">
-<picture>
-<source
-srcset="
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <!-- Map attraction section -->
+      <!-- Video Section -->
+      <!-- Section for the essential information and the events -->
+      <section class="info">
+        <!-- Essential Information -->
+        <div class="essential">
+          <h2>Essential Information</h2>
+          <span>Contact: 04 72 10 30 30</span>
+          <span>Address: Mairie de Lyon, 69205 Lyon cedex 01</span>
+          <button class="read" id="read">Read it Loud</button>
+        </div>
+        <!-- Latest Events -->
+        <div class="events">
+          <h2>Latest Events</h2>
+          <div class="events-container" tabindex="0">
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="
 ```
 
 assets/images/latest-events-images/worldskills-2024-p.jpg
@@ -744,15 +768,15 @@ alt="Event"
 />
 </picture>
 <span>
-Lyon accueille la finale mondiale des Worldskills 2024
+  Lyon accueille la finale mondiale des Worldskills 2024
 </span>
 </div>
 <!-- Event Card -->
 <div class="card">
-<picture>
-<source
-srcset="assets/images/latest-events-images/fda-p.jpg"
-media="(min-width: 760px)"
+  <picture>
+    <source
+    srcset="assets/images/latest-events-images/fda-p.jpg"
+    media="(min-width: 760px)"
 ```
 
 /&gt;
@@ -767,10 +791,10 @@ alt="Event"
 </div>
 <!-- Event Card -->
 <div class="card">
-<picture>
-<source
-srcset="assets/images/latest-events-images/lyon-kayak-p-0.jpg"
-media="(min-width: 760px)"
+  <picture>
+    <source
+    srcset="assets/images/latest-events-images/lyon-kayak-p-0.jpg"
+    media="(min-width: 760px)"
 ```
 
 /&gt;
@@ -785,9 +809,9 @@ alt="Event"
 </div>
 <!-- Event Card -->
 <div class="card">
-<picture>
-<source
-srcset="
+  <picture>
+    <source
+    srcset="
 ```
 
 assets/images/latest-events-images/semaine-bleue-2024-p.jpg
@@ -809,9 +833,9 @@ alt="Event"
 </div>
 <!-- Event Card -->
 <div class="card">
-<picture>
-<source
-srcset="
+  <picture>
+    <source
+    srcset="
 ```
 
 assets/images/latest-events-images/village-des-metiers-p.jpg
@@ -833,9 +857,9 @@ alt="Event"
 </div>
 <!-- Event Card -->
 <div class="card">
-<picture>
-<source
-srcset="
+  <picture>
+    <source
+    srcset="
 ```
 
 assets/images/latest-events-images/journees_portes_ouvertes_entreprises_2023_p.jpg
@@ -868,49 +892,49 @@ alt="Event"
 ```css
 /* Styles for the info seciton */
 .info {
-margin: 0 auto;
-padding: 1rem;
-width: min(100%, 860px);
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 1rem;
-margin-top: 54px;
+  margin: 0 auto;
+  padding: 1rem;
+  width: min(100%, 860px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 54px;
 }
 .essential {
-display: flex;
-flex-direction: column;
-display: flex;
-flex-direction: column;
-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .info h2 {
-font-weight: bold;
-text-align: center;
-font-size: 2.5rem;
-margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 .info .read {
-width: 172px;
-height: 56px;
-border-radius: 0.5rem;
-background-color: #023399;
-color: white;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 1.05rem;
-cursor: pointer;
+  width: 172px;
+  height: 56px;
+  border-radius: 0.5rem;
+  background-color: #023399;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  cursor: pointer;
 }
 /* Events */
 .events-container {
-width: 411px;
-overflow-x: auto;
-padding: 0.75rem;
-border: 1px solid #cdcdcd;
-padding: 10px;
-display: flex;
-align-items: flex-start;
-border-radius: 0.5rem;
+  width: 411px;
+  overflow-x: auto;
+  padding: 0.75rem;
+  border: 1px solid #cdcdcd;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 0.5rem;
 }
 ```
 
@@ -926,7 +950,9 @@ border-radius: 0.5rem;
 ```
 
 #### Step 4: Open the index.html file to preview the effect.
-![Image](../../assets/images/project-06/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-007.png" alt="Image">
+</p>
 
 Task 5 Information Tabs
 
@@ -935,51 +961,51 @@ Task 5 Information Tabs
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<!-- Map attraction section -->
-<!-- Video Section -->
-<!-- Section for the essential information and the events -->
-<!-- Other information -->
-<section class="other-info">
-<h2>Other Information</h2>
-<fieldset class="tabs" id="tab-container" tabindex="0">
-<label class="tab">
-<span>Tab 1</span>
-<input type="radio" value="tab-1" id="tab-1" name="tabs" checked />
-</label>
-<label class="tab">
-<span>Tab 2</span>
-<input type="radio" value="tab-2" id="tab-2" name="tabs" />
-</label>
-<label class="tab">
-<span>Tab 3</span>
-<input type="radio" value="tab-3" id="tab-3" name="tabs" />
-</label>
-<!-- <x-tab id="tab-1" checked="true">Tab 1</x-tab>
-<x-tab id="tab-2">Tab 2</x-tab>
-<x-tab id="tab-3">Tab 3</x-tab> -->
-</fieldset>
-<div class="tab-content">
-<div id="tab-1-content" aria-labelledby="tab-1">
-This is the content for Tab 1.
-</div>
-<div id="tab-2-content">This is the content for Tab 2.</div>
-<div id="tab-3-content">This is the content for Tab 3.</div>
-</div>
-</section>
-</main>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <!-- Map attraction section -->
+      <!-- Video Section -->
+      <!-- Section for the essential information and the events -->
+      <!-- Other information -->
+      <section class="other-info">
+        <h2>Other Information</h2>
+        <fieldset class="tabs" id="tab-container" tabindex="0">
+          <label class="tab">
+            <span>Tab 1</span>
+            <input type="radio" value="tab-1" id="tab-1" name="tabs" checked />
+          </label>
+          <label class="tab">
+            <span>Tab 2</span>
+            <input type="radio" value="tab-2" id="tab-2" name="tabs" />
+          </label>
+          <label class="tab">
+            <span>Tab 3</span>
+            <input type="radio" value="tab-3" id="tab-3" name="tabs" />
+          </label>
+          <!-- <x-tab id="tab-1" checked="true">Tab 1</x-tab>
+          <x-tab id="tab-2">Tab 2</x-tab>
+          <x-tab id="tab-3">Tab 3</x-tab> -->
+        </fieldset>
+        <div class="tab-content">
+          <div id="tab-1-content" aria-labelledby="tab-1">
+            This is the content for Tab 1.
+          </div>
+          <div id="tab-2-content">This is the content for Tab 2.</div>
+          <div id="tab-3-content">This is the content for Tab 3.</div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
 ```
 
@@ -988,47 +1014,47 @@ This is the content for Tab 1.
 ```css
 /* Styles for the other informations */
 .other-info {
-width: min(700px, 100%);
-padding: 1rem;
-display: flex;
-flex-direction: column;
-gap: 40px;
-margin: 0 auto;
-margin-top: 50px;
-margin-bottom: 30px;
+  width: min(700px, 100%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 .other-info h2 {
-font-weight: bold;
-font-size: 2.5rem;
-text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
 }
 .tabs {
-border-bottom: 2px solid #cccccc;
-width: 100%;
-display: flex;
-outline-offset: 5px;
-outline-color: #eee;
-/* height: 33px; */
+  border-bottom: 2px solid #cccccc;
+  width: 100%;
+  display: flex;
+  outline-offset: 5px;
+  outline-color: #eee;
+  /* height: 33px; */
 }
 .tabs .tab {
-padding: 14px 24px;
-line-height: 1;
-text-align: center;
-cursor: pointer;
-background-color: #f0f0f0;
-border-bottom: 2px solid #ccc;
-transition: 0.2s;
-margin-bottom: -2px;
+  padding: 14px 24px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #ccc;
+  transition: 0.2s;
+  margin-bottom: -2px;
 }
 .tabs .tab:hover {
-background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 .tabs .tab:has(:checked) {
-background-color: white;
-border-bottom-color: #037afe;
+  background-color: white;
+  border-bottom-color: #037afe;
 }
 .tabs .tab input {
-display: none;
+  display: none;
 }
 ```
 
@@ -1045,7 +1071,9 @@ display: none;
 ```
 
 #### Step 4: Run the index.html file to check the effect.
-![Image](../../assets/images/project-06/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-009.png" alt="Image">
+</p>
 
 Task 6 Contact Form
 
@@ -1054,46 +1082,46 @@ Task 6 Contact Form
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<!-- Map attraction section -->
-<!-- Video Section -->
-<!-- Section for the essential information and the events -->
-<!-- Other information -->
-<!-- Contact Form Section -->
-<seciton class="contact">
-<h2>Contact Us</h2>
-<form class="fields" action="#">
-<label>
-First name
-<input type="text" />
-</label>
-<label>
-Last name
-<input type="text" />
-</label>
-<label>
-Email
-<input type="text" />
-</label>
-<label>
-Phone
-<input type="text" />
-</label>
-</form>
-</seciton>
-</main>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <!-- Map attraction section -->
+      <!-- Video Section -->
+      <!-- Section for the essential information and the events -->
+      <!-- Other information -->
+      <!-- Contact Form Section -->
+      <seciton class="contact">
+        <h2>Contact Us</h2>
+        <form class="fields" action="#">
+          <label>
+            First name
+            <input type="text" />
+          </label>
+          <label>
+            Last name
+            <input type="text" />
+          </label>
+          <label>
+            Email
+            <input type="text" />
+          </label>
+          <label>
+            Phone
+            <input type="text" />
+          </label>
+        </form>
+      </seciton>
+    </main>
+  </body>
 </html>
 ```
 
@@ -1102,37 +1130,37 @@ Phone
 ```css
 /* Styles for the contact section */
 .contact {
-margin: 0 auto;
-padding: 1rem;
-width: min(100%, 900px);
-border: 2px solid #cccccc;
-padding: 50px 36px;
-padding-top: 0;
-display: block;
-margin-top: 100px;
+  margin: 0 auto;
+  padding: 1rem;
+  width: min(100%, 900px);
+  border: 2px solid #cccccc;
+  padding: 50px 36px;
+  padding-top: 0;
+  display: block;
+  margin-top: 100px;
 }
 .contact .fields {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 36px;
-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  width: 100%;
 }
 .contact .fields label {
-white-space: nowrap;
+  white-space: nowrap;
 }
 .contact .fields input {
-border: 1px solid #767676;
-border-radius: 0.25rem;
+  border: 1px solid #767676;
+  border-radius: 0.25rem;
 }
 .contact h2 {
-padding: 2rem;
-border: 2px solid #cccccc;
-font-size: 3rem;
-font-weight: bold;
-transform: translateY(-50%);
-background-color: white;
-width: fit-content;
-margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid #cccccc;
+  font-size: 3rem;
+  font-weight: bold;
+  transform: translateY(-50%);
+  background-color: white;
+  width: fit-content;
+  margin: 0 auto;
 }
 ```
 
@@ -1150,7 +1178,9 @@ margin: 0 auto;
 ```
 
 #### Step 4: Run the index.html file to view the effect.
-![Image](../../assets/images/project-06/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-009.png" alt="Image">
+</p>
 
 Task 7 Footer
 
@@ -1159,51 +1189,51 @@ Task 7 Footer
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<!-- Map attraction section -->
-<!-- Video Section -->
-<!-- Section for the essential information and the events -->
-<!-- Other information -->
-<!-- Contact Form Section -->
-</main>
-<!-- Footer -->
-<footer>
-<div class="footer-row">
-<div class="footer-col">
-<a href="#">About Us</a>
-<a href="#">Getting Here</a>
-<a href="#">FAQs</a>
-</div>
-<div class="footer-col">
-<a href="#">Places to Stay</a>
-<a href="#">Things to Do</a>
-<a href="#">Event Calendar</a>
-</div>
-<div class="footer-col">
-<a href="#">Restaurants</a>
-<a href="#">Nightlife</a>
-<a href="#">Shopping</a>
-</div>
-<div class="footer-col">
-<a href="#">Plan Your Trip</a>
-<a href="#">Contact Us</a>
-<a href="#">Newsletter <br />Signup</a>
-</div>
-</div>
-<span>&copy; 2024. All Rights Reserved.</span>
-</footer>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <!-- Map attraction section -->
+      <!-- Video Section -->
+      <!-- Section for the essential information and the events -->
+      <!-- Other information -->
+      <!-- Contact Form Section -->
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-row">
+        <div class="footer-col">
+          <a href="#">About Us</a>
+          <a href="#">Getting Here</a>
+          <a href="#">FAQs</a>
+        </div>
+        <div class="footer-col">
+          <a href="#">Places to Stay</a>
+          <a href="#">Things to Do</a>
+          <a href="#">Event Calendar</a>
+        </div>
+        <div class="footer-col">
+          <a href="#">Restaurants</a>
+          <a href="#">Nightlife</a>
+          <a href="#">Shopping</a>
+        </div>
+        <div class="footer-col">
+          <a href="#">Plan Your Trip</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Newsletter <br />Signup</a>
+        </div>
+      </div>
+      <span>&copy; 2024. All Rights Reserved.</span>
+    </footer>
+  </body>
 </html>
 ```
 
@@ -1212,31 +1242,31 @@ Task 7 Footer
 ```css
 /* Styles for the footer */
 footer {
-background-color: #efefef;
-border-top: 2px solid #cccccc;
-display: flex;
-flex-direction: column;
-gap: 42px;
-padding: 1rem;
-padding-top: 40px;
-align-items: center;
-margin-top: 90px;
+  background-color: #efefef;
+  border-top: 2px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  padding: 1rem;
+  padding-top: 40px;
+  align-items: center;
+  margin-top: 90px;
 }
 .footer-row {
-display: flex;
-align-items: flex-start;
-gap: 110px;
-align-items: center;
+  display: flex;
+  align-items: flex-start;
+  gap: 110px;
+  align-items: center;
 }
 .footer-col {
-display: flex;
-flex-direction: column;
-gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 .footer-col a,
 footer span {
-line-height: 1;
-color: #2e2e2e;
+  line-height: 1;
+  color: #2e2e2e;
 }
 ```
 
@@ -1255,6 +1285,8 @@ color: #2e2e2e;
 ```
 
 #### Step 4: Run the index.html file to view the effect.
-![Image](../../assets/images/project-06/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-06/image-003.png" alt="Image">
+</p>
 
 Part 3 Responsive Design &amp; Cross-Device Compatibility

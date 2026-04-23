@@ -19,9 +19,11 @@ This project mainly covers basic CSS styles, the box model, floating, and positi
 A news detail page is a concrete display of news content, usually in the form of text and images, allowing users to access richer news information.
 The creation of a news detail page requires the use of basic CSS knowledge, including CSS selectors, basic CSS styles, CSS text styles, and so on.
 The effect of the example is shown in Figure 3-1.
-![Image](../../assets/images/project-03/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-001.png" alt="Image">
+</p>
 
-_Figure 3-1 Rendering of the News Detail Page_
+<p align="center"><em>Figure 3-1 Rendering of the News Detail Page</em></p>
 
 ### 3.1.2 Knowledge Preparation
 CSS stands for Cascading Style Sheet, which is a technology used to control the appearance of web pages.
@@ -29,9 +31,11 @@ HTML, CSS, and JavaScript are the three core elements of front-end technologies.
 
 #### 1.Basic CSS Syntax
 CSS is mainly used to control page elements, and a style is the smallest syntax unit of CSS. Each style consists of two parts: a selector and a declaration (rule), as shown in Figure 3-2.
-![Image](../../assets/images/project-03/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-002.png" alt="Image">
+</p>
 
-_Figure 3-2 Basic Structure of CSS Styles_
+<p align="center"><em>Figure 3-2 Basic Structure of CSS Styles</em></p>
 
 ##### (1) Selector
 The selector tells the browser which elements on the page the style will apply to. These elements can be a specific tag, all page elements, a specified class or ID value, etc. When parsing the style, the browser renders the display effect of the elements according to the selector.
@@ -66,7 +70,7 @@ Basic format:
 
 ```html
 <style type="text/css">
-Selector { Property name: Property value; }
+  Selector { Property name: Property value; }
 </style>
 ```
 
@@ -196,29 +200,31 @@ p{font-family:"Microsoft YaHei";}
 Example:
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title></title>
-<style type="text/css">
-#a {
-font-family: SimSun;
-}
-#b {
-font-family: "Microsoft YaHei";
-}
-</style>
-</head>
-<body>
-<p id="a">Font is SimSun</p>
-<p id="b">Font is Microsoft YaHei</p>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      #a {
+      font-family: SimSun;
+      }
+      #b {
+      font-family: "Microsoft YaHei";
+      }
+    </style>
+  </head>
+  <body>
+    <p id="a">Font is SimSun</p>
+    <p id="b">Font is Microsoft YaHei</p>
+  </body>
 </html>
 ```
 
 The preview effect in the browser is shown in Figure 3-3:
-![Image](../../assets/images/project-03/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-003.png" alt="Image">
+</p>
 
-_Figure 3-3 Font Types_
+<p align="center"><em>Figure 3-3 Font Types</em></p>
 We can specify multiple fonts at the same time, separated by commas. This means that if the browser does not support the first font, it will try the next one until a suitable font is found.
 Basic format:
 
@@ -264,31 +270,33 @@ Example:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title> font- size property</title>
-<style type="text/css">
-#p1 {
-font-size: small;
-}
-#p2 {
-font-size: medium;
-}
-#p3 {
-font-size: large;
-}
-</style>
-</head>
-<body>
-<p id="p1">Font size is "small"</p>
-<p id="p2">Font size is "medium (normal)"</p>
-<p id="p3">Font size is "large (large)"</p>    </body>
-</html>
+  <head>
+    <title> font- size property</title>
+    <style type="text/css">
+      #p1 {
+      font-size: small;
+      }
+      #p2 {
+      font-size: medium;
+      }
+      #p3 {
+      font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">Font size is "small"</p>
+    <p id="p2">Font size is "medium (normal)"</p>
+    <p id="p3">Font size is "large (large)"</p>    </body>
+  </html>
 ```
 
 The preview effect in the browser is shown in Figure 3-4:
-![Image](../../assets/images/project-03/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-004.png" alt="Image">
+</p>
 
-_Figure 3-4 Effects of Different Font Sizes_
+<p align="center"><em>Figure 3-4 Effects of Different Font Sizes</em></p>
 
 ##### (3) Font Weight: font-weight
 In CSS, we can use the font-weight property to define the thickness of the font.
@@ -319,32 +327,34 @@ Example:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title> font- weight Property </title>
-<style type="text/css">
-#p1 {
-font-weight: lighter;
-}
-#p2 {
-font-weight: normal;
-}
-#p3 {
-font-weight: bold;
-}
-</style>
-</head>
-<body>
-<p id="p1">Font weight is: lighter</p>
-<p id="p2">Font weight is: normal (normal font) </p>
-<p id="p3">Font weight is: bold</p>
-</body>
+  <head>
+    <title> font- weight Property </title>
+    <style type="text/css">
+      #p1 {
+      font-weight: lighter;
+      }
+      #p2 {
+      font-weight: normal;
+      }
+      #p3 {
+      font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">Font weight is: lighter</p>
+    <p id="p2">Font weight is: normal (normal font) </p>
+    <p id="p3">Font weight is: bold</p>
+  </body>
 </html>
 ```
 
 The preview effect in the browser is shown in Figure 3-5.
-![Image](../../assets/images/project-03/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-005.png" alt="Image">
+</p>
 
-_Figure 3-5 Effects of Different Font Weights_
+<p align="center"><em>Figure 3-5 Effects of Different Font Weights</em></p>
 
 ##### (5) Font Color: color
 In CSS, we can use the color property to define the font color.
@@ -369,33 +379,35 @@ Example:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title></title>
-<style type="text/css">
-#a {
-color: red;
-}
-#b {
-color: orange;
-}
-#c {
-color: blue;
-}
-</style>
-</head>
-<body>
-<p id="a">The font color is red</p>
-<p id="b">The font color is orange</p>
-<p id="c">The font color is blue</p>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      #a {
+      color: red;
+      }
+      #b {
+      color: orange;
+      }
+      #c {
+      color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="a">The font color is red</p>
+    <p id="b">The font color is orange</p>
+    <p id="c">The font color is blue</p>
+  </body>
 </html>
 ```
 
 The preview effect in the browser is shown in Figure 3-6.
-![Image](../../assets/images/project-03/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-006.png" alt="Image">
+</p>
 
-_Figure 3-6 Effects of Different Font Colors_
+<p align="center"><em>Figure 3-6 Effects of Different Font Colors</em></p>
 
 ##### (6) Text Effects
 In CSS, we can use the font-style property to define the italic effect of the font.
@@ -418,33 +430,35 @@ Example:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title></title>
-<style type="text/css">
-#a {
-font-style: normal;
-}
-#b {
-font-style: italic;
-}
-#c {
-font-style: oblique;
-}
-</style>
-</head>
-<body>
-<p id="a">The font style is set to normal</p>
-<p id="b">The font style is set to italic</p>
-<p id="c">The font style is set to oblique</p>
-</body>
-<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      #a {
+      font-style: normal;
+      }
+      #b {
+      font-style: italic;
+      }
+      #c {
+      font-style: oblique;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="a">The font style is set to normal</p>
+    <p id="b">The font style is set to italic</p>
+    <p id="c">The font style is set to oblique</p>
+  </body>
+  <html>
 ```
 
 The preview effect in the browser is shown in Figure 3-7:
-![Image](../../assets/images/project-03/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-007.png" alt="Image">
+</p>
 
-_Figure 3-7 Effects of Different Font Styles_
+<p align="center"><em>Figure 3-7 Effects of Different Font Styles</em></p>
 
 ##### (7) Text Decoration: text-decoration
 In CSS, we use the text-decoration property to define underlines, strikethroughs, and overlines for paragraph text.
@@ -468,32 +482,34 @@ Example:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title></title>
-<style type="text/css">
-#a {
-text-decoration: underline;
-}
-#b {
-text-decoration: line-through;
-}
-#c {
-text-decoration: overline;
-}
-</style>
-</head>
-<body>
-<p id="a">This is the "underline" effect</p>
-<p id="b">This is the "line-through" effect</p>
-<p id="c">This is the "overline" effect</p>    </body>
-</html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      #a {
+      text-decoration: underline;
+      }
+      #b {
+      text-decoration: line-through;
+      }
+      #c {
+      text-decoration: overline;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="a">This is the "underline" effect</p>
+    <p id="b">This is the "line-through" effect</p>
+    <p id="c">This is the "overline" effect</p>    </body>
+  </html>
 ```
 
 The preview effect in the browser is shown in Figure 3-8:
-![Image](../../assets/images/project-03/image-008.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-008.png" alt="Image">
+</p>
 
-_Figure 3-8 Text Decoration Effects_
+<p align="center"><em>Figure 3-8 Text Decoration Effects</em></p>
 
 ##### (8) Text Styles
 Font styles mainly relate to the visual effect of the font itself, while text styles mainly relate to the layout effect of multiple characters, that is, the layout effect of the entire paragraph. The following introduces text styles.
@@ -545,33 +561,35 @@ Example:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title></title>
-<style type="text/css">
-#a {
-text-transform: uppercase;
-}
-#b {
-text-transform: lowercase;
-}
-#c {
-text-transform: capitalize;
-}
-</style>
-</head>
-<body>
-<p id="a">Uppercase: There is no royal road to learning</p>
-<p id="b">Lowercase: There is no royal road to learning</p>
-<p id="c">Capitalized (only first letter): There is no royal road to learning</p>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      #a {
+      text-transform: uppercase;
+      }
+      #b {
+      text-transform: lowercase;
+      }
+      #c {
+      text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="a">Uppercase: There is no royal road to learning</p>
+    <p id="b">Lowercase: There is no royal road to learning</p>
+    <p id="c">Capitalized (only first letter): There is no royal road to learning</p>
+  </body>
 </html>
 ```
 
 The preview effect in the browser is shown in Figure 3-9.
-![Image](../../assets/images/project-03/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-009.png" alt="Image">
+</p>
 
-_Figure 3-9 Effects of Case Conversion_
+<p align="center"><em>Figure 3-9 Effects of Case Conversion</em></p>
 ④ Line Height
 In CSS, we can use the line-height property to control the line height of text.
 The basic format is as follows:
@@ -587,33 +605,35 @@ Example:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title></title>
-<style type="text/css">
-#a {
-line-height: 12px;
-}
-#b {
-line-height: 17px;
-}
-#c {
-line-height: 22px;
-}
-</style>
-</head>
-<body>
-<p id="a">Northern landscape:A thousand miles of ice sealed,Ten thousand miles of snow flying.Looking beyond the Great Wall, all is vast white;The Yellow River, up and down, stops its flowing.Mountains dance like silver snakes,Plains run like waxen elephants,Daring to compete with the sky in height.Wait for a sunny day:See red dress on white snow,Charming and bright.</p>
-<p id="a">Northern landscape:A thousand miles of ice sealed,Ten thousand miles of snow flying.Looking beyond the Great Wall, all is vast white;The Yellow River, up and down, stops its flowing.Mountains dance like silver snakes,Plains run like waxen elephants,Daring to compete with the sky in height.Wait for a sunny day:See red dress on white snow,Charming and bright.</p>
-<p id="a">Northern landscape:A thousand miles of ice sealed,Ten thousand miles of snow flying.Looking beyond the Great Wall, all is vast white;The Yellow River, up and down, stops its flowing.Mountains dance like silver snakes,Plains run like waxen elephants,Daring to compete with the sky in height.Wait for a sunny day:See red dress on white snow,Charming and bright.</p>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      #a {
+      line-height: 12px;
+      }
+      #b {
+      line-height: 17px;
+      }
+      #c {
+      line-height: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="a">Northern landscape:A thousand miles of ice sealed,Ten thousand miles of snow flying.Looking beyond the Great Wall, all is vast white;The Yellow River, up and down, stops its flowing.Mountains dance like silver snakes,Plains run like waxen elephants,Daring to compete with the sky in height.Wait for a sunny day:See red dress on white snow,Charming and bright.</p>
+    <p id="a">Northern landscape:A thousand miles of ice sealed,Ten thousand miles of snow flying.Looking beyond the Great Wall, all is vast white;The Yellow River, up and down, stops its flowing.Mountains dance like silver snakes,Plains run like waxen elephants,Daring to compete with the sky in height.Wait for a sunny day:See red dress on white snow,Charming and bright.</p>
+    <p id="a">Northern landscape:A thousand miles of ice sealed,Ten thousand miles of snow flying.Looking beyond the Great Wall, all is vast white;The Yellow River, up and down, stops its flowing.Mountains dance like silver snakes,Plains run like waxen elephants,Daring to compete with the sky in height.Wait for a sunny day:See red dress on white snow,Charming and bright.</p>
+  </body>
 </html>
 ```
 
 The preview effect in the browser is shown in Figure 3-10.
-![Image](../../assets/images/project-03/image-010.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-010.png" alt="Image">
+</p>
 
-_Figure 3-10 Effects of Line Height Changes_
+<p align="center"><em>Figure 3-10 Effects of Line Height Changes</em></p>
 ⑤ Line Spacing and Character Spacing
 a. Line spacing:
 The word-spacing property defines the distance between words within a line.
@@ -622,33 +642,35 @@ Example:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title></title>
-<style type="text/css">
-#a {
-word-spacing: 0px;
-}
-#b {
-word-spacing: 3px;
-}
-#c {
-word-spacing: 5px;
-}
-</style>
-</head>
-<body>
-<p id="a">Practice makes perfect.</p>
-<p id="b">Practice makes perfect.</p>
-<p id="c">Practice makes perfect.</p>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      #a {
+      word-spacing: 0px;
+      }
+      #b {
+      word-spacing: 3px;
+      }
+      #c {
+      word-spacing: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="a">Practice makes perfect.</p>
+    <p id="b">Practice makes perfect.</p>
+    <p id="c">Practice makes perfect.</p>
+  </body>
 </html>
 ```
 
 The preview effect in the browser is shown in Figure 3-11.
-![Image](../../assets/images/project-03/image-011.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-011.png" alt="Image">
+</p>
 
-_Figure 3-11 Effects of Line Spacing Changes_
+<p align="center"><em>Figure 3-11 Effects of Line Spacing Changes</em></p>
 b. Character Spacing:
 The letter-spacing property is used to define the character spacing.
 Example:
@@ -656,33 +678,35 @@ Example:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title></title>
-<style type="text/css">
-#a {
-letter-spacing: 0px;
-}
-#b {
-letter-spacing: 3px;
-}
-#c {
-letter-spacing: 5px;
-}
-</style>
-</head>
-<body>
-<p id="a">Practice makes perfect.</p>
-<p id="b">Practice makes perfect.</p>
-<p id="c">Practice makes perfect.</p>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+      #a {
+      letter-spacing: 0px;
+      }
+      #b {
+      letter-spacing: 3px;
+      }
+      #c {
+      letter-spacing: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="a">Practice makes perfect.</p>
+    <p id="b">Practice makes perfect.</p>
+    <p id="c">Practice makes perfect.</p>
+  </body>
 </html>
 ```
 
 The preview effect in the browser is shown in Figure 3-12.
-![Image](../../assets/images/project-03/image-012.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-012.png" alt="Image">
+</p>
 
-_Figure 3-12 Effects of Character Spacing Changes_
+<p align="center"><em>Figure 3-12 Effects of Character Spacing Changes</em></p>
 Note: letter-spacing controls character spacing, and each English letter is also treated as one "character"! Please pay attention to this detail.
 
 #### 6. Common CSS Style Rules
@@ -741,12 +765,12 @@ Open the development tool, go to File → New HTML page. After creation, set the
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>News Details Page</title>
-<!-- Introduce CSS files -->
-<link rel="stylesheet" type="text/css" href="./css/index.css" />
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>News Details Page</title>
+    <!-- Introduce CSS files -->
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+  </head>
 ```
 
 ……
@@ -756,60 +780,60 @@ The code for creating the news page is as follows.
 
 ```html
 <body>
-<div class="news">
-<div class="news-left">
-<h1 class="title">Stunning On-Orbit Photos Taken by Shenzhou-12 Astronauts Released</h1>
-<div class="new-left-content">
-<img src="image/1.jpg">
-<p>On July 21, 2021, in the Gulf of Guinea, the southwest monsoon carrying humid moisture continued its journey to the North African continent. After completing exercises such as intermittent cycling sprints, muscle dimension training, environmental control and life support system maintenance, and neuromuscular training, the astronauts returned to their bedrooms and took this photo.</p>
-</div>
-<div class="new-left-content">
-<img src="image/2.jpg">
-<p>On July 30, 2021, the astronauts captured the spectacular view of thousands of lights twinkling across the North African continent. The stars in the universe and the lights on Earth complemented each other, jointly playing a harmonious movement of life.</p>
-</div>
-<p>A beautiful photo from the autumn of 2021</p>
-<p>Does it touch your heart?</p>
-<p>Every spaceflight mission of the astronauts</p>
-<p>marks a milestone for the Chinese nation</p>
-<p>in its march toward the farther and higher starry sky</p>        </div>
-</div>
-</body>
-The styles used are as follows.
-* {
-padding: 0;
-margin: 0;
-}
-.news{
-width: 1100px;
-height: 500px;
-margin: 20px auto;/* Horizontally centered */
-}
-.news-left{
-width: 750px;
-float: left;/* Float left */
-}
-.news-left>p{
-line-height: 50px;
-font-size: 18px;
-}
-.news-left .title{
-margin-bottom: 30px;
-}
-.new-left-content{
-/* Width set to 100%, same as parent width */
-width: 100%;
-margin-bottom: 20px;
-}
-.new-left-content>img{
-width: 100%;
-}
-.new-left-content>p{
-text-indent: 2em;
-font-size: 18px;
-/* Line height */
-line-height: 40px;
-/* Allow long words to wrap to the next line */
-word-wrap: break-word;}
+  <div class="news">
+    <div class="news-left">
+      <h1 class="title">Stunning On-Orbit Photos Taken by Shenzhou-12 Astronauts Released</h1>
+      <div class="new-left-content">
+        <img src="image/1.jpg">
+        <p>On July 21, 2021, in the Gulf of Guinea, the southwest monsoon carrying humid moisture continued its journey to the North African continent. After completing exercises such as intermittent cycling sprints, muscle dimension training, environmental control and life support system maintenance, and neuromuscular training, the astronauts returned to their bedrooms and took this photo.</p>
+      </div>
+      <div class="new-left-content">
+        <img src="image/2.jpg">
+        <p>On July 30, 2021, the astronauts captured the spectacular view of thousands of lights twinkling across the North African continent. The stars in the universe and the lights on Earth complemented each other, jointly playing a harmonious movement of life.</p>
+      </div>
+      <p>A beautiful photo from the autumn of 2021</p>
+      <p>Does it touch your heart?</p>
+      <p>Every spaceflight mission of the astronauts</p>
+      <p>marks a milestone for the Chinese nation</p>
+      <p>in its march toward the farther and higher starry sky</p>        </div>
+    </div>
+  </body>
+  The styles used are as follows.
+  * {
+  padding: 0;
+  margin: 0;
+  }
+  .news{
+  width: 1100px;
+  height: 500px;
+  margin: 20px auto;/* Horizontally centered */
+  }
+  .news-left{
+  width: 750px;
+  float: left;/* Float left */
+  }
+  .news-left>p{
+  line-height: 50px;
+  font-size: 18px;
+  }
+  .news-left .title{
+  margin-bottom: 30px;
+  }
+  .new-left-content{
+  /* Width set to 100%, same as parent width */
+  width: 100%;
+  margin-bottom: 20px;
+  }
+  .new-left-content>img{
+  width: 100%;
+  }
+  .new-left-content>p{
+  text-indent: 2em;
+  font-size: 18px;
+  /* Line height */
+  line-height: 40px;
+  /* Allow long words to wrap to the next line */
+  word-wrap: break-word;}
 ```
 
 #### Step 3: Create related recommendations on the right side.
@@ -817,17 +841,17 @@ The code for creating related recommendations on the right side is as follows.
 
 ```html
 <div class="news-right">
-<div class="news-right-ost">
-<h2>Related Recommendations</h2>
-<div class="ost-content">
-<img src="image/ost1.jpg">
-<a href="#">The successful launch of the "Shenzhou" spacecraft marks that China's aerospace technology has reached a new level. China's aerospace industry has achieved amazing accomplishments.</a>
-</div>
-<div class="ost-content">
-<img src="image/ost2.jpg">
-<a href="#">In recent years, China's aerospace industry has developed by leaps and bounds, including the Chang'e lunar exploration program, the crewed Shenzhou missions, and the successfully docked Shenzhou-8 spacecraft.</a>
-</div>
-</div>
+  <div class="news-right-ost">
+    <h2>Related Recommendations</h2>
+    <div class="ost-content">
+      <img src="image/ost1.jpg">
+      <a href="#">The successful launch of the "Shenzhou" spacecraft marks that China's aerospace technology has reached a new level. China's aerospace industry has achieved amazing accomplishments.</a>
+    </div>
+    <div class="ost-content">
+      <img src="image/ost2.jpg">
+      <a href="#">In recent years, China's aerospace industry has developed by leaps and bounds, including the Chang'e lunar exploration program, the crewed Shenzhou missions, and the successfully docked Shenzhou-8 spacecraft.</a>
+    </div>
+  </div>
 </div>
 The styles are as follows.
 .news-right{
@@ -858,47 +882,47 @@ overflow: hidden;    white-space: nowrap;
 text-overflow: ellipsis;
 }
 /* Hover effect for <a> tag text */
-.ost-content>a:hover{
-color: #2291f7;
-}
-.news-right-ost>ul{
-list-style: none;
-width: 300px;
-padding: 10px;
-background-color: #efefef;
-overflow: hidden;
-}
-.news-right-ost>ul>li{
-width: 100%;
-height: 80px;
-margin-bottom: 10px;
-}
-.news-right-ost>ul>li>img{
-width: 100px;
-height: 75px;
-float: left;
-}
-.host-content{
-width: 190px;
-float: left;
-margin-left: 10px;
-}
-.host-content>a{
-display: block;
-text-decoration: none;
-color: #333;
-font-size: 13px;
-}
-.host-content>p{
-font-size: 12px;
-color: #afafaf;
-margin-top: 25px;
-}
-.news-host:hover{
-cursor: pointer;
-font-weight: bold;
-color: #000000;
-}
+  .ost-content>a:hover{
+  color: #2291f7;
+  }
+  .news-right-ost>ul{
+  list-style: none;
+  width: 300px;
+  padding: 10px;
+  background-color: #efefef;
+  overflow: hidden;
+  }
+  .news-right-ost>ul>li{
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  }
+  .news-right-ost>ul>li>img{
+  width: 100px;
+  height: 75px;
+  float: left;
+  }
+  .host-content{
+  width: 190px;
+  float: left;
+  margin-left: 10px;
+  }
+  .host-content>a{
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  }
+  .host-content>p{
+  font-size: 12px;
+  color: #afafaf;
+  margin-top: 25px;
+  }
+  .news-host:hover{
+  cursor: pointer;
+  font-weight: bold;
+  color: #000000;
+  }
 ```
 
 #### Step 4: Create featured hot news on the right side.
@@ -906,49 +930,49 @@ The code for creating featured hot news on the right side is shown below. The st
 
 ```html
 <div class="news-right-ost">
-<h2>Hot Topics Selection</h2>
-<ul>
-<li>
-<img src="image/re1.png">
-<div class="host-content">
-<a href="#">Man is born lonely; do not expect to rely on anyone, even your closest loved ones.</a>
-<p>
-<span class="news-host">News Hotspot</span>
-<span>1 hour ago</span>
-</p>
-</div>
-</li>
-<li>
-<img src="image/re2.png">
-<div class="host-content">
-<a href="#">Life is like playing chess with yourself; the more you haggle over trifles, the more you will end up losing in the end.</a>
-<p>
-<span class="news-host">News Hotspot</span>
-<span>1 hour ago</span>
-</p>
-</div>
-</li>
-<li>
-<img src="image/re3.png">
-<div class="host-content">
-<a href="#">Being sick is not scary; what's scary is collapsing from illness. Losing is not scary.</a>
-<p>
-<span class="news-host">News Hotspot</span>
-<span>1 hour ago</span>
-</p>
-</div>
-</li>
-<li>
-<img src="image/re4.png">
-<div class="host-content">
-<a href="#">Dissatisfied with yourself, but comfort yourself by saying "Enjoy today to the fullest and work hard tomorrow". Since you know the road is long.</a>
-<p>
-<span class="news-host">News Hotspot</span>
-<span>1 hour ago</span>
-</p>
-</div>
-</li>
-</ul>
+  <h2>Hot Topics Selection</h2>
+  <ul>
+    <li>
+      <img src="image/re1.png">
+      <div class="host-content">
+        <a href="#">Man is born lonely; do not expect to rely on anyone, even your closest loved ones.</a>
+        <p>
+          <span class="news-host">News Hotspot</span>
+          <span>1 hour ago</span>
+        </p>
+      </div>
+    </li>
+    <li>
+      <img src="image/re2.png">
+      <div class="host-content">
+        <a href="#">Life is like playing chess with yourself; the more you haggle over trifles, the more you will end up losing in the end.</a>
+        <p>
+          <span class="news-host">News Hotspot</span>
+          <span>1 hour ago</span>
+        </p>
+      </div>
+    </li>
+    <li>
+      <img src="image/re3.png">
+      <div class="host-content">
+        <a href="#">Being sick is not scary; what's scary is collapsing from illness. Losing is not scary.</a>
+        <p>
+          <span class="news-host">News Hotspot</span>
+          <span>1 hour ago</span>
+        </p>
+      </div>
+    </li>
+    <li>
+      <img src="image/re4.png">
+      <div class="host-content">
+        <a href="#">Dissatisfied with yourself, but comfort yourself by saying "Enjoy today to the fullest and work hard tomorrow". Since you know the road is long.</a>
+        <p>
+          <span class="news-host">News Hotspot</span>
+          <span>1 hour ago</span>
+        </p>
+      </div>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -956,16 +980,20 @@ The code for creating featured hot news on the right side is shown below. The st
 
 ### 3.2.1 Task Description
 A personal photo album displays a person’s personal style. A reasonable layout makes the album look neater and more attractive, improving the viewing experience for users.
-![Image](../../assets/images/project-03/image-013.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-013.png" alt="Image">
+</p>
 
 To complete the production of a personal photo album, the box model needs to be used, including setting the height, size, inner and outer margins of the box model, etc. The effect is shown in Figure 3-13.
-_Figure 3-13 Rendering of Personal Photo Album_
+<p align="center"><em>Figure 3-13 Rendering of Personal Photo Album</em></p>
 
 ### 3.2.2 Knowledge Preparation
 The box model is the core of CSS positioning and layout. It defines how elements are displayed and how they interact with each other. Every element on a page is regarded as a rectangular box, which consists of the element's content, padding, border, and margin. Web page layout focuses on how these boxes are arranged and nested on the page. When many boxes are placed together, the key factors to consider are box size calculation and document flow, as shown in Figure 3-14.
-![Image](../../assets/images/project-03/image-014.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-014.png" alt="Image">
+</p>
 
-_Figure 3-14 Schematic diagram of the box model_
+<p align="center"><em>Figure 3-14 Schematic diagram of the box model</em></p>
 
 #### 1.Width and Height
 In the box model, each element needs a defined width and height. The width and height properties are used in CSS to set the size of an element.
@@ -1043,33 +1071,35 @@ Example:
 
 ```html
 <html>
-<head>
-<title>Padding</title>
-<style type="text/css">
-p {
-background-color: yellow;
-}
-p.padding {
-padding-top: 50px;
-padding-bottom: 50px;
-padding-right: 50px;
-padding-left: 50px;
-}
-p.paddings {
-padding: 25px;
-}
-</style>
-</head>
-<body>
-<p>This is a paragraph without specified padding.</p>
-<p class="padding">This is a paragraph with specified padding.</p>
-<p class="paddings">This is a paragraph with specified padding.</p>
-</body>
+  <head>
+    <title>Padding</title>
+    <style type="text/css">
+      p {
+      background-color: yellow;
+      }
+      p.padding {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: 50px;
+      padding-left: 50px;
+      }
+      p.paddings {
+      padding: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is a paragraph without specified padding.</p>
+    <p class="padding">This is a paragraph with specified padding.</p>
+    <p class="paddings">This is a paragraph with specified padding.</p>
+  </body>
 </html>
 ```
 
 By running the HTML file, the result is shown in Figure 3-15.
-![Image](../../assets/images/project-03/image-015.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-015.png" alt="Image">
+</p>
 
 Figure 3‑15 Effect of Using Padding
 
@@ -1119,9 +1149,11 @@ Used to set the style of the border (border-style). The border style also has fo
 | outset | 3D outset border drawn according to the border-color value |
 
 The effect is shown in Figure 3-16:
-![Image](../../assets/images/project-03/image-016.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-016.png" alt="Image">
+</p>
 
-_Figure 3-16 Border Style Effects_
+<p align="center"><em>Figure 3-16 Border Style Effects</em></p>
 
 ##### (2) Border Width
 Used to set the width of the border (border-width). The width can be specified using keywords or custom numerical values. The border width also requires four values to be assigned. The three keywords for width values are as follows:
@@ -1219,28 +1251,30 @@ Example:
 
 ```html
 <html>
-<head>
-<title>CSS Outline</title>
-<style>
-p {
-border: 1px solid red;
-outline-style: dotted;
-outline-color: #00ff00;
-outline-width: 3px;
-margin-top: 50px;
-}
-</style>
-</head>
-<body>
-<p><b>Note:</b> IE 8 supports the outline property only if a !DOCTYPE is specified.</p>
-</body>
+  <head>
+    <title>CSS Outline</title>
+    <style>
+      p {
+      border: 1px solid red;
+      outline-style: dotted;
+      outline-color: #00ff00;
+      outline-width: 3px;
+      margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <p><b>Note:</b> IE 8 supports the outline property only if a !DOCTYPE is specified.</p>
+  </body>
 </html>
 ```
 
 View this HTML via Chrome, and the result is shown in Figure 3-17.
-![Image](../../assets/images/project-03/image-017.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-017.png" alt="Image">
+</p>
 
-_Figure 3-17 Example of CSS Outline Properties_
+<p align="center"><em>Figure 3-17 Example of CSS Outline Properties</em></p>
 
 ### 3.2.3 Task Implementation
 
@@ -1249,11 +1283,11 @@ Create a new HTML page. The global styles are set as follows:
 
 ```css
 * {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-background: #3a3a3a;
+  background: #3a3a3a;
 }
 ```
 
@@ -1262,50 +1296,50 @@ The HTML code is as follows:
 
 ```html
 <body>
-<h1 class="title">MY PHOTO</h1>
-<div id="box">
-<div class="photo-box">
-<img src="image/img01.jpg" alt="">
-<h5>Photo Name</h5>
-<p>Filming author</p>
-</div>
-</body>
-The styles are as follows:
-.title {
-text-align: center;
-letter-spacing: 2px;
-color: #fff;
-font-family: "Microsoft YaHei UI";
-margin: 35px 0;
-}
-.photo-box {
-width: 274px;
-background: #fff;
-padding: 5px;
-display: inline-block;
-margin: 10px 8px 0 0;
-border: 2px solid transparent;
-border-radius: 5px;
-}
-.photo-box:hover{
-border-color: #f00;
-}
-.photo-box>img {
-width: 270px;
-height: 194px;
-}
-.photo-box>h5 {
-margin-top: 15px;
-}
-.photo-box>p {
-font-size: 12px;
-margin: 5px 0 15px 0;
-}
-#box {
-width: 1200px;
-margin: 0 auto;
-margin-bottom: 50px;
-}
+  <h1 class="title">MY PHOTO</h1>
+  <div id="box">
+    <div class="photo-box">
+      <img src="image/img01.jpg" alt="">
+      <h5>Photo Name</h5>
+      <p>Filming author</p>
+    </div>
+  </body>
+  The styles are as follows:
+  .title {
+  text-align: center;
+  letter-spacing: 2px;
+  color: #fff;
+  font-family: "Microsoft YaHei UI";
+  margin: 35px 0;
+  }
+  .photo-box {
+  width: 274px;
+  background: #fff;
+  padding: 5px;
+  display: inline-block;
+  margin: 10px 8px 0 0;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  }
+  .photo-box:hover{
+  border-color: #f00;
+  }
+  .photo-box>img {
+  width: 270px;
+  height: 194px;
+  }
+  .photo-box>h5 {
+  margin-top: 15px;
+  }
+  .photo-box>p {
+  font-size: 12px;
+  margin: 5px 0 15px 0;
+  }
+  #box {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  }
 ```
 
 #### Step 3: Create the remaining photo albums one by one
@@ -1313,30 +1347,30 @@ Following the production of the first photo album, complete the remaining albums
 
 ```html
 <div class="photo-box">
-<img src="image/img01.jpg" alt="">
-<h5>Photo Name</h5>
-<p>Filming author</p>
+  <img src="image/img01.jpg" alt="">
+  <h5>Photo Name</h5>
+  <p>Filming author</p>
 </div>
 <div class="photo-box">
-<img src="image/img03.jpg" alt="">
-<h5>Photo Name</h5>
-<p>Filming author</p>
+  <img src="image/img03.jpg" alt="">
+  <h5>Photo Name</h5>
+  <p>Filming author</p>
 </div>
 <div class="photo-box">
-<img src="image/img02.jpg" alt="">
-<h5>Photo Name</h5>
-<p>Filming author</p>
+  <img src="image/img02.jpg" alt="">
+  <h5>Photo Name</h5>
+  <p>Filming author</p>
 </div>
 <div class="photo-box">
-<img src="image/img01.jpg" alt="">
-<h5>Photo Name</h5>
-<p>Filming author</p>
+  <img src="image/img01.jpg" alt="">
+  <h5>Photo Name</h5>
+  <p>Filming author</p>
 </div>
 ……
 <div class="photo-box">
-<img src="image/img02.jpg" alt="">
-<h5>Photo Name</h5>
-<p>Filming author</p>
+  <img src="image/img02.jpg" alt="">
+  <h5>Photo Name</h5>
+  <p>Filming author</p>
 </div>
 ```
 
@@ -1344,9 +1378,11 @@ Following the production of the first photo album, complete the remaining albums
 
 ### 3.3.1 Task Description
 Shopping websites usually have a display page for product lists, which are placed on the homepage to show popular products and attract customers' attention. The implementation of the product list needs to be completed using the knowledge of float. The effect diagram is shown in Figure 3-18.
-![Image](../../assets/images/project-03/image-018.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-018.png" alt="Image">
+</p>
 
-_Figure 3-18 Effect Diagram of Mall List Layout_
+<p align="center"><em>Figure 3-18 Effect Diagram of Mall List Layout</em></p>
 
 ### 3.3.2 Knowledge Preparation
 
@@ -1358,26 +1394,34 @@ Inline-block elements: These are elements that are originally inline but convert
 #### 2.Introduction to Normal Document Flow
 Document flow refers to the position of HTML elements on the page, that is, the space occupied by elements during layout. Under normal circumstances, elements are arranged in the order they appear: block-level elements occupy a whole line, while inline elements are arranged from left to right. The normal document flow divides the window into rows, which are filled by various elements in sequence.
 The opposite of normal document flow is out of document flow. An HTML document without CSS styling is rendered in the order it is written. As shown in Figure 3-19 below, three div elements are added and displayed normally in sequence.
-![Image](../../assets/images/project-03/image-019.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-019.png" alt="Image">
+</p>
 
-_Figure 3-19 Three div tags displayed normally_
+<p align="center"><em>Figure 3-19 Three div tags displayed normally</em></p>
 Being out of the normal document flow means that the element is no longer in its original position and "floats" above other elements. We apply CSS styling to the three div tags mentioned above, and the effect is shown in Figure 3-20 below.
-![Image](../../assets/images/project-03/image-020.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-020.png" alt="Image">
+</p>
 
-_Figure 3-20 Effect diagram of elements out of the document flow_
+<p align="center"><em>Figure 3-20 Effect diagram of elements out of the document flow</em></p>
 From this example, we can see that being out of the document flow means the element is no longer in its original position. In CSS layout, elements can be taken out of the normal flow by using float and positioning. Next, we will first learn about float.
 
 #### 3.How Float Works
 By using the float property, elements can be made to "float" and break away from the normal document flow. In other words, elements without the float property will be displayed in sequence according to the standard flow, while floating elements that are out of the flow are no longer restricted by it and float above normal elements.
 Let’s understand this with an example.
-![Image](../../assets/images/project-03/image-021.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-021.png" alt="Image">
+</p>
 
-_Figure 3-21 Div tags displayed normally_
+<p align="center"><em>Figure 3-21 Div tags displayed normally</em></p>
 As shown in Figure 3-21, there are four div tags in the document. Since div is a block-level element, it will occupy an entire line even if the width of each div does not fill the line.In Figure 3-22, the four div tags are in the normal document flow. We set a left float effect for div2, and the display effect in the browser is shown in Figure 3-22.
 We can see that div2 is out of the document flow after being floated. The document flow will treat div3 as the element immediately after div1, so div3 will take the position originally belonging to div2.Since div2 is set to float left, it will follow the previous normal flow element, that is, behind div1. Therefore, div2 floats above div3 and covers part of its content.
-![Image](../../assets/images/project-03/image-022.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-022.png" alt="Image">
+</p>
 
-_Figure 3-22 Effect of Floated Div Elements_
+<p align="center"><em>Figure 3-22 Effect of Floated Div Elements</em></p>
 With floating, block-level elements can be displayed side by side in one line, unless their total width exceeds the line width. This makes full use of browser space and presents web content more reasonably and clearly within a limited interface.
 
 #### 4.Float Style Rules
@@ -1420,9 +1464,9 @@ Sample code is as follows:
 
 ```css
 .textDiv {
-color: blue;
-border: 2px solid blue;
-clear: left;
+  color: blue;
+  border: 2px solid blue;
+  clear: left;
 }
 ```
 
@@ -1439,10 +1483,10 @@ This method adds an :after pseudo-element to the end of the parent element. By c
 
 ```css
 .div1:after {
-content: "";
-height: 0;
-display: block;
-clear: both;
+  content: "";
+  height: 0;
+  display: block;
+  clear: both;
 }
 ```
 
@@ -1451,7 +1495,7 @@ This method sets the overflow property of the parent element to auto (i.e., over
 
 ```css
 .div1{
-overflow: auto;
+  overflow: auto;
 }
 ```
 
@@ -1465,9 +1509,9 @@ Create a new HTML page and set the page title to "Product List". The code is as 
 
 ```html
 <head>
-<meta charset="utf-8">
-<title>Product List</title>
-<link rel="stylesheet" type="text/css" href="css/index.css" />
+  <meta charset="utf-8">
+  <title>Product List</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 ```
 
@@ -1476,22 +1520,22 @@ It is implemented using a layout with lists and floats. The code is as follows.
 
 ```html
 <body>
-<!-- Page header -->
-<div class="header">
-<div class="nav">
-<ul class="container clear">
-<li class="on">Home</li>
-<li>Mobile Fashion</li>
-<li>Beauty Pavilion</li>
-<li>Supermarket</li>
-<li>Fresh Produce</li>
-<li>JD International</li>
-<li>Flash Sale</li>
-<li>Auction</li>
-<li>Finance</li>
-</ul>
-</div>
-</div>
+  <!-- Page header -->
+  <div class="header">
+    <div class="nav">
+      <ul class="container clear">
+        <li class="on">Home</li>
+        <li>Mobile Fashion</li>
+        <li>Beauty Pavilion</li>
+        <li>Supermarket</li>
+        <li>Fresh Produce</li>
+        <li>JD International</li>
+        <li>Flash Sale</li>
+        <li>Auction</li>
+        <li>Finance</li>
+      </ul>
+    </div>
+  </div>
 </body>
 The styles are as follows:
 * {
@@ -1545,38 +1589,38 @@ It is implemented using lists, float layout and style settings. The code is as f
 
 ```html
 <div class="container">
-<!-- Product List -->
-<ul class="shop-list">
-<li class="list-item">
-<img src="image/s1.jpg" />
-<div class="shop-intr">
-<p class="shop-host">Bestseller</p>
-<h3 class="shop-price">¥105</h3>
-<p class="shop-dis">¥175</p>
-</div>
-<p>【Celebrity Recommended】Autumn Striped Silk Chiffon Shirt with Lace Embroidery for Women</p>
-</li>
-<li class="list-item">
-<img src="image/s2.jpg" />
-<div class="shop-intr">
-<p class="shop-host">Discount</p>
-<h3 class="shop-price">¥105</h3>
-<p class="shop-dis">¥175</p>
-</div>
-<p>New Round Neck Small V Single Side Wave Edge Smooth Drape Fashion Urban Long Sleeve Shirt for Men</p>
-</li>
-<li class="list-item">
-<img src="image/s3.jpg" />
-<div class="shop-intr">
-<p class="shop-host">Bestseller</p>
-<h3 class="shop-price">¥165</h3>
-<p class="shop-dis">¥285</p>
-</div>
-<p>Glazed Time Hydrating Lip Gloss Moisturizing and Pigmented Lipstick for Women Long-Lasting Lip Gloss</p>
-</li>
-……
-<li class="clear-float"></li>
-</ul>
+  <!-- Product List -->
+  <ul class="shop-list">
+    <li class="list-item">
+      <img src="image/s1.jpg" />
+      <div class="shop-intr">
+        <p class="shop-host">Bestseller</p>
+        <h3 class="shop-price">¥105</h3>
+        <p class="shop-dis">¥175</p>
+      </div>
+      <p>【Celebrity Recommended】Autumn Striped Silk Chiffon Shirt with Lace Embroidery for Women</p>
+    </li>
+    <li class="list-item">
+      <img src="image/s2.jpg" />
+      <div class="shop-intr">
+        <p class="shop-host">Discount</p>
+        <h3 class="shop-price">¥105</h3>
+        <p class="shop-dis">¥175</p>
+      </div>
+      <p>New Round Neck Small V Single Side Wave Edge Smooth Drape Fashion Urban Long Sleeve Shirt for Men</p>
+    </li>
+    <li class="list-item">
+      <img src="image/s3.jpg" />
+      <div class="shop-intr">
+        <p class="shop-host">Bestseller</p>
+        <h3 class="shop-price">¥165</h3>
+        <p class="shop-dis">¥285</p>
+      </div>
+      <p>Glazed Time Hydrating Lip Gloss Moisturizing and Pigmented Lipstick for Women Long-Lasting Lip Gloss</p>
+    </li>
+    ……
+    <li class="clear-float"></li>
+  </ul>
 </div>
 The styles are as follows:
 /* Product List */
@@ -1648,13 +1692,17 @@ white-space: nowrap;
 ### 3.4.1 Task Description
 A side navigation bar places the navigation menu at the edge of the page, helping users quickly locate the desired channel. It not only saves users' time scrolling through the page but also improves the user experience.
 The creation of the side navigation bar is implemented using list tags combined with positioning settings. The effect diagrams are shown in Figure 3-23 and Figure 3-24.
-![Image](../../assets/images/project-03/image-023.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-023.png" alt="Image">
+</p>
 
-_Figure 3-23 Side Navigation Diagram_
-![Image](../../assets/images/project-03/image-024.png)
+<p align="center"><em>Figure 3-23 Side Navigation Diagram</em></p>
+<p align="center">
+  <img src="../../assets/images/project-03/image-024.png" alt="Image">
+</p>
 
 、
-_Figure 3-24 Side Navigation Effect Diagram_
+<p align="center"><em>Figure 3-24 Side Navigation Effect Diagram</em></p>
 
 ### 3.4.2 Knowledge Reserve
 Positioning means placing an element at a specified position to complete the interface design. Positioning is divided into relative positioning, absolute positioning, and fixed positioning.
@@ -1677,31 +1725,35 @@ position:relative;
 ```
 
 As shown in Figure 3-25 below, there are six div tags in the normal document flow, displayed in sequence in the browser. Now we set relative positioning for div2 and div5.
-![Image](../../assets/images/project-03/image-025.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-025.png" alt="Image">
+</p>
 
-_Figure 3-25 A normally displayed div tag_
+<p align="center"><em>Figure 3-25 A normally displayed div tag</em></p>
 The styles are as follows:
 
 ```css
 .blue {
-background-color: blue;
-width: 150px;
-position: relative;
-left: 20px;
-top: 30px;
+  background-color: blue;
+  width: 150px;
+  position: relative;
+  left: 20px;
+  top: 30px;
 }
 .orange {
-background-color: orange;
-position: relative;
-left: 100px;
-bottom: 20px;
+  background-color: orange;
+  position: relative;
+  left: 100px;
+  bottom: 20px;
 }
 ```
 
 With relative positioning applied in the above settings, div2 is moved 20px to the right and 30px downward from its original position. Div5 is positioned 100px to the right and 20px upward from its original position. The effect is shown in Figure 3-26.
-![Image](../../assets/images/project-03/image-026.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-026.png" alt="Image">
+</p>
 
-_Figure 3-26 Effect of Setting Relative Positioning_
+<p align="center"><em>Figure 3-26 Effect of Setting Relative Positioning</em></p>
 
 #### 3.Absolute Positioning
 Absolute positioning means the element is removed from the normal document flow. Its offset position is relative to its parent element. If there is no positioned parent element, it will be offset relative to the browser window instead.
@@ -1715,25 +1767,27 @@ In the above example, absolute positioning is applied to div2 and div5. The styl
 
 ```css
 .blue {
-background-color: blue;
-width: 150px;
-position: absolute;
-left: 20px;
-top: 30px;
+  background-color: blue;
+  width: 150px;
+  position: absolute;
+  left: 20px;
+  top: 30px;
 }
 .orange {
-background-color: orange;
-position: absolute;
-left: 100px;
-top: 30px;
+  background-color: orange;
+  position: absolute;
+  left: 100px;
+  top: 30px;
 }
 ```
 
 div2 is offset 20px from the left of the browser and 30px from the top; div5 is offset 100px from the left of the browser and 300px from the top. The effect is shown in Figure 3-27.
 Since div2 and div5 use absolute positioning, they are removed from the normal document flow. Only div1, div3, div4, and div6 remain in the normal flow and are arranged in sequence. With no positioned parent elements, div2 and div5 are offset relative to the browser.
-![Image](../../assets/images/project-03/image-027.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-027.png" alt="Image">
+</p>
 
-_Figure 3-27 Effect of Absolute Positioning_
+<p align="center"><em>Figure 3-27 Effect of Absolute Positioning</em></p>
 
 #### 4.Fixed Positioning
 Fixed positioning means that the position of an element remains unchanged, with the browser window as the reference system. The coordinates of a fixed-positioned element do not change, nor do they scroll as the browser scrolls. Common applications include: pop-up ads fixed at the bottom right corner of the browser, and the bottom navigation bar in mobile apps.
@@ -1750,9 +1804,9 @@ Create a new HTML page, set the page title to "Side Navigation", and set the bac
 
 ```html
 <head>
-<meta charset="utf-8">
-<title>Side Navigation</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css" />
+  <meta charset="utf-8">
+  <title>Side Navigation</title>
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
 </head>
 The styles are as follows:
 * {
@@ -1770,9 +1824,9 @@ The code is as follows:
 
 ```html
 <body>
-<div class="nav-left">
-<img src="./img/nav.jpg" class="nav_img" />
-</div>
+  <div class="nav-left">
+    <img src="./img/nav.jpg" class="nav_img" />
+  </div>
 </body>
 The styles are as follows:
 .nav-left {
@@ -1796,31 +1850,31 @@ The code is as follows:
 
 ```html
 <body>
-<div class="nav-left">
-<img src="./img/nav.jpg" class="nav_img" />
-<ul>
-<li>
-<a href="#">Women's Clothing</a>
-</li>
-<li>
-</li>
-<li>
-<a href="#">Makeup</a>
-</li>
-<li>
-<a href="#">Outdoor Sports</a>
-</li>
-<li>
-<a href="#">Home Electronics</a>
-</li>
-<li>
-<a href="#">Watches & Accessories</a>
-</li>
-<li>
-<a href="#">Household Goods</a>
-</li>
-</ul>
-</div>
+  <div class="nav-left">
+    <img src="./img/nav.jpg" class="nav_img" />
+    <ul>
+      <li>
+        <a href="#">Women's Clothing</a>
+      </li>
+      <li>
+      </li>
+      <li>
+        <a href="#">Makeup</a>
+      </li>
+      <li>
+        <a href="#">Outdoor Sports</a>
+      </li>
+      <li>
+        <a href="#">Home Electronics</a>
+      </li>
+      <li>
+        <a href="#">Watches & Accessories</a>
+      </li>
+      <li>
+        <a href="#">Household Goods</a>
+      </li>
+    </ul>
+  </div>
 </body>
 The styles are as follows:
 ul {
@@ -1836,115 +1890,115 @@ The code is as follows:
 
 ```html
 <body>
-<body>
-<div class="nav-left">
-<img src="./img/nav.jpg" class="nav-img" />
-<ul>
-<li> <a href="#">Women's Clothing</a>
-<ul class="nav-menu">
-<li class="aside-menu">
-<div class="aside-content">
-<h5>Popular Clothing &nbsp;> </h5>
-<span>Sun Protection Clothing </span>
-<span>Shorts</span>
-<span>Jeans</span>
-<span>Maternity & Mom Wear</span>
-<span>Plus Size Women's Clothing</span>
-<span>Coats</span>
-</div>
-<div class="aside-content">
-<h5>Skirt Wardrobe&nbsp; > </h5>
-<span>One-Piece Dresses</span>
-<span>Skirts</span>
-<span>Skirt Suits</span>
-<span>Figure-Hugging Dresses</span>
-<span>White One-Piece Dresses</span>
-</div>
-<div class="aside-content">
-<h5>Versatile Tops&nbsp;> </h5>
-<span>Sweaters</span>
-<span>Cashmere/Wool Sweaters</span>
-<span>Knitwear</span>
-<span>Shirts</span>
-<span>T-Shirts </span>
-<span>Trench Coats</span>
-</div>
-<div class="aside-content">
-h5>Outerwear &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > </h5>
-<span>Cotton Coats</span>
-<span>Vests</span>
-<span>Blazers</span>
-<span>Down Jackets</span>
-<span>Woolen Coats </span>
-<span>Knit Outerwear</span>
-</div>
-<div class="aside-content">
-<h5>Featured Apparel&nbsp; > </h5>
-<span>Middle/Aged Women's Clothing</span>
-<span>Plus Size Women's Clothing</span>
-<span>Mall-Style Items</span>
-<span>Designer Pieces</span>
-<span>Ethnic Style </span>
-<span>Evening Gowns</span>
-</div>
-</li>
-</ul>
-</li>
-……
-</ul>
-</div>
-</body>
-The styles are as follows:
-.nav-left>ul{
-width: 230px;
-height: 450px;
-background-color: #ff00d9;
-position: relative;
-}
-.nav-left>ul>li{
-height: 45px;
-width: 230px;
-}
-.nav-left>ul>li>a{
-display: block;
-padding-left: 40px;
-line-height: 45px;
-color: #fff;
-}
-.nav-left>ul>li:hover a{
-background-color: #fff;
-color: #ff00d9;
-}
-.nav-left>ul>li>ul{
-width: 500px;
-height: 350px;
-background-color: #fff;
-position: absolute;
-top: 0;
-left: 230px;
-display: none;
-}
-.nav-left>ul>li:hover .aside-menu{
-display: block;
-}
-.nav-left>ul>li>ul>li{
-width: 450px;
-height: 100px;
-line-height: 38px;
-padding: 0 20px;
-}
-.aside-content>h5{
-display: inline-block;
-}
-.aside-content>span{
-font-size: 12px;
-margin-left: 15px;
-color: #666;
-cursor: pointer;
-}
-.aside-content>span:hover{
-color: #ff00d9;
-}
+  <body>
+    <div class="nav-left">
+      <img src="./img/nav.jpg" class="nav-img" />
+      <ul>
+        <li> <a href="#">Women's Clothing</a>
+          <ul class="nav-menu">
+            <li class="aside-menu">
+              <div class="aside-content">
+                <h5>Popular Clothing &nbsp;> </h5>
+                <span>Sun Protection Clothing </span>
+                <span>Shorts</span>
+                <span>Jeans</span>
+                <span>Maternity & Mom Wear</span>
+                <span>Plus Size Women's Clothing</span>
+                <span>Coats</span>
+              </div>
+              <div class="aside-content">
+                <h5>Skirt Wardrobe&nbsp; > </h5>
+                <span>One-Piece Dresses</span>
+                <span>Skirts</span>
+                <span>Skirt Suits</span>
+                <span>Figure-Hugging Dresses</span>
+                <span>White One-Piece Dresses</span>
+              </div>
+              <div class="aside-content">
+                <h5>Versatile Tops&nbsp;> </h5>
+                <span>Sweaters</span>
+                <span>Cashmere/Wool Sweaters</span>
+                <span>Knitwear</span>
+                <span>Shirts</span>
+                <span>T-Shirts </span>
+                <span>Trench Coats</span>
+              </div>
+              <div class="aside-content">
+                h5>Outerwear &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > </h5>
+                <span>Cotton Coats</span>
+                <span>Vests</span>
+                <span>Blazers</span>
+                <span>Down Jackets</span>
+                <span>Woolen Coats </span>
+                <span>Knit Outerwear</span>
+              </div>
+              <div class="aside-content">
+                <h5>Featured Apparel&nbsp; > </h5>
+                <span>Middle/Aged Women's Clothing</span>
+                <span>Plus Size Women's Clothing</span>
+                <span>Mall-Style Items</span>
+                <span>Designer Pieces</span>
+                <span>Ethnic Style </span>
+                <span>Evening Gowns</span>
+              </div>
+            </li>
+          </ul>
+        </li>
+        ……
+      </ul>
+    </div>
+  </body>
+  The styles are as follows:
+  .nav-left>ul{
+  width: 230px;
+  height: 450px;
+  background-color: #ff00d9;
+  position: relative;
+  }
+  .nav-left>ul>li{
+  height: 45px;
+  width: 230px;
+  }
+  .nav-left>ul>li>a{
+  display: block;
+  padding-left: 40px;
+  line-height: 45px;
+  color: #fff;
+  }
+  .nav-left>ul>li:hover a{
+  background-color: #fff;
+  color: #ff00d9;
+  }
+  .nav-left>ul>li>ul{
+  width: 500px;
+  height: 350px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 230px;
+  display: none;
+  }
+  .nav-left>ul>li:hover .aside-menu{
+  display: block;
+  }
+  .nav-left>ul>li>ul>li{
+  width: 450px;
+  height: 100px;
+  line-height: 38px;
+  padding: 0 20px;
+  }
+  .aside-content>h5{
+  display: inline-block;
+  }
+  .aside-content>span{
+  font-size: 12px;
+  margin-left: 15px;
+  color: #666;
+  cursor: pointer;
+  }
+  .aside-content>span:hover{
+  color: #ff00d9;
+  }
 ```
 
 ## Task 3.5 Project Practice – Map Attractions (Section F)
@@ -1956,9 +2010,11 @@ Box-shadow effect: scale up to 1.05 times, with a box shadow that offsets 5px on
 
 ### 3.5.2 Effect Display
 The implemented effect of the map attractions section is shown in Figure 3-28 below.
-![Image](../../assets/images/project-03/image-028.png)
+<p align="center">
+  <img src="../../assets/images/project-03/image-028.png" alt="Image">
+</p>
 
-_Figure 3-28 Map Attractions Effect_
+<p align="center"><em>Figure 3-28 Map Attractions Effect</em></p>
 
 ### 3.5.3 Task Implementation
 
@@ -1968,29 +2024,29 @@ The code is as follows:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<!-- Map attraction section -->
-<section class="map">
-<h2>Map Attractions</h2>
-<div class="map-container">
-<!-- Attractions -->
-<div class="attractions">
-<a class="card" href="#" id="attraction-a">
-<picture>
-<source
-srcset="assets/images/attraction-a.jpg"
-media="(min-width: 760px)"
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <!-- Map attraction section -->
+      <section class="map">
+        <h2>Map Attractions</h2>
+        <div class="map-container">
+          <!-- Attractions -->
+          <div class="attractions">
+            <a class="card" href="#" id="attraction-a">
+              <picture>
+                <source
+                srcset="assets/images/attraction-a.jpg"
+                media="(min-width: 760px)"
 ```
 
 /&gt;
@@ -2004,10 +2060,10 @@ alt="Parce de la Tete"
 <span>Parc de la Tete d'Or</span>
 </a>
 <a class="card" href="#" id="attraction-b">
-<picture>
-<source
-srcset="assets/images/attraction-b.jpg"
-media="(min-width: 760px)"
+  <picture>
+    <source
+    srcset="assets/images/attraction-b.jpg"
+    media="(min-width: 760px)"
 ```
 
 /&gt;
@@ -2021,20 +2077,20 @@ alt="Street"
 <span>Street</span>
 </a>
 <a class="card" href="#" id="attraction-c">
-<picture>
-<source
-srcset="assets/images/attraction-c.jpg"
-media="(min-width: 760px)"
-/>
-<img src="assets/images/attraction-c-low-res.jpg" alt="River" />
-</picture>
-<span>River</span>
+  <picture>
+    <source
+    srcset="assets/images/attraction-c.jpg"
+    media="(min-width: 760px)"
+    />
+    <img src="assets/images/attraction-c-low-res.jpg" alt="River" />
+  </picture>
+  <span>River</span>
 </a>
 <a class="card" href="#">
-<picture>
-<source
-srcset="assets/images/all-attractions.jpg"
-media="(min-width: 760px)"
+  <picture>
+    <source
+    srcset="assets/images/all-attractions.jpg"
+    media="(min-width: 760px)"
 ```
 
 /&gt;
@@ -2075,11 +2131,11 @@ tabindex="0"
 </div>
 <!-- Image -->
 <picture>
-<source
-srcset="assets/images/lyon-map.jpg"
-media="(min-width: 760px)"
-/>
-<img src="assets/images/lyon-map-low-res.jpg" alt="MDN" />
+  <source
+  srcset="assets/images/lyon-map.jpg"
+  media="(min-width: 760px)"
+  />
+  <img src="assets/images/lyon-map-low-res.jpg" alt="MDN" />
 </picture>
 </div>
 </section>
@@ -2205,28 +2261,28 @@ font-weight: bold;
 ```css
 .attractions .card:hover,
 .events-container .card:hover {
-transform: scale(1.05);
-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 .attractions .card::before,
 .events-container .card::before {
-content: "";
-position: absolute;
-top: 0;
-left: -80px;
-height: 100%;
-width: 50px;
-background: linear-gradient(
-to bottom,
-rgba(255, 255, 255, 0.75),
-rgba(255, 255, 255, 0.25)
-);
-transform: rotate(8deg);
-transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80px;
+  height: 100%;
+  width: 50px;
+  background: linear-gradient(
+  to bottom,
+  rgba(255, 255, 255, 0.75),
+  rgba(255, 255, 255, 0.25)
+  );
+  transform: rotate(8deg);
+  transition: 0.5s;
 }
 .events-container .card:hover::before,
 .attractions .card:hover::before {
-left: 200px;
+  left: 200px;
 }
 ```
 

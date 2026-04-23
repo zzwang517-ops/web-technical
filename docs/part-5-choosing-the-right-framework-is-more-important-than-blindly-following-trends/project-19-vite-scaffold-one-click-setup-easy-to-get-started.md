@@ -16,9 +16,11 @@ In the project development stage, use Vue's reactive data binding and component-
 
 ### 19.1.1 Task Description
 Use "Nothing Compares to npm run dev" as my first Vue 3 case. The displayed content mainly includes the Vue CLI scaffold, quickly building a project through the scaffold, starting the project, and viewing the displayed result in the address bar. The case effect is shown in Figure 19-1.
-![Image](../../assets/images/project-19/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-19/image-001.png" alt="Image">
+</p>
 
-_Figure 19-1 Nothing Compares to npm run dev_
+<p align="center"><em>Figure 19-1 Nothing Compares to npm run dev</em></p>
 
 ### 19.1.2 Knowledge Preparation
 In this section, we will introduce how to build a Vue single-page application locally. The created project will use a Vite-based build setup. Before building the project, make sure you have installed the latest version of Node.js. If it is not installed, please install the latest version of Node.js first, as follows:
@@ -27,14 +29,18 @@ There are many ways to use Vue in a project. The simpler methods covered in this
 #### 1. Installation of Vue Scaffold Tools
 create-vue is the officially recommended scaffold tool for Vue. The prerequisite is that Node.js has been installed, since Node.js comes with npm (Node Package Manager) by default.
 To install Node.js, enter the download URL in the browser address bar:“https://nodejs.org/en/download”to enter the Node.js installer download interface, as shown in Figure 19-2.
-![Image](../../assets/images/project-19/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-19/image-002.png" alt="Image">
+</p>
 
-_Figure 19-2 Node installer download interface_
+<p align="center"><em>Figure 19-2 Node installer download interface</em></p>
 Select the required installer according to your operating system and download it. After the download is complete, double-click the installation file to proceed with the installation.
 Once the installation is finished, you can enter node -v and npm -v in the command-line tool. If the version numbers are displayed normally, it means Node.js has been installed successfully, as shown in Figure 19-3.
-![Image](../../assets/images/project-19/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-19/image-003.png" alt="Image">
+</p>
 
-_Figure 19-3 Node installed successfully_
+<p align="center"><em>Figure 19-3 Node installed successfully</em></p>
 If the installation fails, you can use the npm cache clean command to clear the cache and reinstall. During subsequent installations, if installation failure occurs, you must clear the cache first. Similarly, you can use the npm -v command to verify whether the installation was successful.
 
 #### 2.Initialize the Project
@@ -49,26 +55,36 @@ npm create vite@latest my-vue-app --template vue
 yarn create vite my-vue-app --template vue
 # Enter the project directory
 cd my-vue-app
-![Image](../../assets/images/project-19/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-19/image-004.png" alt="Image">
+</p>
 
-_Figure 19-4 Running the project creation command_
+<p align="center"><em>Figure 19-4 Running the project creation command</em></p>
 (2) After entering the command, press the Enter key, select Vue as the framework (using the arrow keys), and press Enter again, as shown in Figure 19-5 below.
-![Image](../../assets/images/project-19/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-19/image-005.png" alt="Image">
+</p>
 
-_Figure 19-5 Select "Vue" as the framework_
+<p align="center"><em>Figure 19-5 Select "Vue" as the framework</em></p>
 (3) You will be prompted to choose the project creation mode. Use the up and down arrow keys to select either JavaScript or TypeScript, then press Enter, as shown in Figure 19-6 below.
-![Image](../../assets/images/project-19/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-19/image-006.png" alt="Image">
+</p>
 
-_Figure 19-6 Select "JavaScript" or "TypeScript"_
+<p align="center"><em>Figure 19-6 Select "JavaScript" or "TypeScript"</em></p>
 （4）Enter the project directory and press Enter directly, as shown in Figure 19-7 below.
-![Image](../../assets/images/project-19/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-19/image-007.png" alt="Image">
+</p>
 
-_Figure 19-7 Enter the project_
+<p align="center"><em>Figure 19-7 Enter the project</em></p>
 
 ##### (5) Enter npm run dev to start the project, as shown in Figure 19-8 below.
-![Image](../../assets/images/project-19/image-008.png)
+<p align="center">
+  <img src="../../assets/images/project-19/image-008.png" alt="Image">
+</p>
 
-_Figure 19-8 Starting the Project_
+<p align="center"><em>Figure 19-8 Starting the Project</em></p>
 (6)Enter http://localhost:5173 in the browser address bar to preview the running effect of the project.
 
 ### 19.1.3 Task Implementation
@@ -91,47 +107,47 @@ The project "Ten miles of spring breeze are not as good as npm run dev" is divid
 
 ```html
 <style scoped>
-@keyframes fall {
-0% { transform: translateY(-100px) rotate(0deg); }
-100% { transform: translateY(100vh) rotate(360deg); }
-}
-.spring-container {
-min-height: 100vh;
-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-overflow: hidden;
-}
-.spring-text {
-z-index: 10;
-font-family: 'ZCOOL XiaoWei', serif;
-text-align: center;
-font-size: 4rem;
-line-height: 1.2;
-color: #2c3e50;
-text-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.text-line {
-display: block;
-margin: 10px 0;
-}
-.text-line:last-child {
-color: #e74c3c;
-font-size: 5rem;
-letter-spacing: 3px;
-}
-.petal {
-position: absolute;
-width: 20px;
-height: 20px;
-background-image:
-radial-gradient(circle at 30% 30%, #ff9a9e 0%, #fad0c4 100%);
-border-radius: 50% 50% 50% 0;
-transform-origin: center bottom;
-animation-timing-function: cubic-bezier(0.4, 0.2, 0.6, 0.8);
-}
+  @keyframes fall {
+  0% { transform: translateY(-100px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+  }
+  .spring-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  }
+  .spring-text {
+  z-index: 10;
+  font-family: 'ZCOOL XiaoWei', serif;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1.2;
+  color: #2c3e50;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .text-line {
+  display: block;
+  margin: 10px 0;
+  }
+  .text-line:last-child {
+  color: #e74c3c;
+  font-size: 5rem;
+  letter-spacing: 3px;
+  }
+  .petal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image:
+  radial-gradient(circle at 30% 30%, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 50% 50% 50% 0;
+  transform-origin: center bottom;
+  animation-timing-function: cubic-bezier(0.4, 0.2, 0.6, 0.8);
+  }
 </style>
 ```
 
@@ -145,9 +161,11 @@ When CSS is unavailable or disabled, users can still select photo files via the 
 
 ### 19.2.2 Effect Display
 The effect display of loading image files is shown in Figure 19-11.
-![Image](../../assets/images/project-19/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-19/image-009.png" alt="Image">
+</p>
 
-_Figure 19-11 Loading Image Files_
+<p align="center"><em>Figure 19-11 Loading Image Files</em></p>
 
 ### 19.2.3 Task Implementation
 
@@ -177,20 +195,20 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
-plugins: [
-vue(),
-],
-build: {
-outDir: "../34_module_e",
-},
+    plugins: [
+      vue(),
+    ],
+  build: {
+    outDir: "../34_module_e",
+  },
 server: {
-port: 3000,
+  port: 3000,
 },
 base: "/34_module_e",
 resolve: {
-alias: {
-'@': fileURLToPath(new URL('./src', import.meta.url))
-}
+  alias: {
+    '@': fileURLToPath(new URL('./src', import.meta.url))
+  }
 }
 ```
 
@@ -217,10 +235,10 @@ export const SLIDE_TIME = 3000;
 
 ```js
 export function getId() {
-return ~~(Math.random() * 10000000);
+  return ~~(Math.random() * 10000000);
 }
 export function convertFilename(name) {
-return name
+  return name
 ```
 
 .split(".")[0]
@@ -244,8 +262,8 @@ export const appTheme = ref("A"); // A B C D E F
 export const appImages = ref([]);
 export const currentImageIndex = ref(0);
 export const currentImage = computed(() => {
-return appImages.value[currentImageIndex.value];
-})
+    return appImages.value[currentImageIndex.value];
+  })
 ```
 
 #### Step 7: Import and load the homepage file in App.vue.
@@ -278,8 +296,8 @@ import {ref} from "vue";
 </template>
 <style scoped>
 #app {
-height: 100vh;
-padding: 2rem;
+  height: 100vh;
+  padding: 2rem;
 }
 </style>
 ```
@@ -335,20 +353,20 @@ The code is as follows:
 
 ```html
 <style scoped>
-.bigBadge {
-font-size: 1.2rem;
-}
-.exitFull {
-display: none;
-}
-@media (display-mode: fullscreen) {
-.enterFull {
-display: none;
-}
-.exitFull {
-display: inline-block;
-}
-}
+  .bigBadge {
+  font-size: 1.2rem;
+  }
+  .exitFull {
+  display: none;
+  }
+  @media (display-mode: fullscreen) {
+  .enterFull {
+  display: none;
+  }
+  .exitFull {
+  display: inline-block;
+  }
+  }
 </style>
 ```
 
@@ -370,12 +388,12 @@ The code is as follows:
 ```js
 /* toggle fullscreen */
 function toggleFullscreen() {
-/* exit fullscreen */
-if (document.fullscreenElement) {
-document.exitFullscreen();
-} else {
-/* enter fullscreen */
-document.documentElement.requestFullscreen();
+  /* exit fullscreen */
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  } else {
+  /* enter fullscreen */
+  document.documentElement.requestFullscreen();
 }
 }
 ```
@@ -386,7 +404,7 @@ The code is as follows:
 ```js
 /* import sample data */
 function importSample() {
-const sampleFiles = [
+  const sampleFiles = [
 ```
 
 "basilique-notre-dame-de-fourviere-lyon.jpg",
@@ -412,7 +430,7 @@ caption: convertFilename(name)
 }
 /* automatic load sample data in DEV env */
 if (import.meta.env.DEV) {
-//onMounted(importSample);
+  //onMounted(importSample);
 }
 ```
 
@@ -424,28 +442,28 @@ let slideInterval = null;
 const slideKey = ref(0);
 /* run slide */
 function setSlideInterval() {
-clearInterval(slideInterval);
-currentImageIndex.value = 0;
-slideKey.value++;
-/* Auto Playing Type */
-if (appMode.value === "AUTO") {
-slideInterval = setInterval(() => {
-/* check exists images */
-if (!appImages.value.length) return;
-/* check last turn */
-if (currentImageIndex.value + 1 === appImages.value.length) {
-currentImageIndex.value = 0;
-} else {
-currentImageIndex.value += 1;
-}
-}, SLIDE_TIME)
+  clearInterval(slideInterval);
+  currentImageIndex.value = 0;
+  slideKey.value++;
+  /* Auto Playing Type */
+  if (appMode.value === "AUTO") {
+    slideInterval = setInterval(() => {
+        /* check exists images */
+        if (!appImages.value.length) return;
+        /* check last turn */
+        if (currentImageIndex.value + 1 === appImages.value.length) {
+          currentImageIndex.value = 0;
+        } else {
+        currentImageIndex.value += 1;
+      }
+  }, SLIDE_TIME)
 }
 /* Random Type */
 if (appMode.value === "RANDOM") {
-slideInterval = setInterval(() => {
-/* check exists images */
-if (!appImages.value.length) return;
-const randoms = appImages.value
+  slideInterval = setInterval(() => {
+      /* check exists images */
+      if (!appImages.value.length) return;
+      const randoms = appImages.value
 ```
 
 .map((a, i) =&gt; i) // get only index
@@ -466,13 +484,13 @@ The code is as follows:
 ```js
 /* manual control event */
 addEventListener("keydown", function (e) {
-if (appMode.value !== "MANUAL" || !appImages.value.length) return;
-if (e.code === "  " && currentImageIndex.value !== 0) {
-currentImageIndex.value -= 1;
-}
-if (e.code === "ArrowRight" && currentImageIndex.value !== appImages.value.length - 1) {
-currentImageIndex.value += 1;
-}
+    if (appMode.value !== "MANUAL" || !appImages.value.length) return;
+    if (e.code === "  " && currentImageIndex.value !== 0) {
+      currentImageIndex.value -= 1;
+    }
+  if (e.code === "ArrowRight" && currentImageIndex.value !== appImages.value.length - 1) {
+    currentImageIndex.value += 1;
+  }
 })
 ```
 
@@ -482,9 +500,9 @@ The code is as follows:
 ```css
 /* theme component */
 const themeComponent = computed(() => {
-return {
-A: EffectA,
-}[appTheme.value];
+  return {
+    A: EffectA,
+  }[appTheme.value];
 })
 ```
 

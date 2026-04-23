@@ -14,7 +14,9 @@ This project mainly focuses on the core functions of the Bootstrap framework. It
 ### 7.1.1 The Development History and Structure of Bootstrap
 
 #### 1. History of Bootstrap
-![Image](../../assets/images/project-07/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-07/image-001.png" alt="Image">
+</p>
 
 #### 2.Basic CSS
 Global CSS styles are set; basic HTML elements can be styled via classes for enhanced effects. It also includes an advanced grid system.
@@ -31,8 +33,12 @@ Bootstrap is the world's most popular open-source front-end toolkit. It supports
 #### 1. Local Download and Integration
 Download the precompiled package from the official Bootstrap website at https://v5.bootcss.com (bootstrap-5.3.8-dist.zip). After extraction, you will get the css and js folders.
 Copy the downloaded compressed file to the root directory of your own project, extract it to the current folder, and delete the downloaded zip file, as shown in Figure 5-1 below.
-![Image](../../assets/images/project-07/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-07/image-002.png" alt="Image">
+</p>
 
 #### 2. CDN Integration
 Go to the URL https://www.bootcdn.cn/twitter-bootstrap/, select the corresponding version, and copy the links for bootstrap.min.css and bootstrap.min.js. Embed these links into your existing project to load the resources directly via the public CDN—no need to download any files locally, as shown in the figure below.
-![Image](../../assets/images/project-07/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-07/image-003.png" alt="Image">
+</p>

@@ -53,40 +53,52 @@ Visual Studio Code, abbreviated as VS Code, is a free and open-source front-end 
 
 ##### (1) Software Introduction
 The software can be downloaded from the official VS Code website. After installation, the icon is shown in Figure 12-1 below.
-![Image](../../assets/images/project-12/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-12/image-001.png" alt="Image">
+</p>
 
-_Figure 12-1 Visual Studio Code Icon_
+<p align="center"><em>Figure 12-1 Visual Studio Code Icon</em></p>
 The interface after launching is shown in Figure 12-2.
-![Image](../../assets/images/project-12/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-12/image-002.png" alt="Image">
+</p>
 
-_Figure 12-2 Visual Studio Code running interface_
+<p align="center"><em>Figure 12-2 Visual Studio Code running interface</em></p>
 
 ##### (2) Commonly used plugins
 HTML Snippets plugin: Provides basic H5 code snippets and hints for beginners, as shown in Figure 12-3.
-![Image](../../assets/images/project-12/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-12/image-003.png" alt="Image">
+</p>
 
-_Figure 12-3 HTML Snippets Plugin_
+<p align="center"><em>Figure 12-3 HTML Snippets Plugin</em></p>
 HTML CSS Support plugin: Provides intelligent class name suggestions for HTML tags based on supported styles in the current project, as shown in Figure 12-4.
-![Image](../../assets/images/project-12/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-12/image-004.png" alt="Image">
+</p>
 
-_Figure 12-4 HTML CSS Support Plugin_
+<p align="center"><em>Figure 12-4 HTML CSS Support Plugin</em></p>
 Plugin installation is shown in Figure 12-5:
-![Image](../../assets/images/project-12/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-12/image-005.png" alt="Image">
+</p>
 
-_Figure 12-5 Plugin installation method_
+<p align="center"><em>Figure 12-5 Plugin installation method</em></p>
 
 #### 2. Chrome Browser
 Chrome is a browser developed by Google. It is powerful and stable, and is widely used for front-end development, as shown in Figure 12-6:
-![Image](../../assets/images/project-12/image-006.jpeg)
+<p align="center">
+  <img src="../../assets/images/project-12/image-006.jpeg" alt="Image">
+</p>
 
-_Figure 12-6 Chrome Browser_
+<p align="center"><em>Figure 12-6 Chrome Browser</em></p>
 
 #### 3. JavaScript Placement
 To use JavaScript code in HTML, we need to place it inside the script tag, as shown below:
 
 ```html
 <script>
-// Write JavaScript statements here
+  // Write JavaScript statements here
 </script>
 ```
 
@@ -95,19 +107,19 @@ The script tag can be placed inside the head section of the page, and is often p
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<script>
-// The script tag can be placed in the head section
-</script>
-</head>
-<body>
-<script>
-// It can also be placed in the body section
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      // The script tag can be placed in the head section
+    </script>
+  </head>
+  <body>
+    <script>
+      // It can also be placed in the body section
+    </script>
+  </body>
 </html>
 ```
 

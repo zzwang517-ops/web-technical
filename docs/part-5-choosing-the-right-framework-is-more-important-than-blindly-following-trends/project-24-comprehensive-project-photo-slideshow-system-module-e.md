@@ -34,9 +34,11 @@ Task 3: Slideshow operations
 Task 4: Themes
 Task 5: Command bar
 The functional description of each task is as follows.The functional task structure diagram of the project is shown in Figure 24-1.
-![Image](../../assets/images/project-24/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-24/image-001.png" alt="Image">
+</p>
 
-_Figure 24-1 Functional Structure Diagram_
+<p align="center"><em>Figure 24-1 Functional Structure Diagram</em></p>
 
 #### 1.Photo Slideshow Project Tasks
 The photo slideshow project includes the following tasks: Task 1: Loading Image Files, Task 2: Ordering Photos, Task 3: Slideshow Operations, Task 4: Themes, and Task 5: Command Bar.
@@ -105,13 +107,17 @@ module_e-src
 
 ##### (1) Loading Image Files
 In this task, users can load images by dragging and dropping image files into the drop area, and the images will then be displayed and played according to the selected theme.When CSS is unavailable or disabled, users can still select photo files via the file input. The photos will then be loaded and listed on the webpage without any styles applied, as shown in Figure 24-2.
-![Image](../../assets/images/project-24/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-24/image-002.png" alt="Image">
+</p>
 
 Figure 24‑2 Loading Image Files
 
 ##### (2) Ordering Photos
 This task mainly implements the photo ordering module. In this configuration panel, users can sort the selected photos by dragging and dropping them, as shown in Figure 24‑3.
-![Image](../../assets/images/project-24/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-24/image-003.png" alt="Image">
+</p>
 
 Figure 24‑3 Ordering Photos
 
@@ -120,7 +126,9 @@ This task mainly implements the slideshow operation module, which contains a con
 Mode switching: Users can switch among three operation modes on the panel: manual control, auto-play, and random play.
 Theme switching: Users can switch between themes A to F in the panel.
 The effect is shown in Figure 24‑5.
-![Image](../../assets/images/project-24/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-24/image-004.png" alt="Image">
+</p>
 
 Figure 24‑5 Slideshow Operations
 
@@ -130,7 +138,9 @@ Theme A displays photos and titles directly without any effects.
 In Theme B, the active photo moves from the left to the center, then moves from the center to the right and exits the screen. For the title, the title element follows the same left-to-right animation but starts with a 300-millisecond delay.
 In Theme C, the active photo moves from the bottom to the center, then moves upward from the center and exits the screen. For the subtitle, it is split into several words, each with a 300-millisecond animation delay.
 In Theme D, the active photo slides in from the left side of the screen to the center and stays there. The next photo slides in and is placed on top of the active photo. Each photo has a slight random rotation between -5 degrees and 5 degrees. These photos should not occupy the entire screen space; they should take up about 85% of it. The different rotations create a stacked photo effect. Each photo has a 3px white border with a 5px border-radius, and a thicker bottom border. The title is placed at the bottom of the photo with a white background matching the photo border, as shown in Figure 24‑6.
-![Image](../../assets/images/project-24/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-24/image-005.png" alt="Image">
+</p>
 
 Figure 24‑6 Themes
 
@@ -140,9 +150,11 @@ The command bar is usually positioned in the center of the screen. When the comm
 Users can select different options using the Up and Down arrow keys on the keyboard. The selected option should be highlighted so that users can clearly identify it. When the user presses the ENTER key, the selected option will be executed as a command.
 The command bar includes the following commands:
 Switch to Manual Control Mode, Switch to Auto-play Mode, Switch to Shuffle Mode, Switch to Theme A, Switch to Theme B, Switch to Theme C, Switch to Theme D, Switch to Theme E, Switch to Theme F,as shown in Figure 24‑7.
-![Image](../../assets/images/project-24/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-24/image-006.png" alt="Image">
+</p>
 
-_Figure 24-7 Command Bar_
+<p align="center"><em>Figure 24-7 Command Bar</em></p>
 
 #### 24.5 Project Implementation
 Task 1 Loading Image Files
@@ -157,20 +169,20 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
-plugins: [
-vue(),
-],
-build: {
-outDir: "../34_module_e",
-},
+    plugins: [
+      vue(),
+    ],
+  build: {
+    outDir: "../34_module_e",
+  },
 server: {
-port: 3000,
+  port: 3000,
 },
 base: "/34_module_e",
 resolve: {
-alias: {
-'@': fileURLToPath(new URL('./src', import.meta.url))
-}
+  alias: {
+    '@': fileURLToPath(new URL('./src', import.meta.url))
+  }
 }
 })
 ```
@@ -197,10 +209,10 @@ export const SLIDE_TIME = 3000;
 
 ```js
 export function getId() {
-return ~~(Math.random() * 10000000);
+  return ~~(Math.random() * 10000000);
 }
 export function convertFilename(name) {
-return name
+  return name
 ```
 
 .split(".")[0]
@@ -224,8 +236,8 @@ export const appTheme = ref("A"); // A B C D E F
 export const appImages = ref([]);
 export const currentImageIndex = ref(0);
 export const currentImage = computed(() => {
-return appImages.value[currentImageIndex.value];
-})
+    return appImages.value[currentImageIndex.value];
+  })
 ```
 
 #### Step 7: Import and load the homepage file in App.vue.
@@ -261,8 +273,8 @@ import {ref} from "vue";
 </template>
 <style scoped>
 #app {
-height: 100vh;
-padding: 2rem;
+  height: 100vh;
+  padding: 2rem;
 }
 </style>
 ```
@@ -338,20 +350,20 @@ The code is as follows:
 
 ```html
 <style scoped>
-.bigBadge {
-font-size: 1.2rem;
-}
-.exitFull {
-display: none;
-}
-@media (display-mode: fullscreen) {
-.enterFull {
-display: none;
-}
-.exitFull {
-display: inline-block;
-}
-}
+  .bigBadge {
+  font-size: 1.2rem;
+  }
+  .exitFull {
+  display: none;
+  }
+  @media (display-mode: fullscreen) {
+  .enterFull {
+  display: none;
+  }
+  .exitFull {
+  display: inline-block;
+  }
+  }
 </style>
 ```
 
@@ -361,12 +373,12 @@ The code is as follows:
 ```js
 /* toggle fullscreen */
 function toggleFullscreen() {
-/* exit fullscreen */
-if (document.fullscreenElement) {
-document.exitFullscreen();
-} else {
-/* enter fullscreen */
-document.documentElement.requestFullscreen();
+  /* exit fullscreen */
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  } else {
+  /* enter fullscreen */
+  document.documentElement.requestFullscreen();
 }
 }
 /* import sample data */
@@ -378,7 +390,7 @@ The code is as follows:
 ```js
 /* import sample data */
 function importSample() {
-const sampleFiles = [
+  const sampleFiles = [
 ```
 
 "basilique-notre-dame-de-fourviere-lyon.jpg",
@@ -404,7 +416,7 @@ caption: convertFilename(name)
 }
 /* automatic load sample data in DEV env */
 if (import.meta.env.DEV) {
-//onMounted(importSample);
+  //onMounted(importSample);
 }
 ```
 
@@ -416,28 +428,28 @@ let slideInterval = null;
 const slideKey = ref(0);
 /* run slide */
 function setSlideInterval() {
-clearInterval(slideInterval);
-currentImageIndex.value = 0;
-slideKey.value++;
-/* Auto Playing Type */
-if (appMode.value === "AUTO") {
-slideInterval = setInterval(() => {
-/* check exists images */
-if (!appImages.value.length) return;
-/* check last turn */
-if (currentImageIndex.value + 1 === appImages.value.length) {
-currentImageIndex.value = 0;
-} else {
-currentImageIndex.value += 1;
-}
-}, SLIDE_TIME)
+  clearInterval(slideInterval);
+  currentImageIndex.value = 0;
+  slideKey.value++;
+  /* Auto Playing Type */
+  if (appMode.value === "AUTO") {
+    slideInterval = setInterval(() => {
+        /* check exists images */
+        if (!appImages.value.length) return;
+        /* check last turn */
+        if (currentImageIndex.value + 1 === appImages.value.length) {
+          currentImageIndex.value = 0;
+        } else {
+        currentImageIndex.value += 1;
+      }
+  }, SLIDE_TIME)
 }
 /* Random Type */
 if (appMode.value === "RANDOM") {
-slideInterval = setInterval(() => {
-/* check exists images */
-if (!appImages.value.length) return;
-const randoms = appImages.value
+  slideInterval = setInterval(() => {
+      /* check exists images */
+      if (!appImages.value.length) return;
+      const randoms = appImages.value
 ```
 
 .map((a, i) =&gt; i) // get only index
@@ -458,13 +470,13 @@ The code is as follows:
 ```js
 /* manual control event */
 addEventListener("keydown", function (e) {
-if (appMode.value !== "MANUAL" || !appImages.value.length) return;
-if (e.code === "  " && currentImageIndex.value !== 0) {
-currentImageIndex.value -= 1;
-}
-if (e.code === "ArrowRight" && currentImageIndex.value !== appImages.value.length - 1) {
-currentImageIndex.value += 1;
-}
+    if (appMode.value !== "MANUAL" || !appImages.value.length) return;
+    if (e.code === "  " && currentImageIndex.value !== 0) {
+      currentImageIndex.value -= 1;
+    }
+  if (e.code === "ArrowRight" && currentImageIndex.value !== appImages.value.length - 1) {
+    currentImageIndex.value += 1;
+  }
 })
 ```
 
@@ -474,14 +486,14 @@ The code is as follows:
 ```css
 /* theme component */
 const themeComponent = computed(() => {
-return {
-A: EffectA,
-B: EffectB,
-C: EffectC,
-D: EffectD,
-E: EffectE,
-F: EffectF,
-}[appTheme.value];
+  return {
+    A: EffectA,
+    B: EffectB,
+    C: EffectC,
+    D: EffectD,
+    E: EffectE,
+    F: EffectF,
+  }[appTheme.value];
 })
 ```
 
@@ -499,8 +511,8 @@ The code is as follows:
 
 ```html
 <script setup>
-import {appImages, appMode, appTheme} from "@/store.js";
-import {convertFilename, getId} from "@/helper.js";
+  import {appImages, appMode, appTheme} from "@/store.js";
+  import {convertFilename, getId} from "@/helper.js";
 </script>
 ```
 
@@ -510,9 +522,9 @@ The code is as follows:
 ```js
 /* selected btn and unselected btn class */
 function btnClass(a, b) {
-if (a === b) {
-return "btn-primary";
-}
+  if (a === b) {
+    return "btn-primary";
+  }
 return "btn-fill text-primary";
 }
 /* upload single file by input form */
@@ -555,17 +567,17 @@ The code is as follows:
 
 ```html
 <style scoped>
-.dropArea {
-border: 1px solid var(--bs-dark);
-border-radius: .75rem;
-}
-.centerBox {
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-}
+  .dropArea {
+  border: 1px solid var(--bs-dark);
+  border-radius: .75rem;
+  }
+  .centerBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 </style>
 ```
 
@@ -577,32 +589,32 @@ The code is as follows:
 ```html
 <p class="mb-2">Switching theme</p>
 <div class="border rounded-pill p-2 d-flex align-items-center mb-4">
-<div class="row gx-1 w-100">
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'A')"
-@click="appTheme = 'A'">A</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'B')"
-@click="appTheme = 'B'">B</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'C')"
-@click="appTheme = 'C'">C</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'D')"
-@click="appTheme = 'D'">D</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'E')"
-@click="appTheme = 'E'">E</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appTheme, 'F')"
-@click="appTheme = 'F'">F</button>
-</div>
-</div>
+  <div class="row gx-1 w-100">
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'A')"
+      @click="appTheme = 'A'">A</button>
+    </div>
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'B')"
+      @click="appTheme = 'B'">B</button>
+    </div>
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'C')"
+      @click="appTheme = 'C'">C</button>
+    </div>
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'D')"
+      @click="appTheme = 'D'">D</button>
+    </div>
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'E')"
+      @click="appTheme = 'E'">E</button>
+    </div>
+    <div class="col">
+      <button class="btn w-100 text-center" :class="btnClass(appTheme, 'F')"
+      @click="appTheme = 'F'">F</button>
+    </div>
+  </div>
 </div>
 <!--Import Photo-->
 ```
@@ -629,18 +641,18 @@ import {currentImage, currentImageIndex} from "@/store.js";
 .B-image-leave-active,
 .B-caption-enter-active,
 .B-caption-leave-active {
-transition: .3s;
+  transition: .3s;
 }
 .B-image-enter-from,
 .B-caption-enter-from {
-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 .B-image-leave-to,
 .B-caption-leave-to {
-transform: translateX(100%);
+  transform: translateX(100%);
 }
 .B-caption-enter-active {
-transition-delay: .3s;
+  transition-delay: .3s;
 }
 </style>
 ```
@@ -656,19 +668,19 @@ const wordCount = ref(0);
 const maxCount = ref(0);
 let wordTimeout = null;
 watch(currentImageIndex, () => {
-const tmpWords = currentImage.value.caption.split(" ");
-maxCount.value = tmpWords.length;
-wordCount.value = 0;
-setTimeout(addWord, 300)
-}, {immediate: true})
+    const tmpWords = currentImage.value.caption.split(" ");
+    maxCount.value = tmpWords.length;
+    wordCount.value = 0;
+    setTimeout(addWord, 300)
+  }, {immediate: true})
 function addWord() {
-clearTimeout(wordTimeout);
-if (wordCount.value === maxCount.value) return;
-wordCount.value += 1;
-wordTimeout = setTimeout(addWord, 300);
+  clearTimeout(wordTimeout);
+  if (wordCount.value === maxCount.value) return;
+  wordCount.value += 1;
+  wordTimeout = setTimeout(addWord, 300);
 }
 function getWords(caption) {
-return caption.split(" ").map(item => item + " ");
+  return caption.split(" ").map(item => item + " ");
 }
 </script>
 <template>
@@ -686,27 +698,27 @@ return caption.split(" ").map(item => item + " ");
 <style scoped>
 .C-image-enter-active,
 .C-image-leave-active {
-transition: .3s;
+  transition: .3s;
 }
 .C-image-enter-from {
-transform: translateY(100%);
+  transform: translateY(100%);
 }
 .C-image-leave-to {
-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 .C-caption {
-overflow: hidden;
+  overflow: hidden;
 }
 .C-caption span {
-display: inline-block;
-transition: .3s;
+  display: inline-block;
+  transition: .3s;
 }
 .C-caption span:not(:last-child) {
-margin-right: .5em;
+  margin-right: .5em;
 }
 .C-caption span:not(.show) {
-transform: translateY(200%);
-opacity: 0;
+  transform: translateY(200%);
+  opacity: 0;
 }
 </style>
 ```
@@ -722,20 +734,20 @@ import {ref, watch} from "vue";
 import {getId} from "@/helper.js";
 const stack = ref([]);
 watch(currentImageIndex, () => {
-stack.value.push({
-id: getId(),
-image: currentImage.value.image,
-caption: currentImage.value.caption,
-deg: getRandomDeg()
-})
+    stack.value.push({
+        id: getId(),
+        image: currentImage.value.image,
+        caption: currentImage.value.caption,
+        deg: getRandomDeg()
+      })
 }, {immediate: true});
 function getRandomDeg() {
-return (~~(Math.random() * 11) - 5) + "deg";
+  return (~~(Math.random() * 11) - 5) + "deg";
 }
 function getRotateStyle(item) {
-return {
-transform: `rotate(${item.deg})`
-}
+  return {
+    transform: `rotate(${item.deg})`
+  }
 }
 </script>
 <template>
@@ -754,38 +766,38 @@ transform: `rotate(${item.deg})`
 </template>
 <style scoped>
 .D-stack-enter-active {
-transition: .3s;
+  transition: .3s;
 }
 .D-stack-enter-from {
-transform: translateX(-150%);
+  transform: translateX(-150%);
 }
 #theme-d.stackContainer {
-position: relative;
-width: 85%;
-height: 85%;
+  position: relative;
+  width: 85%;
+  height: 85%;
 }
 #theme-d .stackBox {
-position: absolute;
-left: 0;
-top: 0;
-right: 0;
-bottom: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 #theme-d .stackItem {
-width: 100%;
-height: 100%;
-border: 3px solid #fff;
-border-radius: 5px !important;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #fff;
+  border-radius: 5px !important;
 }
 #theme-d .stackItem img {
-border-radius: 0;
+  border-radius: 0;
 }
 #theme-d .captionBox {
-padding: 0;
+  padding: 0;
 }
 #theme-d .captionBox .caption {
-width: 100%;
-border-radius: 0;
+  width: 100%;
+  border-radius: 0;
 }
 </style>
 ```
@@ -800,9 +812,9 @@ import {ref, watch} from "vue";
 import {currentImage, currentImageIndex} from "@/store.js";
 const tmpImage = ref(null);
 watch(currentImage, (value, oldValue, onCleanup) => {
-if (oldValue) {
-tmpImage.value = oldValue
-}
+    if (oldValue) {
+      tmpImage.value = oldValue
+    }
 })
 </script>
 <template>
@@ -814,29 +826,29 @@ tmpImage.value = oldValue
 </template>
 <style scoped>
 .e-half {
-z-index: 2;
+  z-index: 2;
 }
 .e-half.left {
-left: 0;
-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-transform-origin: left;
-animation: halfLeftAnimation 1s forwards;
+  left: 0;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  transform-origin: left;
+  animation: halfLeftAnimation 1s forwards;
 }
 @keyframes halfLeftAnimation {
-to {
-transform: rotateY(-100deg);
-}
+  to {
+    transform: rotateY(-100deg);
+  }
 }
 .e-half.right {
-right: 0;
-clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
-transform-origin: right;
-animation: halfRightAnimation 1s forwards;
+  right: 0;
+  clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+  transform-origin: right;
+  animation: halfRightAnimation 1s forwards;
 }
 @keyframes halfRightAnimation {
-to {
-transform: rotateY(100deg);
-}
+  to {
+    transform: rotateY(100deg);
+  }
 }
 </style>
 ```
@@ -851,15 +863,15 @@ import {computed, ref, watch} from "vue";
 import {currentImage, currentImageIndex} from "@/store.js";
 const tmpImage = ref(null);
 watch(currentImage, (value, oldValue, onCleanup) => {
-if (oldValue) {
-tmpImage.value = oldValue
-}
+    if (oldValue) {
+      tmpImage.value = oldValue
+    }
 })
 function cellImage(x, y) {
-return {
-left: -y * 100 + "%",
-top: -x * 100 + "%",
-}
+  return {
+    left: -y * 100 + "%",
+    top: -x * 100 + "%",
+  }
 }
 </script>
 <template>
@@ -898,39 +910,39 @@ top: -x * 100 + "%",
 </template>
 <style scoped>
 #theme-f.gridBox {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 #theme-f .cell {
-perspective: 1000px;
+  perspective: 1000px;
 }
 #theme-f .wrapper {
-transform-style: preserve-3d;
-animation: turnAnimation 1s forwards;
+  transform-style: preserve-3d;
+  animation: turnAnimation 1s forwards;
 }
 @keyframes turnAnimation {
-to {
-transform: rotateY(.5turn);
-}
+  to {
+    transform: rotateY(.5turn);
+  }
 }
 #theme-f .wrapper > div {
-backface-visibility: hidden;
-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  backface-visibility: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 #theme-f .wrapper > div img {
-width: 400%;
-height: 300%
+  width: 400%;
+  height: 300%
 }
 #theme-f .back {
-transform: rotateY(.5turn);
+  transform: rotateY(.5turn);
 }
 #theme-f .captionBox .front {
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 </style>
 ```
@@ -948,8 +960,8 @@ The code is as follows:
 <div class="">Photo drag and drop</div>
 </div>
 <label class="mt-2 bg-light rounded p-3">
-<small>Single File</small>
-<input type="file" class="form-control" @change="changeSingleFile">
+  <small>Single File</small>
+  <input type="file" class="form-control" @change="changeSingleFile">
 </label>
 ```
 
@@ -959,28 +971,28 @@ The code is as follows:
 ```css
 /* upload single file by input form */
 function changeSingleFile(e) {
-const file = e.target.files[0];
-if (!file) return;
-appImages.value.push({
-id: getId(),
-image: URL.createObjectURL(file),
-caption: convertFilename(file.name)
-})
-e.target.type = "text";
-e.target.type = "file";
-alert("Import photo");
+  const file = e.target.files[0];
+  if (!file) return;
+  appImages.value.push({
+    id: getId(),
+    image: URL.createObjectURL(file),
+    caption: convertFilename(file.name)
+  })
+  e.target.type = "text";
+  e.target.type = "file";
+  alert("Import photo");
 }
 /* drag and drop many files */
 function dropFiles(e) {
-const files = e.dataTransfer.files;
-if (!files.length) return;
-[...files].forEach(file => {
-appImages.value.push({
-id: getId(),
-image: URL.createObjectURL(file),
-caption: convertFilename(file.name)
-})
-})
+  const files = e.dataTransfer.files;
+  if (!files.length) return;
+  [...files].forEach(file => {
+    appImages.value.push({
+      id: getId(),
+      image: URL.createObjectURL(file),
+      caption: convertFilename(file.name)
+    })
+  })
 }
 ```
 
@@ -998,45 +1010,45 @@ const getId = ref(null);
 const targetId = ref(null);
 /* mouse down for drag and drop */
 function grabDown(item) {
-getId.value = item.id;
-moveX.value = 0;
-moveY.value = 0;
-window.addEventListener("mousemove", grabMove);
-window.addEventListener("mouseup", grabUp);
+  getId.value = item.id;
+  moveX.value = 0;
+  moveY.value = 0;
+  window.addEventListener("mousemove", grabMove);
+  window.addEventListener("mouseup", grabUp);
 }
 /* mouse move for drag and drop */
 function grabMove(e) {
-moveX.value += e.movementX;
-moveY.value += e.movementY;
+  moveX.value += e.movementX;
+  moveY.value += e.movementY;
 }
 /* mouse up for drag and drop */
 function grabUp(e) {
-if (targetId.value) {
-const grabIndex = appImages.value.findIndex(item => item.id === getId.value);
-const targetIndex = appImages.value.findIndex(item => item.id === targetId.value);
-const tmp = {...appImages.value[targetIndex]};
-appImages.value[targetIndex] = appImages.value[grabIndex];
-appImages.value[grabIndex] = tmp;
-getId.value = null;
-targetId.value = null;
-moveX.value = 0;
-moveY.value = 0;
-}
+  if (targetId.value) {
+    const grabIndex = appImages.value.findIndex(item => item.id === getId.value);
+    const targetIndex = appImages.value.findIndex(item => item.id === targetId.value);
+    const tmp = {...appImages.value[targetIndex]};
+    appImages.value[targetIndex] = appImages.value[grabIndex];
+    appImages.value[grabIndex] = tmp;
+    getId.value = null;
+    targetId.value = null;
+    moveX.value = 0;
+    moveY.value = 0;
+  }
 window.removeEventListener("mousemove", grabMove);
 window.removeEventListener("mouseup", grabUp);
 }
 /* other item mouse over for drag and drop */
 function targetOver(item) {
-targetId.value = item.id;
+  targetId.value = item.id;
 }
 /* moving item style */
 function grabStyle(item) {
-if (getId.value !== item.id) return;
-return {
-transform: `translate(${moveX.value}px, ${moveY.value}px)`,
-pointerEvents: "none",
-zIndex: 2,
-}
+  if (getId.value !== item.id) return;
+  return {
+    transform: `translate(${moveX.value}px, ${moveY.value}px)`,
+    pointerEvents: "none",
+    zIndex: 2,
+  }
 }
 </script>
 <template>
@@ -1058,40 +1070,40 @@ zIndex: 2,
 </template>
 <style scoped>
 .item {
-position: relative;
-aspect-ratio: 16/9;
-display: flex;
-justify-content: flex-start;
-align-items: flex-end;
--webkit-user-drag: none;
-overflow: hidden;
-border-radius: .5rem;
-user-select: none;
+  position: relative;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  -webkit-user-drag: none;
+  overflow: hidden;
+  border-radius: .5rem;
+  user-select: none;
 }
 .item div {
-background: rgba(0, 0, 0, .5);
-color: #fff;
-padding: .5rem;
-z-index: 2;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-position: absolute;
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  padding: .5rem;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 .item img {
-width: 100%;
-height: 100%;
-border-radius: .5rem;
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
 }
 .scrollBox {
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-overflow-x: hidden;
-overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 </style>
 ```
@@ -1111,87 +1123,87 @@ const commandKeyword = ref("");
 watch(commandKeyword, () => location.value = 0);
 /* Define command list */
 const commandList = ref([
+    {
+      name: "Change to manual control mode",
+      action: () => {
+        appMode.value = 'MANUAL';
+      }
+  },
 {
-name: "Change to manual control mode",
-action: () => {
-appMode.value = 'MANUAL';
-}
+  name: "Change to auto-playing mode",
+  action: () => {
+    appMode.value = 'AUTO';
+  }
 },
 {
-name: "Change to auto-playing mode",
-action: () => {
-appMode.value = 'AUTO';
-}
+  name: "Change to random playing mode",
+  action: () => {
+    appMode.value = 'RANDOM';
+  }
 },
 {
-name: "Change to random playing mode",
-action: () => {
-appMode.value = 'RANDOM';
-}
+  name: "Switch to theme A",
+  action: () => {
+    appTheme.value = 'A';
+  }
 },
 {
-name: "Switch to theme A",
-action: () => {
-appTheme.value = 'A';
-}
+  name: "Switch to theme B",
+  action: () => {
+    appTheme.value = 'B';
+  }
 },
 {
-name: "Switch to theme B",
-action: () => {
-appTheme.value = 'B';
-}
+  name: "Switch to theme C",
+  action: () => {
+    appTheme.value = 'C';
+  }
 },
 {
-name: "Switch to theme C",
-action: () => {
-appTheme.value = 'C';
-}
+  name: "Switch to theme D",
+  action: () => {
+    appTheme.value = 'D';
+  }
 },
 {
-name: "Switch to theme D",
-action: () => {
-appTheme.value = 'D';
-}
+  name: "Switch to theme E",
+  action: () => {
+    appTheme.value = 'E';
+  }
 },
 {
-name: "Switch to theme E",
-action: () => {
-appTheme.value = 'E';
-}
-},
-{
-name: "Switch to theme F",
-action: () => {
-appTheme.value = 'F';
-}
+  name: "Switch to theme F",
+  action: () => {
+    appTheme.value = 'F';
+  }
 }
 ])
 const location = ref(0);
 const commands = computed(() => {
-const reg = new RegExp(commandKeyword.value);
-return commandList.value
-.filter(item => {
-return reg.test(item.name);
-})
+    const reg = new RegExp(commandKeyword.value);
+    return commandList.value
+    .filter(item => {
+        return reg.test(item.name);
+      })
 })
 /* up and down event */
 function keydown(e) {
-if (e.code === "ArrowDown") {
-location.value++;
-}
+  if (e.code === "ArrowDown") {
+    location.value++;
+  }
 if (e.code === "ArrowUp") {
-location.value--;
+  location.value--;
 }
 location.value = Math.min(commands.value.length -1, Math.max(0, location.value));
 if (e.code === "Enter" && commands.value[location.value]) {
-commands.value[location.value].action();
+  commands.value[location.value].action();
 }
 }
 /* register and remove event */
 addEventListener("keydown", keydown);
 onUnmounted(() => {
-removeEventListener("keydown", keydown);
-})
+    removeEventListener("keydown", keydown);
+  })
 </script>
 <template>
 <aside>
@@ -1216,15 +1228,15 @@ removeEventListener("keydown", keydown);
 </aside>
 </template>
 <style scoped>
-aside {
-background: rgba(0, 0, 0, .7);
-position: fixed;
-left: 0;
-top: 0;
-bottom: 0;
-right: 0;
-z-index: 9999;
-}
+  aside {
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  }
 </style>
 ```
 
@@ -1235,12 +1247,12 @@ The code is as follows:
 /* open and close command */
 const commandShow = ref(false);
 addEventListener("keydown", e => {
-/* open  */
-if ((e.ctrlKey && e.code === "KeyK") || e.code === "Slash") {
-commandShow.value = true;
-}
-/* close */
-if (e.code === "Escape") {
-commandShow.value = false;
-}
+    /* open  */
+    if ((e.ctrlKey && e.code === "KeyK") || e.code === "Slash") {
+      commandShow.value = true;
+    }
+  /* close */
+  if (e.code === "Escape") {
+    commandShow.value = false;
+  }
 ```

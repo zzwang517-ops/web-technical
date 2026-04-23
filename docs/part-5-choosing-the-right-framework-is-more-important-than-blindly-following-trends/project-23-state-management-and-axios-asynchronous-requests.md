@@ -17,7 +17,9 @@ At the same time, we will systematically study Axios asynchronous request techno
 This task implements a lightweight Q&amp;A interactive system based on Vue 3, adopting the Composition API to manage question-and-answer states via ref/reactive. It integrates the InputArea sub-component to realize v-model two-way binding and form submission, and uses the dynamically rendered MessageList component to display the dialogue flow of user/AI dual roles.
 With a gradient background, rounded cards and shadow design to create a fresh visual style, the final system supports real-time input capture, two-way dialogue display and random intelligent replies.
 The effect of the case is shown in Figure 23-1.
-![Image](../../assets/images/project-23/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-23/image-001.png" alt="Image">
+</p>
 
 Figure 23‑1 Q&amp;A, Easy Interaction
 
@@ -36,7 +38,7 @@ After installation, import Axios in the components that need to use it. Import i
 
 ```html
 <script>
-import axios from 'axios';
+  import axios from 'axios';
 </script>
 ```
 
@@ -45,15 +47,15 @@ As can be seen from the previous examples, a GET request without parameters can 
 
 ```html
 <script>
-import axios from 'axios';
-async function fetchData() {
-try {
-const response = await axios.get('/users');
-console.log(response.data);
-} catch (error) {
-console.error('Request failed:', error.message);
-}
-}
+  import axios from 'axios';
+  async function fetchData() {
+  try {
+  const response = await axios.get('/users');
+  console.log(response.data);
+  } catch (error) {
+  console.error('Request failed:', error.message);
+  }
+  }
 </script>
 Request with Parameters
 axios.get('/users', { params: { id: 123 } });
@@ -71,9 +73,9 @@ Methods such as PUT, DELETE, and PATCH are used in a similar way, specified by t
 
 ```css
 axios({
-method: 'PUT',
-url: '/users/123',
-data: { name: 'Bob' },
+  method: 'PUT',
+  url: '/users/123',
+  data: { name: 'Bob' },
 });
 ```
 
@@ -181,7 +183,7 @@ v-model="question"
 placeholder="Enter your question (must include ?)..."
 />
 <button @click="askQuestion" :disabled="isLoading">
-{{ isLoading ? 'Thinking...' : 'Ask' }}
+  {{ isLoading ? 'Thinking...' : 'Ask' }}
 </button>
 </div>
 </div>
@@ -192,53 +194,53 @@ placeholder="Enter your question (must include ?)..."
 
 ```html
 <style scoped>
-.app {
-max-width: 600px;
-margin: 0 auto;
-padding: 20px;
-font-family: Arial, sans-serif;
-}
-.chat-box {
-height: 300px;
-border: 1px solid #ddd;
-border-radius: 8px;
-padding: 10px;
-margin: 20px 0;
-overflow-y: auto;
-background-color: #f9f9f9;
-}
-.message {
-margin: 8px 0;
-padding: 8px 12px;
-border-radius: 18px;
-max-width: 70%;
-}
-.user-msg {
-margin-left: auto;
-background-color: #409eff;
-color: white;
-}
-.input-area {
-display: flex;
-gap: 10px;
-}
-input {
-flex: 1;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 4px;
-}
-button {
-padding: 10px 20px;
-background-color: #409eff;
-color: white;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-}
-button:disabled {
-background-color: #a0cfff;
-}
+  .app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  }
+  .chat-box {
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 20px 0;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  }
+  .message {
+  margin: 8px 0;
+  padding: 8px 12px;
+  border-radius: 18px;
+  max-width: 70%;
+  }
+  .user-msg {
+  margin-left: auto;
+  background-color: #409eff;
+  color: white;
+  }
+  .input-area {
+  display: flex;
+  gap: 10px;
+  }
+  input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  }
+  button {
+  padding: 10px 20px;
+  background-color: #409eff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  button:disabled {
+  background-color: #a0cfff;
+  }
 </style>
 ```
 
@@ -246,9 +248,9 @@ background-color: #a0cfff;
 
 ```html
 <script setup>
-import { ref } from 'vue'
-import axios from 'axios'
-// Check if the input contains "?", otherwise prompt the user
+  import { ref } from 'vue'
+  import axios from 'axios'
+  // Check if the input contains "?", otherwise prompt the user
 </script>
 ```
 
@@ -257,14 +259,14 @@ import axios from 'axios'
 ```js
 const question = ref('')
 const messages = ref([
-{ text: 'Hello! I am an AI assistant, please ask a Yes/No question~', isUser: false }
-])
+    { text: 'Hello! I am an AI assistant, please ask a Yes/No question~', isUser: false }
+  ])
 const isLoading = ref(false)
 const askQuestion = async () => {
-if (!question.value.includes('?')) {
-messages.value.push({ text: 'Your question needs to include a question mark!', isUser: false })
-return
-}
+  if (!question.value.includes('?')) {
+    messages.value.push({ text: 'Your question needs to include a question mark!', isUser: false })
+    return
+  }
 // Add user's question
 }
 ```
@@ -284,9 +286,9 @@ isLoading.value = true
 ```js
 // Call free API
 try {
-const { data } = await axios.get('https://yesno.wtf/api')
-const answer = data.answer === 'yes' ? 'Yes!' : 'No!'
-messages.value.push({ text: answer, isUser: false })
+  const { data } = await axios.get('https://yesno.wtf/api')
+  const answer = data.answer === 'yes' ? 'Yes!' : 'No!'
+  messages.value.push({ text: answer, isUser: false })
 } catch {
 messages.value.push({ text: 'Service is temporarily unavailable', isUser: false })
 } finally {
@@ -300,7 +302,9 @@ isLoading.value = false
 In the One‑Click Control of Your Smart Life application built with Vue 3, users can manage all smart home devices conveniently through a unified control panel with just one click.
 Entering a command triggers Vuex state management to synchronously update device status, render lighting brightness and air temperature, and intelligently switch device icons and operation interfaces with conditional rendering.
 The effect of the case is shown in Figure 23‑2.
-![Image](../../assets/images/project-23/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-23/image-002.png" alt="Image">
+</p>
 
 Figure 23‑2 One‑Click Control of Your Smart Life
 
@@ -329,23 +333,23 @@ A container that stores application state. Each Store is an independent module. 
 import { defineStore } from 'pinia';
 // Options API
 export const useCounterStore = defineStore('counter', {
-state: () => ({ count: 0 }),
+  state: () => ({ count: 0 }),
 getters: {
-doubleCount: (state) => state.count * 2,
+  doubleCount: (state) => state.count * 2,
 },
 actions: {
-increment() {
-this.count++;
-},
+  increment() {
+    this.count++;
+  },
 },
 });
 // Composition  API
 export const useUserStore = defineStore('user', () => {
-const user = ref(null);
-const setUser = (newUser) => {
-user.value = newUser;
-};
-return { user, setUser };
+  const user = ref(null);
+  const setUser = (newUser) => {
+    user.value = newUser;
+  };
+  return { user, setUser };
 });
 ```
 
@@ -368,11 +372,11 @@ roles:[],
 })
 // Define state in composition style
 const useStore =defineStore('store-id',()=>{
-constg count=ref(0)
-const uname=ref('ZhangSan')
-const isAdmin =ref(true)
-const roles =ref([])
-})
+    constg count=ref(0)
+    const uname=ref('ZhangSan')
+    const isAdmin =ref(true)
+    const roles =ref([])
+  })
 ```
 
 #### 5.Getters (Computed Properties)
@@ -382,17 +386,17 @@ Getters are reactive and will update automatically when the state they depend on
 ```js
 // Define Getter in options style
 const useStore =defineStore('counter',{
-state:()=>({count:0}),
-getters:{
-tenfold:(state)=>state.count*10
-},
+    state:()=>({count:0}),
+    getters:{
+      tenfold:(state)=>state.count*10
+    },
 })
 // Define Getter in composition style
 const useStore=defineStore('counter'，()=>{
-const count=ref(0)
-const tenfold=computed(()=>count.value * 10)
-return {count,tenfold }
-})
+    const count=ref(0)
+    const tenfold=computed(()=>count.value * 10)
+    return {count,tenfold }
+  })
 ```
 
 #### 6.Actions
@@ -402,20 +406,20 @@ Actions can contain asynchronous operations, and state changes can be handled wi
 ```js
 // Define Actions in options style
 const useStore =defineStore('counter',{
-state:()=>({ count:0 }),
-actions:{
-decrement(){
-this.count--
-},
-},
+    state:()=>({ count:0 }),
+    actions:{
+      decrement(){
+        this.count--
+      },
+  },
 })
 // Define Actions in composition style
 const useStore =defineStore('counter',()=>{
-const count=ref(0)
-const decrement=()=>{
-count.value--
-}
-return fcount,decrement}
+    const count=ref(0)
+    const decrement=()=>{
+      count.value--
+    }
+  return fcount,decrement}
 })
 ```
 
@@ -496,154 +500,154 @@ Life
 
 ```html
 <style>
-/* Styles remain unchanged */
-:root {
---primary-color: #3498db;
---success-color: #2ecc71;
---warning-color: #f39c12;
---danger-color: #e74c3c;
---card-radius: 12px;
---shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
---shadow-md: 0 4px 8px rgba(0,0,0,0.1);
-}
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-min-height: 100vh;
-margin: 0;
-padding: 20px;
-}
-.smart-home-control {
-max-width: 800px;
-margin: 0 auto;
-}
-h1 {
-text-align: center;
-color: #2c3e50;
-margin-bottom: 30px;
-}
-.control-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 20px;
-margin-bottom: 40px;
-}
-.control-card {
-background: white;
-border-radius: var(--card-radius);
-box-shadow: var(--shadow-md);
-padding: 20px;
-transition: transform 0.3s, box-shadow 0.3s;
-}
-.lighting-card {
-border-left: 4px solid var(--primary-color);
-}
-.climate-card {
-border-left: 4px solid #e74c3c;
-}
-.control-group {
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin: 15px 0;
-}
-/* Switch styles */
-.switch {
-position: relative;
-display: inline-block;
-width: 50px;
-height: 26px;
-}
-.switch input {
-opacity: 0;
-width: 0;
-height: 0;
-}
-.slider {
-position: absolute;
-cursor: pointer;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: #ccc;
-transition: .4s;
-border-radius: 26px;
-}
-.slider:before {
-position: absolute;
-content: "";
-height: 18px;
-width: 18px;
-left: 4px;
-bottom: 4px;
-background-color: white;
-transition: .4s;
-border-radius: 50%;
-}
-input:checked + .slider {
-background-color: var(--primary-color);
-}
-input:checked + .slider:before {
-transform: translateX(24px);
-}
-select {
-padding: 8px;
-border-radius: 6px;
-border: 1px solid #ddd;
-background-color: #f8f9fa;
-max-width: 150px;
-}
-input[type="range"] {
-width: 150px;
-}
-.one-click-control {
-background: white;
-border-radius: var(--card-radius);
-box-shadow: var(--shadow-md);
-padding: 20px;
-text-align: center;
-}
-.mode-buttons {
-display: flex;
-gap: 15px;
-justify-content: center;
-margin-top: 15px;
-flex-wrap: wrap;
-}
-button {
-background: var(--primary-color);
-color: white;
-border: none;
-padding: 10px 20px;
-border-radius: 6px;
-cursor: pointer;
-transition: all 0.3s;
-font-weight: 600;
-margin-top: 10px;
-}
-.home-btn {
-background: #2c3e50;
-}
-.sleep-btn {
-background: #9b59b6;
-}
-.away-btn {
-background: #27ae60;
-}
-button:hover {
-opacity: 0.9;
-transform: translateY(-2px);
-}
-.icon {
-width: 24px;
-height: 24px;
-margin-right: 8px;
-vertical-align: middle;
-}
-button .icon {
-margin-right: 6px;
-}
+  /* Styles remain unchanged */
+  :root {
+  --primary-color: #3498db;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --card-radius: 12px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  }
+  .smart-home-control {
+  max-width: 800px;
+  margin: 0 auto;
+  }
+  h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  }
+  .control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  }
+  .control-card {
+  background: white;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-md);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .lighting-card {
+  border-left: 4px solid var(--primary-color);
+  }
+  .climate-card {
+  border-left: 4px solid #e74c3c;
+  }
+  .control-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+  }
+  /* Switch styles */
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  }
+  .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  }
+  .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 26px;
+  }
+  .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+  }
+  input:checked + .slider {
+  background-color: var(--primary-color);
+  }
+  input:checked + .slider:before {
+  transform: translateX(24px);
+  }
+  select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  max-width: 150px;
+  }
+  input[type="range"] {
+  width: 150px;
+  }
+  .one-click-control {
+  background: white;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-md);
+  padding: 20px;
+  text-align: center;
+  }
+  .mode-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  }
+  button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  margin-top: 10px;
+  }
+  .home-btn {
+  background: #2c3e50;
+  }
+  .sleep-btn {
+  background: #9b59b6;
+  }
+  .away-btn {
+  background: #27ae60;
+  }
+  button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  }
+  .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  }
+  button .icon {
+  margin-right: 6px;
+  }
 </style>
 ```
 
@@ -651,31 +655,31 @@ margin-right: 6px;
 
 ```html
 <script setup>
-import { reactive } from 'vue';
-// Simplified state management
-const state = reactive({
-lighting: { on: false, brightness: 100 },
-climate: { temp: 24, mode: 'auto' }
-});
-// One-click mode setting
-const setMode = (mode) => {
-switch(mode) {
-case 'home':
-state.lighting.on = true;
-state.lighting.brightness = 80;
-state.climate.temp = 24;
-break;
-case 'sleep':
-state.lighting.on = true;
-state.lighting.brightness = 20;
-state.climate.temp = 26;
-break;
-case 'away':
-state.lighting.on = false;
-state.climate.temp = 20;
-break;
-}
-};
+  import { reactive } from 'vue';
+  // Simplified state management
+  const state = reactive({
+  lighting: { on: false, brightness: 100 },
+  climate: { temp: 24, mode: 'auto' }
+  });
+  // One-click mode setting
+  const setMode = (mode) => {
+  switch(mode) {
+  case 'home':
+  state.lighting.on = true;
+  state.lighting.brightness = 80;
+  state.climate.temp = 24;
+  break;
+  case 'sleep':
+  state.lighting.on = true;
+  state.lighting.brightness = 20;
+  state.climate.temp = 26;
+  break;
+  case 'away':
+  state.lighting.on = false;
+  state.climate.temp = 20;
+  break;
+  }
+  };
 </script>
 ```
 
@@ -688,9 +692,11 @@ Users can select different options using the Up and Down arrow keys on the keybo
 
 ### 23.3.2 Effect Display
 The effect of the switching operation is shown in Figure 23‑3.
-![Image](../../assets/images/project-23/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-23/image-003.png" alt="Image">
+</p>
 
-_Figure 23-3 Command Bar_
+<p align="center"><em>Figure 23-3 Command Bar</em></p>
 
 ### 23.3.3 Task Implementation
 
@@ -755,15 +761,15 @@ The code is as follows:
 
 ```html
 <style scoped>
-aside {
-background: rgba(0, 0, 0, .7);
-position: fixed;
-left: 0;
-top: 0;
-bottom: 0;
-right: 0;
-z-index: 9999;
-}
+  aside {
+  background: rgba(0, 0, 0, .7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  }
 </style>
 ```
 
@@ -772,9 +778,9 @@ The code is as follows:
 
 ```html
 <script setup>
-import {computed, onUnmounted, ref, watch} from "vue";
-import {appMode, appTheme} from "@/store.js";
-/* command search form keyword */
+  import {computed, onUnmounted, ref, watch} from "vue";
+  import {appMode, appTheme} from "@/store.js";
+  /* command search form keyword */
 </script>
 ```
 
@@ -795,67 +801,67 @@ The code is as follows:
 /* Define command list */
 const commandList = ref([
 {
-name: "Change to manual control mode",
-action: () => {
-appMode.value = 'MANUAL';
-}
+  name: "Change to manual control mode",
+  action: () => {
+    appMode.value = 'MANUAL';
+  }
 },
 {
-name: "Change to auto-playing mode",
-action: () => {
-appMode.value = 'AUTO';
-}
+  name: "Change to auto-playing mode",
+  action: () => {
+    appMode.value = 'AUTO';
+  }
 },
 {
-name: "Change to random playing mode",
-action: () => {
-appMode.value = 'RANDOM';
-}
+  name: "Change to random playing mode",
+  action: () => {
+    appMode.value = 'RANDOM';
+  }
 },
 {
-name: "Switch to theme A",
-action: () => {
-appTheme.value = 'A';
-}
+  name: "Switch to theme A",
+  action: () => {
+    appTheme.value = 'A';
+  }
 },
 {
-name: "Switch to theme B",
-action: () => {
-appTheme.value = 'B';
-}
+  name: "Switch to theme B",
+  action: () => {
+    appTheme.value = 'B';
+  }
 },
 {
-name: "Switch to theme C",
-action: () => {
-appTheme.value = 'C';
-}
+  name: "Switch to theme C",
+  action: () => {
+    appTheme.value = 'C';
+  }
 },
 {
-name: "Switch to theme D",
-action: () => {
-appTheme.value = 'D';
-}
+  name: "Switch to theme D",
+  action: () => {
+    appTheme.value = 'D';
+  }
 },
 {
-name: "Switch to theme E",
-action: () => {
-appTheme.value = 'E';
-}
+  name: "Switch to theme E",
+  action: () => {
+    appTheme.value = 'E';
+  }
 },
 {
-name: "Switch to theme F",
-action: () => {
-appTheme.value = 'F';
-}
+  name: "Switch to theme F",
+  action: () => {
+    appTheme.value = 'F';
+  }
 }
 ])
 const location = ref(0);
 const commands = computed(() => {
-const reg = new RegExp(commandKeyword.value);
-return commandList.value
-.filter(item => {
-return reg.test(item.name);
-})
+  const reg = new RegExp(commandKeyword.value);
+  return commandList.value
+  .filter(item => {
+    return reg.test(item.name);
+  })
 })
 /* up and down event */
 ```
@@ -865,15 +871,15 @@ The code is as follows:
 
 ```js
 function keydown(e) {
-if (e.code === "ArrowDown") {
-location.value++;
-}
+  if (e.code === "ArrowDown") {
+    location.value++;
+  }
 if (e.code === "ArrowUp") {
-location.value--;
+  location.value--;
 }
 location.value = Math.min(commands.value.length -1, Math.max(0, location.value));
 if (e.code === "Enter" && commands.value[location.value]) {
-commands.value[location.value].action();
+  commands.value[location.value].action();
 }
 }
 /*  register and remove event */

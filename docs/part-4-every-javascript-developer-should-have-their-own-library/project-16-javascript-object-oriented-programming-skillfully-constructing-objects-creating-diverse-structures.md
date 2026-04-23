@@ -15,9 +15,11 @@ Based on the technical standards of the WorldSkills Competition website, this pr
 
 ### 16.1.1 Task Description
 This task implements the function of calculating the extreme values of a user-input number sequence using JavaScript: when the user clicks the "Calculate Maximum and Minimum Values" button, the system obtains the comma-separated string from the input field. After processing such as removing spaces, filtering empty values, and converting to a numeric array, it uses the Math.max() and Math.min() methods to calculate the maximum and minimum values of valid numbers. Finally, the results are dynamically rendered into the corresponding colored result cards on the page, completing the complete interactive process from data input to visual display, which meets the specification requirements of the WorldSkills Competition website technology module for data calculation and dynamic presentation. The effect is shown in Figure 16-1.
-![Image](../../assets/images/project-16/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-16/image-001.png" alt="Image">
+</p>
 
-_Figure 16-1 The Secret of Maximum and Minimum Values_
+<p align="center"><em>Figure 16-1 The Secret of Maximum and Minimum Values</em></p>
 
 ### 16.1.2 Knowledge Preparation
 
@@ -162,35 +164,35 @@ The task "The Secret of Maximum and Minimum Values" is divided into the followin
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>The Secret of the Maximum and Minimum</title>
-</head>
-<body>
-<div class="container">
-<header>
-<h1>The Secret of Maximum and Minimum</h1>
-</header>
-<div class="card">
-<div class="input-group">
-<label for="numbers">Enter a sequence of numbers (separated by commas):</label>
-<input type="text" id="numbers" placeholder="e.g.: 10, 20, 30, abc, Infinity">
-</div>
-<button id="calculateBtn">Calculate Maximum and Minimum Values</button>
-<div class="results">
-<div class="result-card max-result">
-<div class="result-title">Maximum Value</div>
-<div class="result-value" id="maxValue">-</div>
-</div>
-<div class="result-card min-result">
-<div class="result-title">Minimum Value</div>
-<div class="result-value" id="minValue">-</div>
-</div>
-</div>
-</div>
-</div>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>The Secret of the Maximum and Minimum</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>The Secret of Maximum and Minimum</h1>
+      </header>
+      <div class="card">
+        <div class="input-group">
+          <label for="numbers">Enter a sequence of numbers (separated by commas):</label>
+          <input type="text" id="numbers" placeholder="e.g.: 10, 20, 30, abc, Infinity">
+        </div>
+        <button id="calculateBtn">Calculate Maximum and Minimum Values</button>
+        <div class="results">
+          <div class="result-card max-result">
+            <div class="result-title">Maximum Value</div>
+            <div class="result-value" id="maxValue">-</div>
+          </div>
+          <div class="result-card min-result">
+            <div class="result-title">Minimum Value</div>
+            <div class="result-value" id="minValue">-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
 ```
 
@@ -198,141 +200,141 @@ The task "The Secret of Maximum and Minimum Values" is divided into the followin
 
 ```html
 <style>
-:root {
---primary: #4361ee;
---secondary: #f72585;
---success: #06d6a0;
---warning: #ffd166;
---dark: #1e1e1e;
---light: #f8f9fa;
---radius: 12px;
---shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Segoe UI', system-ui, sans-serif;
-}
-body {
-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-min-height: 100vh;
-display: flex;
-justify-content: center;
-padding: 20px;
-}
-.container {
-width: 100%;
-max-width: 800px;
-margin: 40px auto;
-}
-header {
-text-align: center;
-margin-bottom: 40px;
-}
-h1 {
-font-size: 2.5rem;
-background: linear-gradient(90deg, var(--primary), var(--secondary));
--webkit-background-clip: text;
-background-clip: text;
-color: transparent;
-margin-bottom: 10px;
-}
-.subtitle {
-color: var(--dark);
-font-size: 1.2rem;
-max-width: 600px;
-margin: 0 auto;
-}
-.card {
-background: white;
-border-radius: var(--radius);
-box-shadow: var(--shadow);
-padding: 30px;
-margin-bottom: 30px;
-}
-.input-group {
-display: flex;
-flex-wrap: wrap;
-gap: 15px;
-margin-bottom: 20px;
-}
-.input-group label {
-font-weight: 500;
-color: var(--dark);
-width: 100%;
-margin-bottom: 5px;
-}
-input {
-flex: 1;
-padding: 12px 15px;
-border: 2px solid #e0e0e0;
-border-radius: 8px;
-font-size: 1rem;
-min-width: 200px;
-transition: border-color 0.3s;
-}
-input:focus {
-border-color: var(--primary);
-outline: none;
-box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
-}
-button {
-background: linear-gradient(90deg, var(--primary), #3a86ff);
-color: white;
-border: none;
-padding: 12px 25px;
-border-radius: 8px;
-cursor: pointer;
-font-weight: 600;
-transition: all 0.3s;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-button:hover {
-transform: translateY(-2px);
-box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-button:active {
-transform: translateY(1px);
-}
-.results {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-margin-top: 20px;
-}
-.result-card {
-padding: 20px;
-border-radius: var(--radius);
-color: white;
-text-align: center;
-transition: transform 0.3s;
-}
-.result-card:hover {
-transform: translateY(-5px);
-}
-.max-result {
-background: linear-gradient(135deg, var(--primary), #3a86ff);
-}
-.min-result {
-background: linear-gradient(135deg, var(--secondary), #f75c7e);
-}
-.result-title {
-font-size: 1.1rem;
-margin-bottom: 10px;
-}
-.result-value {
-font-size: 2rem;
-font-weight: bold;
-}
-@media (max-width: 768px) {
-.input-group {
-flex-direction: column;
-}
-input, button {
-width: 100%;
-}
-}
+  :root {
+  --primary: #4361ee;
+  --secondary: #f72585;
+  --success: #06d6a0;
+  --warning: #ffd166;
+  --dark: #1e1e1e;
+  --light: #f8f9fa;
+  --radius: 12px;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+  body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  }
+  .container {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  }
+  header {
+  text-align: center;
+  margin-bottom: 40px;
+  }
+  h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+  }
+  .subtitle {
+  color: var(--dark);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  }
+  .card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  margin-bottom: 30px;
+  }
+  .input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  }
+  .input-group label {
+  font-weight: 500;
+  color: var(--dark);
+  width: 100%;
+  margin-bottom: 5px;
+  }
+  input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 200px;
+  transition: border-color 0.3s;
+  }
+  input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+  }
+  button {
+  background: linear-gradient(90deg, var(--primary), #3a86ff);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  button:active {
+  transform: translateY(1px);
+  }
+  .results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  }
+  .result-card {
+  padding: 20px;
+  border-radius: var(--radius);
+  color: white;
+  text-align: center;
+  transition: transform 0.3s;
+  }
+  .result-card:hover {
+  transform: translateY(-5px);
+  }
+  .max-result {
+  background: linear-gradient(135deg, var(--primary), #3a86ff);
+  }
+  .min-result {
+  background: linear-gradient(135deg, var(--secondary), #f75c7e);
+  }
+  .result-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  }
+  .result-value {
+  font-size: 2rem;
+  font-weight: bold;
+  }
+  @media (max-width: 768px) {
+  .input-group {
+  flex-direction: column;
+  }
+  input, button {
+  width: 100%;
+  }
+  }
 </style>
 ```
 
@@ -340,8 +342,8 @@ width: 100%;
 
 ```html
 <script>
-document.getElementById('calculateBtn').addEventListener('click', function()     {
-});
+  document.getElementById('calculateBtn').addEventListener('click', function()     {
+  });
 </script>
 ```
 
@@ -349,16 +351,16 @@ document.getElementById('calculateBtn').addEventListener('click', function()    
 
 ```html
 <script>
-document.getElementById('calculateBtn').addEventListener('click', function()     {
-const input = document.getElementById('numbers').value;
-const numbers = input.split(',')
-.map(num => num.trim())
-.filter(n => n !== '');
-// Convert and handle special values
-const processedNumbers = numbers.map(num => {
-return Number(num);
-});
-});
+  document.getElementById('calculateBtn').addEventListener('click', function()     {
+  const input = document.getElementById('numbers').value;
+  const numbers = input.split(',')
+  .map(num => num.trim())
+  .filter(n => n !== '');
+  // Convert and handle special values
+  const processedNumbers = numbers.map(num => {
+  return Number(num);
+  });
+  });
 </script>
 ```
 
@@ -366,22 +368,22 @@ return Number(num);
 
 ```html
 <script>
-document.getElementById('calculateBtn').addEventListener('click', function() {
-const input = document.getElementById('numbers').value;
-const numbers = input.split(',')
-.map(num => num.trim())
-.filter(n => n !== '');
-// Convert and handle special values
-const processedNumbers = numbers.map(num => {
-return Number(num);
-});
-// Calculate maximum and minimum values
-const maxValue = Math.max(...processedNumbers)
-const minValue = Math.min(...processedNumbers)
-// Display results
-document.getElementById('maxValue').textContent = maxValue;
-document.getElementById('minValue').textContent = minValue;
-});
+  document.getElementById('calculateBtn').addEventListener('click', function() {
+  const input = document.getElementById('numbers').value;
+  const numbers = input.split(',')
+  .map(num => num.trim())
+  .filter(n => n !== '');
+  // Convert and handle special values
+  const processedNumbers = numbers.map(num => {
+  return Number(num);
+  });
+  // Calculate maximum and minimum values
+  const maxValue = Math.max(...processedNumbers)
+  const minValue = Math.min(...processedNumbers)
+  // Display results
+  document.getElementById('maxValue').textContent = maxValue;
+  document.getElementById('minValue').textContent = minValue;
+  });
 </script>
 ```
 
@@ -391,31 +393,35 @@ document.getElementById('minValue').textContent = minValue;
 
 ### 16.2.1 Task Description
 Refactor a basic time diary application (including diary input, local storage and display functions) from procedural code to an object-oriented implementation. Improve code structure through class encapsulation while avoiding excessive complexity. The final implementation should balance simplicity and maintainability. Prioritize the use of static methods or a minimal class design to reduce redundant code, ensure complete functions and easy expansion, and comply with the modular design specifications of the WorldSkills Competition website technical module. The effect is shown in Figure 16-2.
-![Image](../../assets/images/project-16/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-16/image-002.png" alt="Image">
+</p>
 
-_Figure 16-2 The Time Traveler's Diary_
+<p align="center"><em>Figure 16-2 The Time Traveler's Diary</em></p>
 
 ### 16.2.2 Knowledge Preparation
 
 #### 1. Object-Oriented Programming
 An object can be a single entity with properties and types. For example, a car is an object. It has basic parameters such as brand, model, color, price, and so on. These basic parameters can be represented using properties, as shown in Figure 16-3 below.
-![Image](../../assets/images/project-16/image-003.jpeg)
+<p align="center">
+  <img src="../../assets/images/project-16/image-003.jpeg" alt="Image">
+</p>
 
 This car:BrandModelColorPrice... ...This car:BrandModelColorPrice... ...Parameter = PropertyParameter = PropertyEntity = ObjectEntity = Object
-_Figure 16-3 Object-Oriented Programming_
+<p align="center"><em>Figure 16-3 Object-Oriented Programming</em></p>
 
 ##### (1) Basic class Syntax
 The class syntax in ES6 is syntactic sugar based on JavaScript prototypal inheritance. It provides a clearer and more intuitive way to define classes, supporting constructors (constructor), instance methods, static methods (static), inheritance (via extends and super), and getters/setters. This makes object-oriented programming cleaner and easier to use, while its underlying implementation is still prototype-based. For example:
 
 ```js
 class Point {
-constructor(x, y) {
-this.x = x;
-this.y = y;
-console.log(x, y);
-}
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    console.log(x, y);
+  }
 toString() {
-return '(' + this.x + ', ' + this.y + ')';
+  return '(' + this.x + ', ' + this.y + ')';
 }
 }
 ```
@@ -434,10 +440,10 @@ Object-oriented programming introduces a clearer way of defining classes through
 
 ```js
 class Person {
-constructor(name, age) {
-this.name = name; // Instance property
-this.age = age;
-}
+  constructor(name, age) {
+    this.name = name; // Instance property
+    this.age = age;
+  }
 }
 const john = new Person("John", 30);
 console.log(john.name); // Output: John
@@ -451,27 +457,27 @@ We can use the extends keyword to implement inheritance. A subclass inheriting f
 
 ```css
 class Father {
-constructor() {
-this.name = "father";
-this.money = 60000;
-}
-say() {
-console.log(`${this.name} say hello`);
+  constructor() {
+    this.name = "father";
+    this.money = 60000;
+  }
+  say() {
+    console.log(`${this.name} say hello`);
 }
 myMoney() {
-console.log(`${this.name} has ${this.money} yuan`);
+  console.log(`${this.name} has ${this.money} yuan`);
 }
 }
 class Son extends Father {
-constructor() {
-super(); // Note: this must be written
-this.name = "son";
-this.addmoney = 40000;
-}
-addMoney() {
-console.log(
-`${this.name} has a total of ${this.money} + ${this.addmoney} = ${this.money + this.addmoney} yuan`
-);
+  constructor() {
+    super(); // Note: this must be written
+    this.name = "son";
+    this.addmoney = 40000;
+  }
+  addMoney() {
+    console.log(
+    `${this.name} has a total of ${this.money} + ${this.addmoney} = ${this.money + this.addmoney} yuan`
+  );
 }
 }
 var son1 = new Son();
@@ -486,9 +492,9 @@ A class defines static methods using the static keyword. All methods defined in 
 
 ```css
 class Foo {
-static classMethod() {
-return 'hello';
-}
+  static classMethod() {
+    return 'hello';
+  }
 }
 // Runs normally
 Foo.classMethod() // 'hello'
@@ -499,12 +505,12 @@ foo.classMethod()
 Static properties can also be defined in a class, for example:
 // Original syntax
 class Foo {
-// ...
+  // ...
 }
 Foo.prop = 1;
 // New syntax
 class Foo {
-static prop = 1;
+  static prop = 1;
 }
 ```
 
@@ -516,28 +522,28 @@ The "Time Traveler's Diary" task is divided into the following six steps, as det
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Simple Time Diary</title>
-</head>
-<body>
-<div class="container">
-<header>
-<h1>The Time Traveler's Diary</h1>
-<p class="subtitle">Record the precious moments of traveling through time and space</p>
-</header>
-<div class="card">
-<h2>Time Travel Diary</h2>
-<textarea id="diaryInput" placeholder="Write down your time and space journey..."></textarea>
-<button class="btn" id="saveBtn">Save Diary</button>
-</div>
-<div class="card" id="diaryContainer">
-<h3>My Diary</h3>
-<div class="empty-state">No diary entries yet</div>
-</div>
-</div>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Simple Time Diary</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>The Time Traveler's Diary</h1>
+        <p class="subtitle">Record the precious moments of traveling through time and space</p>
+      </header>
+      <div class="card">
+        <h2>Time Travel Diary</h2>
+        <textarea id="diaryInput" placeholder="Write down your time and space journey..."></textarea>
+        <button class="btn" id="saveBtn">Save Diary</button>
+      </div>
+      <div class="card" id="diaryContainer">
+        <h3>My Diary</h3>
+        <div class="empty-state">No diary entries yet</div>
+      </div>
+    </div>
+  </body>
 </html>
 ```
 
@@ -545,51 +551,51 @@ The "Time Traveler's Diary" task is divided into the following six steps, as det
 
 ```html
 <style>
-body {
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-min-height: 100vh;
-padding: 20px;
-color: #1e1e1e;
-}
-.container {
-max-width: 800px;
-margin: 0 auto;
-}
-header {
-text-align: center;
-margin: 30px 0;
-color: white;
-}
-.card {
-background: white;
-border-radius: 12px;
-padding: 20px;
-margin: 20px 0;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-textarea {
-width: 99%;
-height: 120px;
-padding: 10px;
-border: 2px solid #eee;
-border-radius: 8px;
-font-size: 16px;
-}
-.btn {
-background: #4361ee;
-color: white;
-border: none;
-padding: 12px 20px;
-border-radius: 8px;
-cursor: pointer;
-font-weight: bold;
-margin-top: 10px;
-}
-.diary-entry {
-padding: 15px;
-border-left: 3px solid #4361ee;
-margin-top: 15px;
-}
+  body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #1e1e1e;
+  }
+  .container {
+  max-width: 800px;
+  margin: 0 auto;
+  }
+  header {
+  text-align: center;
+  margin: 30px 0;
+  color: white;
+  }
+  .card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  textarea {
+  width: 99%;
+  height: 120px;
+  padding: 10px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 16px;
+  }
+  .btn {
+  background: #4361ee;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  }
+  .diary-entry {
+  padding: 15px;
+  border-left: 3px solid #4361ee;
+  margin-top: 15px;
+  }
 </style>
 ```
 
@@ -597,11 +603,11 @@ margin-top: 15px;
 
 ```html
 <script>
-class Diary {
-static init() {
-}
-}
-Diary.init();
+  class Diary {
+  static init() {
+  }
+  }
+  Diary.init();
 </script>
 ```
 
@@ -609,27 +615,27 @@ Diary.init();
 
 ```html
 <script>
-class Diary {
-static init() {
-document.getElementById('saveBtn').onclick = () => {
-const content = diaryInput.value.trim();
-if (!content) return;
-const entry = {
-date: new Date().toLocaleDateString(),
-content: content
-};
-localStorage.diary = JSON.stringify(entry);
-diaryContainer.innerHTML = `
-<div class="diary-entry">
-<strong>${entry.date}</strong>
-<p>${entry.content}</p>
-</div>
-`;
-diaryInput.value = '';
-};
-}
-}
-Diary.init();
+  class Diary {
+  static init() {
+  document.getElementById('saveBtn').onclick = () => {
+  const content = diaryInput.value.trim();
+  if (!content) return;
+  const entry = {
+  date: new Date().toLocaleDateString(),
+  content: content
+  };
+  localStorage.diary = JSON.stringify(entry);
+  diaryContainer.innerHTML = `
+  <div class="diary-entry">
+    <strong>${entry.date}</strong>
+    <p>${entry.content}</p>
+  </div>
+  `;
+  diaryInput.value = '';
+  };
+  }
+  }
+  Diary.init();
 </script>
 ```
 
@@ -637,30 +643,30 @@ Diary.init();
 
 ```html
 <script>
-class Diary {
-static init() {
-document.getElementById('saveBtn').onclick = () => {
-const content = diaryInput.value.trim();
-if (!content) return;
-const entry = {
-date: new Date().toLocaleDateString(),
-content: content
-};
-localStorage.diary = JSON.stringify(entry);
-diaryContainer.innerHTML = `
-<div class="diary-entry">
-<strong>${entry.date}</strong>
-<p>${entry.content}</p>
-</div>
-`;
-diaryInput.value = '';
-};
-const saved = localStorage.diary;
-diaryContainer.innerHTML = saved
-? `<div class="diary-entry">${JSON.parse(saved).content}</div>`
-: '<div class="empty-state">No diary entries yet</div>';}
-}
-Diary.init();
+  class Diary {
+  static init() {
+  document.getElementById('saveBtn').onclick = () => {
+  const content = diaryInput.value.trim();
+  if (!content) return;
+  const entry = {
+  date: new Date().toLocaleDateString(),
+  content: content
+  };
+  localStorage.diary = JSON.stringify(entry);
+  diaryContainer.innerHTML = `
+  <div class="diary-entry">
+    <strong>${entry.date}</strong>
+    <p>${entry.content}</p>
+  </div>
+  `;
+  diaryInput.value = '';
+  };
+  const saved = localStorage.diary;
+  diaryContainer.innerHTML = saved
+  ? `<div class="diary-entry">${JSON.parse(saved).content}</div>`
+  : '<div class="empty-state">No diary entries yet</div>';}
+  }
+  Diary.init();
 </script>
 ```
 
@@ -674,9 +680,11 @@ The image comparison container contains a splitter element, which displays befor
 
 ### 16.3.2 Effect Display
 The effect of the image comparison is shown in Figure 16-4.
-![Image](../../assets/images/project-16/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-16/image-004.png" alt="Image">
+</p>
 
-_Figure 16-4 Image Comparison_
+<p align="center"><em>Figure 16-4 Image Comparison</em></p>
 
 ### 16.3.3 Task Implementation
 
@@ -686,19 +694,19 @@ The code is as follows:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Image Compare</title>
-</head>
-<body>
-<div class="container">
-<input type="range" min="0" max="992" id="range" />
-<img src="after.jpg" alt="After" />
-<img src="before.jpg" alt="Before" id="before" />
-</div>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Compare</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="range" min="0" max="992" id="range" />
+      <img src="after.jpg" alt="After" />
+      <img src="before.jpg" alt="Before" id="before" />
+    </div>
+  </body>
 </html>
 ```
 
@@ -707,64 +715,64 @@ The code is as follows:
 
 ```html
 <style>
-*,
-*::before,
-*::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-body {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-min-height: 100vh;
-}
-.container {
-width: 1024px;
-height: 682px;
-position: relative;
-border-radius: 0.5rem;
-overflow: hidden;
-}
-img {
-position: absolute;
-inset: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-object-position: left;
-}
-input {
-z-index: 100;
-appearance: none;
-background-color: transparent;
-position: absolute;
-inset: 0;
-width: 100%;
-height: 100%;
-}
-input::-webkit-slider-thumb {
-appearance: none;
-width: 32px;
-height: 32px;
-background-repeat: no-repeat;
-border: 3px solid white;
-border-radius: 50%;
-backdrop-filter: blur(1rem);
-background-image: url("splitter.svg") 32px no-repeat;
-}
-.container::before {
-content: "";
-position: absolute;
-height: 100%;
-top: 0;
-width: 3px;
-left: var(--left, 510.5px);
-background-color: white;
-z-index: 100;
-}
+  *,
+  *::before,
+  *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  }
+  .container {
+  width: 1024px;
+  height: 682px;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  }
+  img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  }
+  input {
+  z-index: 100;
+  appearance: none;
+  background-color: transparent;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  }
+  input::-webkit-slider-thumb {
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  border: 3px solid white;
+  border-radius: 50%;
+  backdrop-filter: blur(1rem);
+  background-image: url("splitter.svg") 32px no-repeat;
+  }
+  .container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 3px;
+  left: var(--left, 510.5px);
+  background-color: white;
+  z-index: 100;
+  }
 </style>
 ```
 
@@ -773,15 +781,15 @@ The code is as follows:
 
 ```html
 <script>
-class ImageComparator {
-constructor() {
-this.range = document.getElementById('range');
-this.beforeImg = document.getElementById('before');
-this.container = document.querySelector('.container');
-this.init();
-}
-}
-let ImageCom = new ImageComparator();
+  class ImageComparator {
+  constructor() {
+  this.range = document.getElementById('range');
+  this.beforeImg = document.getElementById('before');
+  this.container = document.querySelector('.container');
+  this.init();
+  }
+  }
+  let ImageCom = new ImageComparator();
 </script>
 ```
 
@@ -790,19 +798,19 @@ The code is as follows:
 
 ```html
 <script>
-class ImageComparator {
-constructor() {
-this.range = document.getElementById('range');
-this.beforeImg = document.getElementById('before');
-this.container = document.querySelector('.container');
-this.init();
-}
-init() {
-this.beforeImg.style.width = '512px';
-this.range.addEventListener('input', e => this.handleSlider(e));
-}
-}
-let ImageCom = new ImageComparator();
+  class ImageComparator {
+  constructor() {
+  this.range = document.getElementById('range');
+  this.beforeImg = document.getElementById('before');
+  this.container = document.querySelector('.container');
+  this.init();
+  }
+  init() {
+  this.beforeImg.style.width = '512px';
+  this.range.addEventListener('input', e => this.handleSlider(e));
+  }
+  }
+  let ImageCom = new ImageComparator();
 </script>
 ```
 
@@ -811,23 +819,23 @@ The code is as follows:
 
 ```html
 <script>
-class ImageComparator {
-constructor() {
-this.range = document.getElementById('range');
-this.beforeImg = document.getElementById('before');
-this.container = document.querySelector('.container');
-this.init();
-}
-init() {
-this.beforeImg.style.width = '512px';
-this.range.addEventListener('input', e => this.handleSlider(e));
-}
-handleSlider(e) {
-const value = +e.target.value;
-this.beforeImg.style.width = `${value + 16}px`;
-this.container.style.setProperty('--left', `${value + 14.5}px`);
-}
-}
-let ImageCom = new ImageComparator();
+  class ImageComparator {
+  constructor() {
+  this.range = document.getElementById('range');
+  this.beforeImg = document.getElementById('before');
+  this.container = document.querySelector('.container');
+  this.init();
+  }
+  init() {
+  this.beforeImg.style.width = '512px';
+  this.range.addEventListener('input', e => this.handleSlider(e));
+  }
+  handleSlider(e) {
+  const value = +e.target.value;
+  this.beforeImg.style.width = `${value + 16}px`;
+  this.container.style.setProperty('--left', `${value + 14.5}px`);
+  }
+  }
+  let ImageCom = new ImageComparator();
 </script>
 ```

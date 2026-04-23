@@ -14,9 +14,11 @@ This project mainly focuses on the new features of CSS3, including background st
 
 ### 5.1.1 Task Description
 This is a photo wall display interface that shows introductions and photos of cute pets. The overall structure is divided into three parts: top, middle, and bottom. Background images are used to display content, and relevant tags are applied to achieve rounded corners, box shadows, text shadows, transparency effects, and background image color gradients. The effect is shown in Figure 5-1.
-![Image](../../assets/images/project-05/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-05/image-001.png" alt="Image">
+</p>
 
-_Figure 5-1 Photo Wall Interface_
+<p align="center"><em>Figure 5-1 Photo Wall Interface</em></p>
 
 ### 5.1.2 Knowledge Preparation
 This section introduces background settings in CSS3 styles, mainly including background images, background colors, background image sizes, background image tiling methods and styles, background clipping, background attachment, background image position, and the shorthand syntax for background settings. Details are as follows.
@@ -207,14 +209,14 @@ color-stop1, color-stop2:Gradient start and end colors.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Photo Wall of Cute Pets</title>
-<link rel="stylesheet" type="text/css" href="./css/style.css" />
-</head>
-<body>
-……
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Photo Wall of Cute Pets</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+    ……
+  </body>
 </html>
 ```
 
@@ -223,14 +225,14 @@ color-stop1, color-stop2:Gradient start and end colors.
 ```html
 <h1>Photo Wall of Cute Pets</h1>
 <div class="desc">
-<p>The other one is a little tabby cat with tiger-like stripes on its fur. It has an innocent little face, and its big watery eyes—with tender yellow irises around the black pupils—are absolutely stunning.</p>
-<p>We have a little cat at home named Naughty (meaning mischievous). Naughty has a pair of brown eyes that glow with a greenish light at night. It has a taupe-colored mouth, with some long whiskers sticking out on both sides of its muzzle.</p>
-<p>This calico cat is white with black spots all over its body. From a distance, it looks like a ball of pure white cotton dotted with a few drops of ink.</p>
-<p>When a peacock spreads its tail, it is like a green silk palace fan, and the ocelli on its tail feathers reflect light, as if countless small mirrors.</p>
-<p>Suddenly, a kingfisher flew out from among the willows, skimmed across the water, and headed for another thicket. Its beautiful feathers captured everyone's attention.</p>
-<p>This innocent and lovely poodle has a small black tail that wobbles like a rolling little pom-pom when it moves.</p>
-<p>White flocks of sheep scatter across the green grassland, like flowers, like clouds, like sacred khata scarves.</p>
-<p>When a peacock flies, it is like a gorgeous green cloud floating over the mountain top.</p>
+  <p>The other one is a little tabby cat with tiger-like stripes on its fur. It has an innocent little face, and its big watery eyes—with tender yellow irises around the black pupils—are absolutely stunning.</p>
+  <p>We have a little cat at home named Naughty (meaning mischievous). Naughty has a pair of brown eyes that glow with a greenish light at night. It has a taupe-colored mouth, with some long whiskers sticking out on both sides of its muzzle.</p>
+  <p>This calico cat is white with black spots all over its body. From a distance, it looks like a ball of pure white cotton dotted with a few drops of ink.</p>
+  <p>When a peacock spreads its tail, it is like a green silk palace fan, and the ocelli on its tail feathers reflect light, as if countless small mirrors.</p>
+  <p>Suddenly, a kingfisher flew out from among the willows, skimmed across the water, and headed for another thicket. Its beautiful feathers captured everyone's attention.</p>
+  <p>This innocent and lovely poodle has a small black tail that wobbles like a rolling little pom-pom when it moves.</p>
+  <p>White flocks of sheep scatter across the green grassland, like flowers, like clouds, like sacred khata scarves.</p>
+  <p>When a peacock flies, it is like a gorgeous green cloud floating over the mountain top.</p>
 </div>
 ```
 
@@ -238,18 +240,18 @@ color-stop1, color-stop2:Gradient start and end colors.
 
 ```html
 <div class="content">
-<div class="phone-wall">
-<div class="cat-phone"></div>
-<img src="img/p2.jpg">
-<img src="img/p3.jpg">
-<img src="img/p4.jpg">
-<img src="img/p5.jpg">
-<img src="img/p6.jpg">
-<img src="img/p7.jpg">
-<img src="img/p8.jpg">
-<img src="img/p9.jpg">
-<img src="img/p13.jpg">
-</div>
+  <div class="phone-wall">
+    <div class="cat-phone"></div>
+    <img src="img/p2.jpg">
+    <img src="img/p3.jpg">
+    <img src="img/p4.jpg">
+    <img src="img/p5.jpg">
+    <img src="img/p6.jpg">
+    <img src="img/p7.jpg">
+    <img src="img/p8.jpg">
+    <img src="img/p9.jpg">
+    <img src="img/p13.jpg">
+  </div>
 </div>
 ```
 
@@ -257,64 +259,64 @@ color-stop1, color-stop2:Gradient start and end colors.
 
 ```css
 * {
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 }
 .content{
-width: 100%;
-top: 0;
-left: 0;
-background-image: linear-gradient(#e66465, #9198e5,#ccc);
-background-repeat: no-repeat;
-padding: 50px 0px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(#e66465, #9198e5,#ccc);
+  background-repeat: no-repeat;
+  padding: 50px 0px;
 }
 .phone-wall {
-width: 1200px;
-overflow: hidden;
-margin: auto;
+  width: 1200px;
+  overflow: hidden;
+  margin: auto;
 }
 .cat-phone{
-width: 200px;
-height: 350px;
-float: left;
-background-image: url(../img/p1.jpg);
-background-repeat: no-repeat;
-background-position: 100% 100%;
-background-size: 100% 100%;
-border-radius: 10px;
+  width: 200px;
+  height: 350px;
+  float: left;
+  background-image: url(../img/p1.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+  border-radius: 10px;
 }
 h1 {
-text-align: center;
-line-height: 150px;
-color: #f00;
-text-shadow: 7px -4px 5px #5a5a5a;
+  text-align: center;
+  line-height: 150px;
+  color: #f00;
+  text-shadow: 7px -4px 5px #5a5a5a;
 }
 .phone-wall>img {
-width: 200px;
-margin: 10px;
-border-radius: 15px;
-box-shadow: 0px 0px 10px #212121;
-cursor: pointer;
-opacity: 0.7;
+  width: 200px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #212121;
+  cursor: pointer;
+  opacity: 0.7;
 }
 .phone-wall>img:hover {
-opacity: 1;
+  opacity: 1;
 }
 .desc{
-width: 1200px;
-background-image: ;
-margin: auto;
-margin-bottom: 20px;
-background-image: url(../img/p2.jpg);
-background-repeat: no-repeat;
-background-size: 100% 100%;
-padding: 20px;
-background-attachment: fixed;
+  width: 1200px;
+  background-image: ;
+  margin: auto;
+  margin-bottom: 20px;
+  background-image: url(../img/p2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 20px;
+  background-attachment: fixed;
 }
 .desc>p{
-font-size: 18px;
-line-height: 35px;
-color: #fff;
+  font-size: 18px;
+  line-height: 35px;
+  color: #fff;
 }
 ```
 
@@ -325,12 +327,16 @@ color: #fff;
 ### 5.2.1 Task Description
 The tourism website includes two interface layouts for PC and mobile devices. The PC interface uses tag elements to display sections such as titles, navigation, scenery images, and company cases. The mobile interface has a maximum screen width of 500px and mainly displays titles, search boxes, company cases, "Footsteps" guides, About Us, enterprise cases, and booking notes.
 The overall structure is divided into three parts: top, middle, and bottom. Content is displayed using flex layout and media queries. The effects are shown in Figure 5-2 and Figure 5-3.
-![Image](../../assets/images/project-05/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-05/image-002.png" alt="Image">
+</p>
 
-_Figure 5-2 Tourism Website PC Interface_
-![Image](../../assets/images/project-05/image-003.png)
+<p align="center"><em>Figure 5-2 Tourism Website PC Interface</em></p>
+<p align="center">
+  <img src="../../assets/images/project-05/image-003.png" alt="Image">
+</p>
 
-_Figure 5-3 Tourism Website Mobile Interface_
+<p align="center"><em>Figure 5-3 Tourism Website Mobile Interface</em></p>
 
 ### 5.2.2 Knowledge Preparation
 This section describes how to use the box-sizing rule and flexbox elements for content layout in CSS3.
@@ -343,16 +349,16 @@ A flex container is defined by setting the display property to flex or inline-fl
 
 ```css
 .flex-container {
-display: -webkit-flex;
-display: flex;
-width: 400px;
-height: 250px;
-background-color: lightgrey;
+  display: -webkit-flex;
+  display: flex;
+  width: 400px;
+  height: 250px;
+  background-color: lightgrey;
 }
 .flex-item {
-background-color: cornflowerblue;
-width: 100px;
-height: 100px;
+  background-color: cornflowerblue;
+  width: 100px;
+  height: 100px;
 }
 ```
 
@@ -362,7 +368,7 @@ The flex-direction property determines the direction of the main axis (i.e., the
 
 ```css
 .box {
-flex-direction: row | row-reverse | column | column-reverse;
+  flex-direction: row | row-reverse | column | column-reverse;
 }
 ```
 
@@ -374,7 +380,7 @@ The flex-wrap property specifies whether a flex container is single-line or mult
 
 ```css
 .box{
-flex-wrap: nowrap | wrap | wrap-reverse;
+  flex-wrap: nowrap | wrap | wrap-reverse;
 }
 ```
 
@@ -385,7 +391,7 @@ The flex-flow property is a shorthand for flex-direction and flex-wrap. It is us
 
 ```css
 .box{
-flex-flow: flex-direction flex-wrap | initial | inherit;
+  flex-flow: flex-direction flex-wrap | initial | inherit;
 }
 ```
 
@@ -393,7 +399,7 @@ The justify-content property is used to set or retrieve the alignment of flex it
 
 ```css
 .box{
-justify-content: flex-start | flex-end | center | space-between | space-around | initial | inherit;
+  justify-content: flex-start | flex-end | center | space-between | space-around | initial | inherit;
 }
 ```
 
@@ -408,7 +414,7 @@ The align-items property defines the alignment of flex items along the cross axi
 
 ```css
 .box{
-align-items: stretch | center | flex-start | flex-end | baseline;
+  align-items: stretch | center | flex-start | flex-end | baseline;
 }
 ```
 
@@ -421,7 +427,7 @@ The align-content property aligns the lines of a flex container along the cross 
 
 ```css
 .box{
-align-content: stretch | center | flex-start | flex-end | space-between | space-around;
+  align-content: stretch | center | flex-start | flex-end | space-between | space-around;
 }
 ```
 
@@ -449,7 +455,7 @@ Using the @media query, you can define different styles for different media type
 ```css
 @media allows you to set different styles for different screen sizes, and it is especially useful when you need to design responsive pages. The syntax is as follows.
 @media mediatype and | not | only (media feature) {
-CSS-Code;
+  CSS-Code;
 }
 ```
 
@@ -460,15 +466,15 @@ CSS-Code;
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>SuiLv Travel Website</title>
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-……
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>SuiLv Travel Website</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+    ……
+  </body>
 </html>
 ```
 
@@ -476,13 +482,13 @@ CSS-Code;
 
 ```html
 <header class="boo-top">
-<div class="nav-content">
-<h1>SuiLv Travel Website</h1>
-<div class="search">
-<input type="text" name="" id="" value="" placeholder="Please enter a city"/>
-<button>Search</button>
-</div>
-</div>
+  <div class="nav-content">
+    <h1>SuiLv Travel Website</h1>
+    <div class="search">
+      <input type="text" name="" id="" value="" placeholder="Please enter a city"/>
+      <button>Search</button>
+    </div>
+  </div>
 </header>
 ```
 
@@ -490,17 +496,17 @@ CSS-Code;
 
 ```html
 <nav>
-<ul>
-<li class="active">Home</li>
-<li>Corporate Group Tours</li>
-<li>Weekend One-Day Tours</li>
-<li>National Day 7-Day Tours</li>
-<li>Destinations</li>
-<li>About Us</li>
-</ul>
+  <ul>
+    <li class="active">Home</li>
+    <li>Corporate Group Tours</li>
+    <li>Weekend One-Day Tours</li>
+    <li>National Day 7-Day Tours</li>
+    <li>Destinations</li>
+    <li>About Us</li>
+  </ul>
 </nav>
 <div class="banner">
-<img src="./img/l15.jpg">
+  <img src="./img/l15.jpg">
 </div>
 ```
 
@@ -508,34 +514,34 @@ CSS-Code;
 
 ```html
 <div class="content">
-<div class="lv-title">
-<fieldset>
-<legend>Corporate Cases</legend>
-</fieldset>
-</div>
-<ul class="lv-list">
-<li>
-<img src="img/bann.jpg">
-<h3>A comfortable and relaxing environment to free yourself and enjoy nature</h3>
-</li>
-<li>
-<img src="img/l1.jpg" >
-<h3>As time goes by, too many mortal distractions erode our souls all the time. This thing called "life" has been tightly wrapping our hearts, and the past lingers like a shadow.</h3>
-</li>
-<li>
-<img src="img/l2.jpg" >
-<h3>Can we stop to admire the scenery along the way? When tired, let me rest for a while and continue rushing towards the future.</h3>
-</li>
-<li>
-<img src="img/l4.jpg" >
-<h3>Travel is wherever you go with a heart to enjoy.</h3>
-</li>
-<li>
-<img src="img/l12.jpg" class="bootom-img">
-<h3>When flowers bloom, I want to see them. When leaves fall, I want to watch them. When it snows, I also want to see the snow. Each season has its own beauty, and this summer I'm going to the seaside to listen to the waves.</h3>
-</li>
-</ul>
-……
+  <div class="lv-title">
+    <fieldset>
+      <legend>Corporate Cases</legend>
+    </fieldset>
+  </div>
+  <ul class="lv-list">
+    <li>
+      <img src="img/bann.jpg">
+      <h3>A comfortable and relaxing environment to free yourself and enjoy nature</h3>
+    </li>
+    <li>
+      <img src="img/l1.jpg" >
+      <h3>As time goes by, too many mortal distractions erode our souls all the time. This thing called "life" has been tightly wrapping our hearts, and the past lingers like a shadow.</h3>
+    </li>
+    <li>
+      <img src="img/l2.jpg" >
+      <h3>Can we stop to admire the scenery along the way? When tired, let me rest for a while and continue rushing towards the future.</h3>
+    </li>
+    <li>
+      <img src="img/l4.jpg" >
+      <h3>Travel is wherever you go with a heart to enjoy.</h3>
+    </li>
+    <li>
+      <img src="img/l12.jpg" class="bootom-img">
+      <h3>When flowers bloom, I want to see them. When leaves fall, I want to watch them. When it snows, I also want to see the snow. Each season has its own beauty, and this summer I'm going to the seaside to listen to the waves.</h3>
+    </li>
+  </ul>
+  ……
 </div>
 ```
 
@@ -543,40 +549,40 @@ CSS-Code;
 
 ```html
 <div class="lv-title">
-<fieldset>
-<legend>"Footsteps" Guide</legend>
-</fieldset>
+  <fieldset>
+    <legend>"Footsteps" Guide</legend>
+  </fieldset>
 </div>
 <ul class="route-guide">
-<li><img src="img/f0.jpg" ></li>
-<li>
-<ul>
-<li>
-<img src="img/l10.jpg" >
-<h3>5-Day Tour: Ningxia Shapotou - Tonghu Grassland - Western Film Studio - Helan Mountain Rock Paintings</h3>
-</li>
-<li>
-<img src="img/l11.jpg" >
-<h3>5-Day Tour: Sanya - Wuzhizhou Island - Tianya Haijiao</h3>
-</li>
-<li>
-<img src="img/l12.png" >
-<h3>3-Day Tour: Xichang, Qionghai Lake, Lushan Mountain</h3>
-</li>
-<li>
-<img src="img/l3.jpg" >
-<h3>5 Nights & 6 Days Tour: Krabi & Phuket - 2 Nights at 5-Star International Pool Villa (Parson Hill) + 6 Parson Experiences + Leisure Time</h3>
-</li>
-<li>
-<img src="img/l5.jpg" >
-<h3>2-Day Tour: Bipenggou, Taoping Qiang Village, Ganbao Tibetan Village - Comfort Hotel - Taoping Qiang Village Included</h3>
-</li>
-<li>
-<img src="./img/l6.jpg" >
-<h3>9 Nights & 11 Days In-depth Tour: England & Scotland (Flight + Local Stay) - Windsor Castle, Stonehenge, Bicester Village, Oxford, Cambridge, 2 Free Days in London, 4-Star Hotels Throughout</h3>
-</li>
-</ul>
-</li>
+  <li><img src="img/f0.jpg" ></li>
+  <li>
+    <ul>
+      <li>
+        <img src="img/l10.jpg" >
+        <h3>5-Day Tour: Ningxia Shapotou - Tonghu Grassland - Western Film Studio - Helan Mountain Rock Paintings</h3>
+      </li>
+      <li>
+        <img src="img/l11.jpg" >
+        <h3>5-Day Tour: Sanya - Wuzhizhou Island - Tianya Haijiao</h3>
+      </li>
+      <li>
+        <img src="img/l12.png" >
+        <h3>3-Day Tour: Xichang, Qionghai Lake, Lushan Mountain</h3>
+      </li>
+      <li>
+        <img src="img/l3.jpg" >
+        <h3>5 Nights & 6 Days Tour: Krabi & Phuket - 2 Nights at 5-Star International Pool Villa (Parson Hill) + 6 Parson Experiences + Leisure Time</h3>
+      </li>
+      <li>
+        <img src="img/l5.jpg" >
+        <h3>2-Day Tour: Bipenggou, Taoping Qiang Village, Ganbao Tibetan Village - Comfort Hotel - Taoping Qiang Village Included</h3>
+      </li>
+      <li>
+        <img src="./img/l6.jpg" >
+        <h3>9 Nights & 11 Days In-depth Tour: England & Scotland (Flight + Local Stay) - Windsor Castle, Stonehenge, Bicester Village, Oxford, Cambridge, 2 Free Days in London, 4-Star Hotels Throughout</h3>
+      </li>
+    </ul>
+  </li>
 </ul>
 ```
 
@@ -584,35 +590,35 @@ CSS-Code;
 
 ```html
 <footer>
-<dl>
-<dt>About Us</dt>
-<dd>Team Introduction</dd>
-<dd>Team Advantages</dd>
-<dd>Contact Us</dd>
-</dl>
-<dl>
-<dt>Core Business</dt>
-<dd>Corporate Benefits</dd>
-<dd>Corporate Inspections</dd>
-</dl>
-<dl>
-<dt>Corporate Solutions</dt>
-<dd>Travel Programs</dd>
-<dd>Scenic Spot Inspections</dd>
-<dd>Assessment Cases</dd>
-</dl>
-<dl>
-<dt>Corporate Guidelines</dt>
-<dd>Unfair Competition</dd>
-<dd>Common Disputes</dd>
-<dd>Quality Assurance</dd>
-</dl>
-<dl>
-<dt>Booking Guidelines</dt>
-<dd>Contract Methods</dd>
-<dd>Payment Methods</dd>
-<dd>Travel Protection</dd>
-</dl>
+  <dl>
+    <dt>About Us</dt>
+    <dd>Team Introduction</dd>
+    <dd>Team Advantages</dd>
+    <dd>Contact Us</dd>
+  </dl>
+  <dl>
+    <dt>Core Business</dt>
+    <dd>Corporate Benefits</dd>
+    <dd>Corporate Inspections</dd>
+  </dl>
+  <dl>
+    <dt>Corporate Solutions</dt>
+    <dd>Travel Programs</dd>
+    <dd>Scenic Spot Inspections</dd>
+    <dd>Assessment Cases</dd>
+  </dl>
+  <dl>
+    <dt>Corporate Guidelines</dt>
+    <dd>Unfair Competition</dd>
+    <dd>Common Disputes</dd>
+    <dd>Quality Assurance</dd>
+  </dl>
+  <dl>
+    <dt>Booking Guidelines</dt>
+    <dd>Contract Methods</dd>
+    <dd>Payment Methods</dd>
+    <dd>Travel Protection</dd>
+  </dl>
 </footer>
 ```
 
@@ -620,345 +626,345 @@ CSS-Code;
 
 ```css
 *{
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 }
 a{
-text-decoration: none;
+  text-decoration: none;
 }
 ul{
-list-style: none;
+  list-style: none;
 }
 /* PC End  */
 .boo-top{
-width: 100%;
-height: 100px;
-background-image: url(../img/logo.jpg);
-background-repeat: no-repeat;
-background-size: 100% 100px;
+  width: 100%;
+  height: 100px;
+  background-image: url(../img/logo.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
 }
 .nav-content{
-width: 1200px;
-height: 100px;
-margin: auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  width: 1200px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .nav-content>h1{
-color: #fff;
-font-size: 34px;
+  color: #fff;
+  font-size: 34px;
 }
 .search{
-display: flex;
-justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 .search>input{
-width: 220px;
-height: 40px;
-border: 1px solid #efefef;
-border-radius: 3px;
-text-indent: 1em;
-outline: navajowhite;
+  width: 220px;
+  height: 40px;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  text-indent: 1em;
+  outline: navajowhite;
 }
 .search>button{
-width: 60px;
-height: 42px;
-border: none;
-outline: navajowhite;
-border-top-right-radius: 5px;
-border-bottom-right-radius: 5px;
-margin-left: -10px;
-color: #fff;
-background-color: #0095ff;
-cursor: pointer;
+  width: 60px;
+  height: 42px;
+  border: none;
+  outline: navajowhite;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: -10px;
+  color: #fff;
+  background-color: #0095ff;
+  cursor: pointer;
 }
 /* Nav Style */
 nav{
-width: 100%;
-height: 50px;
-background-color: #0095FF;
-color: #fff;
+  width: 100%;
+  height: 50px;
+  background-color: #0095FF;
+  color: #fff;
 }
 nav>ul{
-width: 1200px;
-height: 50px;
-margin: auto;
-text-align: center;
-line-height: 50px;
-color: #fff;
-display: flex;
-justify-content: flex-start;
+  width: 1200px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
 }
 nav>ul>li{
-width: 150px;
-height: 50px;
-cursor: pointer;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
 }
 .active{
-background-color: #0B5586;
+  background-color: #0B5586;
 }
 .banner{
-width: 100%;
+  width: 100%;
 }
 .banner>img{
-width: 100%;
-height: 550px;
+  width: 100%;
+  height: 550px;
 }
 .content{
-width: 100%;
-background-color: #e7f2fd;
-padding-bottom: 50px;
+  width: 100%;
+  background-color: #e7f2fd;
+  padding-bottom: 50px;
 }
 .lv-title{
-width: 1000px;
-height: 40px;
-line-height: 40px;
-text-align: center;
-margin: 20px auto;
+  width: 1000px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 20px auto;
 }
 .lv-title>fieldset{
-border: none;
-border-top: 1px solid #0B5586;
+  border: none;
+  border-top: 1px solid #0B5586;
 }
 .lv-title>fieldset>legend{
-padding: 0 15px;
-font-size: 30px;
-letter-spacing: 5px;
+  padding: 0 15px;
+  font-size: 30px;
+  letter-spacing: 5px;
 }
 .lv-list{
-width: 1200px;
-margin: auto;
-display: flex;
-justify-content: flex-start;
-flex-wrap: wrap;
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .lv-list>li{
-width: 380px;
-height: 280px;
-margin-right: 10px;
-background-color: #0B5586;
-margin-bottom: 15px;
+  width: 380px;
+  height: 280px;
+  margin-right: 10px;
+  background-color: #0B5586;
+  margin-bottom: 15px;
 }
 .lv-list>li>img{
-width: 100%;
-height: 240px;
+  width: 100%;
+  height: 240px;
 }
 .lv-list>li>h3{
-width: 100%;
-height: 40px;
-overflow: hidden;
-white-space:nowrap;
-text-overflow:ellipsis;
-color: #fff;
-font-weight: normal;
-font-size: 16px;
-line-height: 30px;
-text-indent: 1em;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  color: #fff;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  text-indent: 1em;
 }
 .lv-list>li:nth-child(5){
-width: 770px;
+  width: 770px;
 }
 .route-guide{
-width: 1200px;
-margin: auto;
-display: flex;
-justify-content: flex-start;
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
 }
 .route-guide>li:nth-child(1){
-width: 300px;
-height: 600px;
+  width: 300px;
+  height: 600px;
 }
 .route-guide>li:nth-child(1)>img{
-width: 300px;
-height: 590px;
+  width: 300px;
+  height: 590px;
 }
 .route-guide>li:nth-child(2){
-flex: 1;
-height: 600px;
+  flex: 1;
+  height: 600px;
 }
 .route-guide>li:nth-child(2)>ul{
-width: 100%;
-height: 600px;
-display: flex;
-justify-content: flex-start;
-flex-wrap: wrap;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .route-guide>li:nth-child(2)>ul>li{
-width: 280px;
-height: 290px;
-margin-left: 10px;
-margin-bottom: 10px;
-background-color: #0B5586;
+  width: 280px;
+  height: 290px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #0B5586;
 }
 .route-guide>li:nth-child(2)>ul>li>img{
-width: 280px;
-height: 230px;
-color: #fff;
-font-weight: normal;
+  width: 280px;
+  height: 230px;
+  color: #fff;
+  font-weight: normal;
 }
 .route-guide>li:nth-child(2)>ul>li>h3{
-padding: 0 10px;
-overflow: hidden;
-white-space:nowrap;
-text-overflow:ellipsis;
-font-size: 14px;
-color: #fff;
-font-weight: normal;
-line-height: 50px;
+  padding: 0 10px;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size: 14px;
+  color: #fff;
+  font-weight: normal;
+  line-height: 50px;
 }
 /* Footer */
 footer{
-height: auto;
-display: flex;
-padding: 50px 240px;
-justify-content: space-around;
-background-color: #0B5586;
-color: #fff;
+  height: auto;
+  display: flex;
+  padding: 50px 240px;
+  justify-content: space-around;
+  background-color: #0B5586;
+  color: #fff;
 }
 footer>dl>dt{
-font-weight: bold;
+  font-weight: bold;
 }
 footer>dl>dd{
-line-height: 35px;
+  line-height: 35px;
 }
 /* Mobile End */
 @media  (max-width:500px) {
-.boo-top{
-background-image: none;
-}
-.nav-content{
-width: 95%;
-margin: auto;
-display: flow-root;
-}
-.nav-content>h1{
-width: 100%;
-line-height: 40px;
-font-size: 20px;
-text-align: center;
-color: #0095FF;
-border-bottom: 1px solid #DEDEDE;
-}
-.search{
-width: 100%;
-height: 40px;
-color: #838383;
-margin-top: 10px;
-}
-.search>input{
-width: 100%;
-height: 40px;
-background-color: #EAEAEA;
-background-image: url(../img/search.png);
-background-repeat: no-repeat;
-background-size: 30px 30px;
-background-position: center right;
-}
-.search>button{
-display: none;
-}
-nav{
-display: none;
-}
-.banner>img{
-height: 300px;
-}
-.content{
-width: 100%;
-overflow: hidden;
-padding-bottom: 20px;
-}
-.lv-title{
-width: 95%;
-height: 40px;
-}
-.lv-title>fieldset{
-border: none;
-text-align: left;
-line-height: 30px;
-margin-top: 10px;
-}
-.lv-title>fieldset>legend{
-font-size: 14px;
-font-weight: bold;
-letter-spacing: normal;
-border-left: 4px solid #0095FF;
-}
-.lv-list{
-width: 100%;
-padding: 10px;
-}
-.lv-list>li{
-width: 47%;
-height: 190px;
-margin: 0 10px 10px 0px;
-}
-.lv-list>li>img{
-width: 100%;
-height: 150px;
-}
-.lv-list>li>h3{
-font-size: 14px;
-}
-.lv-list>li:nth-child(5){
-display: none;
-}
-.route-guide{
-width: 100%;
-padding: 10px;
-}
-.route-guide>li:nth-child(1){
-display: none;
-}
-.route-guide>li:nth-child(2){
-width: 100%;
-height: auto;
-}
-.route-guide>li:nth-child(2)>ul{
-width: 100%;
-height: auto;
-display: flex;
-justify-content: flex-start;
-flex-wrap: wrap;
-}
-.route-guide>li:nth-child(2)>ul>li{
-width: 47%;
-height: 240px;
-margin-left: 10px;
-margin-bottom: 10px;
-background-color: #0B5586;
-}
-.route-guide>li:nth-child(2)>ul>li>img{
-width: 100%;
-height: 190px;
-color: #fff;
-font-weight: normal;
-}
-.route-guide>li:nth-child(2)>ul>li>h3{
-padding: 0 10px;
-overflow: hidden;
-white-space:nowrap;
-text-overflow:ellipsis;
-font-size: 14px;
-color: #fff;
-font-weight: normal;
-line-height: 50px;
-}
-footer{
-height: 30px;
-padding: 15px 100px;
-background-color: #dbdbdb;
-}
-footer>dl>dd{
-display: none;
-}
-footer>dl:nth-child(2n){
-display: none;
-}
-footer>dl>dt{
-font-weight: normal;
-}
+  .boo-top{
+    background-image: none;
+  }
+  .nav-content{
+    width: 95%;
+    margin: auto;
+    display: flow-root;
+  }
+  .nav-content>h1{
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    color: #0095FF;
+    border-bottom: 1px solid #DEDEDE;
+  }
+  .search{
+    width: 100%;
+    height: 40px;
+    color: #838383;
+    margin-top: 10px;
+  }
+  .search>input{
+    width: 100%;
+    height: 40px;
+    background-color: #EAEAEA;
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center right;
+  }
+  .search>button{
+    display: none;
+  }
+  nav{
+    display: none;
+  }
+  .banner>img{
+    height: 300px;
+  }
+  .content{
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+  .lv-title{
+    width: 95%;
+    height: 40px;
+  }
+  .lv-title>fieldset{
+    border: none;
+    text-align: left;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+  .lv-title>fieldset>legend{
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: normal;
+    border-left: 4px solid #0095FF;
+  }
+  .lv-list{
+    width: 100%;
+    padding: 10px;
+  }
+  .lv-list>li{
+    width: 47%;
+    height: 190px;
+    margin: 0 10px 10px 0px;
+  }
+  .lv-list>li>img{
+    width: 100%;
+    height: 150px;
+  }
+  .lv-list>li>h3{
+    font-size: 14px;
+  }
+  .lv-list>li:nth-child(5){
+    display: none;
+  }
+  .route-guide{
+    width: 100%;
+    padding: 10px;
+  }
+  .route-guide>li:nth-child(1){
+    display: none;
+  }
+  .route-guide>li:nth-child(2){
+    width: 100%;
+    height: auto;
+  }
+  .route-guide>li:nth-child(2)>ul{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .route-guide>li:nth-child(2)>ul>li{
+    width: 47%;
+    height: 240px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #0B5586;
+  }
+  .route-guide>li:nth-child(2)>ul>li>img{
+    width: 100%;
+    height: 190px;
+    color: #fff;
+    font-weight: normal;
+  }
+  .route-guide>li:nth-child(2)>ul>li>h3{
+    padding: 0 10px;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    font-size: 14px;
+    color: #fff;
+    font-weight: normal;
+    line-height: 50px;
+  }
+  footer{
+    height: 30px;
+    padding: 15px 100px;
+    background-color: #dbdbdb;
+  }
+  footer>dl>dd{
+    display: none;
+  }
+  footer>dl:nth-child(2n){
+    display: none;
+  }
+  footer>dl>dt{
+    font-weight: normal;
+  }
 }
 ```
 
@@ -968,9 +974,11 @@ font-weight: normal;
 
 ### 5.3.1 Task Description
 The interface of the personal photo album website displays the content of a personal photo album. Its overall structure is divided into two parts (upper and lower). Deformation and transition properties are used for presentation to achieve the scaling animation effect of album images, as shown in Figure 5-4.
-![Image](../../assets/images/project-05/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-05/image-004.png" alt="Image">
+</p>
 
-_Figure 5-4 Personal Album Interface_
+<p align="center"><em>Figure 5-4 Personal Album Interface</em></p>
 
 ### 5.3.2 Knowledge Preparation
 This section introduces the transform property and transition styles in CSS3, with specific details as follows.
@@ -1101,14 +1109,14 @@ The property values are shown in Table 5-10.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>>Personal Album</title>
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-……
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>>Personal Album</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+    ……
+  </body>
 </html>
 ```
 
@@ -1117,16 +1125,16 @@ The property values are shown in Table 5-10.
 ```html
 <h1>>Personal Album</h1>
 <div class="photo-content">
-<img src="img/p1.jpg">
-<img src="img/p2.jpg">
-<img src="img/p3.jpg">
-<img src="img/p4.jpg">
-<img src="img/p5.jpg">
-<img src="img/p6.jpg">
-<img src="img/p7.jpg">
-<img src="img/p8.jpg">
-<img src="img/p9.jpg">
-<img src="img/p10.jpg">
+  <img src="img/p1.jpg">
+  <img src="img/p2.jpg">
+  <img src="img/p3.jpg">
+  <img src="img/p4.jpg">
+  <img src="img/p5.jpg">
+  <img src="img/p6.jpg">
+  <img src="img/p7.jpg">
+  <img src="img/p8.jpg">
+  <img src="img/p9.jpg">
+  <img src="img/p10.jpg">
 </div>
 ```
 
@@ -1134,77 +1142,77 @@ The property values are shown in Table 5-10.
 
 ```css
 * {
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 }
 h1 {
-text-align: center;
-color: #f00;
-line-height: 80px;
+  text-align: center;
+  color: #f00;
+  line-height: 80px;
 }
 .photo-content {
-width: 1200px;
-margin: 80px auto;
-position: relative;
+  width: 1200px;
+  margin: 80px auto;
+  position: relative;
 }
 .photo-content>img {
-width: 300px;
-position: absolute;
-border-radius: 20px;
-border: 5px solid #ccc;
+  width: 300px;
+  position: absolute;
+  border-radius: 20px;
+  border: 5px solid #ccc;
 }
 .photo-content>img:nth-child(1) {
-top: 0;
-transform: rotate(-7deg)
+  top: 0;
+  transform: rotate(-7deg)
 }
 .photo-content>img:nth-child(2) {
-top: 0;
-left: 300px;
-transform: rotate(17deg);
+  top: 0;
+  left: 300px;
+  transform: rotate(17deg);
 }
 .photo-content>img:nth-child(3) {
-top: 0;
-left: 500px;
-transform: rotate(-17deg);
+  top: 0;
+  left: 500px;
+  transform: rotate(-17deg);
 }
 .photo-content>img:nth-child(4) {
-top: 0;
-left: 700px;
-transform: rotate(20deg);
+  top: 0;
+  left: 700px;
+  transform: rotate(20deg);
 }
 .photo-content>img:nth-child(5) {
-top: 0;
-left: 900px;
-transform: rotate(-17deg);
+  top: 0;
+  left: 900px;
+  transform: rotate(-17deg);
 }
 .photo-content>img:nth-child(6) {
-left: 0;
-top: 240px;
-transform: skewY(30deg);
+  left: 0;
+  top: 240px;
+  transform: skewY(30deg);
 }
 .photo-content>img:nth-child(7) {
-left: 200px;
-top: 230px;
-transform: rotate(-30deg);
+  left: 200px;
+  top: 230px;
+  transform: rotate(-30deg);
 }
 .photo-content>img:nth-child(8) {
-left: 500px;
-top: 260px;
+  left: 500px;
+  top: 260px;
 }
 .photo-content>img:nth-child(9) {
-left: 700px;
-top: 200px;
-transform: scale(0.8) rotate(-50deg);
+  left: 700px;
+  top: 200px;
+  transform: scale(0.8) rotate(-50deg);
 }
 .photo-content>img:nth-child(10) {
-right: 0;
-top: 200px;
-transform: skewX(60deg);
+  right: 0;
+  top: 200px;
+  transform: skewX(60deg);
 }
 .photo-content>img:hover {
-transform: scale(2);
-transition: all 0.8s ease 0s;
-z-index: 99;
+  transform: scale(2);
+  transition: all 0.8s ease 0s;
+  z-index: 99;
 }
 ```
 
@@ -1214,9 +1222,11 @@ z-index: 99;
 
 ### 5.4.1 Task Description
 The interface of The Angry Piglet displays the animation effect of the piglet. Construct the overall structure and use CSS animation to show the content, as shown in Figure 5-5.
-![Image](../../assets/images/project-05/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-05/image-005.png" alt="Image">
+</p>
 
-_Figure 5-5 The Angry Piglet Interface_
+<p align="center"><em>Figure 5-5 The Angry Piglet Interface</em></p>
 
 ### 5.4.2 Knowledge Preparation
 This section introduces how to create animations in CSS3 styles, which can replace animated images, Flash animations, and JavaScript in many web pages.
@@ -1227,9 +1237,11 @@ The timing of the changes can be specified using percentages, or through the key
 0% is the start time of the animation, and 100% is the end time of the animation.
 For the best browser support, you should always define both the 0% and 100% selectors.
 Note: Use animation properties to control the appearance of the animation, and bind the animation to a selector at the same time, as shown in Figure 5-6.
-![Image](../../assets/images/project-05/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-05/image-006.png" alt="Image">
+</p>
 
-_Figure 5-6 Animation Properties_
+<p align="center"><em>Figure 5-6 Animation Properties</em></p>
 
 #### 2.animation
 The animation property is a shorthand property used to set six animation attributes. The syntax is as follows.
@@ -1268,9 +1280,11 @@ The property values are shown in Table 5-12.
 | running | Specifies that the animation is playing. |
 
 Note: Always set the animation-duration property; otherwise the duration will be 0 and the animation will not play, as shown in Figure 5-7.
-![Image](../../assets/images/project-05/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-05/image-007.png" alt="Image">
+</p>
 
-_Figure 5-7 Animation Properties_
+<p align="center"><em>Figure 5-7 Animation Properties</em></p>
 
 ### 5.4.3 Task Implementation
 
@@ -1279,14 +1293,14 @@ _Figure 5-7 Animation Properties_
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>The Furious Piglet</title>
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-……
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Furious Piglet</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+    ……
+  </body>
 </html>
 ```
 
@@ -1294,11 +1308,11 @@ _Figure 5-7 Animation Properties_
 
 ```html
 <div id="pig">
-<div class="ear right"></div>
-<div class="ear left"></div>
-<div class="eye right"></div>
-<div class="eye left"></div>
-<div class="nose"></div>
+  <div class="ear right"></div>
+  <div class="ear left"></div>
+  <div class="eye right"></div>
+  <div class="eye left"></div>
+  <div class="nose"></div>
 </div>
 ```
 
@@ -1306,139 +1320,139 @@ _Figure 5-7 Animation Properties_
 
 ```css
 html {
-height: 100%;
+  height: 100%;
 }
 #pig {
-height: 20em;
-width: 20em;
-margin: 5em auto;
-position: relative;
-border-radius: 50%;
-box-shadow: 0 0.125em 1em #fca inset, 0 -1.5em 5em #923 inset;
-background: radial-gradient(50% 30%, #fa9 20%, #f46 100%);
-animation: float ease-in-out 1.5s infinite;
+  height: 20em;
+  width: 20em;
+  margin: 5em auto;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 0.125em 1em #fca inset, 0 -1.5em 5em #923 inset;
+  background: radial-gradient(50% 30%, #fa9 20%, #f46 100%);
+  animation: float ease-in-out 1.5s infinite;
 }
 #pig:before {
-animation: shadow ease-in-out 1.5s infinite;
-content: '';
-display: block;
-position: relative;
-top: 10em;
-height: .5em;
-margin: 0 2em;
-border-radius: 80% 60%;
-box-shadow: 0 14em 1em 1em rgba(0, 0, 0, .7);
-background: rgba(0, 0, 0, 0);
-opacity: .5;
+  animation: shadow ease-in-out 1.5s infinite;
+  content: '';
+  display: block;
+  position: relative;
+  top: 10em;
+  height: .5em;
+  margin: 0 2em;
+  border-radius: 80% 60%;
+  box-shadow: 0 14em 1em 1em rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0);
+  opacity: .5;
 }
 .ear {
-height: 8em;
-width: 5em;
-position: absolute;
-top: 2em;
-background: radial-gradient(50% 30%, #923 20%, #612 100%);
+  height: 8em;
+  width: 5em;
+  position: absolute;
+  top: 2em;
+  background: radial-gradient(50% 30%, #923 20%, #612 100%);
 }
 .ear.left {
-left: -1em;
-border-radius: 250% 50% 250% 20%;
-box-shadow: 0.125em 0.125em 0.5em rgba(90, 0, 0, 0.25), 0 -0.0625em 0.25em rgba(0, 0, 0, 0.5) inset;
+  left: -1em;
+  border-radius: 250% 50% 250% 20%;
+  box-shadow: 0.125em 0.125em 0.5em rgba(90, 0, 0, 0.25), 0 -0.0625em 0.25em rgba(0, 0, 0, 0.5) inset;
 }
 .ear.right {
-right: -1em;
-border-radius: 50% 250% 20% 250%;
-box-shadow: -0.125em 0.125em 0.5em rgba(90, 0, 0, 0.25), 0 -0.0625em 0.25em rgba(0, 0, 0, 0.5) inset;
+  right: -1em;
+  border-radius: 50% 250% 20% 250%;
+  box-shadow: -0.125em 0.125em 0.5em rgba(90, 0, 0, 0.25), 0 -0.0625em 0.25em rgba(0, 0, 0, 0.5) inset;
 }
 .eye {
-height: 7em;
-width: 3.5em;
-position: absolute;
-top: 5em;
-box-shadow: 0 -1em 1em rgba(0, 0, 100, 0.15) inset, 0 -0.25em 0.25em rgba(0, 0, 100, 0.2) inset, 0 0.125em 0.75em rgba(90, 0, 0, 0.2), 0 0.25em 1em rgba(90, 0, 0, 0.3);
-background: #fff;
+  height: 7em;
+  width: 3.5em;
+  position: absolute;
+  top: 5em;
+  box-shadow: 0 -1em 1em rgba(0, 0, 100, 0.15) inset, 0 -0.25em 0.25em rgba(0, 0, 100, 0.2) inset, 0 0.125em 0.75em rgba(90, 0, 0, 0.2), 0 0.25em 1em rgba(90, 0, 0, 0.3);
+  background: #fff;
 }
 .eye.left {
-left: 28%;
-border-radius: 100% 50%;
+  left: 28%;
+  border-radius: 100% 50%;
 }
 .eye.right {
-right: 28%;
-border-radius: 50% 100%;
+  right: 28%;
+  border-radius: 50% 100%;
 }
 .eye:after {
-height: 3em;
-width: 2em;
-position: absolute;
-top: 1em;
-border-radius: 100%;
-box-shadow: 0 -0.25em 0.5em #111 inset;
-content: '';
-background: #333;
+  height: 3em;
+  width: 2em;
+  position: absolute;
+  top: 1em;
+  border-radius: 100%;
+  box-shadow: 0 -0.25em 0.5em #111 inset;
+  content: '';
+  background: #333;
 }
 .eye.left:after {
-left: 35%;
+  left: 35%;
 }
 .eye.right:after {
-right: 35%;
+  right: 35%;
 }
 .nose {
-height: 4em;
-width: 6em;
-position: absolute;
-top: 60%;
-left: 36%;
-border-radius: 80% 80% 70% 70%;
-box-shadow: 0 0.25em 1em rgba(90, 0, 0, 0.5), 0 -0.0625em #fff;
-background: -webkit-radial-gradient(50% 30%, #fca 20%, #fa9 100%);
-background: radial-gradient(50% 30%, #fca 20%, #fa9 100%);
+  height: 4em;
+  width: 6em;
+  position: absolute;
+  top: 60%;
+  left: 36%;
+  border-radius: 80% 80% 70% 70%;
+  box-shadow: 0 0.25em 1em rgba(90, 0, 0, 0.5), 0 -0.0625em #fff;
+  background: -webkit-radial-gradient(50% 30%, #fca 20%, #fa9 100%);
+  background: radial-gradient(50% 30%, #fca 20%, #fa9 100%);
 }
 .nose:before,
 .nose:after {
-height: 2em;
-width: 0.5em;
-position: absolute;
-top: 1em;
-border-radius: 100%;
--webkit-box-shadow: 0 0.0625em #fff, 0 0 0.5em rgba(90, 0, 0, 0.5);
-box-shadow: 0 0.0625em #fff, 0 0 0.5em rgba(90, 0, 0, 0.5);
-content: '';
-background: #612;
+  height: 2em;
+  width: 0.5em;
+  position: absolute;
+  top: 1em;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0.0625em #fff, 0 0 0.5em rgba(90, 0, 0, 0.5);
+  box-shadow: 0 0.0625em #fff, 0 0 0.5em rgba(90, 0, 0, 0.5);
+  content: '';
+  background: #612;
 }
 .nose:before {
-left: 1.75em;
+  left: 1.75em;
 }
 .nose:after {
-right: 1.75em;
+  right: 1.75em;
 }
 @keyframes float {
-0% {
--webkit-transform: translateY(0);
-transform: translateY(0);
-}
-50% {
--webkit-transform: translateY(1em);
-transform: translateY(1em);
-}
-100% {
--webkit-transform: translateY(0);
-transform: translateY(0);
-}
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 @keyframes shadow {
-0% {
--webkit-transform: translateY(0);
-transform: translateY(0);
-opacity: .5;
-}
-50% {
--webkit-transform: translateY(1em) scale(.9);
-transform: translateY(1em) scale(.9);
-opacity: 1;
-}
-100% {
--webkit-transform: translateY(0);
-transform: translateY(0);
-opacity: .5;
-}
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: .5;
+  }
+  50% {
+    -webkit-transform: translateY(1em) scale(.9);
+    transform: translateY(1em) scale(.9);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: .5;
+  }
 }
 ```
 
@@ -1448,9 +1462,11 @@ opacity: .5;
 
 ### 5.5.1 Task Description
 The 3D photo album ring interface uses CSS3 styles to display the 3D rotation effect of the album images. Construct the overall structure, use the transform-style and perspective properties to display the content, and achieve a dynamic 3D rotating effect of the photo album, as shown in Figure 5-8.
-![Image](../../assets/images/project-05/image-008.png)
+<p align="center">
+  <img src="../../assets/images/project-05/image-008.png" alt="Image">
+</p>
 
-_Figure 5-8 3D Photo Album Ring Interface_
+<p align="center"><em>Figure 5-8 3D Photo Album Ring Interface</em></p>
 
 ### 5.5.2 Knowledge Preparation
 This section introduces 3D transformations in CSS3 styles, which specify how nested elements are rendered in 3D space.
@@ -1499,14 +1515,14 @@ The property values are shown in Table 5-14.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>3D Photo Album Ring</title>
-<link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-……
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>3D Photo Album Ring</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+    ……
+  </body>
 </html>
 ```
 
@@ -1514,19 +1530,19 @@ The property values are shown in Table 5-14.
 
 ```html
 <div class="stage">  <!-- Main Container -->
-<div class="unit">  <!-- Stage -->
-<ul class="container">  <!-- Photo Album Container -->
-<li><img src="img/v1.jpg"/></li>
-<li><img src="img/v2.jpg"/></li>
-<li><img src="img/v3.jpg"/></li>
-<li><img src="img/v4.jpg"/></li>
-<li><img src="img/v5.jpg"/></li>
-<li><img src="img/v6.jpg"/></li>
-<li><img src="img/v7.jpg"/></li>
-<li><img src="img/v8.jpg"/></li>
-<li><img src="img/v9.jpg"/></li>
-</ul>
-</div>
+  <div class="unit">  <!-- Stage -->
+    <ul class="container">  <!-- Photo Album Container -->
+      <li><img src="img/v1.jpg"/></li>
+      <li><img src="img/v2.jpg"/></li>
+      <li><img src="img/v3.jpg"/></li>
+      <li><img src="img/v4.jpg"/></li>
+      <li><img src="img/v5.jpg"/></li>
+      <li><img src="img/v6.jpg"/></li>
+      <li><img src="img/v7.jpg"/></li>
+      <li><img src="img/v8.jpg"/></li>
+      <li><img src="img/v9.jpg"/></li>
+    </ul>
+  </div>
 </div>
 ```
 
@@ -1534,82 +1550,82 @@ The property values are shown in Table 5-14.
 
 ```css
 * {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 li{
-list-style: none;
+  list-style: none;
 }
 body {
-background: black;
-color: #ccc;
-cursor: pointer;
+  background: black;
+  color: #ccc;
+  cursor: pointer;
 }
 .stage{
-width: 800px;
-height: 500px;
-margin: 20px auto;
+  width: 800px;
+  height: 500px;
+  margin: 20px auto;
 }
 .unit {
-perspective: 800px;
-width: 800px;
+  perspective: 800px;
+  width: 800px;
 }
 .container {
-width: 800px;
-margin: 0 auto;
-position: relative;
-transform-style: preserve-3d;
-animation: spin 15s ease-in-out infinite;
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 15s ease-in-out infinite;
 }
 .container>li {
-width: 200px;
-height: 118px;
-line-height: 118px;
-text-align: center;
-position: absolute;
-top: 160px;
-left: 300px;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.9) inset;
-background: pink;
+  width: 200px;
+  height: 118px;
+  line-height: 118px;
+  text-align: center;
+  position: absolute;
+  top: 160px;
+  left: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9) inset;
+  background: pink;
 }
 .container>li>img{
-width: 200px;
-height: 118px;
+  width: 200px;
+  height: 118px;
 }
 .container>li:nth-child(1) {
-transform: rotateY(0deg) translateZ(300px);
+  transform: rotateY(0deg) translateZ(300px);
 }
 .container>li:nth-child(2) {
-transform: rotateY(40deg) translateZ(300px);
+  transform: rotateY(40deg) translateZ(300px);
 }
 .container>li:nth-child(3){
-transform: rotateY(80deg) translateZ(300px);
+  transform: rotateY(80deg) translateZ(300px);
 }
 .container>li:nth-child(4){
-transform: rotateY(120deg) translateZ(300px);
+  transform: rotateY(120deg) translateZ(300px);
 }
 .container>li:nth-child(5) {
-transform: rotateY(160deg) translateZ(300px);
+  transform: rotateY(160deg) translateZ(300px);
 }
 .container>li:nth-child(6) {
-transform: rotateY(200deg) translateZ(300px);
+  transform: rotateY(200deg) translateZ(300px);
 }
 .container>li:nth-child(7){
-transform: rotateY(240deg) translateZ(300px);
+  transform: rotateY(240deg) translateZ(300px);
 }
 .container>li:nth-child(8) {
-transform: rotateY(280deg) translateZ(300px);
+  transform: rotateY(280deg) translateZ(300px);
 }
 .container>li:nth-child(9) {
-transform: rotateY(320deg) translateZ(300px);
+  transform: rotateY(320deg) translateZ(300px);
 }
 @keyframes spin {
-from {
-transform: rotateY(0deg);
-}
-to {
-transform: rotateY(360deg);
-}
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 ```
 
@@ -1623,9 +1639,11 @@ The latest activities section includes activity cards. The cards are aligned hor
 
 ### 5.6.2 Effect Display
 This section is a comprehensive application of CSS3 styles, which consolidates and expands the knowledge points learned previously, as shown in Figure 5-9.
-![Image](../../assets/images/project-05/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-05/image-009.png" alt="Image">
+</p>
 
-_Figure 5-9 Latest Activities Interface_
+<p align="center"><em>Figure 5-9 Latest Activities Interface</em></p>
 
 ### 5.6.3 Task Implementation
 
@@ -1634,38 +1652,38 @@ _Figure 5-9 Latest Activities Interface_
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<!-- Map attraction section -->
-<!-- Video Section -->
-<!-- Section for the essential information and the events -->
-<section class="info">
-<!-- Essential Information -->
-<div class="essential">
-<h2>Essential Information</h2>
-<span>Contact: 04 72 10 30 30</span>
-<span>Address: Mairie de Lyon, 69205 Lyon cedex 01</span>
-<button class="read" id="read">Read it Loud</button>
-</div>
-<!-- Latest Events -->
-<div class="events">
-<h2>Latest Events</h2>
-<div class="events-container" tabindex="0">
-<!-- Event Card -->
-<div class="card">
-<picture>
-<source
-srcset="
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <!-- Map attraction section -->
+      <!-- Video Section -->
+      <!-- Section for the essential information and the events -->
+      <section class="info">
+        <!-- Essential Information -->
+        <div class="essential">
+          <h2>Essential Information</h2>
+          <span>Contact: 04 72 10 30 30</span>
+          <span>Address: Mairie de Lyon, 69205 Lyon cedex 01</span>
+          <button class="read" id="read">Read it Loud</button>
+        </div>
+        <!-- Latest Events -->
+        <div class="events">
+          <h2>Latest Events</h2>
+          <div class="events-container" tabindex="0">
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="
 ```
 
 assets/images/latest-events-images/worldskills-2024-p.jpg
@@ -1684,15 +1702,15 @@ alt="Event"
 />
 </picture>
 <span>
-Lyon accueille la finale mondiale des Worldskills 2024
+  Lyon accueille la finale mondiale des Worldskills 2024
 </span>
 </div>
 <!-- Event Card -->
 <div class="card">
-<picture>
-<source
-srcset="assets/images/latest-events-images/fda-p.jpg"
-media="(min-width: 760px)"
+  <picture>
+    <source
+    srcset="assets/images/latest-events-images/fda-p.jpg"
+    media="(min-width: 760px)"
 ```
 
 /&gt;
@@ -1707,10 +1725,10 @@ alt="Event"
 </div>
 <!-- Event Card -->
 <div class="card">
-<picture>
-<source
-srcset="assets/images/latest-events-images/lyon-kayak-p-0.jpg"
-media="(min-width: 760px)"
+  <picture>
+    <source
+    srcset="assets/images/latest-events-images/lyon-kayak-p-0.jpg"
+    media="(min-width: 760px)"
 ```
 
 /&gt;
@@ -1725,9 +1743,9 @@ alt="Event"
 </div>
 <!-- Event Card -->
 <div class="card">
-<picture>
-<source
-srcset="
+  <picture>
+    <source
+    srcset="
 ```
 
 assets/images/latest-events-images/semaine-bleue-2024-p.jpg
@@ -1749,9 +1767,9 @@ alt="Event"
 </div>
 <!-- Event Card -->
 <div class="card">
-<picture>
-<source
-srcset="
+  <picture>
+    <source
+    srcset="
 ```
 
 assets/images/latest-events-images/village-des-metiers-p.jpg
@@ -1773,9 +1791,9 @@ alt="Event"
 </div>
 <!-- Event Card -->
 <div class="card">
-<picture>
-<source
-srcset="
+  <picture>
+    <source
+    srcset="
 ```
 
 assets/images/latest-events-images/journees_portes_ouvertes_entreprises_2023_p.jpg "  media="(min-width: 760px)"/&gt;
@@ -1802,49 +1820,49 @@ alt="Event"
 ```css
 /* Styles for the info seciton */
 .info {
-margin: 0 auto;
-padding: 1rem;
-width: min(100%, 860px);
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 1rem;
-margin-top: 54px;
+  margin: 0 auto;
+  padding: 1rem;
+  width: min(100%, 860px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 54px;
 }
 .essential {
-display: flex;
-flex-direction: column;
-display: flex;
-flex-direction: column;
-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .info h2 {
-font-weight: bold;
-text-align: center;
-font-size: 2.5rem;
-margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 .info .read {
-width: 172px;
-height: 56px;
-border-radius: 0.5rem;
-background-color: #023399;
-color: white;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 1.05rem;
-cursor: pointer;
+  width: 172px;
+  height: 56px;
+  border-radius: 0.5rem;
+  background-color: #023399;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  cursor: pointer;
 }
 /* Events */
 .events-container {
-width: 411px;
-overflow-x: auto;
-padding: 0.75rem;
-border: 1px solid #cdcdcd;
-padding: 10px;
-display: flex;
-align-items: flex-start;
-border-radius: 0.5rem;
+  width: 411px;
+  overflow-x: auto;
+  padding: 0.75rem;
+  border: 1px solid #cdcdcd;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  border-radius: 0.5rem;
 }
 ```
 

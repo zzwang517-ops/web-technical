@@ -19,9 +19,11 @@ This case implements a responsive theme switcher component based on Vue 3's Comp
 The component should display a grid of theme cards, each containing a visual preview area and a theme name, with the currently selected theme highlighted. Background gradient effects can be switched by clicking buttons, and random theme selection is also supported.
 The overall layout uses gradient backgrounds and card-style design, with smooth transition animations to enhance the interactive experience. The code should separate theme data logic (using reactive to manage the theme array) from UI rendering, ensuring a clear structure and easy expansion for new themes.
 The effect of the case is shown in Figure 22-1.
-![Image](../../assets/images/project-22/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-22/image-001.png" alt="Image">
+</p>
 
-_Figure 22-1 Theme Switcher_
+<p align="center"><em>Figure 22-1 Theme Switcher</em></p>
 
 ### 22.1.2 Knowledge Preparation
 I. Composition API
@@ -83,17 +85,17 @@ The child component declares triggerable events using defineEmits, which support
 
 ```html
 <script setup>
-const emit = defineEmits(['update'])
+  const emit = defineEmits(['update'])
 </script>
 ② Object syntax declaration:
 <script setup>
-const emit = defineEmits({
-update: (payload) => {
-if (typeof payload === 'number') return true
-console.warn('Invalid payload type')
-return false
-}
-})
+  const emit = defineEmits({
+  update: (payload) => {
+  if (typeof payload === 'number') return true
+  console.warn('Invalid payload type')
+  return false
+  }
+  })
 </script>
 ```
 
@@ -104,7 +106,7 @@ The child component triggers events and passes data through the emit method:
 <script setup>
 const emit = defineEmits(['update'])
 const handleClick = () => {
-emit('update', { newValue: 42 })
+  emit('update', { newValue: 42 })
 }
 </script>
 <template>
@@ -123,7 +125,7 @@ The parent component can listen to child component events using @ or v-on:
 <script setup>
 import ChildComponent from './ChildComponent.vue'
 const handleUpdate = (payload) => {
-console.log('Received data from child component:', payload);
+  console.log('Received data from child component:', payload);
 }
 </script>
 ```
@@ -138,18 +140,18 @@ When developing front-end applications, it is often necessary to reuse logic for
 ```js
 import { onMounted } from 'vue'
 export function useFun() { // Define a composable function
-// Main code of the composable function
-// For example: Use lifecycle hooks
+  // Main code of the composable function
+  // For example: Use lifecycle hooks
 }
 onMounted(()=>{
-console.log(params)
-})
+    console.log(params)
+  })
 return { params }
 }
 (2)Calling Composable Functions:
 import { useFun } from './fun.js' // Import the composable function
 setup() {
-const { params } = useFun() // Use the composable function
+  const { params } = useFun() // Use the composable function
 }
 ```
 
@@ -160,8 +162,8 @@ const { params } = useFun() // Use the composable function
 ```js
 import {toValue }from 'vue'
 export function useFun(params){
-// If params is a ref or a getter.
-const arg=toValue(params)
+  // If params is a ref or a getter.
+  const arg=toValue(params)
 }
 ```
 
@@ -221,7 +223,7 @@ v-for="theme in themes"
 </button>
 </div>
 <button class="random-btn" @click="randomTheme">
-Random Theme
+  Random Theme
 </button>
 </div>
 </div>
@@ -232,87 +234,87 @@ Random Theme
 
 ```html
 <style scoped>
-.theme-switcher {
-min-height: 100vh;
-display: grid;
-place-items: center;
-transition: background-color 0.5s;
-}
-.sunset {
-background: linear-gradient(135deg, #fff1e6 0%, #ffecd2 100%);
-}
-.ocean {
-background: linear-gradient(135deg, #e0f7fa 0%, #b0e0e6 100%);
-}
-.forest {
-background: linear-gradient(135deg, #e8f5e8 0%, #d4edd9 100%);
-}
-.lavender {
-background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
-}
-.card {
-background: white;
-border-radius: 20px;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-padding: 30px;
-max-width: 500px;
-width: 90%;
-text-align: center;
-}
-.subtitle {
-color: #777;
-margin-bottom: 25px;
-}
-.theme-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 15px;
-margin: 25px 0;
-}
-.theme-grid button {
-border: none;
-border-radius: 12px;
-padding: 15px;
-cursor: pointer;
-background: #f5f5f5;
-transition: all 0.3s ease;
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-.theme-grid button:hover {
-transform: translateY(-3px);
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-.theme-preview {
-height: 60px;
-border-radius: 10px;
-transition: all 0.3s ease;
-}
-button.active .theme-preview {
-box-shadow: 0 0 0 3px white, 0 0 0 5px currentColor;
-}
-.highlight {
-padding: 2px 8px;
-border-radius: 4px;
-color: white;
-}
-.random-btn {
-background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-color: white;
-border: none;
-border-radius: 50px;
-padding: 12px 25px;
-font-size: 16px;
-cursor: pointer;
-margin-top: 20px;
-transition: all 0.3s ease;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-.random-btn:hover {
-transform: scale(1.05);
-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
+  .theme-switcher {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.5s;
+  }
+  .sunset {
+  background: linear-gradient(135deg, #fff1e6 0%, #ffecd2 100%);
+  }
+  .ocean {
+  background: linear-gradient(135deg, #e0f7fa 0%, #b0e0e6 100%);
+  }
+  .forest {
+  background: linear-gradient(135deg, #e8f5e8 0%, #d4edd9 100%);
+  }
+  .lavender {
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  }
+  .card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  }
+  .subtitle {
+  color: #777;
+  margin-bottom: 25px;
+  }
+  .theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+  }
+  .theme-grid button {
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  background: #f5f5f5;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  }
+  .theme-grid button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  .theme-preview {
+  height: 60px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  }
+  button.active .theme-preview {
+  box-shadow: 0 0 0 3px white, 0 0 0 5px currentColor;
+  }
+  .highlight {
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: white;
+  }
+  .random-btn {
+  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  .random-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
 </style>
 ```
 
@@ -320,17 +322,17 @@ box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 
 ```html
 <script setup>
-import { ref, reactive } from 'vue'
-// Composable function for theme management
-const useThemeManager = () => {
-const themes = reactive([
-{ id: 'sunset', name: 'Sunset Orange', hex: '#FF7043' },
-{ id: 'ocean', name: 'Ocean Blue', hex: '#42A5F5' },
-{ id: 'forest', name: 'Forest Green', hex: '#43A047' },
-{ id: 'lavender', name: 'Lavender', hex: '#7E57C2' },
-])
-// Generate a random theme
-}
+  import { ref, reactive } from 'vue'
+  // Composable function for theme management
+  const useThemeManager = () => {
+  const themes = reactive([
+  { id: 'sunset', name: 'Sunset Orange', hex: '#FF7043' },
+  { id: 'ocean', name: 'Ocean Blue', hex: '#42A5F5' },
+  { id: 'forest', name: 'Forest Green', hex: '#43A047' },
+  { id: 'lavender', name: 'Lavender', hex: '#7E57C2' },
+  ])
+  // Generate a random theme
+  }
 </script>
 ```
 
@@ -340,11 +342,11 @@ const themes = reactive([
 // Generate a random theme
 const currentTheme = ref('sunset')
 const switchTheme = (id) => {
-currentTheme.value = id
+  currentTheme.value = id
 }
 const randomTheme = () => {
-const randomIndex = Math.floor(Math.random() * themes.length)
-currentTheme.value = themes[randomIndex].id
+  const randomIndex = Math.floor(Math.random() * themes.length)
+  currentTheme.value = themes[randomIndex].id
 }
 return { themes, currentTheme, switchTheme, randomTheme }
 }
@@ -362,7 +364,9 @@ First, implement a combined animation for elements with both fade-in/fade-out an
 Second, design an interactive animation triggered by clicks. When users click an element, the element produces a combined dynamic effect of bouncing and rotating to enhance interactive fun.
 Third, develop a 3D rotation animation. Using CSS 3D transformation features, elements are rotated and displayed in a three-dimensional space to improve the page's three-dimensional sense and visual appeal.
 The effect of the case is shown in Figure 22-2.
-![Image](../../assets/images/project-22/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-22/image-002.png" alt="Image">
+</p>
 
 Figure 22‑2 Dancing Code, Code Rainfall
 
@@ -395,39 +399,39 @@ The following implements a fade-in and fade-out switching effect for content thr
 
 ```html
 <style scoped>
-.fade-slide-demo {
-border: 1px solid #eee;
-padding: 20px;
-border-radius: 8px;
-background: #f9f9f9;
-}
-button {
-padding: 8px 16px;
-background: #42b983;
-color: white;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-margin-bottom: 20px;
-}
-button:hover {
-background: #3aa876;
-}
-.box {
-width: 200px;
-height: 100px;
-background: linear-gradient(135deg, #6e8efb, #a777e3);
-border-radius: 4px;
-}
-.fade-slide-enter-active,
-.fade-slide-leave-active {
-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.fade-slide-enter-from,
-.fade-slide-leave-to {
-opacity: 0;
-transform: translateX(30px);
-}
+  .fade-slide-demo {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  }
+  button {
+  padding: 8px 16px;
+  background: #42b983;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  }
+  button:hover {
+  background: #3aa876;
+  }
+  .box {
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 4px;
+  }
+  .fade-slide-enter-active,
+  .fade-slide-leave-active {
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .fade-slide-enter-from,
+  .fade-slide-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+  }
 </style>
 ```
 
@@ -465,79 +469,79 @@ class="animated-ball"
 </div>
 </template>
 <script setup>
-import { ref } from 'vue';
-const isActive = ref(false);
-const startAnimation = () => {
-isActive.value = true;
-};
-const handleAnimationEnd = () => {
-// Reset the state after the animation ends to allow triggering again
-isActive.value = false;
-};
+  import { ref } from 'vue';
+  const isActive = ref(false);
+  const startAnimation = () => {
+  isActive.value = true;
+  };
+  const handleAnimationEnd = () => {
+  // Reset the state after the animation ends to allow triggering again
+  isActive.value = false;
+  };
 </script>
 <style scoped>
-.animation-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-min-height: 300px;
-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-border-radius: 16px;
-padding: 20px;
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-.trigger-btn {
-padding: 12px 24px;
-background: linear-gradient(to right, #ff7e5f, #feb47b);
-color: white;
-border: none;
-border-radius: 30px;
-font-size: 16px;
-cursor: pointer;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-transition: transform 0.2s, box-shadow 0.2s;
-margin-bottom: 40px;
-}
-.trigger-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-.animated-ball {
-width: 80px;
-height: 80px;
-border-radius: 50%;
-background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-/* Bounce + Rotate Combined Animation */
-.bounce-rotate {
-animation: bounce-rotate 1.5s ease-in-out;
-}
-@keyframes bounce-rotate {
-0% {
-transform: translateY(0) rotate(0deg);
-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-25% {
-transform: translateY(-30px) rotate(90deg);
-}
-50% {
-transform: translateY(0) rotate(180deg);
-animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-}
-75% {
-transform: translateY(-20px) rotate(270deg);
-}
-100% {
-transform: translateY(0) rotate(360deg);
-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-}
-/* Reset Animation */
-.reset {
-transition: all 0.5s;
-}
+  .animation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  .trigger-btn {
+  padding: 12px 24px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 40px;
+  }
+  .trigger-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  .animated-ball {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+  /* Bounce + Rotate Combined Animation */
+  .bounce-rotate {
+  animation: bounce-rotate 1.5s ease-in-out;
+  }
+  @keyframes bounce-rotate {
+  0% {
+  transform: translateY(0) rotate(0deg);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  25% {
+  transform: translateY(-30px) rotate(90deg);
+  }
+  50% {
+  transform: translateY(0) rotate(180deg);
+  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  }
+  75% {
+  transform: translateY(-20px) rotate(270deg);
+  }
+  100% {
+  transform: translateY(0) rotate(360deg);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  }
+  /* Reset Animation */
+  .reset {
+  transition: all 0.5s;
+  }
 </style>
 ```
 
@@ -556,23 +560,23 @@ JavaScript transitions refer to transition effects implemented using JavaScript 
 </template>
 <script>
 export default {
-data() {
-return {
-items: [
-{ id: 1, text: 'Item 1' },
-{ id: 2, text: 'Item 2' }
-]
-};
+  data() {
+    return {
+      items: [
+        { id: 1, text: 'Item 1' },
+        { id: 2, text: 'Item 2' }
+      ]
+  };
 },
 methods: {
-addItem() {
-this.items.push({
-id: Date.now(),
-text: 'New Item'
-});
+  addItem() {
+    this.items.push({
+        id: Date.now(),
+        text: 'New Item'
+      });
 },
 removeItem() {
-this.items.pop();
+  this.items.pop();
 }
 }
 };
@@ -581,12 +585,12 @@ this.items.pop();
 .list-move,
 .list-enter-active,
 .list-leave-active {
-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .list-enter-from,
 .list-leave-to {
-opacity: 0;
-transform: translateX(30px);
+  opacity: 0;
+  transform: translateX(30px);
 }
 </style>
 ```
@@ -651,34 +655,34 @@ class="cube"
 
 ```html
 <script setup>
-import { ref, computed, onUnmounted } from 'vue';
-const rotation = ref({ x: 0, y: 0 });
-const isRotating = ref(false);
-let animationFrame = null;
-const cubeStyle = computed(() => ({
-transform: `rotateX(${rotation.value.x}deg) rotateY(${rotation.value.y}deg)`
-}));
-const rotate = () => {
-if (!isRotating.value) return;
-rotation.value.y += 0.5;
-rotation.value.x += 0.2;
-animationFrame = requestAnimationFrame(rotate);
-};
-const startRotation = () => {
-if (!isRotating.value) {
-isRotating.value = true;
-rotate();
-}
-};
-const stopRotation = () => {
-isRotating.value = false;
-if (animationFrame) {
-cancelAnimationFrame(animationFrame);
-}
-};
-onUnmounted(() => {
-stopRotation();
-});
+  import { ref, computed, onUnmounted } from 'vue';
+  const rotation = ref({ x: 0, y: 0 });
+  const isRotating = ref(false);
+  let animationFrame = null;
+  const cubeStyle = computed(() => ({
+  transform: `rotateX(${rotation.value.x}deg) rotateY(${rotation.value.y}deg)`
+  }));
+  const rotate = () => {
+  if (!isRotating.value) return;
+  rotation.value.y += 0.5;
+  rotation.value.x += 0.2;
+  animationFrame = requestAnimationFrame(rotate);
+  };
+  const startRotation = () => {
+  if (!isRotating.value) {
+  isRotating.value = true;
+  rotate();
+  }
+  };
+  const stopRotation = () => {
+  isRotating.value = false;
+  if (animationFrame) {
+  cancelAnimationFrame(animationFrame);
+  }
+  };
+  onUnmounted(() => {
+  stopRotation();
+  });
 </script>
 ```
 
@@ -686,76 +690,76 @@ stopRotation();
 
 ```html
 <style scoped>
-.rotate3d-demo {
-border: 1px solid #eee;
-padding: 20px;
-border-radius: 8px;
-background: #f9f9f9;
-perspective: 1000px;
-}
-button {
-padding: 8px 16px;
-background: #5f27cd;
-color: white;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-margin-bottom: 20px;
-}
-button:hover {
-background: #4c1d9f;
-}
-.cube-container {
-width: 200px;
-height: 200px;
-margin: 0 auto;
-position: relative;
-}
-.cube {
-width: 100%;
-height: 100%;
-position: relative;
-transform-style: preserve-3d;
-transition: transform 0.1s;
-}
-.face {
-position: absolute;
-width: 200px;
-height: 200px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 20px;
-font-weight: bold;
-color: white;
-opacity: 0.9;
-border: 2px solid white;
-box-sizing: border-box;
-}
-.front  {
-background: rgba(255, 0, 0, 0.7);
-transform: rotateY(0deg) translateZ(100px);
-}
-.back   {
-background: rgba(0, 255, 0, 0.7);
-transform: rotateY(180deg) translateZ(100px);
-}
-.right  {
-background: rgba(0, 0, 255, 0.7);
-transform: rotateY(90deg) translateZ(100px);
-}
-.left   {
-background: rgba(255, 255, 0, 0.7);
-transform: rotateY(-90deg) translateZ(100px);
-}
-.top    {
-background: rgba(255, 0, 255, 0.7);
-transform: rotateX(90deg) translateZ(100px);
-}
-.bottom {
-background: rgba(0, 255, 255, 0.7);
-transform: rotateX(-90deg) translateZ(100px);
-}
+  .rotate3d-demo {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  perspective: 1000px;
+  }
+  button {
+  padding: 8px 16px;
+  background: #5f27cd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  }
+  button:hover {
+  background: #4c1d9f;
+  }
+  .cube-container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  }
+  .cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.1s;
+  }
+  .face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  opacity: 0.9;
+  border: 2px solid white;
+  box-sizing: border-box;
+  }
+  .front  {
+  background: rgba(255, 0, 0, 0.7);
+  transform: rotateY(0deg) translateZ(100px);
+  }
+  .back   {
+  background: rgba(0, 255, 0, 0.7);
+  transform: rotateY(180deg) translateZ(100px);
+  }
+  .right  {
+  background: rgba(0, 0, 255, 0.7);
+  transform: rotateY(90deg) translateZ(100px);
+  }
+  .left   {
+  background: rgba(255, 255, 0, 0.7);
+  transform: rotateY(-90deg) translateZ(100px);
+  }
+  .top    {
+  background: rgba(255, 0, 255, 0.7);
+  transform: rotateX(90deg) translateZ(100px);
+  }
+  .bottom {
+  background: rgba(0, 255, 255, 0.7);
+  transform: rotateX(-90deg) translateZ(100px);
+  }
 </style>
 ```
 
@@ -767,7 +771,9 @@ When CSS is unavailable or disabled, users can still select photo files via the 
 
 ### 22.3.2 Effect Display
 The effect display of the switching operation is shown in Figure 22-3.
-![Image](../../assets/images/project-22/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-22/image-003.png" alt="Image">
+</p>
 
 Figure 22‑3 Import Photos
 
@@ -816,11 +822,11 @@ import {ref} from "vue";
 <!--Import Photo-->
 <p class="mb-2">Import Photo</p>
 <div class="dropArea centerBox flex-grow-1" @dragstart.prevent="" @dragover.prevent="" @drop.prevent="dropFiles">
-<div class="">Photo drag and drop</div>
+  <div class="">Photo drag and drop</div>
 </div>
 <label class="mt-2 bg-light rounded p-3">
-<small>Single File</small>
-<input type="file" class="form-control" @change="changeSingleFile">
+  <small>Single File</small>
+  <input type="file" class="form-control" @change="changeSingleFile">
 </label>
 ```
 
@@ -829,8 +835,8 @@ The code is as follows:
 
 ```html
 <script setup>
-import {appImages, appMode, appTheme} from "@/store.js";
-import {convertFilename, getId} from "@/helper.js";
+  import {appImages, appMode, appTheme} from "@/store.js";
+  import {convertFilename, getId} from "@/helper.js";
 ```
 
 ...Button styles
@@ -846,9 +852,9 @@ The code is as follows:
 ```js
 /* selected btn and unselected btn class */
 function btnClass(a, b) {
-if (a === b) {
-return "btn-primary";
-}
+  if (a === b) {
+    return "btn-primary";
+  }
 return "btn-fill text-primary";
 }
 ```
@@ -859,28 +865,28 @@ The code is as follows:
 ```css
 /* upload single file by input form */
 function changeSingleFile(e) {
-const file = e.target.files[0];
-if (!file) return;
-appImages.value.push({
-id: getId(),
-image: URL.createObjectURL(file),
-caption: convertFilename(file.name)
-})
-e.target.type = "text";
-e.target.type = "file";
-alert("Import photo");
+  const file = e.target.files[0];
+  if (!file) return;
+  appImages.value.push({
+    id: getId(),
+    image: URL.createObjectURL(file),
+    caption: convertFilename(file.name)
+  })
+  e.target.type = "text";
+  e.target.type = "file";
+  alert("Import photo");
 }
 /* drag and drop many files */
 function dropFiles(e) {
-const files = e.dataTransfer.files;
-if (!files.length) return;
-[...files].forEach(file => {
-appImages.value.push({
-id: getId(),
-image: URL.createObjectURL(file),
-caption: convertFilename(file.name)
-})
-})
+  const files = e.dataTransfer.files;
+  if (!files.length) return;
+  [...files].forEach(file => {
+    appImages.value.push({
+      id: getId(),
+      image: URL.createObjectURL(file),
+      caption: convertFilename(file.name)
+    })
+  })
 }
 ```
 
@@ -892,7 +898,9 @@ When CSS is unavailable or disabled, users can still select photo files through 
 
 ### 22.4.2 Effect Display
 The effect of the switching operation is shown in Figure 22-4.
-![Image](../../assets/images/project-22/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-22/image-004.png" alt="Image">
+</p>
 
 Figure 22‑4 Order Photos
 
@@ -965,42 +973,42 @@ The code is as follows:
 
 ```html
 <style scoped>
-.item {
-position: relative;
-aspect-ratio: 16/9;
-display: flex;
-justify-content: flex-start;
-align-items: flex-end;
--webkit-user-drag: none;
-overflow: hidden;
-border-radius: .5rem;
-user-select: none;
-}
-.item div {
-background: rgba(0, 0, 0, .5);
-color: #fff;
-padding: .5rem;
-z-index: 2;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-position: absolute;
-}
-.item img {
-width: 100%;
-height: 100%;
-border-radius: .5rem;
-}
-.scrollBox {
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-overflow-x: hidden;
-overflow-y: auto;
-}
+  .item {
+  position: relative;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  -webkit-user-drag: none;
+  overflow: hidden;
+  border-radius: .5rem;
+  user-select: none;
+  }
+  .item div {
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  padding: .5rem;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  }
+  .item img {
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+  }
+  .scrollBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  }
 </style>
 ```
 
@@ -1030,11 +1038,11 @@ const targetId = ref(null);
 ```js
 /* mouse down for drag and drop */
 function grabDown(item) {
-getId.value = item.id;
-moveX.value = 0;
-moveY.value = 0;
-window.addEventListener("mousemove", grabMove);
-window.addEventListener("mouseup", grabUp);
+  getId.value = item.id;
+  moveX.value = 0;
+  moveY.value = 0;
+  window.addEventListener("mousemove", grabMove);
+  window.addEventListener("mouseup", grabUp);
 }
 /* mouse move for drag and drop */
 ```
@@ -1045,8 +1053,8 @@ The code is as follows:
 ```js
 /* mouse move for drag and drop */
 function grabMove(e) {
-moveX.value += e.movementX;
-moveY.value += e.movementY;
+  moveX.value += e.movementX;
+  moveY.value += e.movementY;
 }
 /* mouse up for drag and drop */
 ```
@@ -1057,17 +1065,17 @@ The code is as follows:
 ```js
 /* mouse up for drag and drop */
 function grabUp(e) {
-if (targetId.value) {
-const grabIndex = appImages.value.findIndex(item => item.id === getId.value);
-const targetIndex = appImages.value.findIndex(item => item.id === targetId.value);
-const tmp = {...appImages.value[targetIndex]};
-appImages.value[targetIndex] = appImages.value[grabIndex];
-appImages.value[grabIndex] = tmp;
-getId.value = null;
-targetId.value = null;
-moveX.value = 0;
-moveY.value = 0;
-}
+  if (targetId.value) {
+    const grabIndex = appImages.value.findIndex(item => item.id === getId.value);
+    const targetIndex = appImages.value.findIndex(item => item.id === targetId.value);
+    const tmp = {...appImages.value[targetIndex]};
+    appImages.value[targetIndex] = appImages.value[grabIndex];
+    appImages.value[grabIndex] = tmp;
+    getId.value = null;
+    targetId.value = null;
+    moveX.value = 0;
+    moveY.value = 0;
+  }
 window.removeEventListener("mousemove", grabMove);
 window.removeEventListener("mouseup", grabUp);
 }
@@ -1080,15 +1088,15 @@ The code is as follows:
 ```js
 /* other item mouse over for drag and drop */
 function targetOver(item) {
-targetId.value = item.id;
+  targetId.value = item.id;
 }
 /* moving item style */
 function grabStyle(item) {
-if (getId.value !== item.id) return;
-return {
-transform: `translate(${moveX.value}px, ${moveY.value}px)`,
-pointerEvents: "none",
-zIndex: 2,
-}
+  if (getId.value !== item.id) return;
+  return {
+    transform: `translate(${moveX.value}px, ${moveY.value}px)`,
+    pointerEvents: "none",
+    zIndex: 2,
+  }
 }
 ```

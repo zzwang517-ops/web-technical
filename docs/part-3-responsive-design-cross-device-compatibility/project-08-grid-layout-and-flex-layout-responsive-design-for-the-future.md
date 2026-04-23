@@ -14,9 +14,11 @@ This project focuses on the Bootstrap framework as the core learning content, co
 
 ### 8.1.1 Task Description
 Implement a frosted glass navigation bar that stays fixed at the top when scrolling. It also features a frosted glass effect and uses a responsive layout to display the navigation and logo. The navigation bar is fixed at the top, remains fixed during scrolling, and applies a frosted glass effect. The effect is shown in Figure 8-1.
-![Image](../../assets/images/project-08/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-001.png" alt="Image">
+</p>
 
-_Figure 8-1 Frosted Glass Navigation_
+<p align="center"><em>Figure 8-1 Frosted Glass Navigation</em></p>
 
 ### 8.1.2 Knowledge Preparation
 Bootstrap’s Flexbox layout is a layout model for creating flexible, responsive page layouts. It has become the default layout model in Bootstrap 4 and Bootstrap 5, making it easier and more controllable to build complex web page layouts. Its main features are summarized as follows:
@@ -35,43 +37,51 @@ Example:
 
 ```html
 <div class="d-flex p-3 bg-secondary text-white">
-<div class="p-2 bg-info">Child 1</div>
-<div class="p-2 bg-warning">Child 2</div>
-<div class="p-2 bg-danger">Child 3</div>
+  <div class="p-2 bg-info">Child 1</div>
+  <div class="p-2 bg-warning">Child 2</div>
+  <div class="p-2 bg-danger">Child 3</div>
 </div>
 ```
 
 View this HTML in Chrome; the result is shown in Figure 8-2.
-![Image](../../assets/images/project-08/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-002.png" alt="Image">
+</p>
 
-_Figure 8-2 Example of CSS Outline Property_
+<p align="center"><em>Figure 8-2 Example of CSS Outline Property</em></p>
 ② :d-inline-flex: Sets an element as an inline-level flex container (shares a line with other elements).
 Example:
 
 ```html
 <div class="d-inline-flex p-3 bg-secondary text-white">
-<div class="p-2 bg-info">Child 1</div>
-<div class="p-2 bg-warning">Child 2</div>
-<div class="p-2 bg-danger">Child 3</div>
+  <div class="p-2 bg-info">Child 1</div>
+  <div class="p-2 bg-warning">Child 2</div>
+  <div class="p-2 bg-danger">Child 3</div>
 </div>
 ```
 
 View this HTML in Chrome; the result is shown in Figure 8-3.
-![Image](../../assets/images/project-08/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-003.png" alt="Image">
+</p>
 
-_Figure 8-3 Example of CSS Outline Property_
+<p align="center"><em>Figure 8-3 Example of CSS Outline Property</em></p>
 
 ##### (2) Direction Control
 ① :flex-row (default): Main axis is horizontal, items are arranged left to right.
 ② :flex-row-reverse: Reversed main axis, items are arranged right to left, as shown in Figure 8-4.
-![Image](../../assets/images/project-08/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-004.png" alt="Image">
+</p>
 
-_Figure  8-4_
+<p align="center"><em>Figure  8-4</em></p>
 ③:flex-column: Main axis is vertical, items are arranged top to bottom.
 ④:flex-column-reverse: Reversed main axis, items are arranged bottom to top, as shown in Figure 8-5.
-![Image](../../assets/images/project-08/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-005.png" alt="Image">
+</p>
 
-_Figure  8-5_
+<p align="center"><em>Figure  8-5</em></p>
 
 #### 2.Main Axis Alignment（justify-content-*）
 Controls the distribution of child elements along the main axis:
@@ -121,12 +131,12 @@ module_f :Project root directory
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Lyon Tourist</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Lyon Tourist</title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -135,13 +145,13 @@ module_f :Project root directory
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Lyon Tourist</title>
-<link rel="stylesheet" href="./assets/css/bootstrap-5.3.3.min.css">
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Lyon Tourist</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap-5.3.3.min.css">
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -156,8 +166,8 @@ module_f :Project root directory
 
 ```html
 <header>
-<div class="container d-flex align-items-center justify-content-between">
-</div>
+  <div class="container d-flex align-items-center justify-content-between">
+  </div>
 </header>
 ```
 
@@ -165,9 +175,9 @@ module_f :Project root directory
 
 ```html
 <header>
-<div class="container d-flex align-items-center justify-content-between">
-<h1>WELCOME LYON</h1>
-</div>
+  <div class="container d-flex align-items-center justify-content-between">
+    <h1>WELCOME LYON</h1>
+  </div>
 </header>
 ```
 
@@ -175,14 +185,14 @@ module_f :Project root directory
 
 ```html
 <header>
-<div class="container d-flex align-items-center justify-content-between">
-<h1>WELCOME LYON</h1>
-<nav>
-<a href="#cta">Link</a>
-<a href="#cta">Link</a>
-<a href="#cta">Link</a>
-</nav>
-</div>
+  <div class="container d-flex align-items-center justify-content-between">
+    <h1>WELCOME LYON</h1>
+    <nav>
+      <a href="#cta">Link</a>
+      <a href="#cta">Link</a>
+      <a href="#cta">Link</a>
+    </nav>
+  </div>
 </header>
 ```
 
@@ -191,64 +201,64 @@ module_f :Project root directory
 ```css
 /* reset */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-letter-spacing: -0.025em;
-overflow-x: hidden;
+  letter-spacing: -0.025em;
+  overflow-x: hidden;
 }
 img, video {
-object-position: center;
-object-fit: cover;
+  object-position: center;
+  object-fit: cover;
 }
 /* common */
 picture > * {
-width: 100%;
+  width: 100%;
 }
 .container {
-padding: 0;
-width: 890px;
+  padding: 0;
+  width: 890px;
 }
 h2 {
-font-weight: bold;
-font-size: 60px;
-letter-spacing: -0.03em;
-text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  letter-spacing: -0.03em;
+  text-align: center;
 }
 section {
-padding-top: 45px;
-padding-bottom: 45px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 /* sections */
 /* Header */
 header {
-position: sticky;
-left: 0;
-right: 0;
-top: 0;
-padding: 1rem 0;
-backdrop-filter: blur(10px);
-background: rgba(255, 255, 255, .7);
-z-index: 999;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, .7);
+  z-index: 999;
 }
 header a {
-text-decoration: none;
-color: blue;
+  text-decoration: none;
+  color: blue;
 }
 header h1 {
-font-size: 1rem;
-margin-bottom: 0;
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 header nav {
-width: 50%;
-display: flex;
-align-items: center;
-justify-content: space-between;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 header nav a {
-padding: 0 1rem;
+  padding: 0 1rem;
 }
 ```
 
@@ -263,9 +273,11 @@ padding: 0 1rem;
 
 ### 8.2.1 Task Description
 Through this practical project, implement the production of the call-to-action section in the tour guide project. The header navigation will be fixed at the top when scrolling, and it also features a frosted glass effect. The next section is the call-to-action section, which has a large cover image as the background. In the center of this section, there is a call-to-action button. The call-to-action button has a hover effect that follows the mouse cursor, which is a shimmer effect with a border. The effect is shown in Figure 8-6.
-![Image](../../assets/images/project-08/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-006.png" alt="Image">
+</p>
 
-_Figure 8-6 Call to Action_
+<p align="center"><em>Figure 8-6 Call to Action</em></p>
 
 ### 8.2.2 Knowledge Preparation
 Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extra buttons available as well. The .btn classes are designed to be used with the &lt;button&gt; element. These classes can also be applied to &lt;a&gt; or &lt;input&gt; elements. Their main features are summarized as follows:
@@ -320,9 +332,11 @@ Example:
 ```
 
 View this HTML in the Chrome browser; the result is shown in Figure 8-7.
-![Image](../../assets/images/project-08/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-007.png" alt="Image">
+</p>
 
-_Figure 8-7 Example of CSS Outline Property_
+<p align="center"><em>Figure 8-7 Example of CSS Outline Property</em></p>
 
 #### 4.Button States
 When a button is active, it appears pressed: its background and border become darker, and an inset shadow is displayed if shadow effects are enabled. To force this effect programmatically, use the .active class (along with the aria-pressed="true" attribute).
@@ -339,9 +353,11 @@ Example:
 ```
 
 View this HTML in the Chrome browser; the result is shown in Figure 8-8.
-![Image](../../assets/images/project-08/image-008.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-008.png" alt="Image">
+</p>
 
-_Figure 8-8 Button State Example_
+<p align="center"><em>Figure 8-8 Button State Example</em></p>
 
 #### 5.Images
 Bootstrap applies the following styles to images using class names.
@@ -355,19 +371,21 @@ Example:
 
 ```html
 <div class="container-fluid">
-<img src="../img/pic01.jpg" class="img-thumbnail">
-<img src="../img/pic03.png" class="img-fluid">
-<img src="../img/pic04.png" class="rounded">
-<img src="../img/pic05.png" class="rounded-circle">
-<img src="../img/pic06.png" class="float-right">
-<img src="../img/pic02.png" class="mx-auto d-block">
+  <img src="../img/pic01.jpg" class="img-thumbnail">
+  <img src="../img/pic03.png" class="img-fluid">
+  <img src="../img/pic04.png" class="rounded">
+  <img src="../img/pic05.png" class="rounded-circle">
+  <img src="../img/pic06.png" class="float-right">
+  <img src="../img/pic02.png" class="mx-auto d-block">
 </div>
 ```
 
 View this HTML in the Chrome browser; the result is shown in Figure 8-9.
-![Image](../../assets/images/project-08/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-009.png" alt="Image">
+</p>
 
-_Figure 8-9 Example of Image Attributes_
+<p align="center"><em>Figure 8-9 Example of Image Attributes</em></p>
 
 #### 6.&lt;picture&gt;
 (1) If you use the &lt;picture&gt; element to specify multiple &lt;source&gt; elements for an &lt;img&gt;, make sure to add the .img-* classes to the &lt;img&gt; element rather than the &lt;picture&gt; element.
@@ -379,14 +397,14 @@ Example:
 
 ```html
 <picture>
-<!--When the screen width is greater than or equal to 600px, display pic01.jpg; when the screen width is less than 600px, display pic06.png-->
-<source srcset="../img/pic01.jpg" media="(min-width:600px)">
-<img src="../img/pic06.png" />
+  <!--When the screen width is greater than or equal to 600px, display pic01.jpg; when the screen width is less than 600px, display pic06.png-->
+  <source srcset="../img/pic01.jpg" media="(min-width:600px)">
+  <img src="../img/pic06.png" />
 </picture>
 <!--Image and text combination-->
 <picture>
-<img src="../img/pic06.png" class="figure-img" />
-<figcaption class="figure-caption text-center">Cute pet born</figcaption>
+  <img src="../img/pic06.png" class="figure-img" />
+  <figcaption class="figure-caption text-center">Cute pet born</figcaption>
 </picture>
 ```
 
@@ -408,8 +426,8 @@ module_f :Project root directory
 
 ```html
 <main>
-<section id="cat">
-</section>
+  <section id="cat">
+  </section>
 </main>
 ```
 
@@ -417,16 +435,16 @@ module_f :Project root directory
 
 ```html
 <main>
-<!--Call to Action Section-->
-<section id="cta">
-<picture class="bgImage">
-<source srcset="./assets/images/cover.jpg" media="(min-width: 760px)">
-<source srcset="./assets/images/cover-low-res.jpg" media="(max-width: 760px)">
-<img src="./assets/images/cover.jpg" alt="Call to action cover image">
-</picture>
-<!-- Interactive Button Design -->
-</section>
-<!-- Map Attractions -->
+  <!--Call to Action Section-->
+  <section id="cta">
+    <picture class="bgImage">
+      <source srcset="./assets/images/cover.jpg" media="(min-width: 760px)">
+      <source srcset="./assets/images/cover-low-res.jpg" media="(max-width: 760px)">
+      <img src="./assets/images/cover.jpg" alt="Call to action cover image">
+    </picture>
+    <!-- Interactive Button Design -->
+  </section>
+  <!-- Map Attractions -->
 </main>
 ```
 
@@ -435,14 +453,14 @@ module_f :Project root directory
 ```css
 /* Call to Action Section */
 #cta {
-padding: 0;
+  padding: 0;
 }
 #cta .bgImage {
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 #cta .bgImage img {
-height: 100vh;
+  height: 100vh;
 }
 ```
 
@@ -450,8 +468,8 @@ height: 100vh;
 
 ```html
 <button class="ctaBtn btn  btn-lg cta-btn">
-<span class="inner">Call to Action</span>
-<span class="light"></span>
+  <span class="inner">Call to Action</span>
+  <span class="light"></span>
 </button>
 ```
 
@@ -459,46 +477,46 @@ height: 100vh;
 
 ```css
 #cta .ctaBtn {
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-width: 280px;
-height: 110px;
-padding: 3px;
-border-radius: 10px;
-border: none;
-transition: .3s;
-display: flex;
---location-x: 0;
---location-y: 0;
-overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 110px;
+  padding: 3px;
+  border-radius: 10px;
+  border: none;
+  transition: .3s;
+  display: flex;
+  --location-x: 0;
+  --location-y: 0;
+  overflow: hidden;
 }
 #cta .ctaBtn:hover {
-transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 #cta .ctaBtn .inner {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 100%;
-border-radius: inherit;
-background: #e1e1e1;
-z-index: 2;
-position: relative;
-font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #e1e1e1;
+  z-index: 2;
+  position: relative;
+  font-weight: bold;
 }
 #cta .ctaBtn .light {
-position: absolute;
-left: var(--location-x);
-top: var(--location-y);
-width: 300px;
-aspect-ratio: 1/1;
-border-radius: 50%;
-background: #ff6200;
-filter: blur(100px);
-transform: translate(-50%, -50%);
+  position: absolute;
+  left: var(--location-x);
+  top: var(--location-y);
+  width: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: #ff6200;
+  filter: blur(100px);
+  transform: translate(-50%, -50%);
 }
 ```
 
@@ -506,22 +524,28 @@ transform: translate(-50%, -50%);
 
 ### 8.3.1 Task Description
 The map attractions section includes a static graphic on the right and three attraction cards displayed on the left. It consists of focus effects, box-shadow effects, zoom effects, offset, blur, opacity effects, focus effects, and gradient effects, as shown in Figure 8-10.
-![Image](../../assets/images/project-08/image-010.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-010.png" alt="Image">
+</p>
 
-_Figure 8-10 Map Attractions_
+<p align="center"><em>Figure 8-10 Map Attractions</em></p>
 
 ### 8.3.2 Knowledge Preparation
 Responsive layout design allows a page to automatically adjust its layout based on the size of the user's device or browser window.
 From desktop monitors to laptop screens, from tablets to mobile interfaces, screen sizes vary even among products of the same type from different manufacturers, making page design quite difficult. Responsive layout was created to solve this problem and has now become the mainstream design approach, as shown in Figure 8-11 below.
-![Image](../../assets/images/project-08/image-011.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-011.png" alt="Image">
+</p>
 
-_Figure 8-11_
+<p align="center"><em>Figure 8-11</em></p>
 
 #### 1. Grid System
 Bootstrap comes with a responsive, mobile-first fluid grid system that automatically divides into up to 12 columns as the screen or viewport size increases, as shown in Figure 8-12 below.
-![Image](../../assets/images/project-08/image-012.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-012.png" alt="Image">
+</p>
 
-_Figure 8-12_
+<p align="center"><em>Figure 8-12</em></p>
 
 #### 2.Grid System (also known as Grid Layout)
 
@@ -538,7 +562,9 @@ _Figure 8-12_
 #### 3.Grid Options
 
 **Table 8-4 Grid Options**
-![Image](../../assets/images/project-08/image-013.png)
+<p align="center">
+  <img src="../../assets/images/project-08/image-013.png" alt="Image">
+</p>
 
 #### 4.Grid System Rules
 Grid rows must be placed inside a container with the .container (fixed width) or .container-fluid (full width) class, which automatically sets some margin and padding.
@@ -551,15 +577,15 @@ Example:
 
 ```html
 <div class="row">
-<div class="col-1">1 column</div>
-<div class="col-1">1 column</div>
-<div class="col-1">1 column</div>
+  <div class="col-1">1 column</div>
+  <div class="col-1">1 column</div>
+  <div class="col-1">1 column</div>
 </div>
 <div class="row">
-<div class="col-md-3 col-sm-6">4 columns on desktop, 2 columns on tablet</div>
-<div class="col-md-3 col-sm-6">4 columns on desktop, 2 columns on tablet</div>
-<div class="col-md-3 col-sm-6">4 columns on desktop, 2 columns on tablet</div>
-<div class="col-md-3 col-sm-6">4 columns on desktop, 2 columns on tablet</div>
+  <div class="col-md-3 col-sm-6">4 columns on desktop, 2 columns on tablet</div>
+  <div class="col-md-3 col-sm-6">4 columns on desktop, 2 columns on tablet</div>
+  <div class="col-md-3 col-sm-6">4 columns on desktop, 2 columns on tablet</div>
+  <div class="col-md-3 col-sm-6">4 columns on desktop, 2 columns on tablet</div>
 </div>
 ```
 
@@ -590,7 +616,7 @@ module_f :Project root directory
 ```html
 <!-- Map Attractions -->
 <section id="map" class="container">
-<h2>Map Attractions</h2>
+  <h2>Map Attractions</h2>
 </section>
 ```
 
@@ -599,14 +625,14 @@ module_f :Project root directory
 ```html
 <!-- Map Attractions -->
 <section id="map" class="container">
-<h2>Map Attractions</h2>
-<div class="mapContainer">
-<picture class="w-100">
-<source srcset="./assets/images/lyon-map.jpg" media="(min-width: 760px)">
-<source srcset="./assets/images/lyon-map-low-res.jpg" media="(max-width: 760px)">
-<img src="./assets/images/lyon-map.jpg" alt="Lyon map image">
-</picture>
-</div>
+  <h2>Map Attractions</h2>
+  <div class="mapContainer">
+    <picture class="w-100">
+      <source srcset="./assets/images/lyon-map.jpg" media="(min-width: 760px)">
+      <source srcset="./assets/images/lyon-map-low-res.jpg" media="(max-width: 760px)">
+      <img src="./assets/images/lyon-map.jpg" alt="Lyon map image">
+    </picture>
+  </div>
 </section>
 ```
 
@@ -615,26 +641,26 @@ module_f :Project root directory
 ```css
 /* Map Attractions Section */
 #map {
-padding: 0;
+  padding: 0;
 }
 #map h2 {
-margin: 90px 0;
-font-size: 80px;
+  margin: 90px 0;
+  font-size: 80px;
 }
 #map .mapContainer {
-position: relative;
+  position: relative;
 }
 #map .mapContainer > picture {
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
 #map .mapContainer > picture img {
-height: 100%;
-object-position: left bottom;
+  height: 100%;
+  object-position: left bottom;
 }
 ```
 
@@ -643,36 +669,36 @@ object-position: left bottom;
 ```html
 <!-- Map Attractions -->
 <section id="map" class="container">
-<h2>Map Attractions</h2>
-<div class="mapContainer">
-<picture class="w-100">
-<source srcset="./assets/images/lyon-map.jpg" media="(min-width: 760px)">
-<source srcset="./assets/images/lyon-map-low-res.jpg" media="(max-width: 760px)">
-<img src="./assets/images/lyon-map.jpg" alt="Lyon map image">
-</picture>
-<div class="row">
-<div class="col-6">
-<div class="cardContainer">
-<!-- card list -->
-<div class="row">
-<div class="col-6">
-<article class="photoCard">
-<div class="photoBox">
-<picture>
-<source srcset="./assets/images/attraction-a.jpg" media="(min-width: 760px)">
-<source srcset="./assets/images/attraction-a-low-res.jpg" media="(max-width: 760px)">
-<img src="./assets/images/attraction-a.jpg" alt="Attraction A">
-</picture>
-</div>
-<h3 class="title"><a href="">Parc de la Tete d'Or</a></h3>
-</article>
-</div>
-<!-- The structure is the same as other cards -->
-</div>
-</div>
-</div>
-</div>
-</div>
+  <h2>Map Attractions</h2>
+  <div class="mapContainer">
+    <picture class="w-100">
+      <source srcset="./assets/images/lyon-map.jpg" media="(min-width: 760px)">
+      <source srcset="./assets/images/lyon-map-low-res.jpg" media="(max-width: 760px)">
+      <img src="./assets/images/lyon-map.jpg" alt="Lyon map image">
+    </picture>
+    <div class="row">
+      <div class="col-6">
+        <div class="cardContainer">
+          <!-- card list -->
+          <div class="row">
+            <div class="col-6">
+              <article class="photoCard">
+                <div class="photoBox">
+                  <picture>
+                    <source srcset="./assets/images/attraction-a.jpg" media="(min-width: 760px)">
+                    <source srcset="./assets/images/attraction-a-low-res.jpg" media="(max-width: 760px)">
+                    <img src="./assets/images/attraction-a.jpg" alt="Attraction A">
+                  </picture>
+                </div>
+                <h3 class="title"><a href="">Parc de la Tete d'Or</a></h3>
+              </article>
+            </div>
+            <!-- The structure is the same as other cards -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 ```
 
@@ -680,11 +706,11 @@ object-position: left bottom;
 
 ```css
 #map .cardContainer > .row {
---bs-gutter-x: 2rem;
---bs-gutter-y: 2rem;
+  --bs-gutter-x: 2rem;
+  --bs-gutter-y: 2rem;
 }
 #map .cardContainer {
-padding: 2rem;
+  padding: 2rem;
 }
 ```
 
@@ -693,41 +719,41 @@ padding: 2rem;
 ```html
 <!-- Map Attractions -->
 <section id="map" class="container">
-<h2>Map Attractions</h2>
-<div class="mapContainer">
-<picture class="w-100">
-<source srcset="./assets/images/lyon-map.jpg" media="(min-width: 760px)">
-<source srcset="./assets/images/lyon-map-low-res.jpg" media="(max-width: 760px)">
-<img src="./assets/images/lyon-map.jpg" alt="Lyon map image">
-</picture>
-<div class="row">
-<div class="col-6">
-<div class="cardContainer">
-<!-- card list -->
-<div class="row">
-<div class="col-6">
-<article class="photoCard">
-<div class="photoBox">
-<picture>
-<source srcset="./assets/images/attraction-a.jpg" media="(min-width: 760px)">
-<source srcset="./assets/images/attraction-a-low-res.jpg" media="(max-width: 760px)">
-<img src="./assets/images/attraction-a.jpg" alt="Attraction A">
-</picture>
-</div>
-<h3 class="title"><a href="">Parc de la Tete d'Or</a></h3>
-</article>
-</div>
-<!-- The structure is the same as other cards -->
-</div>
-</div>
-</div>
-<div class="col-6 position-relative">
-<div class="spot spot-a"></div>
-<div class="spot spot-b"></div>
-<div class="spot spot-c"></div>
-</div>
-</div>
-</div>
+  <h2>Map Attractions</h2>
+  <div class="mapContainer">
+    <picture class="w-100">
+      <source srcset="./assets/images/lyon-map.jpg" media="(min-width: 760px)">
+      <source srcset="./assets/images/lyon-map-low-res.jpg" media="(max-width: 760px)">
+      <img src="./assets/images/lyon-map.jpg" alt="Lyon map image">
+    </picture>
+    <div class="row">
+      <div class="col-6">
+        <div class="cardContainer">
+          <!-- card list -->
+          <div class="row">
+            <div class="col-6">
+              <article class="photoCard">
+                <div class="photoBox">
+                  <picture>
+                    <source srcset="./assets/images/attraction-a.jpg" media="(min-width: 760px)">
+                    <source srcset="./assets/images/attraction-a-low-res.jpg" media="(max-width: 760px)">
+                    <img src="./assets/images/attraction-a.jpg" alt="Attraction A">
+                  </picture>
+                </div>
+                <h3 class="title"><a href="">Parc de la Tete d'Or</a></h3>
+              </article>
+            </div>
+            <!-- The structure is the same as other cards -->
+          </div>
+        </div>
+      </div>
+      <div class="col-6 position-relative">
+        <div class="spot spot-a"></div>
+        <div class="spot spot-b"></div>
+        <div class="spot spot-c"></div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- video -->
 ```
@@ -736,68 +762,68 @@ padding: 2rem;
 
 ```css
 #map .spot {
-position: absolute;
-width: 30px;
-height: 37px;
+  position: absolute;
+  width: 30px;
+  height: 37px;
 }
 #map .spot-a {
-background: url("../images/a.png") center/cover;
-left: 80%;
-top: 7%;
+  background: url("../images/a.png") center/cover;
+  left: 80%;
+  top: 7%;
 }
 #map .spot-b {
-background: url("../images/b.png") center/cover;
-top: 40%;
-left: 50%;
+  background: url("../images/b.png") center/cover;
+  top: 40%;
+  left: 50%;
 }
 #map .spot-c {
-background: url("../images/c.png") center/cover;
-top: 3%;
-left: 24%;
+  background: url("../images/c.png") center/cover;
+  top: 3%;
+  left: 24%;
 }
 #map .photoCard {
-height: 180px;
+  height: 180px;
 }
 /* Common card design */
 .photoCard {
-border-radius: 3px;
-padding: 5px;
-background: #ffffff;
-transition: .3s;
+  border-radius: 3px;
+  padding: 5px;
+  background: #ffffff;
+  transition: .3s;
 }
 .photoCard:hover {
-transform: scale(1.05);
-box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+  transform: scale(1.05);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
 }
 .photoCard picture {
-aspect-ratio: 4/3;
+  aspect-ratio: 4/3;
 }
 .photoCard .title {
-font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 .photoCard .title a {
-color: inherit;
-text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 .photoCard .photoBox {
-position: relative;
-overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 .photoCard .photoBox::after {
-content: "";
-width: 3rem;
-height: 150%;
-position: absolute;
-transform-origin: top;
-transform: rotate(15deg) translate(-100%, -20px);
-left: 0;
-top: 0;
-background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .2));
-transition: .4s;
+  content: "";
+  width: 3rem;
+  height: 150%;
+  position: absolute;
+  transform-origin: top;
+  transform: rotate(15deg) translate(-100%, -20px);
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .2));
+  transition: .4s;
 }
 .photoCard:hover .photoBox::after {
-left: 100%;
-transform: rotate(15deg) translate(100%, -20px);
+  left: 100%;
+  transform: rotate(15deg) translate(100%, -20px);
 }
 ```
 
@@ -806,9 +832,9 @@ transform: rotate(15deg) translate(100%, -20px);
 ```html
 <!-- video -->
 <section class="video">
-<video autoplay muted>
-<source src="./assets/video/lyon.mp4" />
-</video>
+  <video autoplay muted>
+    <source src="./assets/video/lyon.mp4" />
+  </video>
 </section>
 <!-- Essential Information | Latest Events -->
 ```

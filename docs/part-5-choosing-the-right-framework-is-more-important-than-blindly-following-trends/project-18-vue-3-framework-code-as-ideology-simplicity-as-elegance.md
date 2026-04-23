@@ -36,10 +36,12 @@ Pinia is the officially recommended state management library for Vue 3 (replacin
 Vue 3’s virtual DOM has been reconstructed with more efficient techniques including static hoisting and tree flattening, reducing unnecessary rendering overhead. The compiler precomputes static nodes, skips diffing during updates and reuses them directly.
 
 ### 18.1.3 Composition API
-![Image](../../assets/images/project-18/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-18/image-001.png" alt="Image">
+</p>
 
 Both the Composition API and the Options API in Vue 3 are programming models of Vue.js used for organizing code and logic. However, there are some differences between them in terms of usage, applicable scenarios, and functionality, as shown in Figure 18-1 below.
-_Figure 18-1 Composition API_
+<p align="center"><em>Figure 18-1 Composition API</em></p>
 Vue 3 supports both the Composition API and the Options API. Developers can flexibly choose and use these two APIs according to actual development requirements and scenarios.
 The Composition API is a collection of a series of APIs, and the entry point for using the Composition API is the setup() hook function.
 
@@ -62,7 +64,7 @@ import { ref } from 'vue';
 const count = ref(0);
 // Method to modify data
 function increment() {
-count.value++; // Must modify via .value
+  count.value++; // Must modify via .value
 }
 </script>
 ```

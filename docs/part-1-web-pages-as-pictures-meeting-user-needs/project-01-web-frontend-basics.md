@@ -29,9 +29,11 @@ JavaScript, commonly referred to as JS, is a scripting language embedded into HT
 ### 1.1.2  WorldSkills Web Technologies·Web Frontend Learning Path
 Web frontend developers need to master a variety of Web frontend development technologies, including HTML5, CSS3, JavaScript, jQuery, Ajax, Vue.js, React.js, Angular.js, WeChat Mini Programs, Node.js, and so on.
 According to the technical requirements of WorldSkills Web Technologies · Web Frontend Development, the WorldSkills Web Technologies · Web Frontend learning path shown in Figure 1-1 is specially formulated.
-![Image](../../assets/images/project-01/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-001.png" alt="Image">
+</p>
 
-_Figure 1-1 WorldSkills Web Technologies · Web Frontend Learning Path Map_
+<p align="center"><em>Figure 1-1 WorldSkills Web Technologies · Web Frontend Learning Path Map</em></p>
 
 ## Task 1.2 Development Preparation
 
@@ -54,15 +56,23 @@ Microsoft Edge is a new-generation free cross-platform web browser released by M
 #### 4.Safari Browser
 Safari is a fast, secure, and highly privacy-focused web browser developed by Apple. With deep integration into the Apple ecosystem, it provides users with a smooth cross-device browsing experience. It also offers efficient and user-friendly features such as a clean and intuitive interface, reading mode, and tab groups. As a result, it has become the preferred browser for Apple device users who value privacy, security, and seamless ecosystem collaboration.
 The Safari icon is shown in Figure 1-2.
-![Image](../../assets/images/project-01/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-002.png" alt="Image">
+</p>
 
-![Image](../../assets/images/project-01/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-003.png" alt="Image">
+</p>
 
-![Image](../../assets/images/project-01/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-004.png" alt="Image">
+</p>
 
-![Image](../../assets/images/project-01/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-005.png" alt="Image">
+</p>
 
-_Figure 1-2 Icons of Google Chrome, Firefox, Edge and Safari browsers_
+<p align="center"><em>Figure 1-2 Icons of Google Chrome, Firefox, Edge and Safari browsers</em></p>
 
 ### 1.2.2 Development Tools
 There are various development tools available for Web front-end development. Different developers can select appropriate tools according to their characteristics and personal habits. The mainly used development tools include Visual Studio Code, HBuilder X, WebStorm, Sublime Text, etc. This book mainly introduces the installation and usage of two development tools: Visual Studio Code and HBuilder X.
@@ -70,32 +80,48 @@ There are various development tools available for Web front-end development. Dif
 #### 1.Visual Studio Code
 Visual Studio Code is a cross-platform source code editor provided by Microsoft for developers, which can run on Windows, Mac OS X and Linux systems. This editor is characterized by being free, open-source, with a huge number of extensions, lightweight (without consuming too much memory and CPU), and powerful. The installation process of Visual Studio Code is described in detail below.
 (1) Open the official VS Code website, go to the download page, and download the corresponding version according to your computer system, as shown in Figure 1-3.
-![Image](../../assets/images/project-01/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-006.png" alt="Image">
+</p>
 
-_Figure 1-3 Download_
+<p align="center"><em>Figure 1-3 Download</em></p>
 After the installer is downloaded, right-click to run it, as shown in Figure 1-4.
-![Image](../../assets/images/project-01/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-007.png" alt="Image">
+</p>
 
-_Figure 1-4 Run_
+<p align="center"><em>Figure 1-4 Run</em></p>
 
 ##### (3) Check "I accept the agreement" and click "Next", as shown in Figure 1-5.
 (4) Select "Browse" to change the installation directory. It is recommended to install it on a drive other than the C drive. Then click "Next", as shown in Figure 1-6.
-![Image](../../assets/images/project-01/image-008.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-008.png" alt="Image">
+</p>
 
-![Image](../../assets/images/project-01/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-009.png" alt="Image">
+</p>
 
-_Figure 1-5 Check "I accept the agreement"  Figure 1-6 Change the software installation directory_
+<p align="center"><em>Figure 1-5 Check "I accept the agreement"  Figure 1-6 Change the software installation directory</em></p>
 (5) Users can select additional tasks according to their personal development environment needs and check the corresponding options. It is recommended to check "Create Desktop Icon (D)" and "Add to PATH (requires restart)", then click "Next", as shown in Figure 1-7.
 (6) Confirm the installation location and additional tasks. If you need to correct the path or change the selected options, click "Back" to return to the previous steps. If everything is correct, click "Install" directly, as shown in Figure 1-8.
-![Image](../../assets/images/project-01/image-010.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-010.png" alt="Image">
+</p>
 
-![Image](../../assets/images/project-01/image-011.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-011.png" alt="Image">
+</p>
 
-_Figure 1-7 Select Additional Tasks                 Figure 1-8 Install_
+<p align="center"><em>Figure 1-7 Select Additional Tasks                 Figure 1-8 Install</em></p>
 
 ##### (7) Click "Finish" to complete the installation, as shown in Figure 1-9.
 
 ##### (8) The software running interface is shown in Figure 1-10.
-![Image](../../assets/images/project-01/image-012.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-012.png" alt="Image">
+</p>
 
-![Image](../../assets/images/project-01/image-013.png)
+<p align="center">
+  <img src="../../assets/images/project-01/image-013.png" alt="Image">
+</p>

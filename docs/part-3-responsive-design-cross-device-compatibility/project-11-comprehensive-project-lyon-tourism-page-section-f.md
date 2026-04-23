@@ -25,9 +25,11 @@ The Lyon tourism page includes text, images, hyperlinks, lists, forms, navigatio
 #### 11.3 Requirement Analysis
 The Lyon tourism page is divided into nine major modules, including the website header, call-to-action section, map attractions, video playback, basic information, latest events, information tabs, contact form, and footer. The functional description of each module is as follows.
 The project function structure diagram is shown in Figure 7-1.
-![Image](../../assets/images/project-11/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-001.png" alt="Image">
+</p>
 
-_Figure 6-1 Function Structure Diagram_
+<p align="center"><em>Figure 6-1 Function Structure Diagram</em></p>
 
 #### 1. Lyon Tourism Page
 The Lyon tourism page includes common effects such as images, text, layout, and hyperlinks, as well as elements like video playback and font effects. It is the page with the most complete effects and functions in the comprehensive project.
@@ -71,49 +73,65 @@ The project is named “module_f”, and its resource folders are shown in Table
 ##### (1) Navigation and Footer
 The navigation and footer sections are consistent across all pages and can be designed and produced separately.
 ①Navigation is implemented using sequential layout and hyperlinks, as shown in Figure 7-2.
-![Image](../../assets/images/project-11/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-002.png" alt="Image">
+</p>
 
-_Figure 6-2 Website Navigation_
+<p align="center"><em>Figure 6-2 Website Navigation</em></p>
 ②Footer information is displayed in a centered layout, as shown in Figure 6-3.
-![Image](../../assets/images/project-11/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-003.png" alt="Image">
+</p>
 
-_Figure 6-3 Footer Display_
+<p align="center"><em>Figure 6-3 Footer Display</em></p>
 
 ##### (2) Call-to-Action Section
 The call-to-action section consists of a header, navigation with frosted glass effect, cover image, call-to-action button, and button hover effect, as shown in Figure 6-4.
-![Image](../../assets/images/project-11/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-004.png" alt="Image">
+</p>
 
-_Figure 6-4 Call-to-Action_
+<p align="center"><em>Figure 6-4 Call-to-Action</em></p>
 
 ##### (3) Map Attractions Section
 The map attractions section includes a static graphic on the right and three attraction cards on the left. It features focus effects, box-shadow effects, zoom effects, offset, blur, opacity effects, focus effects, and gradient effects, as shown in Figure 6-5.
-![Image](../../assets/images/project-11/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-005.png" alt="Image">
+</p>
 
-_Figure 6-5 Map Attractions_
+<p align="center"><em>Figure 6-5 Map Attractions</em></p>
 
 ##### (4) Video Playback Section
 The video playback section includes video loading, auto-play when in view, auto-pause when out of view, auto-play when 50% visible, pause when the page is inactive, and resume playback when the page becomes visible again, as shown in Figure 6-6.
-![Image](../../assets/images/project-11/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-006.png" alt="Image">
+</p>
 
-_Figure 6-6 Video Playback_
+<p align="center"><em>Figure 6-6 Video Playback</em></p>
 
 ##### (5) Basic Information and Latest Events Section
 The basic information and latest events module includes layout design, focus effects, box-shadow effects, zoom effects, offset, blur, opacity effects, focus effects, and gradient effects, as shown in Figure 6-7.
-![Image](../../assets/images/project-11/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-007.png" alt="Image">
+</p>
 
-_Figure 6-7 Service Brief_
+<p align="center"><em>Figure 6-7 Service Brief</em></p>
 
 ##### (6) Information Tabs
 The information tabs module uses custom elements to implement tabs that switch on mouse click, using aria-selected, aria-hidden, and aria-labelledby to display corresponding tab titles and content, as shown in Figure 6-8.
-![Image](../../assets/images/project-11/image-008.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-008.png" alt="Image">
+</p>
 
-_Figure 6-8 Information Tabs_
+<p align="center"><em>Figure 6-8 Information Tabs</em></p>
 
 ##### (7) Contact Form
 The contact form module includes the provided fields: first name, last name, contact email address, and contact phone number, as shown in Figure 6-9.
-![Image](../../assets/images/project-11/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-009.png" alt="Image">
+</p>
 
-_Figure 6-9 Contact Form_
+<p align="center"><em>Figure 6-9 Contact Form</em></p>
 
 #### 11.5 Project Implementation
 Task 1 Frosted Glass Navigation
@@ -134,15 +152,15 @@ module_f: Project Root Directory
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-</head>
-<body>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -159,35 +177,35 @@ module_f: Project Root Directory
 ```css
 /* reset */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-letter-spacing: -0.025em;
-overflow-x: hidden;
+  letter-spacing: -0.025em;
+  overflow-x: hidden;
 }
 img, video {
-object-position: center;
-object-fit: cover;
+  object-position: center;
+  object-fit: cover;
 }
 /* common */
 picture > * {
-width: 100%;
+  width: 100%;
 }
 .container {
-padding: 0;
-width: 890px;
+  padding: 0;
+  width: 890px;
 }
 h2 {
-font-weight: bold;
-font-size: 60px;
-letter-spacing: -0.03em;
-text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  letter-spacing: -0.03em;
+  text-align: center;
 }
 section {
-padding-top: 45px;
-padding-bottom: 45px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 ```
 
@@ -196,14 +214,14 @@ padding-bottom: 45px;
 ```html
 <!-- header -->
 <header>
-<div class="container d-flex align-items-center justify-content-between">
-<h1>WELCOME LYON</h1>
-<nav>
-<a href="#cta">Link</a>
-<a href="#cta">Link</a>
-<a href="#cta">Link</a>
-</nav>
-</div>
+  <div class="container d-flex align-items-center justify-content-between">
+    <h1>WELCOME LYON</h1>
+    <nav>
+      <a href="#cta">Link</a>
+      <a href="#cta">Link</a>
+      <a href="#cta">Link</a>
+    </nav>
+  </div>
 </header>
 ```
 
@@ -213,36 +231,38 @@ padding-bottom: 45px;
 /* sections */
 /* Header */
 header {
-position: sticky;
-left: 0;
-right: 0;
-top: 0;
-padding: 1rem 0;
-backdrop-filter: blur(10px);
-background: rgba(255, 255, 255, .7);
-z-index: 999;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, .7);
+  z-index: 999;
 }
 header a {
-text-decoration: none;
-color: blue;
+  text-decoration: none;
+  color: blue;
 }
 header h1 {
-font-size: 1rem;
-margin-bottom: 0;
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 header nav {
-width: 50%;
-display: flex;
-align-items: center;
-justify-content: space-between;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 header nav a {
-padding: 0 1rem;
+  padding: 0 1rem;
 }
 ```
 
 #### Step 7: Run the index.html file to check the effect.
-![Image](../../assets/images/project-11/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-002.png" alt="Image">
+</p>
 
 Task 2 Call to Action
 
@@ -251,30 +271,30 @@ Task 2 Call to Action
 ```html
 <!-- main -->
 <main>
-<!-- Call to Action -->
-<section id="cta">
-...
-</section>
-<!-- Map Attractions -->
-<section id="map" class="container">
-...
-</section>
-<!-- video -->
-<section class="video">
-...
-</section>
-<!-- Essential Information | Latest Events -->
-<div class="container">
-...
-</div>
-<!-- Other Information -->
-<section id="other" class="container">
-...
-</section>
-<!-- Contact Us -->
-<section id="contact" class="container">
-...
-</section>
+  <!-- Call to Action -->
+  <section id="cta">
+    ...
+  </section>
+  <!-- Map Attractions -->
+  <section id="map" class="container">
+    ...
+  </section>
+  <!-- video -->
+  <section class="video">
+    ...
+  </section>
+  <!-- Essential Information | Latest Events -->
+  <div class="container">
+    ...
+  </div>
+  <!-- Other Information -->
+  <section id="other" class="container">
+    ...
+  </section>
+  <!-- Contact Us -->
+  <section id="contact" class="container">
+    ...
+  </section>
 </main>
 ```
 
@@ -283,15 +303,15 @@ Task 2 Call to Action
 ```html
 <!-- Call to Action -->
 <section id="cta">
-<picture class="bgImage">
-<source srcset="./assets/images/cover.jpg" media="(min-width: 760px)">
-<source srcset="./assets/images/cover-low-res.jpg" media="(max-width: 760px)">
-<img src="./assets/images/cover.jpg" alt="Call to action cover image">
-</picture>
-<button class="ctaBtn btn  btn-lg cta-btn">
-<span class="inner">Call to Action</span>
-<span class="light"></span>
-</button>
+  <picture class="bgImage">
+    <source srcset="./assets/images/cover.jpg" media="(min-width: 760px)">
+    <source srcset="./assets/images/cover-low-res.jpg" media="(max-width: 760px)">
+    <img src="./assets/images/cover.jpg" alt="Call to action cover image">
+  </picture>
+  <button class="ctaBtn btn  btn-lg cta-btn">
+    <span class="inner">Call to Action</span>
+    <span class="light"></span>
+  </button>
 </section>
 ```
 
@@ -300,61 +320,63 @@ Task 2 Call to Action
 ```css
 /* Call to Action Section */
 #cta {
-padding: 0;
+  padding: 0;
 }
 #cta .bgImage {
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 #cta .bgImage img {
-height: 100vh;
+  height: 100vh;
 }
 #cta .ctaBtn {
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-width: 280px;
-height: 110px;
-padding: 3px;
-border-radius: 10px;
-border: none;
-transition: .3s;
-display: flex;
---location-x: 0;
---location-y: 0;
-overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 110px;
+  padding: 3px;
+  border-radius: 10px;
+  border: none;
+  transition: .3s;
+  display: flex;
+  --location-x: 0;
+  --location-y: 0;
+  overflow: hidden;
 }
 #cta .ctaBtn:hover {
-transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 #cta .ctaBtn .inner {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 100%;
-border-radius: inherit;
-background: #e1e1e1;
-z-index: 2;
-position: relative;
-font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #e1e1e1;
+  z-index: 2;
+  position: relative;
+  font-weight: bold;
 }
 #cta .ctaBtn .light {
-position: absolute;
-left: var(--location-x);
-top: var(--location-y);
-width: 300px;
-aspect-ratio: 1/1;
-border-radius: 50%;
-background: #ff6200;
-filter: blur(100px);
-transform: translate(-50%, -50%);
+  position: absolute;
+  left: var(--location-x);
+  top: var(--location-y);
+  width: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: #ff6200;
+  filter: blur(100px);
+  transform: translate(-50%, -50%);
 }
 ```
 
 #### Step 4: Run the index.html file to preview the effect.
-![Image](../../assets/images/project-11/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-004.png" alt="Image">
+</p>
 
 Task 3 Map Attractions
 
@@ -363,43 +385,43 @@ Task 3 Map Attractions
 ```html
 <!-- Map Attractions -->
 <section id="map" class="container">
-<h2>Map Attractions</h2>
-<div class="mapContainer">
-<picture class="w-100">
-<source srcset="./assets/images/lyon-map.jpg" media="(min-width: 760px)">
-<source srcset="./assets/images/lyon-map-low-res.jpg" media="(max-width: 760px)">
-<img src="./assets/images/lyon-map.jpg" alt="Lyon map image">
-</picture>
-<div class="row">
-<div class="col-6">
-<div class="cardContainer" >
-<!-- card list -->
-<div class="row">
-<div class="col-6">
-<article class="photoCard">
-<div class="card photoBox">
-<picture>
-<source srcset="./assets/images/attraction-a.jpg"
-media="(min-width: 760px)">
-<source srcset="./assets/images/attraction-a-low-res.jpg"
-media="(max-width: 760px)">
-<img src="./assets/images/attraction-a.jpg" alt="Attraction A">
-</picture>
-</div>
-<h3 class="title"><a href="">Parc de la Tete d'Or</a></h3>
-</article>
-</div>
-<!-- The structure is the same as other cards -->
-</div>
-</div>
-</div>
-<div class="col-6 position-relative">
-<div class="spot spot-a"></div>
-<div class="spot spot-b"></div>
-<div class="spot spot-c"></div>
-</div>
-</div>
-</div>
+  <h2>Map Attractions</h2>
+  <div class="mapContainer">
+    <picture class="w-100">
+      <source srcset="./assets/images/lyon-map.jpg" media="(min-width: 760px)">
+      <source srcset="./assets/images/lyon-map-low-res.jpg" media="(max-width: 760px)">
+      <img src="./assets/images/lyon-map.jpg" alt="Lyon map image">
+    </picture>
+    <div class="row">
+      <div class="col-6">
+        <div class="cardContainer" >
+          <!-- card list -->
+          <div class="row">
+            <div class="col-6">
+              <article class="photoCard">
+                <div class="card photoBox">
+                  <picture>
+                    <source srcset="./assets/images/attraction-a.jpg"
+                    media="(min-width: 760px)">
+                    <source srcset="./assets/images/attraction-a-low-res.jpg"
+                    media="(max-width: 760px)">
+                    <img src="./assets/images/attraction-a.jpg" alt="Attraction A">
+                  </picture>
+                </div>
+                <h3 class="title"><a href="">Parc de la Tete d'Or</a></h3>
+              </article>
+            </div>
+            <!-- The structure is the same as other cards -->
+          </div>
+        </div>
+      </div>
+      <div class="col-6 position-relative">
+        <div class="spot spot-a"></div>
+        <div class="spot spot-b"></div>
+        <div class="spot spot-c"></div>
+      </div>
+    </div>
+  </div>
 </section>
 ```
 
@@ -408,102 +430,104 @@ media="(max-width: 760px)">
 ```css
 /* Map Attractions Section */
 #map {
-padding: 0;
+  padding: 0;
 }
 #map h2 {
-margin: 90px 0;
-font-size: 80px;
+  margin: 90px 0;
+  font-size: 80px;
 }
 #map .mapContainer {
-position: relative;
+  position: relative;
 }
 #map .mapContainer > picture {
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
 }
 #map .mapContainer > picture img {
-height: 100%;
-object-position: left bottom;
+  height: 100%;
+  object-position: left bottom;
 }
 #map .cardContainer > .row {
---bs-gutter-x: 2rem;
---bs-gutter-y: 2rem;
+  --bs-gutter-x: 2rem;
+  --bs-gutter-y: 2rem;
 }
 #map .cardContainer {
-padding: 2rem;
+  padding: 2rem;
 }
 #map .spot {
-position: absolute;
-width: 30px;
-height: 37px;
+  position: absolute;
+  width: 30px;
+  height: 37px;
 }
 #map .spot-a {
-background: url("../images/a.png") center/cover;
-left: 80%;
-top: 7%;
+  background: url("../images/a.png") center/cover;
+  left: 80%;
+  top: 7%;
 }
 #map .spot-b {
-background: url("../images/b.png") center/cover;
-top: 40%;
-left: 50%;
+  background: url("../images/b.png") center/cover;
+  top: 40%;
+  left: 50%;
 }
 #map .spot-c {
-background: url("../images/c.png") center/cover;
-top: 3%;
-left: 24%;
+  background: url("../images/c.png") center/cover;
+  top: 3%;
+  left: 24%;
 }
 #map .photoCard {
-height: 180px;
+  height: 180px;
 }
 /* Common card design */
 .photoCard {
-border-radius: 3px;
-padding: 5px;
-background: #ffffff;
-transition: .3s;
+  border-radius: 3px;
+  padding: 5px;
+  background: #ffffff;
+  transition: .3s;
 }
 .photoCard:hover {
-transform: scale(1.05);
-box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+  transform: scale(1.05);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
 }
 .photoCard picture {
-aspect-ratio: 4/3;
+  aspect-ratio: 4/3;
 }
 .photoCard .title {
-font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 .photoCard .title a {
-color: inherit;
-text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 .photoCard .photoBox {
-position: relative;
-overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 .photoCard .photoBox::after {
-content: "";
-width: 3rem;
-height: 150%;
-position: absolute;
-transform-origin: top;
-transform: rotate(15deg) translate(-100%, -20px);
-left: 0;
-top: 0;
-background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .2));
-transition: .4s;
+  content: "";
+  width: 3rem;
+  height: 150%;
+  position: absolute;
+  transform-origin: top;
+  transform: rotate(15deg) translate(-100%, -20px);
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .2));
+  transition: .4s;
 }
 .photoCard:hover .photoBox::after {
-left: 100%;
-transform: rotate(15deg) translate(100%, -20px);
+  left: 100%;
+  transform: rotate(15deg) translate(100%, -20px);
 }
 ```
 
 #### Step 3: Run the index.html file to check the effect.
-![Image](../../assets/images/project-11/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-005.png" alt="Image">
+</p>
 
 Task 4 Video Playback
 
@@ -512,9 +536,9 @@ Task 4 Video Playback
 ```html
 <!-- video -->
 <section class="video">
-<video autoplay muted>
-<source src="./assets/video/lyon.mp4" />
-</video>
+  <video autoplay muted>
+    <source src="./assets/video/lyon.mp4" />
+  </video>
 </section>
 ```
 
@@ -523,15 +547,17 @@ Task 4 Video Playback
 ```css
 /* video */
 #video {
-padding-bottom: 0;
+  padding-bottom: 0;
 }
 #video video {
-width: 100%;
+  width: 100%;
 }
 ```
 
 #### Step 3: Run the index.html file to check the effect.
-![Image](../../assets/images/project-11/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-006.png" alt="Image">
+</p>
 
 Task 5 Basic Information and Latest Events
 
@@ -540,45 +566,45 @@ Task 5 Basic Information and Latest Events
 ```html
 <!-- Essential Information | Latest Events -->
 <div class="container">
-<div class="row">
-<div class="col-6">
-<!-- Essential Information -->
-<section id="information">
-<h2>Essential Information</h2>
-<ul>
-<li>Contact: 04 72 10 30 30</li>
-<li>Address: Mairle de Lyon, 69205 Lyon cedex 01</li>
-</ul>
-<button id="readIt" type="button">Read it Loud</button>
-</section>
-</div>
-<div class="col-6">
-<!-- Latest Events -->
-<section id="events">
-<h2>Latest Events</h2>
-<div class="listContainer" id="eventListBox">
-<div class="listWrapper">
-<article class="photoCard">
-<div class="card photoBox">
-<picture>
-<source srcset="./assets/images/latest-events-images/worldskills-2024-p.jpg"
-media="(min-width: 760px)">
-<source                        srcset="./assets/images/latest-events-images/worldskills-2024-p-low-res.png"
-media="(max-width: 760px)">
-<img src="./assets/images/latest-events-images/worldskills-2024-p.jpg"
-alt="Event Image">
-</picture>
-</div>
-<div class="card-body">
-<h5 class="card-title">Lyon accueille la finale mondiale des Worldskills 2024</h5>
-</div>
-</article>
-<!-- The structure is the same as other cards -->
-</div>
-</div>
-</section>
-</div>
-</div>
+  <div class="row">
+    <div class="col-6">
+      <!-- Essential Information -->
+      <section id="information">
+        <h2>Essential Information</h2>
+        <ul>
+          <li>Contact: 04 72 10 30 30</li>
+          <li>Address: Mairle de Lyon, 69205 Lyon cedex 01</li>
+        </ul>
+        <button id="readIt" type="button">Read it Loud</button>
+      </section>
+    </div>
+    <div class="col-6">
+      <!-- Latest Events -->
+      <section id="events">
+        <h2>Latest Events</h2>
+        <div class="listContainer" id="eventListBox">
+          <div class="listWrapper">
+            <article class="photoCard">
+              <div class="card photoBox">
+                <picture>
+                  <source srcset="./assets/images/latest-events-images/worldskills-2024-p.jpg"
+                  media="(min-width: 760px)">
+                  <source                        srcset="./assets/images/latest-events-images/worldskills-2024-p-low-res.png"
+                  media="(max-width: 760px)">
+                  <img src="./assets/images/latest-events-images/worldskills-2024-p.jpg"
+                  alt="Event Image">
+                </picture>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Lyon accueille la finale mondiale des Worldskills 2024</h5>
+              </div>
+            </article>
+            <!-- The structure is the same as other cards -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
 </div>
 ```
 
@@ -587,43 +613,45 @@ alt="Event Image">
 ```css
 /* Essential Information */
 #information ul {
-list-style: none;
-padding-left: 0;
-margin-top: 2rem;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
 }
 #information ul li {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 #information #readIt {
-background: #023399;
-color: #fff;
-border-radius: .5rem;
-border: none;
-padding: 1rem 1.5rem;
+  background: #023399;
+  color: #fff;
+  border-radius: .5rem;
+  border: none;
+  padding: 1rem 1.5rem;
 }
 /* Events */
 #events h2 {
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 #events .listWrapper {
-display: flex;
-flex-wrap: nowrap;
-width: min-content;
-padding-bottom: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  width: min-content;
+  padding-bottom: 1rem;
 }
 #events .listContainer {
-border: 1px solid #aaa;
-border-radius: 5px;
-padding: 1rem;
-overflow-x: scroll;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 1rem;
+  overflow-x: scroll;
 }
 #events .photoCard {
-width: 220px;
+  width: 220px;
 }
 ```
 
 #### Step 3: Run the index.html file to check the effect.
-![Image](../../assets/images/project-11/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-007.png" alt="Image">
+</p>
 
 Task 6 Information Tabs
 
@@ -632,35 +660,35 @@ Task 6 Information Tabs
 ```html
 <!-- Other Information -->
 <section id="other" class="container">
-<h2>Other Information</h2>
-<div class="tabBox">
-<!-- Bootstrap Tabs Structure -->
-<ul class="nav nav-tabs" role="tablist">
-<li class="nav-item" role="presentation">
-<button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1"
-aria-selected="true">Tab 1</button>
-</li>
-<li class="nav-item" role="presentation">
-<button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
-role="tab" aria-controls="tab2" aria-selected="false">Tab 2</button>
-</li>
-<li class="nav-item" role="presentation">
-<button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button"
-role="tab" aria-controls="tab3" aria-selected="false">Tab 3</button>
-</li>
-</ul>
-<div class="tabContents">
-<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-This is the content for Tab 1.
-</div>
-<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-This is the content for Tab 2.
-</div>
-<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-This is the content for Tab 3.
-</div>
-</div>
-</div>
+  <h2>Other Information</h2>
+  <div class="tabBox">
+    <!-- Bootstrap Tabs Structure -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1"
+        aria-selected="true">Tab 1</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
+        role="tab" aria-controls="tab2" aria-selected="false">Tab 2</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button"
+        role="tab" aria-controls="tab3" aria-selected="false">Tab 3</button>
+      </li>
+    </ul>
+    <div class="tabContents">
+      <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+        This is the content for Tab 1.
+      </div>
+      <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+        This is the content for Tab 2.
+      </div>
+      <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+        This is the content for Tab 3.
+      </div>
+    </div>
+  </div>
 </section>
 ```
 
@@ -669,39 +697,41 @@ This is the content for Tab 3.
 ```css
 /* custom tag */
 #other [role="tablist"] {
-border-bottom: 2px solid #cccccc;
-display: flex;
+  border-bottom: 2px solid #cccccc;
+  display: flex;
 }
 #other [role="tablist"] [role="tab"] {
-padding: .5rem 1rem;
-position: relative;
-border: none;
+  padding: .5rem 1rem;
+  position: relative;
+  border: none;
 }
 #other [role="tablist"] [role="tab"][aria-selected="true"] {
-background: #fff;
+  background: #fff;
 }
 #other [role="tablist"] [role="tab"][aria-selected="true"]::after {
-content: "";
-position: absolute;
-left: 0;
-right: 0;
-bottom: 0;
-height: 2px;
-background: #0a53be;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #0a53be;
 }
 #other [role="tablist"] [role="tab"][aria-selected="false"] {
-background: #eeeeee;
+  background: #eeeeee;
 }
 #other .tabContents [role="tabpanel"] {
-padding: 2rem;
+  padding: 2rem;
 }
 #other .tabContents [role="tabpanel"][aria-hidden="true"] {
-display: none;
+  display: none;
 }
 ```
 
 #### Step 3: Run the index.html file to check the effect.
-![Image](../../assets/images/project-11/image-008.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-008.png" alt="Image">
+</p>
 
 Task 7 Contact Form
 
@@ -710,50 +740,50 @@ Task 7 Contact Form
 ```html
 <!-- Contact Us -->
 <section id="contact" class="container">
-<div class="title">
-<h2>Contact Us</h2>
-</div>
-<form class="needs-validation" novalidate>
-<div class="row g-3 gy-4">
-<!-- First Name -->
-<div class="col-md-6">
-<div class="form-floating">
-<input type="text" id="contact_first_name" class="form-control" required>
-<label for="contact_first_name" class="form-label">First Name*</label>
-<div class="invalid-feedback">Please enter your name</div>
-</div>
-</div>
-<!-- Last Name -->
-<div class="col-md-6">
-<div class="form-floating">
-<input type="text" id="contact_last_name" class="form-control" required>
-<label for="contact_last_name" class="form-label">Last Name*</label>
-<div class="invalid-feedback">Please enter your last name</div>
-</div>
-</div>
-<!-- Email -->
-<div class="col-md-6">
-<div class="form-floating">
-<input type="email" id="contact_email" class="form-control" required>
-<label for="contact_email" class="form-label">Email*</label>
-<div class="invalid-feedback">Please enter a valid email address</div>
-</div>
-</div>
-<!-- Phone -->
-<div class="col-md-6">
-<div class="form-floating">
-<input type="tel" id="contact_phone" class="form-control"
-pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-<label for="contact_phone" class="form-label">Phone (XXX-XXX-XXXX)</label>
-<div class="invalid-feedback">Please enter a valid phone number format</div>
-</div>
-</div>
-</div>
-<!-- Submit button -->
-<div class="d-grid mt-4">
-<button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-</div>
-</form>
+  <div class="title">
+    <h2>Contact Us</h2>
+  </div>
+  <form class="needs-validation" novalidate>
+    <div class="row g-3 gy-4">
+      <!-- First Name -->
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="text" id="contact_first_name" class="form-control" required>
+          <label for="contact_first_name" class="form-label">First Name*</label>
+          <div class="invalid-feedback">Please enter your name</div>
+        </div>
+      </div>
+      <!-- Last Name -->
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="text" id="contact_last_name" class="form-control" required>
+          <label for="contact_last_name" class="form-label">Last Name*</label>
+          <div class="invalid-feedback">Please enter your last name</div>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="email" id="contact_email" class="form-control" required>
+          <label for="contact_email" class="form-label">Email*</label>
+          <div class="invalid-feedback">Please enter a valid email address</div>
+        </div>
+      </div>
+      <!-- Phone -->
+      <div class="col-md-6">
+        <div class="form-floating">
+          <input type="tel" id="contact_phone" class="form-control"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+          <label for="contact_phone" class="form-label">Phone (XXX-XXX-XXXX)</label>
+          <div class="invalid-feedback">Please enter a valid phone number format</div>
+        </div>
+      </div>
+    </div>
+    <!-- Submit button -->
+    <div class="d-grid mt-4">
+      <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+    </div>
+  </form>
 </section>
 ```
 
@@ -762,26 +792,28 @@ pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
 ```css
 /* Contact Us */
 #contact {
-margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 #contact .title {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 #contact .title h2 {
-padding: 1.5rem 5rem;
-border: 2px solid #cfcfcf;
-background: #fff;
-transform: translateY(50%);
+  padding: 1.5rem 5rem;
+  border: 2px solid #cfcfcf;
+  background: #fff;
+  transform: translateY(50%);
 }
 #contact form {
-border: 2px solid #cfcfcf;
-padding: 120px 3rem 2rem;
+  border: 2px solid #cfcfcf;
+  padding: 120px 3rem 2rem;
 }
 ```
 
 #### Step 3: Run the index.html file to check the effect.
-![Image](../../assets/images/project-11/image-010.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-010.png" alt="Image">
+</p>
 
 Task 7 Footer Information
 
@@ -790,31 +822,31 @@ Task 7 Footer Information
 ```html
 <!-- Footer -->
 <footer>
-<div class="container">
-<nav class="row gx-0">
-<ul class="col-3">
-<li><a href="#cta">About Us</a></li>
-<li><a href="#cta">Getting Here</a></li>
-<li><a href="#cta">FAQs</a></li>
-</ul>
-<ul class="col-3">
-<li><a href="#cta">Places to Stay</a></li>
-<li><a href="#cta">Things to Do</a></li>
-<li><a href="#cta">Events Calendar</a></li>
-</ul>
-<ul class="col-3">
-<li><a href="#cta">Restaurants</a></li>
-<li><a href="#cta">Nightlife</a></li>
-<li><a href="#cta">Shopping</a></li>
-</ul>
-<ul class="col-3">
-<li><a href="#cta">Plan Your Trip</a></li>
-<li><a href="#cta">Contact Us</a></li>
-<li><a href="#cta">Newsletter<br>Signup</a></li>
-</ul>
-</nav>
-</div>
-<p class="copyright">&copy; 2024. All Rights Reserved.</p>
+  <div class="container">
+    <nav class="row gx-0">
+      <ul class="col-3">
+        <li><a href="#cta">About Us</a></li>
+        <li><a href="#cta">Getting Here</a></li>
+        <li><a href="#cta">FAQs</a></li>
+      </ul>
+      <ul class="col-3">
+        <li><a href="#cta">Places to Stay</a></li>
+        <li><a href="#cta">Things to Do</a></li>
+        <li><a href="#cta">Events Calendar</a></li>
+      </ul>
+      <ul class="col-3">
+        <li><a href="#cta">Restaurants</a></li>
+        <li><a href="#cta">Nightlife</a></li>
+        <li><a href="#cta">Shopping</a></li>
+      </ul>
+      <ul class="col-3">
+        <li><a href="#cta">Plan Your Trip</a></li>
+        <li><a href="#cta">Contact Us</a></li>
+        <li><a href="#cta">Newsletter<br>Signup</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="copyright">&copy; 2024. All Rights Reserved.</p>
 </footer>
 ```
 
@@ -823,32 +855,34 @@ Task 7 Footer Information
 ```css
 /* Footer */
 footer {
-margin-top: 80px;
-padding-top: 50px;
-background: #ededed;
-border-top: 4px solid #cccccc;
+  margin-top: 80px;
+  padding-top: 50px;
+  background: #ededed;
+  border-top: 4px solid #cccccc;
 }
 footer nav ul {
-list-style: none;
+  list-style: none;
 }
 footer nav ul li {
-margin-bottom: .5rem;
-line-height: 1.2;
+  margin-bottom: .5rem;
+  line-height: 1.2;
 }
 footer nav a {
-text-decoration: none;
-color: #555;
+  text-decoration: none;
+  color: #555;
 }
 footer .copyright {
-text-align: center;
-margin-bottom: 0;
-padding-bottom: .5rem;
-color: #555;
-margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: .5rem;
+  color: #555;
+  margin-top: 1rem;
 }
 ```
 
 #### Step 3: Run the index.html file to check the effect.
-![Image](../../assets/images/project-11/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-11/image-003.png" alt="Image">
+</p>
 
 Part 4 Every JavaScript Developer Should Have Their Own Library

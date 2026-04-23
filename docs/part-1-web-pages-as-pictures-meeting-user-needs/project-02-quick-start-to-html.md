@@ -13,9 +13,11 @@ In this project, you will master relevant knowledge through five tasks. By creat
 
 ### 2.1.1 Task Description
 Take Li Bai's poem Quiet Night Thought as the case for my first page. The displayed content mainly consists of a title on the first line, the ancient poem, its modern translation, and the creation background in the middle, as well as a signature part in the bottom right corner. The effect of the case is shown in Figure 2-1.
-![Image](../../assets/images/project-02/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-001.png" alt="Image">
+</p>
 
-_Figure 2-1 My First Page_
+<p align="center"><em>Figure 2-1 My First Page</em></p>
 
 ### 2.1.2 Knowledge Preparation
 HTML documents are simple to create and powerful in function, supporting the embedding of files in different data formats—this is one of the reasons for HTML’s popularity. Its main features are summarized as follows:
@@ -52,12 +54,12 @@ All content displayed on the webpage — including text, images, audio, video, a
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title></title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -66,20 +68,22 @@ After learning the basic format of HTML, let's do a simple case practice to expe
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>The first exercise</title>
-</head>
-<body>
-Hello!
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>The first exercise</title>
+  </head>
+  <body>
+    Hello!
+  </body>
 </html>
 ```
 
 The effect of the case is shown in Figure 2-2.
-![Image](../../assets/images/project-02/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-002.png" alt="Image">
+</p>
 
-_Figure 2-2 Case Result Display_
+<p align="center"><em>Figure 2-2 Case Result Display</em></p>
 
 #### 2. Introduction to HTML Technical Terms and Grammar
 
@@ -106,7 +110,7 @@ HTML comment: There is a special type of tag in HTML — the comment tag. Commen
 ```html
 <!-- Comment statement -->
 For example, adding a comment to a <p> tag, the sample code is as follows:
-<p>This is a normal paragraph.</p> <!--This is a comment and will not be displayed in the browser.-->
+  <p>This is a normal paragraph.</p> <!--This is a comment and will not be displayed in the browser.-->
 ```
 
 HTML5 uses a loose syntax format, and tags are not case‑sensitive.
@@ -245,12 +249,12 @@ My first page is divided into the following five steps, as detailed below.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>My first page</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>My first page</title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -269,9 +273,9 @@ Please pay attention to the use of block-level tags, paragraph tags, text format
 
 ```html
 <div  style="text-align: left;">
-<p>
-<b>vernacular translation</b>
-<br>
+  <p>
+    <b>vernacular translation</b>
+    <br>
 ```
 
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;The bright moonlight shone on the ground, as if a layer of frost had settled. I couldn't help but raise my head to gaze at the bright moon in the sky, and then lower it to ponder, thinking of my hometown far away。
@@ -279,8 +283,8 @@ Please pay attention to the use of block-level tags, paragraph tags, text format
 ```html
 </p>
 <p>
-<b>Creative Background</b>
-<br>
+  <b>Creative Background</b>
+  <br>
 ```
 
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Li Bai's "Musing in a Quiet Night" was composed in a lodging house in Yangzhou on the fifteenth day of the ninth month of the fourteenth year of Emperor Xuanzong's Kaiyuan era (AD 726), when Li Bai was 26 years old. At the same time and place, he also composed another poem titled "Autumn Evening Reflections". On a moonlit night with a clear sky, the poet gazed up at the bright moon in the sky, and his homesickness arose spontaneously, prompting him to write this famous poem "Musing in a Quiet Night" that has been passed down through the ages and is well-known both in China and abroad。
@@ -309,11 +313,15 @@ Use line break tags to separate the signature from the main content.
 ### 2.2.1 Task Description
 A news web page contains a lot of content we want to know. It presents news to users through text, images, lists and other elements, and can link multiple independently displayed web pages together.
 This case mainly includes a news list page and a news detail page. Clicking a hyperlink on the news list page jumps to the news detail page, which displays the news image and description content. The page effects are shown in Figure 2-3 and Figure 2-4.
-![Image](../../assets/images/project-02/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-003.png" alt="Image">
+</p>
 
-![Image](../../assets/images/project-02/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-004.png" alt="Image">
+</p>
 
-_Figure 2-3 News List Page            Figure 2-4 News Detail Page_
+<p align="center"><em>Figure 2-3 News List Page            Figure 2-4 News Detail Page</em></p>
 
 ### 2.2.2 Knowledge Reserve
 
@@ -326,17 +334,19 @@ An ordered list is a list with a sequential arrangement. Each list item is arran
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<body>
-<ol>
-<li>Ordered list item 1</li>
-<li>Ordered list item 2</li>
-<li>Ordered list item 3</li>
-</ol>
-</body>
+  <body>
+    <ol>
+      <li>Ordered list item 1</li>
+      <li>Ordered list item 2</li>
+      <li>Ordered list item 3</li>
+    </ol>
+  </body>
 </html>
 ```
 
-![Image](../../assets/images/project-02/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-005.png" alt="Image">
+</p>
 
 2-5 Ordered List
 
@@ -347,19 +357,21 @@ The basic format is as follows, and the effect is shown in Figure 2-6.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<body>
-<ul>
-<li>Unordered list item 1</li>
-<li>Unordered list item 2</li>
-<li>Unordered list item 3</li>
-</ul>
-</body>
+  <body>
+    <ul>
+      <li>Unordered list item 1</li>
+      <li>Unordered list item 2</li>
+      <li>Unordered list item 3</li>
+    </ul>
+  </body>
 </html>
 ```
 
-![Image](../../assets/images/project-02/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-006.png" alt="Image">
+</p>
 
-_Figure 2-6 Unordered List_
+<p align="center"><em>Figure 2-6 Unordered List</em></p>
 
 ##### (3) Definition List
 A definition list is often used to explain and describe terms or nouns. Unlike ordered and unordered lists, there are no bullets before the list items of a definition list.
@@ -369,49 +381,53 @@ The basic format is as follows, and the effect is shown in Figure 2-7.
 
 ```html
 <dl>
-<dt>Noun 1</dt>
-<dd>Explanation 1 of noun 1</dd>
-<dd>Explanation 2 of noun 1</dd>
-...
-<dt>Noun 2</dt>
-<dd>Explanation 1 of noun 2</dd>
-<dd>Explanation 2 of noun 2</dd>
-...
+  <dt>Noun 1</dt>
+  <dd>Explanation 1 of noun 1</dd>
+  <dd>Explanation 2 of noun 1</dd>
+  ...
+  <dt>Noun 2</dt>
+  <dd>Explanation 1 of noun 2</dd>
+  <dd>Explanation 2 of noun 2</dd>
+  ...
 </dl>
 ```
 
-![Image](../../assets/images/project-02/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-007.png" alt="Image">
+</p>
 
-_Figure 2-7 Definition List_
+<p align="center"><em>Figure 2-7 Definition List</em></p>
 Note: Paragraphs, line breaks, images, links, other lists, etc. can be used inside list items.
 
 ##### (4) Nested Application of Lists
 When browsing products in online shopping malls, we often see that a certain category of products is divided into several subcategories, which usually contain further subcategories.
 Similarly, when using lists, a list item may also contain several sub-list items. To define sub-list items within a list item, lists need to be nested.
 Use the nesting of unordered lists to achieve the effect shown in Figure 2-8.
-![Image](../../assets/images/project-02/image-008.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-008.png" alt="Image">
+</p>
 
-_Figure 2-8 Nested Application of Lists_
+<p align="center"><em>Figure 2-8 Nested Application of Lists</em></p>
 The code to implement Figure 2-8 is as follows.
 
 ```html
 <ul>
-<li>Electronic products
-<ul>
-<li>Mobile phone</li>
-</ul>
-<ul>
-<li>Computer</li>
-</ul>
-</li>
-<li>Skincare products
-<ul>
-<li>Facial cleanser</li>
-</ul>
-<ul>
-<li>Toner</li>
-</ul>
-</li>
+  <li>Electronic products
+    <ul>
+      <li>Mobile phone</li>
+    </ul>
+    <ul>
+      <li>Computer</li>
+    </ul>
+  </li>
+  <li>Skincare products
+    <ul>
+      <li>Facial cleanser</li>
+    </ul>
+    <ul>
+      <li>Toner</li>
+    </ul>
+  </li>
 </ul>
 ```
 
@@ -471,19 +487,21 @@ An exercise for setting hyperlinks on text is as follows:
 
 ```html
 <html>
-<head>
-<title>Hyperlink Settings</title>
-</head>
-<body>
-<a href="ul_ol.htm">Go to the List Settings Page</a>
-</body>
+  <head>
+    <title>Hyperlink Settings</title>
+  </head>
+  <body>
+    <a href="ul_ol.htm">Go to the List Settings Page</a>
+  </body>
 </html>
 ```
 
 The browsing effect is shown in Figure 2-10.
-![Image](../../assets/images/project-02/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-009.png" alt="Image">
+</p>
 
-_Figure 2-10 Hyperlink Settings_
+<p align="center"><em>Figure 2-10 Hyperlink Settings</em></p>
 As can be seen from Figure 2-10, this is the default style of a hyperlink. When the link on the page is clicked, the page will jump to the page in the same directory, namely the ul_ol.html page. When clicking the browser's "Back" button to return to the original page, the color of the text link changes to purple, indicating that the link has been visited by the user.
 ② Modify the window opening method of the link
 By default, a hyperlink opens a new page by replacing the current page. According to different user needs, you can specify other ways for the hyperlink to open a new window.
@@ -492,17 +510,19 @@ The hyperlink tag provides the title attribute, which can easily give visitors p
 
 ```html
 <html>
-<head>
-<title>Hyperlink Settings</title>
-</head>
-<body>
-<a href="ul_ol.htm" target="_blank" title="Hello reader, the text you are seeing now is a prompt. Clicking this link will open a new window and redirect you to the ul_ol.htm page.">Go to the List Settings Page</a>
-</body>
+  <head>
+    <title>Hyperlink Settings</title>
+  </head>
+  <body>
+    <a href="ul_ol.htm" target="_blank" title="Hello reader, the text you are seeing now is a prompt. Clicking this link will open a new window and redirect you to the ul_ol.htm page.">Go to the List Settings Page</a>
+  </body>
 </html>
 ```
 
 The browsing effect is shown in Figure 2-11.
-![Image](../../assets/images/project-02/image-010.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-010.png" alt="Image">
+</p>
 
 2-11 Tooltip Text for Hyperlinks
 
@@ -543,14 +563,14 @@ html
 
 ```html
 <div style="background-color: blue;">
-<div style="width: 800px;margin: 0 auto;">
-<span style="color: #fff">News</span>
-<span style="color: #fff">Entertainment</span>
-<span style="color: #fff">Tech</span>
-<span style="color: #fff">Military</span>
-<span style="color: #fff">Life</span>
-<span style="color: #fff">Movies</span>
-</div>
+  <div style="width: 800px;margin: 0 auto;">
+    <span style="color: #fff">News</span>
+    <span style="color: #fff">Entertainment</span>
+    <span style="color: #fff">Tech</span>
+    <span style="color: #fff">Military</span>
+    <span style="color: #fff">Life</span>
+    <span style="color: #fff">Movies</span>
+  </div>
 </div>
 ```
 
@@ -558,43 +578,43 @@ html
 
 ```html
 <div style="width: 800px;margin: 0 auto;">
-<ul>
-<li>
-<a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span>08/23</span>
-</li>
-<li>
-<a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span>08/23</span>
-</li>
-<li>
-<a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span>08/23</span>
-</li>
-<li>
-<a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span>08/23</span>
-</li>
-<li>
-<a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
-&nbsp;&nbsp;&        <li>
-<a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span>08/23</span>
-</li>
-bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span>08/23</span>
-</li>
-<li>
-<a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span>08/23</span>
-</li>
-</ul>
+  <ul>
+    <li>
+      <a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>08/23</span>
+    </li>
+    <li>
+      <a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>08/23</span>
+    </li>
+    <li>
+      <a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>08/23</span>
+    </li>
+    <li>
+      <a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>08/23</span>
+    </li>
+    <li>
+      <a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
+      &nbsp;&nbsp;&        <li>
+        <a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>08/23</span>
+      </li>
+      bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>08/23</span>
+    </li>
+    <li>
+      <a href="pages/detail.html">Zhonghui Yunqi Technology Group CoLtd</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>08/23</span>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -611,23 +631,23 @@ Edit the news details file detail.html.
 ```html
 <p>Aligning with the talent training program for WeChat Mini Program development, we carry out the construction of teaching and practical training from the bottom up around the target positions.....</p>
 <ol>
-<li>
-<h4>Software Testing Practical Training Solution</h4>
-<p>Dual standards of vocational skill level certificates and teaching syllabuses.</p>
-<p>Based on the dual standards of Software Testing and Development Vocational Skill Level Certificate and teaching syllabus, we adopt the "integration of training and teaching" mode to build a talent training program that integrates courses with certificates. Through curriculum and practical training, we improve students' professional skills to match their employment positions.</p>
-<p>......</p>
-</li>
-<li>
-<h4>Frontend Development Practical Training Solution</h4>
-<p>Dual standards of development orientation and enterprise talent demands.</p>
-<p>Based on the dual standards of development-oriented teaching and enterprise talent needs, we integrate industry skills from competitions and certificate assessment skills into curriculum standards, reflecting new technologies, new requirements and new norms. This achieves the integration of courses with certificates and competitions, guides the teaching direction and promotes teaching reform.</p>
-<p>.....</p>
-</li>
-<li>
-<h4>Blockchain Practical Training Solution</h4>
-<p>With blockchain being included in the "New Infrastructure" and the successive introduction of relevant policies, the blockchain industry has ushered in an upsurge of practical applications, leading to an increasing demand for professional talents. As an interdisciplinary and cross-field technological application, it covers knowledge from multiple disciplines such as computer science, cryptography, mathematics, finance and economics. To cultivate blockchain talents and meet social needs, many universities have launched blockchain-related courses, and blockchain has gradually become a relatively independent academic discipline.</p>
-<p>......</p>
-</li>
+  <li>
+    <h4>Software Testing Practical Training Solution</h4>
+    <p>Dual standards of vocational skill level certificates and teaching syllabuses.</p>
+    <p>Based on the dual standards of Software Testing and Development Vocational Skill Level Certificate and teaching syllabus, we adopt the "integration of training and teaching" mode to build a talent training program that integrates courses with certificates. Through curriculum and practical training, we improve students' professional skills to match their employment positions.</p>
+    <p>......</p>
+  </li>
+  <li>
+    <h4>Frontend Development Practical Training Solution</h4>
+    <p>Dual standards of development orientation and enterprise talent demands.</p>
+    <p>Based on the dual standards of development-oriented teaching and enterprise talent needs, we integrate industry skills from competitions and certificate assessment skills into curriculum standards, reflecting new technologies, new requirements and new norms. This achieves the integration of courses with certificates and competitions, guides the teaching direction and promotes teaching reform.</p>
+    <p>.....</p>
+  </li>
+  <li>
+    <h4>Blockchain Practical Training Solution</h4>
+    <p>With blockchain being included in the "New Infrastructure" and the successive introduction of relevant policies, the blockchain industry has ushered in an upsurge of practical applications, leading to an increasing demand for professional talents. As an interdisciplinary and cross-field technological application, it covers knowledge from multiple disciplines such as computer science, cryptography, mathematics, finance and economics. To cultivate blockchain talents and meet social needs, many universities have launched blockchain-related courses, and blockchain has gradually become a relatively independent academic discipline.</p>
+    <p>......</p>
+  </li>
 </ol>
 ```
 
@@ -635,7 +655,7 @@ Edit the news details file detail.html.
 
 ```html
 <p>
-<a href="#">Back to Top</a> <a href="../date/news.txt" target="_blank">Plain Text Version of Current News</a>
+  <a href="#">Back to Top</a> <a href="../date/news.txt" target="_blank">Plain Text Version of Current News</a>
 </p>
 ```
 
@@ -643,7 +663,7 @@ Edit the news details file detail.html.
 
 ```html
 <p style="text-align:right">
-<a href="../index.html">View Original Text</a>
+  <a href="../index.html">View Original Text</a>
 </p>
 ```
 
@@ -651,9 +671,11 @@ Edit the news details file detail.html.
 
 ### 2.3.1 Task Description
 Living in the era of big data, students must have filled out various questionnaires and logged into various software and websites with account passwords. The campus survey form includes records such as age group, hobbies, messages to the school, basic information and other contents. The details are shown in Figure 2-14.
-![Image](../../assets/images/project-02/image-011.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-011.png" alt="Image">
+</p>
 
-_Figure 2-14 Campus Survey Report_
+<p align="center"><em>Figure 2-14 Campus Survey Report</em></p>
 
 ### 2.3.2 Knowledge Reserve
 
@@ -670,14 +692,16 @@ The basic format for creating a form is as follows:
 
 ```html
 <form action="URL" method="submission method" name="form name">
-Various form controls
+  Various form controls
 </form>
 ```
 
 The demo code for form controls is shown in Figure 2-15.
-![Image](../../assets/images/project-02/image-012.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-012.png" alt="Image">
+</p>
 
-_Figure 2-15 Demo Code for Form Controls_
+<p align="center"><em>Figure 2-15 Demo Code for Form Controls</em></p>
 The attributes of the &lt;form&gt; tag are described below.
 
 ##### (1) The action attribute
@@ -861,44 +885,48 @@ The effect is shown in Figure 2-16.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Input Controls</title>
-</head>
-<body>
-<form action="#" method="post">
-Username:    <!-- text Single-line text input box -->
-<input type="text" name="" id="" value="Zhang San" maxlength="6" ><br>
-Password:    <!-- password Password input box -->
-<input type="password" name="" id="" value="" size="40" ><br><br>
-Gender:    <!-- radio Single selection input box -->
-<input type="radio" name="sex" checked="checked" id="" value="" >Male
-<input type="radio" name="sex" id="" value="" >Female<br><br>
-Interests:    <!-- checkbox Checkbox -->
-<input type="checkbox" >Singing
-<input type="checkbox" >Dancing
-<input type="checkbox" >Swimming<br><br>
-Upload Avatar:
-<input type="file"><br><br>        <!-- file File field -->
-<input type="submit">                <!-- submit Submit button -->
-<input type="reset">                <!-- reset Reset button -->
-<input type="button" value="Normal Button"><!-- button Normal button -->
-<input type="hidden">                    <!-- hidden Hidden field -->
-</form>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Input Controls</title>
+  </head>
+  <body>
+    <form action="#" method="post">
+      Username:    <!-- text Single-line text input box -->
+      <input type="text" name="" id="" value="Zhang San" maxlength="6" ><br>
+      Password:    <!-- password Password input box -->
+      <input type="password" name="" id="" value="" size="40" ><br><br>
+      Gender:    <!-- radio Single selection input box -->
+      <input type="radio" name="sex" checked="checked" id="" value="" >Male
+      <input type="radio" name="sex" id="" value="" >Female<br><br>
+      Interests:    <!-- checkbox Checkbox -->
+      <input type="checkbox" >Singing
+      <input type="checkbox" >Dancing
+      <input type="checkbox" >Swimming<br><br>
+      Upload Avatar:
+      <input type="file"><br><br>        <!-- file File field -->
+      <input type="submit">                <!-- submit Submit button -->
+      <input type="reset">                <!-- reset Reset button -->
+      <input type="button" value="Normal Button"><!-- button Normal button -->
+      <input type="hidden">                    <!-- hidden Hidden field -->
+    </form>
+  </body>
 </html>
 ```
 
-![Image](../../assets/images/project-02/image-013.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-013.png" alt="Image">
+</p>
 
-_Figure 2-16 Demonstration Example of Input Controls_
+<p align="center"><em>Figure 2-16 Demonstration Example of Input Controls</em></p>
 In this example, different types of input controls are defined by applying various type attribute values to the &lt;input&gt; element, and other optional attributes of the &lt;input&gt; tag are used for some of these controls.
 The maxlength and value attributes are used to set the maximum allowed characters and the default displayed text in a single-line text input box; the size attribute is used to define the width of the password input box; and the name and checked attributes are used to set the name and default selected item of radio buttons.
 In the preview, different types of input controls have different appearances. When specific operations are performed, such as entering a username and password, selecting gender and hobbies, etc., the displayed effects also differ.
 For example, when content is entered into the password input box, it is displayed as dots instead of plain text like the username, as shown in Figure 2-17 below.
-![Image](../../assets/images/project-02/image-014.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-014.png" alt="Image">
+</p>
 
-_Figure 2-17 Display Difference Between Single-line Text Box and Password Box_
+<p align="center"><em>Figure 2-17 Display Difference Between Single-line Text Box and Password Box</em></p>
 Note: For input types that are not supported by the browser, they will be displayed as a normal input box on the web page.
 
 #### 4. The &lt;textarea&gt; Tag
@@ -906,23 +934,25 @@ A multi-line text input field that can hold an unlimited amount of text. The siz
 
 ```html
 <textarea cols="30" rows="5">
-Text content
+  Text content
 </textarea>
 ```
 
 The &lt;select&gt; Tag
 The select control is used to define a drop-down menu with multiple options, as shown in Figure 2-18.
-![Image](../../assets/images/project-02/image-015.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-015.png" alt="Image">
+</p>
 
-_Figure 2-18 Drop-down Menu_
+<p align="center"><em>Figure 2-18 Drop-down Menu</em></p>
 The basic syntax format for defining a drop-down menu using the select control is as follows:
 
 ```html
 <select>
-<option>Option 1</option>
-<option>Option 2</option>
-<option>Option 3</option>
-...
+  <option>Option 1</option>
+  <option>Option 2</option>
+  <option>Option 3</option>
+  ...
 </select>
 ```
 
@@ -948,9 +978,9 @@ The &lt;select&gt;&lt;/select&gt; tag is used to add a drop-down menu in a form.
 
 ```html
 <div style="width: 800px;margin: 0 auto;" >
-<form action="">
-…
-</form>
+  <form action="">
+    …
+  </form>
 </div>
 ```
 
@@ -958,48 +988,48 @@ The &lt;select&gt;&lt;/select&gt; tag is used to add a drop-down menu in a form.
 
 ```html
 <ol>
-<li>
-<p>What age group are you currently in：</p>
-<ol type="A">
-<li>
-<input type="radio" id="age1" name="age" checked>
-<label for="age1">16-18year</label>
-</li>
-<li>
-<input type="radio" id="age2" name="age">
-<label for="age2">19-22year</label>
-</li>
-<li>
-<input type="radio" id="age3" name="age">
-<label for="age3">23-36year</label>
-</li>
-<li>
-<input type="radio" id="age4" name="age">
-<label for="age4">37yearabove</label>
-</li>
-</ol>
-</li>
-<li>
-<p>What is your biggest hobby currently on campus</p>
-<p>
-<input type="checkbox" name="bobby" id="hbA">
-<label for="hbA">A. computer programming</label>&nbsp;&nbsp;
-<input type="checkbox" name="bobby" id="hbB">
-<label for="hbB">B. read a book</label>&nbsp;&nbsp;
-<input type="checkbox" name="bobby" id="hbC">
-<label for="hbC">C. play basketball</label>&nbsp;&nbsp;
-<input type="checkbox" name="bobby" id="hbD">
-<label for="hbD">D. running</label>&nbsp;&nbsp;
-<input type="checkbox" name="bobby" id="hbE">
-<label for="hbE">E. listen to music</label>&nbsp;&nbsp;
-<input type="checkbox" name="bobby" id="hbF">
-<label for="hbF">F. part-time job</label>
-</p>
-</li>
-<li>
-<p>What is the sentence you most want to say to the school</p>
-<textarea rows="10" cols="90" name="" placeholder="Please enter correctly"></textarea>
-</li>
+  <li>
+    <p>What age group are you currently in：</p>
+    <ol type="A">
+      <li>
+        <input type="radio" id="age1" name="age" checked>
+        <label for="age1">16-18year</label>
+      </li>
+      <li>
+        <input type="radio" id="age2" name="age">
+        <label for="age2">19-22year</label>
+      </li>
+      <li>
+        <input type="radio" id="age3" name="age">
+        <label for="age3">23-36year</label>
+      </li>
+      <li>
+        <input type="radio" id="age4" name="age">
+        <label for="age4">37yearabove</label>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>What is your biggest hobby currently on campus</p>
+    <p>
+      <input type="checkbox" name="bobby" id="hbA">
+      <label for="hbA">A. computer programming</label>&nbsp;&nbsp;
+      <input type="checkbox" name="bobby" id="hbB">
+      <label for="hbB">B. read a book</label>&nbsp;&nbsp;
+      <input type="checkbox" name="bobby" id="hbC">
+      <label for="hbC">C. play basketball</label>&nbsp;&nbsp;
+      <input type="checkbox" name="bobby" id="hbD">
+      <label for="hbD">D. running</label>&nbsp;&nbsp;
+      <input type="checkbox" name="bobby" id="hbE">
+      <label for="hbE">E. listen to music</label>&nbsp;&nbsp;
+      <input type="checkbox" name="bobby" id="hbF">
+      <label for="hbF">F. part-time job</label>
+    </p>
+  </li>
+  <li>
+    <p>What is the sentence you most want to say to the school</p>
+    <textarea rows="10" cols="90" name="" placeholder="Please enter correctly"></textarea>
+  </li>
 </ol>
 ```
 
@@ -1008,33 +1038,33 @@ The &lt;select&gt;&lt;/select&gt; tag is used to add a drop-down menu in a form.
 ```html
 <h4>Please leave your brief information</h4>
 <p>
-<label for="userName">Name：</label>
-<input type="text" name="userName" maxlength="8" id="userName" placeholder="Please enter your name or nickname correctly">
+  <label for="userName">Name：</label>
+  <input type="text" name="userName" maxlength="8" id="userName" placeholder="Please enter your name or nickname correctly">
 </p>
 <p>
-<label>age：</label>
-<input type="number" name="" placeholder="Please enter your age" min="15" />
+  <label>age：</label>
+  <input type="number" name="" placeholder="Please enter your age" min="15" />
 </p>
 <p>
-<label>email：</label>
-<input type="email" name="" placeholder="Please enter your email address" min="15" />
+  <label>email：</label>
+  <input type="email" name="" placeholder="Please enter your email address" min="15" />
 </p>
 <p>
-<label for="userName">occupation：</label>
-<select name="occupation">
-<option value="teacher" >teacher</option>
-<option value="stydent" selected>student</option>
-<option value="worker">employee</option>
-<option value="tourist">tourist</option>
-</select>
+  <label for="userName">occupation：</label>
+  <select name="occupation">
+    <option value="teacher" >teacher</option>
+    <option value="stydent" selected>student</option>
+    <option value="worker">employee</option>
+    <option value="tourist">tourist</option>
+  </select>
 </p>
 <p>
-<label>avatar：</label>
-<input type="file" name="avatar" placeholder="Please enter your profile picture" id="avatar" accept="image/jpeg"/>
+  <label>avatar：</label>
+  <input type="file" name="avatar" placeholder="Please enter your profile picture" id="avatar" accept="image/jpeg"/>
 </p>
 <p align="center">
-<button type="submit">Submit form</button>
-<button type="reset" disabled>Reset form</button>
+  <button type="submit">Submit form</button>
+  <button type="reset" disabled>Reset form</button>
 </p>
 ```
 
@@ -1046,9 +1076,11 @@ The next part is the call-to-action section, which has a large cover image as th
 
 ### 2.4.2 Effect Display
 The effect display of the call-to-action section is shown in Figure 2-19.
-![Image](../../assets/images/project-02/image-016.png)
+<p align="center">
+  <img src="../../assets/images/project-02/image-016.png" alt="Image">
+</p>
 
-_Figure 2-19 Call to Action_
+<p align="center"><em>Figure 2-19 Call to Action</em></p>
 
 ### 2.4.3 Task Implementation
 
@@ -1059,15 +1091,15 @@ The code is as follows:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>WELCOME LYON</title>
-<!-- Links -->
-</head>
-<body>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WELCOME LYON</title>
+    <!-- Links -->
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -1083,25 +1115,25 @@ Create a style file with the structure _base.css and set the common styles as fo
 *,
 *::before,
 *::after {
-box-sizing: border-box;
-padding: 0;
-margin: 0;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: 400;
-font-size: 1rem;
-text-decoration: none;
-border: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 0;
 }
 body {
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 img {
-max-width: 100%;
-object-fit: cover;
-object-position: center;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 ```
 
@@ -1111,29 +1143,29 @@ The code is as follows:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-<!-- <script src="scripts/Tab.js"></script> -->
-</head>
-<body>
-<!-- Header -->
-<header>
-<div class="header-container">
-<h1 class="logo">WELCOME LYON</h1>
-<!-- Navigation -->
-<nav>
-<a href="#">Link</a>
-<a href="#">Link</a>
-<a href="#">Link</a>
-</nav>
-</div>
-</header>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+    <!-- <script src="scripts/Tab.js"></script> -->
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <h1 class="logo">WELCOME LYON</h1>
+        <!-- Navigation -->
+        <nav>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+        </nav>
+      </div>
+    </header>
+  </body>
 </html>
 Create the _header.css file with the following styles:
 /* Styles for the header */
@@ -1178,38 +1210,38 @@ The code is as follows:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="./styles/index.css" />
-<!-- <script src="scripts/Tab.js"></script> -->
-</head>
-<body>
-<!-- Header -->
-<header>
-<div class="header-container">
-<h1 class="logo">WELCOME LYON</h1>
-<!-- Navigation -->
-<nav>
-<a href="#">Link</a>
-<a href="#">Link</a>
-<a href="#">Link</a>
-</nav>
-</div>
-</header>
-<main>
-<!-- Hero Section -->
-<div class="hero">
-<img src="assets/images/cover-low-res.jpg" alt="Hero" style="min-width: 760px"/>
-<div class="cta-container" id="cta-container">
-<button class="cta">Call to Action</button>
-</div>
-</div>
-</main>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- <script src="scripts/Tab.js"></script> -->
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <h1 class="logo">WELCOME LYON</h1>
+        <!-- Navigation -->
+        <nav>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <div class="hero">
+        <img src="assets/images/cover-low-res.jpg" alt="Hero" style="min-width: 760px"/>
+        <div class="cta-container" id="cta-container">
+          <button class="cta">Call to Action</button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
 Create _hero.css with the following styles:
 .hero {

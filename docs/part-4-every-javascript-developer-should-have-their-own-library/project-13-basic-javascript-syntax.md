@@ -18,9 +18,11 @@ In the introductory stage of JavaScript programming, when you first write consol
 It is not only ceremonial code for verifying that the development environment is ready, but also allows beginners to intuitively experience the interaction between code and reality through instant feedback in the browser console.
 After mastering DOM manipulation, with just a simple click, you can make a button do the robot dance, put funny sunglasses on a cat picture, and make it wiggle its hips to the music. What is this if not programming? It is clearly directing a wonderful life with code.
 The effect of the example is shown in Figure 13-1.
-![Image](../../assets/images/project-13/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-001.png" alt="Image">
+</p>
 
-_Figure 13-1 The Programming Journey Begins with the First "Hello, World!", But the Excitement Goes Far Beyond That_
+<p align="center"><em>Figure 13-1 The Programming Journey Begins with the First "Hello, World!", But the Excitement Goes Far Beyond That</em></p>
 
 ### 13.1.2 Knowledge Preparation
 
@@ -52,7 +54,7 @@ This statement pops up a dialog box containing OK and Cancel buttons.
 ```css
 const confirm1 = confirm("It's said that 99% of programmers have shaky hands when writing 'Hello World' for the first time.\n\nBut 100% of them become experts later!\n\nAre you ready to go from 'shaky hands' to 'keyboard hero'?");
 if (confirm1) {
-alert("Let's go! Open your password box!");
+  alert("Let's go! Open your password box!");
 } else {
 alert("A little secret: If you run away now, you'll regret it in the future~");
 }
@@ -66,25 +68,27 @@ console.log("Hello World! Code is like coffee—bitter at first sip, yet sweet i
 ```
 
 Press the F12 key in Chrome to open the console, find the Console tab, and you can see the content printed by console.log, as shown in Figure 13-2.
-![Image](../../assets/images/project-13/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-002.png" alt="Image">
+</p>
 
-_Figure 13-2 Console output result_
+<p align="center"><em>Figure 13-2 Console output result</em></p>
 
 #### 2.Code Comments
 （1）Single-line Comment
 
 ```html
 <script>
-// Single-line comment
-//console.log("Hmph, rookie");
+  // Single-line comment
+  //console.log("Hmph, rookie");
 </script>
 （2）Multi-line Comment
 <script>
-/*Multi-line comment*/
-/*
-This is a multi-line comment
-alert("Hello World! Hmph, rookie.\n\nDon't think printing this sentence is easy —\n\nThis is your first conversation with the computer, and it's secretly evaluating your IQ.\n\nBut don't be afraid, all experts started showing off with 'Hello World'.\n\nNow, study hard for me! You'll come back to thank this sentence in three years!");
-*/
+  /*Multi-line comment*/
+  /*
+  This is a multi-line comment
+  alert("Hello World! Hmph, rookie.\n\nDon't think printing this sentence is easy —\n\nThis is your first conversation with the computer, and it's secretly evaluating your IQ.\n\nBut don't be afraid, all experts started showing off with 'Hello World'.\n\nNow, study hard for me! You'll come back to thank this sentence in three years!");
+  */
 </script>
 ```
 
@@ -98,14 +102,14 @@ alert("Hello World! Hmph, rookie.\n\nDon't think printing this sentence is easy 
 
 ```html
 <script>
-var a;//Declare a variable
-a="Effort may not lead to immediate success, but lack of effort will definitely result in failure; every effort you make is accumulating luck for the future";//Assign a value to the variable
-var b = 10;//Initialize a variable
-var lastName = "Doe",age=30,job="carPenter";
-var x,y,z=1;
-console.log(a,b);
-console.log(lastName,age,job);
-console.log(x,y,z);
+  var a;//Declare a variable
+  a="Effort may not lead to immediate success, but lack of effort will definitely result in failure; every effort you make is accumulating luck for the future";//Assign a value to the variable
+  var b = 10;//Initialize a variable
+  var lastName = "Doe",age=30,job="carPenter";
+  var x,y,z=1;
+  console.log(a,b);
+  console.log(lastName,age,job);
+  console.log(x,y,z);
 </script>
 ```
 
@@ -130,14 +134,14 @@ Life is like a journey, which is divided into the following three steps, as deta
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Dynamic Life Title</title>
-<!-- Style Construction -->
-</head>
-<body>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Dynamic Life Title</title>
+    <!-- Style Construction -->
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -146,34 +150,34 @@ Life is like a journey, which is divided into the following three steps, as deta
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Dynamic Life Title</title>
-<style>
-body {
-font-family: 'Microsoft YaHei', sans-serif;
-max-width: 800px;
-margin: 0 auto;
-padding: 20px;
-line-height: 1.6;
-}
-.title {
-color: #333;
-margin-bottom: 10px;
-}
-</style>
-</head>
-<body>
-</body>
-<script>
-document.write(`
-<h2 class='title'>A programming journey begins with the first Hello, World!, but the excitement is far greater than that</h2>
-<div class='content'>
-<p>"Programming is like life: Hello, World! is the starting point, but far from the end. Every mistake is a gift for growth. The world of code has no limits, just like your potential. Stay curious, keep exploring, and define your own future!"；
-</p>
-</div>`)
-</script>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Dynamic Life Title</title>
+    <style>
+      body {
+      font-family: 'Microsoft YaHei', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+      }
+      .title {
+      color: #333;
+      margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+  </body>
+  <script>
+    document.write(`
+    <h2 class='title'>A programming journey begins with the first Hello, World!, but the excitement is far greater than that</h2>
+    <div class='content'>
+      <p>"Programming is like life: Hello, World! is the starting point, but far from the end. Every mistake is a gift for growth. The world of code has no limits, just like your potential. Stay curious, keep exploring, and define your own future!"；
+      </p>
+    </div>`)
+  </script>
 </html>
 ```
 
@@ -186,7 +190,9 @@ Among JavaScript data types, when numbers wear the "cloak" of strings, the + ope
 For example, with '1' + '1', when these two string partners meet, the + sign is no longer dull arithmetic addition, but a "master of concatenation". It directly combines the two 1s into a new string '11'.
 At this moment, the real number 2 stamps its feet in anger: "I’m clearly the correct answer!" But the plus sign laughs and says: "In the world of strings, we only join for fun, not for calculation!"
 The page effect is shown in Figure 13-3.
-![Image](../../assets/images/project-13/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-003.png" alt="Image">
+</p>
 
 Figure 13‑3 The Wonderful Blend of Numbers and Strings
 
@@ -360,8 +366,8 @@ The above syntax is quite cumbersome and inconvenient. ES6 introduced template s
 var str =`
 <h1>Commonly Used Technologies for Frontend Development</h1>
 <ul>
-<li>HTML5</li>
-<li>CSS3</li>
+  <li>HTML5</li>
+  <li>CSS3</li>
 </ul>
 ```
 
@@ -376,9 +382,11 @@ console.log(str);
 ```
 
 The running result of the above code is shown in Figure 13-4:
-![Image](../../assets/images/project-13/image-004.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-004.png" alt="Image">
+</p>
 
-_Figure 13-4 Output result using variables in template strings_
+<p align="center"><em>Figure 13-4 Output result using variables in template strings</em></p>
 
 ### 13.2.3 Task Implementation
 The wonderful fusion of numbers and strings: The mystery of '1' + '1' = '11' is divided into the following three steps, as detailed below.
@@ -388,13 +396,13 @@ The wonderful fusion of numbers and strings: The mystery of '1' + '1' = '11' is 
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>The secret of '1' + '1' = '11'</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>The secret of '1' + '1' = '11'</title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -403,55 +411,55 @@ The wonderful fusion of numbers and strings: The mystery of '1' + '1' = '11' is 
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>{$this->title}</title>
-<style>
-body {
-font-family: 'Microsoft YaHei', sans-serif;
-max-width: 800px;
-margin: 0 auto;
-padding: 20px;
-line-height: 1.6;
-}
-.title {
-font-size: 2.5em;
-color: #333;
-text-align: center;
-margin-bottom: 10px;
-}
-.subtitle {
-font-size: 1.2em;
-color: #666;
-text-align: center;
-margin-bottom: 30px;
-}
-.author {
-text-align: right;
-font-style: italic;
-color: #888;
-}
-</style>
-</head>
-<body>
-<script>
-let result1 = '1' + '1'; // Concatenation of string and string;
-let result2 = 1 + '1'; // Human: This should be '11'!
-let result3 = 1 + 1; // Human: This should be 2!
-document.write(`<div class='content'>
-<h3>The Wonderful Fusion of Numbers and Strings: The Mystery of '1' + '1' = '11'</h3>
-<p>
-// Case 1: Concatenation of string and string (a collision with human intuition)
-Output result: ${result1}</br>
-// Case 2: Addition of number and string (expected string concatenation)
-Output result: ${result2} </br>
-// Case 3: Addition of number and number, performing arithmetic addition
-Output result: ${result3}
-</p >
-</div >`)
-</script>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>{$this->title}</title>
+    <style>
+      body {
+      font-family: 'Microsoft YaHei', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+      }
+      .title {
+      font-size: 2.5em;
+      color: #333;
+      text-align: center;
+      margin-bottom: 10px;
+      }
+      .subtitle {
+      font-size: 1.2em;
+      color: #666;
+      text-align: center;
+      margin-bottom: 30px;
+      }
+      .author {
+      text-align: right;
+      font-style: italic;
+      color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let result1 = '1' + '1'; // Concatenation of string and string;
+      let result2 = 1 + '1'; // Human: This should be '11'!
+      let result3 = 1 + 1; // Human: This should be 2!
+      document.write(`<div class='content'>
+        <h3>The Wonderful Fusion of Numbers and Strings: The Mystery of '1' + '1' = '11'</h3>
+        <p>
+          // Case 1: Concatenation of string and string (a collision with human intuition)
+          Output result: ${result1}</br>
+          // Case 2: Addition of number and string (expected string concatenation)
+          Output result: ${result2} </br>
+          // Case 3: Addition of number and number, performing arithmetic addition
+          Output result: ${result3}
+        </p >
+      </div >`)
+    </script>
+  </body>
 </html>
 ```
 
@@ -461,7 +469,9 @@ Output result: ${result3}
 
 ### 13.3.1 Task Description
 Age Calculator: Time Travel Using Arithmetic Operators. Operators and variables are essential components of any programming language. An operator is a symbol that performs a specific operation on one or more operands, also known as an operation symbol. We will understand operators through practical project examples. The page effect is shown in Figure 13-5.
-![Image](../../assets/images/project-13/image-005.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-005.png" alt="Image">
+</p>
 
 Figure 135 Age Calculator: Time Travel Using Arithmetic Operators
 
@@ -568,13 +578,13 @@ Age Calculator: Time Travel Using Arithmetic Operators is divided into the follo
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Age Calculator: Time Travel with Arithmetic Operators</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Age Calculator: Time Travel with Arithmetic Operators</title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -583,64 +593,64 @@ Age Calculator: Time Travel Using Arithmetic Operators is divided into the follo
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>{$this->title}</title>
-<style>
-body {
-font-family: 'Microsoft YaHei', sans-serif;
-max-width: 800px;
-margin: 0 auto;
-padding: 20px;
-line-height: 1.6;
-}
-.title {
-font-size: 2.5em;
-color: #333;
-text-align: center;
-margin-bottom: 10px;
-}
-.subtitle {
-font-size: 1.2em;
-color: #666;
-text-align: center;
-margin-bottom: 30px;
-}
-.author {
-text-align: right;
-font-style: italic;
-color: #888;
-}
-</style>
-</head>
-<body>
-<script>
-// Case 1: Addition (+) — Accumulation of Time
-let years = 2025;
-let future_years = years + 10;
-// Case 2: Subtraction (-) — Rewinding Memories
-let past_years = years - 20;
-// Case 3: Explicit String Concatenation (Correct Usage)
-let result4 = '1' + '1'; // Human: This is what I wanted!
-// Case 3: Multiplication (*) — The Miracle of Compound Interest
-let knowledge = 1;
-knowledge *= 365; // Learn a little every day
-// Case 4: Division (/) — Choices in Life
-let time = 100; // Assume life spans 100 years
-let free_time = time / 3; // One-third is free time
-// Case 5: Modulus (%) — Wisdom of Cycles
-let days_in_week = 7;
-let today = 3; // Assume today is Wednesday
-let next_week = (today + 10) % days_in_week;
-// Case 6: Increment (++) — Steps of Growth
-let age = 25;
-// Case 7: Decrement (--) — Meaning of Countdown
-let countdown = 5;
-document.write(`
-<div class='content'>
-<h3>Age Calculator: Time Travel with Arithmetic Operators</h3>
-<p>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>{$this->title}</title>
+    <style>
+      body {
+      font-family: 'Microsoft YaHei', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+      }
+      .title {
+      font-size: 2.5em;
+      color: #333;
+      text-align: center;
+      margin-bottom: 10px;
+      }
+      .subtitle {
+      font-size: 1.2em;
+      color: #666;
+      text-align: center;
+      margin-bottom: 30px;
+      }
+      .author {
+      text-align: right;
+      font-style: italic;
+      color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Case 1: Addition (+) — Accumulation of Time
+      let years = 2025;
+      let future_years = years + 10;
+      // Case 2: Subtraction (-) — Rewinding Memories
+      let past_years = years - 20;
+      // Case 3: Explicit String Concatenation (Correct Usage)
+      let result4 = '1' + '1'; // Human: This is what I wanted!
+      // Case 3: Multiplication (*) — The Miracle of Compound Interest
+      let knowledge = 1;
+      knowledge *= 365; // Learn a little every day
+      // Case 4: Division (/) — Choices in Life
+      let time = 100; // Assume life spans 100 years
+      let free_time = time / 3; // One-third is free time
+      // Case 5: Modulus (%) — Wisdom of Cycles
+      let days_in_week = 7;
+      let today = 3; // Assume today is Wednesday
+      let next_week = (today + 10) % days_in_week;
+      // Case 6: Increment (++) — Steps of Growth
+      let age = 25;
+      // Case 7: Decrement (--) — Meaning of Countdown
+      let countdown = 5;
+      document.write(`
+      <div class='content'>
+        <h3>Age Calculator: Time Travel with Arithmetic Operators</h3>
+        <p>
 ```
 
 Case 1: Current Year ${years} + 10 Years = ${future_years} (Addition: Time flies, cherish the present!)&lt;/br&gt;
@@ -666,7 +676,9 @@ Case 7: Countdown  ${countdown--}   →   ${countdown}   (Decrement: After the c
 
 ### 13.4.1 Task Description
 Weather Forecaster: Intelligent Dialogue Between Conditional Statements and API Data. This project demonstrates how to use conditional statements to handle different weather scenarios, and provide personalized advice based on conditions such as temperature and weather conditions. Different conditional branches are triggered according to different user questions. The page effect is shown in Figure 13-6.
-![Image](../../assets/images/project-13/image-006.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-006.png" alt="Image">
+</p>
 
 Figure 13‑6 Weather Forecaster
 
@@ -707,7 +719,7 @@ If the result of the conditional expression in the if statement is true, the cod
 ```js
 let username = 'castle';
 if(username == 'admin'){
-console.log('ok');
+  console.log('ok');
 }else{
 console.log('error');
 }
@@ -740,7 +752,7 @@ First evaluate the condition. If the result is true, execute statement1 and retu
 ```js
 let username = 'castle';
 if(username == 'admin'){
-console.log('ok');
+  console.log('ok');
 }else{
 console.log('error');
 }
@@ -751,7 +763,7 @@ In real development, ternary expressions are often used to replace simple if...e
 ```js
 let flag = true;
 if(flag){
-a=1;
+  a=1;
 }else{
 a=0
 }
@@ -769,18 +781,18 @@ The switch statement is another branching structure that executes different code
 
 ```css
 switch (expression) {
-case value1:
-code block 1;
-break;
-case value2:
-code block 2;
-break;
-...
-case valuen:
-code block n;
-break;
-default:
-default code block;
+  case value1:
+  code block 1;
+  break;
+  case value2:
+  code block 2;
+  break;
+  ...
+  case valuen:
+  code block n;
+  break;
+  default:
+  default code block;
 }
 ```
 
@@ -789,20 +801,20 @@ In the switch structure, the expression is first evaluated, then matched against
 ```css
 let tmp = 3;
 switch(tmp) {
-case 0:
-console.log('This is 0000');
-break;
-case 1:
-console.log('This is 1111');
-break;
-case 2:
-console.log('This is 2222');
-break;
-case 3:
-console.log('This is 3333');
-break;
-default:
-console.log('No matches found at all');
+  case 0:
+  console.log('This is 0000');
+  break;
+  case 1:
+  console.log('This is 1111');
+  break;
+  case 2:
+  console.log('This is 2222');
+  break;
+  case 3:
+  console.log('This is 3333');
+  break;
+  default:
+  console.log('No matches found at all');
 }
 ```
 
@@ -817,13 +829,13 @@ The Weather Forecaster: Intelligent Dialogue Between Conditional Statements and 
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Weather Forecast</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Weather Forecast</title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -832,58 +844,58 @@ The Weather Forecaster: Intelligent Dialogue Between Conditional Statements and 
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Weather Forecast</title>
-<style>
-body {
-font-family: 'Arial', sans-serif;
-max-width: 600px;
-margin: 0 auto;
-padding: 20px;
-background-color: #f5f5f5;
-}
-.weather-card {
-background: white;
-border-radius: 10px;
-padding: 20px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-text-align: center;
-}
-.weather-icon {
-font-size: 48px;
-margin: 10px 0;
-}
-.temp {
-font-size: 24px;
-font-weight: bold;
-color: #333;
-}
-.details {
-color: #666;
-margin: 15px 0;
-}
-.advice {
-margin-top: 20px;
-padding: 15px;
-border-left: 4px solid #4CAF50;
-background-color: #f8f9fa;
-}
-.footer {
-margin-top: 20px;
-font-style: italic;
-color: #888;
-font-size: 0.9em;
-}
-</style>
-</head>
-<body>
-<div class="weather-card">
-<h1>Weather Forecaster</h1>
-<div class="weather-icon">🌧️</div>
-<div class="temp" id="temp"></div>
-<div class="details">
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Weather Forecast</title>
+    <style>
+      body {
+      font-family: 'Arial', sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      }
+      .weather-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      }
+      .weather-icon {
+      font-size: 48px;
+      margin: 10px 0;
+      }
+      .temp {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      }
+      .details {
+      color: #666;
+      margin: 15px 0;
+      }
+      .advice {
+      margin-top: 20px;
+      padding: 15px;
+      border-left: 4px solid #4CAF50;
+      background-color: #f8f9fa;
+      }
+      .footer {
+      margin-top: 20px;
+      font-style: italic;
+      color: #888;
+      font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="weather-card">
+      <h1>Weather Forecaster</h1>
+      <div class="weather-icon">🌧️</div>
+      <div class="temp" id="temp"></div>
+      <div class="details">
 ```
 
 Humidity: 40% |
@@ -892,33 +904,33 @@ Wind Speed: 10 km/h
 ```html
 </div>
 <div class="advice">
-<h3>💡 Life Advice for Today:</h3>
-<p>Footprints in the snow are like the choices in your life—every single step counts.</p>
+  <h3>💡 Life Advice for Today:</h3>
+  <p>Footprints in the snow are like the choices in your life—every single step counts.</p>
 </div>
 <div class="footer">
-<p>Rainy days are not the end, but the sky teaching you: how to walk forward gracefully with an umbrella.</p>
+  <p>Rainy days are not the end, but the sky teaching you: how to walk forward gracefully with an umbrella.</p>
 </div>
 </div>
 <script>
-let city = "Rainy";
-let citys = "";
-switch (city) {
-case 'Sunny':
-citys = 'Current Weather: <span style="text-transform: capitalize;">$city</span><br>'
-citys = 'Temperature: 30°C'
-break;
-case 'Rainy':
-citys = "P.S. Remember to bring an umbrella, otherwise your plans might get 'rained' on (and you might catch a cold)\n";
-break;
-case 'Cloudy':
-citys = "P.S. Cloudy days are perfect for pondering life's big questions—like: What should I have for lunch?\n";
-break;
-case 'Thunderstorm':
-citys = "P.S. If you hear thunder, that's the weather jamming to rock music\n";
-break;
-}
-let temps = document.getElementById("temp");
-temps.innerHTML = citys;
+  let city = "Rainy";
+  let citys = "";
+  switch (city) {
+  case 'Sunny':
+  citys = 'Current Weather: <span style="text-transform: capitalize;">$city</span><br>'
+  citys = 'Temperature: 30°C'
+  break;
+  case 'Rainy':
+  citys = "P.S. Remember to bring an umbrella, otherwise your plans might get 'rained' on (and you might catch a cold)\n";
+  break;
+  case 'Cloudy':
+  citys = "P.S. Cloudy days are perfect for pondering life's big questions—like: What should I have for lunch?\n";
+  break;
+  case 'Thunderstorm':
+  citys = "P.S. If you hear thunder, that's the weather jamming to rock music\n";
+  break;
+  }
+  let temps = document.getElementById("temp");
+  temps.innerHTML = citys;
 </script>
 </body>
 </html>
@@ -930,9 +942,11 @@ temps.innerHTML = citys;
 
 ### 13.5.1 Task Description
 The problem of how long it takes a frog to jump out of a well contains the content we need to learn. We simulate the frog’s daily jumping process using loops. To solve this problem, we must master the for loop in JavaScript for fixed-step iteration scenarios. The page effect is shown in Figure 13-7.
-![Image](../../assets/images/project-13/image-007.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-007.png" alt="Image">
+</p>
 
-_Figure 13-7 The Problem: How Long Does It Take a Frog to Jump Out of a Well_
+<p align="center"><em>Figure 13-7 The Problem: How Long Does It Take a Frog to Jump Out of a Well</em></p>
 
 ### 13.5.2 Knowledge Preparation
 
@@ -953,7 +967,7 @@ Example 1: Output 100 asterisks on the page.
 
 ```js
 for(let i = 0;i < 100; i++){
-document.wirte('*');
+  document.wirte('*');
 }
 ```
 
@@ -962,12 +976,12 @@ Example 2: Output numbers from 1 to 100
 
 ```js
 for(let i = 1; i <= 100;i++){
-console.log(i);
+  console.log(i);
 }
 值Example 3: Calculate the sum from 1 to 50
 let sum = 0;
 for(let i = 1;i <= 50;i++){
-Sum += i;
+  Sum += i;
 }
 console.log(sum);
 ```
@@ -988,8 +1002,8 @@ It evaluates the condition first and then executes. The JavaScript statements ru
 ```js
 let i = 0;
 while (i < 10) {
-console.log('The number is ' + i);
-i++;
+  console.log('The number is ' + i);
+  i++;
 }
 ```
 
@@ -1001,13 +1015,13 @@ The problem of how long it takes a frog to jump out of a well is divided into th
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Frog jumping well simulation</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Frog jumping well simulation</title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -1016,61 +1030,61 @@ The problem of how long it takes a frog to jump out of a well is divided into th
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Frog jumping well simulation</title>
-<style>
-body {
-font-family: 'Arial', sans-serif;
-background-color: #f8f9fa;
-margin: 0;
-padding: 20px;
-}
-.container {
-max-width: 600px;
-margin: 0 auto;
-background-color: white;
-padding: 20px;
-border-radius: 8px;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #2c3e50;
-text-align: center;
-margin-bottom: 20px;
-}
-</style>
-</head>
-<body>
-<div class="container">
-<h1>How long can a frog jump out of the bottom of a well</h1>
-<div id="welldata"></div>
-</div>
-<script>
-// How long can a frog jump out of the bottom of a well
-let wellDepth = 10;    // Well depth of 10 meters
-let jumpHeight = 3;    // Jump 3 meters every day
-let position = 0;  // Initial position at the bottom of the well
-let wellstr = "";
-wellstr = `<p style='color: #34495e; text-align: center;'>well depth: <strong>${wellDepth}rice</strong>, Jumping height every day: <strong>${jumpHeight}rice</strong></p>`;
-for (let days = 1; position < wellDepth; days++) {
-position += jumpHeight;
-// Set different styles based on whether they jump out of the wellhead or not
-if (position >= wellDepth) {
-wellstr += "<div style='padding: 10px; margin: 5px 0; background-color: #d4edda; color: #155724; border-left: 4px solid #28a745;'>";
-wellstr += `<strong>Day ${days}：</strong> The frog jumped onto<strong>${position}rice</strong> - Successfully jumped out of the wellhead！`;
-wellstr += "</div>";
-} else {
-wellstr += "<div style='padding: 10px; margin: 5px 0; background-color: #e2e3e5; color: #4a4a4a; border-left: 4px solid #6c757d;'>";
-wellstr += `<strong>Day${days}：</strong> The frog jumped onto${position}rice`;
-wellstr += "</div>";
-}
-}
-document.getElementById('welldata').innerHTML = wellstr
-</script>
-</body>
-</html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Frog jumping well simulation</title>
+    <style>
+      body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+      }
+      .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>How long can a frog jump out of the bottom of a well</h1>
+      <div id="welldata"></div>
+    </div>
+    <script>
+      // How long can a frog jump out of the bottom of a well
+      let wellDepth = 10;    // Well depth of 10 meters
+      let jumpHeight = 3;    // Jump 3 meters every day
+      let position = 0;  // Initial position at the bottom of the well
+      let wellstr = "";
+      wellstr = `<p style='color: #34495e; text-align: center;'>well depth: <strong>${wellDepth}rice</strong>, Jumping height every day: <strong>${jumpHeight}rice</strong></p>`;
+      for (let days = 1; position < wellDepth; days++) {
+      position += jumpHeight;
+      // Set different styles based on whether they jump out of the wellhead or not
+      if (position >= wellDepth) {
+      wellstr += "<div style='padding: 10px; margin: 5px 0; background-color: #d4edda; color: #155724; border-left: 4px solid #28a745;'>";
+        wellstr += `<strong>Day ${days}：</strong> The frog jumped onto<strong>${position}rice</strong> - Successfully jumped out of the wellhead！`;
+        wellstr += "</div>";
+        } else {
+        wellstr += "<div style='padding: 10px; margin: 5px 0; background-color: #e2e3e5; color: #4a4a4a; border-left: 4px solid #6c757d;'>";
+          wellstr += `<strong>Day${days}：</strong> The frog jumped onto${position}rice`;
+          wellstr += "</div>";
+          }
+          }
+          document.getElementById('welldata').innerHTML = wellstr
+        </script>
+      </body>
+    </html>
 ```
 
 #### Step 3: Run the index.html file to view the effect.
@@ -1079,9 +1093,11 @@ document.getElementById('welldata').innerHTML = wellstr
 
 ### 13.6.1 Task Description
 The music chart example covers the content we need to learn. Through this music chart case, we understand the application of arrays, retrieve data via arrays, and display the song rankings (1st to 5th places), song names and artist information. To implement a music chart, you need to master the application of arrays in JavaScript. The page effect is shown in Figure 13-8.
-![Image](../../assets/images/project-13/image-008.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-008.png" alt="Image">
+</p>
 
-_Figure 13-8 Music Chart_
+<p align="center"><em>Figure 13-8 Music Chart</em></p>
 
 ### 13.6.2 Knowledge Preparation
 
@@ -1100,7 +1116,9 @@ The second statement declares an array using the new keyword, which also stores 
 
 #### 2. Accessing Array Elements
 An array can store multiple pieces of data, each stored in a separate element. Each element has a number called an index (or subscript). Indexes start at 0 and increase sequentially, as shown in Figure 13‑9.
-![Image](../../assets/images/project-13/image-009.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-009.png" alt="Image">
+</p>
 
 Figure 13‑9 Array Structure
 The array arr3 has four elements, so its length is 4.
@@ -1135,7 +1153,7 @@ console.log(arr[0]);
 console.log(arr[1]);
 // Using loop
 for (var i = 0; i < arr.length; i++) {
-console.log(arr[i]);
+  console.log(arr[i]);
 }
 ```
 
@@ -1150,13 +1168,13 @@ The "Music Chart" task is divided into the following three steps, as detailed be
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Music Chart</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Music Chart</title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -1165,138 +1183,138 @@ The "Music Chart" task is divided into the following three steps, as detailed be
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Music Chart</title>
-<style>
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-margin: 0;
-padding: 20px;
-min-height: 100vh;
-}
-.container {
-max-width: 800px;
-margin: 30px auto;
-background: white;
-border-radius: 15px;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-overflow: hidden;
-}
-h1 {
-background: linear-gradient(135deg, #6e8efb, #a777e3);
-color: white;
-padding: 25px;
-margin: 0;
-text-align: center;
-font-weight: 600;
-}
-.chart-container {
-padding: 20px;
-}
-.song-item {
-display: flex;
-align-items: center;
-padding: 18px 25px;
-border-bottom: 1px solid #eee;
-transition: all 0.3s ease;
-position: relative;
-}
-.song-item:last-child {
-border-bottom: none;
-}
-.song-item:hover {
-background-color: #f8f9ff;
-transform: translateX(10px);
-}
-.rank {
-font-size: 1.4em;
-font-weight: bold;
-color: #a777e3;
-width: 50px;
-text-align: center;
-}
-.song-info {
-flex: 1;
-padding: 0 15px;
-}
-.song-title {
-font-weight: 600;
-margin-bottom: 5px;
-color: #333;
-}
-.song-artist {
-color: #777;
-font-size: 0.95em;
-}
-.plays {
-width: 150px;
-text-align: right;
-color: #6e8efb;
-font-weight: 500;
-}
-.play-icon {
-margin-right: 12px;
-color: #a777e3;
-font-size: 1.1em;
-}
-.chart-header {
-display: flex;
-padding: 15px 25px;
-background-color: #f8f9ff;
-font-weight: 600;
-color: #555;
-border-bottom: 1px solid #eee;
-}
-</style>
-</head>
-<body>
-<div class="container">
-<h1>Top Music Chart</h1>
-<div class="chart-container">
-<div class="chart-header">
-<div class="rank">#</div>
-<div class="song-info">Song Info</div>
-<div class="plays">Plays</div>
-</div>
-<div id="song-item">
-</div>
-</div>
-</div>
-<script>
-let musicList = [
-{'title' : 'Taylor Swift', 'artist' : 'Sunny Days', 'plays' : 2500000},
-{'title' : 'Miley Cyrus', 'artist' : 'Midnight Riders', 'plays' : 1800000},
-{'title' : 'Ocean Breeze', 'artist' : 'Coastal Waves', 'plays' : 1500000},
-{'title' : 'Mountain High', 'artist' : 'Peak Seekers', 'plays' : 1200000},
-{'title' : 'City Lights', 'artist' : 'Urban Dreams', 'plays' : 900000},
-];
-let songitemstr = "";
-musicList.forEach((item,index) => {
-songitemstr += `
-<div class="song-item">
-<div class="rank">
-${index + 1}
-</div>
-<div class="song-info">
-<div class="song-title">
-${item.title}
-</div>
-<div class="song-artist">
-${item.artist}
-</div>
-</div>
-<div class="plays">
-${item.plays}times
-</div>
-</div>
-`
-});
-document.getElementById("song-item").innerHTML = songitemstr
-</script>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Music Chart</title>
+    <style>
+      body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      }
+      .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      }
+      h1 {
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white;
+      padding: 25px;
+      margin: 0;
+      text-align: center;
+      font-weight: 600;
+      }
+      .chart-container {
+      padding: 20px;
+      }
+      .song-item {
+      display: flex;
+      align-items: center;
+      padding: 18px 25px;
+      border-bottom: 1px solid #eee;
+      transition: all 0.3s ease;
+      position: relative;
+      }
+      .song-item:last-child {
+      border-bottom: none;
+      }
+      .song-item:hover {
+      background-color: #f8f9ff;
+      transform: translateX(10px);
+      }
+      .rank {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #a777e3;
+      width: 50px;
+      text-align: center;
+      }
+      .song-info {
+      flex: 1;
+      padding: 0 15px;
+      }
+      .song-title {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #333;
+      }
+      .song-artist {
+      color: #777;
+      font-size: 0.95em;
+      }
+      .plays {
+      width: 150px;
+      text-align: right;
+      color: #6e8efb;
+      font-weight: 500;
+      }
+      .play-icon {
+      margin-right: 12px;
+      color: #a777e3;
+      font-size: 1.1em;
+      }
+      .chart-header {
+      display: flex;
+      padding: 15px 25px;
+      background-color: #f8f9ff;
+      font-weight: 600;
+      color: #555;
+      border-bottom: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Top Music Chart</h1>
+      <div class="chart-container">
+        <div class="chart-header">
+          <div class="rank">#</div>
+          <div class="song-info">Song Info</div>
+          <div class="plays">Plays</div>
+        </div>
+        <div id="song-item">
+        </div>
+      </div>
+    </div>
+    <script>
+      let musicList = [
+      {'title' : 'Taylor Swift', 'artist' : 'Sunny Days', 'plays' : 2500000},
+      {'title' : 'Miley Cyrus', 'artist' : 'Midnight Riders', 'plays' : 1800000},
+      {'title' : 'Ocean Breeze', 'artist' : 'Coastal Waves', 'plays' : 1500000},
+      {'title' : 'Mountain High', 'artist' : 'Peak Seekers', 'plays' : 1200000},
+      {'title' : 'City Lights', 'artist' : 'Urban Dreams', 'plays' : 900000},
+      ];
+      let songitemstr = "";
+      musicList.forEach((item,index) => {
+      songitemstr += `
+      <div class="song-item">
+        <div class="rank">
+          ${index + 1}
+        </div>
+        <div class="song-info">
+          <div class="song-title">
+            ${item.title}
+          </div>
+          <div class="song-artist">
+            ${item.artist}
+          </div>
+        </div>
+        <div class="plays">
+          ${item.plays}times
+        </div>
+      </div>
+      `
+      });
+      document.getElementById("song-item").innerHTML = songitemstr
+    </script>
+  </body>
 </html>
 ```
 
@@ -1306,7 +1324,9 @@ document.getElementById("song-item").innerHTML = songitemstr
 
 ### 13.7.1 Task Description
 The "Simple Calculator" example covers the content we need to learn. Through this simple calculator project, we understand the declaration and invocation of functions. After the user enters the first number, the second number, and an operator, the result will be displayed on the page. To implement a simple calculator, you need to master the application of functions in JavaScript. The page effect is shown in Figure 13‑10.
-![Image](../../assets/images/project-13/image-010.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-010.png" alt="Image">
+</p>
 
 Figure 13‑10 Simple Calculator
 
@@ -1319,8 +1339,8 @@ Basic format:
 
 ```js
 function functionName([parameter1, parameter2, ...]) {
-// JavaScript statements
-[return [returnValue];]
+  // JavaScript statements
+  [return [returnValue];]
 }
 ```
 
@@ -1337,7 +1357,7 @@ Example:
 
 ```css
 function sayHello(name){
-alert('Hello:' + name);
+  alert('Hello:' + name);
 }
 ```
 
@@ -1352,7 +1372,7 @@ There is another way to declare a function: store the function body in a variabl
 ```js
 // Declare a variable to store a function body
 let add = function(a, b) {
-return a + b;
+  return a + b;
 };
 // Calling method
 add(10, 20);
@@ -1365,20 +1385,20 @@ Scope refers to the area where a variable takes effect. In JavaScript, there are
 
 ```html
 <script>
-// Variables declared within a <script> tag are called global variables, which take effect throughout the entire scope of the <script> tag
-// Therefore, this variable can also be used directly inside a function
-var username = 'admin';
-function fn () {
-console.log(username);
-}
-</script>
+  // Variables declared within a <script> tag are called global variables, which take effect throughout the entire scope of the <script> tag
+      // Therefore, this variable can also be used directly inside a function
+      var username = 'admin';
+      function fn () {
+      console.log(username);
+      }
+    </script>
 ```
 
 ##### (2) Local Scope: Variables declared inside a function body are only valid within that function body.
 
 ```js
 function myFunc () {
-password = "123456";
+  password = "123456";
 }
 myFunc();
 // password is defined inside the myFunc function and is a local variable.
@@ -1394,13 +1414,13 @@ The "Simple Calculator" task is divided into the following three steps, as detai
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Simple Calculator</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -1409,39 +1429,39 @@ The "Simple Calculator" task is divided into the following three steps, as detai
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Simple Calculator</title>
-</head>
-<body>
-<script>
-var num1 = prompt('Please enter the first number:');
-var opt = prompt('Please enter the operator:');
-var num2 = prompt('Please enter the second number:');
-function calculate(x, y, opt) {
-var result;
-switch (opt) {
-case '+':
-result = parseFloat(x) + parseFloat(y);
-break;
-case '-':
-result = x - y;
-break;
-case '*':
-result = x * y;
-break;
-case '/':
-result = x / y;
-break;
-}
-document.write('<h3>result:</h3>');
-document.write(x + opt + y + '=' + result);
-}
-// call a function
-calculate(num1, num2, opt);
-</script>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <script>
+      var num1 = prompt('Please enter the first number:');
+      var opt = prompt('Please enter the operator:');
+      var num2 = prompt('Please enter the second number:');
+      function calculate(x, y, opt) {
+      var result;
+      switch (opt) {
+      case '+':
+      result = parseFloat(x) + parseFloat(y);
+      break;
+      case '-':
+      result = x - y;
+      break;
+      case '*':
+      result = x * y;
+      break;
+      case '/':
+      result = x / y;
+      break;
+      }
+      document.write('<h3>result:</h3>');
+      document.write(x + opt + y + '=' + result);
+      }
+      // call a function
+      calculate(num1, num2, opt);
+    </script>
+  </body>
 </html>
 ```
 
@@ -1451,9 +1471,11 @@ calculate(num1, num2, opt);
 
 ### 13.8.1 Task Description
 The "Smart Lighting" case covers the content we need to learn. Brightness adjustment (range 0–100) is realized by dragging the slider and clicking buttons. The system adopts a modular design: the state management module maintains the current brightness value and handles boundary verification; the input control module listens to the real-time input event of the slider and the click event of the buttons to implement continuous adjustment and step adjustment respectively; the UI synchronization module automatically updates the value display and slider position when the state changes, ensuring the three states are consistent. The page effect is shown in Figure 13‑11.
-![Image](../../assets/images/project-13/image-011.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-011.png" alt="Image">
+</p>
 
-_Figure 13-11 Lighting Control_
+<p align="center"><em>Figure 13-11 Lighting Control</em></p>
 
 ### 13.8.2 Knowledge Preparation
 
@@ -1462,9 +1484,11 @@ An object is a collection of properties and methods used to describe a thing.
 For example, to describe a mobile phone product:
 A mobile phone has basic parameters such as brand, color, size, and weight, as well as functions like making calls, playing games, listening to music, and watching videos.
 Generally, these basic parameters can be represented by properties, and functions can be defined by methods, as shown in Figure 13-12 below:
-![Image](../../assets/images/project-13/image-012.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-012.png" alt="Image">
+</p>
 
-_Figure 13-12 Object_
+<p align="center"><em>Figure 13-12 Object</em></p>
 Another important concept in JavaScript is that everything is an object. This means that everything is an object—strings, arrays, numbers, and so on can all be regarded as objects.
 There are three ways to create objects in JavaScript: object literal, new Object(), and constructor functions. We will introduce each of them below.
 
@@ -1476,14 +1500,14 @@ The following example uses an object to describe a mobile phone product:
 
 ```css
 let phone = {
-brand: 'AIWA',
-color: 'Charming Red',
-hardware: {
-mem: '512G'
-},
-tel: function (num) {
-console.log('Calling ' + num + ' now');
-}
+  brand: 'AIWA',
+  color: 'Charming Red',
+  hardware: {
+    mem: '512G'
+  },
+  tel: function (num) {
+    console.log('Calling ' + num + ' now');
+  }
 };
 ```
 
@@ -1507,11 +1531,11 @@ Inside an object, to access the object's own properties and methods, you must us
 
 ```css
 var userInfo = {
-username: 'admin',
-show: function () {
-// The value of the username property in the object is called here, so "this" must be used
-console.log('Welcome back, respected administrator: ' + this.username);
-}
+  username: 'admin',
+  show: function () {
+    // The value of the username property in the object is called here, so "this" must be used
+    console.log('Welcome back, respected administrator: ' + this.username);
+  }
 };
 userInfo.show();     // Welcome back, respected administrator: admin
 ```
@@ -1523,9 +1547,9 @@ After the constructor function is declared, you need to use the new keyword to i
 ```js
 // Constructor function
 function Hero (heroNme, gender, age) {
-this.heroName = heroName;
-this.gender = gender;
-this.age = age;
+  this.heroName = heroName;
+  this.gender = gender;
+  this.age = age;
 }
 // Instantiate an object using the "new" keyword
 var h = new Hero('Jax', 'Male', 30);
@@ -1541,13 +1565,13 @@ The "Lighting Control" task is divided into the following four steps, as detaile
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Living room lighting control</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Living room lighting control</title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
@@ -1556,80 +1580,80 @@ The "Lighting Control" task is divided into the following four steps, as detaile
 ```html
 <!DOCTYPE html>
 <html lang='zh-CN'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Living room lighting control</title>
-<style>
-body {
-background: #f0f2f5;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-margin: 0;
-font-family: Arial, sans-serif;
-}
-.control-panel {
-background: white;
-padding: 30px;
-border-radius: 15px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-text-align: center;
-width: 320px;
-}
-h2 {
-color: #3a86ff;
-margin-bottom: 20px;
-}
-.slider {
-width: 100%;
-height: 8px;
--webkit-appearance: none;
-background: #e0e0e0;
-border-radius: 4px;
-outline: none;
-margin: 25px 0;
-}
-.slider::-webkit-slider-thumb {
--webkit-appearance: none;
-width: 24px;
-height: 24px;
-border-radius: 50%;
-background: #3a86ff;
-cursor: pointer;
-}
-.value {
-font-size: 28px;
-font-weight: bold;
-color: #3a86ff;
-margin: 15px 0;
-}
-.btn {
-padding: 10px 20px;
-border: none;
-border-radius: 8px;
-background: #3a86ff;
-color: white;
-font-weight: bold;
-cursor: pointer;
-margin: 0 5px;
-}
-.btn:hover {
-background: #2a6ddf;
-}
-</style>
-</head>
-<body>
-<div class="control-panel">
-<h2>Living room lighting control</h2>
-<input type="range" min="0" max="100" value="50" class="slider"
-oninput="document.getElementById('val').textContent=this.value">
-<div class="value" id="val">50</div>
-<button class="btn" onclick="setBrightness(parseInt(document.getElementById('val').textContent)-10)">-</button>
-<button class="btn" onclick="setBrightness(parseInt(document.getElementById('val').textContent)+10)">+</button>
-</div>
-</body>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Living room lighting control</title>
+    <style>
+      body {
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      }
+      .control-panel {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 320px;
+      }
+      h2 {
+      color: #3a86ff;
+      margin-bottom: 20px;
+      }
+      .slider {
+      width: 100%;
+      height: 8px;
+      -webkit-appearance: none;
+      background: #e0e0e0;
+      border-radius: 4px;
+      outline: none;
+      margin: 25px 0;
+      }
+      .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #3a86ff;
+      cursor: pointer;
+      }
+      .value {
+      font-size: 28px;
+      font-weight: bold;
+      color: #3a86ff;
+      margin: 15px 0;
+      }
+      .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #3a86ff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0 5px;
+      }
+      .btn:hover {
+      background: #2a6ddf;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="control-panel">
+      <h2>Living room lighting control</h2>
+      <input type="range" min="0" max="100" value="50" class="slider"
+      oninput="document.getElementById('val').textContent=this.value">
+      <div class="value" id="val">50</div>
+      <button class="btn" onclick="setBrightness(parseInt(document.getElementById('val').textContent)-10)">-</button>
+      <button class="btn" onclick="setBrightness(parseInt(document.getElementById('val').textContent)+10)">+</button>
+    </div>
+  </body>
 </html>
 ```
 
@@ -1637,12 +1661,12 @@ oninput="document.getElementById('val').textContent=this.value">
 
 ```html
 <script>
-function setBrightness(value) {
-if(value < 0) value = 0;
-if(value > 100) value = 100;
-document.querySelector('.slider').value = value;
-document.getElementById('val').textContent = value;
-}
+  function setBrightness(value) {
+  if(value < 0) value = 0;
+  if(value > 100) value = 100;
+  document.querySelector('.slider').value = value;
+  document.getElementById('val').textContent = value;
+  }
 </script>
 ```
 
@@ -1655,7 +1679,9 @@ In this practical project, you will create a fractal triangle for a mini speed t
 
 ### 13.9.2 Effect Display
 The effect of the fractal triangle is shown in Figure 13‑13.
-![Image](../../assets/images/project-13/image-013.png)
+<p align="center">
+  <img src="../../assets/images/project-13/image-013.png" alt="Image">
+</p>
 
 Figure 13‑13 Fractal Triangle
 
@@ -1668,17 +1694,17 @@ The code is as follows:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Document</title>
-</head>
-<body>
-<canvas width="800" height="800"></canvas>
-<input type="number" id="maxNumberInput">
-<button onclick="draw()">Draw</button>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas width="800" height="800"></canvas>
+    <input type="number" id="maxNumberInput">
+    <button onclick="draw()">Draw</button>
+  </body>
 </html>
 ```
 
@@ -1688,37 +1714,37 @@ The code is as follows:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Document</title>
-<style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body {
-height: 100vh;
-background: #dddddd;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-canvas {
-background: #fff;
-}
-input {
-margin-left: 2rem;
-}
-</style>
-</head>
-<body>
-<canvas width="800" height="800"></canvas>
-<input type="number" id="maxNumberInput">
-<button onclick="draw()">Draw</button>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+      body {
+      height: 100vh;
+      background: #dddddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+      canvas {
+      background: #fff;
+      }
+      input {
+      margin-left: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="800" height="800"></canvas>
+    <input type="number" id="maxNumberInput">
+    <button onclick="draw()">Draw</button>
+  </body>
 </html>
 ```
 
@@ -1727,35 +1753,35 @@ The code is as follows:
 
 ```html
 <script>
-const cSize = 800;
-function draw(){
-const maxCount = document.querySelector("#maxNumberInput").value;
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
-ctx.clearRect(0, 0, cSize, cSize);
-ctx.moveTo(cSize / 2, 0);//top vertex
-ctx.lineTo(cSize, cSize);//bottom right vertex
-ctx.lineTo(0, cSize);//lower left vertex
-ctx.fillStyle = "black";
-ctx.fill();//Fill with black background
-//Start recursive drawing
-ctx.fillStyle = "white";
-function repeat(x, y, size, count) {
-//Recursion termination condition: Exceeding the maximum number of iterations
-if(++count > maxCount) return;
-//Draw an inverted small triangle
-ctx.beginPath();
-ctx.moveTo(x - size / 2, y - size);//apex
-ctx.lineTo(x + size / 2, y - size);//upper right vertex
-ctx.lineTo(x, y);//lower vertex
-ctx.fill();//fill white
-//Three-direction recursion (up, left-down, right-down)
-repeat(x, y - size, size / 2, count);//above
-repeat(x - size/2, y, size / 2, count);//lower left
-repeat(x + size/2, y, size / 2, count);//lower right
-}
-//Start from the bottom center
-repeat(cSize / 2, cSize, cSize / 2, 0);
-}
+  const cSize = 800;
+  function draw(){
+  const maxCount = document.querySelector("#maxNumberInput").value;
+  const canvas = document.querySelector("canvas");
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, cSize, cSize);
+  ctx.moveTo(cSize / 2, 0);//top vertex
+  ctx.lineTo(cSize, cSize);//bottom right vertex
+  ctx.lineTo(0, cSize);//lower left vertex
+  ctx.fillStyle = "black";
+  ctx.fill();//Fill with black background
+  //Start recursive drawing
+  ctx.fillStyle = "white";
+  function repeat(x, y, size, count) {
+  //Recursion termination condition: Exceeding the maximum number of iterations
+  if(++count > maxCount) return;
+  //Draw an inverted small triangle
+  ctx.beginPath();
+  ctx.moveTo(x - size / 2, y - size);//apex
+  ctx.lineTo(x + size / 2, y - size);//upper right vertex
+  ctx.lineTo(x, y);//lower vertex
+  ctx.fill();//fill white
+  //Three-direction recursion (up, left-down, right-down)
+  repeat(x, y - size, size / 2, count);//above
+  repeat(x - size/2, y, size / 2, count);//lower left
+  repeat(x + size/2, y, size / 2, count);//lower right
+  }
+  //Start from the bottom center
+  repeat(cSize / 2, cSize, cSize / 2, 0);
+  }
 </script>
 ```

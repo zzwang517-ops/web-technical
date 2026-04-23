@@ -15,9 +15,11 @@ In the WorldSkills photo slideshow project based on Vue 3, we will systematicall
 
 ### 20.1.1 Task Description
 In the interactive weather query application built with Vue 3, users can enter a city name in the search box to trigger asynchronous requests in real time and obtain weather data. The application uses the reactive features of Vue 3 to dynamically render key information such as temperature, humidity and wind speed, and displays weather icons (sunny, rainy, etc.) with conditional rendering. The effect of the case is shown in Figure 20-1.
-![Image](../../assets/images/project-20/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-20/image-001.png" alt="Image">
+</p>
 
-_Figure 20-1 Interactive Weather Query_
+<p align="center"><em>Figure 20-1 Interactive Weather Query</em></p>
 
 ### 20.1.2 Knowledge Preparation
 In this section, Vue.js provides some commonly used built-in directives. These built-in directives vary in usage scenarios and complexity, so for the purposes of this chapter, the simple ones among the built-in directives are collectively referred to as basic directives. They are as follows:
@@ -58,8 +60,8 @@ The v-for directive is used to iterate over arrays and objects, and its expressi
 </template>
 <script setup>
 const weatherDate = {
-"BeiJing":{},
-"Shanghai":{}
+  "BeiJing":{},
+  "Shanghai":{}
 }
 </script>
 ```
@@ -78,9 +80,9 @@ The above example iterates over the keys of the weatherData object (such as "Bei
 </template>
 <script setup>
 const items = [
-{ id: 1, name: 'Zhao Si' },
-{ id: 2, name: 'Song Xiaobao' },
-{ id: 3, name: 'Jack' }
+  { id: 1, name: 'Zhao Si' },
+  { id: 2, name: 'Song Xiaobao' },
+  { id: 3, name: 'Jack' }
 ```
 
 ]&lt;/script&gt;
@@ -101,9 +103,9 @@ items: The array to be traversed.
 </template>
 <script setup>
 const user = {
-name: 'Li Si',
-age: 30,
-occupation: 'Actor'
+  name: 'Li Si',
+  age: 30,
+  occupation: 'Actor'
 }
 </script>
 ```
@@ -226,15 +228,15 @@ The core of a Vue 3 component is the setup function. In this function, you can u
 ```js
 import { ref } from 'vue';
 export default {
-setup() {
-const count = ref(0);
-function increment() {
-count.value++;
-}
-return {
-count,
-increment
-};
+  setup() {
+    const count = ref(0);
+    function increment() {
+      count.value++;
+    }
+  return {
+    count,
+    increment
+  };
 }
 }
 ```
@@ -244,8 +246,8 @@ Creates a reactive reference object used to store primitive types (such as strin
 
 ```html
 <script setup>
-import {ref,computed} from "vue"
-const selectedCity = ref("BeiJing")
+  import {ref,computed} from "vue"
+  const selectedCity = ref("BeiJing")
 </script>
 ```
 
@@ -256,8 +258,8 @@ computed returns a lazily evaluated computed property, which recalculates only w
 
 ```html
 <script setup>
-import {ref,computed} from "vue"
-const currentWeather = computed(() => weatherData[selectedCity.value].current)
+  import {ref,computed} from "vue"
+  const currentWeather = computed(() => weatherData[selectedCity.value].current)
 </script>
 ```
 
@@ -265,8 +267,8 @@ When selectedCity changes, the real-time weather data of the corresponding city 
 
 ```html
 <script setup>
-import {ref,computed} from "vue"
-const forecast = computed(() => weatherData[selectedCity.value].forecast)
+  import {ref,computed} from "vue"
+  const forecast = computed(() => weatherData[selectedCity.value].forecast)
 </script>
 ```
 
@@ -280,10 +282,10 @@ Only exists when Shanghai is selected (the Beijing data does not have a forecast
 import { ref, watch, watchEffect } from 'vue';
 const count = ref(0);
 watchEffect(() => {
-console.log(`Count is: ${count.value}`);
+  console.log(`Count is: ${count.value}`);
 });
 watch(count, (newValue, oldValue) => {
-console.log(`New value is: ${newValue}`);
+  console.log(`New value is: ${newValue}`);
 });
 ```
 
@@ -363,153 +365,153 @@ class="recommendation-card"
 
 ```html
 <style scoped>
-.weather-app {
---primary-color: #3498db;
---secondary-color: #2c3e50;
-max-width: 1200px;
-margin: 0 auto;
-padding: 1rem;
-font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-}
-.app-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem 0;
-border-bottom: 1px solid #eee;
-margin-bottom: 1.5rem;
-}
-.title {
-font-size: 2rem;
-color: var(--secondary-color);
-font-weight: 700;
-}
-.city-selector {
-position: relative;
-}
-.city-select {
-padding: 0.8rem 1rem;
-font-size: 1rem;
-border: 2px solid #e0e0e0;
-border-radius: 8px;
-background: white;
-box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-transition: all 0.3s;
-}
-.city-select:hover {
-border-color: var(--primary-color);
-box-shadow: 0 2px 10px rgba(52,152,219,0.2);
-}
-.main-content {
-display: grid;
-gap: 1.5rem;
-}
-.current-weather-card {
-background: linear-gradient(135deg, #43cea2, #185a9d);
-color: white;
-border-radius: 16px;
-padding: 1.5rem;
-text-align: center;
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-animation: fadeIn 0.5s ease-out;
-}
-@keyframes fadeIn {
-from { opacity: 0; transform: translateY(20px); }
-to { opacity: 1; transform: translateY(0); }
-}
-.temp-display {
-font-size: 3.5rem;
-font-weight: 700;
-line-height: 1;
-margin: 0.5rem 0;
-}
-.weather-status {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 0.5rem;
-margin-bottom: 1rem;
-}
-.weather-icon {
-font-size: 2rem;
-}
-.weather-text {
-font-size: 1.5rem;
-}
-.weather-details {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 1rem;
-}
-.detail-item {
-display: flex;
-flex-direction: column;
-}
-.detail-label {
-font-size: 0.9rem;
-opacity: 0.9;
-}
-.detail-value {
-font-weight: 600;
-font-size: 1.1rem;
-}
-.recommendations-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 1.5rem;
-}
-.recommendation-card {
-background: white;
-border-radius: 12px;
-padding: 1.5rem;
-text-align: center;
-box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-transition: all 0.3s;
-border-top: 4px solid var(--card-color, var(--primary-color));
-position: relative;
-overflow: hidden;
-}
-.recommendation-card::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-height: 4px;
-background: var(--card-color, var(--primary-color));
-}
-.recommendation-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
-.rec-icon {
-font-size: 3rem;
-margin-bottom: 1rem;
-color: var(--card-color, var(--primary-color));
-}
-.rec-title {
-font-size: 1.3rem;
-color: var(--secondary-color);
-margin-bottom: 0.5rem;
-font-weight: 600;
-}
-.rec-desc {
-color: #555;
-line-height: 1.5;
-}
-/* */
-@media (max-width: 768px) {
-.app-header {
-flex-direction: column;
-gap: 1rem;
-}
-.weather-details {
-grid-template-columns: 1fr;
-}
-.forecast-cards {
-grid-template-columns: repeat(2, 1fr);
-}
-}
+  .weather-app {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.5rem;
+  }
+  .title {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+  }
+  .city-selector {
+  position: relative;
+  }
+  .city-select {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+  }
+  .city-select:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 10px rgba(52,152,219,0.2);
+  }
+  .main-content {
+  display: grid;
+  gap: 1.5rem;
+  }
+  .current-weather-card {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease-out;
+  }
+  @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+  }
+  .temp-display {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.5rem 0;
+  }
+  .weather-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  }
+  .weather-icon {
+  font-size: 2rem;
+  }
+  .weather-text {
+  font-size: 1.5rem;
+  }
+  .weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  }
+  .detail-item {
+  display: flex;
+  flex-direction: column;
+  }
+  .detail-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  }
+  .detail-value {
+  font-weight: 600;
+  font-size: 1.1rem;
+  }
+  .recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  }
+  .recommendation-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+  border-top: 4px solid var(--card-color, var(--primary-color));
+  position: relative;
+  overflow: hidden;
+  }
+  .recommendation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-color, var(--primary-color));
+  }
+  .recommendation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  .rec-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--card-color, var(--primary-color));
+  }
+  .rec-title {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  }
+  .rec-desc {
+  color: #555;
+  line-height: 1.5;
+  }
+  /* */
+  @media (max-width: 768px) {
+  .app-header {
+  flex-direction: column;
+  gap: 1rem;
+  }
+  .weather-details {
+  grid-template-columns: 1fr;
+  }
+  .forecast-cards {
+  grid-template-columns: repeat(2, 1fr);
+  }
+  }
 </style>
 ```
 
@@ -517,81 +519,81 @@ grid-template-columns: repeat(2, 1fr);
 
 ```html
 <script setup>
-import {ref, computed} from "vue"
-const weatherData = {
-"Beijing": {
-"current": {
-"temp": 22,
-"weather": "Cloudy",
-"humidity": 45,
-"wind": "Northeast Wind Grade 2",
-"uvIndex": 4,
-"feelsLike": 20
-},
-"recommendations": {
-"clothing": {
-"description": "It is recommended to wear light and breathable clothing such as T-shirts and shorts. There is a large temperature difference between morning and evening, so you may prepare a thin coat.",
-"icon": './img/cy.png',
-"color": "#FF6B6B"
-},
-"sunProtection": {
-"description": "UV rays are relatively strong. It is recommended to apply sunscreen with SPF30+ and wear sunglasses and a sun hat.",
-"icon": "./img/gm.png",
-"color": "#FFD166"
-},
-"travel": {
-"description": "The weather is suitable for outdoor activities. It is recommended to visit scenic spots such as parks and historical sites.",
-"icon": "./img/ly.png",
-"color": "#4ECDC4"
-},
-"sports": {
-"description": "It is suitable for mild exercises such as morning jogging, yoga and cycling. Remember to replenish water.",
-"icon": "./img/yd.png",
-"color": "#1A535C"
-}
-}
-},
-"Shanghai": {
-"current": {
-"temp": 26,
-"weather": "Sunny",
-"humidity": 65,
-"wind": "Southeast Wind Grade 3",
-"uvIndex": 6,
-"feelsLike": 28
-},
-"forecast": [
-{"date": "2023-06-15", "weather": "Sunny", "temp": [27, 33], "uvIndex": 7, "wind": "South Wind Grade 2"},
-{"date": "2023-06-16", "weather": "Cloudy", "temp": [26, 31], "uvIndex": 4, "wind": "East Wind Grade 3"},
-{"date": "2023-06-17", "weather": "Thunder Shower", "temp": [25, 29], "uvIndex": 3, "wind": "North Wind Grade 2"},
-{"date": "2023-06-18", "weather": "Sunny", "temp": [26, 32], "uvIndex": 6, "wind": "Southwest Wind Grade 1"}
-],
-"recommendations": {
-"clothing": {
-"description": "It is recommended to wear sweat-absorbent and breathable cotton clothing, and prepare rain gear for possible showers.",
-"icon": "./img/xc.png",
-"color": "#6A4C93"
-},
-"sunProtection": {
-"description": "UV rays are strong. It is recommended to use sunscreen and wear a wide-brimmed hat and sunglasses.",
-"icon": "./img/fs.png",
-"color": "#FF9F1C"
-},
-"travel": {
-"description": "It is recommended to visit outdoor attractions such as the Bund and Yu Garden, and pay attention to sun protection and heatstroke prevention.",
-"icon": "./img/guoming.png",
-"color": "#2EC4B6"
-},
-"sports": {
-"description": "It is suitable for water sports such as swimming and sailing. Avoid exercising during the high-temperature period at noon.",
-"icon": "./img/dy.png",
-"color": "#E71D36"
-}
-}
-}
-}
-const selectedCity = ref('Beijing')
-// Computed property</script>
+  import {ref, computed} from "vue"
+  const weatherData = {
+  "Beijing": {
+  "current": {
+  "temp": 22,
+  "weather": "Cloudy",
+  "humidity": 45,
+  "wind": "Northeast Wind Grade 2",
+  "uvIndex": 4,
+  "feelsLike": 20
+  },
+  "recommendations": {
+  "clothing": {
+  "description": "It is recommended to wear light and breathable clothing such as T-shirts and shorts. There is a large temperature difference between morning and evening, so you may prepare a thin coat.",
+  "icon": './img/cy.png',
+  "color": "#FF6B6B"
+  },
+  "sunProtection": {
+  "description": "UV rays are relatively strong. It is recommended to apply sunscreen with SPF30+ and wear sunglasses and a sun hat.",
+  "icon": "./img/gm.png",
+  "color": "#FFD166"
+  },
+  "travel": {
+  "description": "The weather is suitable for outdoor activities. It is recommended to visit scenic spots such as parks and historical sites.",
+  "icon": "./img/ly.png",
+  "color": "#4ECDC4"
+  },
+  "sports": {
+  "description": "It is suitable for mild exercises such as morning jogging, yoga and cycling. Remember to replenish water.",
+  "icon": "./img/yd.png",
+  "color": "#1A535C"
+  }
+  }
+  },
+  "Shanghai": {
+  "current": {
+  "temp": 26,
+  "weather": "Sunny",
+  "humidity": 65,
+  "wind": "Southeast Wind Grade 3",
+  "uvIndex": 6,
+  "feelsLike": 28
+  },
+  "forecast": [
+  {"date": "2023-06-15", "weather": "Sunny", "temp": [27, 33], "uvIndex": 7, "wind": "South Wind Grade 2"},
+  {"date": "2023-06-16", "weather": "Cloudy", "temp": [26, 31], "uvIndex": 4, "wind": "East Wind Grade 3"},
+  {"date": "2023-06-17", "weather": "Thunder Shower", "temp": [25, 29], "uvIndex": 3, "wind": "North Wind Grade 2"},
+  {"date": "2023-06-18", "weather": "Sunny", "temp": [26, 32], "uvIndex": 6, "wind": "Southwest Wind Grade 1"}
+  ],
+  "recommendations": {
+  "clothing": {
+  "description": "It is recommended to wear sweat-absorbent and breathable cotton clothing, and prepare rain gear for possible showers.",
+  "icon": "./img/xc.png",
+  "color": "#6A4C93"
+  },
+  "sunProtection": {
+  "description": "UV rays are strong. It is recommended to use sunscreen and wear a wide-brimmed hat and sunglasses.",
+  "icon": "./img/fs.png",
+  "color": "#FF9F1C"
+  },
+  "travel": {
+  "description": "It is recommended to visit outdoor attractions such as the Bund and Yu Garden, and pay attention to sun protection and heatstroke prevention.",
+  "icon": "./img/guoming.png",
+  "color": "#2EC4B6"
+  },
+  "sports": {
+  "description": "It is suitable for water sports such as swimming and sailing. Avoid exercising during the high-temperature period at noon.",
+  "icon": "./img/dy.png",
+  "color": "#E71D36"
+  }
+  }
+  }
+  }
+  const selectedCity = ref('Beijing')
+  // Computed property</script>
 ```
 
 #### Step 4: Render data and implement city switching.
@@ -619,29 +621,29 @@ const currentWeather = computed(() => weatherData[selectedCity.value].current)
 ```html
 <!-- Real-time weather card -->
 <div class="current-weather-card">
-<div class="temp-display">{{ currentWeather.temp }}°</div>
-<div class="weather-status">
-<img class='weather-icon' src="../public/img/dy.png" style="width: 3rem;" />
-<div class="weather-text">{{ currentWeather.weather }}</div>
-</div>
-<div class="weather-details">
-<div class="detail-item">
-<span class="detail-label">Humidity</span>
-<div class="detail-value">{{ currentWeather.humidity }}%</div>
-</div>
-<div class="detail-item">
-<span class="detail-label">Wind</span>
-<div class="detail-value">{{ currentWeather.wind }}</div>
-</div>
-<div class="detail-item">
-<span class="detail-label">UV</span>
-<div class="detail-value">Index {{ currentWeather.uvIndex }}</div>
-</div>
-<div class="detail-item">
-<span class="detail-label">Feels Like</span>
-<div class="detail-value">{{ currentWeather.feelsLike }}°</div>
-</div>
-</div>
+  <div class="temp-display">{{ currentWeather.temp }}°</div>
+  <div class="weather-status">
+    <img class='weather-icon' src="../public/img/dy.png" style="width: 3rem;" />
+    <div class="weather-text">{{ currentWeather.weather }}</div>
+  </div>
+  <div class="weather-details">
+    <div class="detail-item">
+      <span class="detail-label">Humidity</span>
+      <div class="detail-value">{{ currentWeather.humidity }}%</div>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">Wind</span>
+      <div class="detail-value">{{ currentWeather.wind }}</div>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">UV</span>
+      <div class="detail-value">Index {{ currentWeather.uvIndex }}</div>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">Feels Like</span>
+      <div class="detail-value">{{ currentWeather.feelsLike }}°</div>
+    </div>
+  </div>
 </div>
 ```
 
@@ -653,23 +655,23 @@ const forecast = computed(() => weatherData[selectedCity.value].forecast)
 const recommendations = computed(() => weatherData[selectedCity.value].recommendations)
 // Tool function
 const formatDate = (dateStr) => {
-const date = new Date(dateStr)
-return `${date.getMonth() + 1}/${date.getDate()} Week${['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][date.getDay()]}`
+  const date = new Date(dateStr)
+  return `${date.getMonth() + 1}/${date.getDate()} Week${['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][date.getDay()]}`
 }
 const getRecTitle = (key) => {
-const titles = {
-clothing: 'Clothing Advice',
-sunProtection: 'Sun Protection Advice',
-travel: 'Travel Advice',
-sports: 'Sports Advice'
-}
+  const titles = {
+    clothing: 'Clothing Advice',
+    sunProtection: 'Sun Protection Advice',
+    travel: 'Travel Advice',
+    sports: 'Sports Advice'
+  }
 return titles[key] || key
 }
 const getForecastColor = (uvIndex) => {
-if (uvIndex >= 7) return '#FF6B6B'
-if (uvIndex >= 5) return '#FFD166'
-if (uvIndex >= 3) return '#4ECDC4'
-return '#1A535C'
+  if (uvIndex >= 7) return '#FF6B6B'
+  if (uvIndex >= 5) return '#FFD166'
+  if (uvIndex >= 3) return '#4ECDC4'
+  return '#1A535C'
 }
 ```
 
@@ -677,11 +679,11 @@ return '#1A535C'
 
 ```html
 <div class="recommendations-grid">
-<div v-for="(rec, key) in recommendations" :key="key" class="recommendation-card" :style="{ '--card-color': rec.color }">
-<img class='rec-icon' :src='rec.icon' />
-<div class="rec-title">{{ getRecTitle(key) }}</div>
-<div class="rec-desc">{{ rec.description }}</div>
-</div>
+  <div v-for="(rec, key) in recommendations" :key="key" class="recommendation-card" :style="{ '--card-color': rec.color }">
+    <img class='rec-icon' :src='rec.icon' />
+    <div class="rec-title">{{ getRecTitle(key) }}</div>
+    <div class="rec-desc">{{ rec.description }}</div>
+  </div>
 </div>
 ```
 
@@ -691,7 +693,9 @@ return '#1A535C'
 
 ### 20.2.1 Task Description
 A cinema ticket booking system implemented in Vue 3, adopting a reactive component architecture and animation transition effects. It supports users in dynamically selecting movie screenings, visual seat selection, and enhances interactive experience with gradient colors and micro-interaction effects, realizing a complete closed-loop ticket purchasing process from seat selection to payment. The effect of the case is shown in Figure 20-2.
-![Image](../../assets/images/project-20/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-20/image-002.png" alt="Image">
+</p>
 
 Figure 20‑2 Cinema Ticket Booking System
 
@@ -723,7 +727,7 @@ Inline statement: Execute simple JavaScript expressions directly
 
 ```html
 <form @submit.prevent="submitForm">
-<button type="submit">Submit</button>
+  <button type="submit">Submit</button>
 </form>
 ```
 
@@ -731,13 +735,13 @@ Inline statement: Execute simple JavaScript expressions directly
 
 ```html
 <form @submit.prevent="submitForm">
-<button type="submit">Submit</button>
+  <button type="submit">Submit</button>
 </form>
 .once: The event is triggered only once
 <button @click.once="alertOnce">Only prompt once</button>
 .capture: Handle the event in capture mode
 <div @click.capture="captureFirst">
-<button>Capture Mode</button>
+  <button>Capture Mode</button>
 </div>
 ```
 
@@ -747,10 +751,10 @@ Passing custom parameters: Pass additional parameters through inline statements 
 ```html
 <button @click="handleClick('Parameter', $event)">Click with Parameters</button>
 <script setup>
-const handleClick = (message, event) => {
-console.log(message); // Output: Parameter
-console.log(event); // Native Event object
-};
+  const handleClick = (message, event) => {
+  console.log(message); // Output: Parameter
+  console.log(event); // Native Event object
+  };
 </script>
 ```
 
@@ -760,14 +764,14 @@ console.log(event); // Native Event object
 <button @click="increment">Add</button>
 <button @click="warn">Warning</button>
 <script setup>
-import { ref } from 'vue';
-const count = ref(0);
-const increment = () => {
-count.value++;
-};
-const warn = () => {
-alert('Warning！');
-};
+  import { ref } from 'vue';
+  const count = ref(0);
+  const increment = () => {
+  count.value++;
+  };
+  const warn = () => {
+  alert('Warning！');
+  };
 </script>
 ```
 
@@ -791,12 +795,12 @@ Mutation methods are methods that change the original array they are called on w
 
 ```html
 <script setup>
-const seats = reactive(
-Array(8).fill().map((_, rowIndex) =>
-Array(16).fill().map((_, colIndex) => ({
-number: `${String.fromCharCode(65 + rowIndex)}${colIndex + 1}`,
-status: colIndex >= 12 ? 'occupied' : 'available',
-row: rowIndex,
+  const seats = reactive(
+  Array(8).fill().map((_, rowIndex) =>
+  Array(16).fill().map((_, colIndex) => ({
+  number: `${String.fromCharCode(65 + rowIndex)}${colIndex + 1}`,
+  status: colIndex >= 12 ? 'occupied' : 'available',
+  row: rowIndex,
 ```
 
 col: colIndex
@@ -898,177 +902,177 @@ power
 
 ```html
 <style>
-.cinema-system {
-max-width: 1200px;
-margin: 0 auto;
-padding: 20px;
-}
-section {
-margin-bottom: 40px;
-padding: 20px;
-background: white;
-border-radius: 10px;
-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-h2 {
-color: #333;
-border-bottom: 2px solid #42b983;
-padding-bottom: 10px;
-margin-bottom: 20px;
-}
-/* Movie List Styles */
-.movie-list {
-display: flex;
-gap: 20px;
-flex-wrap: wrap;
-}
-.movie-card {
-display: flex;
-gap: 15px;
-padding: 15px;
-border: 2px solid transparent;
-border-radius: 8px;
-cursor: pointer;
-transition: all 0.3s;
-}
-.movie-card:hover {
-transform: translateY(-3px);
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.movie-card.selected {
-border-color: #42b983;
-background-color: #f0fff4;
-}
-.poster {
-width: 120px;
-height: 160px;
-object-fit: cover;
-border-radius: 6px;
-}
-.movie-info h3 {
-margin: 0 0 8px;
-color: #333;
-}
-.movie-info p {
-margin: 5px 0;
-color: #666;
-}
-/* Showtime Selection Styles */
-.showtime-selector {
-display: flex;
-gap: 15px;
-flex-wrap: wrap;
-}
-.showtime-selector label {
-display: inline-flex;
-align-items: center;
-gap: 5px;
-padding: 8px 12px;
-background: #f5f7fa;
-border-radius: 20px;
-cursor: pointer;
-transition: all 0.3s;
-}
-.showtime-selector label:hover {
-background: #e6f7ff;
-}
-.showtime-selector input[type="radio"]:checked + label {
-background: #42b983;
-color: white;
-}
-/* Seat Selection Styles */
-.screen {
-height: 20px;
-background: linear-gradient(to right, #ccc, #eee, #ccc);
-margin: 20px 0;
-text-align: center;
-color: #666;
-letter-spacing: 10px;
-border-radius: 0 0 10px 10px;
-}
-.seats-container {
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-.seat-row {
-display: flex;
-gap: 8px;
-justify-content: center;
-}
-.seat {
-width: 30px;
-height: 30px;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 4px;
-cursor: pointer;
-font-size: 12px;
-transition: all 0.2s;
-}
-.available {
-background-color: #f0f9ff;
-border: 1px solid #42b983;
-}
-.available:hover {
-background-color: #d1f0e7;
-}
-.selected {
-background-color: #42b983;
-color: white;
-}
-.occupied {
-background-color: #f5f5f5;
-cursor: not-allowed;
-color: #ccc;
-}
-/* Form Styles */
-.form-group {
-margin-bottom: 15px;
-}
-label {
-display: block;
-margin-bottom: 5px;
-color: #555;
-}
-input, select {
-width: 100%;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 6px;
-font-size: 16px;
-}
-input:focus, select:focus {
-outline: none;
-border-color: #42b983;
-box-shadow: 0 0 0 2px rgba(66, 185, 131, 0.2);
-}
-.submit-btn {
-background-color: #42b983;
-color: white;
-border: none;
-padding: 12px 25px;
-border-radius: 6px;
-cursor: pointer;
-font-size: 16px;
-transition: background-color 0.3s;
-}
-.submit-btn:hover {
-background-color: #35a578;
-}
-/* Responsive Layout */
-@media (max-width: 768px) {
-.movie-card {
-flex-direction: column;
-width: 100%;
-}
-.poster {
-width: 100%;
-height: auto;
-margin-bottom: 10px;
-}
-}
+  .cinema-system {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  }
+  section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  h2 {
+  color: #333;
+  border-bottom: 2px solid #42b983;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  }
+  /* Movie List Styles */
+  .movie-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  }
+  .movie-card {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  }
+  .movie-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .movie-card.selected {
+  border-color: #42b983;
+  background-color: #f0fff4;
+  }
+  .poster {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  }
+  .movie-info h3 {
+  margin: 0 0 8px;
+  color: #333;
+  }
+  .movie-info p {
+  margin: 5px 0;
+  color: #666;
+  }
+  /* Showtime Selection Styles */
+  .showtime-selector {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  }
+  .showtime-selector label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  background: #f5f7fa;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  }
+  .showtime-selector label:hover {
+  background: #e6f7ff;
+  }
+  .showtime-selector input[type="radio"]:checked + label {
+  background: #42b983;
+  color: white;
+  }
+  /* Seat Selection Styles */
+  .screen {
+  height: 20px;
+  background: linear-gradient(to right, #ccc, #eee, #ccc);
+  margin: 20px 0;
+  text-align: center;
+  color: #666;
+  letter-spacing: 10px;
+  border-radius: 0 0 10px 10px;
+  }
+  .seats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  }
+  .seat-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  }
+  .seat {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+  }
+  .available {
+  background-color: #f0f9ff;
+  border: 1px solid #42b983;
+  }
+  .available:hover {
+  background-color: #d1f0e7;
+  }
+  .selected {
+  background-color: #42b983;
+  color: white;
+  }
+  .occupied {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  color: #ccc;
+  }
+  /* Form Styles */
+  .form-group {
+  margin-bottom: 15px;
+  }
+  label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  }
+  input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  }
+  input:focus, select:focus {
+  outline: none;
+  border-color: #42b983;
+  box-shadow: 0 0 0 2px rgba(66, 185, 131, 0.2);
+  }
+  .submit-btn {
+  background-color: #42b983;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  }
+  .submit-btn:hover {
+  background-color: #35a578;
+  }
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+  .movie-card {
+  flex-direction: column;
+  width: 100%;
+  }
+  .poster {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  }
+  }
 </style>
 ```
 
@@ -1076,38 +1080,38 @@ margin-bottom: 10px;
 
 ```html
 <script setup>
-import { reactive, ref, computed } from 'vue';
-// Movie data
-const movies = reactive([
-{
-id: 1,
-title: 'Interstellar',
-genre: ['Sci-Fi', 'Adventure'],
-duration: 169,
-rating: 9.3,
-poster: './img/xj.jpg',
-showtimes: ['10:00', '13:30', '17:00', '20:45']
-},
-{
-id: 2,
-title: 'The Little Prince',
-genre: ['Animation', 'Fantasy'],
-duration: 108,
-rating: 8.7,
-poster: './img/xwz.jpg',
-showtimes: ['11:00', '14:15', '18:30', '21:45']
-},
-{
-id: 3,
-title: 'The Little Prince',
-genre: ['Animation', 'Fantasy'],
-duration: 108,
-rating: 8.7,
-poster: './img/xwz.jpg',
-showtimes: ['11:00', '14:15', '18:30', '21:45']
-}
-]);
-//...State Management
+  import { reactive, ref, computed } from 'vue';
+  // Movie data
+  const movies = reactive([
+  {
+  id: 1,
+  title: 'Interstellar',
+  genre: ['Sci-Fi', 'Adventure'],
+  duration: 169,
+  rating: 9.3,
+  poster: './img/xj.jpg',
+  showtimes: ['10:00', '13:30', '17:00', '20:45']
+  },
+  {
+  id: 2,
+  title: 'The Little Prince',
+  genre: ['Animation', 'Fantasy'],
+  duration: 108,
+  rating: 8.7,
+  poster: './img/xwz.jpg',
+  showtimes: ['11:00', '14:15', '18:30', '21:45']
+  },
+  {
+  id: 3,
+  title: 'The Little Prince',
+  genre: ['Animation', 'Fantasy'],
+  duration: 108,
+  rating: 8.7,
+  poster: './img/xwz.jpg',
+  showtimes: ['11:00', '14:15', '18:30', '21:45']
+  }
+  ]);
+  //...State Management
 </script>
 ```
 
@@ -1116,8 +1120,8 @@ showtimes: ['11:00', '14:15', '18:30', '21:45']
 ```html
 <!-- Movie List -->
 <section class="movie-section">
-<h2>Select a Movie</h2>
-<div class="movie-list">
+  <h2>Select a Movie</h2>
+  <div class="movie-list">
 ```
 
 &lt;div
@@ -1135,10 +1139,10 @@ class="movie-card"
 ```html
 <img :src="movie.poster" alt="Movie Poster" class="poster">
 <div class="movie-info">
-<h3>{{ movie.title }}</h3>
-<p>Genre: {{ movie.genre.join(' / ') }}</p>
-<p>Duration: {{ movie.duration }} minutes</p>
-<p>Rating: {{ movie.rating }}</p>
+  <h3>{{ movie.title }}</h3>
+  <p>Genre: {{ movie.genre.join(' / ') }}</p>
+  <p>Duration: {{ movie.duration }} minutes</p>
+  <p>Rating: {{ movie.rating }}</p>
 </div>
 </div>
 </div>
@@ -1152,15 +1156,15 @@ class="movie-card"
 const selectedMovie = ref(null);
 const selectedShowtime = ref('');
 const userInfo = reactive({
-name: '',
-phone: '',
-email: '',
-payment: 'alipay'
+  name: '',
+  phone: '',
+  email: '',
+  payment: 'alipay'
 });
 // Calculate valid showtimes
 const validShowtimes = computed(() => {
-if (!selectedMovie.value) return [];
-return selectedMovie.value.showtimes.filter(time =>
+  if (!selectedMovie.value) return [];
+  return selectedMovie.value.showtimes.filter(time =>
 ```
 
 typeof time === 'string' &amp;&amp;
@@ -1171,8 +1175,8 @@ typeof time === 'string' &amp;&amp;
 });
 // Select a movie
 const selectMovie = (movie) => {
-// Validate showtime data validity
-const isValid = movie.showtimes.every(time =>
+  // Validate showtime data validity
+  const isValid = movie.showtimes.every(time =>
 ```
 
 typeof time === 'string' &amp;&amp;
@@ -1181,7 +1185,7 @@ typeof time === 'string' &amp;&amp;
 ```css
 );
 if (isValid) {
-selectedMovie.value = movie;
+  selectedMovie.value = movie;
 } else {
 console.error('Invalid showtimes data:', movie.showtimes);
 alert('Movie showtime data is abnormal, please contact the administrator');
@@ -1189,12 +1193,12 @@ alert('Movie showtime data is abnormal, please contact the administrator');
 };
 // Safe time formatting function
 const formatTime = (time) => {
-if (typeof time !== 'string') {
-console.error('Invalid time format:', time);
-return 'Invalid time format';
-}
-// Validate time format
-if (!/^\d{2}:\d{2}$/.test(time)) {
+  if (typeof time !== 'string') {
+    console.error('Invalid time format:', time);
+    return 'Invalid time format';
+  }
+  // Validate time format
+  if (!/^\d{2}:\d{2}$/.test(time)) {
 return 'Invalid time format';
 }
 const [hours, minutes] = time.split(':').map(Number);
@@ -1210,11 +1214,11 @@ return `${period} ${formattedHour}:${minutes < 10 ? '0' : ''}${minutes}`;
 ```html
 <!-- Showtime Selection -->
 <section v-if="selectedMovie" class="showtime-section">
-<h2>Select a Showtime</h2>
-<div class="showtime-selector">
-<label v-for="time in validShowtimes" :key="time">
-<input
-type="radio"
+  <h2>Select a Showtime</h2>
+  <div class="showtime-selector">
+    <label v-for="time in validShowtimes" :key="time">
+      <input
+      type="radio"
 ```
 
 :value="time"
@@ -1232,11 +1236,11 @@ v-model="selectedShowtime"
 ```js
 // Seat initialization
 const seats = reactive(
-Array(8).fill().map((_, rowIndex) =>
-Array(16).fill().map((_, colIndex) => ({
-number: `${String.fromCharCode(65 + rowIndex)}${colIndex + 1}`,
-status: colIndex >= 12 ? 'occupied' : 'available',
-row: rowIndex,
+  Array(8).fill().map((_, rowIndex) =>
+    Array(16).fill().map((_, colIndex) => ({
+          number: `${String.fromCharCode(65 + rowIndex)}${colIndex + 1}`,
+          status: colIndex >= 12 ? 'occupied' : 'available',
+          row: rowIndex,
 ```
 
 col: colIndex
@@ -1247,23 +1251,23 @@ col: colIndex
 );
 // Selected seats
 const selectedSeats = computed(() => {
-return seats.flat().filter(seat => seat.status === 'selected');
+  return seats.flat().filter(seat => seat.status === 'selected');
 });
 // Toggle seat status
 const toggleSeat = (row, col) => {
-const seat = seats[row][col];
-if (seat.status === 'available') {
-seat.status = seat.status === 'selected' ? 'available' : 'selected';
-}
+  const seat = seats[row][col];
+  if (seat.status === 'available') {
+    seat.status = seat.status === 'selected' ? 'available' : 'selected';
+  }
 };
 // Get seat style class
 const getSeatClass = (seat) => {
-return {
-available: seat.status === 'available',
-occupied: seat.status === 'occupied',
-selected: seat.status === 'selected',
-disabled: seat.status === 'occupied'
-};
+  return {
+    available: seat.status === 'available',
+    occupied: seat.status === 'occupied',
+    selected: seat.status === 'selected',
+    disabled: seat.status === 'occupied'
+  };
 };
 //...User Information
 ```
@@ -1273,15 +1277,15 @@ disabled: seat.status === 'occupied'
 ```html
 <!-- Seat Selection -->
 <section v-if="selectedShowtime" class="seats-section">
-<h2>Select Seats</h2>
-<div class="screen">Screen</div>
-<div class="seats-container">
-<div v-for="(row, rowIndex) in seats" :key="rowIndex" class="seat-row">
-<div v-for="(seat, colIndex) in row" :key="colIndex" class="seat" :class="getSeatClass(seat)"
-@click="toggleSeat(rowIndex, colIndex)">
-{{ seat.number }}
-</div>
-</div>
+  <h2>Select Seats</h2>
+  <div class="screen">Screen</div>
+  <div class="seats-container">
+    <div v-for="(row, rowIndex) in seats" :key="rowIndex" class="seat-row">
+      <div v-for="(seat, colIndex) in row" :key="colIndex" class="seat" :class="getSeatClass(seat)"
+      @click="toggleSeat(rowIndex, colIndex)">
+      {{ seat.number }}
+    </div>
+  </div>
 </div>
 </section>
 ```
@@ -1291,16 +1295,16 @@ disabled: seat.status === 'occupied'
 ```css
 // Submit Order
 const submitOrder = () => {
-if (!selectedMovie.value || !selectedShowtime.value) {
-alert('Please select a movie and showtime first');
-return;
-}
-const order = {
-movie: selectedMovie.value.title,
-showtime: selectedShowtime.value,
-seats: selectedSeats.value.map(s => s.number),
-user: { ...userInfo },
-total: selectedSeats.value.length * 50
+  if (!selectedMovie.value || !selectedShowtime.value) {
+    alert('Please select a movie and showtime first');
+    return;
+  }
+  const order = {
+    movie: selectedMovie.value.title,
+    showtime: selectedShowtime.value,
+    seats: selectedSeats.value.map(s => s.number),
+    user: { ...userInfo },
+  total: selectedSeats.value.length * 50
 };
 console.log('Order submitted successfully:', order);
 alert(`Booking successful! You have selected seats ${order.seats.join(', ')}`);
@@ -1348,9 +1352,11 @@ This practical project implements the image file loading module in the photo sli
 
 ### 20.3.2 Effect Display
 The effect display of the switching operation is shown in Figure 20-3.
-![Image](../../assets/images/project-20/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-20/image-003.png" alt="Image">
+</p>
 
-_Figure 20-3 Switch Operation_
+<p align="center"><em>Figure 20-3 Switch Operation</em></p>
 
 ### 20.3.3 Task Implementation
 
@@ -1390,8 +1396,8 @@ The code is as follows:
 
 ```html
 <script setup>
-import {appImages, appMode, appTheme} from "@/store.js";
-import {convertFilename, getId} from "@/helper.js";
+  import {appImages, appMode, appTheme} from "@/store.js";
+  import {convertFilename, getId} from "@/helper.js";
 </script>
 ```
 
@@ -1401,9 +1407,9 @@ The code is as follows:
 ```js
 /* selected btn and unselected btn class */
 function btnClass(a, b) {
-if (a === b) {
-return "btn-primary";
-}
+  if (a === b) {
+    return "btn-primary";
+  }
 return "btn-fill text-primary";
 }
 ```
@@ -1442,17 +1448,17 @@ The code is as follows:
 
 ```html
 <style scoped>
-.dropArea {
-border: 1px solid var(--bs-dark);
-border-radius: .75rem;
-}
-.centerBox {
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-}
+  .dropArea {
+  border: 1px solid var(--bs-dark);
+  border-radius: .75rem;
+  }
+  .centerBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 </style>
 ```
 

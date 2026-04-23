@@ -14,9 +14,11 @@ By learning the video/music display website, you will understand the usage of vi
 
 ### 4.1.1 Task Description
 The interface of the video and music display website uses HTML5 tags to present videos and audio on the page. The overall structure is divided into three parts: title, featured videos, and featured music. Video and audio tags are used to display the content. Both videos and audio are equipped with control bars for normal playback and pause. The effect is shown in Figure 4-1.
-![Image](../../assets/images/project-04/image-001.png)
+<p align="center">
+  <img src="../../assets/images/project-04/image-001.png" alt="Image">
+</p>
 
-_Figure 4-1 Video and Music Display Interface_
+<p align="center"><em>Figure 4-1 Video and Music Display Interface</em></p>
 
 ### 4.1.2 Knowledge Preparation
 This section introduces the multimedia features of HTML5. Before the advent of HTML5, there was no standard way to embed video and audio into web pages. In most cases, multimedia content was placed on pages through third-party plugins or applications integrated into web browsers.
@@ -42,7 +44,7 @@ In HTML5, the audio tag is used to define the standard for playing audio files. 
 
 ```html
 <audio src="audio_file_path" controls="controls">
-Your browser does not support the audio tag.
+  Your browser does not support the audio tag.
 </audio>
 ```
 
@@ -69,7 +71,7 @@ In HTML5, the &lt;video&gt; tag is used to define the standard for playing video
 
 ```html
 <video src="video_file_path" controls="controls">
-Your browser does not support the video tag.
+  Your browser does not support the video tag.
 </video>
 ```
 
@@ -96,8 +98,8 @@ The header element in HTML5 is a structural element used for introduction and na
 
 ```html
 <header>
-<h1>Webpage Theme</h1>
-...
+  <h1>Webpage Theme</h1>
+  ...
 </header>
 ```
 
@@ -110,12 +112,12 @@ The nav element, new in HTML5, is used to define navigation links. It groups nav
 
 ```html
 <nav>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">About Us</a></li>
-<li><a href="#">Products</a></li>
-<li><a href="#">Contact Us</a></li>
-</ul>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
 </nav>
 ```
 
@@ -147,17 +149,17 @@ An article is often divided into multiple section elements, and multiple article
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Video and Song Showcase Website</title>
-<link rel="stylesheet" type="text/css" href="./css/style.css"/>
-</head>
-<body>
-<header>
-<h1 align="center">Video and Song Showcase Area</h1>
-</header>
-……
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Video and Song Showcase Website</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+  </head>
+  <body>
+    <header>
+      <h1 align="center">Video and Song Showcase Area</h1>
+    </header>
+    ……
+  </body>
 </html>
 ```
 
@@ -165,36 +167,36 @@ An article is often divided into multiple section elements, and multiple article
 
 ```html
 <section class="content">
-<h2>Featured Videos</h2>
-<!-- Use the first video as the primary version; prepare multiple formats for browser compatibility -->
-<article class="video-list">
-<video width="320" height="240" controls>
-<source src="./img/video/water.mp4" type="video/mp4">
-<source src="./img/video/water.webm" type="video/webm">
-Your browser does not support the HTML5 video tag.
-</video>
-<video width="320" height="240" controls>
-<source src="./img/video/hah.mp4" type="video/mp4">
-Your browser does not support the HTML5 video tag.
-</video>
-<video width="320" height="240" controls>
-<source src="./img/video/cat.mp4" type="video/mp4">
-Your browser does not support the HTML5 video tag.
-</video>
-<video width="320" height="240" controls>
-<source src="./img/video/bobby.mp4" type="video/mp4">
-Your browser does not support the HTML5 video tag.
-</video>
-<video width="320" height="240" controls>
-<source src="./img/video/xcz.mp4" type="video/mp4">
-Your browser does not support the HTML5 video tag.
-</video>
-<video width="320" height="240" controls>
-<source src="./img/video/vi.mp4" type="video/mp4">
-Your browser does not support the HTML5 video tag.
-</video>
-</article>
-……
+  <h2>Featured Videos</h2>
+  <!-- Use the first video as the primary version; prepare multiple formats for browser compatibility -->
+  <article class="video-list">
+    <video width="320" height="240" controls>
+      <source src="./img/video/water.mp4" type="video/mp4">
+      <source src="./img/video/water.webm" type="video/webm">
+      Your browser does not support the HTML5 video tag.
+    </video>
+    <video width="320" height="240" controls>
+      <source src="./img/video/hah.mp4" type="video/mp4">
+      Your browser does not support the HTML5 video tag.
+    </video>
+    <video width="320" height="240" controls>
+      <source src="./img/video/cat.mp4" type="video/mp4">
+      Your browser does not support the HTML5 video tag.
+    </video>
+    <video width="320" height="240" controls>
+      <source src="./img/video/bobby.mp4" type="video/mp4">
+      Your browser does not support the HTML5 video tag.
+    </video>
+    <video width="320" height="240" controls>
+      <source src="./img/video/xcz.mp4" type="video/mp4">
+      Your browser does not support the HTML5 video tag.
+    </video>
+    <video width="320" height="240" controls>
+      <source src="./img/video/vi.mp4" type="video/mp4">
+      Your browser does not support the HTML5 video tag.
+    </video>
+  </article>
+  ……
 </section>
 ```
 
@@ -202,51 +204,51 @@ Your browser does not support the HTML5 video tag.
 
 ```html
 <article class="content">
-<h2>Featured Music</h2>
-<!-- Use the first video as the primary version; prepare multiple formats for browser compatibility -->
-<div class="video-list">
-<div class="video-item">
-<p>
-<font size="3" color="red"><i>song:</i></font>
-</p>
-<audio controls="controls">
-<source src="./img/audio/song.ogg" type="audio/ogg">
-<source src="./img/audio/song.mp3" type="audio/mp3">
-Your browser does not support this audio format.
-</audio>
-</div>
-<div class="video-item">
-<p>
-<font size="3" color="red"><i>Qianzhou Song:</i></font>
-</p>
-<audio controls="controls">
-<source src="./img/audio/qianzhou.mp3" type="audio/mpeg">
-<embed height="100" width="100" src="./img/audio/qianzhou.mp3" />
-Your browser does not support this audio format.
-</audio>
-</div>
-<div class="video-item">
-<p>
-<font size="3" color="red"><i>Drunken Song:</i></font>
-</p>
-<audio controls="controls">
-<source src="/i/song.ogg" type="audio/ogg">
-<embed height="100" width="100" src="./img/audio/drunken.mp3" />
-Your browser does not support this audio format.
-</audio>
-</div>
-<div class="video-item">
-<p>
-<font size="3" color="red"><i>YELLOW:</i></font>
-</p>
-<audio controls="controls">
-<source src="/i/song.ogg" type="audio/ogg">
-<source src="./img/video/Moo-tracker.mp3" type="audio/mpeg">
-<embed height="100" width="100" src="./img/video/Moo-tracker.mp3" />
-Your browser does not support this audio format.
-</audio>
-</div>
-</div>
+  <h2>Featured Music</h2>
+  <!-- Use the first video as the primary version; prepare multiple formats for browser compatibility -->
+  <div class="video-list">
+    <div class="video-item">
+      <p>
+        <font size="3" color="red"><i>song:</i></font>
+      </p>
+      <audio controls="controls">
+        <source src="./img/audio/song.ogg" type="audio/ogg">
+        <source src="./img/audio/song.mp3" type="audio/mp3">
+        Your browser does not support this audio format.
+      </audio>
+    </div>
+    <div class="video-item">
+      <p>
+        <font size="3" color="red"><i>Qianzhou Song:</i></font>
+      </p>
+      <audio controls="controls">
+        <source src="./img/audio/qianzhou.mp3" type="audio/mpeg">
+        <embed height="100" width="100" src="./img/audio/qianzhou.mp3" />
+        Your browser does not support this audio format.
+      </audio>
+    </div>
+    <div class="video-item">
+      <p>
+        <font size="3" color="red"><i>Drunken Song:</i></font>
+      </p>
+      <audio controls="controls">
+        <source src="/i/song.ogg" type="audio/ogg">
+        <embed height="100" width="100" src="./img/audio/drunken.mp3" />
+        Your browser does not support this audio format.
+      </audio>
+    </div>
+    <div class="video-item">
+      <p>
+        <font size="3" color="red"><i>YELLOW:</i></font>
+      </p>
+      <audio controls="controls">
+        <source src="/i/song.ogg" type="audio/ogg">
+        <source src="./img/video/Moo-tracker.mp3" type="audio/mpeg">
+        <embed height="100" width="100" src="./img/video/Moo-tracker.mp3" />
+        Your browser does not support this audio format.
+      </audio>
+    </div>
+  </div>
 </article>
 ```
 
@@ -254,37 +256,37 @@ Your browser does not support this audio format.
 
 ```css
 *{
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 }
 header>h1{
-line-height: 80px;
+  line-height: 80px;
 }
 .content{
-width: 1000px;
-margin: 20px auto 50px;
+  width: 1000px;
+  margin: 20px auto 50px;
 }
 .content>h2{
-border-left: 4px solid #e73c31d9;
-text-indent: .6em;
-line-height: 40px;
+  border-left: 4px solid #e73c31d9;
+  text-indent: .6em;
+  line-height: 40px;
 }
 .video-list{
-width: 100%;
-overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 .video-item{
-width: 100%;
-height: 70px;
+  width: 100%;
+  height: 70px;
 }
 .video-item>p{
-width: 130px;
-float: left;
-line-height: 50px;
+  width: 130px;
+  float: left;
+  line-height: 50px;
 }
 .video-item>audio{
-width: 80%;
-float: left;
+  width: 80%;
+  float: left;
 }
 ```
 
@@ -298,13 +300,17 @@ The bottom part consists of a contact form with the given fields: first name, ge
 
 ### 4.2.2 Effect Display
 The renderings of the video playback are shown in Figure 4-3.
-![Image](../../assets/images/project-04/image-002.png)
+<p align="center">
+  <img src="../../assets/images/project-04/image-002.png" alt="Image">
+</p>
 
 Figure 4‑3 Video Playback Interface
 The effect of the contact form is shown in Figure 4‑4.
-![Image](../../assets/images/project-04/image-003.png)
+<p align="center">
+  <img src="../../assets/images/project-04/image-003.png" alt="Image">
+</p>
 
-_Figure 4-4 Contact Form Interface_
+<p align="center"><em>Figure 4-4 Contact Form Interface</em></p>
 
 ### 4.2.3 Task Implementation
 
@@ -313,26 +319,26 @@ _Figure 4-4 Contact Form Interface_
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<!-- Map attraction section -->
-<section class="video">
-<video autoplay muted>
-<source src="assets/lyon.mp4" />
-</video>
-</section>
-</main>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <!-- Map attraction section -->
+      <section class="video">
+        <video autoplay muted>
+          <source src="assets/lyon.mp4" />
+        </video>
+      </section>
+    </main>
+  </body>
 </html>
 Create a _video.css file with the following styles:
 /* Styles for the video section */
@@ -363,49 +369,49 @@ object-fit: cover;
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!-- Meta Tags -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Welcome Lyon</title>
-<!-- Links -->
-<link rel="stylesheet" href="styles/index.css" />
-</head>
-<body>
-<!-- Header -->
-<main>
-<!-- Hero Section -->
-<!-- Map attraction section -->
-<!-- Video Section -->
-<section class="video">
-<video autoplay muted>
-<source src="assets/lyon.mp4">
-</video>
-</section>
-<!-- Contact Form Section -->
-<seciton class="contact">
-<h2>Contact Us</h2>
-<form class="fields" action="#">
-<label>
-First name
-<input type="text" />
-</label>
-<label>
-Last name
-<input type="text" />
-</label>
-<label>
-Email
-<input type="text" />
-</label>
-<label>
-Phone
-<input type="text" />
-</label>
-</form>
-</seciton>
-</main>
-</body>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Lyon</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <main>
+      <!-- Hero Section -->
+      <!-- Map attraction section -->
+      <!-- Video Section -->
+      <section class="video">
+        <video autoplay muted>
+          <source src="assets/lyon.mp4">
+        </video>
+      </section>
+      <!-- Contact Form Section -->
+      <seciton class="contact">
+        <h2>Contact Us</h2>
+        <form class="fields" action="#">
+          <label>
+            First name
+            <input type="text" />
+          </label>
+          <label>
+            Last name
+            <input type="text" />
+          </label>
+          <label>
+            Email
+            <input type="text" />
+          </label>
+          <label>
+            Phone
+            <input type="text" />
+          </label>
+        </form>
+      </seciton>
+    </main>
+  </body>
 </html>
 Create a _contact.css file with the following styles:
 /* Styles for the contact section */
