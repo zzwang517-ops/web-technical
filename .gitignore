@@ -6,3 +6,7 @@
 # OS/editor noise.
 .DS_Store
 Thumbs.db
+
+# Local conversion/checking utilities and generated reports.
+tools/
+reports/
