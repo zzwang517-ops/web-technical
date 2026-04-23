@@ -163,32 +163,26 @@ opacity: value | inherit;
 value: Specifies opacity, ranging from 0.0 (fully transparent) to 1.0 (fully opaque).
 inherit: Inherits the opacity value from the parent element.
 
-#### 10. Background Color Gradients (Radial &amp; Linear)
+#### 10. Background Color Gradients (Radial & Linear)
 Radial Gradient
 The radial-gradient() function creates an “image” using a radial gradient, defined from a center point. At least two color stops are required.
 Syntax:
-background-image: radial-gradient(shape size at
-
 ```
-position,start-color,…,last-color);
-• shape: Defines the gradient shape.
-ellipse (default): Elliptical radial gradient.
+background-image: radial-gradient(shape size at position, start-color, ..., last-color);
 ```
 
-circle: Circular radial gradient.
-• size: Defines the gradient size.
-farthest-corner (default): Radius extends to the farthest corner.
-closest-side: Radius extends to the closest side.
-closest-corner: Radius extends to the closest corner.
-farthest-side: Radius extends to the farthest side.
-• position: Defines the center of the gradient.
-
-```
-center (default): Center vertically and horizontally.
-```
-
-top: Top as the vertical center.
-bottom: Bottom as the vertical center.
+- shape: Defines the gradient shape.
+- ellipse (default): Elliptical radial gradient.
+- circle: Circular radial gradient.
+- size: Defines the gradient size.
+- farthest-corner (default): Radius extends to the farthest corner.
+- closest-side: Radius extends to the closest side.
+- closest-corner: Radius extends to the closest corner.
+- farthest-side: Radius extends to the farthest side.
+- position: Defines the center of the gradient.
+- center (default): Center vertically and horizontally.
+- top: Top as the vertical center.
+- bottom: Bottom as the vertical center.
 • start-color, ..., last-color: Gradient start and end colors.
 Linear Gradient:
 The linear-gradient() function creates an image with a linear transition between two or more colors.
@@ -492,7 +486,7 @@ Using the @media query, you can define different styles for different media type
 </header>
 ```
 
-#### Step 3: Create the navigation menu for the tourism website, including Home, Private Group Tours, One-Day Weekend Trips &amp; Seven-Day National Day Tours, Destinations, and About Us.
+#### Step 3: Create the navigation menu for the tourism website, including Home, Private Group Tours, One-Day Weekend Trips & Seven-Day National Day Tours, Destinations, and About Us.
 
 ```html
 <nav>

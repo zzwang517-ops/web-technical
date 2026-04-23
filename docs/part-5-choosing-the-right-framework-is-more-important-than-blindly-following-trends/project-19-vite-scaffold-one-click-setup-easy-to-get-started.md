@@ -210,6 +210,7 @@ resolve: {
     '@': fileURLToPath(new URL('./src', import.meta.url))
   }
 }
+})
 ```
 
 #### Step 3: In main.js, load the static resource files. The code is as follows:
@@ -239,16 +240,12 @@ export function getId() {
 }
 export function convertFilename(name) {
   return name
-```
-
-.split(".")[0]
-.replaceAll(/-/g, " ")
-.split(" ")
-.map(item =&gt; {
-
-```
-return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
-})
+  .split(".")[0]
+  .replaceAll(/-/g, " ")
+  .split(" ")
+  .map(item => {
+      return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
+    })
 .join(" ");
 }
 ```
@@ -405,27 +402,19 @@ The code is as follows:
 /* import sample data */
 function importSample() {
   const sampleFiles = [
-```
-
-"basilique-notre-dame-de-fourviere-lyon.jpg",
-"beautiful-view-in-lyon.jpg",
-"place-bellecour-lyon.jpg",
-"tour-metalique-lyon.jpg",
-
-```
-];
+    "basilique-notre-dame-de-fourviere-lyon.jpg",
+    "beautiful-view-in-lyon.jpg",
+    "place-bellecour-lyon.jpg",
+    "tour-metalique-lyon.jpg",
+  ];
 sampleFiles.map(name => {
-appImages.value.push({
-id: getId(),
-```
-
-image: import.meta.env.DEV
-? "http://localhost:3000/34_module_e/" + name
-: "http://localhost/34_module_e/" + name,
-caption: convertFilename(name)
-
-```js
-})
+    appImages.value.push({
+        id: getId(),
+        image: import.meta.env.DEV
+        ? "http://localhost:3000/34_module_e/" + name
+        : "http://localhost/34_module_e/" + name,
+        caption: convertFilename(name)
+      })
 })
 }
 /* automatic load sample data in DEV env */
@@ -464,16 +453,12 @@ if (appMode.value === "RANDOM") {
       /* check exists images */
       if (!appImages.value.length) return;
       const randoms = appImages.value
-```
-
-.map((a, i) =&gt; i) // get only index
-.filter(item =&gt; item !== currentImageIndex.value); // filter without current index
-
-```
-if(!randoms.length) return;
-/* set index */
-currentImageIndex.value = randoms[~~(Math.random() * randoms.length)];
-}, SLIDE_TIME)
+      .map((a, i) => i) // get only index
+      .filter(item => item !== currentImageIndex.value); // filter without current index
+      if(!randoms.length) return;
+      /* set index */
+      currentImageIndex.value = randoms[~~(Math.random() * randoms.length)];
+    }, SLIDE_TIME)
 }
 }
 ```

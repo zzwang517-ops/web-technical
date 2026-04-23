@@ -77,11 +77,11 @@ In HTML5, the &lt;video&gt; tag is used to define the standard for playing video
 
 The src attribute is used to set the path of the video file, and the controls attribute is used to provide playback controls for the video. These two attributes are the basic attributes of the &lt;video&gt; element.
 Notably, other attributes can be added to the &lt;video&gt; element to further optimize the video playback effect, as shown in Table 4-3.
-表4-3 video元素属性
+Table 4-3 video Element Attributes
 
 | Attribute | Value | Description |
 | --- | --- | --- |
-| autoplay | autoplay | &lt;video&gt; 标签Automatically plays the video when the page finishes loading. Internet Explorer 8 and earlier versions do not support the &lt;video&gt; tag. |
+| autoplay | autoplay | The &lt;video&gt; tag automatically plays the video when the page finishes loading. Internet Explorer 8 and earlier versions do not support the &lt;video&gt; tag. |
 | loop | loop | Restarts playing the video when it ends. |
 | preload | preload | If present, the video loads when the page loads and is ready for playback. This attribute is ignored if "autoplay" is used. |
 | src | url | Specifies the URL of the video to be played. |
@@ -462,4 +462,4 @@ margin: 0 auto;
 ```
 
 #### Step 5: View the running effect of the index.html file in the browser.
-Part 2 Styling for Better Appearance &amp; More Attractive Web Pages
+Part 2 Styling for Better Appearance & More Attractive Web Pages

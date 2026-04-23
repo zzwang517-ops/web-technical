@@ -189,12 +189,12 @@ In text content, it is often necessary to design text effects, which requires th
 
 | Tag | Description of Display Effect |
 | --- | --- |
-| &lt;b&gt;&lt;/b&gt;和&lt;strong&gt;&lt;/strong&gt; | Displays text in bold. |
-| &lt;i&gt;&lt;/i&gt;和&lt;em&gt;&lt;/em&gt; | Displays text in italic. |
-| &lt;s&gt;&lt;/s&gt;和&lt;del&gt;&lt;/del&gt; | Displays text with a strikethrough. |
-| &lt;u&gt;&lt;/u&gt;和&lt;ins&gt;&lt;/ins&gt; | Displays text with an underline. |
-| &lt;big&gt;&lt;/big&gt;和&lt;mall&gt;&lt;/small&gt; | Defines text as larger or smaller. |
-| &lt;sup&gt;&lt;/sup&gt;和&lt;sub&gt;&lt;/sub&gt; | Defines text as superscript and subscript. |
+| &lt;b&gt;&lt;/b&gt; and &lt;strong&gt;&lt;/strong&gt; | Displays text in bold. |
+| &lt;i&gt;&lt;/i&gt; and &lt;em&gt;&lt;/em&gt; | Displays text in italic. |
+| &lt;s&gt;&lt;/s&gt; and &lt;del&gt;&lt;/del&gt; | Displays text with a strikethrough. |
+| &lt;u&gt;&lt;/u&gt; and &lt;ins&gt;&lt;/ins&gt; | Displays text with an underline. |
+| &lt;big&gt;&lt;/big&gt; and &lt;small&gt;&lt;/small&gt; | Defines text as larger or smaller. |
+| &lt;sup&gt;&lt;/sup&gt; and &lt;sub&gt;&lt;/sub&gt; | Defines text as superscript and subscript. |
 
 #### 7.Empty Tags
 The self-closing tags we commonly use are all empty tags, such as the &lt;meta/&gt; and &lt;link/&gt; tags we have already learned. In addition, other commonly used empty tags include &lt;hr&gt;, &lt;br&gt;, &lt;img&gt;, &lt;input&gt;, etc.
@@ -822,7 +822,7 @@ Date pickers refer to date and time input types. HTML5 provides multiple input t
 
 **Table 2-12 Date Pickers Types**
 
-| Date &amp; Time Type | Description |
+| Date & Time Type | Description |
 | --- | --- |
 | date | Selects day, month, and year. |
 | month | Selects month and year. |

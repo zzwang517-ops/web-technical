@@ -1138,39 +1138,31 @@ power
 
 #### Step 6: Showtime selection module. Render valid showtimes in a loop using v-for, and convert the time format with the formatTime method.
 
-```css
+```js
 // State Management
 const selectedMovie = ref(null);
 const selectedShowtime = ref('');
 const userInfo = reactive({
-  name: '',
-  phone: '',
-  email: '',
-  payment: 'alipay'
-});
+    name: '',
+    phone: '',
+    email: '',
+    payment: 'alipay'
+  });
 // Calculate valid showtimes
 const validShowtimes = computed(() => {
-  if (!selectedMovie.value) return [];
-  return selectedMovie.value.showtimes.filter(time =>
-```
-
-typeof time === 'string' &amp;&amp;
-/^\d{2}:\d{2}$/.test(time)
-
-```js
-);
+    if (!selectedMovie.value) return [];
+    return selectedMovie.value.showtimes.filter(time =>
+      typeof time === 'string' &&
+      /^\d{2}:\d{2}$/.test(time)
+    );
 });
 // Select a movie
 const selectMovie = (movie) => {
   // Validate showtime data validity
   const isValid = movie.showtimes.every(time =>
-```
-
-typeof time === 'string' &amp;&amp;
-/^\d{2}:\d{2}$/.test(time)
-
-```css
-);
+    typeof time === 'string' &&
+    /^\d{2}:\d{2}$/.test(time)
+  );
 if (isValid) {
   selectedMovie.value = movie;
 } else {
@@ -1184,9 +1176,9 @@ const formatTime = (time) => {
     console.error('Invalid time format:', time);
     return 'Invalid time format';
   }
-  // Validate time format
-  if (!/^\d{2}:\d{2}$/.test(time)) {
-return 'Invalid time format';
+// Validate time format
+if (!/^\d{2}:\d{2}$/.test(time)) {
+  return 'Invalid time format';
 }
 const [hours, minutes] = time.split(':').map(Number);
 const period = hours >= 12 ? 'PM' : 'AM';
@@ -1224,18 +1216,14 @@ const seats = reactive(
           number: `${String.fromCharCode(65 + rowIndex)}${colIndex + 1}`,
           status: colIndex >= 12 ? 'occupied' : 'available',
           row: rowIndex,
-```
-
-col: colIndex
-}))
-
-```css
+          col: colIndex
+        }))
 )
 );
 // Selected seats
 const selectedSeats = computed(() => {
-  return seats.flat().filter(seat => seat.status === 'selected');
-});
+    return seats.flat().filter(seat => seat.status === 'selected');
+  });
 // Toggle seat status
 const toggleSeat = (row, col) => {
   const seat = seats[row][col];

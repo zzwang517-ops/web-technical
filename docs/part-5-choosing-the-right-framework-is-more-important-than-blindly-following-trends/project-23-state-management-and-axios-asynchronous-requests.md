@@ -11,17 +11,17 @@ At the same time, we will systematically study Axios asynchronous request techno
 - ③ Understand the necessity of calling Axios in Actions.
 - ④ Master the complete process of updating state through asynchronous Actions.
 
-## Task 23.1 Q&amp;A Interactive System
+## Task 23.1 Q&A Interactive System
 
 ### 23.1.1 Task Description
-This task implements a lightweight Q&amp;A interactive system based on Vue 3, adopting the Composition API to manage question-and-answer states via ref/reactive. It integrates the InputArea sub-component to realize v-model two-way binding and form submission, and uses the dynamically rendered MessageList component to display the dialogue flow of user/AI dual roles.
+This task implements a lightweight Q&A interactive system based on Vue 3, adopting the Composition API to manage question-and-answer states via ref/reactive. It integrates the InputArea sub-component to realize v-model two-way binding and form submission, and uses the dynamically rendered MessageList component to display the dialogue flow of user/AI dual roles.
 With a gradient background, rounded cards and shadow design to create a fresh visual style, the final system supports real-time input capture, two-way dialogue display and random intelligent replies.
 The effect of the case is shown in Figure 23-1.
 <p align="center">
   <img src="../../assets/images/project-23/image-001.png" alt="Image">
 </p>
 
-Figure 23‑1 Q&amp;A, Easy Interaction
+Figure 23‑1 Q&A, Easy Interaction
 
 ### 23.1.2 Knowledge Preparation
 Axios is a Promise-based HTTP client for both browsers and Node.js. It provides a rich set of APIs for sending HTTP requests such as GET, POST, PUT, DELETE, and supports request and response interceptors, automatic JSON data conversion, request cancellation, and other features.
@@ -347,23 +347,20 @@ Stores application data and supports reactivity. It can be defined and used with
 ```js
 // Options-style definition
 const useStore = defineStore('store-id',{
-```
-
-state:()=&gt;({
-count:0，
-
-```js
-uname:'ZhangSan',
-isAdmin: true,
-roles:[],
-})
+    state: () => ({
+        count: 0,
+        uname: 'ZhangSan',
+        isAdmin: true,
+        roles: [],
+      })
 })
 // Define state in composition style
-const useStore =defineStore('store-id',()=>{
-    constg count=ref(0)
-    const uname=ref('ZhangSan')
-    const isAdmin =ref(true)
-    const roles =ref([])
+const useStore = defineStore('store-id', () => {
+    const count = ref(0)
+    const uname = ref('ZhangSan')
+    const isAdmin = ref(true)
+    const roles = ref([])
+    return { count, uname, isAdmin, roles }
   })
 ```
 
@@ -407,7 +404,7 @@ const useStore =defineStore('counter',()=>{
     const decrement=()=>{
       count.value--
     }
-  return fcount,decrement}
+  return { count, decrement }
 })
 ```
 

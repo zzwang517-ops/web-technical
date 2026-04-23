@@ -40,11 +40,10 @@ defineProps(['greetingMessage'])
 ```
 
 ② Object syntax declaration:
-defineProps:({
-
-```
-greetingMessage:String,
-})
+```vue
+defineProps({
+    greetingMessage: String,
+  })
 ```
 
 Passing Props
@@ -142,13 +141,16 @@ import { onMounted } from 'vue'
 export function useFun() { // Define a composable function
   // Main code of the composable function
   // For example: Use lifecycle hooks
-}
-onMounted(()=>{
-    console.log(params)
-  })
+  onMounted(() => {
+      console.log(params)
+    })
 return { params }
 }
-(2)Calling Composable Functions:
+```
+
+##### (2) Calling Composable Functions:
+
+```js
 import { useFun } from './fun.js' // Import the composable function
 setup() {
   const { params } = useFun() // Use the composable function
@@ -327,28 +329,24 @@ Random Theme
   { id: 'forest', name: 'Forest Green', hex: '#43A047' },
   { id: 'lavender', name: 'Lavender', hex: '#7E57C2' },
   ])
-  // Generate a random theme
+  const currentTheme = ref('sunset')
+  const switchTheme = (id) => {
+  currentTheme.value = id
   }
+  // Generate a random theme
+  const randomTheme = () => {
+  const randomIndex = Math.floor(Math.random() * themes.length)
+  currentTheme.value = themes[randomIndex].id
+  }
+  return { themes, currentTheme, switchTheme, randomTheme }
+  }
+  // Use composable functions
+  const { themes, currentTheme, switchTheme, randomTheme } = useThemeManager()
 </script>
 ```
 
 #### Step 5: Navigate to the src/App.vue page, use the randomTheme function to generate a random theme when the button is clicked, and insert the following code.
-
-```js
-// Generate a random theme
-const currentTheme = ref('sunset')
-const switchTheme = (id) => {
-  currentTheme.value = id
-}
-const randomTheme = () => {
-  const randomIndex = Math.floor(Math.random() * themes.length)
-  currentTheme.value = themes[randomIndex].id
-}
-return { themes, currentTheme, switchTheme, randomTheme }
-}
-// Use composable functions
-const { themes, currentTheme, switchTheme, randomTheme } = useThemeManager()
-```
+The randomTheme function is included in the complete `useThemeManager()` example above.
 
 #### Step 6: Enter the command npm run dev to start the project and check the effect.
 

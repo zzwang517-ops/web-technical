@@ -561,12 +561,12 @@ Comparison operators, also known as relational operators, are used to compare th
 #### 4. Logical Operators
 Logical operators are used to determine whether a condition is "true" or "false".
 The operands of logical operators can only be Boolean values, and the result after evaluation is also a Boolean value.
-The operators include: AND (&amp;&amp;), OR (||), NOT (!), as shown in Table 13‑4:
+The operators include: AND (&&), OR (||), NOT (!), as shown in Table 13‑4:
 Table 13‑4 Logical Operators
 
 | Logical Operators | Example | Equivalent To |
 | --- | --- | --- |
-| &amp;&amp; | a == 1 &amp;&amp; b == 1 | Logical AND (and) |
+| && | a == 1 && b == 1 | Logical AND (and) |
 | \|\| | a == 1 \|\| b == 1 | Logical OR (or) |
 | ！ | !a | Logical NOT (opposite) |
 

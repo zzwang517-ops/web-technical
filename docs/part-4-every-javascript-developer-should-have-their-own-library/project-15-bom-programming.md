@@ -9,7 +9,7 @@ Based on the technical standards of WorldSkills competitions, this project encap
 - ② Master important properties and methods of the window object.
 - ③ Master important properties and methods of the document object.
 
-## Task 15.1 Elegant Transition &amp; Loading Animation
+## Task 15.1 Elegant Transition & Loading Animation
 
 ### 15.1.1 Task Description
 This task implements an elegant transition and loading effect. A circular rotating indicator with a blue top is created using CSS (with Bezier curves for smooth acceleration), paired with opacity transitions for fade-in and fade-out effects. When page loading is complete (simulated with a 2-second delay), the loading animation disappears smoothly, while the content area is elegantly displayed with a fade-in animation. The whole layout is responsive and automatically centered. The code structure is clear and easy to integrate into real projects by replacing it with actual asynchronous operations. The effect is shown in Figure 15-1.
@@ -36,7 +36,7 @@ In addition, variables and functions declared by programmers themselves are dire
 ```js
 let a = 10;
 function add(x,y){
-  renturn x + y;
+  return x + y;
 }
 console.log(window);
 ```
@@ -202,7 +202,7 @@ The setTimeout method is used to set a timer that executes a callback function o
 
 #### Step 4: Run the index.html file to view the effect.
 
-## Task 15.2 "Smart Customer Service" Conversation &amp; Event Handling
+## Task 15.2 "Smart Customer Service" Conversation & Event Handling
 
 ### 15.2.1 Task Description
 This smart customer service system aims to provide users with real-time and efficient automated interaction services. After users enter questions in the input field, the system will automatically identify the question type based on preset keyword matching rules, and retrieve corresponding answers from the predefined response library (such as common scenarios including product consultation, order inquiry, after-sales service, etc.).
@@ -266,7 +266,7 @@ In addition, variables and functions declared by programmers are directly attach
 ```js
 let a = 10;
 function add(x,y){
-  renturn x + y;
+  return x + y;
 }
 console.log(window);
 ```

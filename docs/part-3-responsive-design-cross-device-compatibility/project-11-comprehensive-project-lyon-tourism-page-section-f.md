@@ -59,7 +59,7 @@ The project is named “module_f”, and its resource folders are shown in Table
 
 **Table 6-1 Resource Folder Contents**
 
-| No. | Directory &amp; Main Filename | Files Included | Description |
+| No. | Directory & Main Filename | Files Included | Description |
 | --- | --- | --- | --- |
 | 1 | assets/css | bootstrap-5.3.3.min.css | Core Bootstrap framework CSS file |
 | 2 |  | main.css | Custom style file |

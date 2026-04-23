@@ -56,7 +56,7 @@ The project is named module_a, and the resource folder contains the contents sho
 
 **Table 17-1 Resource Folder Contents**
 
-| No. | Directory &amp; Main Filename | Files Included | Task Description |
+| No. | Directory & Main Filename | Files Included | Task Description |
 | --- | --- | --- | --- |
 | 1 | A13 | index.html | Water Droplets |
 | 2 | B35 | index.html | Fractal Triangles |

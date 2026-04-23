@@ -14,7 +14,7 @@ This project includes nine modules: website title, call-to-action section, map s
 | --- | --- | --- |
 | 1 | Responsive Loading | 2.25 |
 | 2 | Video Playback | 2.0 |
-| 3 | Design &amp; Layout Implementation | 2.75 |
+| 3 | Design & Layout Implementation | 2.75 |
 | 4 | Effects | 3.0 |
 | 5 | Accessibility | 2.5 |
 | 6 | Tags | 1.0 |
@@ -1237,4 +1237,4 @@ footer span {
   <img src="../../assets/images/project-06/image-003.png" alt="Image">
 </p>
 
-Part 3 Responsive Design &amp; Cross-Device Compatibility
+Part 3 Responsive Design & Cross-Device Compatibility

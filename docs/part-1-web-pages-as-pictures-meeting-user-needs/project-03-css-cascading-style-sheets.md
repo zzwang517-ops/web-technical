@@ -1221,30 +1221,10 @@ An outline is a line drawn around an element, which specifies the style, color a
 
 | Property | Description | Values |
 | --- | --- | --- |
-| outline | Sets all the outline properties in one declaration | outline-color
-outline-style
-outline-width
-inherit |
-| outline-color | Sets the color of the outline | color-name
-hex-number
-rgb-number
-invert
-inherit |
-| outline-style | Sets the style of the outline | none
-dotted
-dashed
-solid
-double
-groove
-ridge
-inset
-outset
-inherit |
-| outline-width | Sets the width of the outline | thin
-medium
-thick
-length
-inherit |
+| outline | Sets all the outline properties in one declaration | outline-color<br>outline-style<br>outline-width<br>inherit |
+| outline-color | Sets the color of the outline | color-name<br>hex-number<br>rgb-number<br>invert<br>inherit |
+| outline-style | Sets the style of the outline | none<br>dotted<br>dashed<br>solid<br>double<br>groove<br>ridge<br>inset<br>outset<br>inherit |
+| outline-width | Sets the width of the outline | thin<br>medium<br>thick<br>length<br>inherit |
 
 Example:
 
@@ -1807,14 +1787,18 @@ Create a new HTML page, set the page title to "Side Navigation", and set the bac
   <title>Side Navigation</title>
   <link rel="stylesheet" type="text/css" href="./css/index.css" />
 </head>
+```
+
 The styles are as follows:
+
+```css
 * {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-background-color: #efefef;
-height: 900px;
+  background-color: #efefef;
+  height: 900px;
 }
 ```
 
@@ -1824,23 +1808,27 @@ The code is as follows:
 ```html
 <body>
   <div class="nav-left">
-    <img src="./img/nav.jpg" class="nav_img" />
+    <img src="./img/nav.jpg" class="nav-img" />
   </div>
 </body>
+```
+
 The styles are as follows:
+
+```css
 .nav-left {
-width: 1000px;
-height: 350px;
-background-color: paleturquoise;
-margin: 50px auto;
-position: relative;
+  width: 1000px;
+  height: 350px;
+  background-color: paleturquoise;
+  margin: 50px auto;
+  position: relative;
 }
 .nav-img {
-width: 770px;
-height: 450px;
-position: absolute;
-left: 230px;
-top: 0;
+  width: 770px;
+  height: 450px;
+  position: absolute;
+  left: 230px;
+  top: 0;
 }
 ```
 
@@ -1850,7 +1838,7 @@ The code is as follows:
 ```html
 <body>
   <div class="nav-left">
-    <img src="./img/nav.jpg" class="nav_img" />
+    <img src="./img/nav.jpg" class="nav-img" />
     <ul>
       <li>
         <a href="#">Women's Clothing</a>
@@ -1875,12 +1863,16 @@ The code is as follows:
     </ul>
   </div>
 </body>
+```
+
 The styles are as follows:
+
+```css
 ul {
-list-style: none;
+  list-style: none;
 }
 a {
-text-decoration: none;
+  text-decoration: none;
 }
 ```
 
@@ -1889,86 +1881,89 @@ The code is as follows:
 
 ```html
 <body>
-  <body>
-    <div class="nav-left">
-      <img src="./img/nav.jpg" class="nav-img" />
-      <ul>
-        <li> <a href="#">Women's Clothing</a>
-          <ul class="nav-menu">
-            <li class="aside-menu">
-              <div class="aside-content">
-                <h5>Popular Clothing &nbsp;> </h5>
-                <span>Sun Protection Clothing </span>
-                <span>Shorts</span>
-                <span>Jeans</span>
-                <span>Maternity & Mom Wear</span>
-                <span>Plus Size Women's Clothing</span>
-                <span>Coats</span>
-              </div>
-              <div class="aside-content">
-                <h5>Skirt Wardrobe&nbsp; > </h5>
-                <span>One-Piece Dresses</span>
-                <span>Skirts</span>
-                <span>Skirt Suits</span>
-                <span>Figure-Hugging Dresses</span>
-                <span>White One-Piece Dresses</span>
-              </div>
-              <div class="aside-content">
-                <h5>Versatile Tops&nbsp;> </h5>
-                <span>Sweaters</span>
-                <span>Cashmere/Wool Sweaters</span>
-                <span>Knitwear</span>
-                <span>Shirts</span>
-                <span>T-Shirts </span>
-                <span>Trench Coats</span>
-              </div>
-              <div class="aside-content">
-                h5>Outerwear &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > </h5>
-                <span>Cotton Coats</span>
-                <span>Vests</span>
-                <span>Blazers</span>
-                <span>Down Jackets</span>
-                <span>Woolen Coats </span>
-                <span>Knit Outerwear</span>
-              </div>
-              <div class="aside-content">
-                <h5>Featured Apparel&nbsp; > </h5>
-                <span>Middle/Aged Women's Clothing</span>
-                <span>Plus Size Women's Clothing</span>
-                <span>Mall-Style Items</span>
-                <span>Designer Pieces</span>
-                <span>Ethnic Style </span>
-                <span>Evening Gowns</span>
-              </div>
-            </li>
-          </ul>
-        </li>
-        ……
-      </ul>
-    </div>
-  </body>
-  The styles are as follows:
-  .nav-left>ul{
+  <div class="nav-left">
+    <img src="./img/nav.jpg" class="nav-img" />
+    <ul>
+      <li> <a href="#">Women's Clothing</a>
+        <ul class="nav-menu">
+          <li class="aside-menu">
+            <div class="aside-content">
+              <h5>Popular Clothing &nbsp;> </h5>
+              <span>Sun Protection Clothing </span>
+              <span>Shorts</span>
+              <span>Jeans</span>
+              <span>Maternity & Mom Wear</span>
+              <span>Plus Size Women's Clothing</span>
+              <span>Coats</span>
+            </div>
+            <div class="aside-content">
+              <h5>Skirt Wardrobe&nbsp; > </h5>
+              <span>One-Piece Dresses</span>
+              <span>Skirts</span>
+              <span>Skirt Suits</span>
+              <span>Figure-Hugging Dresses</span>
+              <span>White One-Piece Dresses</span>
+            </div>
+            <div class="aside-content">
+              <h5>Versatile Tops&nbsp;> </h5>
+              <span>Sweaters</span>
+              <span>Cashmere/Wool Sweaters</span>
+              <span>Knitwear</span>
+              <span>Shirts</span>
+              <span>T-Shirts </span>
+              <span>Trench Coats</span>
+            </div>
+            <div class="aside-content">
+              <h5>Outerwear &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > </h5>
+              <span>Cotton Coats</span>
+              <span>Vests</span>
+              <span>Blazers</span>
+              <span>Down Jackets</span>
+              <span>Woolen Coats </span>
+              <span>Knit Outerwear</span>
+            </div>
+            <div class="aside-content">
+              <h5>Featured Apparel&nbsp; > </h5>
+              <span>Middle/Aged Women's Clothing</span>
+              <span>Plus Size Women's Clothing</span>
+              <span>Mall-Style Items</span>
+              <span>Designer Pieces</span>
+              <span>Ethnic Style </span>
+              <span>Evening Gowns</span>
+            </div>
+          </li>
+        </ul>
+      </li>
+      ……
+    </ul>
+  </div>
+</body>
+```
+
+The styles are as follows:
+
+```css
+.nav-left>ul{
   width: 230px;
   height: 450px;
   background-color: #ff00d9;
   position: relative;
-  }
-  .nav-left>ul>li{
+}
+.nav-left>ul>li{
   height: 45px;
   width: 230px;
-  }
-  .nav-left>ul>li>a{
+}
+.nav-left>ul>li>a{
   display: block;
   padding-left: 40px;
   line-height: 45px;
   color: #fff;
-  }
-  .nav-left>ul>li:hover a{
+}
+.nav-left>ul>li:hover a{
   background-color: #fff;
   color: #ff00d9;
-  }
-  .nav-left>ul>li>ul{
+}
+.nav-left>ul>li>ul{
   width: 500px;
   height: 350px;
   background-color: #fff;
@@ -1976,28 +1971,28 @@ The code is as follows:
   top: 0;
   left: 230px;
   display: none;
-  }
-  .nav-left>ul>li:hover .aside-menu{
+}
+.nav-left>ul>li:hover .aside-menu{
   display: block;
-  }
-  .nav-left>ul>li>ul>li{
+}
+.nav-left>ul>li>ul>li{
   width: 450px;
   height: 100px;
   line-height: 38px;
   padding: 0 20px;
-  }
-  .aside-content>h5{
+}
+.aside-content>h5{
   display: inline-block;
-  }
-  .aside-content>span{
+}
+.aside-content>span{
   font-size: 12px;
   margin-left: 15px;
   color: #666;
   cursor: pointer;
-  }
-  .aside-content>span:hover{
+}
+.aside-content>span:hover{
   color: #ff00d9;
-  }
+}
 ```
 
 ## Task 3.5 Project Practice – Map Attractions (Section F)
