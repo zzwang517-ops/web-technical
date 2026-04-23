@@ -208,22 +208,18 @@ subtitle
 <h2>Theme Switcher</h2>
 <p class="subtitle">Click the button below to switch the theme style</p>
 <div class="theme-grid">
-```
-
-&lt;button
+<button
 v-for="theme in themes"
 :key="theme.id"
 @click="switchTheme(theme.id)"
 :class="{ active: currentTheme === theme.id }"
-&gt;
-
-```html
+>
 <div class="theme-preview" :style="theme.styles"></div>
 <span>{{ theme.name }}</span>
 </button>
 </div>
 <button class="random-btn" @click="randomTheme">
-  Random Theme
+Random Theme
 </button>
 </div>
 </div>
@@ -459,28 +455,24 @@ class="animated-ball"
 :class="{
 'bounce-rotate': isActive,
 'reset': !isActive
-```
-
 }"
 @animationend="handleAnimationEnd"
-&gt;&lt;/div&gt;
-
-```html
+></div>
 </div>
 </template>
 <script setup>
-  import { ref } from 'vue';
-  const isActive = ref(false);
-  const startAnimation = () => {
+import { ref } from 'vue';
+const isActive = ref(false);
+const startAnimation = () => {
   isActive.value = true;
-  };
-  const handleAnimationEnd = () => {
+};
+const handleAnimationEnd = () => {
   // Reset the state after the animation ends to allow triggering again
   isActive.value = false;
-  };
+};
 </script>
 <style scoped>
-  .animation-container {
+.animation-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -490,8 +482,8 @@ class="animated-ball"
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  }
-  .trigger-btn {
+}
+.trigger-btn {
   padding: 12px 24px;
   background: linear-gradient(to right, #ff7e5f, #feb47b);
   color: white;
@@ -502,46 +494,46 @@ class="animated-ball"
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s;
   margin-bottom: 40px;
-  }
-  .trigger-btn:hover {
+}
+.trigger-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  }
-  .animated-ball {
+}
+.animated-ball {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  }
-  /* Bounce + Rotate Combined Animation */
-  .bounce-rotate {
+}
+/* Bounce + Rotate Combined Animation */
+.bounce-rotate {
   animation: bounce-rotate 1.5s ease-in-out;
-  }
-  @keyframes bounce-rotate {
+}
+@keyframes bounce-rotate {
   0% {
-  transform: translateY(0) rotate(0deg);
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(0) rotate(0deg);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  25% {
+25% {
   transform: translateY(-30px) rotate(90deg);
-  }
-  50% {
+}
+50% {
   transform: translateY(0) rotate(180deg);
   animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-  }
-  75% {
+}
+75% {
   transform: translateY(-20px) rotate(270deg);
-  }
-  100% {
+}
+100% {
   transform: translateY(0) rotate(360deg);
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  }
-  /* Reset Animation */
-  .reset {
+}
+}
+/* Reset Animation */
+.reset {
   transition: all 0.5s;
-  }
+}
 </style>
 ```
 
@@ -631,14 +623,10 @@ import Rotate3D from './components/Rotate3D.vue'
 <div class="cube-container">
 <div
 class="cube"
-```
-
 :style="cubeStyle"
 @mouseenter="stopRotation"
 @mouseleave="startRotation"
-&gt;
-
-```html
+>
 <div class="face front">Front</div>
 <div class="face back">Back</div>
 <div class="face right">Right</div>
@@ -837,12 +825,8 @@ The code is as follows:
 <script setup>
   import {appImages, appMode, appTheme} from "@/store.js";
   import {convertFilename, getId} from "@/helper.js";
-```
-
-...Button styles
-...Image import function
-
-```html
+  ...Button styles
+  ...Image import function
 </script>
 ```
 

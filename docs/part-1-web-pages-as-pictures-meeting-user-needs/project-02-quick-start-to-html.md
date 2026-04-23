@@ -215,9 +215,8 @@ Common block-level elements include &lt;h1&gt; to &lt;h6&gt;, &lt;p&gt;, &lt;div
 
 ```html
 <div> tag: "div" is short for "division", meaning "section or area". The content between <div> and </div> acts as a container, which can divide a webpage into independent, distinct sections and hold various webpage elements such as paragraphs, headings, and images.
+  The <div> tag is very powerful. When used with attributes such as id and class, along with CSS styling, it can replace most text formatting tags.
 ```
-
-The &lt;div&gt; tag is very powerful. When used with attributes such as id and class, along with CSS styling, it can replace most text formatting tags.
 
 ##### (2) Inline Tags
 Inline elements, also known as inline-level elements, are generally basic semantic elements. They do not occupy independent space and only support the structure by their own font size and image dimensions. Normally, properties such as width, height, and alignment cannot be set for them. They are often used to control the style of text on a page.
@@ -225,9 +224,8 @@ Common inline elements include &lt;strong&gt;, &lt;b&gt;, &lt;em&gt;, &lt;i&gt;,
 
 ```html
 <span> is an inline element. Only text and various inline tags such as <strong>, <em>, etc. can be contained between <span> and </span>. Multiple levels of <span> can also be nested within a <span> tag.
+          The <span> tag is often used to define some specially displayed text on a webpage. It has no fixed presentation format by itself and will only produce visual changes when styles are applied.
 ```
-
-The &lt;span&gt; tag is often used to define some specially displayed text on a webpage. It has no fixed presentation format by itself and will only produce visual changes when styles are applied.
 
 ##### (3) Element Conversion
 If you want an inline element to have some characteristics of a block-level element, or a block-level element to have some characteristics of an inline element, you can use the display property to convert the element type. The common values and functions of the display property are shown in Table 2-4.
@@ -276,21 +274,13 @@ Please pay attention to the use of block-level tags, paragraph tags, text format
   <p>
     <b>vernacular translation</b>
     <br>
-```
-
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;The bright moonlight shone on the ground, as if a layer of frost had settled. I couldn't help but raise my head to gaze at the bright moon in the sky, and then lower it to ponder, thinking of my hometown far away。
-
-```html
-</p>
-<p>
-  <b>Creative Background</b>
-  <br>
-```
-
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Li Bai's "Musing in a Quiet Night" was composed in a lodging house in Yangzhou on the fifteenth day of the ninth month of the fourteenth year of Emperor Xuanzong's Kaiyuan era (AD 726), when Li Bai was 26 years old. At the same time and place, he also composed another poem titled "Autumn Evening Reflections". On a moonlit night with a clear sky, the poet gazed up at the bright moon in the sky, and his homesickness arose spontaneously, prompting him to write this famous poem "Musing in a Quiet Night" that has been passed down through the ages and is well-known both in China and abroad。
-
-```html
-</p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The bright moonlight shone on the ground, as if a layer of frost had settled. I couldn't help but raise my head to gaze at the bright moon in the sky, and then lower it to ponder, thinking of my hometown far away。
+  </p>
+  <p>
+    <b>Creative Background</b>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Li Bai's "Musing in a Quiet Night" was composed in a lodging house in Yangzhou on the fifteenth day of the ninth month of the fourteenth year of Emperor Xuanzong's Kaiyuan era (AD 726), when Li Bai was 26 years old. At the same time and place, he also composed another poem titled "Autumn Evening Reflections". On a moonlit night with a clear sky, the poet gazed up at the bright moon in the sky, and his homesickness arose spontaneously, prompting him to write this famous poem "Musing in a Quiet Night" that has been passed down through the ages and is well-known both in China and abroad。
+  </p>
 </div>
 ```
 
@@ -439,10 +429,9 @@ An absolute path refers to the actual path where a file exists on a hard disk. F
 
 ```html
 <body background="C:\book\Web Layout\Code\1.jpg">
+  In practice, absolute paths are rarely used in web programming. When a webpage using absolute paths is uploaded to a web server for viewing, the images are very likely to fail to display.
+  This is because when the project is uploaded to a web server, the entire website may not be placed on the server's C drive, but on the D drive or E drive instead. Even if it is placed on the server's C drive, the directory C:\book\Web Layout\Code may not exist on the web server, so the images will not be displayed when browsing the webpage.
 ```
-
-In practice, absolute paths are rarely used in web programming. When a webpage using absolute paths is uploaded to a web server for viewing, the images are very likely to fail to display.
-This is because when the project is uploaded to a web server, the entire website may not be placed on the server's C drive, but on the D drive or E drive instead. Even if it is placed on the server's C drive, the directory C:\book\Web Layout\Code may not exist on the web server, so the images will not be displayed when browsing the webpage.
 
 ##### (2) Relative Path
 A relative path refers to the location of a target file relative to the current file. For example, in the case mentioned above, the file ZhangSan.html references the image bg.jpg. Since bg.jpg is in the same directory as ZhangSan.html, the following code can be used in ZhangSan.html.
@@ -450,10 +439,9 @@ As long as they remain in the same directory, the image will display correctly i
 
 ```html
 <body background="bg.jpg">
+  Note:Relative paths use the / character as the directory separator, while absolute paths can use either \ or /.
+  In relative paths, ../ represents the parent directory. Multiple levels of parent directories can be expressed by using multiple ../ sequences.
 ```
-
-Note:Relative paths use the / character as the directory separator, while absolute paths can use either \ or /.
-In relative paths, ../ represents the parent directory. Multiple levels of parent directories can be expressed by using multiple ../ sequences.
 
 #### 3.Hyperlinks
 When we browse web pages on the Internet, hyperlinks can be seen everywhere. Most of these hyperlinks are created using the &lt;a&gt;&lt;/a&gt; tag.
@@ -709,24 +697,18 @@ After a form collects information, it needs to send the information to a server 
 
 ```html
 <form action="form_action.php">
+  When the form is submitted, the form data will be sent to the page named "form_action.php" for processing. The value of the action attribute can be a relative path, an absolute path, or an email address for receiving data.
+  <form action="email address">
+    When the form is submitted, the form data will be sent in the form of an email.
 ```
-
-When the form is submitted, the form data will be sent to the page named "form_action.php" for processing. The value of the action attribute can be a relative path, an absolute path, or an email address for receiving data.
-
-```html
-<form action="email address">
-```
-
-When the form is submitted, the form data will be sent in the form of an email.
 
 ##### (2) The method attribute
 The method attribute is used to set the submission method of form data. Common request methods are get or post. In HTML5, the method attribute of the &lt;form&gt; tag can be used to set the way form data is sent to the server for processing. Sample code is as follows:
 
 ```html
 <form action="form_action.asp" method="get">
+  In the code above, get is the default value of the method attribute. Data submitted this way will be displayed in the browser’s address bar, which has poor security and limits the amount of data that can be sent. The post method, however, provides better security and no data size restrictions, so using method="post" allows large amounts of data to be submitted.
 ```
-
-In the code above, get is the default value of the method attribute. Data submitted this way will be displayed in the browser’s address bar, which has poor security and limits the amount of data that can be sent. The post method, however, provides better security and no data size restrictions, so using method="post" allows large amounts of data to be submitted.
 
 ##### (3) The name attribute
 The name attribute is used to specify the name of a form to distinguish multiple forms on the same page.

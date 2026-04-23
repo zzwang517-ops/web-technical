@@ -154,36 +154,24 @@ subtitle
 <h2>AI Q&A Assistant</h2>
 <!-- Message display area -->
 <div class="chat-box">
-```
-
-&lt;div
+<div
 v-for="(msg, index) in messages"
 :key="index"
-
-```
 class="message"
-```
-
 :class="{ 'user-msg': msg.isUser }"
-&gt;
-
-```html
+>
 {{ msg.text }}
 </div>
 </div>
 <!-- Input area -->
 <div class="input-area">
-```
-
-&lt;input
+<input
 v-model="question"
 @keyup.enter="askQuestion"
-
-```html
 placeholder="Enter your question (must include ?)..."
 />
 <button @click="askQuestion" :disabled="isLoading">
-  {{ isLoading ? 'Thinking...' : 'Ask' }}
+{{ isLoading ? 'Thinking...' : 'Ask' }}
 </button>
 </div>
 </div>
@@ -742,11 +730,7 @@ The code is as follows:
 <div class="row gy-2">
 <div class="col-12" v-for="(item, i) in commands">
 <div class="p-3 rounded"
-```
-
-:class="{'bg-white': i !== location, 'bg-primary': i === location, 'text-white': i === location}"&gt;
-
-```html
+:class="{'bg-white': i !== location, 'bg-primary': i === location, 'text-white': i === location}">
 {{ item.name }}
 </div>
 </div>

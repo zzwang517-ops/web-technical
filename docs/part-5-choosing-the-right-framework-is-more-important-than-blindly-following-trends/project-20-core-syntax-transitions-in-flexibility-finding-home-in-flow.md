@@ -83,9 +83,9 @@ const items = [
   { id: 1, name: 'Zhao Si' },
   { id: 2, name: 'Song Xiaobao' },
   { id: 3, name: 'Jack' }
+]</script>
 ```
 
-]&lt;/script&gt;
 item: The value of the current iteration item.
 index: The index of the current item (optional).
 items: The array to be traversed.
@@ -215,10 +215,9 @@ The essence of the v-model directive is to listen to user input events to update
 <template>
 <select v-model="selectedCity">
 </template>
-```
-
 In the above example, when the user selects a different city, the value of selectedCity is automatically updated to the value of the option (such as "Beijing"/"Shanghai").
 Reverse binding: when selectedCity is modified in the script, the selected item of the drop-down box will be updated automatically.
+```
 
 #### 5.Composition API
 
@@ -801,14 +800,10 @@ Mutation methods are methods that change the original array they are called on w
   number: `${String.fromCharCode(65 + rowIndex)}${colIndex + 1}`,
   status: colIndex >= 12 ? 'occupied' : 'available',
   row: rowIndex,
-```
-
-col: colIndex
-}))
-
-```html
-)
-);
+  col: colIndex
+  }))
+  )
+  );
 </script>
 ```
 
@@ -1122,29 +1117,21 @@ power
 <section class="movie-section">
   <h2>Select a Movie</h2>
   <div class="movie-list">
-```
-
-&lt;div
-v-for="movie in movies"
-:key="movie.id"
-
-```
-class="movie-card"
-```
-
-:class="{ selected: selectedMovie?.id === movie.id }"
-@click="selectMovie(movie)"
-&gt;
-
-```html
-<img :src="movie.poster" alt="Movie Poster" class="poster">
-<div class="movie-info">
-  <h3>{{ movie.title }}</h3>
-  <p>Genre: {{ movie.genre.join(' / ') }}</p>
-  <p>Duration: {{ movie.duration }} minutes</p>
-  <p>Rating: {{ movie.rating }}</p>
-</div>
-</div>
+    <div
+    v-for="movie in movies"
+    :key="movie.id"
+    class="movie-card"
+    :class="{ selected: selectedMovie?.id === movie.id }"
+    @click="selectMovie(movie)"
+    >
+    <img :src="movie.poster" alt="Movie Poster" class="poster">
+    <div class="movie-info">
+      <h3>{{ movie.title }}</h3>
+      <p>Genre: {{ movie.genre.join(' / ') }}</p>
+      <p>Duration: {{ movie.duration }} minutes</p>
+      <p>Rating: {{ movie.rating }}</p>
+    </div>
+  </div>
 </div>
 </section>
 ```
@@ -1211,20 +1198,16 @@ return `${period} ${formattedHour}:${minutes < 10 ? '0' : ''}${minutes}`;
 
 #### Step 7: Render the showtime selection list.
 
-```html
+```vue
 <!-- Showtime Selection -->
 <section v-if="selectedMovie" class="showtime-section">
-  <h2>Select a Showtime</h2>
-  <div class="showtime-selector">
-    <label v-for="time in validShowtimes" :key="time">
-      <input
-      type="radio"
-```
-
+<h2>Select a Showtime</h2>
+<div class="showtime-selector">
+<label v-for="time in validShowtimes" :key="time">
+<input
+type="radio"
 :value="time"
 v-model="selectedShowtime"
-
-```html
 > {{ formatTime(time) }}
 </label>
 </div>

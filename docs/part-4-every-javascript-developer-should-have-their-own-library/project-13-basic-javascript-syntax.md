@@ -651,23 +651,19 @@ Age Calculator: Time Travel Using Arithmetic Operators is divided into the follo
       <div class='content'>
         <h3>Age Calculator: Time Travel with Arithmetic Operators</h3>
         <p>
-```
-
-Case 1: Current Year ${years} + 10 Years = ${future_years} (Addition: Time flies, cherish the present!)&lt;/br&gt;
-Case 2: Current Year ${years} - 20 Years = ${past_years} (Subtraction: Go back to the past, but don't indulge!)&lt;/br&gt;
-Case 3: '1' + '1' = "  ${result4}  " (JS: Should've said so earlier, using '+' is correct!)&lt;/br&gt;
-Case 3: Knowledge × 1 per day = Wisdom after ${knowledge} Days (Multiplication: The power of compound interest is amazing!)&lt;/br&gt;
-Case 4: 100 Years of Life ÷ 3 = ${free_time} Years of Free Time (Division: Learn to choose, focus on what matters!)&lt;/br&gt;
-Case 5: (Wednesday + 10 Days) % 7 = Week ${next_week} (Modulus: Life is a cycle, don't fear repetition!)&lt;/br&gt;
-Case 6: Age ${age} →  ${++age} Years Old (Increment: Growth is irreversible, embrace change!)&lt;/br&gt;
-Case 7: Countdown  ${countdown--}   →   ${countdown}   (Decrement: After the countdown ends, a new beginning comes!)\n
-
-```html
-</p>
-</div>
-`)
-</script> </body>
-</html>
+          Case 1: Current Year ${years} + 10 Years = ${future_years} (Addition: Time flies, cherish the present!)</br>
+          Case 2: Current Year ${years} - 20 Years = ${past_years} (Subtraction: Go back to the past, but don't indulge!)</br>
+          Case 3: '1' + '1' = "  ${result4}  " (JS: Should've said so earlier, using '+' is correct!)</br>
+          Case 3: Knowledge × 1 per day = Wisdom after ${knowledge} Days (Multiplication: The power of compound interest is amazing!)</br>
+          Case 4: 100 Years of Life ÷ 3 = ${free_time} Years of Free Time (Division: Learn to choose, focus on what matters!)</br>
+          Case 5: (Wednesday + 10 Days) % 7 = Week ${next_week} (Modulus: Life is a cycle, don't fear repetition!)</br>
+          Case 6: Age ${age} →  ${++age} Years Old (Increment: Growth is irreversible, embrace change!)</br>
+          Case 7: Countdown  ${countdown--}   →   ${countdown}   (Decrement: After the countdown ends, a new beginning comes!)\n
+        </p>
+      </div>
+      `)
+    </script> </body>
+  </html>
 ```
 
 #### Step 3: Run the index.html file to view the effect.
@@ -896,43 +892,39 @@ The Weather Forecaster: Intelligent Dialogue Between Conditional Statements and 
       <div class="weather-icon">🌧️</div>
       <div class="temp" id="temp"></div>
       <div class="details">
-```
-
-Humidity: 40% |
-Wind Speed: 10 km/h
-
-```html
-</div>
-<div class="advice">
-  <h3>💡 Life Advice for Today:</h3>
-  <p>Footprints in the snow are like the choices in your life—every single step counts.</p>
-</div>
-<div class="footer">
-  <p>Rainy days are not the end, but the sky teaching you: how to walk forward gracefully with an umbrella.</p>
-</div>
-</div>
-<script>
-  let city = "Rainy";
-  let citys = "";
-  switch (city) {
-  case 'Sunny':
-  citys = 'Current Weather: <span style="text-transform: capitalize;">$city</span><br>'
-  citys = 'Temperature: 30°C'
-  break;
-  case 'Rainy':
-  citys = "P.S. Remember to bring an umbrella, otherwise your plans might get 'rained' on (and you might catch a cold)\n";
-  break;
-  case 'Cloudy':
-  citys = "P.S. Cloudy days are perfect for pondering life's big questions—like: What should I have for lunch?\n";
-  break;
-  case 'Thunderstorm':
-  citys = "P.S. If you hear thunder, that's the weather jamming to rock music\n";
-  break;
-  }
-  let temps = document.getElementById("temp");
-  temps.innerHTML = citys;
-</script>
-</body>
+        Humidity: 40% |
+        Wind Speed: 10 km/h
+      </div>
+      <div class="advice">
+        <h3>💡 Life Advice for Today:</h3>
+        <p>Footprints in the snow are like the choices in your life—every single step counts.</p>
+      </div>
+      <div class="footer">
+        <p>Rainy days are not the end, but the sky teaching you: how to walk forward gracefully with an umbrella.</p>
+      </div>
+    </div>
+    <script>
+      let city = "Rainy";
+      let citys = "";
+      switch (city) {
+      case 'Sunny':
+      citys = 'Current Weather: <span style="text-transform: capitalize;">$city</span><br>'
+      citys = 'Temperature: 30°C'
+      break;
+      case 'Rainy':
+      citys = "P.S. Remember to bring an umbrella, otherwise your plans might get 'rained' on (and you might catch a cold)\n";
+      break;
+      case 'Cloudy':
+      citys = "P.S. Cloudy days are perfect for pondering life's big questions—like: What should I have for lunch?\n";
+      break;
+      case 'Thunderstorm':
+      citys = "P.S. If you hear thunder, that's the weather jamming to rock music\n";
+      break;
+      }
+      let temps = document.getElementById("temp");
+      temps.innerHTML = citys;
+    </script>
+  </body>
 </html>
 ```
 

@@ -1215,11 +1215,7 @@ onUnmounted(() => {
 <div class="row gy-2">
 <div class="col-12" v-for="(item, i) in commands">
 <div class="p-3 rounded"
-```
-
-:class="{'bg-white': i !== location, 'bg-primary': i === location, 'text-white': i === location}"&gt;
-
-```html
+:class="{'bg-white': i !== location, 'bg-primary': i === location, 'text-white': i === location}">
 {{ item.name }}
 </div>
 </div>
@@ -1228,7 +1224,7 @@ onUnmounted(() => {
 </aside>
 </template>
 <style scoped>
-  aside {
+aside {
   background: rgba(0, 0, 0, .7);
   position: fixed;
   left: 0;
@@ -1236,7 +1232,7 @@ onUnmounted(() => {
   bottom: 0;
   right: 0;
   z-index: 9999;
-  }
+}
 </style>
 ```
 

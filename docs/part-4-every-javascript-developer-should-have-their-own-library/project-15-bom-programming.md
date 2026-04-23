@@ -666,51 +666,43 @@ The code is as follows:
       <section class="content">
         <h2>Large Text Content</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
-```
-
-Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
-odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.&lt;/p&gt;
-
-```html
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
-```
-
-Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
-odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.&lt;/p&gt;
-
-```html
-</section>
-<section class="images">
-  <h2>Images</h2>
-  <img src="assets/300.png" alt="Placeholder Image 1" onload="loadMedia()">
-  <img src="assets/600.png" alt="Placeholder Image 2" onload="loadMedia()">
-  <img src="assets/900.png" alt="Placeholder Image 3" onload="loadMedia()">
-</section>
-<section class="videos">
-  <h2>Videos</h2>
-  <video oncanplay="loadMedia()" src="assets/Bohemian%20Rhapsody%20_%20Muppet%20Music%20Video%20_%20The%20Muppets.mp4" controls loop></video>
-  <video oncanplay="loadMedia()" src="assets/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up%20(Official%20Music%20Video).mp4" controls loop></video>
-</section>
-<section class="form-section">
-  <h2>Interactive Forms</h2>
-  <form>
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br><br>
-    <input type="submit" value="Submit">
-  </form>
-</section>
-<section class="dynamic-content">
-  <h2>Dynamic Content</h2>
-  <button id="dynamicContentBtn">Add Dynamic Content</button>
-  <div id="dynamicContent"></div>
-</section>
-</div>
-</body>
-</html>
+          Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
+          odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
+            odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+          </section>
+          <section class="images">
+            <h2>Images</h2>
+            <img src="assets/300.png" alt="Placeholder Image 1" onload="loadMedia()">
+            <img src="assets/600.png" alt="Placeholder Image 2" onload="loadMedia()">
+            <img src="assets/900.png" alt="Placeholder Image 3" onload="loadMedia()">
+          </section>
+          <section class="videos">
+            <h2>Videos</h2>
+            <video oncanplay="loadMedia()" src="assets/Bohemian%20Rhapsody%20_%20Muppet%20Music%20Video%20_%20The%20Muppets.mp4" controls loop></video>
+            <video oncanplay="loadMedia()" src="assets/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up%20(Official%20Music%20Video).mp4" controls loop></video>
+          </section>
+          <section class="form-section">
+            <h2>Interactive Forms</h2>
+            <form>
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="name"><br><br>
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email"><br><br>
+              <input type="submit" value="Submit">
+            </form>
+          </section>
+          <section class="dynamic-content">
+            <h2>Dynamic Content</h2>
+            <button id="dynamicContentBtn">Add Dynamic Content</button>
+            <div id="dynamicContent"></div>
+          </section>
+        </div>
+      </body>
+    </html>
 ```
 
 #### Step 3: Style construction.
@@ -831,51 +823,43 @@ The code is as follows:
       <section class="content">
         <h2>Large Text Content</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
-```
-
-Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
-odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.&lt;/p&gt;
-
-```html
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
-```
-
-Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
-odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.&lt;/p&gt;
-
-```html
-</section>
-<section class="images">
-  <h2>Images</h2>
-  <img src="assets/300.png" alt="Placeholder Image 1" onload="loadMedia()">
-  <img src="assets/600.png" alt="Placeholder Image 2" onload="loadMedia()">
-  <img src="assets/900.png" alt="Placeholder Image 3" onload="loadMedia()">
-</section>
-<section class="videos">
-  <h2>Videos</h2>
-  <video oncanplay="loadMedia()" src="assets/Bohemian%20Rhapsody%20_%20Muppet%20Music%20Video%20_%20The%20Muppets.mp4" controls loop></video>
-  <video oncanplay="loadMedia()" src="assets/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up%20(Official%20Music%20Video).mp4" controls loop></video>
-</section>
-<section class="form-section">
-  <h2>Interactive Forms</h2>
-  <form>
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br><br>
-    <input type="submit" value="Submit">
-  </form>
-</section>
-<section class="dynamic-content">
-  <h2>Dynamic Content</h2>
-  <button id="dynamicContentBtn">Add Dynamic Content</button>
-  <div id="dynamicContent"></div>
-</section>
-</div>
-</body>
-</html>
+          Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
+          odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
+            odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+          </section>
+          <section class="images">
+            <h2>Images</h2>
+            <img src="assets/300.png" alt="Placeholder Image 1" onload="loadMedia()">
+            <img src="assets/600.png" alt="Placeholder Image 2" onload="loadMedia()">
+            <img src="assets/900.png" alt="Placeholder Image 3" onload="loadMedia()">
+          </section>
+          <section class="videos">
+            <h2>Videos</h2>
+            <video oncanplay="loadMedia()" src="assets/Bohemian%20Rhapsody%20_%20Muppet%20Music%20Video%20_%20The%20Muppets.mp4" controls loop></video>
+            <video oncanplay="loadMedia()" src="assets/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up%20(Official%20Music%20Video).mp4" controls loop></video>
+          </section>
+          <section class="form-section">
+            <h2>Interactive Forms</h2>
+            <form>
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="name"><br><br>
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email"><br><br>
+              <input type="submit" value="Submit">
+            </form>
+          </section>
+          <section class="dynamic-content">
+            <h2>Dynamic Content</h2>
+            <button id="dynamicContentBtn">Add Dynamic Content</button>
+            <div id="dynamicContent"></div>
+          </section>
+        </div>
+      </body>
+    </html>
 ```
 
 #### Step 4: Implement the page function after the loading animation with a 3-second delay.

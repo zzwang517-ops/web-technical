@@ -392,97 +392,85 @@ Task 2: Map Attractions
                 <source
                 srcset="assets/images/attraction-a.jpg"
                 media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/attraction-a-low-res.jpg"
-alt="Parce de la Tete"
-/>
-</picture>
-<span>Parc de la Tete d'Or</span>
-</a>
-<a class="card" href="#" id="attraction-b">
-  <picture>
-    <source
-    srcset="assets/images/attraction-b.jpg"
-    media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/attraction-b-low-res.jpg"
-alt="Street"
-/>
-</picture>
-<span>Street</span>
-</a>
-<a class="card" href="#" id="attraction-c">
-  <picture>
-    <source
-    srcset="assets/images/attraction-c.jpg"
-    media="(min-width: 760px)"
-    />
-    <img src="assets/images/attraction-c-low-res.jpg" alt="River" />
-  </picture>
-  <span>River</span>
-</a>
-<a class="card" href="#">
-  <picture>
-    <source
-    srcset="assets/images/all-attractions.jpg"
-    media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/all-attractions-low-res.jpg"
-alt="All Attractions"
-/>
-</picture>
-<span>All Attractions</span>
-</a>
-</div>
-<!-- Dots -->
-<div
-class="map-dot"
-id="map-dot-1"
-aria-label="Highlight the first attraction"
-tabindex="0"
->
-<span>A</span>
-</div>
-<div
-class="map-dot"
-id="map-dot-2"
-aria-label="Highlight the second attraction"
-tabindex="0"
->
-<span>B</span>
-</div>
-<div
-class="map-dot"
-id="map-dot-3"
-aria-label="Highlight the third attarction"
-tabindex="0"
->
-<span>C </span>
-</div>
-<!-- Image -->
-<picture>
-  <source
-  srcset="assets/images/lyon-map.jpg"
-  media="(min-width: 760px)"
-  />
-  <img src="assets/images/lyon-map-low-res.jpg" alt="MDN" />
-</picture>
-</div>
+                />
+                <img
+                src="assets/images/attraction-a-low-res.jpg"
+                alt="Parce de la Tete"
+                />
+              </picture>
+              <span>Parc de la Tete d'Or</span>
+            </a>
+            <a class="card" href="#" id="attraction-b">
+              <picture>
+                <source
+                srcset="assets/images/attraction-b.jpg"
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/attraction-b-low-res.jpg"
+                alt="Street"
+                />
+              </picture>
+              <span>Street</span>
+            </a>
+            <a class="card" href="#" id="attraction-c">
+              <picture>
+                <source
+                srcset="assets/images/attraction-c.jpg"
+                media="(min-width: 760px)"
+                />
+                <img src="assets/images/attraction-c-low-res.jpg" alt="River" />
+              </picture>
+              <span>River</span>
+            </a>
+            <a class="card" href="#">
+              <picture>
+                <source
+                srcset="assets/images/all-attractions.jpg"
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/all-attractions-low-res.jpg"
+                alt="All Attractions"
+                />
+              </picture>
+              <span>All Attractions</span>
+            </a>
+          </div>
+          <!-- Dots -->
+          <div
+          class="map-dot"
+          id="map-dot-1"
+          aria-label="Highlight the first attraction"
+          tabindex="0"
+          >
+          <span>A</span>
+        </div>
+        <div
+        class="map-dot"
+        id="map-dot-2"
+        aria-label="Highlight the second attraction"
+        tabindex="0"
+        >
+        <span>B</span>
+      </div>
+      <div
+      class="map-dot"
+      id="map-dot-3"
+      aria-label="Highlight the third attarction"
+      tabindex="0"
+      >
+      <span>C </span>
+    </div>
+    <!-- Image -->
+    <picture>
+      <source
+      srcset="assets/images/lyon-map.jpg"
+      media="(min-width: 760px)"
+      />
+      <img src="assets/images/lyon-map-low-res.jpg" alt="MDN" />
+    </picture>
+  </div>
 </section>
 </main>
 </body>
@@ -750,140 +738,100 @@ Task 4 Basic Information and Latest Events
               <picture>
                 <source
                 srcset="
-```
-
-assets/images/latest-events-images/worldskills-2024-p.jpg
-"
-
-```
-media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/worldskills-2024-p-low-res.png"
-alt="Event"
-/>
-</picture>
-<span>
-  Lyon accueille la finale mondiale des Worldskills 2024
-</span>
-</div>
-<!-- Event Card -->
-<div class="card">
-  <picture>
-    <source
-    srcset="assets/images/latest-events-images/fda-p.jpg"
-    media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/fda-p-low-res.jpg"
-alt="Event"
-/>
-</picture>
-<span>Forum des associations 2024 </span>
-</div>
-<!-- Event Card -->
-<div class="card">
-  <picture>
-    <source
-    srcset="assets/images/latest-events-images/lyon-kayak-p-0.jpg"
-    media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/lyon-kayak-p-0-low-res.jpg"
-alt="Event"
-/>
-</picture>
-<span>Lyon Kayak</span>
-</div>
-<!-- Event Card -->
-<div class="card">
-  <picture>
-    <source
-    srcset="
-```
-
-assets/images/latest-events-images/semaine-bleue-2024-p.jpg
-"
-
-```
-media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/semaine-bleue-2024-p-low-res.jpg"
-alt="Event"
-/>
-</picture>
-<span>La semaine bleue 2024</span>
-</div>
-<!-- Event Card -->
-<div class="card">
-  <picture>
-    <source
-    srcset="
-```
-
-assets/images/latest-events-images/village-des-metiers-p.jpg
-"
-
-```
-media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/village-des-metiers-p-low-res.jpg"
-alt="Event"
-/>
-</picture>
-<span>Le Village des Métiers</span>
-</div>
-<!-- Event Card -->
-<div class="card">
-  <picture>
-    <source
-    srcset="
-```
-
-assets/images/latest-events-images/journees_portes_ouvertes_entreprises_2023_p.jpg
-"
-
-```
-media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/journees_portes_ouvertes_entreprises_2023_p-low-res.jpg"
-alt="Event"
-/>
-</picture>
-<span>Les Journées Portes Ouvertes des Entreprises</span>
-</div>
-</div>
-</div>
-</section>
-</main>
-</body>
+                assets/images/latest-events-images/worldskills-2024-p.jpg
+                "
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/worldskills-2024-p-low-res.png"
+                alt="Event"
+                />
+              </picture>
+              <span>
+                Lyon accueille la finale mondiale des Worldskills 2024
+              </span>
+            </div>
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="assets/images/latest-events-images/fda-p.jpg"
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/fda-p-low-res.jpg"
+                alt="Event"
+                />
+              </picture>
+              <span>Forum des associations 2024 </span>
+            </div>
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="assets/images/latest-events-images/lyon-kayak-p-0.jpg"
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/lyon-kayak-p-0-low-res.jpg"
+                alt="Event"
+                />
+              </picture>
+              <span>Lyon Kayak</span>
+            </div>
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="
+                assets/images/latest-events-images/semaine-bleue-2024-p.jpg
+                "
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/semaine-bleue-2024-p-low-res.jpg"
+                alt="Event"
+                />
+              </picture>
+              <span>La semaine bleue 2024</span>
+            </div>
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="
+                assets/images/latest-events-images/village-des-metiers-p.jpg
+                "
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/village-des-metiers-p-low-res.jpg"
+                alt="Event"
+                />
+              </picture>
+              <span>Le Village des Métiers</span>
+            </div>
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="
+                assets/images/latest-events-images/journees_portes_ouvertes_entreprises_2023_p.jpg
+                "
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/journees_portes_ouvertes_entreprises_2023_p-low-res.jpg"
+                alt="Event"
+                />
+              </picture>
+              <span>Les Journées Portes Ouvertes des Entreprises</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
 ```
 

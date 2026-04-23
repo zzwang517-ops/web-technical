@@ -1684,134 +1684,98 @@ This section is a comprehensive application of CSS3 styles, which consolidates a
               <picture>
                 <source
                 srcset="
-```
-
-assets/images/latest-events-images/worldskills-2024-p.jpg
-"
-
-```
-media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/worldskills-2024-p-low-res.png"
-alt="Event"
-/>
-</picture>
-<span>
-  Lyon accueille la finale mondiale des Worldskills 2024
-</span>
-</div>
-<!-- Event Card -->
-<div class="card">
-  <picture>
-    <source
-    srcset="assets/images/latest-events-images/fda-p.jpg"
-    media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/fda-p-low-res.jpg"
-alt="Event"
-/>
-</picture>
-<span>Forum des associations 2024 </span>
-</div>
-<!-- Event Card -->
-<div class="card">
-  <picture>
-    <source
-    srcset="assets/images/latest-events-images/lyon-kayak-p-0.jpg"
-    media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/lyon-kayak-p-0-low-res.jpg"
-alt="Event"
-/>
-</picture>
-<span>Lyon Kayak</span>
-</div>
-<!-- Event Card -->
-<div class="card">
-  <picture>
-    <source
-    srcset="
-```
-
-assets/images/latest-events-images/semaine-bleue-2024-p.jpg
-"
-
-```
-media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/semaine-bleue-2024-p-low-res.jpg"
-alt="Event"
-/>
-</picture>
-<span>La semaine bleue 2024</span>
-</div>
-<!-- Event Card -->
-<div class="card">
-  <picture>
-    <source
-    srcset="
-```
-
-assets/images/latest-events-images/village-des-metiers-p.jpg
-"
-
-```
-media="(min-width: 760px)"
-```
-
-/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/village-des-metiers-p-low-res.jpg"
-alt="Event"
-/>
-</picture>
-<span>Le Village des Métiers</span>
-</div>
-<!-- Event Card -->
-<div class="card">
-  <picture>
-    <source
-    srcset="
-```
-
-assets/images/latest-events-images/journees_portes_ouvertes_entreprises_2023_p.jpg "  media="(min-width: 760px)"/&gt;
-&lt;img
-
-```html
-src="assets/images/latest-events-images/journees_portes_ouvertes_entreprises_2023_p-low-res.jpg"
-alt="Event"
-/>
-</picture>
-<span>Les Journées Portes Ouvertes des Entreprises</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Form Section -->
-</main>
-</body>
+                assets/images/latest-events-images/worldskills-2024-p.jpg
+                "
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/worldskills-2024-p-low-res.png"
+                alt="Event"
+                />
+              </picture>
+              <span>
+                Lyon accueille la finale mondiale des Worldskills 2024
+              </span>
+            </div>
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="assets/images/latest-events-images/fda-p.jpg"
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/fda-p-low-res.jpg"
+                alt="Event"
+                />
+              </picture>
+              <span>Forum des associations 2024 </span>
+            </div>
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="assets/images/latest-events-images/lyon-kayak-p-0.jpg"
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/lyon-kayak-p-0-low-res.jpg"
+                alt="Event"
+                />
+              </picture>
+              <span>Lyon Kayak</span>
+            </div>
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="
+                assets/images/latest-events-images/semaine-bleue-2024-p.jpg
+                "
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/semaine-bleue-2024-p-low-res.jpg"
+                alt="Event"
+                />
+              </picture>
+              <span>La semaine bleue 2024</span>
+            </div>
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="
+                assets/images/latest-events-images/village-des-metiers-p.jpg
+                "
+                media="(min-width: 760px)"
+                />
+                <img
+                src="assets/images/latest-events-images/village-des-metiers-p-low-res.jpg"
+                alt="Event"
+                />
+              </picture>
+              <span>Le Village des Métiers</span>
+            </div>
+            <!-- Event Card -->
+            <div class="card">
+              <picture>
+                <source
+                srcset="
+                assets/images/latest-events-images/journees_portes_ouvertes_entreprises_2023_p.jpg "  media="(min-width: 760px)"/>
+                <img
+                src="assets/images/latest-events-images/journees_portes_ouvertes_entreprises_2023_p-low-res.jpg"
+                alt="Event"
+                />
+              </picture>
+              <span>Les Journées Portes Ouvertes des Entreprises</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Form Section -->
+    </main>
+  </body>
 </html>
 ```
 

@@ -519,16 +519,12 @@ Example:
 <div id="motto"></div>
 <script>
   const mottoLibrary = [
-```
-
-"Hard work may not lead to immediate success, but without hard work, success will never come; every effort you make is accumulating luck for the future.",
-"Life is like a cup of tea—it won't be bitter forever, but it will be bitter for a while.",
-"Life isn't about waiting for the storm to pass, but learning to dance in the rain."
-
-```html
-];
-let motto = document.getElementById("motto");
-motto.innerHTML = mottoLibrary;
+  "Hard work may not lead to immediate success, but without hard work, success will never come; every effort you make is accumulating luck for the future.",
+  "Life is like a cup of tea—it won't be bitter forever, but it will be bitter for a while.",
+  "Life isn't about waiting for the storm to pass, but learning to dance in the rain."
+  ];
+  let motto = document.getElementById("motto");
+  motto.innerHTML = mottoLibrary;
 </script>
 ```
 
