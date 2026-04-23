@@ -1,0 +1,8 @@
+# Word source documents and temporary lock files.
+*.doc
+*.docx
+~$*
+
+# OS/editor noise.
+.DS_Store
+Thumbs.db
