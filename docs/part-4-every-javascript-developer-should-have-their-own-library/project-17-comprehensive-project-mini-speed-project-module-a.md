@@ -181,52 +181,52 @@ The code is as follows:
 ```html
 <style>
   html {
-  filter: invert(1);
+    filter: invert(1);
   }
   *,
   *::before,
   *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: white;
   }
   .container {
-  width: 500px;
-  height: 350px;
-  position: relative;
-  filter: url(#goo);
+    width: 500px;
+    height: 350px;
+    position: relative;
+    filter: url(#goo);
   }
   .border {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
-  background-color: black;
-  border-radius: 999px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: black;
+    border-radius: 999px;
   }
   .border:nth-child(2) {
-  bottom: 0;
-  top: unset;
+    bottom: 0;
+    top: unset;
   }
   .drop {
-  width: 50px;
-  height: 50px;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  background-color: black;
-  border-radius: 50%;
-  animation: fall 1.5s infinite linear;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: black;
+    border-radius: 50%;
+    animation: fall 1.5s infinite linear;
   }
 </style>
 ```
@@ -285,22 +285,22 @@ The code is as follows:
     <title>Document</title>
     <style>
       * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
       body {
-      height: 100vh;
-      background: #dddddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        height: 100vh;
+        background: #dddddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       canvas {
-      background: #fff;
+        background: #fff;
       }
       input {
-      margin-left: 2rem;
+        margin-left: 2rem;
       }
     </style>
   </head>
@@ -320,15 +320,15 @@ The code is as follows:
 <script>
   const cSize = 800;
   function draw(){
-  const maxCount = document.querySelector("#maxNumberInput").value;
-  const canvas = document.querySelector("canvas");
-  const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, cSize, cSize);
-  ctx.moveTo(cSize / 2, 0);//top vertex
-  ctx.lineTo(cSize, cSize);//bottom right vertex
-  ctx.lineTo(0, cSize);//lower left vertex
-  ctx.fillStyle = "black";
-  ctx.fill();//Fill with black background
+    const maxCount = document.querySelector("#maxNumberInput").value;
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, cSize, cSize);
+    ctx.moveTo(cSize / 2, 0);//top vertex
+    ctx.lineTo(cSize, cSize);//bottom right vertex
+    ctx.lineTo(0, cSize);//lower left vertex
+    ctx.fillStyle = "black";
+    ctx.fill();//Fill with black background
   }
 </script>
 ```
@@ -341,33 +341,33 @@ The code is as follows:
 <script>
   const cSize = 800;
   function draw(){
-  const maxCount = document.querySelector("#maxNumberInput").value;
-  const canvas = document.querySelector("canvas");
-  const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, cSize, cSize);
-  ctx.moveTo(cSize / 2, 0);//top vertex
-  ctx.lineTo(cSize, cSize);//bottom right vertex
-  ctx.lineTo(0, cSize);//lower left vertex
-  ctx.fillStyle = "black";
-  ctx.fill();//Fill with black background
-  //Start recursive drawing
-  ctx.fillStyle = "white";
-  function repeat(x, y, size, count) {
-  //Recursion termination condition: Exceeding the maximum number of iterations
-  if(++count > maxCount) return;
-  //Draw an inverted small triangle
-  ctx.beginPath();
-  ctx.moveTo(x - size / 2, y - size);//apex
-  ctx.lineTo(x + size / 2, y - size);//upper right vertex
-  ctx.lineTo(x, y);//lower vertex
-  ctx.fill();//fill white
-  //Three-direction recursion (up, left-down, right-down)
-  repeat(x, y - size, size / 2, count);//above
-  repeat(x - size/2, y, size / 2, count);//lower left
-  repeat(x + size/2, y, size / 2, count);//lower right
-  }
-  //Start from the bottom center
-  repeat(cSize / 2, cSize, cSize / 2, 0);
+    const maxCount = document.querySelector("#maxNumberInput").value;
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, cSize, cSize);
+    ctx.moveTo(cSize / 2, 0);//top vertex
+    ctx.lineTo(cSize, cSize);//bottom right vertex
+    ctx.lineTo(0, cSize);//lower left vertex
+    ctx.fillStyle = "black";
+    ctx.fill();//Fill with black background
+    //Start recursive drawing
+    ctx.fillStyle = "white";
+    function repeat(x, y, size, count) {
+      //Recursion termination condition: Exceeding the maximum number of iterations
+      if(++count > maxCount) return;
+      //Draw an inverted small triangle
+      ctx.beginPath();
+      ctx.moveTo(x - size / 2, y - size);//apex
+      ctx.lineTo(x + size / 2, y - size);//upper right vertex
+      ctx.lineTo(x, y);//lower vertex
+      ctx.fill();//fill white
+      //Three-direction recursion (up, left-down, right-down)
+      repeat(x, y - size, size / 2, count);//above
+      repeat(x - size/2, y, size / 2, count);//lower left
+      repeat(x + size/2, y, size / 2, count);//lower right
+    }
+    //Start from the bottom center
+    repeat(cSize / 2, cSize, cSize / 2, 0);
   }
 </script>
 ```
@@ -412,64 +412,64 @@ The code is as follows:
       *,
       *::before,
       *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 1rem;
-      border: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        border: 0;
       }
       body {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
-      min-height: 100vh;
-      align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        min-height: 100vh;
+        align-items: flex-start;
       }
       .btn {
-      font-weight: 500;
-      padding: 0.5rem 1.2rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 0.25rem;
-      color: white;
-      border: 2px solid red;
-      transition: 0.2s;
+        font-weight: 500;
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        color: white;
+        border: 2px solid red;
+        transition: 0.2s;
       }
       .btn:hover {
-      background-color: white !important;
-      color: black;
+        background-color: white !important;
+        color: black;
       }
       .btn.add {
-      background-color: green;
-      border-color: green;
+        background-color: green;
+        border-color: green;
       }
       .btn.blue {
-      border-color: #2067ff;
-      background-color: #2067ff;
+        border-color: #2067ff;
+        background-color: #2067ff;
       }
       .btn.red {
-      background-color: #ff3636;
-      border-color: #ff3636;
+        background-color: #ff3636;
+        border-color: #ff3636;
       }
       .counter {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-      border: 1px solid #aaa;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        border: 1px solid #aaa;
       }
       .counter .count {
-      font-size: 2rem;
-      font-weight: 500;
-      margin: 1rem 0;
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 1rem 0;
       }
       .counters {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
       }
     </style>
   </head>
@@ -489,16 +489,16 @@ The code is as follows:
   const add = document.getElementById("add");
   const counters = document.getElementById("counters");
   add.onclick = () => {
-  const id = (Date.now() + Math.floor(Math.random() * 1000)).toString(16);
-  counters.innerHTML += `
-  <div class="counter">
+    const id = (Date.now() + Math.floor(Math.random() * 1000)).toString(16);
+    counters.innerHTML += `
+    <div class="counter">
     <span class="count" id="counter-${id}">0</span>
     <div class="row">
-      <button class="btn blue" onclick="decrease('${id}')">Decrease</button>
-      <button class="btn red" onclick="increase('${id}')">Increase</button>
+    <button class="btn blue" onclick="decrease('${id}')">Decrease</button>
+    <button class="btn red" onclick="increase('${id}')">Increase</button>
     </div>
-  </div>
-  `;
+    </div>
+    `;
   };
 </script>
 ```
@@ -512,24 +512,24 @@ The code is as follows:
   const add = document.getElementById("add");
   const counters = document.getElementById("counters");
   add.onclick = () => {
-  const id = (Date.now() + Math.floor(Math.random() * 1000)).toString(16);
-  counters.innerHTML += `
-  <div class="counter">
+    const id = (Date.now() + Math.floor(Math.random() * 1000)).toString(16);
+    counters.innerHTML += `
+    <div class="counter">
     <span class="count" id="counter-${id}">0</span>
     <div class="row">
-      <button class="btn blue" onclick="decrease('${id}')">Decrease</button>
-      <button class="btn red" onclick="increase('${id}')">Increase</button>
+    <button class="btn blue" onclick="decrease('${id}')">Decrease</button>
+    <button class="btn red" onclick="increase('${id}')">Increase</button>
     </div>
-  </div>
-  `;
+    </div>
+    `;
   };
   function decrease(id) {
-  document.getElementById(`counter-${id}`).innerText =
-  Number(document.getElementById(`counter-${id}`).innerText) - 1;
+    document.getElementById(`counter-${id}`).innerText =
+    Number(document.getElementById(`counter-${id}`).innerText) - 1;
   }
   function increase(id) {
-  document.getElementById(`counter-${id}`).innerText =
-  Number(document.getElementById(`counter-${id}`).innerText) + 1;
+    document.getElementById(`counter-${id}`).innerText =
+    Number(document.getElementById(`counter-${id}`).innerText) + 1;
   }
 </script>
 ```
@@ -651,92 +651,92 @@ The code is as follows:
     <title>A6</title>
     <style>
       * {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
       body{
-      background-color: #f4f4f4;
+        background-color: #f4f4f4;
       }
       header, footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1em 0;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
       }
       .container {
-      padding: 20px;
+        padding: 20px;
       }
       .images img {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px;
       }
       .videos iframe, .videos video {
-      width: 100%;
-      max-width: 600px;
-      height: 300px;
-      margin: 10px;
-      object-fit: cover;
+        width: 100%;
+        max-width: 600px;
+        height: 300px;
+        margin: 10px;
+        object-fit: cover;
       }
       .content {
-      margin: 20px 0;
+        margin: 20px 0;
       }
       .form-section {
-      margin: 20px 0;
+        margin: 20px 0;
       }
       /* YOUR CODE HERE */
       #loading {
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 989;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 989;
       }
       #loading .circle {
-      width: 200px;
-      height: 200px;
-      border: 10px solid blue;
-      border-radius: 50%;
-      position: relative;
-      animation: loadingAni 1s linear infinite;
+        width: 200px;
+        height: 200px;
+        border: 10px solid blue;
+        border-radius: 50%;
+        position: relative;
+        animation: loadingAni 1s linear infinite;
       }
       #loading .circle::before,
       #loading .circle::after {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: blue;
-      z-index: 2;
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: blue;
+        z-index: 2;
       }
       #loading .circle::before {
-      left: -10px;
-      top: calc(50% - 5px);
+        left: -10px;
+        top: calc(50% - 5px);
       }
       #loading .circle::after {
-      right: -10px;
-      top: calc(50% - 5px);
+        right: -10px;
+        top: calc(50% - 5px);
       }
       #loading .circle .item {
-      position: absolute;
-      left: -20px;
-      right: -20px;
-      top: 50%;
-      bottom: -20px;
-      background: #fff;
+        position: absolute;
+        left: -20px;
+        right: -20px;
+        top: 50%;
+        bottom: -20px;
+        background: #fff;
       }
       @keyframes loadingAni {
-      to {
-      transform: rotate(1turn);
-      }
+        to {
+          transform: rotate(1turn);
+        }
       }
     </style>
   </head>
@@ -803,11 +803,11 @@ The code is as follows:
 <script>
   // Execute after the page is fully loaded
   window.onload = function() {
-  // Set to execute page redirect after 3 seconds
-  setTimeout(() => {
-  // Hide the loading layer
-  document.getElementById('loading').style.display = 'none';
-  }, 3000); // 3-second delay
+    // Set to execute page redirect after 3 seconds
+    setTimeout(() => {
+      // Hide the loading layer
+      document.getElementById('loading').style.display = 'none';
+    }, 3000); // 3-second delay
   };
 </script>
 ```
@@ -848,60 +848,60 @@ The code is as follows:
   *,
   *::before,
   *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
   }
   .container {
-  width: 1024px;
-  height: 682px;
-  position: relative;
-  border-radius: 0.5rem;
-  overflow: hidden;
+    width: 1024px;
+    height: 682px;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
   }
   img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
   }
   input {
-  z-index: 100;
-  appearance: none;
-  background-color: transparent;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+    z-index: 100;
+    appearance: none;
+    background-color: transparent;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
   input::-webkit-slider-thumb {
-  appearance: none;
-  width: 32px;
-  height: 32px;
-  background-repeat: no-repeat;
-  border: 3px solid white;
-  border-radius: 50%;
-  backdrop-filter: blur(1rem);
-  background-image: url("splitter.svg") 32px no-repeat;
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    border: 3px solid white;
+    border-radius: 50%;
+    backdrop-filter: blur(1rem);
+    background-image: url("splitter.svg") 32px no-repeat;
   }
   .container::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  top: 0;
-  width: 3px;
-  left: var(--left, 510.5px);
-  background-color: white;
-  z-index: 100;
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 3px;
+    left: var(--left, 510.5px);
+    background-color: white;
+    z-index: 100;
   }
 </style>
 ```
@@ -913,12 +913,12 @@ The code is as follows:
 ```html
 <script>
   class ImageComparator {
-  constructor() {
-  this.range = document.getElementById('range');
-  this.beforeImg = document.getElementById('before');
-  this.container = document.querySelector('.container');
-  this.init();
-  }
+    constructor() {
+      this.range = document.getElementById('range');
+      this.beforeImg = document.getElementById('before');
+      this.container = document.querySelector('.container');
+      this.init();
+    }
   }
   let ImageCom = new ImageComparator();
 </script>
@@ -931,16 +931,16 @@ The code is as follows:
 ```html
 <script>
   class ImageComparator {
-  constructor() {
-  this.range = document.getElementById('range');
-  this.beforeImg = document.getElementById('before');
-  this.container = document.querySelector('.container');
-  this.init();
-  }
-  init() {
-  this.beforeImg.style.width = '512px';
-  this.range.addEventListener('input', e => this.handleSlider(e));
-  }
+    constructor() {
+      this.range = document.getElementById('range');
+      this.beforeImg = document.getElementById('before');
+      this.container = document.querySelector('.container');
+      this.init();
+    }
+    init() {
+      this.beforeImg.style.width = '512px';
+      this.range.addEventListener('input', e => this.handleSlider(e));
+    }
   }
   let ImageCom = new ImageComparator();
 </script>
@@ -953,21 +953,21 @@ The code is as follows:
 ```html
 <script>
   class ImageComparator {
-  constructor() {
-  this.range = document.getElementById('range');
-  this.beforeImg = document.getElementById('before');
-  this.container = document.querySelector('.container');
-  this.init();
-  }
-  init() {
-  this.beforeImg.style.width = '512px';
-  this.range.addEventListener('input', e => this.handleSlider(e));
-  }
-  handleSlider(e) {
-  const value = +e.target.value;
-  this.beforeImg.style.width = `${value + 16}px`;
-  this.container.style.setProperty('--left', `${value + 14.5}px`);
-  }
+    constructor() {
+      this.range = document.getElementById('range');
+      this.beforeImg = document.getElementById('before');
+      this.container = document.querySelector('.container');
+      this.init();
+    }
+    init() {
+      this.beforeImg.style.width = '512px';
+      this.range.addEventListener('input', e => this.handleSlider(e));
+    }
+    handleSlider(e) {
+      const value = +e.target.value;
+      this.beforeImg.style.width = `${value + 16}px`;
+      this.container.style.setProperty('--left', `${value + 14.5}px`);
+    }
   }
   let ImageCom = new ImageComparator();
 </script>

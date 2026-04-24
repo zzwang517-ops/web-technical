@@ -216,139 +216,139 @@ The task "The Secret of Maximum and Minimum Values" is divided into the followin
 ```html
 <style>
   :root {
-  --primary: #4361ee;
-  --secondary: #f72585;
-  --success: #06d6a0;
-  --warning: #ffd166;
-  --dark: #1e1e1e;
-  --light: #f8f9fa;
-  --radius: 12px;
-  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --primary: #4361ee;
+    --secondary: #f72585;
+    --success: #06d6a0;
+    --warning: #ffd166;
+    --dark: #1e1e1e;
+    --light: #f8f9fa;
+    --radius: 12px;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
   }
   body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
   }
   .container {
-  width: 100%;
-  max-width: 800px;
-  margin: 40px auto;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
   }
   header {
-  text-align: center;
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 40px;
   }
   h1 {
-  font-size: 2.5rem;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 10px;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
   }
   .subtitle {
-  color: var(--dark);
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto;
+    color: var(--dark);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
   }
   .card {
-  background: white;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 30px;
-  margin-bottom: 30px;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-bottom: 30px;
   }
   .input-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
   }
   .input-group label {
-  font-weight: 500;
-  color: var(--dark);
-  width: 100%;
-  margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--dark);
+    width: 100%;
+    margin-bottom: 5px;
   }
   input {
-  flex: 1;
-  padding: 12px 15px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 1rem;
-  min-width: 200px;
-  transition: border-color 0.3s;
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    min-width: 200px;
+    transition: border-color 0.3s;
   }
   input:focus {
-  border-color: var(--primary);
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
   }
   button {
-  background: linear-gradient(90deg, var(--primary), #3a86ff);
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: linear-gradient(90deg, var(--primary), #3a86ff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   }
   button:active {
-  transform: translateY(1px);
+    transform: translateY(1px);
   }
   .results {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
   }
   .result-card {
-  padding: 20px;
-  border-radius: var(--radius);
-  color: white;
-  text-align: center;
-  transition: transform 0.3s;
+    padding: 20px;
+    border-radius: var(--radius);
+    color: white;
+    text-align: center;
+    transition: transform 0.3s;
   }
   .result-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
   }
   .max-result {
-  background: linear-gradient(135deg, var(--primary), #3a86ff);
+    background: linear-gradient(135deg, var(--primary), #3a86ff);
   }
   .min-result {
-  background: linear-gradient(135deg, var(--secondary), #f75c7e);
+    background: linear-gradient(135deg, var(--secondary), #f75c7e);
   }
   .result-title {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
   }
   .result-value {
-  font-size: 2rem;
-  font-weight: bold;
+    font-size: 2rem;
+    font-weight: bold;
   }
   @media (max-width: 768px) {
-  .input-group {
-  flex-direction: column;
-  }
-  input, button {
-  width: 100%;
-  }
+    .input-group {
+      flex-direction: column;
+    }
+    input, button {
+      width: 100%;
+    }
   }
 </style>
 ```
@@ -367,14 +367,14 @@ The task "The Secret of Maximum and Minimum Values" is divided into the followin
 ```html
 <script>
   document.getElementById('calculateBtn').addEventListener('click', function()     {
-  const input = document.getElementById('numbers').value;
-  const numbers = input.split(',')
-  .map(num => num.trim())
-  .filter(n => n !== '');
-  // Convert and handle special values
-  const processedNumbers = numbers.map(num => {
-  return Number(num);
-  });
+    const input = document.getElementById('numbers').value;
+    const numbers = input.split(',')
+      .map(num => num.trim())
+      .filter(n => n !== '');
+    // Convert and handle special values
+    const processedNumbers = numbers.map(num => {
+      return Number(num);
+    });
   });
 </script>
 ```
@@ -384,20 +384,20 @@ The task "The Secret of Maximum and Minimum Values" is divided into the followin
 ```html
 <script>
   document.getElementById('calculateBtn').addEventListener('click', function() {
-  const input = document.getElementById('numbers').value;
-  const numbers = input.split(',')
-  .map(num => num.trim())
-  .filter(n => n !== '');
-  // Convert and handle special values
-  const processedNumbers = numbers.map(num => {
-  return Number(num);
-  });
-  // Calculate maximum and minimum values
-  const maxValue = Math.max(...processedNumbers)
-  const minValue = Math.min(...processedNumbers)
-  // Display results
-  document.getElementById('maxValue').textContent = maxValue;
-  document.getElementById('minValue').textContent = minValue;
+    const input = document.getElementById('numbers').value;
+    const numbers = input.split(',')
+      .map(num => num.trim())
+      .filter(n => n !== '');
+    // Convert and handle special values
+    const processedNumbers = numbers.map(num => {
+      return Number(num);
+    });
+    // Calculate maximum and minimum values
+    const maxValue = Math.max(...processedNumbers)
+    const minValue = Math.min(...processedNumbers)
+    // Display results
+    document.getElementById('maxValue').textContent = maxValue;
+    document.getElementById('minValue').textContent = minValue;
   });
 </script>
 ```
@@ -441,9 +441,9 @@ class Point {
     this.y = y;
     console.log(x, y);
   }
-toString() {
-  return '(' + this.x + ', ' + this.y + ')';
-}
+  toString() {
+    return '(' + this.x + ', ' + this.y + ')';
+  }
 }
 ```
 
@@ -487,10 +487,10 @@ class Father {
   }
   say() {
     console.log(`${this.name} say hello`);
-}
-myMoney() {
-  console.log(`${this.name} has ${this.money} yuan`);
-}
+  }
+  myMoney() {
+    console.log(`${this.name} has ${this.money} yuan`);
+  }
 }
 class Son extends Father {
   constructor() {
@@ -501,8 +501,8 @@ class Son extends Father {
   addMoney() {
     console.log(
     `${this.name} has a total of ${this.money} + ${this.addmoney} = ${this.money + this.addmoney} yuan`
-  );
-}
+    );
+  }
 }
 var son1 = new Son();
 son1.say(); // son say hello
@@ -578,49 +578,49 @@ The "Time Traveler's Diary" task is divided into the following six steps, as det
 ```html
 <style>
   body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-  padding: 20px;
-  color: #1e1e1e;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #1e1e1e;
   }
   .container {
-  max-width: 800px;
-  margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
   }
   header {
-  text-align: center;
-  margin: 30px 0;
-  color: white;
+    text-align: center;
+    margin: 30px 0;
+    color: white;
   }
   .card {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   textarea {
-  width: 99%;
-  height: 120px;
-  padding: 10px;
-  border: 2px solid #eee;
-  border-radius: 8px;
-  font-size: 16px;
+    width: 99%;
+    height: 120px;
+    padding: 10px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 16px;
   }
   .btn {
-  background: #4361ee;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
+    background: #4361ee;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
   }
   .diary-entry {
-  padding: 15px;
-  border-left: 3px solid #4361ee;
-  margin-top: 15px;
+    padding: 15px;
+    border-left: 3px solid #4361ee;
+    margin-top: 15px;
   }
 </style>
 ```
@@ -630,8 +630,8 @@ The "Time Traveler's Diary" task is divided into the following six steps, as det
 ```html
 <script>
   class Diary {
-  static init() {
-  }
+    static init() {
+    }
   }
   Diary.init();
 </script>
@@ -642,24 +642,24 @@ The "Time Traveler's Diary" task is divided into the following six steps, as det
 ```html
 <script>
   class Diary {
-  static init() {
-  document.getElementById('saveBtn').onclick = () => {
-  const content = diaryInput.value.trim();
-  if (!content) return;
-  const entry = {
-  date: new Date().toLocaleDateString(),
-  content: content
-  };
-  localStorage.diary = JSON.stringify(entry);
-  diaryContainer.innerHTML = `
-  <div class="diary-entry">
-    <strong>${entry.date}</strong>
-    <p>${entry.content}</p>
-  </div>
-  `;
-  diaryInput.value = '';
-  };
-  }
+    static init() {
+      document.getElementById('saveBtn').onclick = () => {
+        const content = diaryInput.value.trim();
+        if (!content) return;
+        const entry = {
+          date: new Date().toLocaleDateString(),
+          content: content
+        };
+        localStorage.diary = JSON.stringify(entry);
+        diaryContainer.innerHTML = `
+        <div class="diary-entry">
+        <strong>${entry.date}</strong>
+        <p>${entry.content}</p>
+        </div>
+        `;
+        diaryInput.value = '';
+      };
+    }
   }
   Diary.init();
 </script>
@@ -670,27 +670,27 @@ The "Time Traveler's Diary" task is divided into the following six steps, as det
 ```html
 <script>
   class Diary {
-  static init() {
-  document.getElementById('saveBtn').onclick = () => {
-  const content = diaryInput.value.trim();
-  if (!content) return;
-  const entry = {
-  date: new Date().toLocaleDateString(),
-  content: content
-  };
-  localStorage.diary = JSON.stringify(entry);
-  diaryContainer.innerHTML = `
-  <div class="diary-entry">
-    <strong>${entry.date}</strong>
-    <p>${entry.content}</p>
-  </div>
-  `;
-  diaryInput.value = '';
-  };
-  const saved = localStorage.diary;
-  diaryContainer.innerHTML = saved
-  ? `<div class="diary-entry">${JSON.parse(saved).content}</div>`
-  : '<div class="empty-state">No diary entries yet</div>';}
+    static init() {
+      document.getElementById('saveBtn').onclick = () => {
+        const content = diaryInput.value.trim();
+        if (!content) return;
+        const entry = {
+          date: new Date().toLocaleDateString(),
+          content: content
+        };
+        localStorage.diary = JSON.stringify(entry);
+        diaryContainer.innerHTML = `
+        <div class="diary-entry">
+        <strong>${entry.date}</strong>
+        <p>${entry.content}</p>
+        </div>
+        `;
+        diaryInput.value = '';
+      };
+      const saved = localStorage.diary;
+      diaryContainer.innerHTML = saved
+        ? `<div class="diary-entry">${JSON.parse(saved).content}</div>`
+        : '<div class="empty-state">No diary entries yet</div>';}
   }
   Diary.init();
 </script>
@@ -750,60 +750,60 @@ The code is as follows:
   *,
   *::before,
   *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
   }
   .container {
-  width: 1024px;
-  height: 682px;
-  position: relative;
-  border-radius: 0.5rem;
-  overflow: hidden;
+    width: 1024px;
+    height: 682px;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
   }
   img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
   }
   input {
-  z-index: 100;
-  appearance: none;
-  background-color: transparent;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+    z-index: 100;
+    appearance: none;
+    background-color: transparent;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
   input::-webkit-slider-thumb {
-  appearance: none;
-  width: 32px;
-  height: 32px;
-  background-repeat: no-repeat;
-  border: 3px solid white;
-  border-radius: 50%;
-  backdrop-filter: blur(1rem);
-  background-image: url("splitter.svg") 32px no-repeat;
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    border: 3px solid white;
+    border-radius: 50%;
+    backdrop-filter: blur(1rem);
+    background-image: url("splitter.svg") 32px no-repeat;
   }
   .container::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  top: 0;
-  width: 3px;
-  left: var(--left, 510.5px);
-  background-color: white;
-  z-index: 100;
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 3px;
+    left: var(--left, 510.5px);
+    background-color: white;
+    z-index: 100;
   }
 </style>
 ```
@@ -815,12 +815,12 @@ The code is as follows:
 ```html
 <script>
   class ImageComparator {
-  constructor() {
-  this.range = document.getElementById('range');
-  this.beforeImg = document.getElementById('before');
-  this.container = document.querySelector('.container');
-  this.init();
-  }
+    constructor() {
+      this.range = document.getElementById('range');
+      this.beforeImg = document.getElementById('before');
+      this.container = document.querySelector('.container');
+      this.init();
+    }
   }
   let ImageCom = new ImageComparator();
 </script>
@@ -833,16 +833,16 @@ The code is as follows:
 ```html
 <script>
   class ImageComparator {
-  constructor() {
-  this.range = document.getElementById('range');
-  this.beforeImg = document.getElementById('before');
-  this.container = document.querySelector('.container');
-  this.init();
-  }
-  init() {
-  this.beforeImg.style.width = '512px';
-  this.range.addEventListener('input', e => this.handleSlider(e));
-  }
+    constructor() {
+      this.range = document.getElementById('range');
+      this.beforeImg = document.getElementById('before');
+      this.container = document.querySelector('.container');
+      this.init();
+    }
+    init() {
+      this.beforeImg.style.width = '512px';
+      this.range.addEventListener('input', e => this.handleSlider(e));
+    }
   }
   let ImageCom = new ImageComparator();
 </script>
@@ -855,21 +855,21 @@ The code is as follows:
 ```html
 <script>
   class ImageComparator {
-  constructor() {
-  this.range = document.getElementById('range');
-  this.beforeImg = document.getElementById('before');
-  this.container = document.querySelector('.container');
-  this.init();
-  }
-  init() {
-  this.beforeImg.style.width = '512px';
-  this.range.addEventListener('input', e => this.handleSlider(e));
-  }
-  handleSlider(e) {
-  const value = +e.target.value;
-  this.beforeImg.style.width = `${value + 16}px`;
-  this.container.style.setProperty('--left', `${value + 14.5}px`);
-  }
+    constructor() {
+      this.range = document.getElementById('range');
+      this.beforeImg = document.getElementById('before');
+      this.container = document.querySelector('.container');
+      this.init();
+    }
+    init() {
+      this.beforeImg.style.width = '512px';
+      this.range.addEventListener('input', e => this.handleSlider(e));
+    }
+    handleSlider(e) {
+      const value = +e.target.value;
+      this.beforeImg.style.width = `${value + 16}px`;
+      this.container.style.setProperty('--left', `${value + 14.5}px`);
+    }
   }
   let ImageCom = new ImageComparator();
 </script>

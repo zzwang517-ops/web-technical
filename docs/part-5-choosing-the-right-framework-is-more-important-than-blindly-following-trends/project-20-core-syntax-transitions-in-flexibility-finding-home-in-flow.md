@@ -37,9 +37,9 @@ The v-else directive is used together with the v-if directive. It must immediate
 
 ```vue
 <template>
-<div v-if="loading">Loading...</div>
-<div v-if="error" class="error">{{ error }}</div>
-<div v-if="weatherData" class="weather-display">...</div>
+  <div v-if="loading">Loading...</div>
+  <div v-if="error" class="error">{{ error }}</div>
+  <div v-if="weatherData" class="weather-display">...</div>
 </template>
 ```
 
@@ -47,10 +47,10 @@ The v-if directive is used to conditionally render a block of content. This cont
 
 ```vue
 <template>
-<div v-if="loading">Loading...</div>
-<div v-show="isMale">Male v-show</div>
-<div v-if="error" class="error">{{ error }}</div>
-<div v-if="weatherData" class="weather-display">...</div>
+  <div v-if="loading">Loading...</div>
+  <div v-show="isMale">Male v-show</div>
+  <div v-if="error" class="error">{{ error }}</div>
+  <div v-if="weatherData" class="weather-display">...</div>
 </template>
 ```
 
@@ -60,17 +60,17 @@ The v-for directive is used to iterate over arrays and objects, and its expressi
 
 ```vue
 <template>
-<div class="city-selector">
-<select v-model="selectedCity" class="city-select">
-<option v-for="(city, key) in weatherData" :value="key">{{ key }}</option>
-</select>
-</div>
+  <div class="city-selector">
+    <select v-model="selectedCity" class="city-select">
+      <option v-for="(city, key) in weatherData" :value="key">{{ key }}</option>
+    </select>
+  </div>
 </template>
 <script setup>
-const weatherDate = {
-  "BeiJing":{},
-  "Shanghai":{}
-}
+  const weatherDate = {
+    "BeiJing":{},
+    "Shanghai":{}
+  }
 </script>
 ```
 
@@ -80,18 +80,18 @@ The above example iterates over the keys of the weatherData object (such as "Bei
 
 ```vue
 <template>
-<ul>
-<li v-for="item in items" :key="item.id">
-{{index}}-{{ item.name }}
-</li>
-</ul>
+  <ul>
+    <li v-for="item in items" :key="item.id">
+      {{index}}-{{ item.name }}
+    </li>
+  </ul>
 </template>
 <script setup>
-const items = [
-  { id: 1, name: 'Zhao Si' },
-  { id: 2, name: 'Song Xiaobao' },
-  { id: 3, name: 'Jack' }
-]</script>
+  const items = [
+    { id: 1, name: 'Zhao Si' },
+    { id: 2, name: 'Song Xiaobao' },
+    { id: 3, name: 'Jack' }
+  ]</script>
 ```
 
 item: The value of the current iteration item.
@@ -106,18 +106,18 @@ items: The array to be traversed.
 
 ```vue
 <template>
-<ul>
-<li v-for="(value, key) in user" :key="key">
-{{ key }}: {{ value }}
-</li>
-</ul>
+  <ul>
+    <li v-for="(value, key) in user" :key="key">
+      {{ key }}: {{ value }}
+    </li>
+  </ul>
 </template>
 <script setup>
-const user = {
-  name: 'Li Si',
-  age: 30,
-  occupation: 'Actor'
-}
+  const user = {
+    name: 'Li Si',
+    age: 30,
+    occupation: 'Actor'
+  }
 </script>
 ```
 
@@ -137,7 +137,7 @@ Dynamically bind native HTML attributes such as src, style, and class. The code 
 
 ```vue
 <template>
-<img class="rec-icon" :src="rec.icon"/>
+  <img class="rec-icon" :src="rec.icon"/>
 </template>
 ```
 
@@ -153,13 +153,13 @@ Dynamically switch class names through objects. The key is the class name, and t
 
 ```vue
 <template>
-<!-- Dynamically switch classes based on isActive and hasError -->
-<div :class="{ active: isActive, 'text-danger': hasError }"></div>
+  <!-- Dynamically switch classes based on isActive and hasError -->
+  <div :class="{ active: isActive, 'text-danger': hasError }"></div>
 </template>
 <script setup>
-import { ref } from 'vue';
-const isActive = ref(true);
-const hasError = ref(false);
+  import { ref } from 'vue';
+  const isActive = ref(true);
+  const hasError = ref(false);
 </script>
 ```
 
@@ -171,16 +171,16 @@ Bind multiple class names through an array, which is suitable for situations whe
 
 ```vue
 <template>
-<!-- Static class + Dynamic class -->
-<div :class="['base-class', { active: isActive }]"></div>
-<!-- Pure dynamic class array -->
-<div :class="[classA, classB]"></div>
+  <!-- Static class + Dynamic class -->
+  <div :class="['base-class', { active: isActive }]"></div>
+  <!-- Pure dynamic class array -->
+  <div :class="[classA, classB]"></div>
 </template>
 <script setup>
-import { ref } from 'vue';
-const isActive = ref(true);
-const classA = ref('font-bold');
-const classB = ref('text-red');
+  import { ref } from 'vue';
+  const isActive = ref(true);
+  const classA = ref('font-bold');
+  const classB = ref('text-red');
 </script>
 ```
 
@@ -190,12 +190,12 @@ Combines object and array syntax to implement more complex class name control. T
 
 ```vue
 <template>
-<div :class="[{ active: isActive }, errorClass]"></div>
+  <div :class="[{ active: isActive }, errorClass]"></div>
 </template>
 <script setup>
-import { ref } from 'vue';
-const isActive = ref(true);
-const errorClass = ref('text-danger');
+  import { ref } from 'vue';
+  const isActive = ref(true);
+  const errorClass = ref('text-danger');
 </script>
 ```
 
@@ -209,12 +209,12 @@ Bind styles through objects. The key is the CSS property name, and the value is 
 
 ```vue
 <template>
-<div :style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+  <div :style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
 </template>
 <script setup>
-import { ref } from 'vue';
-const activeColor = ref('red');
-const fontSize = ref(16);
+  import { ref } from 'vue';
+  const activeColor = ref('red');
+  const fontSize = ref(16);
 </script>
 ```
 
@@ -224,12 +224,12 @@ Bind multiple style objects through an array, which is suitable for scenarios wh
 
 ```vue
 <template>
-<div :style="[baseStyles, overridingStyles]"></div>
+  <div :style="[baseStyles, overridingStyles]"></div>
 </template>
 <script setup>
-import { ref } from 'vue';
-const baseStyles = ref({ color: 'gray', fontSize: '14px' });
-const overridingStyles = ref({ fontWeight: 'bold', color: 'black' });
+  import { ref } from 'vue';
+  const baseStyles = ref({ color: 'gray', fontSize: '14px' });
+  const overridingStyles = ref({ fontWeight: 'bold', color: 'black' });
 </script>
 ```
 
@@ -239,10 +239,10 @@ The essence of the v-model directive is to listen to user input events to update
 
 ```vue
 <template>
-<select v-model="selectedCity">
-</template>
-In the above example, when the user selects a different city, the value of selectedCity is automatically updated to the value of the option (such as "Beijing"/"Shanghai").
-Reverse binding: when selectedCity is modified in the script, the selected item of the drop-down box will be updated automatically.
+  <select v-model="selectedCity">
+  </template>
+  In the above example, when the user selects a different city, the value of selectedCity is automatically updated to the value of the option (such as "Beijing"/"Shanghai").
+  Reverse binding: when selectedCity is modified in the script, the selected item of the drop-down box will be updated automatically.
 ```
 
 #### 5.Composition API
@@ -259,11 +259,11 @@ export default {
     function increment() {
       count.value++;
     }
-  return {
-    count,
-    increment
-  };
-}
+    return {
+      count,
+      increment
+    };
+  }
 }
 ```
 
@@ -343,54 +343,54 @@ weather
 
 ```vue
 <template>
-<div class="weather-app">
-<header class="app-header">
-<h1 class="title">Weather Assistant</h1>
-<div class="city-selector">
-<select class="city-select">
-<option value="key">Beijing</option>
-</select>
-</div>
-</header>
-<main class="main-content">
-<!-- Real-time weather card -->
-<div class="current-weather-card">
-<div class="temp-display">22°</div>
-<div class="weather-status">
-<!-- <div class="weather-icon">🌤️</div> -->
-<img class='weather-icon' src="../public/img/dy.png" style="width: 3rem;"/>
-<div class="weather-text">Weather</div>
-</div>
-<div class="weather-details">
-<div class="detail-item">
-<span class="detail-label">Humidity</span>
-<div class="detail-value">40%</div>
-</div>
-<div class="detail-item">
-<span class="detail-label">Wind</span>
-<div class="detail-value">Strong Wind</div>
-</div>
-<div class="detail-item">
-<span class="detail-label">UV Index</span>
-<div class="detail-value">Index 55</div>
-</div>
-<div class="detail-item">
-<span class="detail-label">Feels Like</span>
-<div class="detail-value">26°</div>
-</div>
-</div>
-</div>
-<!-- Life recommendation cards -->
-<div class="recommendations-grid">
-<div
-class="recommendation-card"
->
-<img class='rec-icon' src="../public/img/cy.png"/>
-<div class="rec-title">Clothing Advice</div>
-<div class="rec-desc">It is recommended to wear light and breathable clothing such as T-shirts and shorts. There is a large temperature difference between morning and evening, so you may prepare a thin coat.</div>
-</div>
-</div>
-</main>
+  <div class="weather-app">
+    <header class="app-header">
+      <h1 class="title">Weather Assistant</h1>
+      <div class="city-selector">
+        <select class="city-select">
+          <option value="key">Beijing</option>
+        </select>
+      </div>
+    </header>
+    <main class="main-content">
+      <!-- Real-time weather card -->
+      <div class="current-weather-card">
+        <div class="temp-display">22°</div>
+        <div class="weather-status">
+          <!-- <div class="weather-icon">🌤️</div> -->
+          <img class='weather-icon' src="../public/img/dy.png" style="width: 3rem;"/>
+          <div class="weather-text">Weather</div>
+        </div>
+        <div class="weather-details">
+          <div class="detail-item">
+            <span class="detail-label">Humidity</span>
+            <div class="detail-value">40%</div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Wind</span>
+            <div class="detail-value">Strong Wind</div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">UV Index</span>
+            <div class="detail-value">Index 55</div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Feels Like</span>
+            <div class="detail-value">26°</div>
+          </div>
+        </div>
+      </div>
+      <!-- Life recommendation cards -->
+      <div class="recommendations-grid">
+        <div
+        class="recommendation-card"
+        >
+        <img class='rec-icon' src="../public/img/cy.png"/>
+        <div class="rec-title">Clothing Advice</div>
+        <div class="rec-desc">It is recommended to wear light and breathable clothing such as T-shirts and shorts. There is a large temperature difference between morning and evening, so you may prepare a thin coat.</div>
+      </div>
+    </div>
+  </main>
 </div>
 </template>
 ```
@@ -400,151 +400,151 @@ class="recommendation-card"
 ```html
 <style scoped>
   .weather-app {
-  --primary-color: #3498db;
-  --secondary-color: #2c3e50;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   }
   .app-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1.5rem;
   }
   .title {
-  font-size: 2rem;
-  color: var(--secondary-color);
-  font-weight: 700;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
   }
   .city-selector {
-  position: relative;
+    position: relative;
   }
   .city-select {
-  padding: 0.8rem 1rem;
-  font-size: 1rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: all 0.3s;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s;
   }
   .city-select:hover {
-  border-color: var(--primary-color);
-  box-shadow: 0 2px 10px rgba(52,152,219,0.2);
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(52,152,219,0.2);
   }
   .main-content {
-  display: grid;
-  gap: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
   }
   .current-weather-card {
-  background: linear-gradient(135deg, #43cea2, #185a9d);
-  color: white;
-  border-radius: 16px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  animation: fadeIn 0.5s ease-out;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease-out;
   }
   @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
   }
   .temp-display {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1;
-  margin: 0.5rem 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0.5rem 0;
   }
   .weather-status {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
   .weather-icon {
-  font-size: 2rem;
+    font-size: 2rem;
   }
   .weather-text {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
   }
   .weather-details {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
   .detail-item {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
   .detail-label {
-  font-size: 0.9rem;
-  opacity: 0.9;
+    font-size: 0.9rem;
+    opacity: 0.9;
   }
   .detail-value {
-  font-weight: 600;
-  font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
   }
   .recommendations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
   .recommendation-card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: all 0.3s;
-  border-top: 4px solid var(--card-color, var(--primary-color));
-  position: relative;
-  overflow: hidden;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    border-top: 4px solid var(--card-color, var(--primary-color));
+    position: relative;
+    overflow: hidden;
   }
   .recommendation-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--card-color, var(--primary-color));
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--card-color, var(--primary-color));
   }
   .recommendation-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   }
   .rec-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: var(--card-color, var(--primary-color));
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--card-color, var(--primary-color));
   }
   .rec-title {
-  font-size: 1.3rem;
-  color: var(--secondary-color);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
   }
   .rec-desc {
-  color: #555;
-  line-height: 1.5;
+    color: #555;
+    line-height: 1.5;
   }
   /* */
   @media (max-width: 768px) {
-  .app-header {
-  flex-direction: column;
-  gap: 1rem;
-  }
-  .weather-details {
-  grid-template-columns: 1fr;
-  }
-  .forecast-cards {
-  grid-template-columns: repeat(2, 1fr);
-  }
+    .app-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .weather-details {
+      grid-template-columns: 1fr;
+    }
+    .forecast-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>
 ```
@@ -555,76 +555,76 @@ class="recommendation-card"
 <script setup>
   import {ref, computed} from "vue"
   const weatherData = {
-  "Beijing": {
-  "current": {
-  "temp": 22,
-  "weather": "Cloudy",
-  "humidity": 45,
-  "wind": "Northeast Wind Grade 2",
-  "uvIndex": 4,
-  "feelsLike": 20
-  },
-  "recommendations": {
-  "clothing": {
-  "description": "It is recommended to wear light and breathable clothing such as T-shirts and shorts. There is a large temperature difference between morning and evening, so you may prepare a thin coat.",
-  "icon": './img/cy.png',
-  "color": "#FF6B6B"
-  },
-  "sunProtection": {
-  "description": "UV rays are relatively strong. It is recommended to apply sunscreen with SPF30+ and wear sunglasses and a sun hat.",
-  "icon": "./img/gm.png",
-  "color": "#FFD166"
-  },
-  "travel": {
-  "description": "The weather is suitable for outdoor activities. It is recommended to visit scenic spots such as parks and historical sites.",
-  "icon": "./img/ly.png",
-  "color": "#4ECDC4"
-  },
-  "sports": {
-  "description": "It is suitable for mild exercises such as morning jogging, yoga and cycling. Remember to replenish water.",
-  "icon": "./img/yd.png",
-  "color": "#1A535C"
-  }
-  }
-  },
-  "Shanghai": {
-  "current": {
-  "temp": 26,
-  "weather": "Sunny",
-  "humidity": 65,
-  "wind": "Southeast Wind Grade 3",
-  "uvIndex": 6,
-  "feelsLike": 28
-  },
-  "forecast": [
-  {"date": "2023-06-15", "weather": "Sunny", "temp": [27, 33], "uvIndex": 7, "wind": "South Wind Grade 2"},
-  {"date": "2023-06-16", "weather": "Cloudy", "temp": [26, 31], "uvIndex": 4, "wind": "East Wind Grade 3"},
-  {"date": "2023-06-17", "weather": "Thunder Shower", "temp": [25, 29], "uvIndex": 3, "wind": "North Wind Grade 2"},
-  {"date": "2023-06-18", "weather": "Sunny", "temp": [26, 32], "uvIndex": 6, "wind": "Southwest Wind Grade 1"}
-  ],
-  "recommendations": {
-  "clothing": {
-  "description": "It is recommended to wear sweat-absorbent and breathable cotton clothing, and prepare rain gear for possible showers.",
-  "icon": "./img/xc.png",
-  "color": "#6A4C93"
-  },
-  "sunProtection": {
-  "description": "UV rays are strong. It is recommended to use sunscreen and wear a wide-brimmed hat and sunglasses.",
-  "icon": "./img/fs.png",
-  "color": "#FF9F1C"
-  },
-  "travel": {
-  "description": "It is recommended to visit outdoor attractions such as the Bund and Yu Garden, and pay attention to sun protection and heatstroke prevention.",
-  "icon": "./img/guoming.png",
-  "color": "#2EC4B6"
-  },
-  "sports": {
-  "description": "It is suitable for water sports such as swimming and sailing. Avoid exercising during the high-temperature period at noon.",
-  "icon": "./img/dy.png",
-  "color": "#E71D36"
-  }
-  }
-  }
+    "Beijing": {
+      "current": {
+        "temp": 22,
+        "weather": "Cloudy",
+        "humidity": 45,
+        "wind": "Northeast Wind Grade 2",
+        "uvIndex": 4,
+        "feelsLike": 20
+      },
+      "recommendations": {
+        "clothing": {
+          "description": "It is recommended to wear light and breathable clothing such as T-shirts and shorts. There is a large temperature difference between morning and evening, so you may prepare a thin coat.",
+          "icon": './img/cy.png',
+          "color": "#FF6B6B"
+        },
+        "sunProtection": {
+          "description": "UV rays are relatively strong. It is recommended to apply sunscreen with SPF30+ and wear sunglasses and a sun hat.",
+          "icon": "./img/gm.png",
+          "color": "#FFD166"
+        },
+        "travel": {
+          "description": "The weather is suitable for outdoor activities. It is recommended to visit scenic spots such as parks and historical sites.",
+          "icon": "./img/ly.png",
+          "color": "#4ECDC4"
+        },
+        "sports": {
+          "description": "It is suitable for mild exercises such as morning jogging, yoga and cycling. Remember to replenish water.",
+          "icon": "./img/yd.png",
+          "color": "#1A535C"
+        }
+      }
+    },
+    "Shanghai": {
+      "current": {
+        "temp": 26,
+        "weather": "Sunny",
+        "humidity": 65,
+        "wind": "Southeast Wind Grade 3",
+        "uvIndex": 6,
+        "feelsLike": 28
+      },
+      "forecast": [
+        {"date": "2023-06-15", "weather": "Sunny", "temp": [27, 33], "uvIndex": 7, "wind": "South Wind Grade 2"},
+        {"date": "2023-06-16", "weather": "Cloudy", "temp": [26, 31], "uvIndex": 4, "wind": "East Wind Grade 3"},
+        {"date": "2023-06-17", "weather": "Thunder Shower", "temp": [25, 29], "uvIndex": 3, "wind": "North Wind Grade 2"},
+        {"date": "2023-06-18", "weather": "Sunny", "temp": [26, 32], "uvIndex": 6, "wind": "Southwest Wind Grade 1"}
+      ],
+      "recommendations": {
+        "clothing": {
+          "description": "It is recommended to wear sweat-absorbent and breathable cotton clothing, and prepare rain gear for possible showers.",
+          "icon": "./img/xc.png",
+          "color": "#6A4C93"
+        },
+        "sunProtection": {
+          "description": "UV rays are strong. It is recommended to use sunscreen and wear a wide-brimmed hat and sunglasses.",
+          "icon": "./img/fs.png",
+          "color": "#FF9F1C"
+        },
+        "travel": {
+          "description": "It is recommended to visit outdoor attractions such as the Bund and Yu Garden, and pay attention to sun protection and heatstroke prevention.",
+          "icon": "./img/guoming.png",
+          "color": "#2EC4B6"
+        },
+        "sports": {
+          "description": "It is suitable for water sports such as swimming and sailing. Avoid exercising during the high-temperature period at noon.",
+          "icon": "./img/dy.png",
+          "color": "#E71D36"
+        }
+      }
+    }
   }
   const selectedCity = ref('Beijing')
   // Computed property</script>
@@ -634,12 +634,12 @@ class="recommendation-card"
 
 ```vue
 <header class="app-header">
-<h1 class="title">Weather Assistant</h1>
-<div class="city-selector">
-<select v-model="selectedCity" class="city-select">
-<option v-for="(city, key) in weatherData" :value="key">{{ key }}</option>
-</select>
-</div>
+  <h1 class="title">Weather Assistant</h1>
+  <div class="city-selector">
+    <select v-model="selectedCity" class="city-select">
+      <option v-for="(city, key) in weatherData" :value="key">{{ key }}</option>
+    </select>
+  </div>
 </header>
 ```
 
@@ -699,7 +699,7 @@ const getRecTitle = (key) => {
     travel: 'Travel Advice',
     sports: 'Sports Advice'
   }
-return titles[key] || key
+  return titles[key] || key
 }
 const getForecastColor = (uvIndex) => {
   if (uvIndex >= 7) return '#FF6B6B'
@@ -751,14 +751,14 @@ Method Binding: Directly reference the method defined in the component.
 
 ```vue
 <template>
-<button @click="handleClick">Click Me</button>
+  <button @click="handleClick">Click Me</button>
 </template>
 <script setup>
-const handleClick = () => { console.log('Button clicked'); };
+  const handleClick = () => { console.log('Button clicked'); };
 </script>
 Inline statement: Execute simple JavaScript expressions directly
 <template>
-<button @click="count++">Increase Count</button>
+  <button @click="count++">Increase Count</button>
 </template>
 ```
 
@@ -794,8 +794,8 @@ Passing custom parameters: Pass additional parameters through inline statements 
 <button @click="handleClick('Parameter', $event)">Click with Parameters</button>
 <script setup>
   const handleClick = (message, event) => {
-  console.log(message); // Output: Parameter
-  console.log(event); // Native Event object
+    console.log(message); // Output: Parameter
+    console.log(event); // Native Event object
   };
 </script>
 ```
@@ -809,10 +809,10 @@ Passing custom parameters: Pass additional parameters through inline statements 
   import { ref } from 'vue';
   const count = ref(0);
   const increment = () => {
-  count.value++;
+    count.value++;
   };
   const warn = () => {
-  alert('Warning！');
+    alert('Warning！');
   };
 </script>
 ```
@@ -852,10 +852,10 @@ Mutation methods are methods that change the original array they are called on w
   const seats = reactive(
   Array(8).fill().map((_, rowIndex) =>
   Array(16).fill().map((_, colIndex) => ({
-  number: `${String.fromCharCode(65 + rowIndex)}${colIndex + 1}`,
-  status: colIndex >= 12 ? 'occupied' : 'available',
-  row: rowIndex,
-  col: colIndex
+    number: `${String.fromCharCode(65 + rowIndex)}${colIndex + 1}`,
+    status: colIndex >= 12 ? 'occupied' : 'available',
+    row: rowIndex,
+    col: colIndex
   }))
   )
   );
@@ -886,69 +886,69 @@ power
 
 ```vue
 <template>
-<div class="cinema-system">
-<!-- Movie List -->
-<section class="movie-section">
-<h2>Select a Movie</h2>
-<div class="movie-list">
-<div>
-<img src="../public/img/xj.jpg" alt="Movie Poster" class="poster">
-<div class="movie-info">
-<h3>Interstellar</h3>
-<p>Genre: 'Sci-Fi', 'Adventure'</p>
-<p>Duration: 169 minutes</p>
-<p>Rating: 9.3</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Showtime Selection -->
-<section class="showtime-section">
-<h2>Select a Showtime</h2>
-<div class="showtime-selector">
-<label>
-<input type="radio"> 11:00
-</label>
-</div>
-</section>
-<!-- Seat Selection -->
-<section class="seats-section">
-<h2>Select Seats</h2>
-<div class="screen">Screen</div>
-<div class="seats-container">
-<div class="seat-row">
-<div class="seat">D5</div>
-</div>
-</div>
-</section>
-<!-- User Information -->
-<section class="user-info-section">
-<h2>Fill in Information</h2>
-<form class="booking-form">
-<div class="form-group">
-<label>Name:</label>
-<input type="text" required>
-</div>
-<div class="form-group">
-<label>Phone Number:</label>
-<input type="tel" pattern="[0-9]{11}" required>
-</div>
-<div class="form-group">
-<label>E-Ticket Email:</label>
-<input type="email">
-</div>
-<div class="form-group">
-<label>Payment Method:</label>
-<select>
-<option value="alipay">Alipay</option>
-<option value="wechat">WeChat Pay</option>
-<option value="card">Bank Card</option>
-</select>
-</div>
-<button type="submit" class="submit-btn">Confirm Booking</button>
-</form>
-</section>
-</div>
+  <div class="cinema-system">
+    <!-- Movie List -->
+    <section class="movie-section">
+      <h2>Select a Movie</h2>
+      <div class="movie-list">
+        <div>
+          <img src="../public/img/xj.jpg" alt="Movie Poster" class="poster">
+          <div class="movie-info">
+            <h3>Interstellar</h3>
+            <p>Genre: 'Sci-Fi', 'Adventure'</p>
+            <p>Duration: 169 minutes</p>
+            <p>Rating: 9.3</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Showtime Selection -->
+    <section class="showtime-section">
+      <h2>Select a Showtime</h2>
+      <div class="showtime-selector">
+        <label>
+          <input type="radio"> 11:00
+        </label>
+      </div>
+    </section>
+    <!-- Seat Selection -->
+    <section class="seats-section">
+      <h2>Select Seats</h2>
+      <div class="screen">Screen</div>
+      <div class="seats-container">
+        <div class="seat-row">
+          <div class="seat">D5</div>
+        </div>
+      </div>
+    </section>
+    <!-- User Information -->
+    <section class="user-info-section">
+      <h2>Fill in Information</h2>
+      <form class="booking-form">
+        <div class="form-group">
+          <label>Name:</label>
+          <input type="text" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number:</label>
+          <input type="tel" pattern="[0-9]{11}" required>
+        </div>
+        <div class="form-group">
+          <label>E-Ticket Email:</label>
+          <input type="email">
+        </div>
+        <div class="form-group">
+          <label>Payment Method:</label>
+          <select>
+            <option value="alipay">Alipay</option>
+            <option value="wechat">WeChat Pay</option>
+            <option value="card">Bank Card</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">Confirm Booking</button>
+      </form>
+    </section>
+  </div>
 </template>
 ```
 
@@ -957,175 +957,175 @@ power
 ```html
 <style>
   .cinema-system {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
   section {
-  margin-bottom: 40px;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
   h2 {
-  color: #333;
-  border-bottom: 2px solid #42b983;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #42b983;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
   }
   /* Movie List Styles */
   .movie-list {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
   }
   .movie-card {
-  display: flex;
-  gap: 15px;
-  padding: 15px;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s;
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
   }
   .movie-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
   .movie-card.selected {
-  border-color: #42b983;
-  background-color: #f0fff4;
+    border-color: #42b983;
+    background-color: #f0fff4;
   }
   .poster {
-  width: 120px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 6px;
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
   }
   .movie-info h3 {
-  margin: 0 0 8px;
-  color: #333;
+    margin: 0 0 8px;
+    color: #333;
   }
   .movie-info p {
-  margin: 5px 0;
-  color: #666;
+    margin: 5px 0;
+    color: #666;
   }
   /* Showtime Selection Styles */
   .showtime-selector {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
   }
   .showtime-selector label {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 8px 12px;
-  background: #f5f7fa;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background: #f5f7fa;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
   }
   .showtime-selector label:hover {
-  background: #e6f7ff;
+    background: #e6f7ff;
   }
   .showtime-selector input[type="radio"]:checked + label {
-  background: #42b983;
-  color: white;
+    background: #42b983;
+    color: white;
   }
   /* Seat Selection Styles */
   .screen {
-  height: 20px;
-  background: linear-gradient(to right, #ccc, #eee, #ccc);
-  margin: 20px 0;
-  text-align: center;
-  color: #666;
-  letter-spacing: 10px;
-  border-radius: 0 0 10px 10px;
+    height: 20px;
+    background: linear-gradient(to right, #ccc, #eee, #ccc);
+    margin: 20px 0;
+    text-align: center;
+    color: #666;
+    letter-spacing: 10px;
+    border-radius: 0 0 10px 10px;
   }
   .seats-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .seat-row {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
   }
   .seat {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  transition: all 0.2s;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
   }
   .available {
-  background-color: #f0f9ff;
-  border: 1px solid #42b983;
+    background-color: #f0f9ff;
+    border: 1px solid #42b983;
   }
   .available:hover {
-  background-color: #d1f0e7;
+    background-color: #d1f0e7;
   }
   .selected {
-  background-color: #42b983;
-  color: white;
+    background-color: #42b983;
+    color: white;
   }
   .occupied {
-  background-color: #f5f5f5;
-  cursor: not-allowed;
-  color: #ccc;
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    color: #ccc;
   }
   /* Form Styles */
   .form-group {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
   }
   label {
-  display: block;
-  margin-bottom: 5px;
-  color: #555;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
   }
   input, select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
   }
   input:focus, select:focus {
-  outline: none;
-  border-color: #42b983;
-  box-shadow: 0 0 0 2px rgba(66, 185, 131, 0.2);
+    outline: none;
+    border-color: #42b983;
+    box-shadow: 0 0 0 2px rgba(66, 185, 131, 0.2);
   }
   .submit-btn {
-  background-color: #42b983;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
+    background-color: #42b983;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
   }
   .submit-btn:hover {
-  background-color: #35a578;
+    background-color: #35a578;
   }
   /* Responsive Layout */
   @media (max-width: 768px) {
-  .movie-card {
-  flex-direction: column;
-  width: 100%;
-  }
-  .poster {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  }
+    .movie-card {
+      flex-direction: column;
+      width: 100%;
+    }
+    .poster {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
   }
 </style>
 ```
@@ -1137,33 +1137,33 @@ power
   import { reactive, ref, computed } from 'vue';
   // Movie data
   const movies = reactive([
-  {
-  id: 1,
-  title: 'Interstellar',
-  genre: ['Sci-Fi', 'Adventure'],
-  duration: 169,
-  rating: 9.3,
-  poster: './img/xj.jpg',
-  showtimes: ['10:00', '13:30', '17:00', '20:45']
-  },
-  {
-  id: 2,
-  title: 'The Little Prince',
-  genre: ['Animation', 'Fantasy'],
-  duration: 108,
-  rating: 8.7,
-  poster: './img/xwz.jpg',
-  showtimes: ['11:00', '14:15', '18:30', '21:45']
-  },
-  {
-  id: 3,
-  title: 'The Little Prince',
-  genre: ['Animation', 'Fantasy'],
-  duration: 108,
-  rating: 8.7,
-  poster: './img/xwz.jpg',
-  showtimes: ['11:00', '14:15', '18:30', '21:45']
-  }
+    {
+      id: 1,
+      title: 'Interstellar',
+      genre: ['Sci-Fi', 'Adventure'],
+      duration: 169,
+      rating: 9.3,
+      poster: './img/xj.jpg',
+      showtimes: ['10:00', '13:30', '17:00', '20:45']
+    },
+    {
+      id: 2,
+      title: 'The Little Prince',
+      genre: ['Animation', 'Fantasy'],
+      duration: 108,
+      rating: 8.7,
+      poster: './img/xwz.jpg',
+      showtimes: ['11:00', '14:15', '18:30', '21:45']
+    },
+    {
+      id: 3,
+      title: 'The Little Prince',
+      genre: ['Animation', 'Fantasy'],
+      duration: 108,
+      rating: 8.7,
+      poster: './img/xwz.jpg',
+      showtimes: ['11:00', '14:15', '18:30', '21:45']
+    }
   ]);
   //...State Management
 </script>
@@ -1202,32 +1202,32 @@ power
 const selectedMovie = ref(null);
 const selectedShowtime = ref('');
 const userInfo = reactive({
-    name: '',
-    phone: '',
-    email: '',
-    payment: 'alipay'
-  });
+  name: '',
+  phone: '',
+  email: '',
+  payment: 'alipay'
+});
 // Calculate valid showtimes
 const validShowtimes = computed(() => {
-    if (!selectedMovie.value) return [];
-    return selectedMovie.value.showtimes.filter(time =>
-      typeof time === 'string' &&
-      /^\d{2}:\d{2}$/.test(time)
-    );
+  if (!selectedMovie.value) return [];
+  return selectedMovie.value.showtimes.filter(time =>
+  typeof time === 'string' &&
+  /^\d{2}:\d{2}$/.test(time)
+  );
 });
 // Select a movie
 const selectMovie = (movie) => {
   // Validate showtime data validity
   const isValid = movie.showtimes.every(time =>
-    typeof time === 'string' &&
-    /^\d{2}:\d{2}$/.test(time)
+  typeof time === 'string' &&
+  /^\d{2}:\d{2}$/.test(time)
   );
-if (isValid) {
-  selectedMovie.value = movie;
-} else {
-console.error('Invalid showtimes data:', movie.showtimes);
-alert('Movie showtime data is abnormal, please contact the administrator');
-}
+  if (isValid) {
+    selectedMovie.value = movie;
+  } else {
+    console.error('Invalid showtimes data:', movie.showtimes);
+    alert('Movie showtime data is abnormal, please contact the administrator');
+  }
 };
 // Safe time formatting function
 const formatTime = (time) => {
@@ -1235,14 +1235,14 @@ const formatTime = (time) => {
     console.error('Invalid time format:', time);
     return 'Invalid time format';
   }
-// Validate time format
-if (!/^\d{2}:\d{2}$/.test(time)) {
-  return 'Invalid time format';
-}
-const [hours, minutes] = time.split(':').map(Number);
-const period = hours >= 12 ? 'PM' : 'AM';
-const formattedHour = hours % 12 || 12;
-return `${period} ${formattedHour}:${minutes < 10 ? '0' : ''}${minutes}`;
+  // Validate time format
+  if (!/^\d{2}:\d{2}$/.test(time)) {
+    return 'Invalid time format';
+  }
+  const [hours, minutes] = time.split(':').map(Number);
+  const period = hours >= 12 ? 'PM' : 'AM';
+  const formattedHour = hours % 12 || 12;
+  return `${period} ${formattedHour}:${minutes < 10 ? '0' : ''}${minutes}`;
 };
 //...Seat Selection Module
 ```
@@ -1252,16 +1252,16 @@ return `${period} ${formattedHour}:${minutes < 10 ? '0' : ''}${minutes}`;
 ```vue
 <!-- Showtime Selection -->
 <section v-if="selectedMovie" class="showtime-section">
-<h2>Select a Showtime</h2>
-<div class="showtime-selector">
-<label v-for="time in validShowtimes" :key="time">
-<input
-type="radio"
-:value="time"
-v-model="selectedShowtime"
-> {{ formatTime(time) }}
-</label>
-</div>
+  <h2>Select a Showtime</h2>
+  <div class="showtime-selector">
+    <label v-for="time in validShowtimes" :key="time">
+      <input
+      type="radio"
+      :value="time"
+      v-model="selectedShowtime"
+      > {{ formatTime(time) }}
+    </label>
+  </div>
 </section>
 ```
 
@@ -1270,19 +1270,19 @@ v-model="selectedShowtime"
 ```js
 // Seat initialization
 const seats = reactive(
-  Array(8).fill().map((_, rowIndex) =>
-    Array(16).fill().map((_, colIndex) => ({
-          number: `${String.fromCharCode(65 + rowIndex)}${colIndex + 1}`,
-          status: colIndex >= 12 ? 'occupied' : 'available',
-          row: rowIndex,
-          col: colIndex
-        }))
+Array(8).fill().map((_, rowIndex) =>
+Array(16).fill().map((_, colIndex) => ({
+  number: `${String.fromCharCode(65 + rowIndex)}${colIndex + 1}`,
+  status: colIndex >= 12 ? 'occupied' : 'available',
+  row: rowIndex,
+  col: colIndex
+}))
 )
 );
 // Selected seats
 const selectedSeats = computed(() => {
-    return seats.flat().filter(seat => seat.status === 'selected');
-  });
+  return seats.flat().filter(seat => seat.status === 'selected');
+});
 // Toggle seat status
 const toggleSeat = (row, col) => {
   const seat = seats[row][col];
@@ -1334,10 +1334,10 @@ const submitOrder = () => {
     showtime: selectedShowtime.value,
     seats: selectedSeats.value.map(s => s.number),
     user: { ...userInfo },
-  total: selectedSeats.value.length * 50
-};
-console.log('Order submitted successfully:', order);
-alert(`Booking successful! You have selected seats ${order.seats.join(', ')}`);
+    total: selectedSeats.value.length * 50
+  };
+  console.log('Order submitted successfully:', order);
+  alert(`Booking successful! You have selected seats ${order.seats.join(', ')}`);
 };
 ```
 
@@ -1346,30 +1346,30 @@ alert(`Booking successful! You have selected seats ${order.seats.join(', ')}`);
 ```vue
 <!-- User Information -->
 <section v-if="selectedSeats.length > 0" class="user-info-section">
-<h2>Fill in Information</h2>
-<form @submit.prevent="submitOrder" class="booking-form">
-<div class="form-group">
-<label>Name:</label>
-<input type="text" v-model="userInfo.name" required>
-</div>
-<div class="form-group">
-<label>Phone Number:</label>
-<input type="tel" v-model="userInfo.phone" pattern="[0-9]{11}" required>
-</div>
-<div class="form-group">
-<label>E-Ticket Email:</label>
-<input type="email" v-model="userInfo.email">
-</div>
-<div class="form-group">
-<label>Payment Method:</label>
-<select v-model="userInfo.payment">
-<option value="alipay">Alipay</option>
-<option value="wechat">WeChat Pay</option>
-<option value="card">Bank Card</option>
-</select>
-</div>
-<button type="submit" class="submit-btn">Confirm Booking</button>
-</form>
+  <h2>Fill in Information</h2>
+  <form @submit.prevent="submitOrder" class="booking-form">
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" v-model="userInfo.name" required>
+    </div>
+    <div class="form-group">
+      <label>Phone Number:</label>
+      <input type="tel" v-model="userInfo.phone" pattern="[0-9]{11}" required>
+    </div>
+    <div class="form-group">
+      <label>E-Ticket Email:</label>
+      <input type="email" v-model="userInfo.email">
+    </div>
+    <div class="form-group">
+      <label>Payment Method:</label>
+      <select v-model="userInfo.payment">
+        <option value="alipay">Alipay</option>
+        <option value="wechat">WeChat Pay</option>
+        <option value="card">Bank Card</option>
+      </select>
+    </div>
+    <button type="submit" class="submit-btn">Confirm Booking</button>
+  </form>
 </section>
 ```
 
@@ -1424,9 +1424,9 @@ The code is as follows:
 
 ```vue
 <script setup>
-import SlideController from "@/components/SlideController.vue";
-import SettingArea from "@/components/SettingArea.vue";
-import {ref} from "vue";
+  import SlideController from "@/components/SlideController.vue";
+  import SettingArea from "@/components/SettingArea.vue";
+  import {ref} from "vue";
 </script>
 ```
 
@@ -1451,7 +1451,7 @@ function btnClass(a, b) {
   if (a === b) {
     return "btn-primary";
   }
-return "btn-fill text-primary";
+  return "btn-fill text-primary";
 }
 ```
 
@@ -1461,28 +1461,28 @@ The code is as follows:
 
 ```vue
 <template>
-<div class="d-flex flex-column h-100">
-<p class="mb-2">Switching operating</p>
-<div class="border rounded-pill p-2 d-flex align-items-center mb-4">
-<div class="row gx-1 w-100">
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appMode, 'MANUAL')" @click="appMode = 'MANUAL'">
-MANUAL
-</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appMode, 'AUTO')" @click="appMode = 'AUTO'">AUTO
-</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appMode, 'RANDOM')" @click="appMode = 'RANDOM'">
-RANDOM
-</button>
-</div>
-</div>
-</div>
-<!--Switching theme-->
-</template>
+  <div class="d-flex flex-column h-100">
+    <p class="mb-2">Switching operating</p>
+    <div class="border rounded-pill p-2 d-flex align-items-center mb-4">
+      <div class="row gx-1 w-100">
+        <div class="col">
+          <button class="btn w-100 text-center" :class="btnClass(appMode, 'MANUAL')" @click="appMode = 'MANUAL'">
+            MANUAL
+          </button>
+        </div>
+        <div class="col">
+          <button class="btn w-100 text-center" :class="btnClass(appMode, 'AUTO')" @click="appMode = 'AUTO'">AUTO
+          </button>
+        </div>
+        <div class="col">
+          <button class="btn w-100 text-center" :class="btnClass(appMode, 'RANDOM')" @click="appMode = 'RANDOM'">
+            RANDOM
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--Switching theme-->
+  </template>
 ```
 
 #### Step 6: Style control in the components/SettingArea.vue file.
@@ -1492,15 +1492,15 @@ The code is as follows:
 ```html
 <style scoped>
   .dropArea {
-  border: 1px solid var(--bs-dark);
-  border-radius: .75rem;
+    border: 1px solid var(--bs-dark);
+    border-radius: .75rem;
   }
   .centerBox {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
 ```
@@ -1509,10 +1509,10 @@ The code is as follows:
 
 ```vue
 <script setup>
-import {appImages, appMode, appTheme, currentImageIndex} from "@/store.js";
-import {convertFilename, getId} from "@/helper.js";
-import {computed, onMounted, ref, watch} from "vue";
-import {SLIDE_TIME} from "@/config.js";
-import EffectA from "@/components/EffectA.vue";
+  import {appImages, appMode, appTheme, currentImageIndex} from "@/store.js";
+  import {convertFilename, getId} from "@/helper.js";
+  import {computed, onMounted, ref, watch} from "vue";
+  import {SLIDE_TIME} from "@/config.js";
+  import EffectA from "@/components/EffectA.vue";
 </script>
 ```

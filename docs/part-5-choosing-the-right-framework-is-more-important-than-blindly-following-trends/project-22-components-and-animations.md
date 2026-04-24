@@ -55,8 +55,8 @@ defineProps(['greetingMessage'])
 ② Object syntax declaration:
 ```vue
 defineProps({
-    greetingMessage: String,
-  })
+  greetingMessage: String,
+})
 ```
 
 Passing Props
@@ -67,7 +67,7 @@ The parent component passes data through attribute binding (v-bind or :), suppor
 
 ```vue
 <template>
-<ChildComponent title="Static Title" :count="10" />
+  <ChildComponent title="Static Title" :count="10" />
 </template>
 ```
 
@@ -75,18 +75,18 @@ The parent component passes data through attribute binding (v-bind or :), suppor
 
 ```vue
 <template>
-<ChildComponent :title="parentTitle" :count="parentCount" />
+  <ChildComponent :title="parentTitle" :count="parentCount" />
 </template>
 <script setup>
-import { ref } from 'vue'
-import ChildComponent from './ChildComponent.vue'
-const parentTitle = ref('Dynamic Title')
-const parentCount = ref(5)
+  import { ref } from 'vue'
+  import ChildComponent from './ChildComponent.vue'
+  const parentTitle = ref('Dynamic Title')
+  const parentCount = ref(5)
 </script>
 Using Props
 <script setup>
-const props = defineProps(['title'])
-console.log('Title is:', props.title)
+  const props = defineProps(['title'])
+  console.log('Title is:', props.title)
 </script>
 ```
 
@@ -105,11 +105,11 @@ The child component declares triggerable events using defineEmits, which support
 ② Object syntax declaration:
 <script setup>
   const emit = defineEmits({
-  update: (payload) => {
-  if (typeof payload === 'number') return true
-  console.warn('Invalid payload type')
-  return false
-  }
+    update: (payload) => {
+      if (typeof payload === 'number') return true
+      console.warn('Invalid payload type')
+      return false
+    }
   })
 </script>
 ```
@@ -120,13 +120,13 @@ The child component triggers events and passes data through the emit method:
 
 ```vue
 <script setup>
-const emit = defineEmits(['update'])
-const handleClick = () => {
-  emit('update', { newValue: 42 })
-}
+  const emit = defineEmits(['update'])
+  const handleClick = () => {
+    emit('update', { newValue: 42 })
+  }
 </script>
 <template>
-<button @click="handleClick">Update Parent Component</button>
+  <button @click="handleClick">Update Parent Component</button>
 </template>
 </script>
 ```
@@ -137,13 +137,13 @@ The parent component can listen to child component events using @ or v-on:
 
 ```vue
 <template>
-<ChildComponent @update="handleUpdate" />
+  <ChildComponent @update="handleUpdate" />
 </template>
 <script setup>
-import ChildComponent from './ChildComponent.vue'
-const handleUpdate = (payload) => {
-  console.log('Received data from child component:', payload);
-}
+  import ChildComponent from './ChildComponent.vue'
+  const handleUpdate = (payload) => {
+    console.log('Received data from child component:', payload);
+  }
 </script>
 ```
 
@@ -163,9 +163,9 @@ export function useFun() { // Define a composable function
   // Main code of the composable function
   // For example: Use lifecycle hooks
   onMounted(() => {
-      console.log(params)
-    })
-return { params }
+    console.log(params)
+  })
+  return { params }
 }
 ```
 
@@ -232,25 +232,25 @@ subtitle
 
 ```vue
 <template>
-<div class="theme-switcher" :class="currentTheme">
-<div class="card">
-<h2>Theme Switcher</h2>
-<p class="subtitle">Click the button below to switch the theme style</p>
-<div class="theme-grid">
-<button
-v-for="theme in themes"
-:key="theme.id"
-@click="switchTheme(theme.id)"
-:class="{ active: currentTheme === theme.id }"
->
-<div class="theme-preview" :style="theme.styles"></div>
-<span>{{ theme.name }}</span>
-</button>
-</div>
-<button class="random-btn" @click="randomTheme">
-Random Theme
-</button>
-</div>
+  <div class="theme-switcher" :class="currentTheme">
+    <div class="card">
+      <h2>Theme Switcher</h2>
+      <p class="subtitle">Click the button below to switch the theme style</p>
+      <div class="theme-grid">
+        <button
+        v-for="theme in themes"
+        :key="theme.id"
+        @click="switchTheme(theme.id)"
+        :class="{ active: currentTheme === theme.id }"
+        >
+        <div class="theme-preview" :style="theme.styles"></div>
+        <span>{{ theme.name }}</span>
+      </button>
+    </div>
+    <button class="random-btn" @click="randomTheme">
+      Random Theme
+    </button>
+  </div>
 </div>
 </template>
 ```
@@ -260,85 +260,85 @@ Random Theme
 ```html
 <style scoped>
   .theme-switcher {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  transition: background-color 0.5s;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    transition: background-color 0.5s;
   }
   .sunset {
-  background: linear-gradient(135deg, #fff1e6 0%, #ffecd2 100%);
+    background: linear-gradient(135deg, #fff1e6 0%, #ffecd2 100%);
   }
   .ocean {
-  background: linear-gradient(135deg, #e0f7fa 0%, #b0e0e6 100%);
+    background: linear-gradient(135deg, #e0f7fa 0%, #b0e0e6 100%);
   }
   .forest {
-  background: linear-gradient(135deg, #e8f5e8 0%, #d4edd9 100%);
+    background: linear-gradient(135deg, #e8f5e8 0%, #d4edd9 100%);
   }
   .lavender {
-  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
   }
   .card {
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  max-width: 500px;
-  width: 90%;
-  text-align: center;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
   }
   .subtitle {
-  color: #777;
-  margin-bottom: 25px;
+    color: #777;
+    margin-bottom: 25px;
   }
   .theme-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 25px 0;
   }
   .theme-grid button {
-  border: none;
-  border-radius: 12px;
-  padding: 15px;
-  cursor: pointer;
-  background: #f5f5f5;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    background: #f5f5f5;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .theme-grid button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   .theme-preview {
-  height: 60px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+    height: 60px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
   }
   button.active .theme-preview {
-  box-shadow: 0 0 0 3px white, 0 0 0 5px currentColor;
+    box-shadow: 0 0 0 3px white, 0 0 0 5px currentColor;
   }
   .highlight {
-  padding: 2px 8px;
-  border-radius: 4px;
-  color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: white;
   }
   .random-btn {
-  background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 12px 25px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
   .random-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   }
 </style>
 ```
@@ -350,22 +350,22 @@ Random Theme
   import { ref, reactive } from 'vue'
   // Composable function for theme management
   const useThemeManager = () => {
-  const themes = reactive([
-  { id: 'sunset', name: 'Sunset Orange', hex: '#FF7043' },
-  { id: 'ocean', name: 'Ocean Blue', hex: '#42A5F5' },
-  { id: 'forest', name: 'Forest Green', hex: '#43A047' },
-  { id: 'lavender', name: 'Lavender', hex: '#7E57C2' },
-  ])
-  const currentTheme = ref('sunset')
-  const switchTheme = (id) => {
-  currentTheme.value = id
-  }
-  // Generate a random theme
-  const randomTheme = () => {
-  const randomIndex = Math.floor(Math.random() * themes.length)
-  currentTheme.value = themes[randomIndex].id
-  }
-  return { themes, currentTheme, switchTheme, randomTheme }
+    const themes = reactive([
+      { id: 'sunset', name: 'Sunset Orange', hex: '#FF7043' },
+      { id: 'ocean', name: 'Ocean Blue', hex: '#42A5F5' },
+      { id: 'forest', name: 'Forest Green', hex: '#43A047' },
+      { id: 'lavender', name: 'Lavender', hex: '#7E57C2' },
+    ])
+    const currentTheme = ref('sunset')
+    const switchTheme = (id) => {
+      currentTheme.value = id
+    }
+    // Generate a random theme
+    const randomTheme = () => {
+      const randomIndex = Math.floor(Math.random() * themes.length)
+      currentTheme.value = themes[randomIndex].id
+    }
+    return { themes, currentTheme, switchTheme, randomTheme }
   }
   // Use composable functions
   const { themes, currentTheme, switchTheme, randomTheme } = useThemeManager()
@@ -410,18 +410,18 @@ A transition refers to adding animation effects during display switching, such a
 
 ```vue
 <template>
-<div class="fade-slide-demo">
-<h2>Fade In/Out + Slide Animation</h2>
-<button @click="toggle">Toggle Display</button>
-<Transition name="fade-slide">
-<div class="box" v-if="show"></div>
-</Transition>
-</div>
+  <div class="fade-slide-demo">
+    <h2>Fade In/Out + Slide Animation</h2>
+    <button @click="toggle">Toggle Display</button>
+    <Transition name="fade-slide">
+      <div class="box" v-if="show"></div>
+    </Transition>
+  </div>
 </template>
 <script setup>
-import { ref } from 'vue';
-const show = ref(true);
-const toggle = () => { show.value = !show.value };
+  import { ref } from 'vue';
+  const show = ref(true);
+  const toggle = () => { show.value = !show.value };
 </script>
 ```
 
@@ -432,37 +432,37 @@ The following implements a fade-in and fade-out switching effect for content thr
 ```html
 <style scoped>
   .fade-slide-demo {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 8px;
-  background: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f9f9f9;
   }
   button {
-  padding: 8px 16px;
-  background: #42b983;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 20px;
+    padding: 8px 16px;
+    background: #42b983;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
   }
   button:hover {
-  background: #3aa876;
+    background: #3aa876;
   }
   .box {
-  width: 200px;
-  height: 100px;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  border-radius: 4px;
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 4px;
   }
   .fade-slide-enter-active,
   .fade-slide-leave-active {
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   .fade-slide-enter-from,
   .fade-slide-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
+    opacity: 0;
+    transform: translateX(30px);
   }
 </style>
 ```
@@ -483,94 +483,94 @@ Common transitions are CSS transitions. The usage of CSS animations is the same 
 
 ```vue
 <template>
-<div class="animation-container">
-<button class="trigger-btn" @click="startAnimation">
-Click to start the bounce and rotate animation
-</button>
-<div
-class="animated-ball"
-:class="{
-'bounce-rotate': isActive,
-'reset': !isActive
-}"
-@animationend="handleAnimationEnd"
-></div>
-</div>
+  <div class="animation-container">
+    <button class="trigger-btn" @click="startAnimation">
+      Click to start the bounce and rotate animation
+    </button>
+    <div
+    class="animated-ball"
+    :class="{
+    'bounce-rotate': isActive,
+    'reset': !isActive
+    }"
+    @animationend="handleAnimationEnd"
+    ></div>
+  </div>
 </template>
 <script setup>
-import { ref } from 'vue';
-const isActive = ref(false);
-const startAnimation = () => {
-  isActive.value = true;
-};
-const handleAnimationEnd = () => {
-  // Reset the state after the animation ends to allow triggering again
-  isActive.value = false;
-};
+  import { ref } from 'vue';
+  const isActive = ref(false);
+  const startAnimation = () => {
+    isActive.value = true;
+  };
+  const handleAnimationEnd = () => {
+    // Reset the state after the animation ends to allow triggering again
+    isActive.value = false;
+  };
 </script>
 <style scoped>
-.animation-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-.trigger-btn {
-  padding: 12px 24px;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s, box-shadow 0.2s;
-  margin-bottom: 40px;
-}
-.trigger-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-.animated-ball {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-/* Bounce + Rotate Combined Animation */
-.bounce-rotate {
-  animation: bounce-rotate 1.5s ease-in-out;
-}
-@keyframes bounce-rotate {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  .animation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
-25% {
-  transform: translateY(-30px) rotate(90deg);
-}
-50% {
-  transform: translateY(0) rotate(180deg);
-  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-}
-75% {
-  transform: translateY(-20px) rotate(270deg);
-}
-100% {
-  transform: translateY(0) rotate(360deg);
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-}
-/* Reset Animation */
-.reset {
-  transition: all 0.5s;
-}
+  .trigger-btn {
+    padding: 12px 24px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 40px;
+  }
+  .trigger-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  .animated-ball {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+  /* Bounce + Rotate Combined Animation */
+  .bounce-rotate {
+    animation: bounce-rotate 1.5s ease-in-out;
+  }
+  @keyframes bounce-rotate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    25% {
+      transform: translateY(-30px) rotate(90deg);
+    }
+    50% {
+      transform: translateY(0) rotate(180deg);
+      animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+    75% {
+      transform: translateY(-20px) rotate(270deg);
+    }
+    100% {
+      transform: translateY(0) rotate(360deg);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  }
+  /* Reset Animation */
+  .reset {
+    transition: all 0.5s;
+  }
 </style>
 ```
 
@@ -580,48 +580,48 @@ JavaScript transitions refer to transition effects implemented using JavaScript 
 
 ```vue
 <template>
-<button @click="addItem">Add</button>
-<button @click="removeItem">Remove</button>
-<transition-group name="list" tag="ul">
-<li v-for="item in items" :key="item.id">
-{{ item.text }}
-</li>
-</transition-group>
+  <button @click="addItem">Add</button>
+  <button @click="removeItem">Remove</button>
+  <transition-group name="list" tag="ul">
+    <li v-for="item in items" :key="item.id">
+      {{ item.text }}
+    </li>
+  </transition-group>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      items: [
-        { id: 1, text: 'Item 1' },
-        { id: 2, text: 'Item 2' }
-      ]
+  export default {
+    data() {
+      return {
+        items: [
+          { id: 1, text: 'Item 1' },
+          { id: 2, text: 'Item 2' }
+        ]
+      };
+    },
+    methods: {
+      addItem() {
+        this.items.push({
+          id: Date.now(),
+          text: 'New Item'
+        });
+      },
+      removeItem() {
+        this.items.pop();
+      }
+    }
   };
-},
-methods: {
-  addItem() {
-    this.items.push({
-        id: Date.now(),
-        text: 'New Item'
-      });
-},
-removeItem() {
-  this.items.pop();
-}
-}
-};
 </script>
 <style>
-.list-move,
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s ease;
-}
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
-}
+  .list-move,
+  .list-enter-active,
+  .list-leave-active {
+    transition: all 0.5s ease;
+  }
+  .list-enter-from,
+  .list-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+  }
 </style>
 ```
 
@@ -647,9 +647,9 @@ animate
 
 ```vue
 <script setup>
-import FadeSlide from './components/FadeSlide.vue'
-import BounceAnimation from './components/BounceAnimation.vue'
-import Rotate3D from './components/Rotate3D.vue'
+  import FadeSlide from './components/FadeSlide.vue'
+  import BounceAnimation from './components/BounceAnimation.vue'
+  import Rotate3D from './components/Rotate3D.vue'
 </script>
 ```
 
@@ -657,25 +657,25 @@ import Rotate3D from './components/Rotate3D.vue'
 
 ```vue
 <template>
-<div class="rotate3d-demo">
-<h2>3D Rotation Animation</h2>
-<button @click="startRotation">Start Rotation</button>
-<button @click="stopRotation" style="margin-left: 10px;">Stop</button>
-<div class="cube-container">
-<div
-class="cube"
-:style="cubeStyle"
-@mouseenter="stopRotation"
-@mouseleave="startRotation"
->
-<div class="face front">Front</div>
-<div class="face back">Back</div>
-<div class="face right">Right</div>
-<div class="face left">Left</div>
-<div class="face top">Top</div>
-<div class="face bottom">Bottom</div>
-</div>
-</div>
+  <div class="rotate3d-demo">
+    <h2>3D Rotation Animation</h2>
+    <button @click="startRotation">Start Rotation</button>
+    <button @click="stopRotation" style="margin-left: 10px;">Stop</button>
+    <div class="cube-container">
+      <div
+      class="cube"
+      :style="cubeStyle"
+      @mouseenter="stopRotation"
+      @mouseleave="startRotation"
+      >
+      <div class="face front">Front</div>
+      <div class="face back">Back</div>
+      <div class="face right">Right</div>
+      <div class="face left">Left</div>
+      <div class="face top">Top</div>
+      <div class="face bottom">Bottom</div>
+    </div>
+  </div>
 </div>
 </template>
 ```
@@ -689,28 +689,28 @@ class="cube"
   const isRotating = ref(false);
   let animationFrame = null;
   const cubeStyle = computed(() => ({
-  transform: `rotateX(${rotation.value.x}deg) rotateY(${rotation.value.y}deg)`
+    transform: `rotateX(${rotation.value.x}deg) rotateY(${rotation.value.y}deg)`
   }));
   const rotate = () => {
-  if (!isRotating.value) return;
-  rotation.value.y += 0.5;
-  rotation.value.x += 0.2;
-  animationFrame = requestAnimationFrame(rotate);
+    if (!isRotating.value) return;
+    rotation.value.y += 0.5;
+    rotation.value.x += 0.2;
+    animationFrame = requestAnimationFrame(rotate);
   };
   const startRotation = () => {
-  if (!isRotating.value) {
-  isRotating.value = true;
-  rotate();
-  }
+    if (!isRotating.value) {
+      isRotating.value = true;
+      rotate();
+    }
   };
   const stopRotation = () => {
-  isRotating.value = false;
-  if (animationFrame) {
-  cancelAnimationFrame(animationFrame);
-  }
+    isRotating.value = false;
+    if (animationFrame) {
+      cancelAnimationFrame(animationFrame);
+    }
   };
   onUnmounted(() => {
-  stopRotation();
+    stopRotation();
   });
 </script>
 ```
@@ -720,74 +720,74 @@ class="cube"
 ```html
 <style scoped>
   .rotate3d-demo {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 8px;
-  background: #f9f9f9;
-  perspective: 1000px;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    perspective: 1000px;
   }
   button {
-  padding: 8px 16px;
-  background: #5f27cd;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 20px;
+    padding: 8px 16px;
+    background: #5f27cd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
   }
   button:hover {
-  background: #4c1d9f;
+    background: #4c1d9f;
   }
   .cube-container {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
   }
   .cube {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.1s;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
   }
   .face {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  opacity: 0.9;
-  border: 2px solid white;
-  box-sizing: border-box;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    opacity: 0.9;
+    border: 2px solid white;
+    box-sizing: border-box;
   }
   .front  {
-  background: rgba(255, 0, 0, 0.7);
-  transform: rotateY(0deg) translateZ(100px);
+    background: rgba(255, 0, 0, 0.7);
+    transform: rotateY(0deg) translateZ(100px);
   }
   .back   {
-  background: rgba(0, 255, 0, 0.7);
-  transform: rotateY(180deg) translateZ(100px);
+    background: rgba(0, 255, 0, 0.7);
+    transform: rotateY(180deg) translateZ(100px);
   }
   .right  {
-  background: rgba(0, 0, 255, 0.7);
-  transform: rotateY(90deg) translateZ(100px);
+    background: rgba(0, 0, 255, 0.7);
+    transform: rotateY(90deg) translateZ(100px);
   }
   .left   {
-  background: rgba(255, 255, 0, 0.7);
-  transform: rotateY(-90deg) translateZ(100px);
+    background: rgba(255, 255, 0, 0.7);
+    transform: rotateY(-90deg) translateZ(100px);
   }
   .top    {
-  background: rgba(255, 0, 255, 0.7);
-  transform: rotateX(90deg) translateZ(100px);
+    background: rgba(255, 0, 255, 0.7);
+    transform: rotateX(90deg) translateZ(100px);
   }
   .bottom {
-  background: rgba(0, 255, 255, 0.7);
-  transform: rotateX(-90deg) translateZ(100px);
+    background: rgba(0, 255, 255, 0.7);
+    transform: rotateX(-90deg) translateZ(100px);
   }
 </style>
 ```
@@ -848,9 +848,9 @@ The code is as follows:
 
 ```vue
 <script setup>
-import SlideController from "@/components/SlideController.vue";
-import SettingArea from "@/components/SettingArea.vue";
-import {ref} from "vue";
+  import SlideController from "@/components/SlideController.vue";
+  import SettingArea from "@/components/SettingArea.vue";
+  import {ref} from "vue";
 </script>
 ```
 
@@ -876,8 +876,8 @@ The code is as follows:
 <script setup>
   import {appImages, appMode, appTheme} from "@/store.js";
   import {convertFilename, getId} from "@/helper.js";
-  ...Button styles
-  ...Image import function
+    ...Button styles
+    ...Image import function
 </script>
 ```
 
@@ -891,7 +891,7 @@ function btnClass(a, b) {
   if (a === b) {
     return "btn-primary";
   }
-return "btn-fill text-primary";
+  return "btn-fill text-primary";
 }
 ```
 
@@ -917,7 +917,7 @@ function changeSingleFile(e) {
 function dropFiles(e) {
   const files = e.dataTransfer.files;
   if (!files.length) return;
-  [...files].forEach(file => {
+    [...files].forEach(file => {
     appImages.value.push({
       id: getId(),
       image: URL.createObjectURL(file),
@@ -984,10 +984,10 @@ The code is as follows:
 
 ```vue
 <script setup>
-import SlideController from "@/components/SlideController.vue";
-import SettingArea from "@/components/SettingArea.vue";
-import OrderingArea from "@/components/OrderingArea.vue";
-import {ref} from "vue";
+  import SlideController from "@/components/SlideController.vue";
+  import SettingArea from "@/components/SettingArea.vue";
+  import OrderingArea from "@/components/OrderingArea.vue";
+  import {ref} from "vue";
 </script>
 ```
 
@@ -997,21 +997,21 @@ The code is as follows:
 
 ```vue
 <template>
-<div class="h-100 d-flex flex-column">
-<p class="mb-2">Ordering photos</p>
-<div class="flex-grow-1 position-relative">
-<div class="scrollBox">
-<div class="row gy-2">
-<div class="col-12" v-for="item in appImages">
-<div class="item" @mousedown="grabDown(item)" @mouseover="targetOver(item)" :style="grabStyle(item)">
-<img :src="item.image" alt="image">
-<div>{{ item.caption }}</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="h-100 d-flex flex-column">
+    <p class="mb-2">Ordering photos</p>
+    <div class="flex-grow-1 position-relative">
+      <div class="scrollBox">
+        <div class="row gy-2">
+          <div class="col-12" v-for="item in appImages">
+            <div class="item" @mousedown="grabDown(item)" @mouseover="targetOver(item)" :style="grabStyle(item)">
+              <img :src="item.image" alt="image">
+              <div>{{ item.caption }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 ```
 
@@ -1022,40 +1022,40 @@ The code is as follows:
 ```html
 <style scoped>
   .item {
-  position: relative;
-  aspect-ratio: 16/9;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  -webkit-user-drag: none;
-  overflow: hidden;
-  border-radius: .5rem;
-  user-select: none;
+    position: relative;
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    -webkit-user-drag: none;
+    overflow: hidden;
+    border-radius: .5rem;
+    user-select: none;
   }
   .item div {
-  background: rgba(0, 0, 0, .5);
-  color: #fff;
-  padding: .5rem;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: .5rem;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
   }
   .item img {
-  width: 100%;
-  height: 100%;
-  border-radius: .5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
   }
   .scrollBox {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 </style>
 ```
@@ -1128,8 +1128,8 @@ function grabUp(e) {
     moveX.value = 0;
     moveY.value = 0;
   }
-window.removeEventListener("mousemove", grabMove);
-window.removeEventListener("mouseup", grabUp);
+  window.removeEventListener("mousemove", grabMove);
+  window.removeEventListener("mouseup", grabUp);
 }
 /* other item mouse over for drag and drop */
 ```

@@ -119,7 +119,7 @@ The setInterval is used to set a timer that repeatedly executes a callback funct
 ```html
 <script>
   setInterval(function () {
-  console.log("When the second hand finishes its 1001st waltz, you'll realize: the so-called 'too late' is just the prelude to 'just in time'.");
+    console.log("When the second hand finishes its 1001st waltz, you'll realize: the so-called 'too late' is just the prelude to 'just in time'.");
   }, 2000)
 </script>
 ```
@@ -131,7 +131,7 @@ The setTimeout method is used to set a timer that executes a callback function o
 ```html
 <script>
   setInterval(function () {
-  console.log("A timer is a love letter written by time, reminding you every second: between you and your dreams, there’s only the mark of 'beginning'.");
+    console.log("A timer is a love letter written by time, reminding you every second: between you and your dreams, there’s only the mark of 'beginning'.");
   }, 2000)
 </script>
 ```
@@ -166,35 +166,35 @@ The setTimeout method is used to set a timer that executes a callback function o
     <title>Elegant Transition, Loading</title>
     <style>
       .loader {
-      width: 148px;
-      height: 148px;
-      border: 5px solid #f3f3f3;
-      border-top: 5px solid #3498db;
-      border-radius: 50%;
-      animation: spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-      margin: 50px auto;
-      transition: opacity 0.3s ease;
+        width: 148px;
+        height: 148px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+        margin: 50px auto;
+        transition: opacity 0.3s ease;
       }
       .hidden {
-      opacity: 0;
-      visibility: hidden;
+        opacity: 0;
+        visibility: hidden;
       }
       .content {
-      padding: 20px;
-      text-align: center;
-      font-family: sans-serif;
-      max-width: 600px;
-      margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        font-family: sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
       }
       @keyframes spin {
-      0% { transform: rotate(0deg); }
+        0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
       }
       .fade-in {
-      animation: fadeIn 0.5s ease-in;
+        animation: fadeIn 0.5s ease-in;
       }
       @keyframes fadeIn {
-      from { opacity: 0; }
+        from { opacity: 0; }
       to { opacity: 1; }
       }
     </style>
@@ -209,14 +209,14 @@ The setTimeout method is used to set a timer that executes a callback function o
 ```html
 <script>
   window.addEventListener('load', () => {
-  setTimeout(() => {
-  const loader = document.getElementById('loader');
-  const content = document.getElementById('content');
-  // Add fade-out animation
-  loader.classList.add('hidden');
-  // Display content and add fade-in animation      content.classList.remove('hidden');
-  content.classList.add('fade-in');
-  }, 2000); // Simulate 2 seconds of loading time
+    setTimeout(() => {
+      const loader = document.getElementById('loader');
+      const content = document.getElementById('content');
+      // Add fade-out animation
+      loader.classList.add('hidden');
+      // Display content and add fade-in animation      content.classList.remove('hidden');
+      content.classList.add('fade-in');
+    }, 2000); // Simulate 2 seconds of loading time
   });
 </script>
 ```
@@ -341,7 +341,7 @@ The commonly used methods of the window object are shown in Table 15-1 below.
 ```html
 <script>
   setInterval(function () {
-  console.log("When the second hand finishes dancing its 1001st waltz, you will realize: the so-called 'too late' is merely the prelude to 'just in time'.");
+    console.log("When the second hand finishes dancing its 1001st waltz, you will realize: the so-called 'too late' is merely the prelude to 'just in time'.");
   }, 2000)
 </script>
 ```
@@ -353,7 +353,7 @@ The setTimeout method is used to set a timer that executes a callback function o
 ```html
 <script>
   setInterval(function () {
-  console.log("A timer is a love letter written by time; every second reminds you: between you and your ideals, there is only the mark of 'beginning' standing in the way.");
+    console.log("A timer is a love letter written by time; every second reminds you: between you and your ideals, there is only the mark of 'beginning' standing in the way.");
   }, 2000)
 </script>
 ```
@@ -403,129 +403,129 @@ The project "Smart Customer Service Conversation and Event Handling" is divided 
     <title>Intelligent Customer Service</title>
     <style>
       * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
       body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 20px;
       }
       .chat-container {
-      width: 100%;
-      max-width: 800px;
-      height: 90vh;
-      background-color: white;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      border: 1px solid #e0e0e0;
+        width: 100%;
+        max-width: 800px;
+        height: 90vh;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border: 1px solid #e0e0e0;
       }
       .chat-header {
-      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
+        background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
       }
       .chat-messages {
-      flex: 1;
-      overflow-y: auto;
-      padding: 20px;
-      background-color: #f8f9ff;
+        flex: 1;
+        overflow-y: auto;
+        padding: 20px;
+        background-color: #f8f9ff;
       }
       .message {
-      max-width: 80%;
-      margin-bottom: 15px;
-      padding: 15px;
-      border-radius: 18px;
-      clear: both;
-      position: relative;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        max-width: 80%;
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 18px;
+        clear: both;
+        position: relative;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       }
       .user-message {
-      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      color: white;
-      float: right;
-      border-bottom-right-radius: 5px;
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        color: white;
+        float: right;
+        border-bottom-right-radius: 5px;
       }
       .bot-message {
-      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-      color: #2c3e50;
-      float: left;
-      border-bottom-left-radius: 5px;
+        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+        color: #2c3e50;
+        float: left;
+        border-bottom-left-radius: 5px;
       }
       .input-container {
-      display: flex;
-      padding: 20px;
-      background-color: white;
-      border-top: 1px solid #eee;
+        display: flex;
+        padding: 20px;
+        background-color: white;
+        border-top: 1px solid #eee;
       }
       input {
-      flex: 1;
-      padding: 15px;
-      border: 2px solid #e0e0e0;
-      border-radius: 30px;
-      font-size: 1rem;
-      outline: none;
-      transition: all 0.3s;
+        flex: 1;
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 30px;
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.3s;
       }
       input:focus {
-      border-color: #4facfe;
-      box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+        border-color: #4facfe;
+        box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
       }
       button {
-      background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      padding: 0 30px;
-      margin-left: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: transform 0.2s;
+        background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 0 30px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: transform 0.2s;
       }
       button:hover {
-      transform: translateY(-2px);
+        transform: translateY(-2px);
       }
       button:active {
-      transform: translateY(1px);
+        transform: translateY(1px);
       }
       .typing-indicator {
-      display: none;
-      background-color: white;
-      padding: 15px;
-      border-radius: 18px;
-      width: 100px;
-      text-align: center;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        display: none;
+        background-color: white;
+        padding: 15px;
+        border-radius: 18px;
+        width: 100px;
+        text-align: center;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       }
       .typing-dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      background-color: #4facfe;
-      border-radius: 50%;
-      margin: 0 2px;
-      animation: bounce 1.5s infinite;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #4facfe;
+        border-radius: 50%;
+        margin: 0 2px;
+        animation: bounce 1.5s infinite;
       }
       .typing-dot:nth-child(2) {
-      animation-delay: 0.2s;
+        animation-delay: 0.2s;
       }
       .typing-dot:nth-child(3) {
-      animation-delay: 0.4s;
+        animation-delay: 0.4s;
       }
       @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
+        0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-5px); }
       }
     </style>
@@ -556,11 +556,11 @@ The project "Smart Customer Service Conversation and Event Handling" is divided 
 ```html
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-  // Get DOM elements
-  const chatMessages = document.getElementById('chatMessages');
-  const userInput = document.getElementById('userInput');
-  const sendButton = document.getElementById('sendButton');
-  const typingIndicator = document.getElementById('typingIndicator');
+    // Get DOM elements
+    const chatMessages = document.getElementById('chatMessages');
+    const userInput = document.getElementById('userInput');
+    const sendButton = document.getElementById('sendButton');
+    const typingIndicator = document.getElementById('typingIndicator');
   });
 </script>
 ```
@@ -581,8 +581,8 @@ function getBotResponse(message) {
     if (message.includes(keyword)) {
       return responses[keyword];
     }
-}
-return responses['default'];
+  }
+  return responses['default'];
 }
 ```
 
@@ -612,11 +612,11 @@ function handleUserInput() {
     typingIndicator.style.display = 'block';
     // Simulate delay for bot response
     setTimeout(() => {
-        typingIndicator.style.display = 'none';
-        const response = getBotResponse(message);
-        addMessage(response, false);
-      }, 1500);
-}
+      typingIndicator.style.display = 'none';
+      const response = getBotResponse(message);
+      addMessage(response, false);
+    }, 1500);
+  }
 }
 ```
 
@@ -627,9 +627,9 @@ function handleUserInput() {
 sendButton.addEventListener('click', handleUserInput);
 // Enter key event for input box
 userInput.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-      handleUserInput();
-    }
+  if (e.key === 'Enter') {
+    handleUserInput();
+  }
 });
 ```
 
@@ -772,92 +772,92 @@ The code is as follows:
     <title>A6</title>
     <style>
       * {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
       body{
-      background-color: #f4f4f4;
+        background-color: #f4f4f4;
       }
       header, footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1em 0;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em 0;
       }
       .container {
-      padding: 20px;
+        padding: 20px;
       }
       .images img {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px;
       }
       .videos iframe, .videos video {
-      width: 100%;
-      max-width: 600px;
-      height: 300px;
-      margin: 10px;
-      object-fit: cover;
+        width: 100%;
+        max-width: 600px;
+        height: 300px;
+        margin: 10px;
+        object-fit: cover;
       }
       .content {
-      margin: 20px 0;
+        margin: 20px 0;
       }
       .form-section {
-      margin: 20px 0;
+        margin: 20px 0;
       }
       /* YOUR CODE HERE */
       #loading {
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 989;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 989;
       }
       #loading .circle {
-      width: 200px;
-      height: 200px;
-      border: 10px solid blue;
-      border-radius: 50%;
-      position: relative;
-      animation: loadingAni 1s linear infinite;
+        width: 200px;
+        height: 200px;
+        border: 10px solid blue;
+        border-radius: 50%;
+        position: relative;
+        animation: loadingAni 1s linear infinite;
       }
       #loading .circle::before,
       #loading .circle::after {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: blue;
-      z-index: 2;
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: blue;
+        z-index: 2;
       }
       #loading .circle::before {
-      left: -10px;
-      top: calc(50% - 5px);
+        left: -10px;
+        top: calc(50% - 5px);
       }
       #loading .circle::after {
-      right: -10px;
-      top: calc(50% - 5px);
+        right: -10px;
+        top: calc(50% - 5px);
       }
       #loading .circle .item {
-      position: absolute;
-      left: -20px;
-      right: -20px;
-      top: 50%;
-      bottom: -20px;
-      background: #fff;
+        position: absolute;
+        left: -20px;
+        right: -20px;
+        top: 50%;
+        bottom: -20px;
+        background: #fff;
       }
       @keyframes loadingAni {
-      to {
-      transform: rotate(1turn);
-      }
+        to {
+          transform: rotate(1turn);
+        }
       }
     </style>
   </head>
@@ -924,11 +924,11 @@ The code is as follows:
 <script>
   // Execute after the page is fully loaded
   window.onload = function() {
-  // Set to execute page redirect after 3 seconds
-  setTimeout(() => {
-  // Hide the loading layer
-  document.getElementById('loading').style.display = 'none';
-  }, 3000); // 3-second delay
+    // Set to execute page redirect after 3 seconds
+    setTimeout(() => {
+      // Hide the loading layer
+      document.getElementById('loading').style.display = 'none';
+    }, 3000); // 3-second delay
   };
 </script>
 ```

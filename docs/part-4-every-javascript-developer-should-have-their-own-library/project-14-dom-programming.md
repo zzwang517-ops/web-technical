@@ -166,215 +166,215 @@ The "Smart Home System" is divided into the following five steps, as detailed be
 ```html
 <style>
   :root {
-  --primary: #4361ee;
-  --secondary: #3f37c9;
-  --warm: #f39c12;
-  --cool: #3498db;
-  --light: #ecf0f1;
-  --dark: #2c3e50;
-  --card-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  --success: #2ecc71;
-  --danger: #e74c3c;
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --warm: #f39c12;
+    --cool: #3498db;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --card-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    --success: #2ecc71;
+    --danger: #e74c3c;
   }
   * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
   }
   body {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  color: var(--dark);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
   }
   .card {
-  background: white;
-  border-radius: 25px;
-  padding: 30px;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: var(--card-shadow);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
   }
   .card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, var(--primary), var(--success));
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--success));
   }
   h1 {
-  color: var(--primary);
-  margin-bottom: 5px;
-  font-size: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+    color: var(--primary);
+    margin-bottom: 5px;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
   }
   .subtitle {
-  color: #7f8c8d;
-  margin-bottom: 30px;
-  font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
   }
   .control-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
   .control-group {
-  background: var(--light);
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+    background: var(--light);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.05);
   }
   .control-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
   }
   .control-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   .control-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
   }
   .status-indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--danger);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--danger);
   }
   .status-indicator.active {
-  background: var(--success);
-  box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.3);
+    background: var(--success);
+    box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.3);
   }
   /* Switch Style */
   .power-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
   }
   .switch {
-  position: relative;
-  width: 80px;
-  height: 40px;
+    position: relative;
+    width: 80px;
+    height: 40px;
   }
   .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
   }
   .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .3s;
-  border-radius: 30px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .3s;
+    border-radius: 30px;
   }
   .slider:before {
-  position: absolute;
-  content: "";
-  height: 32px;
-  width: 32px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: .3s;
-  border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 32px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
   }
   input:checked + .slider {
-  background-color: var(--primary);
+    background-color: var(--primary);
   }
   input:checked + .slider:before {
-  transform: translateX(40px);
+    transform: translateX(40px);
   }
   /*  Slider Style */
   .control-slider {
-  width: 100%;
-  height: 12px;
-  -webkit-appearance: none;
-  background: #ccc;
-  border-radius: 10px;
-  outline: none;
+    width: 100%;
+    height: 12px;
+    -webkit-appearance: none;
+    background: #ccc;
+    border-radius: 10px;
+    outline: none;
   }
   .control-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: var(--primary);
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--primary);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
   /* Quick Buttons */
   .scene-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
   }
   .scene-btn {
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
   }
   .scene-btn.warm {
-  background: var(--warm);
-  color: white;
+    background: var(--warm);
+    color: white;
   }
   .scene-btn.cool {
-  background: var(--cool);
-  color: white;
+    background: var(--cool);
+    color: white;
   }
   .scene-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
   /* Status Display */
   .status-display {
-  margin-top: 20px;
-  padding: 15px;
-  background: #ccc;
-  border-radius: 12px;
-  font-size: 1.1rem;
+    margin-top: 20px;
+    padding: 15px;
+    background: #ccc;
+    border-radius: 12px;
+    font-size: 1.1rem;
   }
   /* Responsive Design */
   @media (max-width: 600px) {
-  .card {
-  padding: 20px;
-  }
-  h1 {
-  font-size: 1.8rem;
-  }
+    .card {
+      padding: 20px;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
   }
 </style>
 ```
@@ -385,24 +385,24 @@ The "Smart Home System" is divided into the following five steps, as detailed be
 <script>
   // Lighting status management
   const light = {
-  isOn: false,
-  brightness: 50, // 0-100%
+    isOn: false,
+    brightness: 50, // 0-100%
   };
   // Toggle power
   function togglePower() {
-  light.isOn = !light.isOn;
-  updateUI();
+    light.isOn = !light.isOn;
+    updateUI();
   }
   // Update brightness
   function updateBrightness(value) {
-  light.brightness = value;
-  updateUI();
+    light.brightness = value;
+    updateUI();
   }
   // Set brightness shortcut
   function setBrightness(value) {
-  light.brightness = value;
-  document.getElementById('brightnessSlider').value = value;
-  updateUI();
+    light.brightness = value;
+    document.getElementById('brightnessSlider').value = value;
+    updateUI();
   }
 </script>
 ```
@@ -413,46 +413,46 @@ The "Smart Home System" is divided into the following five steps, as detailed be
 <script>
   // Lighting status management
   const light = {
-  isOn: false,
-  brightness: 50, // 0-100%
+    isOn: false,
+    brightness: 50, // 0-100%
   };
   // Toggle power
   function togglePower() {
-  light.isOn = !light.isOn;
-  updateUI();
+    light.isOn = !light.isOn;
+    updateUI();
   }
   // Update brightness
   function updateBrightness(value) {
-  light.brightness = value;
-  updateUI();
+    light.brightness = value;
+    updateUI();
   }
   // Set brightness shortcut
   function setBrightness(value) {
-  light.brightness = value;
-  document.getElementById('brightnessSlider').value = value;
-  updateUI();
+    light.brightness = value;
+    document.getElementById('brightnessSlider').value = value;
+    updateUI();
   }
   // Update UI display
   function updateUI() {
-  // Update power status
-  const powerToggle = document.getElementById('powerToggle');
-  powerToggle.checked = light.isOn;
-  const powerStatus = document.getElementById('powerStatus');
-  powerStatus.classList.toggle('active', light.isOn);
-  // Update brightness display
-  document.getElementById('brightnessValue').textContent = light.brightness + '%';
-  // Update current status display
-  const statusElement = document.getElementById('statusDisplay');
-  if (light.isOn) {
-  statusElement.innerHTML = `Brightness ${light.brightness}%`;
-  statusElement.style.color = '#27ae60';
-  } else {
-  statusElement.textContent = 'Current Status: Off';
-  statusElement.style.color = '#7f8c8d';
-  }
-  // Update slider disabled state
-  const brightnessSlider = document.getElementById('brightnessSlider');
-  brightnessSlider.disabled = !light.isOn;
+    // Update power status
+    const powerToggle = document.getElementById('powerToggle');
+    powerToggle.checked = light.isOn;
+    const powerStatus = document.getElementById('powerStatus');
+    powerStatus.classList.toggle('active', light.isOn);
+    // Update brightness display
+    document.getElementById('brightnessValue').textContent = light.brightness + '%';
+    // Update current status display
+    const statusElement = document.getElementById('statusDisplay');
+    if (light.isOn) {
+      statusElement.innerHTML = `Brightness ${light.brightness}%`;
+      statusElement.style.color = '#27ae60';
+    } else {
+      statusElement.textContent = 'Current Status: Off';
+      statusElement.style.color = '#7f8c8d';
+    }
+    // Update slider disabled state
+    const brightnessSlider = document.getElementById('brightnessSlider');
+    brightnessSlider.disabled = !light.isOn;
   }
 </script>
 ```
@@ -463,50 +463,50 @@ The "Smart Home System" is divided into the following five steps, as detailed be
 <script>
   // Lighting status management
   const light = {
-  isOn: false,
-  brightness: 50, // 0-100%
+    isOn: false,
+    brightness: 50, // 0-100%
   };
   // Toggle power
   function togglePower() {
-  light.isOn = !light.isOn;
-  updateUI();
+    light.isOn = !light.isOn;
+    updateUI();
   }
   // Update brightness
   function updateBrightness(value) {
-  light.brightness = value;
-  updateUI();
+    light.brightness = value;
+    updateUI();
   }
   // Set brightness shortcut
   function setBrightness(value) {
-  light.brightness = value;
-  document.getElementById('brightnessSlider').value = value;
-  updateUI();
+    light.brightness = value;
+    document.getElementById('brightnessSlider').value = value;
+    updateUI();
   }
   // Update UI display
   function updateUI() {
-  // Update power status
-  const powerToggle = document.getElementById('powerToggle');
-  powerToggle.checked = light.isOn;
-  const powerStatus = document.getElementById('powerStatus');
-  powerStatus.classList.toggle('active', light.isOn);
-  // Update brightness display
-  document.getElementById('brightnessValue').textContent = light.brightness + '%';
-  // Update current status display
-  const statusElement = document.getElementById('statusDisplay');
-  if (light.isOn) {
-  statusElement.innerHTML = `Brightness ${light.brightness}%`;
-  statusElement.style.color = '#27ae60';
-  } else {
-  statusElement.textContent = 'Current Status: Off';
-  statusElement.style.color = '#7f8c8d';
-  }
-  // Update slider disabled state
-  const brightnessSlider = document.getElementById('brightnessSlider');
-  brightnessSlider.disabled = !light.isOn;
+    // Update power status
+    const powerToggle = document.getElementById('powerToggle');
+    powerToggle.checked = light.isOn;
+    const powerStatus = document.getElementById('powerStatus');
+    powerStatus.classList.toggle('active', light.isOn);
+    // Update brightness display
+    document.getElementById('brightnessValue').textContent = light.brightness + '%';
+    // Update current status display
+    const statusElement = document.getElementById('statusDisplay');
+    if (light.isOn) {
+      statusElement.innerHTML = `Brightness ${light.brightness}%`;
+      statusElement.style.color = '#27ae60';
+    } else {
+      statusElement.textContent = 'Current Status: Off';
+      statusElement.style.color = '#7f8c8d';
+    }
+    // Update slider disabled state
+    const brightnessSlider = document.getElementById('brightnessSlider');
+    brightnessSlider.disabled = !light.isOn;
   }
   // Initialization
   function init() {
-  updateUI();
+    updateUI();
   }
   // Initialize after page load completion
   window.addEventListener('DOMContentLoaded', init);
@@ -541,9 +541,9 @@ Example:
 <div id="motto"></div>
 <script>
   const mottoLibrary = [
-  "Hard work may not lead to immediate success, but without hard work, success will never come; every effort you make is accumulating luck for the future.",
-  "Life is like a cup of tea—it won't be bitter forever, but it will be bitter for a while.",
-  "Life isn't about waiting for the storm to pass, but learning to dance in the rain."
+    "Hard work may not lead to immediate success, but without hard work, success will never come; every effort you make is accumulating luck for the future.",
+    "Life is like a cup of tea—it won't be bitter forever, but it will be bitter for a while.",
+    "Life isn't about waiting for the storm to pass, but learning to dance in the rain."
   ];
   let motto = document.getElementById("motto");
   motto.innerHTML = mottoLibrary;
@@ -620,157 +620,157 @@ The mall bookstore system is divided into the following five steps, as detailed 
     <title>Moxiang Book Garden</title>
     <style>
       :root {
-      --p: #3B82F6;
-      /* primary */
-      --s: #10B981;
-      /* secondary */
-      --d: #1F2937;
-      /* dark */
-      --l: #F3F4F6;
-      /* light */
-      --r: 12px;
-      /* radius */
-      --s: #ccc;
-      /* shadow */
-      --t: all 0.3s ease;
-      /* transition */
+        --p: #3B82F6;
+        /* primary */
+        --s: #10B981;
+        /* secondary */
+        --d: #1F2937;
+        /* dark */
+        --l: #F3F4F6;
+        /* light */
+        --r: 12px;
+        /* radius */
+        --s: #ccc;
+        /* shadow */
+        --t: all 0.3s ease;
+        /* transition */
       }
       * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: -apple-system, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, sans-serif;
       }
       body {
-      background: #f9fafb;
-      color: #374151;
-      line-height: 1.6;
-      padding: 20px;
+        background: #f9fafb;
+        color: #374151;
+        line-height: 1.6;
+        padding: 20px;
       }
       .cart-container {
-      max-width: 500px;
-      margin: 0 auto;
+        max-width: 500px;
+        margin: 0 auto;
       }
       .cart-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid #e5e7eb;
-      margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #e5e7eb;
+        margin-bottom: 1.5rem;
       }
       .cart-title {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: var(--d);
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--d);
       }
       .cart-count {
-      background: var(--p);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 50px;
-      font-weight: 500;
+        background: var(--p);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-weight: 500;
       }
       .cart-items {
-      background: white;
-      border-radius: var(--r);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      margin-bottom: 1.5rem;
+        background: white;
+        border-radius: var(--r);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 1.5rem;
       }
       .cart-item {
-      display: flex;
-      gap: 1rem;
-      padding: 1.5rem;
-      border-bottom: 1px solid #e5e7eb;
+        display: flex;
+        gap: 1rem;
+        padding: 1.5rem;
+        border-bottom: 1px solid #e5e7eb;
       }
       .item-cover {
-      width: 80px;
-      height: 100px;
-      background: #e0e7ff;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        width: 80px;
+        height: 100px;
+        background: #e0e7ff;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .item-info {
-      flex: 1;
+        flex: 1;
       }
       .item-title {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
       }
       .item-price {
-      color: var(--p);
-      font-weight: 600;
-      margin-bottom: 1rem;
+        color: var(--p);
+        font-weight: 600;
+        margin-bottom: 1rem;
       }
       .item-quantity {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
       }
       .quantity-btn {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: #e5e7eb;
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #e5e7eb;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .cart-footer {
-      background: white;
-      border-radius: var(--r);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
+        background: white;
+        border-radius: var(--r);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
       }
       .cart-total {
-      display: flex;
-      justify-content: space-between;
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e5e7eb;
       }
       .actions {
-      display: flex;
-      gap: 1rem;
+        display: flex;
+        gap: 1rem;
       }
       .btn {
-      flex: 1;
-      padding: 0.8rem;
-      border-radius: 8px;
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--t);
+        flex: 1;
+        padding: 0.8rem;
+        border-radius: 8px;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--t);
       }
       .btn-primary {
-      background: var(--p);
-      color: white;
+        background: var(--p);
+        color: white;
       }
       .btn-primary:hover {
-      background: #2563eb;
+        background: #2563eb;
       }
       .btn-secondary {
-      background: var(--s);
-      color: white;
+        background: var(--s);
+        color: white;
       }
       .btn-secondary:hover {
-      background: #059669;
+        background: #059669;
       }
       @media (max-width: 480px) {
-      .actions {
-      flex-direction: column;
-      }
-      .btn {
-      width: 100%;
-      }
+        .actions {
+          flex-direction: column;
+        }
+        .btn {
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -807,20 +807,20 @@ The mall bookstore system is divided into the following five steps, as detailed 
   let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   // Update shopping cart UI
   function updateCartUI() {
-  // Update shopping cart quantity
-  const count = cartItems.reduce((total, item) => total + item.quantity, 0);
-  document.getElementById('cart-count').textContent = count;
-  // Render shopping cart items
-  renderCartItems();
+    // Update shopping cart quantity
+    const count = cartItems.reduce((total, item) => total + item.quantity, 0);
+    document.getElementById('cart-count').textContent = count;
+    // Render shopping cart items
+    renderCartItems();
   }
   // Save shopping cart to local storage
   function saveCart() {
-  localStorage.setItem('cart', JSON.stringify(cartItems));
+    localStorage.setItem('cart', JSON.stringify(cartItems));
   }
   // Initialization
   document.addEventListener('DOMContentLoaded', () => {
-  updateCartUI();  // Update UI on initial load
-  // addSampleItems(); // Uncomment to add sample products
+    updateCartUI();  // Update UI on initial load
+    // addSampleItems(); // Uncomment to add sample products
   });
 </script>
 ```
@@ -833,43 +833,43 @@ The mall bookstore system is divided into the following five steps, as detailed 
   let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   // Update shopping cart UI
   function updateCartUI() {
-  // Update shopping cart quantity
-  const count = cartItems.reduce((total, item) => total + item.quantity, 0);
-  document.getElementById('cart-count').textContent = count;
-  // Render shopping cart items
-  renderCartItems();
+    // Update shopping cart quantity
+    const count = cartItems.reduce((total, item) => total + item.quantity, 0);
+    document.getElementById('cart-count').textContent = count;
+    // Render shopping cart items
+    renderCartItems();
   }
   // Render shopping cart items
   function renderCartItems() {
-  const container = document.getElementById('cart-items');
-  container.innerHTML = '';
-  cartItems.forEach(item => {
-  const itemElement = `
-  <div class="cart-item">
-    <div class="item-cover">
+    const container = document.getElementById('cart-items');
+    container.innerHTML = '';
+    cartItems.forEach(item => {
+      const itemElement = `
+      <div class="cart-item">
+      <div class="item-cover">
       <span style="font-size: 2rem;">📚</span>
-    </div>
-    <div class="item-info">
+      </div>
+      <div class="item-info">
       <div class="item-title">${item.title}</div>
       <div class="item-price">¥${item.price}</div>
       <div class="item-quantity">
-        <button class="quantity-btn" onclick="cart.changeQuantity(${item.id}, -1)">−</button>
-        <span>${item.quantity}</span>
-        <button class="quantity-btn" onclick="cart.changeQuantity(${item.id}, 1)">+</button>
+      <button class="quantity-btn" onclick="cart.changeQuantity(${item.id}, -1)">−</button>
+      <span>${item.quantity}</span>
+      <button class="quantity-btn" onclick="cart.changeQuantity(${item.id}, 1)">+</button>
       </div>
-    </div>
-  </div>
-  `;
-  container.innerHTML += itemElement;
-  });
+      </div>
+      </div>
+      `;
+      container.innerHTML += itemElement;
+    });
   }
   // Save shopping cart to local storage
   function saveCart() {
-  localStorage.setItem('cart', JSON.stringify(cartItems));
+    localStorage.setItem('cart', JSON.stringify(cartItems));
   }
   // Initialization
   document.addEventListener('DOMContentLoaded', () => {
-  updateCartUI();  // Update UI when page loads initially
+    updateCartUI();  // Update UI when page loads initially
   });
 </script>
 ```
@@ -930,64 +930,64 @@ The code is as follows:
       *,
       *::before,
       *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 1rem;
-      border: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        border: 0;
       }
       body {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
-      min-height: 100vh;
-      align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        min-height: 100vh;
+        align-items: flex-start;
       }
       .btn {
-      font-weight: 500;
-      padding: 0.5rem 1.2rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 0.25rem;
-      color: white;
-      border: 2px solid red;
-      transition: 0.2s;
+        font-weight: 500;
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 0.25rem;
+        color: white;
+        border: 2px solid red;
+        transition: 0.2s;
       }
       .btn:hover {
-      background-color: white !important;
-      color: black;
+        background-color: white !important;
+        color: black;
       }
       .btn.add {
-      background-color: green;
-      border-color: green;
+        background-color: green;
+        border-color: green;
       }
       .btn.blue {
-      border-color: #2067ff;
-      background-color: #2067ff;
+        border-color: #2067ff;
+        background-color: #2067ff;
       }
       .btn.red {
-      background-color: #ff3636;
-      border-color: #ff3636;
+        background-color: #ff3636;
+        border-color: #ff3636;
       }
       .counter {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-      border: 1px solid #aaa;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        border: 1px solid #aaa;
       }
       .counter .count {
-      font-size: 2rem;
-      font-weight: 500;
-      margin: 1rem 0;
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 1rem 0;
       }
       .counters {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
       }
     </style>
   </head>
@@ -1007,16 +1007,16 @@ The code is as follows:
   const add = document.getElementById("add");
   const counters = document.getElementById("counters");
   add.onclick = () => {
-  const id = (Date.now() + Math.floor(Math.random() * 1000)).toString(16);
-  counters.innerHTML += `
-  <div class="counter">
+    const id = (Date.now() + Math.floor(Math.random() * 1000)).toString(16);
+    counters.innerHTML += `
+    <div class="counter">
     <span class="count" id="counter-${id}">0</span>
     <div class="row">
-      <button class="btn blue" onclick="decrease('${id}')">Decrease</button>
-      <button class="btn red" onclick="increase('${id}')">Increase</button>
+    <button class="btn blue" onclick="decrease('${id}')">Decrease</button>
+    <button class="btn red" onclick="increase('${id}')">Increase</button>
     </div>
-  </div>
-  `;
+    </div>
+    `;
   };
 </script>
 ```
@@ -1030,24 +1030,24 @@ The code is as follows:
   const add = document.getElementById("add");
   const counters = document.getElementById("counters");
   add.onclick = () => {
-  const id = (Date.now() + Math.floor(Math.random() * 1000)).toString(16);
-  counters.innerHTML += `
-  <div class="counter">
+    const id = (Date.now() + Math.floor(Math.random() * 1000)).toString(16);
+    counters.innerHTML += `
+    <div class="counter">
     <span class="count" id="counter-${id}">0</span>
     <div class="row">
-      <button class="btn blue" onclick="decrease('${id}')">Decrease</button>
-      <button class="btn red" onclick="increase('${id}')">Increase</button>
+    <button class="btn blue" onclick="decrease('${id}')">Decrease</button>
+    <button class="btn red" onclick="increase('${id}')">Increase</button>
     </div>
-  </div>
-  `;
+    </div>
+    `;
   };
   function decrease(id) {
-  document.getElementById(`counter-${id}`).innerText =
-  Number(document.getElementById(`counter-${id}`).innerText) - 1;
+    document.getElementById(`counter-${id}`).innerText =
+    Number(document.getElementById(`counter-${id}`).innerText) - 1;
   }
   function increase(id) {
-  document.getElementById(`counter-${id}`).innerText =
-  Number(document.getElementById(`counter-${id}`).innerText) + 1;
+    document.getElementById(`counter-${id}`).innerText =
+    Number(document.getElementById(`counter-${id}`).innerText) + 1;
   }
 </script>
 ```

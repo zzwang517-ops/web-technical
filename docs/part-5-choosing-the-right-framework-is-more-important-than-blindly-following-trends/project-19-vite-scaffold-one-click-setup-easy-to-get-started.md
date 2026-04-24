@@ -61,19 +61,14 @@ If the installation fails, you can use the npm cache clean command to clear the 
 
 (1) You can create a new project by using the command npm create vite@latest project-name --template vue in an appropriate location, as shown in Figure 19-4 below.
 
+```sh
 # Using npm
-
-```
 npm create vite@latest my-vue-app --template vue
-```
-
 # Using yarn
-
 yarn create vite my-vue-app --template vue
-
 # Enter the project directory
-
 cd my-vue-app
+```
 
 <p align="center">
   <img src="../../assets/images/project-19/image-004.png" alt="Image">
@@ -123,12 +118,12 @@ The project "Ten miles of spring breeze are not as good as npm run dev" is divid
 
 ```vue
 <template>
-<div class="spring-container">
-<div class="spring-text">
-<span class="text-line">Ten miles of spring breeze are not as good as</span>
-<span class="text-line">npm run serve</span>
-</div>
-</div>
+  <div class="spring-container">
+    <div class="spring-text">
+      <span class="text-line">Ten miles of spring breeze are not as good as</span>
+      <span class="text-line">npm run serve</span>
+    </div>
+  </div>
 </template>
 ```
 
@@ -137,45 +132,45 @@ The project "Ten miles of spring breeze are not as good as npm run dev" is divid
 ```html
 <style scoped>
   @keyframes fall {
-  0% { transform: translateY(-100px) rotate(0deg); }
+    0% { transform: translateY(-100px) rotate(0deg); }
   100% { transform: translateY(100vh) rotate(360deg); }
   }
   .spring-container {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
   .spring-text {
-  z-index: 10;
-  font-family: 'ZCOOL XiaoWei', serif;
-  text-align: center;
-  font-size: 4rem;
-  line-height: 1.2;
-  color: #2c3e50;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+    font-family: 'ZCOOL XiaoWei', serif;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1.2;
+    color: #2c3e50;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
   .text-line {
-  display: block;
-  margin: 10px 0;
+    display: block;
+    margin: 10px 0;
   }
   .text-line:last-child {
-  color: #e74c3c;
-  font-size: 5rem;
-  letter-spacing: 3px;
+    color: #e74c3c;
+    font-size: 5rem;
+    letter-spacing: 3px;
   }
   .petal {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-image:
-  radial-gradient(circle at 30% 30%, #ff9a9e 0%, #fad0c4 100%);
-  border-radius: 50% 50% 50% 0;
-  transform-origin: center bottom;
-  animation-timing-function: cubic-bezier(0.4, 0.2, 0.6, 0.8);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image:
+    radial-gradient(circle at 30% 30%, #ff9a9e 0%, #fad0c4 100%);
+    border-radius: 50% 50% 50% 0;
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.4, 0.2, 0.6, 0.8);
   }
 </style>
 ```
@@ -242,23 +237,24 @@ module_e-src
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [
-      vue(),
-    ],
+  plugins: [
+    vue(),
+  ],
   build: {
-    outDir: "../34_module_e",
+    outDir: '../34_module_e',
   },
-server: {
-  port: 3000,
-},
-base: "/34_module_e",
-resolve: {
-  alias: {
-    '@': fileURLToPath(new URL('./src', import.meta.url))
+  server: {
+    port: 3000,
+  },
+  base: '/34_module_e',
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
   }
-}
 })
 ```
 
@@ -271,6 +267,7 @@ import './assets/main.css'
 import './assets/theme/commonTheme.css'
 import { createApp } from 'vue'
 import App from './App.vue'
+
 createApp(App).mount('#app')
 ```
 
@@ -288,29 +285,32 @@ export const SLIDE_TIME = 3000;
 export function getId() {
   return ~~(Math.random() * 10000000);
 }
+
 export function convertFilename(name) {
   return name
-  .split(".")[0]
-  .replaceAll(/-/g, " ")
-  .split(" ")
-  .map(item => {
-      return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
-    })
-.join(" ");
+    .split('.')
+    [0]
+    .replaceAll(/-/g, ' ')
+    .split(' ')
+    .map(item => {
+    return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
+  })
+    .join(' ');
 }
 ```
 
 #### Step 6: Configure the default playback mode in the store.js file.
 
 ```js
-import {computed, ref} from "vue";
+import { computed, ref } from 'vue';
+
 export const appMode = ref('RANDOM'); // MANUAL AUTO RANDOM
-export const appTheme = ref("A"); // A B C D E F
+export const appTheme = ref('A'); // A B C D E F
 export const appImages = ref([]);
 export const currentImageIndex = ref(0);
 export const currentImage = computed(() => {
-    return appImages.value[currentImageIndex.value];
-  })
+  return appImages.value[currentImageIndex.value];
+})
 ```
 
 #### Step 7: Import and load the homepage file in App.vue.
@@ -319,34 +319,36 @@ The code is as follows:
 
 ```vue
 <script setup>
-import SlideController from "@/components/SlideController.vue";
-import {ref} from "vue";
+  import SlideController from '@/components/SlideController.vue';
+  import { ref } from 'vue';
 </script>
+
 <template>
-<div class="row h-100">
-<div class="col-8">
-<slide-controller></slide-controller>
-</div>
-<div class="col">
-<section class="section h-100">
-<div class="row h-100">
-<div class="col-8">
-<setting-area></setting-area>
-</div>
-<div class="col">
-<ordering-area></ordering-area>
-</div>
-</div>
-</section>
-</div>
-</div>
-<command-area v-if="commandShow"></command-area>
+  <div class="row h-100">
+    <div class="col-8">
+      <slide-controller></slide-controller>
+    </div>
+    <div class="col">
+      <section class="section h-100">
+        <div class="row h-100">
+          <div class="col-8">
+            <setting-area></setting-area>
+          </div>
+          <div class="col">
+            <ordering-area></ordering-area>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <command-area v-if="commandShow"></command-area>
 </template>
+
 <style scoped>
-#app {
-  height: 100vh;
-  padding: 2rem;
-}
+  #app {
+    height: 100vh;
+    padding: 2rem;
+  }
 </style>
 ```
 
@@ -354,14 +356,16 @@ import {ref} from "vue";
 
 ```vue
 <script setup>
-import {currentImage} from "@/store.js";
+  import { currentImage } from '@/store.js';
 </script>
+
 <template>
-<img :src="currentImage.image" alt="image">
-<div class="captionBox">
-<div class="caption">{{currentImage.caption}}</div>
-</div>
+  <img :src="currentImage.image" alt="image">
+  <div class="captionBox">
+    <div class="caption">{{ currentImage.caption }}</div>
+  </div>
 </template>
+
 <style scoped>
 </style>
 ```
@@ -372,29 +376,29 @@ The code is as follows:
 
 ```vue
 <template>
-<section class="section h-100 d-flex flex-column">
-<div class="d-flex justify-content-between align-items-center mb-2">
-<div class="d-flex align-items-center">
-<h1 class="fw-bold mb-0">SlideView</h1>
-<div class="ms-3 badge text-primary bigBadge">
-{{ currentImageIndex + 1 }} / {{ appImages.length }}
-</div>
-</div>
-<div class="d-flex align-items-center gap-2">
-<button class="btn btn-fill text-primary active" @click="importSample">Import Sample</button>
-<button class="btn btn-primary enterFull" @click="toggleFullscreen">Full Screen</button>
-<button class="btn btn-danger exitFull" @click="toggleFullscreen">Exit Full Screen</button>
-</div>
-</div>
-<div class="flex-grow-1 position-relative">
-<div class="staticBox">
-<div class="themeContainer">
-<div class="text-white" v-if="!appImages.length">Add photos!</div>
-<component :is="themeComponent" v-else :key="slideKey"></component>
-</div>
-</div>
-</div>
-</section>
+  <section class="section h-100 d-flex flex-column">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <div class="d-flex align-items-center">
+        <h1 class="fw-bold mb-0">SlideView</h1>
+        <div class="ms-3 badge text-primary bigBadge">
+          {{ currentImageIndex + 1 }} / {{ appImages.length }}
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-fill text-primary active" @click="importSample">Import Sample</button>
+        <button class="btn btn-primary enterFull" @click="toggleFullscreen">Full Screen</button>
+        <button class="btn btn-danger exitFull" @click="toggleFullscreen">Exit Full Screen</button>
+      </div>
+    </div>
+    <div class="flex-grow-1 position-relative">
+      <div class="staticBox">
+        <div class="themeContainer">
+          <div class="text-white" v-if="!appImages.length">Add photos!</div>
+          <component :is="themeComponent" v-else :key="slideKey"></component>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 ```
 
@@ -403,18 +407,18 @@ The code is as follows:
 ```html
 <style scoped>
   .bigBadge {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
   }
   .exitFull {
-  display: none;
+    display: none;
   }
   @media (display-mode: fullscreen) {
-  .enterFull {
-  display: none;
-  }
-  .exitFull {
-  display: inline-block;
-  }
+    .enterFull {
+      display: none;
+    }
+    .exitFull {
+      display: inline-block;
+    }
   }
 </style>
 ```
@@ -425,11 +429,11 @@ The code is as follows:
 
 ```vue
 <script setup>
-import {appImages, appMode, appTheme, currentImageIndex} from "@/store.js";
-import {convertFilename, getId} from "@/helper.js";
-import {computed, onMounted, ref, watch} from "vue";
-import {SLIDE_TIME} from "@/config.js";
-import EffectA from "@/components/EffectA.vue";
+  import { appImages, appMode, appTheme, currentImageIndex } from '@/store.js';
+  import { convertFilename, getId } from '@/helper.js';
+  import { computed, onMounted, ref, watch } from 'vue';
+  import { SLIDE_TIME } from '@/config.js';
+  import EffectA from '@/components/EffectA.vue';
 ```
 
 #### Step 12: Define the full-screen control function in components/SlideController.vue, placing it below the imported packages.
@@ -443,9 +447,9 @@ function toggleFullscreen() {
   if (document.fullscreenElement) {
     document.exitFullscreen();
   } else {
-  /* enter fullscreen */
-  document.documentElement.requestFullscreen();
-}
+    /* enter fullscreen */
+    document.documentElement.requestFullscreen();
+  }
 }
 ```
 
@@ -457,21 +461,22 @@ The code is as follows:
 /* import sample data */
 function importSample() {
   const sampleFiles = [
-    "basilique-notre-dame-de-fourviere-lyon.jpg",
-    "beautiful-view-in-lyon.jpg",
-    "place-bellecour-lyon.jpg",
-    "tour-metalique-lyon.jpg",
+    'basilique-notre-dame-de-fourviere-lyon.jpg',
+    'beautiful-view-in-lyon.jpg',
+    'place-bellecour-lyon.jpg',
+    'tour-metalique-lyon.jpg',
   ];
-sampleFiles.map(name => {
+  sampleFiles.map(name => {
     appImages.value.push({
-        id: getId(),
-        image: import.meta.env.DEV
-        ? "http://localhost:3000/34_module_e/" + name
-        : "http://localhost/34_module_e/" + name,
-        caption: convertFilename(name)
-      })
-})
+      id: getId(),
+      image: import.meta.env.DEV
+        ? 'http://localhost:3000/34_module_e/' + name
+        : 'http://localhost/34_module_e/' + name,
+      caption: convertFilename(name)
+    })
+  })
 }
+
 /* automatic load sample data in DEV env */
 if (import.meta.env.DEV) {
   //onMounted(importSample);
@@ -485,37 +490,38 @@ The code is as follows:
 ```js
 let slideInterval = null;
 const slideKey = ref(0);
+
 /* run slide */
 function setSlideInterval() {
   clearInterval(slideInterval);
   currentImageIndex.value = 0;
   slideKey.value++;
   /* Auto Playing Type */
-  if (appMode.value === "AUTO") {
+  if (appMode.value === 'AUTO') {
     slideInterval = setInterval(() => {
-        /* check exists images */
-        if (!appImages.value.length) return;
-        /* check last turn */
-        if (currentImageIndex.value + 1 === appImages.value.length) {
-          currentImageIndex.value = 0;
-        } else {
+      /* check exists images */
+      if (!appImages.value.length) return;
+      /* check last turn */
+      if (currentImageIndex.value + 1 === appImages.value.length) {
+        currentImageIndex.value = 0;
+      } else {
         currentImageIndex.value += 1;
       }
-  }, SLIDE_TIME)
-}
-/* Random Type */
-if (appMode.value === "RANDOM") {
-  slideInterval = setInterval(() => {
+    }, SLIDE_TIME)
+  }
+  /* Random Type */
+  if (appMode.value === 'RANDOM') {
+    slideInterval = setInterval(() => {
       /* check exists images */
       if (!appImages.value.length) return;
       const randoms = appImages.value
-      .map((a, i) => i) // get only index
-      .filter(item => item !== currentImageIndex.value); // filter without current index
-      if(!randoms.length) return;
+        .map((a, i) => i) // get only index
+        .filter(item => item !== currentImageIndex.value); // filter without current index
+      if (!randoms.length) return;
       /* set index */
       currentImageIndex.value = randoms[~~(Math.random() * randoms.length)];
     }, SLIDE_TIME)
-}
+  }
 }
 ```
 
@@ -525,12 +531,12 @@ The code is as follows:
 
 ```js
 /* manual control event */
-addEventListener("keydown", function (e) {
-    if (appMode.value !== "MANUAL" || !appImages.value.length) return;
-    if (e.code === "  " && currentImageIndex.value !== 0) {
-      currentImageIndex.value -= 1;
-    }
-  if (e.code === "ArrowRight" && currentImageIndex.value !== appImages.value.length - 1) {
+addEventListener('keydown', function (e) {
+  if (appMode.value !== 'MANUAL' || !appImages.value.length) return;
+  if (e.code === '  ' && currentImageIndex.value !== 0) {
+    currentImageIndex.value -= 1;
+  }
+  if (e.code === 'ArrowRight' && currentImageIndex.value !== appImages.value.length - 1) {
     currentImageIndex.value += 1;
   }
 })
@@ -540,7 +546,7 @@ addEventListener("keydown", function (e) {
 
 The code is as follows:
 
-```css
+```js
 /* theme component */
 const themeComponent = computed(() => {
   return {
@@ -553,6 +559,6 @@ const themeComponent = computed(() => {
 
 The code is as follows:
 
-```css
+```js
 watch([appMode, appTheme, appImages], setSlideInterval, {deep: true, immediate: true});
 ```

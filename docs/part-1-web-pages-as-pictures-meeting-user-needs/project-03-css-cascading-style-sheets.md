@@ -265,10 +265,10 @@ Example:
     <title></title>
     <style type="text/css">
       #a {
-      font-family: SimSun;
+        font-family: SimSun;
       }
       #b {
-      font-family: "Microsoft YaHei";
+        font-family: "Microsoft YaHei";
       }
     </style>
   </head>
@@ -342,13 +342,13 @@ Example:
     <title> font- size property</title>
     <style type="text/css">
       #p1 {
-      font-size: small;
+        font-size: small;
       }
       #p2 {
-      font-size: medium;
+        font-size: medium;
       }
       #p3 {
-      font-size: large;
+        font-size: large;
       }
     </style>
   </head>
@@ -407,13 +407,13 @@ Example:
     <title> font- weight Property </title>
     <style type="text/css">
       #p1 {
-      font-weight: lighter;
+        font-weight: lighter;
       }
       #p2 {
-      font-weight: normal;
+        font-weight: normal;
       }
       #p3 {
-      font-weight: bold;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -467,13 +467,13 @@ Example:
     <title></title>
     <style type="text/css">
       #a {
-      color: red;
+        color: red;
       }
       #b {
-      color: orange;
+        color: orange;
       }
       #c {
-      color: blue;
+        color: blue;
       }
     </style>
   </head>
@@ -521,13 +521,13 @@ Example:
     <title></title>
     <style type="text/css">
       #a {
-      font-style: normal;
+        font-style: normal;
       }
       #b {
-      font-style: italic;
+        font-style: italic;
       }
       #c {
-      font-style: oblique;
+        font-style: oblique;
       }
     </style>
   </head>
@@ -575,13 +575,13 @@ Example:
     <title></title>
     <style type="text/css">
       #a {
-      text-decoration: underline;
+        text-decoration: underline;
       }
       #b {
-      text-decoration: line-through;
+        text-decoration: line-through;
       }
       #c {
-      text-decoration: overline;
+        text-decoration: overline;
       }
     </style>
   </head>
@@ -663,13 +663,13 @@ Example:
     <title></title>
     <style type="text/css">
       #a {
-      text-transform: uppercase;
+        text-transform: uppercase;
       }
       #b {
-      text-transform: lowercase;
+        text-transform: lowercase;
       }
       #c {
-      text-transform: capitalize;
+        text-transform: capitalize;
       }
     </style>
   </head>
@@ -713,13 +713,13 @@ Example:
     <title></title>
     <style type="text/css">
       #a {
-      line-height: 12px;
+        line-height: 12px;
       }
       #b {
-      line-height: 17px;
+        line-height: 17px;
       }
       #c {
-      line-height: 22px;
+        line-height: 22px;
       }
     </style>
   </head>
@@ -755,13 +755,13 @@ Example:
     <title></title>
     <style type="text/css">
       #a {
-      word-spacing: 0px;
+        word-spacing: 0px;
       }
       #b {
-      word-spacing: 3px;
+        word-spacing: 3px;
       }
       #c {
-      word-spacing: 5px;
+        word-spacing: 5px;
       }
     </style>
   </head>
@@ -795,13 +795,13 @@ Example:
     <title></title>
     <style type="text/css">
       #a {
-      letter-spacing: 0px;
+        letter-spacing: 0px;
       }
       #b {
-      letter-spacing: 3px;
+        letter-spacing: 3px;
       }
       #c {
-      letter-spacing: 5px;
+        letter-spacing: 5px;
       }
     </style>
   </head>
@@ -1219,16 +1219,16 @@ Example:
     <title>Padding</title>
     <style type="text/css">
       p {
-      background-color: yellow;
+        background-color: yellow;
       }
       p.padding {
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-right: 50px;
-      padding-left: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-right: 50px;
+        padding-left: 50px;
       }
       p.paddings {
-      padding: 25px;
+        padding: 25px;
       }
     </style>
   </head>
@@ -1404,11 +1404,11 @@ Example:
     <title>CSS Outline</title>
     <style>
       p {
-      border: 1px solid red;
-      outline-style: dotted;
-      outline-color: #00ff00;
-      outline-width: 3px;
-      margin-top: 50px;
+        border: 1px solid red;
+        outline-style: dotted;
+        outline-color: #00ff00;
+        outline-width: 3px;
+        margin-top: 50px;
       }
     </style>
   </head>

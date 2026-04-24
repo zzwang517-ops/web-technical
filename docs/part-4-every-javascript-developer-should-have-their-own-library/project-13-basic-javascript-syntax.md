@@ -70,7 +70,7 @@ const confirm1 = confirm("It's said that 99% of programmers have shaky hands whe
 if (confirm1) {
   alert("Let's go! Open your password box!");
 } else {
-alert("A little secret: If you run away now, you'll regret it in the future~");
+  alert("A little secret: If you run away now, you'll regret it in the future~");
 }
 ```
 
@@ -175,15 +175,15 @@ Life is like a journey, which is divided into the following three steps, as deta
     <title>Dynamic Life Title</title>
     <style>
       body {
-      font-family: 'Microsoft YaHei', sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      line-height: 1.6;
+        font-family: 'Microsoft YaHei', sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
       }
       .title {
-      color: #333;
-      margin-bottom: 10px;
+        color: #333;
+        margin-bottom: 10px;
       }
     </style>
   </head>
@@ -193,8 +193,8 @@ Life is like a journey, which is divided into the following three steps, as deta
     document.write(`
     <h2 class='title'>A programming journey begins with the first Hello, World!, but the excitement is far greater than that</h2>
     <div class='content'>
-      <p>"Programming is like life: Hello, World! is the starting point, but far from the end. Every mistake is a gift for growth. The world of code has no limits, just like your potential. Stay curious, keep exploring, and define your own future!"；
-      </p>
+    <p>"Programming is like life: Hello, World! is the starting point, but far from the end. Every mistake is a gift for growth. The world of code has no limits, just like your potential. Stay curious, keep exploring, and define your own future!"；
+    </p>
     </div>`)
   </script>
 </html>
@@ -475,28 +475,28 @@ The wonderful fusion of numbers and strings: The mystery of '1' + '1' = '11' is 
     <title>{$this->title}</title>
     <style>
       body {
-      font-family: 'Microsoft YaHei', sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      line-height: 1.6;
+        font-family: 'Microsoft YaHei', sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
       }
       .title {
-      font-size: 2.5em;
-      color: #333;
-      text-align: center;
-      margin-bottom: 10px;
+        font-size: 2.5em;
+        color: #333;
+        text-align: center;
+        margin-bottom: 10px;
       }
       .subtitle {
-      font-size: 1.2em;
-      color: #666;
-      text-align: center;
-      margin-bottom: 30px;
+        font-size: 1.2em;
+        color: #666;
+        text-align: center;
+        margin-bottom: 30px;
       }
       .author {
-      text-align: right;
-      font-style: italic;
-      color: #888;
+        text-align: right;
+        font-style: italic;
+        color: #888;
       }
     </style>
   </head>
@@ -506,15 +506,15 @@ The wonderful fusion of numbers and strings: The mystery of '1' + '1' = '11' is 
       let result2 = 1 + '1'; // Human: This should be '11'!
       let result3 = 1 + 1; // Human: This should be 2!
       document.write(`<div class='content'>
-        <h3>The Wonderful Fusion of Numbers and Strings: The Mystery of '1' + '1' = '11'</h3>
-        <p>
-          // Case 1: Concatenation of string and string (a collision with human intuition)
-          Output result: ${result1}</br>
-          // Case 2: Addition of number and string (expected string concatenation)
-          Output result: ${result2} </br>
-          // Case 3: Addition of number and number, performing arithmetic addition
-          Output result: ${result3}
-        </p >
+      <h3>The Wonderful Fusion of Numbers and Strings: The Mystery of '1' + '1' = '11'</h3>
+      <p>
+      // Case 1: Concatenation of string and string (a collision with human intuition)
+      Output result: ${result1}</br>
+      // Case 2: Addition of number and string (expected string concatenation)
+      Output result: ${result2} </br>
+      // Case 3: Addition of number and number, performing arithmetic addition
+      Output result: ${result3}
+      </p >
       </div >`)
     </script>
   </body>
@@ -672,28 +672,28 @@ Age Calculator: Time Travel Using Arithmetic Operators is divided into the follo
     <title>{$this->title}</title>
     <style>
       body {
-      font-family: 'Microsoft YaHei', sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      line-height: 1.6;
+        font-family: 'Microsoft YaHei', sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
       }
       .title {
-      font-size: 2.5em;
-      color: #333;
-      text-align: center;
-      margin-bottom: 10px;
+        font-size: 2.5em;
+        color: #333;
+        text-align: center;
+        margin-bottom: 10px;
       }
       .subtitle {
-      font-size: 1.2em;
-      color: #666;
-      text-align: center;
-      margin-bottom: 30px;
+        font-size: 1.2em;
+        color: #666;
+        text-align: center;
+        margin-bottom: 30px;
       }
       .author {
-      text-align: right;
-      font-style: italic;
-      color: #888;
+        text-align: right;
+        font-style: italic;
+        color: #888;
       }
     </style>
   </head>
@@ -722,21 +722,21 @@ Age Calculator: Time Travel Using Arithmetic Operators is divided into the follo
       let countdown = 5;
       document.write(`
       <div class='content'>
-        <h3>Age Calculator: Time Travel with Arithmetic Operators</h3>
-        <p>
-          Case 1: Current Year ${years} + 10 Years = ${future_years} (Addition: Time flies, cherish the present!)</br>
-          Case 2: Current Year ${years} - 20 Years = ${past_years} (Subtraction: Go back to the past, but don't indulge!)</br>
-          Case 3: '1' + '1' = "  ${result4}  " (JS: Should've said so earlier, using '+' is correct!)</br>
-          Case 3: Knowledge × 1 per day = Wisdom after ${knowledge} Days (Multiplication: The power of compound interest is amazing!)</br>
-          Case 4: 100 Years of Life ÷ 3 = ${free_time} Years of Free Time (Division: Learn to choose, focus on what matters!)</br>
-          Case 5: (Wednesday + 10 Days) % 7 = Week ${next_week} (Modulus: Life is a cycle, don't fear repetition!)</br>
-          Case 6: Age ${age} →  ${++age} Years Old (Increment: Growth is irreversible, embrace change!)</br>
-          Case 7: Countdown  ${countdown--}   →   ${countdown}   (Decrement: After the countdown ends, a new beginning comes!)\n
-        </p>
+      <h3>Age Calculator: Time Travel with Arithmetic Operators</h3>
+      <p>
+      Case 1: Current Year ${years} + 10 Years = ${future_years} (Addition: Time flies, cherish the present!)</br>
+      Case 2: Current Year ${years} - 20 Years = ${past_years} (Subtraction: Go back to the past, but don't indulge!)</br>
+      Case 3: '1' + '1' = "  ${result4}  " (JS: Should've said so earlier, using '+' is correct!)</br>
+      Case 3: Knowledge × 1 per day = Wisdom after ${knowledge} Days (Multiplication: The power of compound interest is amazing!)</br>
+      Case 4: 100 Years of Life ÷ 3 = ${free_time} Years of Free Time (Division: Learn to choose, focus on what matters!)</br>
+      Case 5: (Wednesday + 10 Days) % 7 = Week ${next_week} (Modulus: Life is a cycle, don't fear repetition!)</br>
+      Case 6: Age ${age} →  ${++age} Years Old (Increment: Growth is irreversible, embrace change!)</br>
+      Case 7: Countdown  ${countdown--}   →   ${countdown}   (Decrement: After the countdown ends, a new beginning comes!)\n
+      </p>
       </div>
       `)
-    </script> </body>
-  </html>
+      </script> </body>
+      </html>
 ```
 
 #### Step 3: Run the index.html file to view the effect.
@@ -794,7 +794,7 @@ let username = 'castle';
 if(username == 'admin'){
   console.log('ok');
 }else{
-console.log('error');
+  console.log('error');
 }
 ```
 
@@ -831,7 +831,7 @@ let username = 'castle';
 if(username == 'admin'){
   console.log('ok');
 }else{
-console.log('error');
+  console.log('error');
 }
 ```
 
@@ -842,7 +842,7 @@ let flag = true;
 if(flag){
   a=1;
 }else{
-a=0
+  a=0
 }
 ```
 
@@ -879,21 +879,21 @@ In the switch structure, the expression is first evaluated, then matched against
 ```css
 let tmp = 3;
 switch(tmp) {
-  case 0:
-  console.log('This is 0000');
-  break;
+case 0:
+    console.log('This is 0000');
+    break;
   case 1:
-  console.log('This is 1111');
-  break;
-  case 2:
-  console.log('This is 2222');
-  break;
-  case 3:
-  console.log('This is 3333');
-  break;
-  default:
-  console.log('No matches found at all');
-}
+      console.log('This is 1111');
+      break;
+    case 2:
+        console.log('This is 2222');
+        break;
+      case 3:
+          console.log('This is 3333');
+          break;
+        default:
+            console.log('No matches found at all');
+          }
 ```
 
 The variable tmp is initialized to 3. The switch statement matches tmp with case 3, so "This is 3333" is printed to the console.If tmp is changed to 0, "This is 0000" is printed.
@@ -930,43 +930,43 @@ The Weather Forecaster: Intelligent Dialogue Between Conditional Statements and 
     <title>Weather Forecast</title>
     <style>
       body {
-      font-family: 'Arial', sans-serif;
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f5f5f5;
+        font-family: 'Arial', sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
       }
       .weather-card {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
       }
       .weather-icon {
-      font-size: 48px;
-      margin: 10px 0;
+        font-size: 48px;
+        margin: 10px 0;
       }
       .temp {
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
       }
       .details {
-      color: #666;
-      margin: 15px 0;
+        color: #666;
+        margin: 15px 0;
       }
       .advice {
-      margin-top: 20px;
-      padding: 15px;
-      border-left: 4px solid #4CAF50;
-      background-color: #f8f9fa;
+        margin-top: 20px;
+        padding: 15px;
+        border-left: 4px solid #4CAF50;
+        background-color: #f8f9fa;
       }
       .footer {
-      margin-top: 20px;
-      font-style: italic;
-      color: #888;
-      font-size: 0.9em;
+        margin-top: 20px;
+        font-style: italic;
+        color: #888;
+        font-size: 0.9em;
       }
     </style>
   </head>
@@ -992,21 +992,21 @@ The Weather Forecaster: Intelligent Dialogue Between Conditional Statements and 
       let citys = "";
       switch (city) {
       case 'Sunny':
-      citys = 'Current Weather: <span style="text-transform: capitalize;">$city</span><br>'
-      citys = 'Temperature: 30°C'
-      break;
-      case 'Rainy':
-      citys = "P.S. Remember to bring an umbrella, otherwise your plans might get 'rained' on (and you might catch a cold)\n";
-      break;
-      case 'Cloudy':
-      citys = "P.S. Cloudy days are perfect for pondering life's big questions—like: What should I have for lunch?\n";
-      break;
-      case 'Thunderstorm':
-      citys = "P.S. If you hear thunder, that's the weather jamming to rock music\n";
-      break;
-      }
-      let temps = document.getElementById("temp");
-      temps.innerHTML = citys;
+          citys = 'Current Weather: <span style="text-transform: capitalize;">$city</span><br>'
+          citys = 'Temperature: 30°C'
+          break;
+        case 'Rainy':
+            citys = "P.S. Remember to bring an umbrella, otherwise your plans might get 'rained' on (and you might catch a cold)\n";
+            break;
+          case 'Cloudy':
+              citys = "P.S. Cloudy days are perfect for pondering life's big questions—like: What should I have for lunch?\n";
+              break;
+            case 'Thunderstorm':
+                citys = "P.S. If you hear thunder, that's the weather jamming to rock music\n";
+                break;
+              }
+              let temps = document.getElementById("temp");
+              temps.innerHTML = citys;
     </script>
   </body>
 </html>
@@ -1124,23 +1124,23 @@ The problem of how long it takes a frog to jump out of a well is divided into th
     <title>Frog jumping well simulation</title>
     <style>
       body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 20px;
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
       }
       .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
       h1 {
-      color: #2c3e50;
-      text-align: center;
-      margin-bottom: 20px;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 20px;
       }
     </style>
   </head>
@@ -1157,22 +1157,22 @@ The problem of how long it takes a frog to jump out of a well is divided into th
       let wellstr = "";
       wellstr = `<p style='color: #34495e; text-align: center;'>well depth: <strong>${wellDepth}rice</strong>, Jumping height every day: <strong>${jumpHeight}rice</strong></p>`;
       for (let days = 1; position < wellDepth; days++) {
-      position += jumpHeight;
-      // Set different styles based on whether they jump out of the wellhead or not
-      if (position >= wellDepth) {
-      wellstr += "<div style='padding: 10px; margin: 5px 0; background-color: #d4edda; color: #155724; border-left: 4px solid #28a745;'>";
-        wellstr += `<strong>Day ${days}：</strong> The frog jumped onto<strong>${position}rice</strong> - Successfully jumped out of the wellhead！`;
-        wellstr += "</div>";
+        position += jumpHeight;
+        // Set different styles based on whether they jump out of the wellhead or not
+        if (position >= wellDepth) {
+          wellstr += "<div style='padding: 10px; margin: 5px 0; background-color: #d4edda; color: #155724; border-left: 4px solid #28a745;'>";
+          wellstr += `<strong>Day ${days}：</strong> The frog jumped onto<strong>${position}rice</strong> - Successfully jumped out of the wellhead！`;
+          wellstr += "</div>";
         } else {
-        wellstr += "<div style='padding: 10px; margin: 5px 0; background-color: #e2e3e5; color: #4a4a4a; border-left: 4px solid #6c757d;'>";
+          wellstr += "<div style='padding: 10px; margin: 5px 0; background-color: #e2e3e5; color: #4a4a4a; border-left: 4px solid #6c757d;'>";
           wellstr += `<strong>Day${days}：</strong> The frog jumped onto${position}rice`;
           wellstr += "</div>";
-          }
-          }
-          document.getElementById('welldata').innerHTML = wellstr
-        </script>
-      </body>
-    </html>
+        }
+      }
+      document.getElementById('welldata').innerHTML = wellstr
+    </script>
+  </body>
+</html>
 ```
 
 #### Step 3: Run the index.html file to view the effect.
@@ -1298,84 +1298,84 @@ The "Music Chart" task is divided into the following three steps, as detailed be
     <title>Music Chart</title>
     <style>
       body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      margin: 0;
-      padding: 20px;
-      min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
       }
       .container {
-      max-width: 800px;
-      margin: 30px auto;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
+        max-width: 800px;
+        margin: 30px auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
       }
       h1 {
-      background: linear-gradient(135deg, #6e8efb, #a777e3);
-      color: white;
-      padding: 25px;
-      margin: 0;
-      text-align: center;
-      font-weight: 600;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: white;
+        padding: 25px;
+        margin: 0;
+        text-align: center;
+        font-weight: 600;
       }
       .chart-container {
-      padding: 20px;
+        padding: 20px;
       }
       .song-item {
-      display: flex;
-      align-items: center;
-      padding: 18px 25px;
-      border-bottom: 1px solid #eee;
-      transition: all 0.3s ease;
-      position: relative;
+        display: flex;
+        align-items: center;
+        padding: 18px 25px;
+        border-bottom: 1px solid #eee;
+        transition: all 0.3s ease;
+        position: relative;
       }
       .song-item:last-child {
-      border-bottom: none;
+        border-bottom: none;
       }
       .song-item:hover {
-      background-color: #f8f9ff;
-      transform: translateX(10px);
+        background-color: #f8f9ff;
+        transform: translateX(10px);
       }
       .rank {
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #a777e3;
-      width: 50px;
-      text-align: center;
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #a777e3;
+        width: 50px;
+        text-align: center;
       }
       .song-info {
-      flex: 1;
-      padding: 0 15px;
+        flex: 1;
+        padding: 0 15px;
       }
       .song-title {
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: #333;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #333;
       }
       .song-artist {
-      color: #777;
-      font-size: 0.95em;
+        color: #777;
+        font-size: 0.95em;
       }
       .plays {
-      width: 150px;
-      text-align: right;
-      color: #6e8efb;
-      font-weight: 500;
+        width: 150px;
+        text-align: right;
+        color: #6e8efb;
+        font-weight: 500;
       }
       .play-icon {
-      margin-right: 12px;
-      color: #a777e3;
-      font-size: 1.1em;
+        margin-right: 12px;
+        color: #a777e3;
+        font-size: 1.1em;
       }
       .chart-header {
-      display: flex;
-      padding: 15px 25px;
-      background-color: #f8f9ff;
-      font-weight: 600;
-      color: #555;
-      border-bottom: 1px solid #eee;
+        display: flex;
+        padding: 15px 25px;
+        background-color: #f8f9ff;
+        font-weight: 600;
+        color: #555;
+        border-bottom: 1px solid #eee;
       }
     </style>
   </head>
@@ -1394,32 +1394,32 @@ The "Music Chart" task is divided into the following three steps, as detailed be
     </div>
     <script>
       let musicList = [
-      {'title' : 'Taylor Swift', 'artist' : 'Sunny Days', 'plays' : 2500000},
-      {'title' : 'Miley Cyrus', 'artist' : 'Midnight Riders', 'plays' : 1800000},
-      {'title' : 'Ocean Breeze', 'artist' : 'Coastal Waves', 'plays' : 1500000},
-      {'title' : 'Mountain High', 'artist' : 'Peak Seekers', 'plays' : 1200000},
-      {'title' : 'City Lights', 'artist' : 'Urban Dreams', 'plays' : 900000},
+        {'title' : 'Taylor Swift', 'artist' : 'Sunny Days', 'plays' : 2500000},
+        {'title' : 'Miley Cyrus', 'artist' : 'Midnight Riders', 'plays' : 1800000},
+        {'title' : 'Ocean Breeze', 'artist' : 'Coastal Waves', 'plays' : 1500000},
+        {'title' : 'Mountain High', 'artist' : 'Peak Seekers', 'plays' : 1200000},
+        {'title' : 'City Lights', 'artist' : 'Urban Dreams', 'plays' : 900000},
       ];
       let songitemstr = "";
       musicList.forEach((item,index) => {
-      songitemstr += `
-      <div class="song-item">
+        songitemstr += `
+        <div class="song-item">
         <div class="rank">
-          ${index + 1}
+        ${index + 1}
         </div>
         <div class="song-info">
-          <div class="song-title">
-            ${item.title}
-          </div>
-          <div class="song-artist">
-            ${item.artist}
-          </div>
+        <div class="song-title">
+        ${item.title}
+        </div>
+        <div class="song-artist">
+        ${item.artist}
+        </div>
         </div>
         <div class="plays">
-          ${item.plays}times
+        ${item.plays}times
         </div>
-      </div>
-      `
+        </div>
+        `
       });
       document.getElementById("song-item").innerHTML = songitemstr
     </script>
@@ -1454,7 +1454,7 @@ Basic format:
 ```js
 function functionName([parameter1, parameter2, ...]) {
   // JavaScript statements
-  [return [returnValue];]
+    [return [returnValue];]
 }
 ```
 
@@ -1502,12 +1502,12 @@ Scope refers to the area where a variable takes effect. In JavaScript, there are
 ```html
 <script>
   // Variables declared within a <script> tag are called global variables, which take effect throughout the entire scope of the <script> tag
-      // Therefore, this variable can also be used directly inside a function
-      var username = 'admin';
-      function fn () {
-      console.log(username);
-      }
-    </script>
+  // Therefore, this variable can also be used directly inside a function
+  var username = 'admin';
+  function fn () {
+    console.log(username);
+  }
+</script>
 ```
 
 ##### (2) Local Scope: Variables declared inside a function body are only valid within that function body.
@@ -1557,26 +1557,26 @@ The "Simple Calculator" task is divided into the following three steps, as detai
       var opt = prompt('Please enter the operator:');
       var num2 = prompt('Please enter the second number:');
       function calculate(x, y, opt) {
-      var result;
-      switch (opt) {
-      case '+':
-      result = parseFloat(x) + parseFloat(y);
-      break;
-      case '-':
-      result = x - y;
-      break;
-      case '*':
-      result = x * y;
-      break;
-      case '/':
-      result = x / y;
-      break;
-      }
-      document.write('<h3>result:</h3>');
-      document.write(x + opt + y + '=' + result);
-      }
-      // call a function
-      calculate(num1, num2, opt);
+        var result;
+        switch (opt) {
+        case '+':
+            result = parseFloat(x) + parseFloat(y);
+            break;
+          case '-':
+              result = x - y;
+              break;
+            case '*':
+                result = x * y;
+                break;
+              case '/':
+                  result = x / y;
+                  break;
+                }
+                document.write('<h3>result:</h3>');
+                document.write(x + opt + y + '=' + result);
+              }
+              // call a function
+              calculate(num1, num2, opt);
     </script>
   </body>
 </html>
@@ -1722,61 +1722,61 @@ The "Lighting Control" task is divided into the following four steps, as detaile
     <title>Living room lighting control</title>
     <style>
       body {
-      background: #f0f2f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
+        background: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
       }
       .control-panel {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      width: 320px;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        text-align: center;
+        width: 320px;
       }
       h2 {
-      color: #3a86ff;
-      margin-bottom: 20px;
+        color: #3a86ff;
+        margin-bottom: 20px;
       }
       .slider {
-      width: 100%;
-      height: 8px;
-      -webkit-appearance: none;
-      background: #e0e0e0;
-      border-radius: 4px;
-      outline: none;
-      margin: 25px 0;
+        width: 100%;
+        height: 8px;
+        -webkit-appearance: none;
+        background: #e0e0e0;
+        border-radius: 4px;
+        outline: none;
+        margin: 25px 0;
       }
       .slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: #3a86ff;
-      cursor: pointer;
+        -webkit-appearance: none;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #3a86ff;
+        cursor: pointer;
       }
       .value {
-      font-size: 28px;
-      font-weight: bold;
-      color: #3a86ff;
-      margin: 15px 0;
+        font-size: 28px;
+        font-weight: bold;
+        color: #3a86ff;
+        margin: 15px 0;
       }
       .btn {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      background: #3a86ff;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #3a86ff;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 0 5px;
       }
       .btn:hover {
-      background: #2a6ddf;
+        background: #2a6ddf;
       }
     </style>
   </head>
@@ -1798,10 +1798,10 @@ The "Lighting Control" task is divided into the following four steps, as detaile
 ```html
 <script>
   function setBrightness(value) {
-  if(value < 0) value = 0;
-  if(value > 100) value = 100;
-  document.querySelector('.slider').value = value;
-  document.getElementById('val').textContent = value;
+    if(value < 0) value = 0;
+    if(value > 100) value = 100;
+    document.querySelector('.slider').value = value;
+    document.getElementById('val').textContent = value;
   }
 </script>
 ```
@@ -1863,22 +1863,22 @@ The code is as follows:
     <title>Document</title>
     <style>
       * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
       body {
-      height: 100vh;
-      background: #dddddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        height: 100vh;
+        background: #dddddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       canvas {
-      background: #fff;
+        background: #fff;
       }
       input {
-      margin-left: 2rem;
+        margin-left: 2rem;
       }
     </style>
   </head>
@@ -1898,33 +1898,33 @@ The code is as follows:
 <script>
   const cSize = 800;
   function draw(){
-  const maxCount = document.querySelector("#maxNumberInput").value;
-  const canvas = document.querySelector("canvas");
-  const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, cSize, cSize);
-  ctx.moveTo(cSize / 2, 0);//top vertex
-  ctx.lineTo(cSize, cSize);//bottom right vertex
-  ctx.lineTo(0, cSize);//lower left vertex
-  ctx.fillStyle = "black";
-  ctx.fill();//Fill with black background
-  //Start recursive drawing
-  ctx.fillStyle = "white";
-  function repeat(x, y, size, count) {
-  //Recursion termination condition: Exceeding the maximum number of iterations
-  if(++count > maxCount) return;
-  //Draw an inverted small triangle
-  ctx.beginPath();
-  ctx.moveTo(x - size / 2, y - size);//apex
-  ctx.lineTo(x + size / 2, y - size);//upper right vertex
-  ctx.lineTo(x, y);//lower vertex
-  ctx.fill();//fill white
-  //Three-direction recursion (up, left-down, right-down)
-  repeat(x, y - size, size / 2, count);//above
-  repeat(x - size/2, y, size / 2, count);//lower left
-  repeat(x + size/2, y, size / 2, count);//lower right
-  }
-  //Start from the bottom center
-  repeat(cSize / 2, cSize, cSize / 2, 0);
+    const maxCount = document.querySelector("#maxNumberInput").value;
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, cSize, cSize);
+    ctx.moveTo(cSize / 2, 0);//top vertex
+    ctx.lineTo(cSize, cSize);//bottom right vertex
+    ctx.lineTo(0, cSize);//lower left vertex
+    ctx.fillStyle = "black";
+    ctx.fill();//Fill with black background
+    //Start recursive drawing
+    ctx.fillStyle = "white";
+    function repeat(x, y, size, count) {
+      //Recursion termination condition: Exceeding the maximum number of iterations
+      if(++count > maxCount) return;
+      //Draw an inverted small triangle
+      ctx.beginPath();
+      ctx.moveTo(x - size / 2, y - size);//apex
+      ctx.lineTo(x + size / 2, y - size);//upper right vertex
+      ctx.lineTo(x, y);//lower vertex
+      ctx.fill();//fill white
+      //Three-direction recursion (up, left-down, right-down)
+      repeat(x, y - size, size / 2, count);//above
+      repeat(x - size/2, y, size / 2, count);//lower left
+      repeat(x + size/2, y, size / 2, count);//lower right
+    }
+    //Start from the bottom center
+    repeat(cSize / 2, cSize, cSize / 2, 0);
   }
 </script>
 ```

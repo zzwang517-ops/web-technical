@@ -232,21 +232,21 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [
-      vue(),
-    ],
+  plugins: [
+    vue(),
+  ],
   build: {
     outDir: "../34_module_e",
   },
-server: {
-  port: 3000,
-},
-base: "/34_module_e",
-resolve: {
-  alias: {
-    '@': fileURLToPath(new URL('./src', import.meta.url))
+  server: {
+    port: 3000,
+  },
+  base: "/34_module_e",
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
   }
-}
 })
 ```
 
@@ -276,13 +276,13 @@ export function getId() {
 }
 export function convertFilename(name) {
   return name
-  .split(".")[0]
-  .replaceAll(/-/g, " ")
-  .split(" ")
-  .map(item => {
-      return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
-    })
-.join(" ");
+    .split(".")[0]
+    .replaceAll(/-/g, " ")
+    .split(" ")
+    .map(item => {
+    return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
+  })
+    .join(" ");
 }
 ```
 
@@ -295,8 +295,8 @@ export const appTheme = ref("A"); // A B C D E F
 export const appImages = ref([]);
 export const currentImageIndex = ref(0);
 export const currentImage = computed(() => {
-    return appImages.value[currentImageIndex.value];
-  })
+  return appImages.value[currentImageIndex.value];
+})
 ```
 
 #### Step 7: Import and load the homepage file in App.vue.
@@ -305,37 +305,37 @@ The code is as follows:
 
 ```vue
 <script setup>
-import SlideController from "@/components/SlideController.vue";
-import SettingArea from "@/components/SettingArea.vue";
-import OrderingArea from "@/components/OrderingArea.vue";
-import CommandArea from "@/components/CommandArea.vue";
-import {ref} from "vue";
+  import SlideController from "@/components/SlideController.vue";
+  import SettingArea from "@/components/SettingArea.vue";
+  import OrderingArea from "@/components/OrderingArea.vue";
+  import CommandArea from "@/components/CommandArea.vue";
+  import {ref} from "vue";
 </script>
 <template>
-<div class="row h-100">
-<div class="col-8">
-<slide-controller></slide-controller>
-</div>
-<div class="col">
-<section class="section h-100">
-<div class="row h-100">
-<div class="col-8">
-<setting-area></setting-area>
-</div>
-<div class="col">
-<ordering-area></ordering-area>
-</div>
-</div>
-</section>
-</div>
-</div>
-<command-area v-if="commandShow"></command-area>
+  <div class="row h-100">
+    <div class="col-8">
+      <slide-controller></slide-controller>
+    </div>
+    <div class="col">
+      <section class="section h-100">
+        <div class="row h-100">
+          <div class="col-8">
+            <setting-area></setting-area>
+          </div>
+          <div class="col">
+            <ordering-area></ordering-area>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <command-area v-if="commandShow"></command-area>
 </template>
 <style scoped>
-#app {
-  height: 100vh;
-  padding: 2rem;
-}
+  #app {
+    height: 100vh;
+    padding: 2rem;
+  }
 </style>
 ```
 
@@ -343,17 +343,17 @@ import {ref} from "vue";
 
 ```vue
 <script setup>
-import {appImages, appMode, appTheme, currentImageIndex} from "@/store.js";
-import {convertFilename, getId} from "@/helper.js";
-import {computed, onMounted, ref, watch} from "vue";
-import {SLIDE_TIME} from "@/config.js";
-import EffectA from "@/components/EffectA.vue";
-import EffectB from "@/components/EffectB.vue";
-import EffectC from "@/components/EffectC.vue";
-import EffectD from "@/components/EffectD.vue";
-import EffectE from "@/components/EffectE.vue";
-import EffectF from "@/components/EffectF.vue";
-/* toggle fullscreen */
+  import {appImages, appMode, appTheme, currentImageIndex} from "@/store.js";
+  import {convertFilename, getId} from "@/helper.js";
+  import {computed, onMounted, ref, watch} from "vue";
+  import {SLIDE_TIME} from "@/config.js";
+  import EffectA from "@/components/EffectA.vue";
+  import EffectB from "@/components/EffectB.vue";
+  import EffectC from "@/components/EffectC.vue";
+  import EffectD from "@/components/EffectD.vue";
+  import EffectE from "@/components/EffectE.vue";
+  import EffectF from "@/components/EffectF.vue";
+  /* toggle fullscreen */
 </script>
 ```
 
@@ -363,13 +363,13 @@ The code is as follows:
 
 ```vue
 <script setup>
-import {currentImage} from "@/store.js";
+  import {currentImage} from "@/store.js";
 </script>
 <template>
-<img :src="currentImage.image" alt="image">
-<div class="captionBox">
-<div class="caption">{{currentImage.caption}}</div>
-</div>
+  <img :src="currentImage.image" alt="image">
+  <div class="captionBox">
+    <div class="caption">{{currentImage.caption}}</div>
+  </div>
 </template>
 <style scoped>
 </style>
@@ -381,29 +381,29 @@ The code is as follows:
 
 ```vue
 <template>
-<section class="section h-100 d-flex flex-column">
-<div class="d-flex justify-content-between align-items-center mb-2">
-<div class="d-flex align-items-center">
-<h1 class="fw-bold mb-0">SlideView</h1>
-<div class="ms-3 badge text-primary bigBadge">
-{{ currentImageIndex + 1 }} / {{ appImages.length }}
-</div>
-</div>
-<div class="d-flex align-items-center gap-2">
-<button class="btn btn-fill text-primary active" @click="importSample">Import Sample</button>
-<button class="btn btn-primary enterFull" @click="toggleFullscreen">Full Screen</button>
-<button class="btn btn-danger exitFull" @click="toggleFullscreen">Exit Full Screen</button>
-</div>
-</div>
-<div class="flex-grow-1 position-relative">
-<div class="staticBox">
-<div class="themeContainer">
-<div class="text-white" v-if="!appImages.length">Add photos!</div>
-<component :is="themeComponent" v-else :key="slideKey"></component>
-</div>
-</div>
-</div>
-</section>
+  <section class="section h-100 d-flex flex-column">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <div class="d-flex align-items-center">
+        <h1 class="fw-bold mb-0">SlideView</h1>
+        <div class="ms-3 badge text-primary bigBadge">
+          {{ currentImageIndex + 1 }} / {{ appImages.length }}
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-fill text-primary active" @click="importSample">Import Sample</button>
+        <button class="btn btn-primary enterFull" @click="toggleFullscreen">Full Screen</button>
+        <button class="btn btn-danger exitFull" @click="toggleFullscreen">Exit Full Screen</button>
+      </div>
+    </div>
+    <div class="flex-grow-1 position-relative">
+      <div class="staticBox">
+        <div class="themeContainer">
+          <div class="text-white" v-if="!appImages.length">Add photos!</div>
+          <component :is="themeComponent" v-else :key="slideKey"></component>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 ```
 
@@ -414,18 +414,18 @@ The code is as follows:
 ```html
 <style scoped>
   .bigBadge {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
   }
   .exitFull {
-  display: none;
+    display: none;
   }
   @media (display-mode: fullscreen) {
-  .enterFull {
-  display: none;
-  }
-  .exitFull {
-  display: inline-block;
-  }
+    .enterFull {
+      display: none;
+    }
+    .exitFull {
+      display: inline-block;
+    }
   }
 </style>
 ```
@@ -441,9 +441,9 @@ function toggleFullscreen() {
   if (document.fullscreenElement) {
     document.exitFullscreen();
   } else {
-  /* enter fullscreen */
-  document.documentElement.requestFullscreen();
-}
+    /* enter fullscreen */
+    document.documentElement.requestFullscreen();
+  }
 }
 /* import sample data */
 ```
@@ -461,15 +461,15 @@ function importSample() {
     "place-bellecour-lyon.jpg",
     "tour-metalique-lyon.jpg",
   ];
-sampleFiles.map(name => {
+  sampleFiles.map(name => {
     appImages.value.push({
-        id: getId(),
-        image: import.meta.env.DEV
+      id: getId(),
+      image: import.meta.env.DEV
         ? "http://localhost:3000/34_module_e/" + name
         : "http://localhost/34_module_e/" + name,
-        caption: convertFilename(name)
-      })
-})
+      caption: convertFilename(name)
+    })
+  })
 }
 /* automatic load sample data in DEV env */
 if (import.meta.env.DEV) {
@@ -492,29 +492,29 @@ function setSlideInterval() {
   /* Auto Playing Type */
   if (appMode.value === "AUTO") {
     slideInterval = setInterval(() => {
-        /* check exists images */
-        if (!appImages.value.length) return;
-        /* check last turn */
-        if (currentImageIndex.value + 1 === appImages.value.length) {
-          currentImageIndex.value = 0;
-        } else {
+      /* check exists images */
+      if (!appImages.value.length) return;
+      /* check last turn */
+      if (currentImageIndex.value + 1 === appImages.value.length) {
+        currentImageIndex.value = 0;
+      } else {
         currentImageIndex.value += 1;
       }
-  }, SLIDE_TIME)
-}
-/* Random Type */
-if (appMode.value === "RANDOM") {
-  slideInterval = setInterval(() => {
+    }, SLIDE_TIME)
+  }
+  /* Random Type */
+  if (appMode.value === "RANDOM") {
+    slideInterval = setInterval(() => {
       /* check exists images */
       if (!appImages.value.length) return;
       const randoms = appImages.value
-      .map((a, i) => i) // get only index
-      .filter(item => item !== currentImageIndex.value); // filter without current index
+        .map((a, i) => i) // get only index
+        .filter(item => item !== currentImageIndex.value); // filter without current index
       if(!randoms.length) return;
       /* set index */
       currentImageIndex.value = randoms[~~(Math.random() * randoms.length)];
     }, SLIDE_TIME)
-}
+  }
 }
 ```
 
@@ -525,10 +525,10 @@ The code is as follows:
 ```js
 /* manual control event */
 addEventListener("keydown", function (e) {
-    if (appMode.value !== "MANUAL" || !appImages.value.length) return;
-    if (e.code === "  " && currentImageIndex.value !== 0) {
-      currentImageIndex.value -= 1;
-    }
+  if (appMode.value !== "MANUAL" || !appImages.value.length) return;
+  if (e.code === "  " && currentImageIndex.value !== 0) {
+    currentImageIndex.value -= 1;
+  }
   if (e.code === "ArrowRight" && currentImageIndex.value !== appImages.value.length - 1) {
     currentImageIndex.value += 1;
   }
@@ -584,7 +584,7 @@ function btnClass(a, b) {
   if (a === b) {
     return "btn-primary";
   }
-return "btn-fill text-primary";
+  return "btn-fill text-primary";
 }
 /* upload single file by input form */
 ```
@@ -595,30 +595,30 @@ The code is as follows:
 
 ```vue
 <template>
-<div class="d-flex flex-column h-100">
-<!--Switching operating-->
-<p class="mb-2">Switching operating</p>
-<div class="border rounded-pill p-2 d-flex align-items-center mb-4">
-<div class="row gx-1 w-100">
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appMode, 'MANUAL')" @click="appMode = 'MANUAL'">
-MANUAL
-</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appMode, 'AUTO')" @click="appMode = 'AUTO'">AUTO
-</button>
-</div>
-<div class="col">
-<button class="btn w-100 text-center" :class="btnClass(appMode, 'RANDOM')" @click="appMode = 'RANDOM'">
-RANDOM
-</button>
-</div>
-</div>
-</div>
-<!--Switching theme-->
-<!--Import Photo-->
-</div>
+  <div class="d-flex flex-column h-100">
+    <!--Switching operating-->
+    <p class="mb-2">Switching operating</p>
+    <div class="border rounded-pill p-2 d-flex align-items-center mb-4">
+      <div class="row gx-1 w-100">
+        <div class="col">
+          <button class="btn w-100 text-center" :class="btnClass(appMode, 'MANUAL')" @click="appMode = 'MANUAL'">
+            MANUAL
+          </button>
+        </div>
+        <div class="col">
+          <button class="btn w-100 text-center" :class="btnClass(appMode, 'AUTO')" @click="appMode = 'AUTO'">AUTO
+          </button>
+        </div>
+        <div class="col">
+          <button class="btn w-100 text-center" :class="btnClass(appMode, 'RANDOM')" @click="appMode = 'RANDOM'">
+            RANDOM
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--Switching theme-->
+    <!--Import Photo-->
+  </div>
 </template>
 ```
 
@@ -629,15 +629,15 @@ The code is as follows:
 ```html
 <style scoped>
   .dropArea {
-  border: 1px solid var(--bs-dark);
-  border-radius: .75rem;
+    border: 1px solid var(--bs-dark);
+    border-radius: .75rem;
   }
   .centerBox {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
 ```
@@ -687,36 +687,36 @@ The code is as follows:
 
 ```vue
 <script setup>
-import {currentImage, currentImageIndex} from "@/store.js";
+  import {currentImage, currentImageIndex} from "@/store.js";
 </script>
 <template>
-<transition name="B-image" appear>
-<img :src="currentImage.image" alt="image" :key="currentImageIndex">
-</transition>
-<transition name="B-caption" appear>
-<div class="captionBox" :key="currentImageIndex">
-<div class="caption">{{ currentImage.caption }}</div>
-</div>
-</transition>
+  <transition name="B-image" appear>
+    <img :src="currentImage.image" alt="image" :key="currentImageIndex">
+  </transition>
+  <transition name="B-caption" appear>
+    <div class="captionBox" :key="currentImageIndex">
+      <div class="caption">{{ currentImage.caption }}</div>
+    </div>
+  </transition>
 </template>
 <style scoped>
-.B-image-enter-active,
-.B-image-leave-active,
-.B-caption-enter-active,
-.B-caption-leave-active {
-  transition: .3s;
-}
-.B-image-enter-from,
-.B-caption-enter-from {
-  transform: translateX(-100%);
-}
-.B-image-leave-to,
-.B-caption-leave-to {
-  transform: translateX(100%);
-}
-.B-caption-enter-active {
-  transition-delay: .3s;
-}
+  .B-image-enter-active,
+  .B-image-leave-active,
+  .B-caption-enter-active,
+  .B-caption-leave-active {
+    transition: .3s;
+  }
+  .B-image-enter-from,
+  .B-caption-enter-from {
+    transform: translateX(-100%);
+  }
+  .B-image-leave-to,
+  .B-caption-leave-to {
+    transform: translateX(100%);
+  }
+  .B-caption-enter-active {
+    transition-delay: .3s;
+  }
 </style>
 ```
 
@@ -726,64 +726,64 @@ The code is as follows:
 
 ```vue
 <script setup>
-import {currentImage, currentImageIndex} from "@/store.js";
-import {ref, watch} from "vue";
-const wordCount = ref(0);
-const maxCount = ref(0);
-let wordTimeout = null;
-watch(currentImageIndex, () => {
+  import {currentImage, currentImageIndex} from "@/store.js";
+  import {ref, watch} from "vue";
+  const wordCount = ref(0);
+  const maxCount = ref(0);
+  let wordTimeout = null;
+  watch(currentImageIndex, () => {
     const tmpWords = currentImage.value.caption.split(" ");
     maxCount.value = tmpWords.length;
     wordCount.value = 0;
     setTimeout(addWord, 300)
   }, {immediate: true})
-function addWord() {
-  clearTimeout(wordTimeout);
-  if (wordCount.value === maxCount.value) return;
-  wordCount.value += 1;
-  wordTimeout = setTimeout(addWord, 300);
-}
-function getWords(caption) {
-  return caption.split(" ").map(item => item + " ");
-}
+  function addWord() {
+    clearTimeout(wordTimeout);
+    if (wordCount.value === maxCount.value) return;
+    wordCount.value += 1;
+    wordTimeout = setTimeout(addWord, 300);
+  }
+  function getWords(caption) {
+    return caption.split(" ").map(item => item + " ");
+  }
 </script>
 <template>
-<transition name="C-image" appear>
-<div class="staticBox" :key="currentImageIndex">
-<img :src="currentImage.image" alt="image">
-<div class="captionBox">
-<div class="caption C-caption">
-<span v-for="(word, i) in getWords(currentImage.caption)" :class="{show: wordCount > i}" :key="word">{{ word }}</span>
-</div>
-</div>
-</div>
-</transition>
+  <transition name="C-image" appear>
+    <div class="staticBox" :key="currentImageIndex">
+      <img :src="currentImage.image" alt="image">
+      <div class="captionBox">
+        <div class="caption C-caption">
+          <span v-for="(word, i) in getWords(currentImage.caption)" :class="{show: wordCount > i}" :key="word">{{ word }}</span>
+        </div>
+      </div>
+    </div>
+  </transition>
 </template>
 <style scoped>
-.C-image-enter-active,
-.C-image-leave-active {
-  transition: .3s;
-}
-.C-image-enter-from {
-  transform: translateY(100%);
-}
-.C-image-leave-to {
-  transform: translateY(-100%);
-}
-.C-caption {
-  overflow: hidden;
-}
-.C-caption span {
-  display: inline-block;
-  transition: .3s;
-}
-.C-caption span:not(:last-child) {
-  margin-right: .5em;
-}
-.C-caption span:not(.show) {
-  transform: translateY(200%);
-  opacity: 0;
-}
+  .C-image-enter-active,
+  .C-image-leave-active {
+    transition: .3s;
+  }
+  .C-image-enter-from {
+    transform: translateY(100%);
+  }
+  .C-image-leave-to {
+    transform: translateY(-100%);
+  }
+  .C-caption {
+    overflow: hidden;
+  }
+  .C-caption span {
+    display: inline-block;
+    transition: .3s;
+  }
+  .C-caption span:not(:last-child) {
+    margin-right: .5em;
+  }
+  .C-caption span:not(.show) {
+    transform: translateY(200%);
+    opacity: 0;
+  }
 </style>
 ```
 
@@ -795,76 +795,76 @@ The code is as follows:
 
 ```vue
 <script setup>
-import {currentImage, currentImageIndex} from "@/store.js";
-import {ref, watch} from "vue";
-import {getId} from "@/helper.js";
-const stack = ref([]);
-watch(currentImageIndex, () => {
+  import {currentImage, currentImageIndex} from "@/store.js";
+  import {ref, watch} from "vue";
+  import {getId} from "@/helper.js";
+  const stack = ref([]);
+  watch(currentImageIndex, () => {
     stack.value.push({
-        id: getId(),
-        image: currentImage.value.image,
-        caption: currentImage.value.caption,
-        deg: getRandomDeg()
-      })
-}, {immediate: true});
-function getRandomDeg() {
-  return (~~(Math.random() * 11) - 5) + "deg";
-}
-function getRotateStyle(item) {
-  return {
-    transform: `rotate(${item.deg})`
+      id: getId(),
+      image: currentImage.value.image,
+      caption: currentImage.value.caption,
+      deg: getRandomDeg()
+    })
+  }, {immediate: true});
+  function getRandomDeg() {
+    return (~~(Math.random() * 11) - 5) + "deg";
   }
-}
+  function getRotateStyle(item) {
+    return {
+      transform: `rotate(${item.deg})`
+    }
+  }
 </script>
 <template>
-<div class="stackContainer" id="theme-d">
-<transition-group name="D-stack" appear>
-<div class="stackBox" :key="item.id" v-for="item in stack">
-<div class="stackItem" :style="getRotateStyle(item)">
-<img :src="item.image" alt="image">
-<div class="captionBox">
-<div class="caption">{{ item.caption }}</div>
-</div>
-</div>
-</div>
-</transition-group>
-</div>
+  <div class="stackContainer" id="theme-d">
+    <transition-group name="D-stack" appear>
+      <div class="stackBox" :key="item.id" v-for="item in stack">
+        <div class="stackItem" :style="getRotateStyle(item)">
+          <img :src="item.image" alt="image">
+          <div class="captionBox">
+            <div class="caption">{{ item.caption }}</div>
+          </div>
+        </div>
+      </div>
+    </transition-group>
+  </div>
 </template>
 <style scoped>
-.D-stack-enter-active {
-  transition: .3s;
-}
-.D-stack-enter-from {
-  transform: translateX(-150%);
-}
-#theme-d.stackContainer {
-  position: relative;
-  width: 85%;
-  height: 85%;
-}
-#theme-d .stackBox {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-#theme-d .stackItem {
-  width: 100%;
-  height: 100%;
-  border: 3px solid #fff;
-  border-radius: 5px !important;
-}
-#theme-d .stackItem img {
-  border-radius: 0;
-}
-#theme-d .captionBox {
-  padding: 0;
-}
-#theme-d .captionBox .caption {
-  width: 100%;
-  border-radius: 0;
-}
+  .D-stack-enter-active {
+    transition: .3s;
+  }
+  .D-stack-enter-from {
+    transform: translateX(-150%);
+  }
+  #theme-d.stackContainer {
+    position: relative;
+    width: 85%;
+    height: 85%;
+  }
+  #theme-d .stackBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  #theme-d .stackItem {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #fff;
+    border-radius: 5px !important;
+  }
+  #theme-d .stackItem img {
+    border-radius: 0;
+  }
+  #theme-d .captionBox {
+    padding: 0;
+  }
+  #theme-d .captionBox .caption {
+    width: 100%;
+    border-radius: 0;
+  }
 </style>
 ```
 
@@ -876,48 +876,48 @@ The code is as follows:
 
 ```vue
 <script setup>
-import {ref, watch} from "vue";
-import {currentImage, currentImageIndex} from "@/store.js";
-const tmpImage = ref(null);
-watch(currentImage, (value, oldValue, onCleanup) => {
+  import {ref, watch} from "vue";
+  import {currentImage, currentImageIndex} from "@/store.js";
+  const tmpImage = ref(null);
+  watch(currentImage, (value, oldValue, onCleanup) => {
     if (oldValue) {
       tmpImage.value = oldValue
     }
-})
+  })
 </script>
 <template>
-<template v-if="tmpImage">
-<img :src="tmpImage.image" alt="image" class="e-half left" :key="currentImageIndex">
-<img :src="tmpImage.image" alt="image" class="e-half right" :key="currentImageIndex">
-</template>
-<img :src="currentImage.image" alt="image">
+  <template v-if="tmpImage">
+    <img :src="tmpImage.image" alt="image" class="e-half left" :key="currentImageIndex">
+    <img :src="tmpImage.image" alt="image" class="e-half right" :key="currentImageIndex">
+  </template>
+  <img :src="currentImage.image" alt="image">
 </template>
 <style scoped>
-.e-half {
-  z-index: 2;
-}
-.e-half.left {
-  left: 0;
-  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-  transform-origin: left;
-  animation: halfLeftAnimation 1s forwards;
-}
-@keyframes halfLeftAnimation {
-  to {
-    transform: rotateY(-100deg);
+  .e-half {
+    z-index: 2;
   }
-}
-.e-half.right {
-  right: 0;
-  clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
-  transform-origin: right;
-  animation: halfRightAnimation 1s forwards;
-}
-@keyframes halfRightAnimation {
-  to {
-    transform: rotateY(100deg);
+  .e-half.left {
+    left: 0;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    transform-origin: left;
+    animation: halfLeftAnimation 1s forwards;
   }
-}
+  @keyframes halfLeftAnimation {
+    to {
+      transform: rotateY(-100deg);
+    }
+  }
+  .e-half.right {
+    right: 0;
+    clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+    transform-origin: right;
+    animation: halfRightAnimation 1s forwards;
+  }
+  @keyframes halfRightAnimation {
+    to {
+      transform: rotateY(100deg);
+    }
+  }
 </style>
 ```
 
@@ -929,91 +929,91 @@ The code is as follows:
 
 ```vue
 <script setup>
-import {computed, ref, watch} from "vue";
-import {currentImage, currentImageIndex} from "@/store.js";
-const tmpImage = ref(null);
-watch(currentImage, (value, oldValue, onCleanup) => {
+  import {computed, ref, watch} from "vue";
+  import {currentImage, currentImageIndex} from "@/store.js";
+  const tmpImage = ref(null);
+  watch(currentImage, (value, oldValue, onCleanup) => {
     if (oldValue) {
       tmpImage.value = oldValue
     }
-})
-function cellImage(x, y) {
-  return {
-    left: -y * 100 + "%",
-    top: -x * 100 + "%",
+  })
+  function cellImage(x, y) {
+    return {
+      left: -y * 100 + "%",
+      top: -x * 100 + "%",
+    }
   }
-}
 </script>
 <template>
-<div class="staticBox gridBox" :key="currentImageIndex" id="theme-f">
-<template v-for="x in 5">
-<template v-for="y in 4">
-<div class="cell">
-<div class="wrapper staticBox" :style="{ 'animation-delay': Math.random() + 's' }">
-<div class="front staticBox" v-if="tmpImage">
-<img :src="tmpImage.image" alt="image" :style="cellImage(x - 1, y - 1)">
-</div>
-<div class="back staticBox">
-<img :src="currentImage.image" alt="image" :style="cellImage(x - 1, y - 1)">
-</div>
-</div>
-</div>
-</template>
-</template>
-<div class="captionBox">
-<div>
-<div class="wrapper">
-<div class="front">
-<div class="caption">
-{{currentImage.caption}}
-</div>
-</div>
-<div class="back">
-<div class="caption">
-{{currentImage.caption}}
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="staticBox gridBox" :key="currentImageIndex" id="theme-f">
+    <template v-for="x in 5">
+      <template v-for="y in 4">
+        <div class="cell">
+          <div class="wrapper staticBox" :style="{ 'animation-delay': Math.random() + 's' }">
+            <div class="front staticBox" v-if="tmpImage">
+              <img :src="tmpImage.image" alt="image" :style="cellImage(x - 1, y - 1)">
+            </div>
+            <div class="back staticBox">
+              <img :src="currentImage.image" alt="image" :style="cellImage(x - 1, y - 1)">
+            </div>
+          </div>
+        </div>
+      </template>
+    </template>
+    <div class="captionBox">
+      <div>
+        <div class="wrapper">
+          <div class="front">
+            <div class="caption">
+              {{currentImage.caption}}
+            </div>
+          </div>
+          <div class="back">
+            <div class="caption">
+              {{currentImage.caption}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <style scoped>
-#theme-f.gridBox {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-#theme-f .cell {
-  perspective: 1000px;
-}
-#theme-f .wrapper {
-  transform-style: preserve-3d;
-  animation: turnAnimation 1s forwards;
-}
-@keyframes turnAnimation {
-  to {
+  #theme-f.gridBox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  #theme-f .cell {
+    perspective: 1000px;
+  }
+  #theme-f .wrapper {
+    transform-style: preserve-3d;
+    animation: turnAnimation 1s forwards;
+  }
+  @keyframes turnAnimation {
+    to {
+      transform: rotateY(.5turn);
+    }
+  }
+  #theme-f .wrapper > div {
+    backface-visibility: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  #theme-f .wrapper > div img {
+    width: 400%;
+    height: 300%
+  }
+  #theme-f .back {
     transform: rotateY(.5turn);
   }
-}
-#theme-f .wrapper > div {
-  backface-visibility: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-#theme-f .wrapper > div img {
-  width: 400%;
-  height: 300%
-}
-#theme-f .back {
-  transform: rotateY(.5turn);
-}
-#theme-f .captionBox .front {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
+  #theme-f .captionBox .front {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
 </style>
 ```
 
@@ -1059,7 +1059,7 @@ function changeSingleFile(e) {
 function dropFiles(e) {
   const files = e.dataTransfer.files;
   if (!files.length) return;
-  [...files].forEach(file => {
+    [...files].forEach(file => {
     appImages.value.push({
       id: getId(),
       image: URL.createObjectURL(file),
@@ -1077,109 +1077,109 @@ The code is as follows:
 
 ```vue
 <script setup>
-import {appImages} from "@/store.js";
-import {ref} from "vue";
-const moveX = ref(0);
-const moveY = ref(0);
-const getId = ref(null);
-const targetId = ref(null);
-/* mouse down for drag and drop */
-function grabDown(item) {
-  getId.value = item.id;
-  moveX.value = 0;
-  moveY.value = 0;
-  window.addEventListener("mousemove", grabMove);
-  window.addEventListener("mouseup", grabUp);
-}
-/* mouse move for drag and drop */
-function grabMove(e) {
-  moveX.value += e.movementX;
-  moveY.value += e.movementY;
-}
-/* mouse up for drag and drop */
-function grabUp(e) {
-  if (targetId.value) {
-    const grabIndex = appImages.value.findIndex(item => item.id === getId.value);
-    const targetIndex = appImages.value.findIndex(item => item.id === targetId.value);
-    const tmp = {...appImages.value[targetIndex]};
-    appImages.value[targetIndex] = appImages.value[grabIndex];
-    appImages.value[grabIndex] = tmp;
-    getId.value = null;
-    targetId.value = null;
+  import {appImages} from "@/store.js";
+  import {ref} from "vue";
+  const moveX = ref(0);
+  const moveY = ref(0);
+  const getId = ref(null);
+  const targetId = ref(null);
+  /* mouse down for drag and drop */
+  function grabDown(item) {
+    getId.value = item.id;
     moveX.value = 0;
     moveY.value = 0;
+    window.addEventListener("mousemove", grabMove);
+    window.addEventListener("mouseup", grabUp);
   }
-window.removeEventListener("mousemove", grabMove);
-window.removeEventListener("mouseup", grabUp);
-}
-/* other item mouse over for drag and drop */
-function targetOver(item) {
-  targetId.value = item.id;
-}
-/* moving item style */
-function grabStyle(item) {
-  if (getId.value !== item.id) return;
-  return {
-    transform: `translate(${moveX.value}px, ${moveY.value}px)`,
-    pointerEvents: "none",
-    zIndex: 2,
+  /* mouse move for drag and drop */
+  function grabMove(e) {
+    moveX.value += e.movementX;
+    moveY.value += e.movementY;
   }
-}
+  /* mouse up for drag and drop */
+  function grabUp(e) {
+    if (targetId.value) {
+      const grabIndex = appImages.value.findIndex(item => item.id === getId.value);
+      const targetIndex = appImages.value.findIndex(item => item.id === targetId.value);
+      const tmp = {...appImages.value[targetIndex]};
+      appImages.value[targetIndex] = appImages.value[grabIndex];
+      appImages.value[grabIndex] = tmp;
+      getId.value = null;
+      targetId.value = null;
+      moveX.value = 0;
+      moveY.value = 0;
+    }
+    window.removeEventListener("mousemove", grabMove);
+    window.removeEventListener("mouseup", grabUp);
+  }
+  /* other item mouse over for drag and drop */
+  function targetOver(item) {
+    targetId.value = item.id;
+  }
+  /* moving item style */
+  function grabStyle(item) {
+    if (getId.value !== item.id) return;
+    return {
+      transform: `translate(${moveX.value}px, ${moveY.value}px)`,
+      pointerEvents: "none",
+      zIndex: 2,
+    }
+  }
 </script>
 <template>
-<div class="h-100 d-flex flex-column">
-<p class="mb-2">Ordering photos</p>
-<div class="flex-grow-1 position-relative">
-<div class="scrollBox">
-<div class="row gy-2">
-<div class="col-12" v-for="item in appImages">
-<div class="item" @mousedown="grabDown(item)" @mouseover="targetOver(item)" :style="grabStyle(item)">
-<img :src="item.image" alt="image">
-<div>{{ item.caption }}</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="h-100 d-flex flex-column">
+    <p class="mb-2">Ordering photos</p>
+    <div class="flex-grow-1 position-relative">
+      <div class="scrollBox">
+        <div class="row gy-2">
+          <div class="col-12" v-for="item in appImages">
+            <div class="item" @mousedown="grabDown(item)" @mouseover="targetOver(item)" :style="grabStyle(item)">
+              <img :src="item.image" alt="image">
+              <div>{{ item.caption }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <style scoped>
-.item {
-  position: relative;
-  aspect-ratio: 16/9;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  -webkit-user-drag: none;
-  overflow: hidden;
-  border-radius: .5rem;
-  user-select: none;
-}
-.item div {
-  background: rgba(0, 0, 0, .5);
-  color: #fff;
-  padding: .5rem;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.item img {
-  width: 100%;
-  height: 100%;
-  border-radius: .5rem;
-}
-.scrollBox {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
+  .item {
+    position: relative;
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    -webkit-user-drag: none;
+    overflow: hidden;
+    border-radius: .5rem;
+    user-select: none;
+  }
+  .item div {
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: .5rem;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+  }
+  .scrollBox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 </style>
 ```
 
@@ -1193,123 +1193,123 @@ The code is as follows:
 
 ```vue
 <script setup>
-import {computed, onUnmounted, ref, watch} from "vue";
-import {appMode, appTheme} from "@/store.js";
-/* command search form keyword */
-const commandKeyword = ref("");
-watch(commandKeyword, () => location.value = 0);
-/* Define command list */
-const commandList = ref([
+  import {computed, onUnmounted, ref, watch} from "vue";
+  import {appMode, appTheme} from "@/store.js";
+  /* command search form keyword */
+  const commandKeyword = ref("");
+  watch(commandKeyword, () => location.value = 0);
+  /* Define command list */
+  const commandList = ref([
     {
       name: "Change to manual control mode",
       action: () => {
         appMode.value = 'MANUAL';
       }
-  },
-{
-  name: "Change to auto-playing mode",
-  action: () => {
-    appMode.value = 'AUTO';
-  }
-},
-{
-  name: "Change to random playing mode",
-  action: () => {
-    appMode.value = 'RANDOM';
-  }
-},
-{
-  name: "Switch to theme A",
-  action: () => {
-    appTheme.value = 'A';
-  }
-},
-{
-  name: "Switch to theme B",
-  action: () => {
-    appTheme.value = 'B';
-  }
-},
-{
-  name: "Switch to theme C",
-  action: () => {
-    appTheme.value = 'C';
-  }
-},
-{
-  name: "Switch to theme D",
-  action: () => {
-    appTheme.value = 'D';
-  }
-},
-{
-  name: "Switch to theme E",
-  action: () => {
-    appTheme.value = 'E';
-  }
-},
-{
-  name: "Switch to theme F",
-  action: () => {
-    appTheme.value = 'F';
-  }
-}
-])
-const location = ref(0);
-const commands = computed(() => {
+    },
+    {
+      name: "Change to auto-playing mode",
+      action: () => {
+        appMode.value = 'AUTO';
+      }
+    },
+    {
+      name: "Change to random playing mode",
+      action: () => {
+        appMode.value = 'RANDOM';
+      }
+    },
+    {
+      name: "Switch to theme A",
+      action: () => {
+        appTheme.value = 'A';
+      }
+    },
+    {
+      name: "Switch to theme B",
+      action: () => {
+        appTheme.value = 'B';
+      }
+    },
+    {
+      name: "Switch to theme C",
+      action: () => {
+        appTheme.value = 'C';
+      }
+    },
+    {
+      name: "Switch to theme D",
+      action: () => {
+        appTheme.value = 'D';
+      }
+    },
+    {
+      name: "Switch to theme E",
+      action: () => {
+        appTheme.value = 'E';
+      }
+    },
+    {
+      name: "Switch to theme F",
+      action: () => {
+        appTheme.value = 'F';
+      }
+    }
+  ])
+  const location = ref(0);
+  const commands = computed(() => {
     const reg = new RegExp(commandKeyword.value);
     return commandList.value
-    .filter(item => {
-        return reg.test(item.name);
-      })
-})
-/* up and down event */
-function keydown(e) {
-  if (e.code === "ArrowDown") {
-    location.value++;
+      .filter(item => {
+      return reg.test(item.name);
+    })
+  })
+  /* up and down event */
+  function keydown(e) {
+    if (e.code === "ArrowDown") {
+      location.value++;
+    }
+    if (e.code === "ArrowUp") {
+      location.value--;
+    }
+    location.value = Math.min(commands.value.length -1, Math.max(0, location.value));
+    if (e.code === "Enter" && commands.value[location.value]) {
+      commands.value[location.value].action();
+    }
   }
-if (e.code === "ArrowUp") {
-  location.value--;
-}
-location.value = Math.min(commands.value.length -1, Math.max(0, location.value));
-if (e.code === "Enter" && commands.value[location.value]) {
-  commands.value[location.value].action();
-}
-}
-/* register and remove event */
-addEventListener("keydown", keydown);
-onUnmounted(() => {
+  /* register and remove event */
+  addEventListener("keydown", keydown);
+  onUnmounted(() => {
     removeEventListener("keydown", keydown);
   })
 </script>
 <template>
-<aside>
-<div class="singleForm py-5">
-<h1 class="text-center text-white mb-4">Command Bar</h1>
-<label class="mb-4 d-block">
-<input type="text" class="form-control" v-model="commandKeyword" placeholder="Search command">
-</label>
-<div class="row gy-2">
-<div class="col-12" v-for="(item, i) in commands">
-<div class="p-3 rounded"
-:class="{'bg-white': i !== location, 'bg-primary': i === location, 'text-white': i === location}">
-{{ item.name }}
-</div>
-</div>
-</div>
-</div>
+  <aside>
+    <div class="singleForm py-5">
+      <h1 class="text-center text-white mb-4">Command Bar</h1>
+      <label class="mb-4 d-block">
+        <input type="text" class="form-control" v-model="commandKeyword" placeholder="Search command">
+      </label>
+      <div class="row gy-2">
+        <div class="col-12" v-for="(item, i) in commands">
+          <div class="p-3 rounded"
+          :class="{'bg-white': i !== location, 'bg-primary': i === location, 'text-white': i === location}">
+          {{ item.name }}
+        </div>
+      </div>
+    </div>
+  </div>
 </aside>
 </template>
 <style scoped>
-aside {
-  background: rgba(0, 0, 0, .7);
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 9999;
-}
+  aside {
+    background: rgba(0, 0, 0, .7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+  }
 </style>
 ```
 
@@ -1321,10 +1321,10 @@ The code is as follows:
 /* open and close command */
 const commandShow = ref(false);
 addEventListener("keydown", e => {
-    /* open  */
-    if ((e.ctrlKey && e.code === "KeyK") || e.code === "Slash") {
-      commandShow.value = true;
-    }
+  /* open  */
+  if ((e.ctrlKey && e.code === "KeyK") || e.code === "Slash") {
+    commandShow.value = true;
+  }
   /* close */
   if (e.code === "Escape") {
     commandShow.value = false;

@@ -69,20 +69,20 @@ The following example helps understand Vue 3's reactive system, with the code as
 
 ```vue
 <template>
-<div>
-<!-- Bind reactive data -->
-<p>Current count: {{ count }}</p>
-<!-- Trigger data modification -->
-<button @click="increment">Increment</button>
-</div>
+  <div>
+    <!-- Bind reactive data -->
+    <p>Current count: {{ count }}</p>
+    <!-- Trigger data modification -->
+    <button @click="increment">Increment</button>
+  </div>
 </template>
 <script setup>
-import { ref } from 'vue';
-// Define reactive data (use ref for primitive types)
-const count = ref(0);
-// Method to modify data
-function increment() {
-  count.value++; // Must modify via .value
-}
+  import { ref } from 'vue';
+  // Define reactive data (use ref for primitive types)
+  const count = ref(0);
+  // Method to modify data
+  function increment() {
+    count.value++; // Must modify via .value
+  }
 </script>
 ```

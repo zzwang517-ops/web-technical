@@ -195,18 +195,18 @@ demorouter
 
 ```vue
 <script setup>
-import { RouterView } from 'vue-router';
+  import { RouterView } from 'vue-router';
 </script>
 <template>
-<RouterView />
+  <RouterView />
 </template>
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
-}
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+  }
 </style>
 ```
 
@@ -221,9 +221,9 @@ const routes = [
   { path: '/room', component: Room }
 ];
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes
-  });
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes
+});
 export default router;
 ```
 
@@ -231,77 +231,77 @@ export default router;
 
 ```vue
 <template>
-<div class="maze-container">
-<h1>Maze Escape</h1>
-<div class="maze-grid">
-<div class="wall "></div>
-<div class="wall "></div>
-<div class="wall "></div>
-<div class="wall "></div>
-<div class="path">
-<router-link to="/room" class="escape-btn">
-Enter the depths of the maze.
-</router-link>
-</div>
-</div>
-</div>
+  <div class="maze-container">
+    <h1>Maze Escape</h1>
+    <div class="maze-grid">
+      <div class="wall "></div>
+      <div class="wall "></div>
+      <div class="wall "></div>
+      <div class="wall "></div>
+      <div class="path">
+        <router-link to="/room" class="escape-btn">
+          Enter the depths of the maze.
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>
 <style scoped>
-.maze-container {
-  text-align: center;
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.maze-grid {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 2rem auto;
-}
-.wall {
-  position: absolute;
-  background: linear-gradient(to bottom, #2c3e50, #34495e);
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-.path {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-  border-radius: 12px;
-  box-shadow: inset 0 0 20px rgba(255,255,255,0.5);
-}
-.escape-btn {
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  color: white;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-.escape-btn:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-.key-icon {
-  font-size: 1.2rem;
-  animation: float 2s ease-in-out infinite;
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
+  .maze-container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .maze-grid {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 2rem auto;
+  }
+  .wall {
+    position: absolute;
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  .path {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    border-radius: 12px;
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.5);
+  }
+  .escape-btn {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .escape-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  .key-icon {
+    font-size: 1.2rem;
+    animation: float 2s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
-}
+  }
 </style>
 ```
 
@@ -309,74 +309,74 @@ Enter the depths of the maze.
 
 ```vue
 <template>
-<div class="room-container">
-<h2>Mysterious Chamber</h2>
-<div class="room-content">
-<p>You've discovered a hidden secret room! There appear to be ancient runes here...</p>
-<div class="rune-circle"></div>
-<p>Clue found: The real exit requires returning to the main maze to search again</p>
-</div>
-<router-link to="/" class="back-btn">
-<span class="arrow-icon">←</span> Return to Main Maze
-</router-link>
-</div>
+  <div class="room-container">
+    <h2>Mysterious Chamber</h2>
+    <div class="room-content">
+      <p>You've discovered a hidden secret room! There appear to be ancient runes here...</p>
+      <div class="rune-circle"></div>
+      <p>Clue found: The real exit requires returning to the main maze to search again</p>
+    </div>
+    <router-link to="/" class="back-btn">
+      <span class="arrow-icon">←</span> Return to Main Maze
+    </router-link>
+  </div>
 </template>
 <style scoped>
-.room-container {
-  max-width: 600px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 16px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  text-align: center;
-}
-.room-content {
-  margin: 2rem 0;
-  padding: 2rem;
-  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-  border-radius: 12px;
-  box-shadow: inset 0 0 15px rgba(255,255,255,0.7);
-}
-.rune-circle {
-  width: 100px;
-  height: 100px;
-  margin: 1rem auto;
-  background: radial-gradient(circle, #ffd3b6 0%, #ffaaa5 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  animation: pulse 3s infinite;
-}
-@keyframes pulse {
-  0%, 100% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+  .room-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+  .room-content {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    border-radius: 12px;
+    box-shadow: inset 0 0 15px rgba(255,255,255,0.7);
+  }
+  .rune-circle {
+    width: 100px;
+    height: 100px;
+    margin: 1rem auto;
+    background: radial-gradient(circle, #ffd3b6 0%, #ffaaa5 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: pulse 3s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
   50% { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
-}
-.back-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  color: #333;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-.back-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-.arrow-icon {
-  font-size: 1.2rem;
-  display: inline-block;
-  transition: transform 0.3s;
-}
+  }
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: #333;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  .back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  .arrow-icon {
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: transform 0.3s;
+  }
 </style>
 ```
 
