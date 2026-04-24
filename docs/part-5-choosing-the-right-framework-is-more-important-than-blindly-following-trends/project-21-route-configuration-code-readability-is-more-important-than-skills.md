@@ -369,6 +369,7 @@ The effect of the switching operation is shown in Figure 21-2.
 ### 21.2.3 Task Implementation
 
 #### Step 1: Generate the project using the command "npm create vite@latest project-name --template vue". The project name is module_e-src, and the project directory structure is as follows:
+```text
 34_module_e: Directory for storing static resource files (mainly used for initializing photos)
 module_e-src
 ├─ node_modules/：Project dependency packages directory
@@ -393,6 +394,8 @@ module_e-src
 ├─ package.json ：Core metadata file of the project, recording project dependencies, script commands, version information, etc.
 ├─ package-lock.json ：Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
 ├─ README.md ：Project documentation
+
+```
 
 #### Step 2: Import and load the switching component in the App.vue file.
 The code is as follows:
