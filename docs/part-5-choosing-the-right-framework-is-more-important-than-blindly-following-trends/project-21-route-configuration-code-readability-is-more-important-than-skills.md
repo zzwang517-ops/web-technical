@@ -147,6 +147,7 @@ Gets the current route information. Sample code is as follows.
 ### 21.1.3 Task Implementation
 
 #### Step 1: Open the CMD, enter the command npm create vite@latest project-name --template vue to generate the project. The directory structure is as follows:
+```text
 demorouter
 ├─ node_modules/：Project dependency packages directory
 ├─ public/：Directory for storing public static resources
@@ -163,6 +164,8 @@ demorouter
 ├─ package.json ：Core metadata file of the project, recording project dependencies, script commands, version information, etc.
 ├─ package-lock.json ：Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
 ├─ README.md ：Project documentation
+
+```
 
 #### Step 2: Go to the src/App.vue page and import vue-router.
 
