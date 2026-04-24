@@ -1236,5 +1236,3 @@ footer span {
 <p align="center">
   <img src="../../assets/images/project-06/image-003.png" alt="Image">
 </p>
-
-Part 3 Responsive Design & Cross-Device Compatibility

@@ -921,4 +921,3 @@ The code is as follows:
 ```
 
 #### Step 5: Run the index.html file to view the effect.
-Part 5 Choosing the Right Framework Is More Important Than Blindly Following Trends

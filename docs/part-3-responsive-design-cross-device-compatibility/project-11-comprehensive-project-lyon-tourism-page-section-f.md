@@ -884,5 +884,3 @@ footer .copyright {
 <p align="center">
   <img src="../../assets/images/project-11/image-003.png" alt="Image">
 </p>
-
-Part 4 Every JavaScript Developer Should Have Their Own Library

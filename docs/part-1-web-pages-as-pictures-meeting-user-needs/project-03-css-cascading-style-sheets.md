@@ -126,47 +126,51 @@ Outer tag Inner tag { property1: value1; property2: value2;... }
 Note: The descendant selector selects elements that are descendants of a specified element. A space separates the ancestor (outer) element and descendant (inner) element, meaning all inner elements inside the outer element are selected.
 
 ##### (5) Pseudo-class Selectors
-In CSS, pseudo-class selectors fall into three main categories: structural pseudo-classes, pseudo-element selectors, and link pseudo-classes.
-Structural Pseudo-class Selectors (8 types).
-① :root selector
-As the name implies, this matches the root element of the document where an element resides. In HTML documents, the root element is always &lt;html&gt;. Styles defined with :root apply to all elements on the page.
-② :not selector
-Also called the negation pseudo-class, it selects all elements except the specified one. Useful for excluding certain elements from a style rule.
-③ :only-child selector
-Matches an element that is the only child of its parent element.
-④ :first-child and :last-child selectors
-As the names suggest, they target the first child and last child elements of a parent, respectively.
-⑤ :nth-child(n) and :nth-last-child(n) selectors
-The :first-child and :last-child selectors only apply to the first and last child elements respectively, while the :nth-child(n) and :nth-last-child(n) selectors complement them and are used to target any element between the second and the second‑last.
-The parameter n can be:
-· an integer (1, 2, 3, 4)
-· an expression (2n+1, -n+7)
-· a keyword (odd, even)
-However, n always starts from 1, not 0. In other words, when n is 0, the selector will not match any element.
-In the :nth-last-child(n) selector, the word "last" means counting backward from the last child element of the parent to select a specific element.
-⑥ :nth-of-type(n) and :nth-last-of-type(n) selectors
-type refers to the element type.
-Unlike :nth-child(n), which matches the nth child regardless of type, :nth-of-type(n) only matches the nth element of a specific type within its parent.
-⑦ :empty selector
-Selects every element that has no children (including text nodes and empty tags).
-⑧ :target selector
-Matches the target element identified by a fragment identifier in the URL (the part after #). For example, #respond will match the element with id="respond".
-Pseudo-element Selectors (2 types)
+In CSS, pseudo-class selectors are mainly divided into three categories: structural pseudo-class selectors, pseudo-element selectors, and link pseudo-class selectors.
+
+Structural Pseudo-class Selectors (8 types):
+- `:root` selector
+Matches the root element of the document. In HTML documents, the root element is always `<html>`, so styles defined with `:root` can be used as page-level defaults.
+- `:not` selector
+Also called the negation pseudo-class. It selects all elements except the specified one, which is useful when excluding a specific case from a rule.
+- `:only-child` selector
+Matches an element that is the only child of its parent.
+- `:first-child` and `:last-child` selectors
+Match the first child and last child elements of a parent, respectively.
+- `:nth-child(n)` and `:nth-last-child(n)` selectors
+These extend `:first-child` and `:last-child` by allowing selection of arbitrary child positions.
+The parameter `n` can be:
+- an integer, such as `1`, `2`, `3`, `4`
+- an expression, such as `2n+1`, `-n+7`
+- a keyword, such as `odd`, `even`
+`n` starts from `1`, not `0`, so `0` will not match any element.
+In `:nth-last-child(n)`, `last` means the count starts from the last child and proceeds backward.
+- `:nth-of-type(n)` and `:nth-last-of-type(n)` selectors
+Here, `type` refers to the element type. Unlike `:nth-child(n)`, which matches by position only, `:nth-of-type(n)` matches the nth element of a specific type within the same parent.
+- `:empty` selector
+Selects elements that have no child nodes.
+- `:target` selector
+Matches the target element identified by the fragment in the URL. For example, `#respond` matches the element whose `id` is `respond`.
+
+Pseudo-element Selectors (2 types):
 Pseudo-elements are not real elements in the HTML structure.
-a. :before selector
-Inserts a pseudo-element at the beginning of an element’s content. Its content is controlled by the content property, which may contain text or an empty string.
-b.:after Selector
-The :after selector is used to add a pseudo-element at the end of the content inside an element. The content of this pseudo-element is controlled by the content property. We can write text in the content property, but in most cases it is set to an empty string.
-It should be noted that pseudo-element selectors must have the content property set, and they are inline elements by default. Since pseudo-elements do not exist in the actual DOM structure, :hover cannot be directly applied to them. They are commonly used for clearing floats or adding small decorative icons.
-Finally, we will talk about link pseudo-class selectors, which are generally divided into four types:
-① :link
-Represents the state of an unvisited link
-② :visited
-Represents the style change for a visited link
-③ :hover
-Represents the style change when the mouse hovers over the link
-④ :active
-Represents the style change when the mouse is held down and the link is being actively selected
+- `:before` selector
+Inserts a pseudo-element at the beginning of an element's content. Its content is controlled by the `content` property, which may contain text or an empty string.
+- `:after` selector
+Adds a pseudo-element at the end of the content inside an element. Its content is also controlled by the `content` property.
+
+Pseudo-element selectors must define the `content` property, and they are inline elements by default. Because pseudo-elements do not exist in the actual DOM structure, `:hover` cannot be directly applied to them. They are commonly used for clearing floats or adding small decorative icons.
+
+Link Pseudo-class Selectors (4 types):
+- `:link`
+Represents the state of an unvisited link.
+- `:visited`
+Represents the style of a visited link.
+- `:hover`
+Represents the style change when the mouse hovers over a link.
+- `:active`
+Represents the style change while the mouse button is pressed and the link is being activated.
+
 
 ##### (6) Group Selector
 Basic format:
