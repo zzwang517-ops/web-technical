@@ -340,7 +340,11 @@ The effect of the contact form is shown in Figure 4‑4.
     </main>
   </body>
 </html>
+```
+
 Create a _video.css file with the following styles:
+
+```css
 /* Styles for the video section */
 .video {
 width: min(100%, 1920px);
@@ -413,7 +417,11 @@ object-fit: cover;
     </main>
   </body>
 </html>
+```
+
 Create a _contact.css file with the following styles:
+
+```css
 /* Styles for the contact section */
 .contact {
 margin: 0 auto;
@@ -462,4 +470,3 @@ margin: 0 auto;
 ```
 
 #### Step 5: View the running effect of the index.html file in the browser.
-Part 2 Styling for Better Appearance & More Attractive Web Pages
