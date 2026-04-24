@@ -1,10 +1,13 @@
 # Project 6 Comprehensive Project — Lyon Tourism Page (Module F)
 
 ## Content Guide
+
 After in-depth learning of the knowledge from the previous five chapters, it is believed that beginners have mastered HTML5-related tags, CSS3 style properties, layout and typesetting, and CSS3 advanced skills proficiently. To consolidate the learned knowledge in a timely and effective manner, this project will use the basic knowledge from the first five chapters to develop a comprehensive website project — the Lyon Tourism Page.
+
 This project includes nine modules: website title, call-to-action section, map scenic spots, video playback, basic information, latest activities, information tags, contact form, and footer.
 
 ## Learning Objectives
+
 - ① Use knowledge of common HTML tags, hyperlinks, images, lists, tables, forms, and multimedia to build the structure of the web page.
 - ② Use knowledge of CSS selectors, common styles, positioning, floating, etc., to complete the style design of the web page.
 
@@ -20,12 +23,17 @@ This project includes nine modules: website title, call-to-action section, map s
 | 6 | Tags | 1.0 |
 
 #### 6.2 Project Introduction
+
 This project requires developing a tourism information page for global visitors, showcasing tourist attractions, cultural events, and other highlights of Lyon. The website consists of nine modules: header, call-to-action section, map attractions, video playback, basic information, latest activities, information tabs, contact form, and footer.
+
 The Lyon tourism page includes text, images, hyperlinks, lists, forms, navigation, and other elements. In terms of styling and layout, it involves page layout and positioning, font effects, image carousel effects, image zoom effects, and other designs. This allows learners to comprehensively apply the knowledge they have learned through hands-on practice and achieve the expected effect of this textbook’s comprehensive project.
 
 #### 6.3 Requirement Analysis
+
 The Lyon tourism page is divided into nine major modules: website header, call-to-action section, map attractions, video playback, basic information, latest activities, information tabs, contact form, and footer. The functional description of each module is as follows.
+
 The project function structure diagram is shown in Figure 7-1.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-001.png" alt="Image">
 </p>
@@ -33,34 +41,47 @@ The project function structure diagram is shown in Figure 7-1.
 <p align="center"><em>Figure 6-1 Functional Structure Diagram</em></p>
 
 #### 1. Lyon Tourism Page
+
 The Lyon Tourism Page includes common effects such as images, text, layout, and hyperlinks, as well as elements like video playback and font effects. It is the most comprehensive page in the comprehensive project in terms of both effects and functions.
 
 ##### (1) Header and Call-to-Action Section
+
 The header navigation must be fixed at the top when scrolling, with a frosted glass effect.
+
 The call-to-action section loads a full background cover image, with a call-to-action button centered in the area.
+
 The CTA button has a mouse-following hover effect and a flashing border effect.
 
 ##### (2) Map Attractions
+
 This module implements focus effects, shadow effects, zoom-in, highlight effects, and light gradient effects.
 
 ##### (3) Video Playback
+
 This module mainly implements video playback functions:
+
 • The video autoplays when scrolling into view.
+
 • The video automatically pauses when it is out of the viewport.
 
 ##### (4) Basic Information and Latest Activities
+
 This module is mainly implemented using inline elements, text decoration elements, and styled button controls.
+
 The latest activities module implements focus effects, shadow effects, zoom-in, highlight effects, and light gradient effects.
 
 ##### (5) Contact Form
+
 This module mainly includes forms, form controls, and buttons to implement a complete contact form.
 
 ##### (6) Footer
+
 The footer is mainly text-based, implemented using hyperlinks, lists, and corresponding style settings.
 
 #### 6.4 Page Design
 
 ### 6.3.1. Directory Structure
+
 The project is named "module_f", and the resource folder contains the files as shown in Table 6-1:
 
 **Table 6-1 Resource Folder Content**
@@ -83,14 +104,19 @@ The project is named "module_f", and the resource folder contains the files as s
 ### 6.3.2 Design Concept
 
 ##### (1) Navigation and Footer
+
 The navigation and footer sections are consistent throughout the project and appear on every page, so they can be designed and developed separately.
+
 ① The navigation is implemented using sequential layout and hyperlinks, as shown in Figure 6-2.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-002.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 6-2 Website Navigation</em></p>
+
 ② Footer information is laid out in centered alignment, as shown in Figure 6-3.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-003.png" alt="Image">
 </p>
@@ -98,7 +124,9 @@ The navigation and footer sections are consistent throughout the project and app
 <p align="center"><em>Figure 6-3 Footer Display</em></p>
 
 ##### (2) Call-to-Action Section
+
 The call-to-action section consists of the heading, navigation with frosted glass effect, cover background image, call-to-action button, and hover effects for the button, as shown in Figure 6-4.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-004.png" alt="Image">
 </p>
@@ -106,7 +134,9 @@ The call-to-action section consists of the heading, navigation with frosted glas
 <p align="center"><em>Figure 6-4 Call-to-Action</em></p>
 
 ##### (3) Map Attractions Section
+
 The map attractions section includes a static graphic on the right and three attraction cards on the left. It implements focus effects, box shadows, zoom effects, offset, blur, opacity, highlight effects, and gradient effects, as shown in Figure 6-5.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-005.png" alt="Image">
 </p>
@@ -114,7 +144,9 @@ The map attractions section includes a static graphic on the right and three att
 <p align="center"><em>Figure 6-5 Map Attractions</em></p>
 
 ##### (4) Video Playback Section
+
 The video playback section includes video loading, autoplay when the video enters the viewport, auto-pause when it leaves the viewport, autoplay when 50% visible, pause when the webpage is hidden, and resume playback when the webpage becomes visible again, as shown in Figure 6-6.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-006.png" alt="Image">
 </p>
@@ -122,7 +154,9 @@ The video playback section includes video loading, autoplay when the video enter
 <p align="center"><em>Figure 6-6 Video Playback</em></p>
 
 ##### (5) Basic Information and Latest Activities Section
+
 The basic information and latest activities module includes layout for basic information, plus focus effects, box shadows, zoom effects, offset, blur, opacity, highlight effects, and gradient effects, as shown in Figure 6-7.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-007.png" alt="Image">
 </p>
@@ -130,7 +164,9 @@ The basic information and latest activities module includes layout for basic inf
 <p align="center"><em>Figure 6-7 Service Overview</em></p>
 
 ##### (6) Information Tabs
+
 The information tabs module is mainly implemented with custom tab elements. Users can switch tabs by clicking. It uses aria-selected, aria-hidden, and aria-labelledby to associate tab titles with corresponding content, as shown in Figure 6-8.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-008.png" alt="Image">
 </p>
@@ -138,7 +174,9 @@ The information tabs module is mainly implemented with custom tab elements. User
 <p align="center"><em>Figure 6-8 Information Tabs</em></p>
 
 ##### (7) Contact Form
+
 The contact form module includes the following fields: first name, last name, contact email address, and contact phone number, as shown in Figure 6-9.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-009.png" alt="Image">
 </p>
@@ -146,16 +184,23 @@ The contact form module includes the following fields: first name, last name, co
 <p align="center"><em>Figure 6-9 Contact Form</em></p>
 
 #### 6.5 Project Implementation
+
 Task 1: Call-to-Action
 
 #### Step 1: Create the Directory Structure,The directory structure is as follows:
+
 • module_f :Project root directory
+
 • assets:Directory for images and videos
+
 • scripts:Directory for JavaScript files
+
 • styles:Directory for style files
+
 • index.html:Entry HTML file
 
 #### Step 2: Create a New HTML Page
+
 Create a new HTML page named index.html, and after successful creation, change the page title to "Welcome Lyon". The code is as follows:
 
 ```html
@@ -358,6 +403,7 @@ header nav a {
 ```
 
 #### Step 11: Run the index.html file to check the effect.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-004.png" alt="Image">
 </p>
@@ -592,7 +638,9 @@ Task 2: Map Attractions
 ```
 
 .map-container:has(#map-dot-1:hover) #attraction-a,
+
 .map-container:has(#map-dot-2:hover) #attraction-b,
+
 .map-container:has(#map-dot-3:hover) #attraction-c,
 
 ```css
@@ -633,6 +681,7 @@ Task 2: Map Attractions
 ```
 
 #### Step 4: Run the index.html file to check the effect.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-005.png" alt="Image">
 </p>
@@ -695,6 +744,7 @@ Task 3: Video Playback
 ```
 
 #### Step 4: Run the index.html file to check the effect.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-006.png" alt="Image">
 </p>
@@ -898,6 +948,7 @@ Task 4 Basic Information and Latest Events
 ```
 
 #### Step 4: Open the index.html file to preview the effect.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-007.png" alt="Image">
 </p>
@@ -1019,6 +1070,7 @@ Task 5 Information Tabs
 ```
 
 #### Step 4: Run the index.html file to check the effect.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-009.png" alt="Image">
 </p>
@@ -1126,6 +1178,7 @@ Task 6 Contact Form
 ```
 
 #### Step 4: Run the index.html file to view the effect.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-009.png" alt="Image">
 </p>
@@ -1233,6 +1286,7 @@ footer span {
 ```
 
 #### Step 4: Run the index.html file to view the effect.
+
 <p align="center">
   <img src="../../assets/images/project-06/image-003.png" alt="Image">
 </p>

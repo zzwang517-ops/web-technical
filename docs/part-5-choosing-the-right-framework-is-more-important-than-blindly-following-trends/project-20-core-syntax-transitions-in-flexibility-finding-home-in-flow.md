@@ -1,9 +1,11 @@
 # Project 20 Core Syntax — Transitions in Flexibility, Finding Home in Flow
 
 ## Content Guide
+
 In the WorldSkills photo slideshow project based on Vue 3, we will systematically learn core template syntax and reactive interaction techniques. We will implement theme skin switching and UI adaptation in fullscreen mode through dynamic style binding, use conditional rendering directives to control sample data, adopt list rendering directives to efficiently render image queues, and realize interactive functions such as manual navigation and fullscreen switching via event handling.
 
 ## Learning Objectives
+
 - ① Master the declarative syntax rules of templates.
 - ② Master the use of class binding and style binding to achieve dynamic visual feedback of interface states.
 - ③ Be familiar with conditional rendering directives.
@@ -14,7 +16,9 @@ In the WorldSkills photo slideshow project based on Vue 3, we will systematicall
 ## Task 20.1 Interactive Weather Query
 
 ### 20.1.1 Task Description
+
 In the interactive weather query application built with Vue 3, users can enter a city name in the search box to trigger asynchronous requests in real time and obtain weather data. The application uses the reactive features of Vue 3 to dynamically render key information such as temperature, humidity and wind speed, and displays weather icons (sunny, rainy, etc.) with conditional rendering. The effect of the case is shown in Figure 20-1.
+
 <p align="center">
   <img src="../../assets/images/project-20/image-001.png" alt="Image">
 </p>
@@ -22,10 +26,13 @@ In the interactive weather query application built with Vue 3, users can enter a
 <p align="center"><em>Figure 20-1 Interactive Weather Query</em></p>
 
 ### 20.1.2 Knowledge Preparation
+
 In this section, Vue.js provides some commonly used built-in directives. These built-in directives vary in usage scenarios and complexity, so for the purposes of this chapter, the simple ones among the built-in directives are collectively referred to as basic directives. They are as follows:
 
 #### 1.Usage of v-if and v-show
+
 The v-if directive enables conditional rendering. Vue renders elements based on whether the value of the expression is true or false. For example, in &lt;a v-if="ok"&gt;yes&lt;/a&gt;, if the value of ok is true, "yes" will be displayed; if the value of ok is false, "yes" will not be displayed.
+
 The v-else directive is used together with the v-if directive. It must immediately follow v-if or v-else-if, otherwise it will not work. The code is as follows.
 
 ```vue
@@ -48,6 +55,7 @@ The v-if directive is used to conditionally render a block of content. This cont
 ```
 
 #### 2.The v-for Directive
+
 The v-for directive is used to iterate over arrays and objects, and its expression must be used together with the keyword in. The code is as follows.
 
 ```vue
@@ -87,8 +95,11 @@ const items = [
 ```
 
 item: The value of the current iteration item.
+
 index: The index of the current item (optional).
+
 items: The array to be traversed.
+
 :key: A unique identifier, usually bound to the array item ID or other unique properties.
 
 ##### (2) Iterate over an object
@@ -111,13 +122,17 @@ const user = {
 ```
 
 value: the value of the current property.
+
 key: the key of the current property.
+
 index: the index of the current property (optional).
+
 object: the object to iterate over.
 
 #### 3. v-bind Directive
 
 ##### (1) Dynamically bind native HTML attributes
+
 Dynamically bind native HTML attributes such as src, style, and class. The code is as follows.
 
 ```vue
@@ -129,8 +144,11 @@ Dynamically bind native HTML attributes such as src, style, and class. The code 
 In the above example, the image source is dynamically set according to the path of rec.icon (such as "./img/cy.png").
 
 ##### (2) Class Binding
+
 Vue 3 provides multiple methods for dynamically binding the class of HTML elements, supporting object syntax, array syntax, and combined syntax.
+
 ① Object Syntax
+
 Dynamically switch class names through objects. The key is the class name, and the value is a Boolean value (determining whether to apply the class). The code is as follows.
 
 ```vue
@@ -146,7 +164,9 @@ const hasError = ref(false);
 ```
 
 When isActive is true, the active class should be applied. When hasError is true, the text-danger class should be applied.
+
 ② Array Syntax
+
 Bind multiple class names through an array, which is suitable for situations where multiple static or dynamic classes need to be applied simultaneously. The code is as follows.
 
 ```vue
@@ -165,6 +185,7 @@ const classB = ref('text-red');
 ```
 
 ③ Combined Syntax
+
 Combines object and array syntax to implement more complex class name control. The code is as follows.
 
 ```vue
@@ -179,8 +200,11 @@ const errorClass = ref('text-danger');
 ```
 
 ##### (3) Style Binding
+
 Vue 3 supports dynamic binding of inline styles, including object syntax, array syntax, and combined syntax.
+
 ① Object Syntax
+
 Bind styles through objects. The key is the CSS property name, and the value is the style value. The code is as follows.
 
 ```vue
@@ -195,6 +219,7 @@ const fontSize = ref(16);
 ```
 
 ② Array Syntax
+
 Bind multiple style objects through an array, which is suitable for scenarios where multiple styles need to be merged. The code is as follows.
 
 ```vue
@@ -209,6 +234,7 @@ const overridingStyles = ref({ fontWeight: 'bold', color: 'black' });
 ```
 
 #### 4. v-model Directive
+
 The essence of the v-model directive is to listen to user input events to update data and handle some special scenarios specially. At the same time, the v-model directive ignores the initial values of the special attributes such as value, checked, and selected of all form elements. It always uses the data in the Vue instance as the data source. When an input event occurs, it updates the data in the Vue instance in real time, thus realizing two-way data binding. The code is as follows.
 
 ```vue
@@ -222,6 +248,7 @@ Reverse binding: when selectedCity is modified in the script, the selected item 
 #### 5.Composition API
 
 ##### (1) setup function
+
 The core of a Vue 3 component is the setup function. In this function, you can use Vue's reactive API to declare the component's state. The code is as follows.
 
 ```js
@@ -241,6 +268,7 @@ export default {
 ```
 
 ##### (2) ref (Declaring Reactive Variables)
+
 Creates a reactive reference object used to store primitive types (such as strings and numbers) or complex objects. The code is as follows.
 
 ```html
@@ -253,6 +281,7 @@ Creates a reactive reference object used to store primitive types (such as strin
 Initialize the reactive variable selectedCity with an initial value of "Beijing". When the user selects a new city, its value is automatically updated via v-model, triggering a re-render of the view.
 
 ##### (3) computed (Creating Cached Computed Properties)
+
 computed returns a lazily evaluated computed property, which recalculates only when the dependent reactive data changes; otherwise, it directly returns the cached result. The code is as follows.
 
 ```html
@@ -274,7 +303,9 @@ When selectedCity changes, the real-time weather data of the corresponding city 
 Only exists when Shanghai is selected (the Beijing data does not have a forecast field).
 
 ##### (4) Watchers (watch and watchEffect)
+
 ① watch: Allows you to respond to changes in specific data sources. You can specify a callback function that is invoked when the watched data changes.
+
 ② watchEffect: Automatically tracks dependencies within the callback function and reruns the callback whenever the dependencies change.
 
 ```css
@@ -289,6 +320,7 @@ watch(count, (newValue, oldValue) => {
 ```
 
 ### 20.1.3 Task Implementation
+
 The interactive weather query is divided into the following nine steps, detailed as follows.
 
 #### Step 1: Open the CMD command line and enter npm create vite@latest project-name --template vue to generate the project. The directory structure is as follows:
@@ -694,7 +726,9 @@ const getForecastColor = (uvIndex) => {
 ## Task 20.2 Cinema Ticket Booking System
 
 ### 20.2.1 Task Description
+
 A cinema ticket booking system implemented in Vue 3, adopting a reactive component architecture and animation transition effects. It supports users in dynamically selecting movie screenings, visual seat selection, and enhances interactive experience with gradient colors and micro-interaction effects, realizing a complete closed-loop ticket purchasing process from seat selection to payment. The effect of the case is shown in Figure 20-2.
+
 <p align="center">
   <img src="../../assets/images/project-20/image-002.png" alt="Image">
 </p>
@@ -702,13 +736,17 @@ A cinema ticket booking system implemented in Vue 3, adopting a reactive compone
 Figure 20‑2 Cinema Ticket Booking System
 
 ### 20.2.2 Knowledge Preparation
+
 In this section, we will introduce how to build a Vue single-page application locally. The created project will use a Vite-based build setup. Before building the project, make sure you have installed the latest version of Node.js. If it is not installed, please install the latest version of Node.js first, as follows:
+
 There are many ways to use Vue in a project. The simpler methods covered in this chapter are downloading Vue 3 locally, importing Vue.js via CDN, and installing Vue 3 through the Node Package Manager (NPM).
 
 #### 1. @click Click Event Binding
+
 In Vue 3, @click is syntactic sugar for the v-on:click directive. It is used to listen for click events on DOM elements and execute corresponding JavaScript logic. As one of the core features of the Vue event system, it enables efficient interactive processing when combined with Vue's reactivity.
 
 ##### (1) Basic Usage
+
 Method Binding: Directly reference the method defined in the component.
 
 ```vue
@@ -725,6 +763,7 @@ Inline statement: Execute simple JavaScript expressions directly
 ```
 
 ##### (2) Event Modifiers
+
 .stop: Calls event.stopPropagation() to prevent event bubbling.
 
 ```html
@@ -748,6 +787,7 @@ Inline statement: Execute simple JavaScript expressions directly
 ```
 
 ##### (3) Parameter Passing and Event Objects
+
 Passing custom parameters: Pass additional parameters through inline statements or arrow functions.
 
 ```html
@@ -780,19 +820,31 @@ Passing custom parameters: Pass additional parameters through inline statements 
 #### 2. Data Update
 
 ##### (1) Array Methods
+
 ① push(): Add elements.
+
 ② pop(): Remove the last element.
+
 ③ shift(): Remove the first element.
+
 ④ unshift(): Add an element to the beginning of an array.
+
 ⑤ splice(): Insert, remove or replace elements in an array.
+
 ⑥ sort(): Sort in ascending order.
+
 ⑦ reverse(): Reverse the order of elements.
+
 ⑧ Array(n).fill(): Create a placeholder array of length n for later filling with real data.
+
 Mutation methods are methods that change the original array they are called on when used.
 
 ##### (2) Array Initialization and Traversal
+
 ① Array(8).fill().map(...): Create a 2D seat array with 8 rows and 16 columns.
+
 ② seats.flat().filter(...): Flatten the 2D seat array and filter selected seats.
+
 ③ movie.showtimes.filter(...): Filter valid showtimes.
 
 ```html
@@ -811,6 +863,7 @@ Mutation methods are methods that change the original array they are called on w
 ```
 
 ### 20.2.3 Task Implementation
+
 The cinema ticket booking system is divided into the following twelve steps, as detailed below.
 
 #### Step 1: Open the CMD, enter the command npm create vite@latest project-name --template vue to generate the project. The directory structure is as follows:
@@ -1325,10 +1378,13 @@ alert(`Booking successful! You have selected seats ${order.seats.join(', ')}`);
 ## Task 20.3 Practical Project – Photo Slideshow System – Slideshow Operations (Module E)
 
 ### 20.3.1 Task Description
+
 This practical project implements the image file loading module in the photo slideshow system. Users can load images by dragging and dropping picture files into the drop area, and these images will then be displayed and played with themed animations. When CSS is unavailable or disabled, users can still select photo files via the file input. The photos will then be loaded and listed on the webpage without any styles applied.
 
 ### 20.3.2 Effect Display
+
 The effect display of the switching operation is shown in Figure 20-3.
+
 <p align="center">
   <img src="../../assets/images/project-20/image-003.png" alt="Image">
 </p>
@@ -1338,6 +1394,7 @@ The effect display of the switching operation is shown in Figure 20-3.
 ### 20.3.3 Task Implementation
 
 #### Step 1: Generate the project using the command npm create vite@latest project-name --template vue, with the project name module_e-src. The project directory structure is as follows:
+
 34_module_e: This directory stores static resource files (mainly used for initializing photos).
 
 ```text
@@ -1362,6 +1419,7 @@ module_e-src
 ```
 
 #### Step 2: Import and load the switching file in the App.vue file.
+
 The code is as follows:
 
 ```vue
@@ -1373,6 +1431,7 @@ import {ref} from "vue";
 ```
 
 #### Step 3: Import the configuration file in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```html
@@ -1383,6 +1442,7 @@ The code is as follows:
 ```
 
 #### Step 4: Implement the button style logic in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```js
@@ -1396,6 +1456,7 @@ return "btn-fill text-primary";
 ```
 
 #### Step 5: Implement template rendering in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```vue
@@ -1425,6 +1486,7 @@ RANDOM
 ```
 
 #### Step 6: Style control in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```html

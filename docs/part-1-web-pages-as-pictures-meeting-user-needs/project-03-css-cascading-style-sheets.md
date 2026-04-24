@@ -1,6 +1,7 @@
 # Project 3 CSS Cascading Style Sheets --- The Beauty of Cascading: Hues Across the Woods, Overlapping Shadows into Poetry
 
 ## Content Guide
+
 This project mainly covers basic CSS styles, the box model, floating, and positioning. Basic CSS styles include the basic syntax of CSS, the classification and introduction of CSS, CSS selectors, CSS text style rules, and common CSS style rules. The box model introduces the box model itself, as well as CSS borders and margins. Floating covers the document flow, the principle of floating, and methods to clear floats. Positioning mainly explains static positioning, relative positioning, absolute positioning, and fixed positioning, laying a solid foundation for page design in Web front-end development.
 
 ## Learning Objectives
@@ -16,9 +17,13 @@ This project mainly covers basic CSS styles, the box model, floating, and positi
 ## Task 3.1 Making a News Detail Page
 
 ### 3.1.1 Task Description
+
 A news detail page is a concrete display of news content, usually in the form of text and images, allowing users to access richer news information.
+
 The creation of a news detail page requires the use of basic CSS knowledge, including CSS selectors, basic CSS styles, CSS text styles, and so on.
+
 The effect of the example is shown in Figure 3-1.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-001.png" alt="Image">
 </p>
@@ -26,11 +31,15 @@ The effect of the example is shown in Figure 3-1.
 <p align="center"><em>Figure 3-1 Rendering of the News Detail Page</em></p>
 
 ### 3.1.2 Knowledge Preparation
+
 CSS stands for Cascading Style Sheet, which is a technology used to control the appearance of web pages.
+
 HTML, CSS, and JavaScript are the three core elements of front-end technologies. HTML controls the structure of web pages, CSS controls the appearance of web pages, and JavaScript controls the behavior of web pages. Next, we will start learning CSS-related knowledge.
 
 #### 1.Basic CSS Syntax
+
 CSS is mainly used to control page elements, and a style is the smallest syntax unit of CSS. Each style consists of two parts: a selector and a declaration (rule), as shown in Figure 3-2.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-002.png" alt="Image">
 </p>
@@ -38,6 +47,7 @@ CSS is mainly used to control page elements, and a style is the smallest syntax 
 <p align="center"><em>Figure 3-2 Basic Structure of CSS Styles</em></p>
 
 ##### (1) Selector
+
 The selector tells the browser which elements on the page the style will apply to. These elements can be a specific tag, all page elements, a specified class or ID value, etc. When parsing the style, the browser renders the display effect of the elements according to the selector.
 
 ##### (2) Declaration
@@ -49,16 +59,21 @@ There can be one or multiple declarations, which tell the browser how to render 
 A declaration must consist of two parts: a property and a property value, and a semicolon is used to mark the end of a declaration. The semicolon for the last declaration in a style can be omitted.
 
 ##### (3) Property
+
 A property is a predefined style option provided by CSS. A property name consists of one or more words, connected by hyphens. This allows the style effect to be set by the property to be expressed intuitively.
 
 ##### (4) Value
+
 The value is a parameter used to display the effect of the property. It includes a numeric value with a unit, or a keyword.
 
 #### 2. CSS Categories and Introduction Methods
+
 There are four ways to add CSS: inline styles, internal styles, external styles, and imported style sheets.
+
 The imported style sheet method is very similar to the external style sheet method. However, in actual development, we rarely use the imported style sheet method and prefer the link method (external style). The reason is that the imported style sheet loads HTML first and then CSS, while link loads CSS first and then HTML. If HTML is loaded before CSS, the page experience is very poor. Therefore, we do not need to learn the imported style sheet method for now.
 
 ##### (1) Inline Style Sheet
+
 Basic format:
 
 ```html
@@ -66,6 +81,7 @@ Basic format:
 ```
 
 ##### (2) Internal Style Sheet
+
 Basic format:
 
 ```html
@@ -75,6 +91,7 @@ Basic format:
 ```
 
 ##### (3) External Style Sheet
+
 Basic format:
 
 ```html
@@ -82,14 +99,19 @@ Basic format:
 ```
 
 #### 3. CSS Selectors
+
 CSS selectors mainly include element name selectors, ID selectors, class selectors, and others.
+
 CSS selector naming follows these rules:
 
 ##### (1) Use hyphenated naming, e.g., my-title;
+
 (2) Names may only contain characters [a-z, A-Z, 0-9], ISO 10646 characters U+00A1 and above, plus hyphens (-) and underscores (_). They must not start with a digit, or a hyphen followed by a digit.
+
 Classification of CSS Selectors
 
 ##### (1) Element Name Selector
+
 Basic format:
 
 ```
@@ -99,6 +121,7 @@ Tag name { property1: value1; property2: value2; property3: value3;... }
 The element name selector categorizes elements by their tag name and applies uniform CSS styles to a certain type of tag on the page. Its biggest advantage is quickly styling all elements of the same type uniformly. However, this is also its disadvantage: it cannot achieve differentiated style design.
 
 ##### (2) ID Selector
+
 Basic format:
 
 ```
@@ -108,6 +131,7 @@ Basic format:
 Note: The ID name must be prefixed with #, otherwise the selector will not work.
 
 ##### (3) Class Selector
+
 Basic format:
 
 ```
@@ -117,6 +141,7 @@ Basic format:
 The class selector allows us to assign a class name to the same or different elements, then apply CSS styles to all elements with that class.
 
 ##### (4) Descendant Selector
+
 Basic format:
 
 ```
@@ -126,53 +151,72 @@ Outer tag Inner tag { property1: value1; property2: value2;... }
 Note: The descendant selector selects elements that are descendants of a specified element. A space separates the ancestor (outer) element and descendant (inner) element, meaning all inner elements inside the outer element are selected.
 
 ##### (5) Pseudo-class Selectors
+
 In CSS, pseudo-class selectors are mainly divided into three categories: structural pseudo-class selectors, pseudo-element selectors, and link pseudo-class selectors.
 
 Structural Pseudo-class Selectors (8 types):
+
 - `:root` selector
 Matches the root element of the document. In HTML documents, the root element is always `<html>`, so styles defined with `:root` can be used as page-level defaults.
+
 - `:not` selector
 Also called the negation pseudo-class. It selects all elements except the specified one, which is useful when excluding a specific case from a rule.
+
 - `:only-child` selector
 Matches an element that is the only child of its parent.
+
 - `:first-child` and `:last-child` selectors
 Match the first child and last child elements of a parent, respectively.
+
 - `:nth-child(n)` and `:nth-last-child(n)` selectors
 These extend `:first-child` and `:last-child` by allowing selection of arbitrary child positions.
+
 The parameter `n` can be:
+
 - an integer, such as `1`, `2`, `3`, `4`
 - an expression, such as `2n+1`, `-n+7`
 - a keyword, such as `odd`, `even`
 `n` starts from `1`, not `0`, so `0` will not match any element.
+
 In `:nth-last-child(n)`, `last` means the count starts from the last child and proceeds backward.
+
 - `:nth-of-type(n)` and `:nth-last-of-type(n)` selectors
 Here, `type` refers to the element type. Unlike `:nth-child(n)`, which matches by position only, `:nth-of-type(n)` matches the nth element of a specific type within the same parent.
+
 - `:empty` selector
 Selects elements that have no child nodes.
+
 - `:target` selector
 Matches the target element identified by the fragment in the URL. For example, `#respond` matches the element whose `id` is `respond`.
 
 Pseudo-element Selectors (2 types):
+
 Pseudo-elements are not real elements in the HTML structure.
+
 - `:before` selector
 Inserts a pseudo-element at the beginning of an element's content. Its content is controlled by the `content` property, which may contain text or an empty string.
+
 - `:after` selector
 Adds a pseudo-element at the end of the content inside an element. Its content is also controlled by the `content` property.
 
 Pseudo-element selectors must define the `content` property, and they are inline elements by default. Because pseudo-elements do not exist in the actual DOM structure, `:hover` cannot be directly applied to them. They are commonly used for clearing floats or adding small decorative icons.
 
 Link Pseudo-class Selectors (4 types):
+
 - `:link`
 Represents the state of an unvisited link.
+
 - `:visited`
 Represents the style of a visited link.
+
 - `:hover`
 Represents the style change when the mouse hovers over a link.
+
 - `:active`
 Represents the style change while the mouse button is pressed and the link is being activated.
 
-
 ##### (6) Group Selector
+
 Basic format:
 
 ```
@@ -180,23 +224,35 @@ Selector 1, Selector 2 { property1: value1; property2: value2; }
 ```
 
 A group selector applies the same style rules to multiple selectors at the same time.Often, several parts of our CSS styles require the same settings. Writing them one by one results in high repetition, verbosity, and poor maintainability. We can combine these selectors with identical settings to simplify the code.
+
 Note: In a group selector, multiple selectors must be separated by an English comma (,), otherwise the group selector will not take effect.
 
 #### 4. CSS Selector Priority
+
 Priority, as the name suggests, means order of precedence. From lowest to highest:
+
 Browser default styles (lowest), internal and external styles (medium), inline styles (highest).
+
 Note: Selector priority — we assign weights to different selectors (to mark the importance of the current selector; higher weight means higher priority).
+
 · Element selectors / Pseudo-element selectors: 1
+
 · Class selectors / Pseudo-class selectors / Attribute selectors: 10
+
 · ID selectors: 100
+
 · Inline styles: 1000
+
 · !important: 10000
+
 The weights of each group of selectors are added together. The one with greater weight has higher priority. If weights are equal, the nearest rule applies: the style closer to the tag content takes precedence.
 
 #### 5. CSS Text Style Rules
+
 In web development, the first consideration is the text style properties of the page. Text style properties usually include font, size, weight, color, etc.
 
 ##### (1) Font type: font-family
+
 Basic format:
 
 ```html
@@ -224,12 +280,15 @@ Example:
 ```
 
 The preview effect in the browser is shown in Figure 3-3:
+
 <p align="center">
   <img src="../../assets/images/project-03/image-003.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-3 Font Types</em></p>
+
 We can specify multiple fonts at the same time, separated by commas. This means that if the browser does not support the first font, it will try the next one until a suitable font is found.
+
 Basic format:
 
 ```css
@@ -237,7 +296,9 @@ body{font-family:"ST Caiyun", "SimSun", "SimHei";}
 ```
 
 When using font-family to set fonts, please note the following points:
+
 ① Multiple fonts must be separated by commas in English format.
+
 ② Chinese fonts need to be enclosed in English quotation marks, while English fonts generally do not need quotation marks. When setting English fonts, the English font name must be placed before the Chinese font name.
 
 ```css
@@ -247,7 +308,9 @@ When using font-family to set fonts, please note the following points:
 ④ Try to use system default fonts to ensure correct display in any user’s browser.
 
 ##### (2) Font Size: font-size
+
 In CSS, we use the font-size property to define the size of text.
+
 Basic format:
 
 ```css
@@ -255,6 +318,7 @@ font-size: keyword/pixel value;
 ```
 
 Description: There are two ways to set the value of font-size: using keywords or using numerical values with px as the unit.
+
 The available keyword values are shown in Table 3-1.
 
 **Table 3-1 Values for the font-size property**
@@ -296,6 +360,7 @@ Example:
 ```
 
 The preview effect in the browser is shown in Figure 3-4:
+
 <p align="center">
   <img src="../../assets/images/project-03/image-004.png" alt="Image">
 </p>
@@ -303,7 +368,9 @@ The preview effect in the browser is shown in Figure 3-4:
 <p align="center"><em>Figure 3-4 Effects of Different Font Sizes</em></p>
 
 ##### (3) Font Weight: font-weight
+
 In CSS, we can use the font-weight property to define the thickness of the font.
+
 Basic format:
 
 ```css
@@ -311,7 +378,9 @@ font-weight: weight value;
 ```
 
 Note:
+
 The font-weight property accepts two types of values: keywords, and numerical values ranging from 100 to 900.
+
 The keyword values for the font-weight property are shown in Table 3-2.
 
 **Table 3-2 font-weight property values**
@@ -324,8 +393,11 @@ The keyword values for the font-weight property are shown in Table 3-2.
 | bolder | Extra bold (effect is similar to bold) |
 
 A font-weight value of 400 corresponds to the normal font weight (normal), and 700 corresponds to bold.
+
 Higher values represent thicker fonts, while lower values represent thinner fonts.
+
 For Chinese web pages, only bold and normal are commonly used; using numerical values (100–900) is not recommended.
+
 Example:
 
 ```html
@@ -354,6 +426,7 @@ Example:
 ```
 
 The preview effect in the browser is shown in Figure 3-5.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-005.png" alt="Image">
 </p>
@@ -361,7 +434,9 @@ The preview effect in the browser is shown in Figure 3-5.
 <p align="center"><em>Figure 3-5 Effects of Different Font Weights</em></p>
 
 ##### (5) Font Color: color
+
 In CSS, we can use the color property to define the font color.
+
 Basic format:
 
 ```css
@@ -369,15 +444,19 @@ color:color value;
 ```
 
 Note:
+
 A color value can be a keyword or a hexadecimal RGB value.
 
 ##### (1) Using keywords with the color property
+
 Keywords refer to the English names of colors, such as red, blue, green, etc.
 
 ##### (2) Using hexadecimal RGB with the color property
+
 The color property can also use hexadecimal RGB values. Hexadecimal RGB values refer to formats like #FF0000, #FF6600, #29D794, etc. This method supports more than 16.7 million colors. In practical work, hexadecimal is the most common way to define colors.
 
 ##### (3) RGB code: for example, red can be expressed as rgb(255, 0, 0) or (100%, 0%, 0%).
+
 Example:
 
 ```html
@@ -407,6 +486,7 @@ Example:
 ```
 
 The preview effect in the browser is shown in Figure 3-6.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-006.png" alt="Image">
 </p>
@@ -414,7 +494,9 @@ The preview effect in the browser is shown in Figure 3-6.
 <p align="center"><em>Figure 3-6 Effects of Different Font Colors</em></p>
 
 ##### (6) Text Effects
+
 In CSS, we can use the font-style property to define the italic effect of the font.
+
 The basic format is as follows:
 
 ```css
@@ -465,7 +547,9 @@ Example:
 <p align="center"><em>Figure 3-7 Effects of Different Font Styles</em></p>
 
 ##### (7) Text Decoration: text-decoration
+
 In CSS, we use the text-decoration property to define underlines, strikethroughs, and overlines for paragraph text.
+
 The basic format is as follows:
 
 ```css
@@ -509,6 +593,7 @@ Example:
 ```
 
 The preview effect in the browser is shown in Figure 3-8:
+
 <p align="center">
   <img src="../../assets/images/project-03/image-008.png" alt="Image">
 </p>
@@ -516,9 +601,13 @@ The preview effect in the browser is shown in Figure 3-8:
 <p align="center"><em>Figure 3-8 Text Decoration Effects</em></p>
 
 ##### (8) Text Styles
+
 Font styles mainly relate to the visual effect of the font itself, while text styles mainly relate to the layout effect of multiple characters, that is, the layout effect of the entire paragraph. The following introduces text styles.
+
 ① First-line Indentation
+
 In CSS, we can use the text-indent property to define the first-line indentation of a paragraph.
+
 Basic format:
 
 ```css
@@ -526,7 +615,9 @@ text-indent:pixel value;
 ```
 
 ② Horizontal Alignment
+
 In CSS, we use the text-align property to control the horizontal alignment of text: left alignment, center alignment, and right alignment.
+
 Basic format:
 
 ```css
@@ -544,7 +635,9 @@ Description:
 | right | right alignment |
 
 ③ Letter Case
+
 In CSS, we can use the text-transform property to convert the case of text. This applies only to English, since Chinese has no uppercase or lowercase distinction.
+
 Basic format:
 
 ```css
@@ -589,13 +682,17 @@ Example:
 ```
 
 The preview effect in the browser is shown in Figure 3-9.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-009.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-9 Effects of Case Conversion</em></p>
+
 ④ Line Height
+
 In CSS, we can use the line-height property to control the line height of text.
+
 The basic format is as follows:
 
 ```css
@@ -603,7 +700,9 @@ line-height: pixel value;
 ```
 
 Note:
+
 In basic CSS learning, we use pixels as the unit.
+
 Example:
 
 ```html
@@ -633,14 +732,19 @@ Example:
 ```
 
 The preview effect in the browser is shown in Figure 3-10.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-010.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-10 Effects of Line Height Changes</em></p>
+
 ⑤ Line Spacing and Character Spacing
+
 a. Line spacing:
+
 The word-spacing property defines the distance between words within a line.
+
 Example:
 
 ```html
@@ -670,13 +774,17 @@ Example:
 ```
 
 The preview effect in the browser is shown in Figure 3-11.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-011.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-11 Effects of Line Spacing Changes</em></p>
+
 b. Character Spacing:
+
 The letter-spacing property is used to define the character spacing.
+
 Example:
 
 ```html
@@ -706,27 +814,37 @@ Example:
 ```
 
 The preview effect in the browser is shown in Figure 3-12.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-012.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-12 Effects of Character Spacing Changes</em></p>
+
 Note: letter-spacing controls character spacing, and each English letter is also treated as one "character"! Please pay attention to this detail.
 
 #### 6. Common CSS Style Rules
+
 In addition to text styling, CSS has many other common style rules, which we will cover below.
 
 ##### (1) width Property
+
 width defines the width of an element’s content area. The default value is auto. It can also be set using units such as px, cm, etc.
+
 Example:
+
 width: 300px; sets the width to 300 pixels.
+
 Percentages can also be used, e.g. width: 50%; sets the width to occupy 50% of the available space.
 
 ##### (2) height Property
+
 height defines the height of an element’s content area. It uses the same length units as width.
 
 ##### (3) list-style Property
+
 list-style is a shorthand property that sets all list properties in one declaration.
+
 Example:
 
 ```css
@@ -736,7 +854,9 @@ list-style: square outside url('1.gif');
 This code sets the list marker type to square, positions the marker outside the list item, and uses the image 1.gif to replace the list item marker.
 
 ##### (4) overflow Property
+
 The overflow property specifies how to handle content that overflows the element’s box. If set to scroll, the user agent will provide a scrolling mechanism whether needed or not.
+
 Common values and descriptions are as follows:
 
 **Table 3-6 overflow Property Values**
@@ -750,6 +870,7 @@ Common values and descriptions are as follows:
 | inherit | Specifies that the overflow value should be inherited from the parent element. |
 
 （5）background-color Property
+
 background-color sets the background color of an element. The available color values are as follows:
 
 **Table 3-7 background-color Property Values**
@@ -764,6 +885,7 @@ background-color sets the background color of an element. The available color va
 ### 3.1.3 Task Implementation
 
 #### Step 1: Create a new HTML page.
+
 Open the development tool, go to File → New HTML page. After creation, set the title to "News Detail Page". The code is as follows.
 
 ```html
@@ -779,6 +901,7 @@ Open the development tool, go to File → New HTML page. After creation, set the
 ```
 
 #### Step 2: Create the news detail page.
+
 The code for creating the news page is as follows.
 
 ```html
@@ -840,6 +963,7 @@ The code for creating the news page is as follows.
 ```
 
 #### Step 3: Create related recommendations on the right side.
+
 The code for creating related recommendations on the right side is as follows.
 
 ```html
@@ -929,6 +1053,7 @@ text-overflow: ellipsis;
 ```
 
 #### Step 4: Create featured hot news on the right side.
+
 The code for creating featured hot news on the right side is shown below. The styles used are the same as those in Step 3.
 
 ```html
@@ -982,16 +1107,21 @@ The code for creating featured hot news on the right side is shown below. The st
 ## Task 3.2 Personal Photo Album Production
 
 ### 3.2.1 Task Description
+
 A personal photo album displays a person’s personal style. A reasonable layout makes the album look neater and more attractive, improving the viewing experience for users.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-013.png" alt="Image">
 </p>
 
 To complete the production of a personal photo album, the box model needs to be used, including setting the height, size, inner and outer margins of the box model, etc. The effect is shown in Figure 3-13.
+
 <p align="center"><em>Figure 3-13 Rendering of Personal Photo Album</em></p>
 
 ### 3.2.2 Knowledge Preparation
+
 The box model is the core of CSS positioning and layout. It defines how elements are displayed and how they interact with each other. Every element on a page is regarded as a rectangular box, which consists of the element's content, padding, border, and margin. Web page layout focuses on how these boxes are arranged and nested on the page. When many boxes are placed together, the key factors to consider are box size calculation and document flow, as shown in Figure 3-14.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-014.png" alt="Image">
 </p>
@@ -999,7 +1129,9 @@ The box model is the core of CSS positioning and layout. It defines how elements
 <p align="center"><em>Figure 3-14 Schematic diagram of the box model</em></p>
 
 #### 1.Width and Height
+
 In the box model, each element needs a defined width and height. The width and height properties are used in CSS to set the size of an element.
+
 Width and height use the same value formats, as shown in Table 3-8.
 
 **Table 3-8 Values for width and height**
@@ -1020,6 +1152,7 @@ height:100px;
 When creating a box model, you must first set its width and height. Only then does it make sense to set other properties such as padding, margin, and border. If width and height are not set, other properties will be meaningless.
 
 #### 2. Padding
+
 Padding appears around the content area. If a background is applied to an element, the background applies to the area consisting of the element's content and padding. Therefore, padding can be used to create a separation zone around the content so that the content does not blend with the background. When the padding of an element is cleared, the "released" area will be filled with the element's background color. The value formats are shown in Table 3-9.
 
 **Table 3-9 Padding Values**
@@ -1039,6 +1172,7 @@ padding-right:50px;
 ```
 
 The above properties can be abbreviated as padding.
+
 The padding property can have 1 to 4 values.
 
 ```css
@@ -1046,8 +1180,11 @@ padding:25px 50px 75px 100px;
 ```
 
 top padding: 25px
+
 right padding: 50px
+
 bottom padding: 75px
+
 left padding: 100px
 
 ```css
@@ -1055,7 +1192,9 @@ padding:25px 50px 75px;
 ```
 
 top padding: 25px
+
 left and right padding: 50px
+
 bottom padding: 75px
 
 ```css
@@ -1063,6 +1202,7 @@ padding:25px 50px;
 ```
 
 top and bottom padding: 25px
+
 left and right padding: 50px
 
 ```css
@@ -1070,6 +1210,7 @@ padding:25px;
 ```
 
 all paddings: 25px
+
 Example:
 
 ```html
@@ -1100,6 +1241,7 @@ Example:
 ```
 
 By running the HTML file, the result is shown in Figure 3-15.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-015.png" alt="Image">
 </p>
@@ -1107,8 +1249,11 @@ By running the HTML file, the result is shown in Figure 3-15.
 Figure 3‑15 Effect of Using Padding
 
 #### 3.Margin
+
 The margin property defines the space around an element. Margin clears the area outside the border around an element. Margin has no background color and is completely transparent.
+
 You can change the top, bottom, left, and right margins of an element individually, or set all margin properties at once. The available values are shown in Table 3‑10.
+
 Table 3‑10 Margin Values
 
 | Value | Description |
@@ -1118,6 +1263,7 @@ Table 3‑10 Margin Values
 | auto | Lets the browser calculate the margin. The result depends on the browser |
 
 Negative values can be used for margin, which will cause content to overlap.
+
 In CSS, different margins can be specified for different sides.
 
 ```css
@@ -1130,9 +1276,11 @@ margin-left:50px;
 The shorthand property for all margin properties is margin. The margin property can have one to four values. The assignment method is the same as for padding and will not be repeated here.
 
 #### 4. Border
+
 The border property is used to set the color, style, and width of an object's border. When setting the border properties of an object, you must first set the height and width of the object. The border color, border style, and border width are explained separately below.
 
 ##### (1) Border Style
+
 Used to set the style of the border (border-style). The border style also has four parameters, and the assignment method is the same as for border color, so it will not be repeated here. The specific border styles provided in CSS are shown in Table 3-11.
 
 **Table 3-11 Border Styles**
@@ -1152,6 +1300,7 @@ Used to set the style of the border (border-style). The border style also has fo
 | outset | 3D outset border drawn according to the border-color value |
 
 The effect is shown in Figure 3-16:
+
 <p align="center">
   <img src="../../assets/images/project-03/image-016.png" alt="Image">
 </p>
@@ -1159,10 +1308,15 @@ The effect is shown in Figure 3-16:
 <p align="center"><em>Figure 3-16 Border Style Effects</em></p>
 
 ##### (2) Border Width
+
 Used to set the width of the border (border-width). The width can be specified using keywords or custom numerical values. The border width also requires four values to be assigned. The three keywords for width values are as follows:
+
 medium: default width
+
 thin: smaller than the default width
+
 thick: larger than the default width
+
 To apply the above three properties to a single border, simply add the border position. For example, to set the width property for the top border, you can use the following declaration:
 
 ```css
@@ -1170,10 +1324,13 @@ border-top-width:keyword;
 ```
 
 Notes:
+
 ① CSS does not define the exact pixel widths of the three keywords. Therefore, one user agent may render thick, medium, and thin as 5px, 3px, and 2px respectively, while another may render them as 3px, 2px, and 1px.
+
 ② border-color has no effect when used alone; border-style must be used first to set the border style.
 
 ##### (3) Border Color
+
 Used to set the color of the border (border-color). There are three ways to specify the color value, as shown in Table 3-12.
 
 **Table 3-12 border-color Values**
@@ -1185,6 +1342,7 @@ Used to set the color of the border (border-color). There are three ways to spec
 | Hex | Specifies a hexadecimal value, such as "#ff0000" |
 
 You can also set the border color to "transparent".
+
 The color property accepts four values. Depending on the number of values assigned, the following cases apply:
 
 ```css
@@ -1192,8 +1350,11 @@ padding:red blue green yellow;
 ```
 
 top padding is red
+
 right padding is blue
+
 bottom padding is green
+
 left padding is yellow
 
 ```css
@@ -1201,7 +1362,9 @@ padding: red blue green;
 ```
 
 top padding is red
+
 left and right padding are blue
+
 bottom padding is green
 
 ```css
@@ -1209,6 +1372,7 @@ padding: red blue;
 ```
 
 top and bottom padding are red
+
 left and right padding are blue
 
 ```css
@@ -1216,9 +1380,11 @@ padding: red;
 ```
 
 all padding areas are red
+
 Note: border-color has no effect when used alone; border-style must be used first to set the border style.
 
 #### 5.CSS Outline
+
 An outline is a line drawn around an element, which specifies the style, color and width of the element’s outline. It is located outside the border edge and can be used to highlight the element.Table 3-13 defines all outline properties.
 
 **Table 3-13 Outline Properties**
@@ -1253,6 +1419,7 @@ Example:
 ```
 
 View this HTML via Chrome, and the result is shown in Figure 3-17.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-017.png" alt="Image">
 </p>
@@ -1262,6 +1429,7 @@ View this HTML via Chrome, and the result is shown in Figure 3-17.
 ### 3.2.3 Task Implementation
 
 #### Step 1: Create a new HTML page and set global styles
+
 Create a new HTML page. The global styles are set as follows:
 
 ```css
@@ -1275,6 +1443,7 @@ body {
 ```
 
 #### Step 2: Create the first photo album
+
 The HTML code is as follows:
 
 ```html
@@ -1326,6 +1495,7 @@ The HTML code is as follows:
 ```
 
 #### Step 3: Create the remaining photo albums one by one
+
 Following the production of the first photo album, complete the remaining albums. The code is as follows.
 
 ```html
@@ -1360,7 +1530,9 @@ Following the production of the first photo album, complete the remaining albums
 ## Task 3.3 Mall List Layout
 
 ### 3.3.1 Task Description
+
 Shopping websites usually have a display page for product lists, which are placed on the homepage to show popular products and attract customers' attention. The implementation of the product list needs to be completed using the knowledge of float. The effect diagram is shown in Figure 3-18.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-018.png" alt="Image">
 </p>
@@ -1370,44 +1542,61 @@ Shopping websites usually have a display page for product lists, which are place
 ### 3.3.2 Knowledge Preparation
 
 #### 1.Block-level elements, inline elements, and inline-block elements
+
 Block-level elements: These elements occupy one or more lines. Even if their width is less than that of the parent element, they still take up an entire line and cannot be placed side by side with other elements.
+
 Inline elements: These elements can be placed side by side in one line and will wrap to the next line only when the total width of all elements exceeds the line width.
+
 Inline-block elements: These are elements that are originally inline but converted to block-level behavior. They do not wrap automatically, but their width and height can be set. Inline-block elements are arranged from left to right.
 
 #### 2.Introduction to Normal Document Flow
+
 Document flow refers to the position of HTML elements on the page, that is, the space occupied by elements during layout. Under normal circumstances, elements are arranged in the order they appear: block-level elements occupy a whole line, while inline elements are arranged from left to right. The normal document flow divides the window into rows, which are filled by various elements in sequence.
+
 The opposite of normal document flow is out of document flow. An HTML document without CSS styling is rendered in the order it is written. As shown in Figure 3-19 below, three div elements are added and displayed normally in sequence.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-019.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-19 Three div tags displayed normally</em></p>
+
 Being out of the normal document flow means that the element is no longer in its original position and "floats" above other elements. We apply CSS styling to the three div tags mentioned above, and the effect is shown in Figure 3-20 below.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-020.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-20 Effect diagram of elements out of the document flow</em></p>
+
 From this example, we can see that being out of the document flow means the element is no longer in its original position. In CSS layout, elements can be taken out of the normal flow by using float and positioning. Next, we will first learn about float.
 
 #### 3.How Float Works
+
 By using the float property, elements can be made to "float" and break away from the normal document flow. In other words, elements without the float property will be displayed in sequence according to the standard flow, while floating elements that are out of the flow are no longer restricted by it and float above normal elements.
+
 Let’s understand this with an example.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-021.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-21 Div tags displayed normally</em></p>
+
 As shown in Figure 3-21, there are four div tags in the document. Since div is a block-level element, it will occupy an entire line even if the width of each div does not fill the line.In Figure 3-22, the four div tags are in the normal document flow. We set a left float effect for div2, and the display effect in the browser is shown in Figure 3-22.
+
 We can see that div2 is out of the document flow after being floated. The document flow will treat div3 as the element immediately after div1, so div3 will take the position originally belonging to div2.Since div2 is set to float left, it will follow the previous normal flow element, that is, behind div1. Therefore, div2 floats above div3 and covers part of its content.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-022.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-22 Effect of Floated Div Elements</em></p>
+
 With floating, block-level elements can be displayed side by side in one line, unless their total width exceeds the line width. This makes full use of browser space and presents web content more reasonably and clearly within a limited interface.
 
 #### 4.Float Style Rules
+
 The float property is set using the float keyword. The property values are shown in Table 3-14.
 
 **Table 3-14 Float Property Values**
@@ -1427,22 +1616,33 @@ Sample code is as follows:
 Sets the element to float to the left.
 
 #### 5.Effects of Floating
+
 Floating has the following effects:
+
 (1) It makes the layout more flexible. Without floating, block-level elements occupy an entire line, resulting in a lot of wasted space. By using floating to make elements "float", a wider variety of layouts can be achieved.
+
 (2) It makes the page structure cleaner and more attractive. Floating allows for efficient use of space, resulting in a more compact page structure.
+
 (3) Floated elements are removed from the normal document flow, which causes the height of their parent element to collapse. Without supporting content, the parent element will have a height of zero.
 
 ##### (4) Floating also affects the layout of sibling elements of the parent element.
 
 #### 6.Clearing Floats
+
 Since floating can affect the layout of text, parent elements, and sibling elements of the parent element, it is necessary to clear floats.
+
 There are four main ways to clear floats:
 
 ##### (1) Clearing Floats with the clear Style
+
 The clear property is used to clear floating effects. It includes clearing left floats, clearing right floats, and clearing both left and right floats. The usage is as follows:
+
 clear: left; : Clears left floats
+
 clear: right; : Clears right floats
+
 clear: both; : Clears all floating effects (most commonly used)
+
 Sample code is as follows:
 
 ```css
@@ -1454,6 +1654,7 @@ Sample code is as follows:
 ```
 
 ##### (2) Insert a Block-level Element to Clear Floats Before the Parent Element's Closing Tag
+
 This method involves inserting an empty block-level div element at the end of the parent element containing floated elements, and applying the clear style to it. The code is as follows:
 
 ```html
@@ -1462,6 +1663,7 @@ This method involves inserting an empty block-level div element at the end of th
 ```
 
 ##### (3) Using Pseudo-elements (clearfix)
+
 This method adds an :after pseudo-element to the end of the parent element. By clearing the float of this pseudo-element, the parent element's height is supported, thereby eliminating the impact of floats. Sample code is as follows:
 
 ```css
@@ -1474,6 +1676,7 @@ This method adds an :after pseudo-element to the end of the parent element. By c
 ```
 
 ##### (4) Clearing Floats with overflow
+
 This method sets the overflow property of the parent element to auto (i.e., overflow: auto;). This immediately expands the parent element's height to wrap the floated elements inside it. Sample code is as follows:
 
 ```css
@@ -1483,11 +1686,13 @@ This method sets the overflow property of the parent element to auto (i.e., over
 ```
 
 By setting just one value on the parent element, the parent’s height is immediately extended to enclose the floated elements inside. It appears that the float has been cleared and no longer affects the rendering of subsequent elements. Strictly speaking, however, this has nothing to do with clearing floats, since no element’s float is actually removed — we need not dwell on this distinction.
+
 In fact, any valid value for overflow other than "visible" will work here. All of them can achieve the goal of supporting the parent element’s height and resolving the layout issues caused by floating.
 
 ### 3.3.3 Task Implementation
 
 #### Step 1: Create a new HTML page
+
 Create a new HTML page and set the page title to "Product List". The code is as follows.
 
 ```html
@@ -1499,6 +1704,7 @@ Create a new HTML page and set the page title to "Product List". The code is as 
 ```
 
 #### Step 2: Create the top menu navigation bar.
+
 It is implemented using a layout with lists and floats. The code is as follows.
 
 ```html
@@ -1568,6 +1774,7 @@ color: #fff;
 ```
 
 #### Step 3: Create the product list
+
 It is implemented using lists, float layout and style settings. The code is as follows.
 
 ```html
@@ -1673,26 +1880,35 @@ white-space: nowrap;
 ## Task 3.4 Creating a Common Website Sidebar
 
 ### 3.4.1 Task Description
+
 A side navigation bar places the navigation menu at the edge of the page, helping users quickly locate the desired channel. It not only saves users' time scrolling through the page but also improves the user experience.
+
 The creation of the side navigation bar is implemented using list tags combined with positioning settings. The effect diagrams are shown in Figure 3-23 and Figure 3-24.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-023.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-23 Side Navigation Diagram</em></p>
+
 <p align="center">
   <img src="../../assets/images/project-03/image-024.png" alt="Image">
 </p>
 
 、
+
 <p align="center"><em>Figure 3-24 Side Navigation Effect Diagram</em></p>
 
 ### 3.4.2 Knowledge Reserve
+
 Positioning means placing an element at a specified position to complete the interface design. Positioning is divided into relative positioning, absolute positioning, and fixed positioning.
+
 The positioning mode is set using the position property, and the offset position is calculated based on the distance from the top, bottom, left, and right boundaries.
 
 #### 1. Static Positioning
+
 Static positioning means the element remains in its original position without being repositioned. The default value of the position property is static. Static positioning applies to elements with no specified position property.
+
 Basic format:
 
 ```css
@@ -1700,7 +1916,9 @@ position:static;
 ```
 
 #### 2. Relative Positioning
+
 Relative positioning means that when the element’s position changes, it uses its original position as the reference. A relatively positioned element does not break away from the normal document flow; it is offset based on its current position. The offset can be set in four directions: left, right, top, and bottom.
+
 Basic format:
 
 ```css
@@ -1708,11 +1926,13 @@ position:relative;
 ```
 
 As shown in Figure 3-25 below, there are six div tags in the normal document flow, displayed in sequence in the browser. Now we set relative positioning for div2 and div5.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-025.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 3-25 A normally displayed div tag</em></p>
+
 The styles are as follows:
 
 ```css
@@ -1732,6 +1952,7 @@ The styles are as follows:
 ```
 
 With relative positioning applied in the above settings, div2 is moved 20px to the right and 30px downward from its original position. Div5 is positioned 100px to the right and 20px upward from its original position. The effect is shown in Figure 3-26.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-026.png" alt="Image">
 </p>
@@ -1739,7 +1960,9 @@ With relative positioning applied in the above settings, div2 is moved 20px to t
 <p align="center"><em>Figure 3-26 Effect of Setting Relative Positioning</em></p>
 
 #### 3.Absolute Positioning
+
 Absolute positioning means the element is removed from the normal document flow. Its offset position is relative to its parent element. If there is no positioned parent element, it will be offset relative to the browser window instead.
+
 The basic format is as follows:
 
 ```css
@@ -1765,7 +1988,9 @@ In the above example, absolute positioning is applied to div2 and div5. The styl
 ```
 
 div2 is offset 20px from the left of the browser and 30px from the top; div5 is offset 100px from the left of the browser and 300px from the top. The effect is shown in Figure 3-27.
+
 Since div2 and div5 use absolute positioning, they are removed from the normal document flow. Only div1, div3, div4, and div6 remain in the normal flow and are arranged in sequence. With no positioned parent elements, div2 and div5 are offset relative to the browser.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-027.png" alt="Image">
 </p>
@@ -1773,7 +1998,9 @@ Since div2 and div5 use absolute positioning, they are removed from the normal d
 <p align="center"><em>Figure 3-27 Effect of Absolute Positioning</em></p>
 
 #### 4.Fixed Positioning
+
 Fixed positioning means that the position of an element remains unchanged, with the browser window as the reference system. The coordinates of a fixed-positioned element do not change, nor do they scroll as the browser scrolls. Common applications include: pop-up ads fixed at the bottom right corner of the browser, and the bottom navigation bar in mobile apps.
+
 The basic format is as follows:
 
 ```css
@@ -1783,6 +2010,7 @@ position:fixed;
 ### 3.4.3 Task Implementation
 
 #### Step 1: Create a new HTML page
+
 Create a new HTML page, set the page title to "Side Navigation", and set the background color at the same time. The code is as follows.
 
 ```html
@@ -1807,6 +2035,7 @@ body {
 ```
 
 #### Step 2: Import navigation images
+
 The code is as follows:
 
 ```html
@@ -1837,6 +2066,7 @@ The styles are as follows:
 ```
 
 #### Step 3: Set the menu bar in its default state.
+
 The code is as follows:
 
 ```html
@@ -1881,6 +2111,7 @@ a {
 ```
 
 #### Step 4: Set the secondary menu and its effects to be displayed on mouse hover.
+
 The code is as follows:
 
 ```html
@@ -2002,12 +2233,17 @@ The styles are as follows:
 ## Task 3.5 Project Practice – Map Attractions (Section F)
 
 ### 3.5.1 Task Description
+
 This project practice implements the production of the map attractions section in a tour guide project. There is a section on the right displaying a map (static, image format), and three attraction cards on the left. The map on the right is static. Above the map image, there are three locations corresponding to the three attraction cards on the left.
+
 The left side is a 2×2 grid containing three attraction card elements linked to attractions, with the fourth space being a link to all attractions. Since this project is still a prototype, only empty URLs are placed in these links.
+
 Box-shadow effect: scale up to 1.05 times, with a box shadow that offsets 5px on the Y-axis, has a blur radius of 5px, color black, and opacity of 30%. When the mouse hovers over an attraction card, the card displays both the aforementioned focus effect and a subtle light gradient effect, with the light effect moving from left to right.
 
 ### 3.5.2 Effect Display
+
 The implemented effect of the map attractions section is shown in Figure 3-28 below.
+
 <p align="center">
   <img src="../../assets/images/project-03/image-028.png" alt="Image">
 </p>
@@ -2017,6 +2253,7 @@ The implemented effect of the map attractions section is shown in Figure 3-28 be
 ### 3.5.3 Task Implementation
 
 #### Step 1: Edit the index.html file and place the map attractions section.
+
 The code is as follows:
 
 ```html
@@ -2241,7 +2478,9 @@ font-weight: bold;
 ```
 
 .map-container:has(#map-dot-1:hover) #attraction-a,
+
 .map-container:has(#map-dot-2:hover) #attraction-b,
+
 .map-container:has(#map-dot-3:hover) #attraction-c,
 
 ```css

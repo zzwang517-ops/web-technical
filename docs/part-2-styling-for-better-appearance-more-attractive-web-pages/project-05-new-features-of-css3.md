@@ -1,9 +1,11 @@
 # Project 5 New Features of CSS3 --- Laying a Solid Foundation for Stunning Visuals and Creating Gorgeous Web Designs
 
 ## Content Guide
+
 This project mainly focuses on the new features of CSS3, including background styles, box shadows, text shadows, and background gradient properties. It implements page layout through flex layout and the box-sizing rule, and uses @media queries to create responsive designs adapted to different screen sizes. It also introduces properties such as @keyframes, animation, transform-style, and perspective to achieve animated effects on web pages.
 
 ## Learning Objectives
+
 - ① Master the usage of background image styles, shadows, transparency styles, and gradients.
 - ② Master the usage of flex layout, box-sizing, and media queries.
 - ③ Master the usage of transform and transition style rules.
@@ -13,7 +15,9 @@ This project mainly focuses on the new features of CSS3, including background st
 ## Task 5.1 Photo Wall
 
 ### 5.1.1 Task Description
+
 This is a photo wall display interface that shows introductions and photos of cute pets. The overall structure is divided into three parts: top, middle, and bottom. Background images are used to display content, and relevant tags are applied to achieve rounded corners, box shadows, text shadows, transparency effects, and background image color gradients. The effect is shown in Figure 5-1.
+
 <p align="center">
   <img src="../../assets/images/project-05/image-001.png" alt="Image">
 </p>
@@ -21,10 +25,13 @@ This is a photo wall display interface that shows introductions and photos of cu
 <p align="center"><em>Figure 5-1 Photo Wall Interface</em></p>
 
 ### 5.1.2 Knowledge Preparation
+
 This section introduces background settings in CSS3 styles, mainly including background images, background colors, background image sizes, background image tiling methods and styles, background clipping, background attachment, background image position, and the shorthand syntax for background settings. Details are as follows.
 
 #### 1. Background Image
+
 The background-image property sets the background to an image. This property inserts the image directly into the web page without adjustment, which may result in image repetition or scrolling based on the actual image size.
+
 Syntax:
 
 ```css
@@ -40,7 +47,9 @@ background-image: url(xxx.jpg);
 If no image is used, the value is none, which is also the default value.
 
 #### 2. Background Image Tiling
+
 The background-repeat property sets the tiling mode of the background image.
+
 Syntax:
 
 ```css
@@ -48,6 +57,7 @@ background-repeat:value;
 ```
 
 Its values are shown in Table 5‑1:
+
 Table 5‑1 Values of the background-repeat Property
 
 | Value | Description |
@@ -58,10 +68,13 @@ Table 5‑1 Values of the background-repeat Property
 | norepeat | The background image is not tiled. |
 
 。
+
 The default value is repeat.
 
 #### 3. Background Image Tiling Origin
+
 In CSS3, the background-origin property can be used to set the starting position for tiling the element’s background image.
+
 Syntax:
 
 ```css
@@ -69,6 +82,7 @@ background-origin:Property Value;
 ```
 
 Values of the background-origin property are shown in Table 5‑2:
+
 Table 5‑2 Values of the background-origin Property
 
 | Property Value | Description |
@@ -80,7 +94,9 @@ Table 5‑2 Values of the background-origin Property
 Borders, padding, and content areas are part of the CSS3 Box Model. In the CSS3 Box Model, “every element can be regarded as a box”. Using background-origin, we can control whether the background image starts tiling from the border, padding, or content area.
 
 #### 4. Background Image Clipping
+
 In CSS3, the background-clip property is used to clip the background image as needed. It specifies the areas where the background can be displayed, independent of where the background starts drawing (i.e., the background-origin property).
+
 Syntax:
 
 ```css
@@ -88,6 +104,7 @@ background-clip:Property Value;
 ```
 
 Values of the background-clip property are shown in Table 5‑3:
+
 Table 5‑3 Values of the background-clip Property
 
 | Property Value | Description |
@@ -97,7 +114,9 @@ Table 5‑3 Values of the background-clip Property
 | content-box | Clipping starts from the content area. |
 
 #### 5. Fixed or Scrolling Background
+
 The background-attachment property sets whether the background image scrolls with the content or remains fixed.
+
 Syntax:
 
 ```css
@@ -105,6 +124,7 @@ background-attachment:Property Value;
 ```
 
 Values of the background-attachment property are shown in Table 5‑4:
+
 Table 5‑4 Values of the background-attachment Property
 
 | Property Value | Description |
@@ -113,7 +133,9 @@ Table 5‑4 Values of the background-attachment Property
 | fixed | The background image is fixed and does not move when content scrolls. |
 
 #### 6. Rounded Corners
+
 The border-radius property sets the curvature of the element’s four corners. By default, corners are 90-degree angles. Adjusting the radius gradually rounds the corners: a square becomes a circle, and a rectangle becomes an ellipse.
+
 Syntax:
 
 ```css
@@ -121,11 +143,15 @@ border-radius:1-4 length|%/ 1-4 length|%;
 ```
 
 1-4 refers to four radius values; length and % are units.
+
 The values before / represent the horizontal radii of the corners; values after / represent the vertical radii.
+
 Values are applied in order. If bottom-left is omitted, it equals top-right. If bottom-right is omitted, it equals top-left. If top-right is omitted, it equals top-left.
 
 #### 7. Box Shadow
+
 The box-shadow property adds one or more shadows to an element.
+
 Syntax:
 
 ```css
@@ -133,14 +159,21 @@ box-shadow: h-shadow v-shadow blur spread color inset;
 ```
 
 h-shadow: Required. Horizontal shadow position. Negative values allowed.
+
 v-shadow: Required. Vertical shadow position. Negative values allowed.
+
 blur: Optional. Blur distance.
+
 spread: Optional. Shadow size.
+
 color: Optional. Shadow color.
+
 inset: Optional. Changes outer shadow (outset) to inner shadow.
 
 #### 8.Text Shadow
+
 The text-shadow property applies shadows to text. It is a comma-separated list of shadows, each defined by two or three length values and an optional color. Omitted lengths default to 0.
+
 Syntax:
 
 ```css
@@ -148,12 +181,17 @@ text-shadow: h-shadow v-shadow blur color;
 ```
 
 h-shadow: Required. Horizontal shadow position. Negative values allowed.
+
 v-shadow: Required. Vertical shadow position. Negative values allowed.
+
 blur: Optional. Blur distance.
+
 color: Optional. Shadow color.
 
 #### 9.Transparency (opacity)
+
 The opacity property sets the opacity level of an element.
+
 Syntax:
 
 ```css
@@ -161,11 +199,15 @@ opacity: value | inherit;
 ```
 
 value: Specifies opacity, ranging from 0.0 (fully transparent) to 1.0 (fully opaque).
+
 inherit: Inherits the opacity value from the parent element.
 
 #### 10. Background Color Gradients (Radial & Linear)
+
 Radial Gradient
+
 The radial-gradient() function creates an “image” using a radial gradient, defined from a center point. At least two color stops are required.
+
 Syntax:
 ```
 background-image: radial-gradient(shape size at position, start-color, ..., last-color);
@@ -184,9 +226,13 @@ background-image: radial-gradient(shape size at position, start-color, ..., last
 - top: Top as the vertical center.
 - bottom: Bottom as the vertical center.
 • start-color, ..., last-color: Gradient start and end colors.
+
 Linear Gradient:
+
 The linear-gradient() function creates an image with a linear transition between two or more colors.
+
 At least two colors are required. Gradients can be directional (by angle) or default to top-to-bottom.
+
 Syntax:
 
 ```css
@@ -194,6 +240,7 @@ background-image: linear-gradient(direction,color-stop1,color-stop2,…);
 ```
 
 direction:Specifies gradient direction or angle.
+
 color-stop1, color-stop2:Gradient start and end colors.
 
 ### 5.1.3 Task Implementation
@@ -319,13 +366,17 @@ h1 {
 ## Task 5.2 Tourism Website Homepage (Responsive)
 
 ### 5.2.1 Task Description
+
 The tourism website includes two interface layouts for PC and mobile devices. The PC interface uses tag elements to display sections such as titles, navigation, scenery images, and company cases. The mobile interface has a maximum screen width of 500px and mainly displays titles, search boxes, company cases, "Footsteps" guides, About Us, enterprise cases, and booking notes.
+
 The overall structure is divided into three parts: top, middle, and bottom. Content is displayed using flex layout and media queries. The effects are shown in Figure 5-2 and Figure 5-3.
+
 <p align="center">
   <img src="../../assets/images/project-05/image-002.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 5-2 Tourism Website PC Interface</em></p>
+
 <p align="center">
   <img src="../../assets/images/project-05/image-003.png" alt="Image">
 </p>
@@ -333,12 +384,17 @@ The overall structure is divided into three parts: top, middle, and bottom. Cont
 <p align="center"><em>Figure 5-3 Tourism Website Mobile Interface</em></p>
 
 ### 5.2.2 Knowledge Preparation
+
 This section describes how to use the box-sizing rule and flexbox elements for content layout in CSS3.
 
 #### 1. Flex Layout and Attribute Application
+
 Flexbox is a new layout model in CSS3. It ensures that elements behave appropriately when the page needs to adapt to different screen sizes and device types.
+
 The purpose of introducing the flexbox layout model is to provide a more efficient way to arrange, align, and distribute empty space among child elements within a container.
+
 A flexbox consists of a flex container and flex items.
+
 A flex container is defined by setting the display property to flex or inline-flex. The flex container contains one or more flex items.
 
 ```css
@@ -357,7 +413,9 @@ A flex container is defined by setting the display property to flex or inline-fl
 ```
 
 An element with Flex layout applied is called a flex container (referred to as "container" for short). All its child elements automatically become members of the container and are called flex items (referred to as "items" for short).
+
 Six properties (flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content) are set on the container, each serving a distinct purpose.
+
 The flex-direction property determines the direction of the main axis (i.e., the arrangement direction of flex items).
 
 ```css
@@ -367,9 +425,13 @@ The flex-direction property determines the direction of the main axis (i.e., the
 ```
 
 row: The main axis is horizontal (default).
+
 row-reverse: The main axis is horizontal and reversed.
+
 column: The main axis is vertical.
+
 column-reverse: The main axis is vertical and reversed.
+
 The flex-wrap property specifies whether a flex container is single-line or multi-line, and the direction of the cross axis determines the stacking direction of new lines. By default, all items are arranged in a single line (also called the "main axis").
 
 ```css
@@ -379,8 +441,11 @@ The flex-wrap property specifies whether a flex container is single-line or mult
 ```
 
 nowrap: No wrapping (default).
+
 wrap: Wraps onto multiple lines, with the first line at the top.
+
 wrap-reverse: Wraps onto multiple lines, with the first line at the bottom.
+
 The flex-flow property is a shorthand for flex-direction and flex-wrap. It is used to set or retrieve the arrangement of child elements of a flex container.
 
 ```css
@@ -398,12 +463,19 @@ The justify-content property is used to set or retrieve the alignment of flex it
 ```
 
 flex-start: Default value. Items are aligned at the start of the container.
+
 flex-end: Items are aligned at the end of the container.
+
 center: Items are centered within the container.
+
 space-between: Items are distributed evenly; the first item is at the start, the last at the end.
+
 space-around: Items are distributed evenly with equal space around each item.
+
 initial: Sets the property to its default value.
+
 inherit: Inherits the property value from the parent element.
+
 The align-items property defines the alignment of flex items along the cross axis (vertical axis) of the current line in the flex container.
 
 ```css
@@ -413,10 +485,15 @@ The align-items property defines the alignment of flex items along the cross axi
 ```
 
 stretch: Default value. Items are stretched to fill the container (respecting min/max-width/height).
+
 center: Items are centered along the cross axis.
+
 flex-start: Items are aligned at the start of the cross axis.
+
 flex-end: Items are aligned at the end of the cross axis.
+
 baseline: Items are aligned based on their baselines.
+
 The align-content property aligns the lines of a flex container along the cross axis when the items do not occupy all available space on the cross axis (vertical alignment). It only takes effect on multi-line flex containers.
 
 ```css
@@ -426,13 +503,19 @@ The align-content property aligns the lines of a flex container along the cross 
 ```
 
 stretch: Default value. Lines are stretched to fill the container.
+
 center: Lines are centered within the container.
+
 flex-start: Lines are aligned at the start of the container.
+
 flex-end: Lines are aligned at the end of the container.
+
 space-between: Lines are distributed evenly; the first line is at the start, the last at the end.
+
 space-around: Lines are distributed evenly with equal space around each line.
 
 #### 2.box-sizing Style Rule
+
 The box-sizing property defines how the total width and height of an element are calculated, mainly determining whether padding and borders should be included. The syntax is as follows:
 
 ```css
@@ -440,10 +523,13 @@ box-sizing: content-box|border-box|inherit;
 ```
 
 content-box: Default value. If you set an element’s width to 100px, its content area will be 100px wide. Any border and padding widths will be added to the final rendered width of the element.
+
 border-box: The specified border and padding values are included within the declared width. For example, if you set an element’s width to 100px, that 100px will include its border and padding. The actual width of the content area equals the declared width minus (border + padding).
+
 inherit: The value of the box-sizing property is inherited from the parent element.
 
 #### 3.Media Queries (@media)
+
 Using the @media query, you can define different styles for different media types.
 
 ```css
@@ -967,7 +1053,9 @@ footer>dl>dd{
 ## Task 5.3 Personal Photo Album
 
 ### 5.3.1 Task Description
+
 The interface of the personal photo album website displays the content of a personal photo album. Its overall structure is divided into two parts (upper and lower). Deformation and transition properties are used for presentation to achieve the scaling animation effect of album images, as shown in Figure 5-4.
+
 <p align="center">
   <img src="../../assets/images/project-05/image-004.png" alt="Image">
 </p>
@@ -975,9 +1063,11 @@ The interface of the personal photo album website displays the content of a pers
 <p align="center"><em>Figure 5-4 Personal Album Interface</em></p>
 
 ### 5.3.2 Knowledge Preparation
+
 This section introduces the transform property and transition styles in CSS3, with specific details as follows.
 
 #### 1. transform Transformation Style Rules (translate, rotate, scale, skew)
+
 The transform property applies 2D or 3D transformations to an element. It allows elements to be rotated, scaled, moved, or skewed. The syntax is as follows:
 
 ```css
@@ -1012,6 +1102,7 @@ The property values are shown in Table 5-5.
 | perspective(n) | Defines a perspective view for a 3D transformed element. |
 
 #### 2.transition Transition Style Rules
+
 The transition property is a shorthand property used to set four transition-related properties. Its syntax is as follows:
 
 ```css
@@ -1044,6 +1135,7 @@ The property values are shown in Table 5-7.
 | time | Specifies the time to wait before the transition effect starts, measured in seconds (s) or milliseconds (ms). |
 
 The transition-duration property specifies the time (in seconds or milliseconds) required to complete the transition effect.
+
 Its syntax is as follows:
 
 ```css
@@ -1059,7 +1151,9 @@ The property values are shown in Table 5-8.
 | time | Specifies the time required to complete the transition effect, measured in seconds (s) or milliseconds (ms). |
 
 The default value is 0, which means no transition effect will occur.
+
 Transition effects (controlled by transition-property) typically trigger when the user hovers the mouse pointer over an element.
+
 Its syntax is as follows:
 
 ```css
@@ -1077,6 +1171,7 @@ The property values are shown in Table 5-9.
 | property | Defines a comma-separated list of CSS property names to which the transition effect is applied. |
 
 The transition-timing-function property allows the transition effect to change its speed over time.
+
 Its syntax is as follows:
 
 ```css
@@ -1215,7 +1310,9 @@ h1 {
 ## Task 5.4 The Angry Piglet
 
 ### 5.4.1 Task Description
+
 The interface of The Angry Piglet displays the animation effect of the piglet. Construct the overall structure and use CSS animation to show the content, as shown in Figure 5-5.
+
 <p align="center">
   <img src="../../assets/images/project-05/image-005.png" alt="Image">
 </p>
@@ -1223,14 +1320,21 @@ The interface of The Angry Piglet displays the animation effect of the piglet. C
 <p align="center"><em>Figure 5-5 The Angry Piglet Interface</em></p>
 
 ### 5.4.2 Knowledge Preparation
+
 This section introduces how to create animations in CSS3 styles, which can replace animated images, Flash animations, and JavaScript in many web pages.
 
 #### 1. @keyframes
+
 Animations can be created using the @keyframes rule. The principle of creating animations is to gradually change one set of CSS styles into another. During the animation, this set of CSS styles can be changed multiple times.
+
 The timing of the changes can be specified using percentages, or through the keywords from and to, which are equivalent to 0% and 100%.
+
 0% is the start time of the animation, and 100% is the end time of the animation.
+
 For the best browser support, you should always define both the 0% and 100% selectors.
+
 Note: Use animation properties to control the appearance of the animation, and bind the animation to a selector at the same time, as shown in Figure 5-6.
+
 <p align="center">
   <img src="../../assets/images/project-05/image-006.png" alt="Image">
 </p>
@@ -1238,6 +1342,7 @@ Note: Use animation properties to control the appearance of the animation, and b
 <p align="center"><em>Figure 5-6 Animation Properties</em></p>
 
 #### 2.animation
+
 The animation property is a shorthand property used to set six animation attributes. The syntax is as follows.
 
 ```css
@@ -1274,6 +1379,7 @@ The property values are shown in Table 5-12.
 | running | Specifies that the animation is playing. |
 
 Note: Always set the animation-duration property; otherwise the duration will be 0 and the animation will not play, as shown in Figure 5-7.
+
 <p align="center">
   <img src="../../assets/images/project-05/image-007.png" alt="Image">
 </p>
@@ -1455,7 +1561,9 @@ html {
 ## Task 5.5 3D Photo Album Ring
 
 ### 5.5.1 Task Description
+
 The 3D photo album ring interface uses CSS3 styles to display the 3D rotation effect of the album images. Construct the overall structure, use the transform-style and perspective properties to display the content, and achieve a dynamic 3D rotating effect of the photo album, as shown in Figure 5-8.
+
 <p align="center">
   <img src="../../assets/images/project-05/image-008.png" alt="Image">
 </p>
@@ -1463,11 +1571,15 @@ The 3D photo album ring interface uses CSS3 styles to display the 3D rotation ef
 <p align="center"><em>Figure 5-8 3D Photo Album Ring Interface</em></p>
 
 ### 5.5.2 Knowledge Preparation
+
 This section introduces 3D transformations in CSS3 styles, which specify how nested elements are rendered in 3D space.
 
 #### 1. transform-style Property Rules
+
 This property specifies how nested elements are rendered in 3D space.
+
 Note: This property must be used together with the transform property.
+
 Its syntax is as follows:
 
 ```css
@@ -1484,9 +1596,13 @@ The property values are shown in Table 5-13.
 | preserve-3d | Child elements will preserve their 3D position. |
 
 #### 2. perspective Property Rules
+
 The perspective property defines the distance between a 3D element and the view, measured in pixels. This property allows changing the view of 3D elements when looking at them.
+
 When the perspective property is defined for an element, its child elements get the perspective effect (not the element itself).
+
 Note: The perspective property only affects 3D transformed elements.
+
 Its syntax is as follows:
 
 ```css
@@ -1628,11 +1744,15 @@ body {
 ## Task 5.6 Project Practice — Latest Activities (Module F)
 
 ### 5.6.1 Task Description
+
 After the video section comes the mandatory information section, which contains important contact addresses and phone numbers. There is also a button in this section.
+
 The latest activities section includes activity cards. The cards are aligned horizontally and will scroll horizontally when the number of cards exceeds the page width. The style of the cards is consistent with that of the map scenic spot ticket opening section.
 
 ### 5.6.2 Effect Display
+
 This section is a comprehensive application of CSS3 styles, which consolidates and expands the knowledge points learned previously, as shown in Figure 5-9.
+
 <p align="center">
   <img src="../../assets/images/project-05/image-009.png" alt="Image">
 </p>

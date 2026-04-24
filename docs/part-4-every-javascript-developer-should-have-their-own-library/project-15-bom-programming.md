@@ -1,10 +1,13 @@
 # Project 15 BOM Programming
+
 ---Traces of Time, Eternal Light of the Heart; Preserve the Past to Illuminate the Future
 
 ## Content Guide
+
 Based on the technical standards of WorldSkills competitions, this project encapsulates animation controllers (such as the LoadingAnimator class) through object-oriented JavaScript programming. It combines CSS3 keyframes and SVG dynamic rendering to achieve high-performance loading animations, and adopts modular design to ensure technical standardization and scalability in line with international skills competitions.
 
 ## Learning Objectives
+
 - ① Understand BOM programming.
 - ② Master important properties and methods of the window object.
 - ③ Master important properties and methods of the document object.
@@ -12,7 +15,9 @@ Based on the technical standards of WorldSkills competitions, this project encap
 ## Task 15.1 Elegant Transition & Loading Animation
 
 ### 15.1.1 Task Description
+
 This task implements an elegant transition and loading effect. A circular rotating indicator with a blue top is created using CSS (with Bezier curves for smooth acceleration), paired with opacity transitions for fade-in and fade-out effects. When page loading is complete (simulated with a 2-second delay), the loading animation disappears smoothly, while the content area is elegantly displayed with a fade-in animation. The whole layout is responsive and automatically centered. The code structure is clear and easy to integrate into real projects by replacing it with actual asynchronous operations. The effect is shown in Figure 15-1.
+
 <p align="center">
   <img src="../../assets/images/project-15/image-001.png" alt="Image">
 </p>
@@ -22,15 +27,21 @@ This task implements an elegant transition and loading effect. A circular rotati
 ### 15.1.2 Knowledge Preparation
 
 #### 1. Introduction to the window Object
+
 The window object represents the open window in the browser and provides information about the window status.
+
 The window object can be used to access the document drawn in the window, events occurring in the window, and browser features that affect the window.
+
 The window object is the top-level object in the browser and contains everything in the browser.
+
 The document object we learned earlier is also part of the window object, as shown in Figure 15-2.
+
 <p align="center">
   <img src="../../assets/images/project-15/image-002.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 15-2 The window Object</em></p>
+
 In addition, variables and functions declared by programmers themselves are directly attached to the window object.
 
 ```js
@@ -42,6 +53,7 @@ console.log(window);
 ```
 
 The declared variable a and function add are both directly attached to the window object, as shown in Figure 15-3 below.
+
 <p align="center">
   <img src="../../assets/images/project-15/image-003.png" alt="Image">
 </p>
@@ -49,7 +61,9 @@ The declared variable a and function add are both directly attached to the windo
 <p align="center"><em>Figure 15-3 Variables and Functions Mounted on the window Object</em></p>
 
 #### 2. Common Properties of window
+
 Commonly used properties of window include: innerWidth, innerHeight, outerWidth, outerHeight, etc.
+
 innerWidth / innerHeight: Store the width and height of the browser’s document display area.
 
 ##### (2) outerWidth / outerHeight: Store the width and height of the entire browser window.
@@ -67,6 +81,7 @@ window.methodName([parameters])
 ```
 
 When a script reference points to the window containing the document, the window object has a synonym self. In this case, the reference syntax is:
+
 self.propertyName
 
 ```
@@ -74,7 +89,9 @@ self.methodName([parameters])
 ```
 
 However, self is more suitable in more complex scripts involving multiple frames and windows. self clearly represents the current window where the script document resides, making the script easier for all users to understand.
+
 Since the window object exists throughout the script execution, it can be omitted when referencing any object within the window. Therefore, the following syntax assumes that the properties and methods belong to the current window:
+
 propertyName
 
 ```
@@ -82,6 +99,7 @@ methodName([parameters])
 ```
 
 #### 3.Common Methods of window
+
 The commonly used methods of the window object are shown in Table 15-1 below.
 
 | Method | Description |
@@ -95,6 +113,7 @@ The commonly used methods of the window object are shown in Table 15-1 below.
 | clearTimeout | Cancels the timeout set by setTimeout. |
 
 ##### (1) The setInterval Method
+
 The setInterval is used to set a timer that repeatedly executes a callback function at specified intervals. Example:
 
 ```html
@@ -106,6 +125,7 @@ The setInterval is used to set a timer that repeatedly executes a callback funct
 ```
 
 ##### (2) The setTimeout Method
+
 The setTimeout method is used to set a timer that executes a callback function once after a specified delay. Example:
 
 ```html
@@ -117,6 +137,7 @@ The setTimeout method is used to set a timer that executes a callback function o
 ```
 
 ### 15.1.3 Task Implementation
+
 "Elegant Transition, Loading" is divided into the following three steps, as detailed below.
 
 #### Step 1: Create the HTML page.
@@ -205,9 +226,13 @@ The setTimeout method is used to set a timer that executes a callback function o
 ## Task 15.2 "Smart Customer Service" Conversation & Event Handling
 
 ### 15.2.1 Task Description
+
 This smart customer service system aims to provide users with real-time and efficient automated interaction services. After users enter questions in the input field, the system will automatically identify the question type based on preset keyword matching rules, and retrieve corresponding answers from the predefined response library (such as common scenarios including product consultation, order inquiry, after-sales service, etc.).
+
 The system supports submitting questions by clicking the send button or pressing the Enter key on the keyboard. After submission, the user message bubble will be displayed immediately, and a "typing" animation prompt will be triggered at the same time. After a 1.5-second delay, the system will show the customer service reply in the form of a colorful gradient bubble. If the user's question does not match any preset keywords, a default guiding message will be returned.
+
 The entire interaction process is presented through a soft Morandi color scheme interface, combined with dynamic effects and clear information hierarchy, ensuring that users receive instant responses while enjoying a comfortable visual experience. The effect is shown in Figure 15-1.
+
 <p align="center">
   <img src="../../assets/images/project-15/image-004.png" alt="Image">
 </p>
@@ -217,31 +242,47 @@ The entire interaction process is presented through a soft Morandi color scheme 
 ### 15.2.2 Knowledge Preparation
 
 #### 1. Overview of Events
+
 JavaScript events are asynchronous notification mechanisms triggered by the browser or user operations, used to respond to interactive behaviors (such as clicks, inputs) or system status changes (such as page loading, resource readiness). They are the core of building dynamic web pages, enabling pages to update in real time according to user behaviors or environmental changes.
 
 #### 2. Event Classification
 
 ##### (1) Mouse Events
+
 ① click
+
 ② dblclick
+
 ③ mousedown / mouseup
+
 ④ mousemove
+
 ⑤ mouseover / mouseout
+
 ⑥ contextmenu
 
 ##### (2) Keyboard Events
+
 ① keydown / keyup
+
 ② keypress (deprecated; keydown is recommended)
 
 ##### (3) Form Events
+
 ① submit
+
 ② input
+
 ③ change
+
 ④ focus / blur
+
 ⑤ reset
 
 #### 3. Event Binding
+
 The most common event on the window object is triggered when the page finishes loading. This event fires after all data files are fully downloaded into the browser. The advantage of using the load event to call a function is that it ensures all document objects exist in the browser’s DOM.
+
 You can apply the load event handler to the window object as follows:
 
 ```html
@@ -251,6 +292,7 @@ You can apply the load event handler to the window object as follows:
 ```
 
 Where functionName is the function to run after the page finishes downloading. You can call addEventListener multiple times to add multiple functions to the list of executions after page load.
+
 You can also apply this event directly to an element:
 
 ```html
@@ -261,6 +303,7 @@ You can also apply this event directly to an element:
 ```
 
 However, this usage means only one function will execute after page load, replacing other event handlers assigned to the window object.
+
 In addition, variables and functions declared by programmers are directly attached to the window object.
 
 ```js
@@ -276,9 +319,11 @@ console.log(window);
 </p>
 
 The declared variable a and function add are both directly attached to the window object, as shown in Figure 15-3 below.
+
 <p align="center"><em>Figure 15-3 Variables and functions mounted on the window object</em></p>
 
 #### 4.Common Methods of the window Object
+
 The commonly used methods of the window object are shown in Table 15-1 below.
 
 | Method | Description |
@@ -302,6 +347,7 @@ The commonly used methods of the window object are shown in Table 15-1 below.
 ```
 
 ##### (2) The setTimeout Method
+
 The setTimeout method is used to set a timer that executes a callback function once after a specified delay. Example:
 
 ```html
@@ -313,6 +359,7 @@ The setTimeout method is used to set a timer that executes a callback function o
 ```
 
 ### 15.2.3 Task Implementation
+
 The project "Smart Customer Service Conversation and Event Handling" is divided into the following eight steps, as detailed below.
 
 #### Step 1: Create the HTML page.
@@ -591,15 +638,19 @@ userInput.addEventListener('keydown', function(e) {
 ## Task 15.3 Project Practice – Creating a Functional Loading Animation (Module A)
 
 ### 15.3.1 Task Description
+
 Through this project practice, implement the creation of a functional loading animation for the mini speed test project, including the loading animation and page display after the animation ends.
 
 ### 15.3.2 Effect Display
+
 The effect display of the created functional loading animation is shown in Figures 15-4 and 15-5.
+
 <p align="center">
   <img src="../../assets/images/project-15/image-005.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 15-4 Loading Animation</em></p>
+
 <p align="center">
   <img src="../../assets/images/project-15/image-006.png" alt="Image">
 </p>
@@ -609,6 +660,7 @@ The effect display of the created functional loading animation is shown in Figur
 ### 15.3.3 Task Implementation
 
 #### Step 1: Create a functional loading animation page. Create a new HTML page named index.html, implement a rotating loading animation, and set the page title to Heavy HTML Page. Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -639,6 +691,7 @@ The code is as follows:
 ```
 
 #### Step 2: Display the page after the animation. The page includes large text content, images, videos, form submission, and footer content. Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -706,6 +759,7 @@ The code is as follows:
 ```
 
 #### Step 3: Style construction.
+
 The code is as follows:
 
 ```html
@@ -863,6 +917,7 @@ The code is as follows:
 ```
 
 #### Step 4: Implement the page function after the loading animation with a 3-second delay.
+
 The code is as follows:
 
 ```html

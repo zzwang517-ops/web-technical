@@ -1,9 +1,11 @@
 # Project 17 Comprehensive Project – Mini Speed Project (Module A)
 
 ## Content Guide
+
 After an in-depth study of JavaScript knowledge points, we have mastered the basic syntax of JavaScript, DOM programming, BOM programming, and JavaScript object-oriented programming. To consolidate what we have learned in a timely and effective manner, this project will use the knowledge covered in the first five chapters to develop a comprehensive project – the Mini Speed Test Project (Module A).This project includes six tasks:A13: Water Droplets (Level 2)、A22: CSS Bar Chart (Level 1)、A6: Creating a Functional Loading Animation (Level 1)、B9: Image Comparison (Level 2)、B35: Fractal Triangles (Level 1)、B39: Multiple Calculators (Level 1).
 
 ## Learning Objectives
+
 - ① Apply the basic core syntax of JavaScript to master the complete knowledge system from basic syntax to advanced features, and be proficient in using core concepts such as variables, data types, type conversion, process control, functions, arrays, and objects to implement basic web page interactions.
 - ② Apply JavaScript object-oriented programming, gain an in-depth understanding of object-oriented programming, event handling mechanisms, DOM manipulation and other knowledge to complete form validation, dynamic content rendering, etc.
 
@@ -17,14 +19,21 @@ After an in-depth study of JavaScript knowledge points, we have mastered the bas
 | 4 | Back-end Development | 2 |
 
 #### 17.2 Project Introduction
+
 In this mini speed test project, you will complete several mini-tasks. Each small test project has three levels.
+
 Level 1: Worth 0.5 points, estimated working time less than 15 minutes.
+
 Level 2: Worth 1.0 point, estimated working time less than 30 minutes.
+
 Level 3: Worth 1.5 points, estimated working time about 30 minutes.
 
 #### 17.3 Requirement Analysis
+
 The mini speed test project is divided into five major tasks, including A13: Water Droplets (Level 2), A22: CSS Bar Chart (Level 1), A6: Creating a Functional Loading Animation (Level 1), B9: Image Comparison (Level 2), B35: Fractal Triangles (Level 1), and B39: Multiple Calculators (Level 1). The functional description of each task is as follows.
+
 The structure diagram of the project functional tasks is shown in Figure 17-1.
+
 <p align="center">
   <img src="../../assets/images/project-17/image-001.png" alt="Image">
 </p>
@@ -32,26 +41,33 @@ The structure diagram of the project functional tasks is shown in Figure 17-1.
 <p align="center"><em>Figure 17-1 Functional Structure Diagram</em></p>
 
 #### 1. Tasks of the Mini Speed Test Project
+
 The Mini Speed Test Project includes the following tasks: A13: Water Droplets (Level 2), A6: Creating a Functional Loading Animation (Level 1), B9: Image Comparison (Level 2), B35: Fractal Triangles (Level 1), and B39: Multiple Calculators (Level 1). These are the most comprehensive tasks in terms of effects and functions in the comprehensive project.
 
 ##### (1) Water Droplets
+
 In this task, HTML and CSS are required to implement a circulating water droplet effect. The core functions include: realizing an animation where a black circular element continuously falls vertically inside a container.
 
 ##### (2) Fractal Triangles
+
 This task requires building an interactive fractal triangle generator. The core functions include: a canvas area, a form for number input, and a button. After entering the number of iterations and clicking the button, a fractal image will be drawn. The rendered image features an equilateral triangle structure.
 
 ##### (3) Multiple Calculators
+
 This task requires implementing a dynamic counter system. The core functions include: dynamically generating new counter components in a grid-layout container when the user clicks the "Add a counter" button; each counter contains a number display area and "Decrease/Increase" buttons to adjust the value by clicking; the interface adopts a responsive grid layout (4 columns per row), and the buttons are designed with hover interaction effects (white background + black text) and color indicators.
 
 ##### (4) Creating a Functional Loading Animation
+
 This task implements a web page loading transition animation that displays the home page after the animation ends. The core functions include: displaying a full-screen rotating loading animation (blue circle with dynamic pseudo-elements) when the page loads, which automatically hides after 3 seconds; the main content adopts a modular layout, including text sections, image displays (3 placeholder images of different sizes), video playback areas (2 local videos), an interactive form (name/email input + submit button), and a button for generating dynamic content.
 
 ##### (5) Image Comparison
+
 This task requires building an interactive image comparison tool. The core functions include: using double-layer overlay combined with CSS absolute positioning and a slider control to allow users to drag the slider to adjust the display ratio of the before-and-after images in real time; with a dynamic divider line to visualize the comparison area, and a circular slider button with a border to enhance operation feedback, finally forming an interactive image difference comparison effect.
 
 #### 17.4 Page Design
 
 ### 17.4.1 Directory Structure
+
 The project is named module_a, and the resource folder contains the contents shown in Table 17-1:
 
 **Table 17-1 Resource Folder Contents**
@@ -67,8 +83,11 @@ The project is named module_a, and the resource folder contains the contents sho
 ### 17.4.2 Design Concept
 
 ##### (1) Water Droplets
+
 A black circular droplet element is driven by CSS animation to continuously fall from the top to the bottom of the container. An SVG filter is applied to simulate the viscous trailing effect of water droplets. A black-and-white inversion filter is used on the entire page to enhance visual contrast, and two black semicircular boundaries at the top and bottom limit the movement range of the droplets.
+
 The water droplet effect is shown in Figure 17-2.
+
 <p align="center">
   <img src="../../assets/images/project-17/image-002.png" alt="Image">
 </p>
@@ -76,7 +95,9 @@ The water droplet effect is shown in Figure 17-2.
 <p align="center"><em>Figure 17-2 Water Droplets</em></p>
 
 ##### (2) Fractal Triangles
+
 This task implements an interactive fractal triangle generator. The user sets the maximum recursion level through a numeric input field. After clicking the button, the Canvas drawing function is triggered to recursively generate a white triangular fractal pattern on a black background. Initially, a large inverted triangle is drawn, and then smaller triangles are recursively drawn in three subregions. The recursion depth is controlled by the input value. The effect is shown in Figure 17-3.
+
 <p align="center">
   <img src="../../assets/images/project-17/image-003.png" alt="Image">
 </p>
@@ -84,7 +105,9 @@ This task implements an interactive fractal triangle generator. The user sets th
 <p align="center"><em>Figure 17-3 Fractal Triangle</em></p>
 
 ##### (3) Multiple Counters
+
 This task implements a dynamic counter. Users can click the "Add a counter" button to generate independent counter units. Each unit includes a count area that displays the real-time value and "Decrease / Increase" buttons, supporting interactive value adjustment, as shown in Figure 17-4.
+
 <p align="center">
   <img src="../../assets/images/project-17/image-004.png" alt="Image">
 </p>
@@ -92,12 +115,15 @@ This task implements a dynamic counter. Users can click the "Add a counter" butt
 <p align="center"><em>Figure 17-4 Multiple Counters</em></p>
 
 ##### (4) Creating a Functional Loading Animation
+
 This task implements a web page loading transition animation that displays the home page after the animation finishes. A rotating ring loading animation is created using CSS, and JavaScript is used to keep the loading layer visible for 3 seconds after page load before hiding it, achieving a smooth transition. The main content includes text sections, an image group (3 placeholder images of different sizes), a video group (2 local videos), and an interactive form, supporting load event listening for images and videos. New content can be added to the dynamic content area at the bottom via a button. The whole page uses a responsive layout to adapt to different devices, with a dark header and footer paired with a light main background, as shown in Figure 17-5 and Figure 17-6.
+
 <p align="center">
   <img src="../../assets/images/project-17/image-005.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 17-5 Loading Animation</em></p>
+
 <p align="center">
   <img src="../../assets/images/project-17/image-006.png" alt="Image">
 </p>
@@ -105,7 +131,9 @@ This task implements a web page loading transition animation that displays the h
 <p align="center"><em>Figure 17-6 Page displayed after animation</em></p>
 
 ##### (5) Image Comparison
+
 This task implements an interactive image comparison tool. Using double-layer superimposition combined with CSS absolute positioning and a slider control, users can drag the slider to adjust the display ratio of the before and after images in real time. With a dynamic divider, the comparison area is visualized, and a round slider button with a border is used to enhance operation feedback, finally forming an interactive image difference comparison effect, as shown in Figure 17-7.
+
 <p align="center">
   <img src="../../assets/images/project-17/image-007.png" alt="Image">
 </p>
@@ -113,9 +141,11 @@ This task implements an interactive image comparison tool. Using double-layer su
 <p align="center"><em>Figure 17-7 Image Comparison</em></p>
 
 #### 17.5 Project Implementation
+
 Task 1 Water Droplets
 
 #### Step 1: Create the water droplet page in the A13 directory. Create a new HTML page named index.html. Use an SVG filter (#goo) to achieve a viscous, blurry diffusion effect similar to liquid. Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -145,6 +175,7 @@ The code is as follows:
 ```
 
 #### Step 2: Apply a black-and-white inversion filter to the entire page to enhance visual contrast.
+
 The code is as follows:
 
 ```html
@@ -201,6 +232,7 @@ The code is as follows:
 ```
 
 #### Step 3: Use CSS animations to drive the black circular water droplet element to continuously fall from the top to the bottom of the container.
+
 The code is as follows:
 
 ```css
@@ -215,9 +247,11 @@ The code is as follows:
 ```
 
 #### Step 4: Run the index.html file to view the effect.
+
 Task 2 Fractal Triangle
 
 #### Step 1: Create the fractal triangle page in the B35 directory. Create a new HTML page named index.html, which includes a canvas area, a form for entering numbers, and a button. Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -238,6 +272,7 @@ The code is as follows:
 ```
 
 #### Step 2: Style construction.
+
 The code is as follows:
 
 ```html
@@ -278,6 +313,7 @@ The code is as follows:
 ```
 
 #### Step 3: Clear the canvas and draw the initial large triangle.
+
 The code is as follows:
 
 ```html
@@ -298,6 +334,7 @@ The code is as follows:
 ```
 
 #### Step 4: Clear the canvas and draw the initial large triangle.
+
 The code is as follows:
 
 ```html
@@ -336,9 +373,11 @@ The code is as follows:
 ```
 
 #### Step 5: Run the index.html file to view the effect.
+
 Task 3 Multiple Counters
 
 #### Step 1: Create the multiple counters page in the B39 directory. Create a new HTML page named index.html with an "Add a counter" button. Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -358,6 +397,7 @@ The code is as follows:
 ```
 
 #### Step 2: Style construction.
+
 The code is as follows:
 
 ```html
@@ -441,6 +481,7 @@ The code is as follows:
 ```
 
 #### Step 3: Dynamically generate counter components.
+
 The code is as follows:
 
 ```html
@@ -463,6 +504,7 @@ The code is as follows:
 ```
 
 #### Step 4: Counter operation function.
+
 The code is as follows:
 
 ```html
@@ -493,9 +535,11 @@ The code is as follows:
 ```
 
 #### Step 5: Run the index.html file to view the effect.
+
 Task 4 Creating a Functional Loading Animation
 
 #### Step 1: Create the functional loading animation page in the A6 directory. Create a new HTML page named index.html, create a rotating loading animation, and set the header title to "Heavy HTML Page". Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -526,6 +570,7 @@ The code is as follows:
 ```
 
 #### Step 2: Display the page after the animation. It includes Large Text Content, image content, videos, form submission, and Footer Content Here at the bottom. Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -593,6 +638,7 @@ The code is as follows:
 ```
 
 #### Step 3: Style construction.
+
 The code is as follows:
 
 ```html
@@ -750,6 +796,7 @@ The code is as follows:
 ```
 
 #### Step 4: Implement the page function after the loading animation with a 3-second delay.
+
 The code is as follows:
 
 ```html
@@ -766,9 +813,11 @@ The code is as follows:
 ```
 
 #### Step 5: Run the index.html file to view the effect.
+
 Task 5 Image Comparison
 
 #### Step 1: Create the image comparison page in the B9 directory. Create a new HTML page named index.html. The image comparison container contains a splitter element, which displays before.jpg on the left and after.jpg on the right. Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -791,6 +840,7 @@ The code is as follows:
 ```
 
 #### Step 2: Style construction.
+
 The code is as follows:
 
 ```html
@@ -857,6 +907,7 @@ The code is as follows:
 ```
 
 #### Step 3: Initialization call: Execute the init() method to complete the initial setup.
+
 The code is as follows:
 
 ```html
@@ -874,6 +925,7 @@ The code is as follows:
 ```
 
 #### Step 4: Set the initial comparison width and bind the slider events.
+
 The code is as follows:
 
 ```html
@@ -895,6 +947,7 @@ The code is as follows:
 ```
 
 #### Step 5: Slider interaction handling.
+
 The code is as follows:
 
 ```html

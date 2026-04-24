@@ -1,9 +1,11 @@
 # Project 10 Tab Components and Form Controls
 
 ## Content Guide
+
 This project focuses on Bootstrap tab components and form controls. The tab component is a UI component used to create switchable tabs, allowing users to switch between different content sections, each of which can contain distinct content and styles. Meanwhile, Bootstrap provides a comprehensive set of form controls, including &lt;input&gt;, &lt;textarea&gt;, &lt;checkbox&gt;, &lt;radio&gt;, and &lt;select&gt;.
 
 ## Learning Objectives
+
 - ① Master form-related components.
 - ② Master the interactive design of tab components.
 - ③ Be familiar with form validation.
@@ -12,20 +14,25 @@ This project focuses on Bootstrap tab components and form controls. The tab comp
 ## Task 10.1 Information Tabs
 
 ### 10.1.1 Task Description
+
 <p align="center">
   <img src="../../assets/images/project-10/image-001.png" alt="Image">
 </p>
 
 Through this practical project, implement the production of the information tabs module and the contact form section in the tour guide project. The information tabs module mainly includes custom elements to implement tabs, switch tabs on mouse click, and use aria-selected, aria-hidden, aria-labelledby to display the titles and content of the corresponding tabs. The effect of the example is shown in Figure 10-1.
+
 <p align="center"><em>Figure 10-1 Information Tabs</em></p>
 
 ### 10.1.2 Knowledge Preparation
+
 The Bootstrap responsive tab component is a component within the Bootstrap framework used to create switchable tabs with different content. These tabs can automatically adjust their layout based on the device screen size for a better user experience. By using the class names and JavaScript plugins provided by Bootstrap, we can implement interactive functions. Its main features are summarized as follows:
 
 #### 1.Container Layer
+
 Use Bootstrap's container class to achieve responsive layout, with width adapting to screen size. The heading &lt;h2&gt;Other Information&lt;/h2&gt; clearly defines the module theme.
 
 #### 2.Component Layer
+
 Internally, wrap the entire tab component with &lt;div class="tabBox"&gt;, which includes two parts: the navigation tab bar and the content panel.
 
 #### 3.Navigation Tab Bar Attributes
@@ -52,17 +59,27 @@ Internally, wrap the entire tab component with &lt;div class="tabBox"&gt;, which
 | aria-labelledby="tab1-tab" | Associates the corresponding navigation tab button ID. |
 
 ### 10.1.3 Task Implementation
+
 The information tab bar module is divided into the following five steps:
 
 #### Step 1: Create the directory structure as follows:
+
 module_f: Project Root Directory
+
 ├─assets: Directory for images and videos
+
 ├─js: Directory for JavaScript files
+
 ├─css:Directory for style files
+
 ├─bootstrap-5.3.3.min.css
+
 ├─main.css
+
 ├─images:Directory for image resources
+
 ├─video:Directory for video resources
+
 ├─index.html:Entry webpage file
 
 #### Step 2: Edit the index.html file and use the &lt;h2&gt; tag as the heading.
@@ -154,7 +171,9 @@ module_f: Project Root Directory
 ## Task 10.2 Contact Form
 
 ### 10.2.1 Task Description
+
 The contact form module mainly consists of the provided fields: first name, last name, contact email address, and contact phone number, as shown in Figure 6-9.
+
 <p align="center">
   <img src="../../assets/images/project-10/image-002.png" alt="Image">
 </p>
@@ -162,12 +181,15 @@ The contact form module mainly consists of the provided fields: first name, last
 <p align="center"><em>Figure 6-9 Contact Form</em></p>
 
 ### 10.2.2 Knowledge Preparation
+
 Bootstrap form controls reset form styles through class extensions. Using these classes allows customized display effects for more consistent rendering across browsers and devices. Make sure to use appropriate type attributes on all inputs (e.g., email for email addresses or number for numeric information) to take advantage of newer input controls such as email validation and number selection. Its main features are summarized as follows:
 
 #### 1. Container Layer
+
 Use Bootstrap's container class to implement responsive layout with width adapting to screen size. The heading &lt;h2&gt;Other Information&lt;/h2&gt; clearly defines the module theme.
 
 #### 2. Component Layer
+
 Internally, wrap the entire tab component with &lt;div class="tabBox"&gt;, which includes two parts: the navigation tab bar and the content panel.
 
 #### 3. Form Attributes
@@ -200,15 +222,25 @@ Internally, wrap the entire tab component with &lt;div class="tabBox"&gt;, which
 | aria-labelledby="tab1-tab" | Associates the corresponding navigation tab button ID |
 
 ### 10.2.3 Task Implementation
+
 The information tab module is divided into the following 3 steps, as detailed below.
+
 module_f: Project Root Directory
+
 ├─assets: Directory for images and videos
+
 ├─js: Directory for JavaScript files
+
 ├─css:Directory for style files
+
 ├─bootstrap-5.3.3.min.css
+
 ├─main.css
+
 ├─images:Directory for image resources
+
 ├─video:Directory for video resources
+
 ├─index.html:Entry webpage file
 
 #### Step 2: Edit the index.html file, wrap the entire content with a section tag on the outer layer, and set class="container" for responsive layout.

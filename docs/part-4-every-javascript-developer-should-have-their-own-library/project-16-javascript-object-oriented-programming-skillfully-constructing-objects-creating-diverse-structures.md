@@ -1,9 +1,11 @@
 # Project 16 JavaScript Object-Oriented Programming – Skillfully Constructing Objects, Creating Diverse Structures
 
 ## Content Guide
+
 Based on the technical standards of the WorldSkills Competition website, this project modularizes the image comparison function of Module A of the WorldSkills website technology by encapsulating classes through JavaScript object-oriented programming. This class integrates DOM manipulation and style control logic (dynamically adjusting image width and the CSS variable left to position the dividing line), realizing a slider-driven interactive image comparison effect. It not only conforms to the object-oriented principle of "data-behavior integration", but also meets the dual requirements of technical standardization and functional scalability in international skills competitions.
 
 ## Learning Objectives
+
 - ① Master the use and basic operations of objects.
 - ② Master the use of constructor functions.
 - ③ Master the use of Date and Array objects.
@@ -14,7 +16,9 @@ Based on the technical standards of the WorldSkills Competition website, this pr
 ## Task 16.1 The Secret of Maximum and Minimum Values
 
 ### 16.1.1 Task Description
+
 This task implements the function of calculating the extreme values of a user-input number sequence using JavaScript: when the user clicks the "Calculate Maximum and Minimum Values" button, the system obtains the comma-separated string from the input field. After processing such as removing spaces, filtering empty values, and converting to a numeric array, it uses the Math.max() and Math.min() methods to calculate the maximum and minimum values of valid numbers. Finally, the results are dynamically rendered into the corresponding colored result cards on the page, completing the complete interactive process from data input to visual display, which meets the specification requirements of the WorldSkills Competition website technology module for data calculation and dynamic presentation. The effect is shown in Figure 16-1.
+
 <p align="center">
   <img src="../../assets/images/project-16/image-001.png" alt="Image">
 </p>
@@ -24,11 +28,13 @@ This task implements the function of calculating the extreme values of a user-in
 ### 16.1.2 Knowledge Preparation
 
 #### 1. Built-in Objects
+
 There are 17 built-in objects in JavaScript. The commonly used ones include the Array object, Date object, RegExp object, String object, Global object, and Math object. These commonly used objects are introduced as follows:
 
 ##### (1) Array object: An array object that provides properties and methods for array operations.
 
 ##### (2) Date object: A date and time object used to obtain system date and time information.
+
 (3) RegExp object: A regular expression object that uses a single string to describe and match a series of string search patterns conforming to certain syntactic rules.
 
 ##### (4) String object: A string object that provides properties and methods for string manipulation.
@@ -56,6 +62,7 @@ As shown in Table 16-1 below:
 | Math.random() | Returns a random number between 0 and 1, excluding both 0 and 1 |
 
 **Table 16-1 The Math Object**
+
 Usage example:
 
 ```js
@@ -73,7 +80,9 @@ console.log(Math.random());   // Generate a random number between 0 and 1
 ```
 
 #### 3. Date Object
+
 In web applications, we often encounter situations where dates and times need to be processed. JavaScript has a built-in core object Date.
+
 This object can represent all times and dates from milliseconds to years, and provides a series of methods for manipulating dates and times. To use the Date object, you must first create it with the new operator. The Date constructor can generate Date objects for the past, present, and future through optional parameters. There are three common ways to create a Date object:
 
 ##### (1) Without parameters
@@ -97,6 +106,7 @@ let myDaye = new (2025,10,1,10,30,20);
 ```
 
 #### 4. Common Methods of the Date Object
+
 The Date object provides many methods for working with dates and times, as shown in Table 16‑2:
 
 | Method Name | Description |
@@ -112,10 +122,13 @@ The Date object provides many methods for working with dates and times, as shown
 Table 16‑2 Common Methods of the Date Object
 
 #### 5. Array Object
+
 There are several ways to create an array in JavaScript. You can use a constructor or create one directly with square brackets. The specific methods are as follows:
 
 ##### (1) Creating Arrays
+
 There are multiple ways to create an array in JavaScript, either using a constructor or square brackets directly, as shown below:
+
 Format 1: Use a parameterless constructor to create an empty array.
 
 ```js
@@ -139,6 +152,7 @@ let arr = ['HTML','JavaScript','DOM'];
 ```
 
 ##### (1) Common Array Methods
+
 As shown in Table 16‑3:
 
 | Method Declaration | Description |
@@ -157,6 +171,7 @@ As shown in Table 16‑3:
 Table 16‑3 Common Array Methods
 
 ### 16.1.3 Task Implementation
+
 The task "The Secret of Maximum and Minimum Values" is divided into the following six steps, as detailed below.
 
 #### Step 1: Create the HTML page.
@@ -392,7 +407,9 @@ The task "The Secret of Maximum and Minimum Values" is divided into the followin
 ## Task 16.2 The Time Traveler's Diary
 
 ### 16.2.1 Task Description
+
 Refactor a basic time diary application (including diary input, local storage and display functions) from procedural code to an object-oriented implementation. Improve code structure through class encapsulation while avoiding excessive complexity. The final implementation should balance simplicity and maintainability. Prioritize the use of static methods or a minimal class design to reduce redundant code, ensure complete functions and easy expansion, and comply with the modular design specifications of the WorldSkills Competition website technical module. The effect is shown in Figure 16-2.
+
 <p align="center">
   <img src="../../assets/images/project-16/image-002.png" alt="Image">
 </p>
@@ -402,15 +419,19 @@ Refactor a basic time diary application (including diary input, local storage an
 ### 16.2.2 Knowledge Preparation
 
 #### 1. Object-Oriented Programming
+
 An object can be a single entity with properties and types. For example, a car is an object. It has basic parameters such as brand, model, color, price, and so on. These basic parameters can be represented using properties, as shown in Figure 16-3 below.
+
 <p align="center">
   <img src="../../assets/images/project-16/image-003.jpeg" alt="Image">
 </p>
 
 This car:BrandModelColorPrice... ...This car:BrandModelColorPrice... ...Parameter = PropertyParameter = PropertyEntity = ObjectEntity = Object
+
 <p align="center"><em>Figure 16-3 Object-Oriented Programming</em></p>
 
 ##### (1) Basic class Syntax
+
 The class syntax in ES6 is syntactic sugar based on JavaScript prototypal inheritance. It provides a clearer and more intuitive way to define classes, supporting constructors (constructor), instance methods, static methods (static), inheritance (via extends and super), and getters/setters. This makes object-oriented programming cleaner and easier to use, while its underlying implementation is still prototype-based. For example:
 
 ```js
@@ -436,6 +457,7 @@ let point = new Point(2,3);
 ```
 
 ##### (2) constructor Method
+
 Object-oriented programming introduces a clearer way of defining classes through the class syntax, and the constructor is the core method in a class used to initialize instances. For example:
 
 ```js
@@ -450,9 +472,11 @@ console.log(john.name); // Output: John
 ```
 
 When creating an instance of a class using the new keyword, the constructor method runs automatically to initialize the instance’s properties.
+
 this binding: this inside the constructor refers to the newly created instance object.
 
 ##### (3) Class Inheritance
+
 We can use the extends keyword to implement inheritance. A subclass inheriting from a parent class is like inheriting property — it gains all the properties and methods of the parent class. Also, only one parent class can follow extends each time. For example:
 
 ```css
@@ -488,6 +512,7 @@ son1.addMoney();
 Inheritance uses extends. After inheritance, super() must be used to call the parent class's constructor, otherwise an error will occur. When instantiating a subclass with new, parameters are first passed into the subclass's constructor, and then the parent class's constructor is called via super().
 
 ##### (4) Class Static Methods
+
 A class defines static methods using the static keyword. All methods defined in a class are inherited by instances. However, once a method is defined as static, it will not be inherited by instances and can only be called directly through the class.
 
 ```css
@@ -515,6 +540,7 @@ class Foo {
 ```
 
 ### 16.2.3 Task Implementation
+
 The "Time Traveler's Diary" task is divided into the following six steps, as detailed below.
 
 #### Step 1: Create the HTML page.
@@ -675,11 +701,15 @@ The "Time Traveler's Diary" task is divided into the following six steps, as det
 ## Task 16.3 Practical Project – Image Comparison (Module A)
 
 ### 16.3.1 Task Description
+
 In this practical project, you will implement the image comparison feature for the mini speed test project. You are required to use the provided index.html, an empty style.css file, two images (before.jpg and after.jpg), and the splitter.svg file to build the image comparison functionality.
+
 The image comparison container contains a splitter element, which displays before.jpg on the left and after.jpg on the right. You can adjust the display ratio of the two images by clicking the container or dragging the splitter element. As the ratio changes, one image will show more prominently while the other shows less.
 
 ### 16.3.2 Effect Display
+
 The effect of the image comparison is shown in Figure 16-4.
+
 <p align="center">
   <img src="../../assets/images/project-16/image-004.png" alt="Image">
 </p>
@@ -689,6 +719,7 @@ The effect of the image comparison is shown in Figure 16-4.
 ### 16.3.3 Task Implementation
 
 #### Step 1: Create an image comparison page. Create a new HTML page named index.html. The image comparison container contains a splitter element, which displays before.jpg on the left and after.jpg on the right. Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -711,6 +742,7 @@ The code is as follows:
 ```
 
 #### Step 2: Style construction.
+
 The code is as follows:
 
 ```html
@@ -777,6 +809,7 @@ The code is as follows:
 ```
 
 #### Step 3: Initialization call: Execute the init() method to complete the initial settings.
+
 The code is as follows:
 
 ```html
@@ -794,6 +827,7 @@ The code is as follows:
 ```
 
 #### Step 4: Set the initial comparison width and bind the slider events.
+
 The code is as follows:
 
 ```html
@@ -815,6 +849,7 @@ The code is as follows:
 ```
 
 #### Step 5: Slider interaction processing.
+
 The code is as follows:
 
 ```html

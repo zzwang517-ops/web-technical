@@ -1,11 +1,15 @@
 # Project 22 Components and Animations
+
 User Experience Comes First, Details Determine Success or Failure
 
 ## Content Guide
+
 In the process of learning Vue 3, components and transitions are key elements for building smooth and interactive user interfaces. As reusable code blocks, components allow a page to be split into independent, maintainable functional units. We need to master component definition, communication between components, passing data downward via props, and triggering interactions upward through custom events.
+
 Transition rules add smooth animation effects when components are shown or hidden. With Vue 3's built-in &lt;Transition&gt; component, combined with CSS transition or animation class names, you can easily implement effects such as fade-in/fade-out, sliding, and scaling when elements enter or leave the screen.
 
 ## Learning Objectives
+
 - ① Master the declarative definition and registration rules of components.
 - ② Master the definition and dynamic binding of component props to achieve dynamic data transfer between parent and child components.
 - ③ Understand the key role of custom events in communication from child to parent components.
@@ -15,10 +19,15 @@ Transition rules add smooth animation effects when components are shown or hidde
 ## Task 22.1 Theme Switcher
 
 ### 22.1.1 Task Description
+
 This case implements a responsive theme switcher component based on Vue 3's Composition API, including preset theme management, dynamic switching functions, and random theme generation capabilities.
+
 The component should display a grid of theme cards, each containing a visual preview area and a theme name, with the currently selected theme highlighted. Background gradient effects can be switched by clicking buttons, and random theme selection is also supported.
+
 The overall layout uses gradient backgrounds and card-style design, with smooth transition animations to enhance the interactive experience. The code should separate theme data logic (using reactive to manage the theme array) from UI rendering, ensuring a clear structure and easy expansion for new themes.
+
 The effect of the case is shown in Figure 22-1.
+
 <p align="center">
   <img src="../../assets/images/project-22/image-001.png" alt="Image">
 </p>
@@ -26,13 +35,17 @@ The effect of the case is shown in Figure 22-1.
 <p align="center"><em>Figure 22-1 Theme Switcher</em></p>
 
 ### 22.1.2 Knowledge Preparation
+
 I. Composition API
+
 In Vue 3, Props are used to pass data from parent components to child components. Props are a very important concept in Vue 3, and understanding them will help you develop more efficiently with Vue 3.
 
 #### 1. Passing Values from Parent to Child Components (Props)
 
 ##### (1) Declaring Props:
+
 Child components declare the received Props using defineProps, which supports two methods:
+
 ① Array syntax:
 
 ```vue
@@ -47,6 +60,7 @@ defineProps({
 ```
 
 Passing Props
+
 The parent component passes data through attribute binding (v-bind or :), supporting both static values and dynamic data:
 
 ##### (1) Static value passing: directly hardcode the value
@@ -79,7 +93,9 @@ console.log('Title is:', props.title)
 Child to Parent Component Communication (Emit Events)
 
 ##### (1) Declare events:
+
 The child component declares triggerable events using defineEmits, which supports two methods:
+
 ① Array syntax:
 
 ```html
@@ -99,6 +115,7 @@ The child component declares triggerable events using defineEmits, which support
 ```
 
 Triggering Events
+
 The child component triggers events and passes data through the emit method:
 
 ```vue
@@ -115,6 +132,7 @@ const handleClick = () => {
 ```
 
 Listening to Events
+
 The parent component can listen to child component events using @ or v-on:
 
 ```vue
@@ -130,8 +148,11 @@ const handleUpdate = (payload) => {
 ```
 
 II. Composable Functions
+
 Composable functions are functions that encapsulate and reuse state logic based on Vue 3's Composition API. One composable function can call one or more other composable functions. This allows us to build complex logic by combining multiple smaller, logically independent units, just as we assemble an entire application from multiple components.
+
 Usage of Composable Functions
+
 When developing front-end applications, it is often necessary to reuse logic for common tasks. In Vue 3, the corresponding logic can be extracted into external files in the form of composable functions, which can then be imported and used in components.
 
 ##### (1) Definition of Composable Functions:
@@ -158,7 +179,9 @@ setup() {
 ```
 
 ##### (3) Naming Conventions for Composable Functions:
+
 ① Composable functions should be named in camelCase and start with the prefix "use". For example: useFun. They can accept parameters.
+
 ② Even if a composable function does not depend on reactive data from refs or getters, it can still accept them as parameters. If you are writing a composable function for use by other developers, it is best practice to handle parameters that may be refs or getters using the toValue() utility function instead of raw values.
 
 ```js
@@ -170,6 +193,7 @@ export function useFun(params){
 ```
 
 ##### (4) Return Value:
+
 ① Composable functions conventionally always return an ordinary non-reactive object containing multiple refs. This ensures that the object remains reactive after being destructured into refs in the component.
 
 ```js
@@ -349,6 +373,7 @@ Random Theme
 ```
 
 #### Step 5: Navigate to the src/App.vue page, use the randomTheme function to generate a random theme when the button is clicked, and insert the following code.
+
 The randomTheme function is included in the complete `useThemeManager()` example above.
 
 #### Step 6: Enter the command npm run dev to start the project and check the effect.
@@ -356,11 +381,17 @@ The randomTheme function is included in the complete `useThemeManager()` example
 ## Task 22.2 Dancing Code, Code Rainfall
 
 ### 22.2.1 Task Description
+
 Three animation effect tasks need to be completed in Vue 3:
+
 First, implement a combined animation for elements with both fade-in/fade-out and sliding effects, creating smooth visual transitions by controlling changes in transparency and position.
+
 Second, design an interactive animation triggered by clicks. When users click an element, the element produces a combined dynamic effect of bouncing and rotating to enhance interactive fun.
+
 Third, develop a 3D rotation animation. Using CSS 3D transformation features, elements are rotated and displayed in a three-dimensional space to improve the page's three-dimensional sense and visual appeal.
+
 The effect of the case is shown in Figure 22-2.
+
 <p align="center">
   <img src="../../assets/images/project-22/image-002.png" alt="Image">
 </p>
@@ -368,10 +399,13 @@ The effect of the case is shown in Figure 22-2.
 Figure 22‑2 Dancing Code, Code Rainfall
 
 ### 22.2.2 Knowledge Preparation
+
 Vue.js transitions enable various transition effects when page elements appear and disappear. Vue provides multiple ways to apply transition effects when inserting, updating, or removing DOM elements. Vue offers a built-in transition wrapper component, which is used to wrap elements or components that need transition effects.
+
 In short, developers can use Vue's &lt;transition&gt; component combined with CSS animations, CSS transitions, or direct DOM manipulation via JavaScript to animate elements or components.
 
 #### 1. Transitions
+
 A transition refers to adding animation effects during display switching, such as fade-in/fade-out, sliding animations, flying-in effects, and so on. Readers can understand how Vue's CSS transitions work through the following examples.
 
 ```vue
@@ -392,6 +426,7 @@ const toggle = () => { show.value = !show.value };
 ```
 
 The transition effect wraps the element to be animated with the &lt;transition&gt;&lt;/transition&gt; tag and is displayed according to the name attribute.
+
 The following implements a fade-in and fade-out switching effect for content through a toggle button operation, with the code as follows.
 
 ```html
@@ -443,6 +478,7 @@ In the above example, the transition element is used to wrap the element that ne
 ##### (4) .fade-slide-leave-to: Defines the ending state of the element’s leaving animation
 
 #### 2. animations
+
 Common transitions are CSS transitions. The usage of CSS animations is the same as that of CSS transitions. The difference is that in CSS animations, the v-enter class name is not removed immediately after the node is inserted into the DOM, but when the animationend event is triggered. You can understand how Vue’s CSS animations work through the following example, with the code as follows.
 
 ```vue
@@ -539,6 +575,7 @@ const handleAnimationEnd = () => {
 ```
 
 #### 3. JavaScript Hooks
+
 JavaScript transitions refer to transition effects implemented using JavaScript hook functions. These hook functions can be used in conjunction with CSS transitions/animations or independently. When using only JavaScript transitions, the done callback is required in both enter and leave; otherwise, they will be called synchronously and the transition will complete immediately. The code is as follows.
 
 ```vue
@@ -758,11 +795,15 @@ class="cube"
 ## Task 22.3 Project Practice – Photo Slideshow System – Order Photos (Module E)
 
 ### 22.3.1 Task Description
+
 This project practice implements the image file loading module in the photo slideshow system project. Users can load images by dragging and dropping image files into the drop area, and these images will then be displayed and played with themed animations.
+
 When CSS is unavailable or disabled, users can still select photo files via the file input. The photos will then be loaded and listed on the webpage without any styles applied.
 
 ### 22.3.2 Effect Display
+
 The effect display of the switching operation is shown in Figure 22-3.
+
 <p align="center">
   <img src="../../assets/images/project-22/image-003.png" alt="Image">
 </p>
@@ -772,6 +813,7 @@ Figure 22‑3 Import Photos
 ### 22.3.3 Task Implementation
 
 #### Step 1: Use the command npm create vite@latest project-name --template vue to generate a project named module_e-src. The project directory structure is as follows:
+
 34_module_e: Directory for storing static resource files (mainly used for initializing photos)
 
 ```text
@@ -801,6 +843,7 @@ module_e-src
 ```
 
 #### Step 2: Load and import the switching file in the App.vue file.
+
 The code is as follows:
 
 ```vue
@@ -826,6 +869,7 @@ import {ref} from "vue";
 ```
 
 #### Step 4: Import the configuration file in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```html
@@ -838,6 +882,7 @@ The code is as follows:
 ```
 
 #### Step 5: Implement the button style logic in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```js
@@ -851,6 +896,7 @@ return "btn-fill text-primary";
 ```
 
 #### Step 6: Implement the image import function in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```css
@@ -884,11 +930,15 @@ function dropFiles(e) {
 ## Task 22.4 Project Practice – Photo Slideshow System – Order Photos (Continued, Module E)
 
 ### 22.4.1 Task Description
+
 This practical project implements the image file loading module in the photo slideshow system. Users can load images by dragging and dropping image files into the drop zone, and these images will then be displayed and played with themed animations.
+
 When CSS is unavailable or disabled, users can still select photo files through the file input. The photos will then be loaded and listed on the web page without any styles applied.
 
 ### 22.4.2 Effect Display
+
 The effect of the switching operation is shown in Figure 22-4.
+
 <p align="center">
   <img src="../../assets/images/project-22/image-004.png" alt="Image">
 </p>
@@ -898,6 +948,7 @@ Figure 22‑4 Order Photos
 ### 22.4.3 Task Implementation
 
 #### Step 1: Use the command npm create vite@latest project-name --template vue to generate a project named module_e-src. The project directory structure is as follows:
+
 34_module_e: Directory for storing static resource files (mainly used for initializing photos)
 
 ```text
@@ -928,6 +979,7 @@ module_e-src
 ```
 
 #### Step 2: Load and import the order photo file in the App.vue file.
+
 The code is as follows:
 
 ```vue
@@ -940,6 +992,7 @@ import {ref} from "vue";
 ```
 
 #### Step 3: Implement the photo ordering page in the components/OrderingArea.vue file.
+
 The code is as follows:
 
 ```vue
@@ -963,6 +1016,7 @@ The code is as follows:
 ```
 
 #### Step 4: Implement the styles for ordering photos in the components/OrderingArea.vue file.
+
 The code is as follows:
 
 ```html
@@ -1007,6 +1061,7 @@ The code is as follows:
 ```
 
 #### Step 5: Load the core files in the components/OrderingArea.vue file.
+
 The code is as follows:
 
 ```js
@@ -1017,6 +1072,7 @@ import {ref} from "vue";
 ...Define initial values
 
 #### Step 6: Define the initial values in the components/OrderingArea.vue file.
+
 The code is as follows:
 
 ```js
@@ -1042,6 +1098,7 @@ function grabDown(item) {
 ```
 
 #### Step 8: Implement the drag operation when the mouse is pressed down in the components/OrderingArea.vue file.
+
 The code is as follows:
 
 ```js
@@ -1054,6 +1111,7 @@ function grabMove(e) {
 ```
 
 #### Step 9: Implement the drag-and-drop operation when the mouse is released in the components/OrderingArea.vue file.
+
 The code is as follows:
 
 ```js
@@ -1077,6 +1135,7 @@ window.removeEventListener("mouseup", grabUp);
 ```
 
 #### Step 10: Implement the drag-and-drop operation when hovering over other items in the components/OrderingArea.vue file.
+
 The code is as follows:
 
 ```js

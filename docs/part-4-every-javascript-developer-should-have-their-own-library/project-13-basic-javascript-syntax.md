@@ -1,11 +1,15 @@
 # Project 13 Basic JavaScript Syntax
+
 --- Great Things Come from Small Beginnings
 
 ## Content Guide
+
 This project systematically teaches basic JavaScript syntax through five progressive tasks. Although the programming journey starts with the first Hello, World!, the excitement goes far beyond that. Beginning with simple programs, learners will gradually master the basic code format and core syntax rules, including common input and output statements (such as console.log()), heading tag manipulation, and commenting standards for single-line // and multi-line /* */ comments.
+
 Taking the Mini Speed Test project in Module A of the WorldSkills Competition Web Technology as a practical scenario, this project integrates syntax elements such as variable declaration, conditional judgment, and loop control into interactive function development. Through tasks including dynamic timing and key response, it strengthens DOM operation and event handling capabilities, ultimately achieving an integrated improvement of both syntax application and engineering practice abilities.
 
 ## Learning Objectives
+
 - ① Master the definition of variables.
 - ② Master JavaScript data types.
 - ③ Master conditional statements and loop statements.
@@ -14,10 +18,15 @@ Taking the Mini Speed Test project in Module A of the WorldSkills Competition We
 ## Task 13.1 The Programming Journey Begins with the First "Hello, World!", But the Excitement Goes Far Beyond That
 
 ### 13.1.1 Task Description
+
 In the introductory stage of JavaScript programming, when you first write console.log("Hello, World!"); in the editor and press the run button, the long-dormant code will be activated in the browser console.
+
 It is not only ceremonial code for verifying that the development environment is ready, but also allows beginners to intuitively experience the interaction between code and reality through instant feedback in the browser console.
+
 After mastering DOM manipulation, with just a simple click, you can make a button do the robot dance, put funny sunglasses on a cat picture, and make it wiggle its hips to the music. What is this if not programming? It is clearly directing a wonderful life with code.
+
 The effect of the example is shown in Figure 13-1.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-001.png" alt="Image">
 </p>
@@ -27,10 +36,13 @@ The effect of the example is shown in Figure 13-1.
 ### 13.1.2 Knowledge Preparation
 
 #### 1. Output Statements and Comments
+
 In previous content, we have learned a lot of basic knowledge about JavaScript. Every language has its corresponding output and input statements. Below we will learn relevant knowledge in JavaScript.
 
 ##### (1) Common Input and Output Statements
+
 ① document.write
+
 This statement outputs content into the web page.
 
 ```html
@@ -42,6 +54,7 @@ document.write("<h2>When your code fails to run, don't lose heart. It's just a s
 ```
 
 ② alert
+
 This statement pops up a dialog box with an OK button.
 
 ```
@@ -49,6 +62,7 @@ alert("You are standing at the starting point of your programming growth, about 
 ```
 
 ③ confirm
+
 This statement pops up a dialog box containing OK and Cancel buttons.
 
 ```css
@@ -61,6 +75,7 @@ alert("A little secret: If you run away now, you'll regret it in the future~");
 ```
 
 ④console.log
+
 This statement outputs content to the console.
 
 ```js
@@ -68,6 +83,7 @@ console.log("Hello World! Code is like coffee—bitter at first sip, yet sweet i
 ```
 
 Press the F12 key in Chrome to open the console, find the Console tab, and you can see the content printed by console.log, as shown in Figure 13-2.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-002.png" alt="Image">
 </p>
@@ -75,6 +91,7 @@ Press the F12 key in Chrome to open the console, find the Console tab, and you c
 <p align="center"><em>Figure 13-2 Console output result</em></p>
 
 #### 2.Code Comments
+
 （1）Single-line Comment
 
 ```html
@@ -120,6 +137,7 @@ Press the F12 key in Chrome to open the console, find the Console tab, and you c
 ##### (2) Names must begin with a letter.
 
 ##### (3) Names can also start with and.​
+
 (4)Case−sensitive:JavaScriptvariablenamesarecase−sensitive.Forexample,name and $Name are two different variables.
 
 ##### (5) Reserved words (such as JavaScript keywords) cannot be used as variable names.
@@ -127,6 +145,7 @@ Press the F12 key in Chrome to open the console, find the Console tab, and you c
 ##### (6) For multi-word variable names, you can use camelCase or connect multiple words with an underscore.
 
 ### 13.1.3 Task Implementation
+
 Life is like a journey, which is divided into the following three steps, as detailed below.
 
 #### Step 1: Create an HTML page.
@@ -186,10 +205,15 @@ Life is like a journey, which is divided into the following three steps, as deta
 ## Task 13.2 The Wonderful Blend of Numbers and Strings: The Mystery of '1' + '1' = '11'
 
 ### 13.2.1 Task Description
+
 Among JavaScript data types, when numbers wear the "cloak" of strings, the + operator quietly turns into a "concatenation expert"!
+
 For example, with '1' + '1', when these two string partners meet, the + sign is no longer dull arithmetic addition, but a "master of concatenation". It directly combines the two 1s into a new string '11'.
+
 At this moment, the real number 2 stamps its feet in anger: "I’m clearly the correct answer!" But the plus sign laughs and says: "In the world of strings, we only join for fun, not for calculation!"
+
 The page effect is shown in Figure 13-3.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-003.png" alt="Image">
 </p>
@@ -199,13 +223,17 @@ Figure 13‑3 The Wonderful Blend of Numbers and Strings
 ### 13.2.2 Knowledge Preparation
 
 #### 1. Data Types
+
 JavaScript is a weakly typed language, which means you do not need to specify a data type when creating a variable; you can assign a value directly. However, variables themselves do have types. JavaScript data types are divided into two categories: value types and reference types.
+
 Value types (also called primitive types):String, Number, Boolean, Undefined, Null.
+
 Reference data types:Object, Array, Function.
 
 #### 2. Basic Types
 
 ##### (1) String
+
 A string is a piece of text enclosed in single or double quotes. For example:
 
 ```js
@@ -214,6 +242,7 @@ let str2 = "Life is like a cup of tea—it won't be bitter for a lifetime, but i
 ```
 
 ##### (2) Boolean
+
 The Boolean type, also known as logical type, is one of the most commonly used types in JavaScript. It has only two values: true and false. These are special values.
 
 ```js
@@ -222,6 +251,7 @@ let mark = false;
 ```
 
 ##### (3) Number
+
 The Number type includes integers and floating-point numbers. For example:
 
 ```js
@@ -230,9 +260,11 @@ let num2 = 3.1415;
 ```
 
 ##### (4) Infinity
+
 When a number used in JavaScript is larger than the maximum value JavaScript can represent,JavaScript will output it as Infinity, meaning infinity. If a number is smaller than the minimum value JavaScript can represent, it will also output Infinity.
 
 ##### (5) NaN
+
 Short for "not a number". It usually results from arithmetic operations mixing numbers and non-numbers. You can use the isNaN() function to check whether a result is NaN.
 
 ```js
@@ -243,6 +275,7 @@ isNaN(123);        // false, it is a number
 ```
 
 ##### (6) Undefined
+
 When a variable is declared but not assigned a value, its default value is undefined. For example:
 
 ```js
@@ -252,7 +285,9 @@ let myHeight;
 Only the variable myHeight is declared, but no value is assigned. At this point, the value stored in myHeight is undefined.
 
 ##### (7) Null
+
 The value null represents an empty value, used to indicate an object that does not yet exist. When a variable is declared but not assigned any value, or when attempting to return an object that does not exist, the value will be null.
+
 In fact, undefined is derived from null, so JavaScript treats them as equal. For example:
 
 ```js
@@ -265,9 +300,11 @@ console.log(a == b); // Returns true
 Although the two values are equal, their meanings are different:undefined means a variable is declared but not assigned;null means the variable has been explicitly assigned an empty value.
 
 #### 3.Data Type Conversion
+
 Data type conversion refers to converting one data type to another. It is common to convert data to string type, numeric type, or Boolean type.
 
 ##### (1) Convert to String Type
+
 There are three ways to convert to a string:
 
 | Method | Example |
@@ -277,10 +314,13 @@ There are three ways to convert to a string:
 | + | let PI = 3.14; PI + '' |
 
 **Table 13-1**
+
 The + operator is used for string concatenation. Any numeric type concatenated with a string using + will be implicitly converted to a string.
 
 ##### (2) Convert to Numeric Type
+
 It is common to convert numeric strings to numeric types, such as '10', '123', '3.1415'.
+
 There are four ways to convert to a number:
 
 | Method | Example |
@@ -307,9 +347,13 @@ console.log('123' / 1)
 ```
 
 ##### (3) Convert to Boolean Value
+
 There is only one method to convert to a Boolean value: Boolean()
+
 Numeric and string values will be converted to true
+
 Empty strings and 0 will be converted to false
+
 undefined, null, and NaN will be converted to false
 
 ```js
@@ -329,13 +373,19 @@ console.log(Boolean(undefined)); // false
 #### 4. Variable Operations
 
 ##### (1) Determine the Type of a Variable
+
 Basic format:
+
 The function is_integer() checks whether a variable is an integer.
+
 The function is_string() checks whether a variable is a string.
+
 The function is_double() checks whether a variable is a floating-point number.
+
 The function is_array() checks whether a variable is an array.
 
 ##### (2) Get the Type of a Variable
+
 Basic format:
 
 ```
@@ -343,7 +393,9 @@ gettype(variable) gets the type of the variable
 ```
 
 #### 5.String Extensions
+
 ES6 has enhanced support for Unicode and extended the string object. In practical applications, template strings are commonly used. A template string is an enhanced version of a string, identified by backticks ( `). It can be used as a regular string, to define multi-line strings, or to embed variables within a string.
+
 We can understand template strings by comparing them with traditional string definitions:
 
 ```js
@@ -352,8 +404,11 @@ var str =
 ```
 
 "&lt;h1&gt;Commonly Used Technologies for Frontend Development&lt;/h1&gt;" +
+
 "&lt;ul&gt;" +
+
 "&lt;li&gt;HTML5&lt;/li&gt;" +
+
 "&lt;li&gt;CSS3&lt;/li&gt;" +
 
 ```html
@@ -372,6 +427,7 @@ var str =`
 ```
 
 `
+
 Template strings support line breaks conveniently without using the + operator for concatenation. If you need to insert variables, you can wrap the variable with ${ }.
 
 ```js
@@ -382,6 +438,7 @@ console.log(str);
 ```
 
 The running result of the above code is shown in Figure 13-4:
+
 <p align="center">
   <img src="../../assets/images/project-13/image-004.png" alt="Image">
 </p>
@@ -389,6 +446,7 @@ The running result of the above code is shown in Figure 13-4:
 <p align="center"><em>Figure 13-4 Output result using variables in template strings</em></p>
 
 ### 13.2.3 Task Implementation
+
 The wonderful fusion of numbers and strings: The mystery of '1' + '1' = '11' is divided into the following three steps, as detailed below.
 
 #### Step 1: Create an HTML page
@@ -468,7 +526,9 @@ The wonderful fusion of numbers and strings: The mystery of '1' + '1' = '11' is 
 ## Task 13.3 Age Calculator: Time Travel Using Arithmetic Operators
 
 ### 13.3.1 Task Description
+
 Age Calculator: Time Travel Using Arithmetic Operators. Operators and variables are essential components of any programming language. An operator is a symbol that performs a specific operation on one or more operands, also known as an operation symbol. We will understand operators through practical project examples. The page effect is shown in Figure 13-5.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-005.png" alt="Image">
 </p>
@@ -478,7 +538,9 @@ Figure 135 Age Calculator: Time Travel Using Arithmetic Operators
 ### 13.3.2 Knowledge Preparation
 
 #### 1. Arithmetic Operators
+
 Arithmetic operators in JavaScript include addition +, subtraction -, multiplication *, division /, modulus %, increment ++, and decrement --, as shown in Table 13‑1:
+
 Table 13‑1 Arithmetic Operators
 
 | Arithmetic Operator | Example | Description |
@@ -507,7 +569,9 @@ console.log(b);     // The output value is 19
 ```
 
 Prefix and Postfix:Increment and decrement operators can be placed before or after a variable.
+
 a++: ++ after the variable is called postfix increment. Return first, then calculate.
+
 ++a: ++ before the variable is called prefix increment. Calculate first, then return.
 
 ```js
@@ -517,9 +581,13 @@ console.log(++a);      // 12, increments a first, then outputs the value
 ```
 
 #### 2. String Operators
+
 In JavaScript, the + sign has two meanings:When used between numbers, it performs arithmetic addition;It acts as a string concatenation operator.
+
 It returns a new string formed by joining its left and right operands. This operator can concatenate not only two strings but also a string with any scalar value, always resulting in a new string.
+
 Assignment Operators
+
 Assignment operators are used to assign values to variables. They are binary operators, where the left operand must be a variable and the right operand can be an expression. Common operators include: =, +=, -=, *=, /=, %=, as shown in Table 13-2:
 
 **Table 13-2 Assignment Operators**
@@ -533,7 +601,6 @@ Assignment operators are used to assign values to variables. They are binary ope
 | /= | x /= y | x = x / y |
 | %= | x %= y | x = x % y |
 
-
 ```js
 var a = 10;     // Assignment operator
 // Equivalent to a = a + 5; calculate a + 5 first, then assign the result to a
@@ -543,6 +610,7 @@ a -= 2;
 ```
 
 #### 4. Comparison Operators
+
 Comparison operators, also known as relational operators, are used to compare the operands on both sides of the operator. The result of the operation is a Boolean value.Comparison operators include: &gt;, &lt;, &gt;=, &lt;=, ==, !=, ===, !==, as shown in Table 13-3:
 
 **Table 13-3 Comparison Operators**
@@ -559,9 +627,13 @@ Comparison operators, also known as relational operators, are used to compare th
 | &lt;= | A&lt;=b | Less than or equal to |
 
 #### 4. Logical Operators
+
 Logical operators are used to determine whether a condition is "true" or "false".
+
 The operands of logical operators can only be Boolean values, and the result after evaluation is also a Boolean value.
+
 The operators include: AND (&&), OR (||), NOT (!), as shown in Table 13‑4:
+
 Table 13‑4 Logical Operators
 
 | Logical Operators | Example | Equivalent To |
@@ -571,6 +643,7 @@ Table 13‑4 Logical Operators
 | ！ | !a | Logical NOT (opposite) |
 
 ### 13.3.3 Task Implementation
+
 Age Calculator: Time Travel Using Arithmetic Operators is divided into the following three steps, as detailed below.
 
 #### Step 1: Create an HTML page.
@@ -671,7 +744,9 @@ Age Calculator: Time Travel Using Arithmetic Operators is divided into the follo
 ## Task 13.4 Weather Forecaster: Intelligent Dialogue Between Conditional Statements and API Data
 
 ### 13.4.1 Task Description
+
 Weather Forecaster: Intelligent Dialogue Between Conditional Statements and API Data. This project demonstrates how to use conditional statements to handle different weather scenarios, and provide personalized advice based on conditions such as temperature and weather conditions. Different conditional branches are triggered according to different user questions. The page effect is shown in Figure 13-6.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-006.png" alt="Image">
 </p>
@@ -681,9 +756,11 @@ Figure 13‑6 Weather Forecaster
 ### 13.4.2 Knowledge Preparation
 
 #### 1.if...else Statement
+
 The if...else statement is called a branching structure. This structure requires conditional judgment and executes code based on the result.
 
 ##### (1) Using if alone
+
 Basic format:
 
 ```html
@@ -740,9 +817,13 @@ code block n;
 In this way, a multi-level if statement can be created. Once one condition is satisfied, the remaining conditions will not be evaluated. If none of the previous conditions are met, the final else block will be executed.
 
 #### 4. Ternary Operator
+
 Syntax structure of the ternary operator:
+
 condition ? statement1 : statement2
+
 Execution flow of the ternary expression:
+
 First evaluate the condition. If the result is true, execute statement1 and return its result; if false, execute statement2 and return its result.
 
 ```js
@@ -773,6 +854,7 @@ let a == flag ? 1 : 0;
 ```
 
 #### 5.switch
+
 The switch statement is another branching structure that executes different code blocks based on the value of an expression.
 
 ```css
@@ -815,9 +897,11 @@ switch(tmp) {
 ```
 
 The variable tmp is initialized to 3. The switch statement matches tmp with case 3, so "This is 3333" is printed to the console.If tmp is changed to 0, "This is 0000" is printed.
+
 If tmp is changed to 6, none of the cases match, so the default code runs and prints "No matches found at all".
 
 ### 13.4.3 Task Implementation
+
 The Weather Forecaster: Intelligent Dialogue Between Conditional Statements and API Data is divided into the following three steps, as detailed below.
 
 #### Step 1: Create an HTML page.
@@ -933,7 +1017,9 @@ The Weather Forecaster: Intelligent Dialogue Between Conditional Statements and 
 ## Task 13.5 The Problem: How Long Does It Take a Frog to Jump Out of a Well
 
 ### 13.5.1 Task Description
+
 The problem of how long it takes a frog to jump out of a well contains the content we need to learn. We simulate the frog’s daily jumping process using loops. To solve this problem, we must master the for loop in JavaScript for fixed-step iteration scenarios. The page effect is shown in Figure 13-7.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-007.png" alt="Image">
 </p>
@@ -943,7 +1029,9 @@ The problem of how long it takes a frog to jump out of a well contains the conte
 ### 13.5.2 Knowledge Preparation
 
 #### 1. for Loop
+
 If you want to run the same code over and over again, you can use a loop.
+
 Basic format:
 
 ```
@@ -953,8 +1041,11 @@ code block
 ```
 
 The assignment expression initializes a variable to control the starting point of the loop.
+
 The result of the condition expression must be true or false. When the result is true, the code block inside the curly braces is executed; when false, the loop ends.
+
 The increment/decrement expression sets the increase or decrease of the variable.
+
 Example 1: Output 100 asterisks on the page.
 
 ```js
@@ -964,6 +1055,7 @@ for(let i = 0;i < 100; i++){
 ```
 
 The variable i in the example above can also be used inside the loop. This variable can be used to write more versatile code.
+
 Example 2: Output numbers from 1 to 100
 
 ```js
@@ -979,8 +1071,11 @@ console.log(sum);
 ```
 
 #### 2.While
+
 Unlike the for loop, which creates a variable and sets constraints directly, the while loop is more suitable for situations where the number of executions is unknown in advance. As long as the condition is true, the while loop will keep executing the code block.
+
 Its basic syntax is as follows:
+
 Basic format:
 
 ```
@@ -1000,6 +1095,7 @@ while (i < 10) {
 ```
 
 ### 13.5.3 Task Implementation
+
 The problem of how long it takes a frog to jump out of a well is divided into the following three steps, as detailed below.
 
 #### Step 1: Create an HTML page.
@@ -1084,7 +1180,9 @@ The problem of how long it takes a frog to jump out of a well is divided into th
 ## Task 13.6 Array Sorting Rules for "Music Chart"
 
 ### 13.6.1 Task Description
+
 The music chart example covers the content we need to learn. Through this music chart case, we understand the application of arrays, retrieve data via arrays, and display the song rankings (1st to 5th places), song names and artist information. To implement a music chart, you need to master the application of arrays in JavaScript. The page effect is shown in Figure 13-8.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-008.png" alt="Image">
 </p>
@@ -1094,7 +1192,9 @@ The music chart example covers the content we need to learn. Through this music 
 ### 13.6.2 Knowledge Preparation
 
 #### 1. Declaring an Array
+
 An array is used to store multiple pieces of data in a single variable. There are two ways to declare an array in JavaScript: using a literal and using the new keyword.
+
 Basic format:
 
 ```js
@@ -1104,20 +1204,29 @@ let arr3 = [1, 'BYD', 'Han', true];
 ```
 
 The first statement declares an array using the literal method, which stores 3 values. The literal method is the most commonly used.
+
 The second statement declares an array using the new keyword, which also stores 3 values.
 
 #### 2. Accessing Array Elements
+
 An array can store multiple pieces of data, each stored in a separate element. Each element has a number called an index (or subscript). Indexes start at 0 and increase sequentially, as shown in Figure 13‑9.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-009.png" alt="Image">
 </p>
 
 Figure 13‑9 Array Structure
+
 The array arr3 has four elements, so its length is 4.
+
 The first element, at index 0, stores the value 1.
+
 The second element, at index 1, stores the value BYD.
+
 The third element, at index 2, stores the value Han.
+
 The fourth element, at index 3, stores the value true.
+
 You can use the index to find or modify the value of the corresponding element.
 
 ```js
@@ -1129,13 +1238,19 @@ arr3[3] = false;
 ```
 
 The first statement finds the element of arr3 at index 0 and prints it to the console using console.log.
+
 The second statement finds the element of arr3 at index 1 and prints it to the console.
+
 The third statement returns undefined because arr3 has no element at index 4.
+
 The fourth statement finds the element of arr3 at index 2 and changes its value to 'Tang'.
+
 The fifth statement finds the element at index 3 and changes its value to false.
 
 #### 3. Array Traversal
+
 Array traversal means operating on each element in the array one by one.
+
 Example: Output the value of each element in the array
 
 ```js
@@ -1150,9 +1265,11 @@ for (var i = 0; i < arr.length; i++) {
 ```
 
 With the traditional method, we must output each element by its index one by one. This is impractical when there are many elements, as it requires a large amount of code. The only repeated action is console.log(arr[x]); everything else is the same except for the changing value of x. This structure is highly suitable for implementation using a loop.
+
 length in arr.length is a property that returns the length of the array. In this example, the array has 3 elements, so its length is 3, and the value of arr.length is 3, which perfectly meets the needs of the loop.
 
 ### 13.6.3 Task Implementation
+
 The "Music Chart" task is divided into the following three steps, as detailed below.
 
 #### Step 1: Create an HTML page.
@@ -1315,7 +1432,9 @@ The "Music Chart" task is divided into the following three steps, as detailed be
 ## Task 13.7 Making a "Simple Calculator" with Functions
 
 ### 13.7.1 Task Description
+
 The "Simple Calculator" example covers the content we need to learn. Through this simple calculator project, we understand the declaration and invocation of functions. After the user enters the first number, the second number, and an operator, the result will be displayed on the page. To implement a simple calculator, you need to master the application of functions in JavaScript. The page effect is shown in Figure 13‑10.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-010.png" alt="Image">
 </p>
@@ -1325,8 +1444,11 @@ Figure 13‑10 Simple Calculator
 ### 13.7.2 Knowledge Preparation
 
 #### 1. Function Definition and Invocation
+
 Functions in JavaScript are defined using the function keyword. It is very convenient to use functions to encapsulate key code when a large section of code needs to be reused.
+
 A function can be defined as follows. Once defined, it will not be executed immediately; it will only run when called. The basic syntax for defining a function is as follows:
+
 Basic format:
 
 ```js
@@ -1345,6 +1467,7 @@ Explanation:
 ##### (3) The function body is written inside curly braces.
 
 ##### (4) The return statement is used to set the return value of the function and is also optional.
+
 Example:
 
 ```css
@@ -1371,6 +1494,7 @@ add(10, 20);
 ```
 
 #### 2. Variable Scope
+
 Scope refers to the area where a variable takes effect. In JavaScript, there are two types: local scope and global scope.
 
 ##### (1) Global Scope: Variables declared within a &lt;script&gt; tag are valid across the entire page.
@@ -1399,6 +1523,7 @@ console.log(password);
 ```
 
 ### 13.7.3 Task Implementation
+
 The "Simple Calculator" task is divided into the following three steps, as detailed below.
 
 #### Step 1: Create the HTML page.
@@ -1462,7 +1587,9 @@ The "Simple Calculator" task is divided into the following three steps, as detai
 ## Task 13.8 Collaboration of Objects and Functions for "Smart Lighting"
 
 ### 13.8.1 Task Description
+
 The "Smart Lighting" case covers the content we need to learn. Brightness adjustment (range 0–100) is realized by dragging the slider and clicking buttons. The system adopts a modular design: the state management module maintains the current brightness value and handles boundary verification; the input control module listens to the real-time input event of the slider and the click event of the buttons to implement continuous adjustment and step adjustment respectively; the UI synchronization module automatically updates the value display and slider position when the state changes, ensuring the three states are consistent. The page effect is shown in Figure 13‑11.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-011.png" alt="Image">
 </p>
@@ -1472,22 +1599,31 @@ The "Smart Lighting" case covers the content we need to learn. Brightness adjust
 ### 13.8.2 Knowledge Preparation
 
 #### 1.Basic Objects
+
 An object is a collection of properties and methods used to describe a thing.
+
 For example, to describe a mobile phone product:
+
 A mobile phone has basic parameters such as brand, color, size, and weight, as well as functions like making calls, playing games, listening to music, and watching videos.
+
 Generally, these basic parameters can be represented by properties, and functions can be defined by methods, as shown in Figure 13-12 below:
+
 <p align="center">
   <img src="../../assets/images/project-13/image-012.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 13-12 Object</em></p>
+
 Another important concept in JavaScript is that everything is an object. This means that everything is an object—strings, arrays, numbers, and so on can all be regarded as objects.
+
 There are three ways to create objects in JavaScript: object literal, new Object(), and constructor functions. We will introduce each of them below.
 
 #### 2. Object Literal
 
 ##### (1) Declaring an Object
+
 An object literal is a set of key-value pairs enclosed in curly braces. A key is also called a property name and can be customized. A value is also called a property value and can be any data type.
+
 The following example uses an object to describe a mobile phone product:
 
 ```css
@@ -1504,11 +1640,15 @@ let phone = {
 ```
 
 In the example above, the variable phone is declared and assigned an object.
+
 brand, color, hardware on the left side of the object are called property names.
+
 'AIWA', 'Charming Red' on the right side are called property values.
+
 It can be seen that property values can be any data type (note: function is also a data type).
 
 ##### (2) Accessing Properties and Methods
+
 There are two ways to access properties and methods:object.propertyName or object['propertyName']
 
 ```js
@@ -1519,6 +1659,7 @@ phone.tel(18612345678);           // When you define a method with formal parame
 ```
 
 ##### (3) this
+
 Inside an object, to access the object's own properties and methods, you must use the this keyword.
 
 ```css
@@ -1533,7 +1674,9 @@ userInfo.show();     // Welcome back, respected administrator: admin
 ```
 
 ##### (4) Constructor Function
+
 A constructor function is a special type of function.Properties and methods can be declared inside a constructor function, but they must be specified with this.
+
 After the constructor function is declared, you need to use the new keyword to instantiate it and create an object.
 
 ```js
@@ -1550,6 +1693,7 @@ console.log(h.age);        // 30
 ```
 
 ### 13.8.3 Task Implementation
+
 The "Lighting Control" task is divided into the following four steps, as detailed below.
 
 #### Step 1: Create the HTML page.
@@ -1667,10 +1811,13 @@ The "Lighting Control" task is divided into the following four steps, as detaile
 ## Task 13.9 Practical Project – Fractal Triangle (Module A)
 
 ### 13.9.1 Task Description
+
 In this practical project, you will create a fractal triangle for a mini speed test program.The interface includes a canvas area, a form for entering numbers, and a button.After entering the number of iterations and clicking the button, a fractal image will be drawn.The generated image has an equilateral triangle structure.
 
 ### 13.9.2 Effect Display
+
 The effect of the fractal triangle is shown in Figure 13‑13.
+
 <p align="center">
   <img src="../../assets/images/project-13/image-013.png" alt="Image">
 </p>
@@ -1680,7 +1827,9 @@ Figure 13‑13 Fractal Triangle
 ### 13.9.3 Task Implementation
 
 #### Step 1: Create the fractal triangle page.
+
 Create a new HTML page named index.html.It contains a canvas area, a form for entering numbers, and a button.Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -1701,6 +1850,7 @@ The code is as follows:
 ```
 
 #### Step 2: Style construction.
+
 The code is as follows:
 
 ```html
@@ -1741,6 +1891,7 @@ The code is as follows:
 ```
 
 #### Step 3: Clear the canvas and draw the initial large triangle.
+
 The code is as follows:
 
 ```html

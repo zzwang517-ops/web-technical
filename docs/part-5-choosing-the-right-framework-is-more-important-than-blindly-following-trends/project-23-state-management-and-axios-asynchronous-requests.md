@@ -1,11 +1,15 @@
 # Project 23 State Management and Axios Asynchronous Requests
+
 ---Code as a Boat Sailing to the Shore of Full-Stack Development, Breaking Through Waves
 
 ## Content Guide
+
 In project development based on Vue 3, we will delve into the state management mechanism, learn how to manage all component states of the application through centralized storage, and realize efficient data sharing and synchronous updates between components.
+
 At the same time, we will systematically study Axios asynchronous request technology, use its concise API design to achieve secure communication with backend servers, and efficiently handle HTTP requests and responses.
 
 ## Learning Objectives
+
 - ① Master the core concepts of Vuex and the state management mechanism.
 - ② Proficiently use Axios to complete front-end and back-end data interaction.
 - ③ Understand the necessity of calling Axios in Actions.
@@ -14,9 +18,13 @@ At the same time, we will systematically study Axios asynchronous request techno
 ## Task 23.1 Q&A Interactive System
 
 ### 23.1.1 Task Description
+
 This task implements a lightweight Q&A interactive system based on Vue 3, adopting the Composition API to manage question-and-answer states via ref/reactive. It integrates the InputArea sub-component to realize v-model two-way binding and form submission, and uses the dynamically rendered MessageList component to display the dialogue flow of user/AI dual roles.
+
 With a gradient background, rounded cards and shadow design to create a fresh visual style, the final system supports real-time input capture, two-way dialogue display and random intelligent replies.
+
 The effect of the case is shown in Figure 23-1.
+
 <p align="center">
   <img src="../../assets/images/project-23/image-001.png" alt="Image">
 </p>
@@ -24,9 +32,11 @@ The effect of the case is shown in Figure 23-1.
 Figure 23‑1 Q&A, Easy Interaction
 
 ### 23.1.2 Knowledge Preparation
+
 Axios is a Promise-based HTTP client for both browsers and Node.js. It provides a rich set of APIs for sending HTTP requests such as GET, POST, PUT, DELETE, and supports request and response interceptors, automatic JSON data conversion, request cancellation, and other features.
 
 #### 1. Install Axios
+
 Install Axios using NPM with the following command:
 
 ```
@@ -34,6 +44,7 @@ npm install axios --save
 ```
 
 #### 2.Import Axios
+
 After installation, import Axios in the components that need to use it. Import it in the file.
 
 ```html
@@ -43,6 +54,7 @@ After installation, import Axios in the components that need to use it. Import i
 ```
 
 #### 3.GET Request
+
 As can be seen from the previous examples, a GET request without parameters can directly obtain data by concatenating the backend API address.
 
 ```html
@@ -62,6 +74,7 @@ axios.get('/users', { params: { id: 123 } });
 ```
 
 #### 4. POST Request
+
 GET requests can be used to retrieve required data from the server. If the form data from the frontend needs to be sent to the server for processing, a POST request is required.The syntax of a POST request is similar to that of a GET request.
 
 ```css
@@ -69,6 +82,7 @@ axios.post('/users', { name: 'Alice', age: 25 });
 ```
 
 #### 5.Other Methods
+
 Methods such as PUT, DELETE, and PATCH are used in a similar way, specified by the method parameter.
 
 ```css
@@ -80,6 +94,7 @@ axios({
 ```
 
 #### 6.Interceptors
+
 Request interceptors are used to uniformly set tokens and process request parameters. Sample code is as follows:
 
 ```
@@ -90,11 +105,15 @@ return config;
 ```
 
 #### 7.Requesting Local JSON Data
+
 One of the advantages of Vue.js is that it enables complete separation of front-end and back-end development. Therefore, during development, back-end APIs often lag behind page development, making it necessary to simulate back-end API response results.Requesting and using local JSON data in Vue is an important part of project development. Below is an explanation of how to use Axios to request JSON data in Vue files.
 
 ##### (1) File location: Create a JSON file in the assets directory of the project:
+
 assets/
+
 ├── data.json
+
 Sample content of the JSON file is as follows: assets/data.json
 
 ```
@@ -290,9 +309,13 @@ isLoading.value = false
 ## Task 23.2 One‑Click Control of Your Smart Life
 
 ### 23.2.1 Task Description
+
 In the One‑Click Control of Your Smart Life application built with Vue 3, users can manage all smart home devices conveniently through a unified control panel with just one click.
+
 Entering a command triggers Vuex state management to synchronously update device status, render lighting brightness and air temperature, and intelligently switch device icons and operation interfaces with conditional rendering.
+
 The effect of the case is shown in Figure 23‑2.
+
 <p align="center">
   <img src="../../assets/images/project-23/image-002.png" alt="Image">
 </p>
@@ -300,10 +323,13 @@ The effect of the case is shown in Figure 23‑2.
 Figure 23‑2 One‑Click Control of Your Smart Life
 
 ### 23.2.2 Knowledge Preparation
+
 Pinia is a state management library for Vue. It provides a simpler and more intuitive way to manage the state of Vue applications. Inspired by Vuex, Pinia uses the Composition API to simplify state management code.
+
 Pinia originated from an experiment in November 2019, aiming to offer a state management solution with the Composition API for Vue. Its design goal is to become an alternative to Vuex, the official state management library. It supports both Vue 2 and Vue 3, and does not require developers to use the Composition API mandatorily.
 
 #### 1. Installation of Pinia
+
 Install Pinia using NPM with the following command:
 
 ```
@@ -311,6 +337,7 @@ npm install Pinia
 ```
 
 #### 2.PiniaImport Pinia
+
 Import Pinia in the project's main.js file and use the createApp method to initialize it. Sample code is as follows:
 
 ```js
@@ -318,6 +345,7 @@ import { createPinia} from 'pinia';
 ```
 
 #### 3.Store
+
 A container that stores application state. Each Store is an independent module. Sample code is as follows:
 
 ```css
@@ -345,6 +373,7 @@ export const useUserStore = defineStore('user', () => {
 ```
 
 #### 4.State
+
 Stores application data and supports reactivity. It can be defined and used within the Store. The Store allows direct access and modification. Sample code is as follows:
 
 ```js
@@ -368,7 +397,9 @@ const useStore = defineStore('store-id', () => {
 ```
 
 #### 5.Getters (Computed Properties)
+
 Getters are similar to the computed properties in Vue components. They are values calculated based on the current state.
+
 Getters are reactive and will update automatically when the state they depend on changes. Sample code is as follows.
 
 ```js
@@ -388,7 +419,9 @@ const useStore=defineStore('counter'，()=>{
 ```
 
 #### 6.Actions
+
 Actions are similar to methods in Vue components. They are functions used to modify the state.
+
 Actions can contain asynchronous operations, and state changes can be handled with the helper functions provided by Pinia. Sample code is as follows.
 
 ```js
@@ -677,12 +710,17 @@ Life
 ## Task 23.3 Project Practice – Photo Slideshow System – Command Bar (Module E)
 
 ### 23.3.1 Task Description
+
 This project practice implements the command bar module in the photo slideshow system project. Users can display the command bar by pressing CTRL+K or typing "/". They can return to the normal state from the command bar dialog by pressing the ESC key.
+
 The command bar is usually positioned in the center of the screen. When the command bar is activated, the rest of the web page will be dimmed. While the command bar is displayed, different options will appear below the command bar input field.
+
 Users can select different options using the Up and Down arrow keys on the keyboard. The selected option should be highlighted so that users can clearly identify it. When the user presses the ENTER key, the selected option will be executed as a command.
 
 ### 23.3.2 Effect Display
+
 The effect of the switching operation is shown in Figure 23‑3.
+
 <p align="center">
   <img src="../../assets/images/project-23/image-003.png" alt="Image">
 </p>
@@ -692,6 +730,7 @@ The effect of the switching operation is shown in Figure 23‑3.
 ### 23.3.3 Task Implementation
 
 #### Step 1: Use the command npm create vite@latest project-name --template vue to create a project named module_e-src. The project directory structure is as follows:
+
 34_module_e: This directory stores static resource files (mainly used for initializing photos).
 
 ```text
@@ -723,6 +762,7 @@ module_e-src
 ```
 
 #### Step 2: Implement the command bar page in the CommandArea.vue file.
+
 The code is as follows:
 
 ```vue
@@ -747,6 +787,7 @@ The code is as follows:
 ```
 
 #### Step 3: Implement the command bar styles in the CommandArea.vue file.
+
 The code is as follows:
 
 ```html
@@ -764,6 +805,7 @@ The code is as follows:
 ```
 
 #### Step 4: Implement the configuration file in the CommandArea.vue file.
+
 The code is as follows:
 
 ```html
@@ -775,6 +817,7 @@ The code is as follows:
 ```
 
 #### Step 5: Search for the following keywords in the command bar in the CommandArea.vue file.
+
 The code is as follows:
 
 ```js
@@ -785,6 +828,7 @@ watch(commandKeyword, () => location.value = 0);
 ```
 
 #### Step 6: Define the command list in the CommandArea.vue file.
+
 The code is as follows:
 
 ```css
@@ -857,6 +901,7 @@ const commands = computed(() => {
 ```
 
 #### Step 7: Implement the drag operation when the mouse is pressed down in the CommandArea.vue file.
+
 The code is as follows:
 
 ```js
@@ -876,6 +921,7 @@ if (e.code === "Enter" && commands.value[location.value]) {
 ```
 
 #### Step 8: Implement up and down navigation events in the CommandArea.vue file.
+
 The code is as follows:
 
 ```

@@ -1,9 +1,11 @@
 # Project 24 Comprehensive Project - Photo Slideshow System (Module E)
 
 ## Content Guide
+
 After systematically mastering the core features and reactivity principles of Vue 3, this project will use the Vue 3 knowledge system to develop a comprehensive practical project - the Photo Slideshow System. The project covers five core modules: Module 1: Loading Image Files, Module 2: Ordering Photos, Module 3: Slideshow Operations, Module 4: Themes, and Module 5: Command Bar.
 
 ## Learning Objectives
+
 - ① Apply reactive data and state management, master the core reactivity mechanism of Vue 3 through ref and reactive, and implement reactive management of data such as image data, current index, and carousel status. Be able to derive computed properties using computed to reduce duplicate calculations and optimize performance.
 - ② Apply component-based development and directive system, use the v-for directive to render image lists, combine v-bind to dynamically bind image paths, style classes and interactive attributes, and listen to user click events (such as switch buttons and autoplay control) via @.
 - ③ Apply transition animations and dynamic effects, use the transition component to add fade-in and fade-out animations for the display/hide of a single image to enhance visual effects.
@@ -19,21 +21,35 @@ After systematically mastering the core features and reactivity principles of Vu
 | 5 | Command Bar | 3.75 |
 
 #### 24.2 Project Introduction
+
 In this project, the client requires you to create a photo slideshow tool. Users can load external photos or load sample photos into the slideshow. The photos will then appear one by one, stay for a few seconds, and then disappear. Depending on the applied theme, the appearance and disappearance of photos may include transitions and animations.
+
 The photo slideshow supports different playback modes:
+
 Manual mode using the left and right arrow keys on the keyboard.
+
 Auto-play mode, where photos play automatically and loop back to the first photo after the last one is displayed.
+
 Shuffle mode, where a random photo is displayed after a few seconds. In this mode, the slideshow plays continuously and never ends.
+
 The photo slideshow can also be switched to full-screen viewing. When in full screen, the browser toolbar and Windows taskbar will be hidden.
 
 #### 24.3 Requirement Analysis
+
 The photo slideshow system is divided into five major tasks:
+
 Task 1: Loading image files
+
 Task 2: Ordering photos
+
 Task 3: Slideshow operations
+
 Task 4: Themes
+
 Task 5: Command bar
+
 The functional description of each task is as follows.The functional task structure diagram of the project is shown in Figure 24-1.
+
 <p align="center">
   <img src="../../assets/images/project-24/image-001.png" alt="Image">
 </p>
@@ -41,41 +57,63 @@ The functional description of each task is as follows.The functional task struct
 <p align="center"><em>Figure 24-1 Functional Structure Diagram</em></p>
 
 #### 1.Photo Slideshow Project Tasks
+
 The photo slideshow project includes the following tasks: Task 1: Loading Image Files, Task 2: Ordering Photos, Task 3: Slideshow Operations, Task 4: Themes, and Task 5: Command Bar.
+
 In this project, the client requires you to create a photo slideshow tool. Users can load external photos or load sample photos into the slideshow. The photos will then appear one by one, stay for a few seconds, and then disappear. Depending on the applied theme, transitions and animations may be applied when photos appear and disappear.
 
 ##### (1) Loading Image Files
+
 In this task, users can load images by dragging and dropping image files into the drop area. The images will then be displayed and played with animations according to the selected theme.
+
 If CSS is unavailable or disabled, users can still select photo files via the file input. The photos will then be loaded and listed on the webpage without any styles applied.
 
 ##### (2) Ordering Photos
+
 In this task, within the configuration panel, users can sort the selected photos by dragging and dropping them.
 
 ##### (3) Slideshow Operations
+
 This task requires implementing the slideshow operation module. Core functions include:
+
 Configuration: A configuration panel with three sections: operation mode, active theme switching, and photo ordering.
+
 Mode Switching: Users can switch among three operation modes on the panel: manual control, auto-play, and random play.
+
 Theme Switching: Users can switch between themes A to F in the panel.
+
 Photo Ordering: Within the configuration panel, users can sort selected photos by dragging and dropping.
 
 ##### (4) Themes
+
 This task implements the theme module. The first five themes are predefined: Theme A, B, C, D, and E. A custom Theme F will also be created.
+
 Theme A: Displays photos and titles directly without any effects.
+
 Theme B: The active photo moves from left to center, then exits the screen by moving from center to right. The title follows the same left-to-right animation but starts with a 300-millisecond delay.
+
 Theme C: The active photo moves from bottom to center, then exits the screen by moving upward from the center. The subtitle is split into several words, each with a 300-millisecond animation delay.
+
 Theme D: The active photo slides in from the left side of the screen to the center and stays there. The next photo slides in and overlays the active one. Each photo has a slight random rotation between -5 and 5 degrees. Photos should occupy approximately 85% of the screen space rather than the full screen. The varying rotations create a stacked photo effect. Each photo has a 3px white border with a 5px border-radius, and a thicker bottom border to accommodate the title. The title is placed at the bottom of the photo with a white background matching the photo border.
+
 Theme E: The active photo is displayed in the center of the screen. The current photo then shows a door-opening effect: it splits into left and right halves, which rotate in 3D perspective toward the screen to simulate opening doors. The next photo appears from behind and becomes active after the current photo disappears.
 
 ##### (5) Command Bar
+
 This task implements the command bar module.
+
 Users can show the command bar by pressing CTRL+K or typing "/". They can return to the normal state from the command bar dialog by pressing the ESC key.
+
 The command bar is normally positioned in the center of the screen. When activated, the rest of the webpage is dimmed.
+
 While the command bar is displayed, various options appear below the command input. Users can select different options using the Up and Down arrow keys on the keyboard. The selected option is highlighted for clear user feedback.
 
 #### 24.4 Page Design
 
 ### 24.4.1 Directory Structure
+
 The project name is module_e-src, and the resource folder contains the following directory:
+
 34_module_e: This directory stores static resource files (mainly used for initializing photos).
 
 ```text
@@ -109,7 +147,9 @@ module_e-src
 ### 24.4.2 Design Ideas
 
 ##### (1) Loading Image Files
+
 In this task, users can load images by dragging and dropping image files into the drop area, and the images will then be displayed and played according to the selected theme.When CSS is unavailable or disabled, users can still select photo files via the file input. The photos will then be loaded and listed on the webpage without any styles applied, as shown in Figure 24-2.
+
 <p align="center">
   <img src="../../assets/images/project-24/image-002.png" alt="Image">
 </p>
@@ -117,7 +157,9 @@ In this task, users can load images by dragging and dropping image files into th
 Figure 24‑2 Loading Image Files
 
 ##### (2) Ordering Photos
+
 This task mainly implements the photo ordering module. In this configuration panel, users can sort the selected photos by dragging and dropping them, as shown in Figure 24‑3.
+
 <p align="center">
   <img src="../../assets/images/project-24/image-003.png" alt="Image">
 </p>
@@ -125,10 +167,15 @@ This task mainly implements the photo ordering module. In this configuration pan
 Figure 24‑3 Ordering Photos
 
 ##### (3) Slideshow Operations
+
 This task mainly implements the slideshow operation module, which contains a configuration panel with three sections: operation mode, active theme switching, and photo ordering.
+
 Mode switching: Users can switch among three operation modes on the panel: manual control, auto-play, and random play.
+
 Theme switching: Users can switch between themes A to F in the panel.
+
 The effect is shown in Figure 24‑5.
+
 <p align="center">
   <img src="../../assets/images/project-24/image-004.png" alt="Image">
 </p>
@@ -136,11 +183,17 @@ The effect is shown in Figure 24‑5.
 Figure 24‑5 Slideshow Operations
 
 ##### (4) Themes
+
 This task mainly implements the theme module. The first five themes are predefined: Theme A, B, C, D and E. You will then create your own Theme F.
+
 Theme A displays photos and titles directly without any effects.
+
 In Theme B, the active photo moves from the left to the center, then moves from the center to the right and exits the screen. For the title, the title element follows the same left-to-right animation but starts with a 300-millisecond delay.
+
 In Theme C, the active photo moves from the bottom to the center, then moves upward from the center and exits the screen. For the subtitle, it is split into several words, each with a 300-millisecond animation delay.
+
 In Theme D, the active photo slides in from the left side of the screen to the center and stays there. The next photo slides in and is placed on top of the active photo. Each photo has a slight random rotation between -5 degrees and 5 degrees. These photos should not occupy the entire screen space; they should take up about 85% of it. The different rotations create a stacked photo effect. Each photo has a 3px white border with a 5px border-radius, and a thicker bottom border. The title is placed at the bottom of the photo with a white background matching the photo border, as shown in Figure 24‑6.
+
 <p align="center">
   <img src="../../assets/images/project-24/image-005.png" alt="Image">
 </p>
@@ -148,11 +201,17 @@ In Theme D, the active photo slides in from the left side of the screen to the c
 Figure 24‑6 Themes
 
 ##### (5) Command Bar
+
 This task mainly implements the command bar module. Users can display the command bar by pressing CTRL+K or typing "/". They can return to the normal state from the command bar dialog by pressing the ESC key.
+
 The command bar is usually positioned in the center of the screen. When the command bar is activated, the rest of the web page will be dimmed. While the command bar is displayed, different options will appear below the command bar input field.
+
 Users can select different options using the Up and Down arrow keys on the keyboard. The selected option should be highlighted so that users can clearly identify it. When the user presses the ENTER key, the selected option will be executed as a command.
+
 The command bar includes the following commands:
+
 Switch to Manual Control Mode, Switch to Auto-play Mode, Switch to Shuffle Mode, Switch to Theme A, Switch to Theme B, Switch to Theme C, Switch to Theme D, Switch to Theme E, Switch to Theme F,as shown in Figure 24‑7.
+
 <p align="center">
   <img src="../../assets/images/project-24/image-006.png" alt="Image">
 </p>
@@ -160,6 +219,7 @@ Switch to Manual Control Mode, Switch to Auto-play Mode, Switch to Shuffle Mode,
 <p align="center"><em>Figure 24-7 Command Bar</em></p>
 
 #### 24.5 Project Implementation
+
 Task 1 Loading Image Files
 
 #### Step 1: generate the project using the command"npm create vite@latest project-name --template vue".
@@ -240,6 +300,7 @@ export const currentImage = computed(() => {
 ```
 
 #### Step 7: Import and load the homepage file in App.vue.
+
 The code is as follows:
 
 ```vue
@@ -297,6 +358,7 @@ import EffectF from "@/components/EffectF.vue";
 ```
 
 #### Step 9: Load images in components/EffectA.vue.
+
 The code is as follows:
 
 ```vue
@@ -314,6 +376,7 @@ import {currentImage} from "@/store.js";
 ```
 
 #### Step 10: Implement template rendering in the components/SlideController.vue file.
+
 The code is as follows:
 
 ```vue
@@ -345,6 +408,7 @@ The code is as follows:
 ```
 
 #### Step 11: Apply style control in the components/SlideController.vue file.
+
 The code is as follows:
 
 ```html
@@ -367,6 +431,7 @@ The code is as follows:
 ```
 
 #### Step 12: Define the full-screen control function in the components/SlideController.vue file, placing it below the imported packages.
+
 The code is as follows:
 
 ```js
@@ -384,6 +449,7 @@ function toggleFullscreen() {
 ```
 
 #### Step 13: Implement the sample data loading logic in the components/SlideController.vue file, placing it below the full-screen control function.
+
 The code is as follows:
 
 ```js
@@ -412,6 +478,7 @@ if (import.meta.env.DEV) {
 ```
 
 #### Step 14: Implement the initialization of the core slideshow logic in the components/SlideController.vue file, placing it below the sample data loading logic.
+
 The code is as follows:
 
 ```js
@@ -452,6 +519,7 @@ if (appMode.value === "RANDOM") {
 ```
 
 #### Step 15: Implement keyboard event listening in the components/SlideController.vue file, placing it below the initialization of the core slideshow logic.
+
 The code is as follows:
 
 ```js
@@ -468,6 +536,7 @@ addEventListener("keydown", function (e) {
 ```
 
 #### Step 16: Implement dynamic theme component mapping in the components/SlideController.vue file, placing it below the keyboard event listener.
+
 The code is as follows:
 
 ```css
@@ -485,6 +554,7 @@ const themeComponent = computed(() => {
 ```
 
 #### Step 17: Implement responsive listening configuration in the components/SlideController.vue file, placing it below the dynamic theme component mapping.
+
 The code is as follows:
 
 ```css
@@ -494,6 +564,7 @@ watch([appMode, appTheme, appImages], setSlideInterval, {deep: true, immediate: 
 Task 2 Slideshow Operations
 
 #### Step 18: Import the configuration file in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```html
@@ -504,6 +575,7 @@ The code is as follows:
 ```
 
 #### Step 19: Implement button style logic in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```js
@@ -518,6 +590,7 @@ return "btn-fill text-primary";
 ```
 
 #### Step 20: Implement template rendering in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```vue
@@ -550,6 +623,7 @@ RANDOM
 ```
 
 #### Step 21: Apply style control in the components/SettingArea.vue file.
+
 The code is as follows:
 
 ```html
@@ -571,6 +645,7 @@ The code is as follows:
 Task 3 Switch Themes
 
 #### Step 22: Implement the theme section in the components/SettingArea.vue file, placing it below the switch operations.
+
 The code is as follows:
 
 ```html
@@ -607,6 +682,7 @@ The code is as follows:
 ```
 
 #### Step 23: Implement Theme B in the components/EffectB.vue file (Requirement: The activity photo moves from the left to the center, then moves from the center to the right and exits the screen. For the title, the title element follows the left-to-right animation but starts with a 300-millisecond delay).
+
 The code is as follows:
 
 ```vue
@@ -645,6 +721,7 @@ import {currentImage, currentImageIndex} from "@/store.js";
 ```
 
 #### Step 24: Implement Theme C in the components/EffectC.vue file (Requirement: The event photo moves from the bottom to the middle of the top, then moves from the middle to the top and exits the screen. For the subtitle, it is divided into several words, and each word has an animation delay of 300 milliseconds).
+
 The code is as follows:
 
 ```vue
@@ -711,7 +788,9 @@ function getWords(caption) {
 ```
 
 #### Step 25: Implement Theme D in the components/EffectD.vue file
+
 (Requirement: The event photo slides in from the left side of the screen to the center and stays there. The next photo slides in and overlays the current one. Each photo has a slight random rotation between -5 and 5 degrees. The photos should not occupy the entire screen; they should take up about 85% of the screen space. The varying rotations create a stacked photo effect. Each photo has a 3px white border with a border radius of 5px, and the bottom border appears thicker due to the variation. The title should be positioned at the bottom of the photos with a background color matching the white border of the photos.)
+
 The code is as follows:
 
 ```vue
@@ -790,7 +869,9 @@ function getRotateStyle(item) {
 ```
 
 #### Step 26: Implement Theme E in the components/EffectE.vue file
+
 (Requirement: The active photo is displayed in the center of the screen. Then a door-opening effect is applied to the current photo. The active photo is split into two halves: the left half and the right half. The left and right halves then rotate in 3D perspective toward the screen to create a door-opening effect. The next photo appears from back to front and becomes active after the current photo disappears.)
+
 The code is as follows:
 
 ```vue
@@ -841,7 +922,9 @@ watch(currentImage, (value, oldValue, onCleanup) => {
 ```
 
 #### Step 27: Implement Theme F in the components/EffectF.vue file
+
 (Requirement: Please create a new theme named "Theme F". You can define the photo sliding transition and subtitle animation.)
+
 The code is as follows:
 
 ```vue
@@ -937,7 +1020,9 @@ function cellImage(x, y) {
 Task 4 Order Photos
 
 #### Step 28: Implement image upload in the components/SettingArea.vue file
+
 (Requirement: Users can load images by dragging and dropping image files into the drop area, and these images will then be displayed and played according to the theme animations. When CSS is unavailable or disabled, users can still select photo files via the file input. The photos will then be loaded and listed on the web page without any styles applied.)
+
 The code is as follows:
 
 ```html
@@ -953,6 +1038,7 @@ The code is as follows:
 ```
 
 #### Step 29: Upload a single file through the input form in the components/SettingArea.vue file. Place it below the classes for selected and unselected buttons.
+
 The code is as follows:
 
 ```css
@@ -984,7 +1070,9 @@ function dropFiles(e) {
 ```
 
 #### Step 30: Implement photo ordering in the components/OrderingArea.vue file
+
 (Requirement: In this configuration panel, users can sort the selected photos by dragging and dropping them.)
+
 The code is as follows:
 
 ```vue
@@ -1098,7 +1186,9 @@ function grabStyle(item) {
 Task 5 Command Bar
 
 #### Step 31: Implement the command bar in the components/CommandArea.vue file
+
 (Requirement: Users can display the command bar by pressing CTRL+K or the / key. Users can return to the normal state from the command bar dialog by pressing the ESC key. The command bar is usually positioned in the middle of the screen, and the rest of the web page will be dimmed when the command bar is activated. Various options will be displayed below the command bar input during its rendering. Users can select different options by pressing the up and down arrow keys on the keyboard. The selected option should be highlighted for user recognition. When the user presses the ENTER key, the selected option will be executed as a command. The following commands are available in the command bar: Switch to Manual Control Mode, Switch to Auto Play Mode, Switch to Shuffle Mode, Switch to Theme A, Switch to Theme B, Switch to Theme C, Switch to Theme D, Switch to Theme E, Switch to Theme F.)
+
 The code is as follows:
 
 ```vue
@@ -1224,6 +1314,7 @@ aside {
 ```
 
 #### Step 32: Update and implement the trigger keyboard event in the App.vue file.
+
 The code is as follows:
 
 ```js

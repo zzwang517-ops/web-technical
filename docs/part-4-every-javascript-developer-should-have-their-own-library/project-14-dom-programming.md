@@ -1,10 +1,13 @@
 # Project 14 DOM Programming
+
 --- A journey of a thousand miles begins with a single step.
 
 ## Content Guide
+
 In the JavaScript section of WorldSkills website technology, DOM programming implements dynamic interaction by manipulating the Document Object Model. Taking the graphics comparison module of the mini speed test project as an example, developers use document.getElementById() or querySelector() to precisely locate DOM elements, dynamically update test data and graphic status through innerHTML / textContent, monitor user operations with addEventListener() to trigger real-time redrawing, and manage style classes using classList.toggle() for visual feedback. Finally, efficient DOM operations ensure that the graphics comparison module maintains smooth interface response and accurate visual presentation even under high-speed data updates.
 
 ## Learning Objectives
+
 - ① Understand the DOM model.
 - ② Master the methods of locating DOM elements.
 - ③ Master the methods of manipulating nodes using Core DOM.
@@ -13,7 +16,9 @@ In the JavaScript section of WorldSkills website technology, DOM programming imp
 ## Task 14.1 Smart Home System – Bringing Intelligence into Life
 
 ### 14.1.1 Task Description
+
 In the smart home system that brings intelligence into life, operators and variables are essential components of any programming language. An operator is a symbol that performs a certain operation on one or more operands, also known as an operation symbol. We will understand operators through practical project examples, and the effect is shown in Figure 14‑1.
+
 <p align="center">
   <img src="../../assets/images/project-14/image-001.png" alt="Image">
 </p>
@@ -23,8 +28,11 @@ In the smart home system that brings intelligence into life, operators and varia
 ### 14.1.2 Knowledge Preparation
 
 #### 1. What is DOM
+
 DOM stands for Document Object Model.
+
 When a user visits a web page, the browser parses each HTML element. The DOM parses the document into a structured set of nodes and objects (objects containing properties and methods), forming a hierarchical node structure known as the DOM tree.
+
 All nodes in the tree can be accessed through scripting languages such as JavaScript. All HTML element nodes can be created, added, or removed.
 
 ##### (1) In the DOM hierarchical nodes, the page is represented as a hierarchical node diagram.
@@ -36,6 +44,7 @@ All nodes in the tree can be accessed through scripting languages such as JavaSc
 ##### (4) Text inside HTML elements is a text node.
 
 ##### (5) Each HTML attribute is an attribute node.
+
 Analyze the following HTML structure:
 
 ```html
@@ -52,6 +61,7 @@ Analyze the following HTML structure:
 ```
 
 When visiting the page, the browser parses each HTML element, creates a virtual structure of the HTML document, and stores it in memory. The HTML page is then converted into a tree structure, where each HTML element becomes a leaf node connected to the parent branch, as shown in Figure 14‑2.
+
 <p align="center">
   <img src="../../assets/images/project-14/image-002.png" alt="Image">
 </p>
@@ -61,6 +71,7 @@ Figure 14‑2 Node Tree Structure
 #### 2. Locating Page Elements
 
 ##### (1) getElementById Method
+
 This method retrieves the corresponding element by the node's id value. Since the id value is unique, only one element can be obtained.
 
 ```html
@@ -73,6 +84,7 @@ This method retrieves the corresponding element by the node's id value. Since th
 ```
 
 ##### (2) getElementsByTagName Method
+
 This method retrieves elements by their tag name. Because multiple identical tags may appear on a page, the result is a pseudoarray.
 
 ```html
@@ -85,6 +97,7 @@ This method retrieves elements by their tag name. Because multiple identical tag
 ```
 
 ##### (3) getElementsByClassName Method
+
 This method retrieves elements by their class attribute value. Because multiple tags may use the same class name on a page, the result is a pseudo‑array.
 
 ```html
@@ -98,6 +111,7 @@ This method retrieves elements by their class attribute value. Because multiple 
 Since both the div and p tags have the class name a, both elements can be retrieved at the same time.
 
 ##### (4) querySelector Method
+
 This method obtains a tag object using a CSS selector. Basic selectors, compound selectors, and new CSS3 selectors are all supported. This method returns only one tag object.
 
 ```html
@@ -113,6 +127,7 @@ This method obtains a tag object using a CSS selector. Basic selectors, compound
 ```
 
 ##### (5) querySelectorAll Method
+
 This method obtains tag objects using a CSS selector. Basic selectors, compound selectors, and new CSS3 selectors are all supported. This method can get multiple tag objects at the same time.
 
 ```html
@@ -128,6 +143,7 @@ This method obtains tag objects using a CSS selector. Basic selectors, compound 
 ```
 
 ### 14.1.3 Task Implementation
+
 The "Smart Home System" is divided into the following five steps, as detailed below.
 
 #### Step 1: Create the HTML page.
@@ -500,7 +516,9 @@ The "Smart Home System" is divided into the following five steps, as detailed be
 ## Task 14.2 Mall Bookstore System – Making Management Easier
 
 ### 14.2.1 Case Description
+
 The frontend dynamically renders the product list (including book title, price, stock and other information) via innerHTML to realize product display. The backend uses local storage (localStorage) to persistently save product data, user shopping cart status and order records, ensuring data will not be lost after page refresh. Meanwhile, it supports administrators to add, delete and modify product information through interfaces, finally realizing a lightweight bookstore management solution without a server. The page effect is shown in Figure 143.
+
 <p align="center">
   <img src="../../assets/images/project-14/image-003.png" alt="Image">
 </p>
@@ -510,9 +528,13 @@ The frontend dynamically renders the product list (including book title, price, 
 ### 14.2.2 Knowledge Preparation
 
 #### 1. innerHTML Method
+
 innerHTML is a property of DOM elements, used to get or set the HTML content inside an element (including tags, text, styles, etc.).
+
 Reading: element.innerHTML returns a string representation of the HTML inside the element (including all child nodes and tags).
+
 Writing: element.innerHTML = "new content" will completely replace the existing content of the element and parse the new string into DOM nodes.
+
 Example:
 
 ```html
@@ -529,7 +551,9 @@ Example:
 ```
 
 #### 2. localStorage
+
 The localStorage has a permanent lifetime. When data is stored using localStorage, the data will not disappear even if you close the browser. This means that the information will exist forever unless the user actively clears the localStorage data.
+
 The general storage size is 5MB, and it is only saved on the client side (i.e., the browser) and does not participate in communication with the server. localStorage can be shared across different windows under the same origin, but cannot be shared across different browsers.
 
 ```
@@ -545,6 +569,7 @@ The commonly used methods of localStorage are shown in Table 14‑1 below:
 | localStorage.removeItem(key) | Deletes a specified saved item from localStorage |
 
 Table 14‑1 Commonly used localStorage methods
+
 Example of using localStorage:
 
 ```js
@@ -558,6 +583,7 @@ localStorage.removeItem('password');
 ```
 
 The storage location of localStorage is shown in Figure 14-4:
+
 <p align="center">
   <img src="../../assets/images/project-14/image-004.png" alt="Image">
 </p>
@@ -565,6 +591,7 @@ The storage location of localStorage is shown in Figure 14-4:
 <p align="center"><em>Figure 14-4 localStorage Storage Location</em></p>
 
 ### 14.2.3 Task Implementation
+
 The mall bookstore system is divided into the following five steps, as detailed below.
 
 #### Step 1: Create the HTML page.
@@ -852,10 +879,13 @@ The mall bookstore system is divided into the following five steps, as detailed 
 ## Task 14.3 Project Practice – Multiple Calculators (Module A)
 
 ### 14.3.1 Task Description
+
 Through this practical project, implement the creation of multiple calculators in the mini speed test project. Calculators can be added, and multiple calculators can be inserted. Each calculator can perform increment and decrement operations independently.
 
 ### 14.3.2 Effect Display
+
 The effect display of multiple calculators is shown in Figure 14-5.
+
 <p align="center">
   <img src="../../assets/images/project-14/image-005.png" alt="Image">
 </p>
@@ -865,6 +895,7 @@ The effect display of multiple calculators is shown in Figure 14-5.
 ### 14.3.3 Task Implementation
 
 #### Step 1: Create a page for multiple calculators. Create a new HTML page named index.html with an Add a counter button. Write the page structure.
+
 The code is as follows:
 
 ```html
@@ -884,6 +915,7 @@ The code is as follows:
 ```
 
 #### Step 2: Style construction.
+
 The code is as follows:
 
 ```html
@@ -967,6 +999,7 @@ The code is as follows:
 ```
 
 #### Step 3: Dynamically generate calculator components.
+
 The code is as follows:
 
 ```html
@@ -989,6 +1022,7 @@ The code is as follows:
 ```
 
 #### Step 4: Counter operation functions.
+
 The code is as follows:
 
 ```html

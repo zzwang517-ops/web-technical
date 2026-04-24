@@ -1,9 +1,11 @@
 # Project 2 Quick Start to HTML ----- Simplicity is the beauty of code, making content more understandable
 
 ## Content Guide
+
 In this project, you will master relevant knowledge through five tasks. By creating your first page, you will learn the basic structure and syntax of HTML, as well as common HTML tags such as heading tags, paragraph tags, text formatting tags, empty tags and block tags. By building a daily news list, you will understand list tags, hyperlinks and image tags. By designing a course information table, you will learn to use table tags and their common attributes. By completing a campus survey form, you will learn form tags and related controls. Finally, by finishing a website login page, you will comprehensively use the knowledge learned in this project to improve practical skills.
 
 ## Learning Objectives
+
 - Understand the basic structure and syntax of HTML.
 - Master the usage of common HTML tags.
 - Master the usage of lists, hyperlinks and image tags.
@@ -12,7 +14,9 @@ In this project, you will master relevant knowledge through five tasks. By creat
 ## Task 2.1 My First Page
 
 ### 2.1.1 Task Description
+
 Take Li Bai's poem Quiet Night Thought as the case for my first page. The displayed content mainly consists of a title on the first line, the ancient poem, its modern translation, and the creation background in the middle, as well as a signature part in the bottom right corner. The effect of the case is shown in Figure 2-1.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-001.png" alt="Image">
 </p>
@@ -20,16 +24,23 @@ Take Li Bai's poem Quiet Night Thought as the case for my first page. The displa
 <p align="center"><em>Figure 2-1 My First Page</em></p>
 
 ### 2.1.2 Knowledge Preparation
+
 HTML documents are simple to create and powerful in function, supporting the embedding of files in different data formats—this is one of the reasons for HTML’s popularity. Its main features are summarized as follows:
+
 Simplicity: HTML is a text file containing tags, which can be edited with any text editing tool. Language version upgrades adopt a superset approach, making it more flexible and convenient.
+
 Extensibility: The wide application of HTML has brought requirements such as enhanced functions and added identifiers. HTML uses extended subclass elements to ensure system expansion.
+
 Platform Independence: HTML runs based on browser interpretation. Currently, almost all web browsers support HTML, regardless of the operating system.
+
 Universality: HTML is the universal language of the Web, a simple and general markup language. It allows web developers to create complex pages combining text and images, which can be viewed by anyone online, no matter what type of computer or browser they use.
 
 #### 1.Basic Format of HTML
+
 The basic format of an HTML document mainly includes the &lt;!DOCTYPE&gt; document type declaration, the &lt;html&gt; root tag, the &lt;head&gt; head tag, and the &lt;body&gt; body tag. The details are as follows:
 
 ##### (1) &lt;!DOCTYPE&gt; Declaration
+
 The &lt;!DOCTYPE&gt; tag is located on the first line of an HTML document and is not an HTML tag. It is used to specify which HTML or XHTML standard the document follows. The DOCTYPE declaration code in an HTML5 document is as follows.
 
 ```html
@@ -39,14 +50,19 @@ The &lt;!DOCTYPE&gt; tag is located on the first line of an HTML document and is
 Always add the &lt;!DOCTYPE&gt; declaration to HTML documents so that browsers can recognize the document type and parse it accordingly. Using the HTML5 DOCTYPE declaration triggers browsers to render pages in standards-compliant mode.
 
 ##### (2) &lt;html&gt;&lt;/html&gt; Tags
+
 The &lt;html&gt; tag, also known as the root tag, is the most basic element in HTML. It starts with &lt;html&gt; and ends with &lt;/html&gt;, with all other tags nested between them. The HTML tag informs the browser that the content between these two tags is an HTML document and should be interpreted as such.
 
 ##### (3) &lt;head&gt;&lt;/head&gt; Tags
+
 The &lt;head&gt; tag is used to define the header information of a page and acts as a container for all header elements. It is the introductory part of a document, mainly used to describe basic properties of the document through embedded tags, and is generally not displayed as the main content in the browser.
+
 The most commonly used tags inside &lt;head&gt; are the &lt;title&gt; tag and the &lt;meta&gt; tag. The &lt;title&gt; tag defines the webpage title, which appears in the top-left corner of the browser window. The &lt;meta&gt; tag describes information such as the title, author, keywords, page refresh settings, and relationships with other documents.
 
 ##### (4) &lt;body&gt;&lt;/body&gt; Tags
+
 The &lt;body&gt; tag, also known as the body tag, is located inside the &lt;html&gt;&lt;/html&gt; tags and after the &lt;head&gt; tag, in a parallel relationship with &lt;head&gt;. An HTML document may contain only one pair of &lt;body&gt; tags.
+
 All content displayed on the webpage — including text, images, audio, video, and other media — must be placed inside the &lt;body&gt; tags. Only the content within &lt;body&gt; is ultimately shown to users.
 
 ##### (5) Basic HTML Structure
@@ -79,6 +95,7 @@ After learning the basic format of HTML, let's do a simple case practice to expe
 ```
 
 The effect of the case is shown in Figure 2-2.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-002.png" alt="Image">
 </p>
@@ -88,11 +105,15 @@ The effect of the case is shown in Figure 2-2.
 #### 2. Introduction to HTML Technical Terms and Grammar
 
 ##### (1) Web Page
+
 Web page: All content displayed in a browser window forms a complete web page. These web pages are actually individual files stored on a computer somewhere on the Internet.
 
 ##### (2) Tag
+
 In an HTML page, elements enclosed in angle brackets &lt; &gt; are called HTML tags, such as &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, etc. A tag is a coding command placed within &lt; &gt; markers that represents a specific function.
+
 For easier learning and understanding, HTML tags are generally divided into two categories: paired tags and self-closing tags.
+
 Paired tag: A tag composed of a start tag and an end tag. The basic syntax format is as follows.
 
 ```html
@@ -116,11 +137,15 @@ For example, adding a comment to a <p> tag, the sample code is as follows:
 HTML5 uses a loose syntax format, and tags are not case‑sensitive.
 
 ##### (3) Attributes and Attribute Values
+
 HTML tags can have attributes. Attributes provide additional information about HTML elements. An element’s attributes are usually placed in the start tag after the tag name. Attributes consist of key-value pairs; attributes are separated by spaces, and an attribute and its value are connected by an equal sign. For example: name="value". The basic format is as follows.
+
 &lt;tag_name attribute1="attribute_value1" attribute2="attribute_value2"&gt;Content&lt;/tag_name&gt;
 
 #### 3.The head Tag
+
 Common tags in the &lt;head&gt; section include &lt;link&gt;, &lt;meta&gt;, &lt;script&gt;, &lt;style&gt;, and &lt;title&gt;.
+
 The &lt;title&gt; tag is used to define the title of an HTML page and must be placed inside the &lt;head&gt; tag. An HTML document can contain only one pair of &lt;title&gt; tags. The content between the &lt;title&gt; tags is displayed in the title bar of the browser window. The basic format is as follows.
 
 ```html
@@ -128,7 +153,9 @@ The &lt;title&gt; tag is used to define the title of an HTML page and must be pl
 ```
 
 The &lt;meta&gt; tag is used to define the metadata of a page. It can appear repeatedly within the &lt;head&gt; tag and is a self-closing tag in HTML.
+
 The &lt;meta/&gt; tag itself contains no content and is used in name/value pairs. Its attributes can define relevant page parameters, such as providing keywords for search engines, the author’s name, page description, and setting the webpage refresh time.
+
 The basic format is as follows.
 
 ```html
@@ -169,6 +196,7 @@ The &lt;style&gt; tag is used to define style information for an HTML document a
 When using the &lt;style&gt; tag in HTML, the attribute type is often defined with the corresponding value text/css, indicating the use of inline CSS styles.
 
 #### 4.Heading Tags
+
 Headings are used to make web pages more semantic. Heading tags are frequently used in pages. HTML provides six levels of headings: &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;. The importance and font size decrease gradually from &lt;h1&gt; to &lt;h6&gt;. The basic format is as follows:
 
 ```html
@@ -176,6 +204,7 @@ Headings are used to make web pages more semantic. Heading tags are frequently u
 ```
 
 #### 5.Paragraph Tags
+
 Paragraphs are defined by the &lt;p&gt; tag. To display text in an organized way on a web page, paragraph tags are essential. Just like in ordinary writing, an entire web page can be divided into several paragraphs, and the tag used for paragraphs is &lt;p&gt;. The basic format is as follows:
 
 ```html
@@ -183,6 +212,7 @@ Paragraphs are defined by the &lt;p&gt; tag. To display text in an organized way
 ```
 
 #### 6.Text Formatting Tags
+
 In text content, it is often necessary to design text effects, which requires the use of text formatting tags. Commonly used text formatting tags in HTML5 are shown in Table 2-3.
 
 **Table 2-3 Text Formatting Tags**
@@ -197,6 +227,7 @@ In text content, it is often necessary to design text effects, which requires th
 | &lt;sup&gt;&lt;/sup&gt; and &lt;sub&gt;&lt;/sub&gt; | Defines text as superscript and subscript. |
 
 #### 7.Empty Tags
+
 The self-closing tags we commonly use are all empty tags, such as the &lt;meta/&gt; and &lt;link/&gt; tags we have already learned. In addition, other commonly used empty tags include &lt;hr&gt;, &lt;br&gt;, &lt;img&gt;, &lt;input&gt;, etc.
 
 ```html
@@ -207,10 +238,13 @@ The self-closing tags we commonly use are all empty tags, such as the &lt;meta/&
 ```
 
 #### 8.Introduction to Inline Tags and Block-Level Tags
+
 HTML provides a wide range of tags for organizing page structure. To make page structure organization more reasonable, HTML tags are classified into different types, generally divided into block-level tags and inline tags, also known as block-level elements and inline elements.
 
 ##### (1) Block-Level Tags
+
 Block-level elements generally start on a new line. They typically occupy an entire line or multiple lines by themselves. Width, height, alignment, and other properties can be set for them. They are often used for webpage layout and structural construction, and can contain inline elements as well as other block-level elements.
+
 Common block-level elements include &lt;h1&gt; to &lt;h6&gt;, &lt;p&gt;, &lt;div&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, etc. Among them, the &lt;div&gt; tag is the most typical block-level element.
 
 ```html
@@ -219,7 +253,9 @@ Common block-level elements include &lt;h1&gt; to &lt;h6&gt;, &lt;p&gt;, &lt;div
 ```
 
 ##### (2) Inline Tags
+
 Inline elements, also known as inline-level elements, are generally basic semantic elements. They do not occupy independent space and only support the structure by their own font size and image dimensions. Normally, properties such as width, height, and alignment cannot be set for them. They are often used to control the style of text on a page.
+
 Common inline elements include &lt;strong&gt;, &lt;b&gt;, &lt;em&gt;, &lt;i&gt;, &lt;del&gt;, &lt;s&gt;, &lt;ins&gt;, &lt;u&gt;, &lt;a&gt;, &lt;span&gt;, etc. Among them, the &lt;span&gt; tag is the most typical inline element.
 
 ```html
@@ -228,6 +264,7 @@ Common inline elements include &lt;strong&gt;, &lt;b&gt;, &lt;em&gt;, &lt;i&gt;,
 ```
 
 ##### (3) Element Conversion
+
 If you want an inline element to have some characteristics of a block-level element, or a block-level element to have some characteristics of an inline element, you can use the display property to convert the element type. The common values and functions of the display property are shown in Table 2-4.
 
 **Table 2-4 Common Values and Functions of the display Property**
@@ -240,6 +277,7 @@ If you want an inline element to have some characteristics of a block-level elem
 | none | The element will be hidden, not displayed, and take up no page space, as if the element does not exist. |
 
 ### 2.1.3 Task Implementation
+
 My first page is divided into the following five steps, as detailed below.
 
 #### Step 1: Create an HTML page.
@@ -257,6 +295,7 @@ My first page is divided into the following five steps, as detailed below.
 ```
 
 #### Step 2: Add the ancient poem Quiet Night Thought.
+
 The title Quiet Night Thought shall be implemented using heading tags, while the poem content shall be implemented using paragraph tags.Color and italic effects can be achieved using the color attributes of empty tags and text formatting tags.
 
 ```html
@@ -267,6 +306,7 @@ The title Quiet Night Thought shall be implemented using heading tags, while the
 ```
 
 #### Step 3: Implement the vernacular translation and creative background sections.
+
 Please pay attention to the use of block-level tags, paragraph tags, text formatting tags, and empty tags.
 
 ```html
@@ -285,6 +325,7 @@ Please pay attention to the use of block-level tags, paragraph tags, text format
 ```
 
 #### Step 4: Implement the signature part using paragraph tags with right alignment.
+
 Use line break tags to separate the signature from the main content.
 
 ```html
@@ -301,8 +342,11 @@ Use line break tags to separate the signature from the main content.
 ## Task 2.2 Daily News List
 
 ### 2.2.1 Task Description
+
 A news web page contains a lot of content we want to know. It presents news to users through text, images, lists and other elements, and can link multiple independently displayed web pages together.
+
 This case mainly includes a news list page and a news detail page. Clicking a hyperlink on the news list page jumps to the news detail page, which displays the news image and description content. The page effects are shown in Figure 2-3 and Figure 2-4.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-003.png" alt="Image">
 </p>
@@ -316,9 +360,11 @@ This case mainly includes a news list page and a news detail page. Clicking a hy
 ### 2.2.2 Knowledge Reserve
 
 #### 1. Introduction to Lists
+
 A list is one of the most commonly used data arrangement methods on web pages. Common lists include ordered lists, unordered lists, and definition lists.
 
 ##### (1) Ordered List
+
 An ordered list is a list with a sequential arrangement. Each list item is arranged in a specific order. For example, common rankings on web pages such as music charts and game leaderboards can be defined using ordered lists.The basic format is as follows, and the effect is shown in Figure 2-5.
 
 ```html
@@ -341,7 +387,9 @@ An ordered list is a list with a sequential arrangement. Each list item is arran
 2-5 Ordered List
 
 ##### (2) Unordered List
+
 The unordered list is the most commonly used list on web pages. It is called an "unordered list" because there is no order or hierarchy among its list items; they are usually presented side by side.
+
 The basic format is as follows, and the effect is shown in Figure 2-6.
 
 ```html
@@ -364,9 +412,13 @@ The basic format is as follows, and the effect is shown in Figure 2-6.
 <p align="center"><em>Figure 2-6 Unordered List</em></p>
 
 ##### (3) Definition List
+
 A definition list is often used to explain and describe terms or nouns. Unlike ordered and unordered lists, there are no bullets before the list items of a definition list.
+
 The &lt;dl&gt; tag represents a definition list.
+
 The &lt;dl&gt; tag is used together with &lt;dt&gt; (a term in the definition list) and &lt;dd&gt; (a description of the term in the list).
+
 The basic format is as follows, and the effect is shown in Figure 2-7.
 
 ```html
@@ -387,17 +439,23 @@ The basic format is as follows, and the effect is shown in Figure 2-7.
 </p>
 
 <p align="center"><em>Figure 2-7 Definition List</em></p>
+
 Note: Paragraphs, line breaks, images, links, other lists, etc. can be used inside list items.
 
 ##### (4) Nested Application of Lists
+
 When browsing products in online shopping malls, we often see that a certain category of products is divided into several subcategories, which usually contain further subcategories.
+
 Similarly, when using lists, a list item may also contain several sub-list items. To define sub-list items within a list item, lists need to be nested.
+
 Use the nesting of unordered lists to achieve the effect shown in Figure 2-8.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-008.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 2-8 Nested Application of Lists</em></p>
+
 The code to implement Figure 2-8 is as follows.
 
 ```html
@@ -422,9 +480,11 @@ The code to implement Figure 2-8 is as follows.
 ```
 
 #### 2.Introduction to URL Resource Paths
+
 In HTML, the concepts of absolute paths and relative paths are involved wherever files are referenced, such as hyperlinks, images, and so on.
 
 ##### (1) Absolute Path
+
 An absolute path refers to the actual path where a file exists on a hard disk. For example, if the image 1.jpg is stored in the directory C:\book\Web Layout\Code on a hard disk, the absolute path of the image 1.jpg is C:\book\Web Layout\Code\1.jpg.To specify a webpage background image using an absolute path, the following statement should be used:
 
 ```html
@@ -434,7 +494,9 @@ An absolute path refers to the actual path where a file exists on a hard disk. F
 ```
 
 ##### (2) Relative Path
+
 A relative path refers to the location of a target file relative to the current file. For example, in the case mentioned above, the file ZhangSan.html references the image bg.jpg. Since bg.jpg is in the same directory as ZhangSan.html, the following code can be used in ZhangSan.html.
+
 As long as they remain in the same directory, the image will display correctly in the browser no matter where the files are uploaded on the web server.
 
 ```html
@@ -444,8 +506,11 @@ As long as they remain in the same directory, the image will display correctly i
 ```
 
 #### 3.Hyperlinks
+
 When we browse web pages on the Internet, hyperlinks can be seen everywhere. Most of these hyperlinks are created using the &lt;a&gt;&lt;/a&gt; tag.
+
 Hyperlinks are part of the &lt;body&gt; content in an HTML document. Using hyperlinks can connect the internal parts of a web page, as well as link the web page to external websites or external links, forming an interconnected content display interface. The relevant attributes of the &lt;a&gt; tag will be explained below.
+
 In addition to the two commonly used attributes href and target, the &lt;a&gt; tag has many other attributes, as shown in Table 2-7.
 
 **Table 2-7 Attributes of the &lt;a&gt; Tag**
@@ -457,7 +522,9 @@ In addition to the two commonly used attributes href and target, the &lt;a&gt; t
 | title attribute | Displays text information when the mouse hovers over the hyperlink. |
 
 ##### (1) Internal Links (Anchor Links)
+
 If a web page is very long, users need to constantly drag the scrollbar to view the desired content when browsing. To improve the speed of information retrieval, HTML provides a special type of link — an anchor link. By creating an anchor link, users can quickly jump to the target content.
+
 An anchor uses the href attribute of the &lt;a&gt; tag to point to the id of a specific element on the page, allowing users to jump to the corresponding position when clicked.
 
 ```html
@@ -468,9 +535,13 @@ An anchor uses the href attribute of the &lt;a&gt; tag to point to the id of a s
 ```
 
 When a visitor clicks the hyperlink, the page will scroll to the position of the corresponding element with the specified id. Anchor jumping does not trigger a page refresh; it only changes the viewport position.
+
 （2）External Links (href)
+
 ①Adding links to text
+
 Text with hyperlinks has a special style. By default, linked text is blue and underlined. The &lt;a&gt;&lt;/a&gt; tag has an href attribute that specifies the address of the new page. The address specified by href generally uses a relative path.
+
 An exercise for setting hyperlinks on text is as follows:
 
 ```html
@@ -485,15 +556,21 @@ An exercise for setting hyperlinks on text is as follows:
 ```
 
 The browsing effect is shown in Figure 2-10.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-009.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 2-10 Hyperlink Settings</em></p>
+
 As can be seen from Figure 2-10, this is the default style of a hyperlink. When the link on the page is clicked, the page will jump to the page in the same directory, namely the ul_ol.html page. When clicking the browser's "Back" button to return to the original page, the color of the text link changes to purple, indicating that the link has been visited by the user.
+
 ② Modify the window opening method of the link
+
 By default, a hyperlink opens a new page by replacing the current page. According to different user needs, you can specify other ways for the hyperlink to open a new window.
+
 ③ Add tooltip text to the link
+
 The hyperlink tag provides the title attribute, which can easily give visitors prompts. The value of the title attribute is the prompt content, which appears only when the visitor’s cursor hovers over the hyperlink, so it does not affect the neatness of the page layout. The code is shown below.
 
 ```html
@@ -508,6 +585,7 @@ The hyperlink tag provides the title attribute, which can easily give visitors p
 ```
 
 The browsing effect is shown in Figure 2-11.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-010.png" alt="Image">
 </p>
@@ -515,9 +593,13 @@ The browsing effect is shown in Figure 2-11.
 2-11 Tooltip Text for Hyperlinks
 
 #### 4.Image Tags
+
 （1）Definition and Usage of the &lt;img&gt; Tag
+
 In HTML, the &lt;img&gt; tag is used to embed an image in a web page, and its function is to create a placeholder for the referenced image.
+
 The &lt;img&gt; tag is very commonly used in web pages, for example, to import a logo image, button background image, tool icon, etc. Wherever there is an image, the &lt;img&gt; tag will basically appear in the source code (except for some background images).
+
 The basic format of the &lt;img&gt; tag is as follows.
 
 ```html
@@ -525,6 +607,7 @@ The basic format of the &lt;img&gt; tag is as follows.
 ```
 
 Note: The src attribute is used to specify the address of the image to be embedded in the web page. The alt attribute is used to define alternative text for the image. Both the src attribute and the alt attribute are required attributes of the &lt;img&gt; tag.
+
 Commonly used attribute settings for the &lt;img&gt; tag are shown in Table 2-8.
 
 **Table 2-8 Attributes of the &lt;img&gt; Tag**
@@ -541,6 +624,7 @@ Commonly used attribute settings for the &lt;img&gt; tag are shown in Table 2-8.
 ### 2.2.3 Task Implementation
 
 #### Step 1: Edit the index.html file and add the news title content.
+
 html
 
 ```html
@@ -658,7 +742,9 @@ Edit the news details file detail.html.
 ## Task 2.3 Campus Survey Report
 
 ### 2.3.1 Task Description
+
 Living in the era of big data, students must have filled out various questionnaires and logged into various software and websites with account passwords. The campus survey form includes records such as age group, hobbies, messages to the school, basic information and other contents. The details are shown in Figure 2-14.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-011.png" alt="Image">
 </p>
@@ -668,14 +754,21 @@ Living in the era of big data, students must have filled out various questionnai
 ### 2.3.2 Knowledge Reserve
 
 #### 1.Introduction to Forms
+
 Forms are mainly responsible for the function of data collection in web pages. A form consists of three basic parts:
+
 Form Tag: It contains the URL of the CGI program used to process form data, as well as the method of submitting data to the server.
+
 Form Fields: They include text boxes, password boxes, hidden fields, multi-line text boxes, check boxes, radio buttons, drop-down selection boxes, file upload boxes, etc.
+
 Form Buttons: Including submit buttons, reset buttons and general buttons. They are used to send data to the server or cancel input, and can also be used to control the processing of other scripts.
 
 #### 2.The &lt;form&gt; Tag
+
 The &lt;form&gt; tag is used to create an HTML form for user input. A form contains input elements such as text fields, checkboxes, radio buttons, submit buttons, and so on. A form can also include menus, textarea, fieldset, legend, and label elements.
+
 From our understanding of forms, we know that to send data in a form to a backend server, a form area must be defined. In HTML, the &lt;form&gt; tag is used to define the form area — that is, to create a form for collecting and transmitting user information. All content inside the &lt;form&gt; tag will be submitted to the server.
+
 The basic format for creating a form is as follows:
 
 ```html
@@ -685,14 +778,17 @@ The basic format for creating a form is as follows:
 ```
 
 The demo code for form controls is shown in Figure 2-15.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-012.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 2-15 Demo Code for Form Controls</em></p>
+
 The attributes of the &lt;form&gt; tag are described below.
 
 ##### (1) The action attribute
+
 After a form collects information, it needs to send the information to a server for processing. The action attribute is used to specify the URL address of the server program that receives and processes the form data.
 
 ```html
@@ -703,6 +799,7 @@ After a form collects information, it needs to send the information to a server 
 ```
 
 ##### (2) The method attribute
+
 The method attribute is used to set the submission method of form data. Common request methods are get or post. In HTML5, the method attribute of the &lt;form&gt; tag can be used to set the way form data is sent to the server for processing. Sample code is as follows:
 
 ```html
@@ -711,17 +808,23 @@ The method attribute is used to set the submission method of form data. Common r
 ```
 
 ##### (3) The name attribute
+
 The name attribute is used to specify the name of a form to distinguish multiple forms on the same page.
 
 ##### (4) autocomplete attribute
+
 The autocomplete attribute specifies whether the form has an autocomplete function. The autocomplete attribute has two values, explained as follows:
+
 on: the form has autocomplete enabled
+
 off: the form has autocomplete disabled
 
 ##### (5) novalidate attribute
+
 The novalidate attribute specifies that automatic validation of the form is disabled when the form is submitted. Setting this attribute on a form turns off validation for the entire form.
 
 #### 3.The Input Tag
+
 The &lt;input&gt; tag is used to collect user information.
 
 ```html
@@ -729,7 +832,9 @@ The &lt;input&gt; tag is used to collect user information.
 ```
 
 Depending on the different values of the type attribute, input fields come in many forms, mainly three types: input type, selection type, and event type (button type).
+
 （1）Input Types
+
 ① Single-line Text Input Box
 
 ```html
@@ -737,6 +842,7 @@ Depending on the different values of the type attribute, input fields come in ma
 ```
 
 A single-line text input box is often used to enter short information such as username, account number, ID number, etc. Common attributes include name, value, maxlength, etc.
+
 ② Password Input Box
 
 ```html
@@ -744,6 +850,7 @@ A single-line text input box is often used to enter short information such as us
 ```
 
 A password input box provides a secure way for users to enter passwords. The text is masked so that it cannot be read, and characters in the input box are replaced with symbols such as "•".
+
 ③ email Type
 
 ```html
@@ -751,6 +858,7 @@ A password input box provides a secure way for users to enter passwords. The tex
 ```
 
 The email type is a text input box used for entering E-mail addresses. It verifies whether the content in the email input box conforms to the Email address format; if not, a corresponding error message will be prompted.
+
 ④ number Type
 
 ```html
@@ -758,11 +866,17 @@ The email type is a text input box used for entering E-mail addresses. It verifi
 ```
 
 The number-type input element provides a text box for entering numerical values. When the form is submitted, it automatically checks whether the content in the input box is a number. An error prompt will appear if the entered content is not a number or is out of the specified range.
+
 The number-type input box can restrict the entered numbers by setting allowed maximum and minimum values, valid number intervals, default values, etc. The specific attributes are described below.
+
 value: specifies the default value of the input box.
+
 max: specifies the maximum input value acceptable to the input box.
+
 min: specifies the minimum input value acceptable to the input box.
+
 step: the valid interval of the input field; the default value is 1 if not set.
+
 ⑤ tel Type
 
 ```html
@@ -770,6 +884,7 @@ step: the valid interval of the input field; the default value is 1 if not set.
 ```
 
 The tel type provides a text box for entering phone numbers. Since phone number formats vary widely, it is difficult to implement a universal format. Therefore, the tel type is usually used together with the pattern attribute.
+
 ⑥ url Type
 
 ```html
@@ -777,6 +892,7 @@ The tel type provides a text box for entering phone numbers. Since phone number 
 ```
 
 The URL-type input element is a text box used for entering URL addresses. Data will be submitted to the server if the entered content conforms to the URL address format; otherwise, submission will be blocked and a prompt message will appear.
+
 ⑦ search Type
 
 ```html
@@ -784,6 +900,7 @@ The URL-type input element is a text box used for entering URL addresses. Data w
 ```
 
 The search type is a text box dedicated to entering search keywords. It can automatically record certain characters, such as in site search or Google search. After the user enters content, a delete icon appears on its right side; clicking this icon button can quickly clear the content.
+
 ⑧ Range Type
 
 ```html
@@ -791,7 +908,9 @@ The search type is a text box dedicated to entering search keywords. It can auto
 ```
 
 The range-type input element provides a numerical input within a certain range, displayed as a slider on the web page. Its common attributes are the same as those of the number type. The minimum and maximum values can be set via the min and max attributes, and the sliding step size can be specified via the step attribute.
+
 （2）Selection Types
+
 ① Radio Button
 
 ```html
@@ -799,6 +918,7 @@ The range-type input element provides a numerical input within a certain range, 
 ```
 
 Radio buttons are used for single selection. When defining radio buttons, you must assign the same name value to options in the same group for the "single selection" function to work.
+
 ② Checkbox
 
 ```html
@@ -806,6 +926,7 @@ Radio buttons are used for single selection. When defining radio buttons, you mu
 ```
 
 Checkboxes are often used for multiple selections, such as choosing interests and hobbies. The checked attribute can be used to set a default selected item.
+
 ③ File Field
 
 ```html
@@ -813,6 +934,7 @@ Checkboxes are often used for multiple selections, such as choosing interests an
 ```
 
 When a file field is defined, users can submit a file to the backend server either by entering the file path or by selecting the file directly.
+
 ④ date pickers Type
 
 ```html
@@ -838,7 +960,9 @@ Date pickers refer to date and time input types. HTML5 provides multiple input t
 ```
 
 The color type provides a color input box for RGB color selection. Its basic format is #RRGGBB, with a default value of #000000. The default color can be changed using the value attribute. Clicking the color input box opens a color picker panel, allowing users to visually select a color conveniently.
+
 （3）Button Types
+
 ① Ordinary Button
 
 ```html
@@ -846,6 +970,7 @@ The color type provides a color input box for RGB color selection. Its basic for
 ```
 
 An ordinary button is often used with JavaScript. Beginners only need to understand it briefly.
+
 ② Submit Button
 
 ```html
@@ -853,6 +978,7 @@ An ordinary button is often used with JavaScript. Beginners only need to underst
 ```
 
 The submit button is a core control in a form. After users finish entering information, they usually need to click the submit button to complete the submission of form data. The value attribute can be used to change the default text on the submit button.
+
 ③ Reset Button
 
 ```html
@@ -860,8 +986,11 @@ The submit button is a core control in a form. After users finish entering infor
 ```
 
 When the information entered by the user is incorrect, they can click the reset button to clear all form information that has been entered. The value attribute can be used to change the default text on the reset button.
+
 To better understand and apply these attributes, a case is used next to demonstrate their usage, as shown in Example 1.
+
 Example 1: Application of attributes of the input tag.
+
 The effect is shown in Figure 2-16.
 
 ```html
@@ -900,18 +1029,25 @@ The effect is shown in Figure 2-16.
 </p>
 
 <p align="center"><em>Figure 2-16 Demonstration Example of Input Controls</em></p>
+
 In this example, different types of input controls are defined by applying various type attribute values to the &lt;input&gt; element, and other optional attributes of the &lt;input&gt; tag are used for some of these controls.
+
 The maxlength and value attributes are used to set the maximum allowed characters and the default displayed text in a single-line text input box; the size attribute is used to define the width of the password input box; and the name and checked attributes are used to set the name and default selected item of radio buttons.
+
 In the preview, different types of input controls have different appearances. When specific operations are performed, such as entering a username and password, selecting gender and hobbies, etc., the displayed effects also differ.
+
 For example, when content is entered into the password input box, it is displayed as dots instead of plain text like the username, as shown in Figure 2-17 below.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-014.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 2-17 Display Difference Between Single-line Text Box and Password Box</em></p>
+
 Note: For input types that are not supported by the browser, they will be displayed as a normal input box on the web page.
 
 #### 4. The &lt;textarea&gt; Tag
+
 A multi-line text input field that can hold an unlimited amount of text. The size of the textarea can be specified using the cols and rows attributes.
 
 ```html
@@ -921,12 +1057,15 @@ A multi-line text input field that can hold an unlimited amount of text. The siz
 ```
 
 The &lt;select&gt; Tag
+
 The select control is used to define a drop-down menu with multiple options, as shown in Figure 2-18.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-015.png" alt="Image">
 </p>
 
 <p align="center"><em>Figure 2-18 Drop-down Menu</em></p>
+
 The basic syntax format for defining a drop-down menu using the select control is as follows:
 
 ```html
@@ -1053,11 +1192,15 @@ The &lt;select&gt;&lt;/select&gt; tag is used to add a drop-down menu in a form.
 ## Task 2.4 Practical Project – Call-to-Action Section (Section F)
 
 ### 2.4.1 Task Description
+
 This practical project implements the production of the call-to-action section in a tour guide website. The header navigation will be fixed at the top when scrolling, and it also features a frosted glass effect.
+
 The next part is the call-to-action section, which has a large cover image as the background. A call-to-action button is placed in the center of this section. The CTA button includes a hover effect that follows the mouse cursor, presenting a shining effect with a border.
 
 ### 2.4.2 Effect Display
+
 The effect display of the call-to-action section is shown in Figure 2-19.
+
 <p align="center">
   <img src="../../assets/images/project-02/image-016.png" alt="Image">
 </p>
@@ -1067,7 +1210,9 @@ The effect display of the call-to-action section is shown in Figure 2-19.
 ### 2.4.3 Task Implementation
 
 #### Step 1: Create the tour guide homepage.
+
 Create a new HTML page named index.html. After creation, set the page title to “Welcome Lyon”.
+
 The code is as follows:
 
 ```html
@@ -1120,6 +1265,7 @@ img {
 ```
 
 #### Step 2: Edit the index.html file to create the webpage logo and navigation section.
+
 The code is as follows:
 
 ```html
@@ -1187,6 +1333,7 @@ Import the _header.css file in the index.css file as follows:
 ```
 
 #### Step 3: Edit the index.html file and add the call-to-action section.
+
 The code is as follows:
 
 ```html

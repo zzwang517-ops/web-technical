@@ -1,9 +1,11 @@
 # Project 9 Bootstrap Cards and Scroll Components---Fixed Width Means Self-Discipline, Fluid Width Means Freedom
 
 ## Content Guide
+
 This project focuses on the component system of Bootstrap. Bootstrap cards provide flexible and extensible content containers with a variety of variants and options. Structured layout is achieved using the card component. With predefined containers (.card), content sections (.card-header, .card-body, .card-footer) and multimedia support, you can quickly build modular units with mixed text and images as well as interactive buttons.
 
 ## Learning Objectives
+
 - ① Master the card layout component.
 - ② Be familiar with media components.
 - ③ Master the grid layout structure of Bootstrap.
@@ -12,7 +14,9 @@ This project focuses on the component system of Bootstrap. Bootstrap cards provi
 ## Task 9.1 Basic Information and Latest Events Section
 
 ### 9.1.1 Task Description
+
 The basic information and latest events module consists of basic information layout, focus effects, box-shadow effects, zoom effects, offset, blur effects, opacity effects, focus effects and gradient effects, as shown in Figure 9-1.
+
 <p align="center">
   <img src="../../assets/images/project-09/image-001.png" alt="Image">
 </p>
@@ -20,6 +24,7 @@ The basic information and latest events module consists of basic information lay
 <p align="center"><em>Figure 9-1 Service Brief</em></p>
 
 ### 9.1.2 Knowledge Preparation
+
 Bootstrap cards provide flexible and extensible content containers with a variety of variants and options. A card is a flexible and extensible content container that includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. Its main features are summarized as follows:
 
 #### 1. Card Properties
@@ -46,13 +51,21 @@ Bootstrap cards provide flexible and extensible content containers with a variet
 | .card-columns | Card columns |
 
 2、Bootstrap Colored Cards
+
 Bootstrap provides various classes for card background colors:: .bg-primary,.bg-success,.bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark 和 .bg-light。
+
 3、Titles, Text and Links
+
 Use the .card-title class on heading elements to set the card title.
+
 The .card-text class is used to set the body content of the card.
+
 The .card-link class is used to color links.
+
 4、Image Cards
+
 Add .card-img-top (image above text) or .card-img-bottom to the &lt;img&gt; tag. If you want to set an image as the background, you can use the .card-img-overlay class.
+
 Example:
 
 ```html
@@ -70,17 +83,27 @@ Example:
 ```
 
 ### 9.1.3 Task Implementation
+
 The service brief module is divided into the following seven steps, as detailed below.
 
 #### Step 1: Create the directory structure as follows:
+
 module_f :Project root directory
+
 ├─assets: Directory for images and videos
+
 ├─js: Directory for JavaScript files
+
 ├─css:Directory for style files
+
 ├─bootstrap-5.3.3.min.css
+
 ├─main.css
+
 ├─images:Directory for image resources
+
 ├─video:Directory for video resources
+
 ├─index.html:Entry webpage file
 
 #### Step 2: Edit the index.html file and wrap the outer layer with &lt;div class="container"&gt; to ensure the content is centered and responsive.
