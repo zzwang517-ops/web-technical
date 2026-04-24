@@ -192,16 +192,16 @@ console.log(fun.prop)
 
 ```text
 subtitle
-├── node_modules/  # Project dependency packages directory
-├── public/  # Directory for storing public static resources
-│   └── img/  # Static resources (manually created directory)
-├── src/  # Source code directory
-│   ├── App.vue  # Root component
-│   └── main.js  # Application entry file
-├── jsconfig.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package-lock.json  # Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
-└── README.md  # Project documentation
+├── node_modules/: Project dependency packages directory
+├── public/: Directory for storing public static resources
+│   └── img/: Static resources (manually created directory)
+├── src/: Source code directory
+│   ├── App.vue: Root component
+│   └── main.js: Application entry file
+├── jsconfig.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package-lock.json: Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
+└── README.md: Project documentation
 ```
 
 #### Step 2: Go to the src/App.vue page, generate the theme interface, and place the following code.
@@ -594,16 +594,16 @@ removeItem() {
 
 ```text
 animate
-├── node_modules/  # Project dependency packages directory
-├── public/  # Directory for storing public static resources
-│   └── img/  # Static resources (manually created directory)
-├── src/  # Source code directory
-│   ├── App.vue  # Root component
-│   └── main.js  # Application entry file
-├── jsconfig.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package-lock.json  # Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
-└── README.md  # Project documentation
+├── node_modules/: Project dependency packages directory
+├── public/: Directory for storing public static resources
+│   └── img/: Static resources (manually created directory)
+├── src/: Source code directory
+│   ├── App.vue: Root component
+│   └── main.js: Application entry file
+├── jsconfig.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package-lock.json: Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
+└── README.md: Project documentation
 ```
 
 #### Step 2: Load the fade-in and fade-out effect, the click-triggered bounce and rotation animation, and the 3D rotation animation in the App.vue file. The code is as follows.
@@ -776,28 +776,28 @@ Figure 22‑3 Import Photos
 
 ```text
 module_e-src
-├── node_modules/  # Project dependency packages directory
-├── public/  # Directory for storing public static resources
-├── src/  # Source code directory
-│   ├── assets/  # Static resources (directory created manually)
-│   ├── components/  # Reusable Vue components (directory created manually)
-│   │   ├── EffectA.vue  # Theme A displays photos and titles directly without any effects.
-│   │   ├── EffectB.vue  # Theme B animates the active photo moving from the left to the center, then exiting the screen by moving to the right. For the title, the title element follows the same left-to-right animation but starts with a 300-millisecond delay.
-│   │   ├── EffectC.vue  # Theme C animates the active photo moving from the bottom to the center, then exiting the screen by moving upward. For the subtitle, it is split into several words, each animated with a 300-millisecond delay.
-│   │   ├── EffectD.vue  # Theme D slides the active photo into the center from the left side of the screen. The photo then stays in the center. The next photo slides in and overlays the active one. Each photo has a slight random rotation between -5 and 5 degrees. The photos should not occupy the entire screen; they should take up about 85% of the screen space. The varying rotations create a stacked photo effect. Each photo has a 3px white border with a border radius of 5px, and the bottom border appears thicker due to the variant style. The title is positioned at the bottom of the photo with a white background matching the photo border.
-│   │   ├── EffectE.vue  # Theme E displays the active photo in the center of the screen. The current photo then performs a door-opening effect: it splits into left and right halves, which rotate inward in 3D perspective to simulate opening doors. The next photo appears from behind and becomes active after the current photo disappears.
-│   │   ├── EffectF.vue  # Theme F – Please create a new theme named "Theme F". You may define custom photo sliding transitions and subtitle animations.
-│   │   ├── SettingArea.vue  # Theme switching controls
-│   │   └── SlideController.vue  # Home page
-│   ├── App.vue  # Root component
-│   ├── main.js  # Application entry file
-│   ├── config.js  # Slideshow timing configuration file (created manually)
-│   ├── helper.js  # File for randomly generating image names (created manually)
-│   └── store.js  # Slideshow configuration matching file (created manually)
-├── jsconfig.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package-lock.json  # Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
-└── README.md  # Project documentation
+├── node_modules/: Project dependency packages directory
+├── public/: Directory for storing public static resources
+├── src/: Source code directory
+│   ├── assets/: Static resources (directory created manually)
+│   ├── components/: Reusable Vue components (directory created manually)
+│   │   ├── EffectA.vue: Theme A displays photos and titles directly without any effects.
+│   │   ├── EffectB.vue: Theme B animates the active photo moving from the left to the center, then exiting the screen by moving to the right. For the title, the title element follows the same left-to-right animation but starts with a 300-millisecond delay.
+│   │   ├── EffectC.vue: Theme C animates the active photo moving from the bottom to the center, then exiting the screen by moving upward. For the subtitle, it is split into several words, each animated with a 300-millisecond delay.
+│   │   ├── EffectD.vue: Theme D slides the active photo into the center from the left side of the screen. The photo then stays in the center. The next photo slides in and overlays the active one. Each photo has a slight random rotation between -5 and 5 degrees. The photos should not occupy the entire screen; they should take up about 85% of the screen space. The varying rotations create a stacked photo effect. Each photo has a 3px white border with a border radius of 5px, and the bottom border appears thicker due to the variant style. The title is positioned at the bottom of the photo with a white background matching the photo border.
+│   │   ├── EffectE.vue: Theme E displays the active photo in the center of the screen. The current photo then performs a door-opening effect: it splits into left and right halves, which rotate inward in 3D perspective to simulate opening doors. The next photo appears from behind and becomes active after the current photo disappears.
+│   │   ├── EffectF.vue: Theme F – Please create a new theme named "Theme F". You may define custom photo sliding transitions and subtitle animations.
+│   │   ├── SettingArea.vue: Theme switching controls
+│   │   └── SlideController.vue: Home page
+│   ├── App.vue: Root component
+│   ├── main.js: Application entry file
+│   ├── config.js: Slideshow timing configuration file (created manually)
+│   ├── helper.js: File for randomly generating image names (created manually)
+│   └── store.js: Slideshow configuration matching file (created manually)
+├── jsconfig.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package-lock.json: Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
+└── README.md: Project documentation
 ```
 
 #### Step 2: Load and import the switching file in the App.vue file.
@@ -902,29 +902,29 @@ Figure 22‑4 Order Photos
 
 ```text
 module_e-src
-├── node_modules/  # Project dependency packages directory
-├── public/  # Directory for storing public static resources
-├── src/  # Source code directory
-│   ├── assets/  # Static resources (directory created manually)
-│   ├── components/  # Reusable Vue components (directory created manually)
-│   │   ├── EffectA.vue  # Theme A displays photos and titles directly without any effects.
-│   │   ├── EffectB.vue  # Theme B animates the active photo moving from the left to the center, then exiting the screen by moving to the right. For the title, the title element follows the same left-to-right animation but starts with a 300-millisecond delay.
-│   │   ├── EffectC.vue  # Theme C animates the active photo moving from the bottom to the center, then exiting the screen by moving upward. For the subtitle, it is split into several words, each animated with a 300-millisecond delay.
-│   │   ├── EffectD.vue  # Theme D slides the active photo into the center from the left side of the screen. The photo then stays in the center. The next photo slides in and overlays the active one. Each photo has a slight random rotation between -5 and 5 degrees. The photos should not occupy the entire screen; they should take up about 85% of the screen space. The varying rotations create a stacked photo effect. Each photo has a 3px white border with a border radius of 5px, and the bottom border appears thicker due to the variant style. The title is positioned at the bottom of the photo with a white background matching the photo border.
-│   │   ├── EffectE.vue  # Theme E displays the active photo in the center of the screen. The current photo then performs a door-opening effect: it splits into left and right halves, which rotate inward in 3D perspective to simulate opening doors. The next photo appears from behind and becomes active after the current photo disappears.
-│   │   ├── EffectF.vue  # Theme F – Please create a new theme named "Theme F". You may define custom photo sliding transitions and subtitle animations.
-│   │   ├── SettingArea.vue  # Theme switching controls
-│   │   ├── SlideController.vue  # Home page
-│   │   └── OrderingArea.vue  # Order Photos
-│   ├── App.vue  # Root component
-│   ├── main.js  # Application entry file
-│   ├── config.js  # Slideshow timing configuration file (created manually)
-│   ├── helper.js  # File for randomly generating image names (created manually)
-│   └── store.js  # Slideshow configuration matching file (created manually)
-├── jsconfig.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package-lock.json  # Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
-└── README.md  # Project documentation
+├── node_modules/: Project dependency packages directory
+├── public/: Directory for storing public static resources
+├── src/: Source code directory
+│   ├── assets/: Static resources (directory created manually)
+│   ├── components/: Reusable Vue components (directory created manually)
+│   │   ├── EffectA.vue: Theme A displays photos and titles directly without any effects.
+│   │   ├── EffectB.vue: Theme B animates the active photo moving from the left to the center, then exiting the screen by moving to the right. For the title, the title element follows the same left-to-right animation but starts with a 300-millisecond delay.
+│   │   ├── EffectC.vue: Theme C animates the active photo moving from the bottom to the center, then exiting the screen by moving upward. For the subtitle, it is split into several words, each animated with a 300-millisecond delay.
+│   │   ├── EffectD.vue: Theme D slides the active photo into the center from the left side of the screen. The photo then stays in the center. The next photo slides in and overlays the active one. Each photo has a slight random rotation between -5 and 5 degrees. The photos should not occupy the entire screen; they should take up about 85% of the screen space. The varying rotations create a stacked photo effect. Each photo has a 3px white border with a border radius of 5px, and the bottom border appears thicker due to the variant style. The title is positioned at the bottom of the photo with a white background matching the photo border.
+│   │   ├── EffectE.vue: Theme E displays the active photo in the center of the screen. The current photo then performs a door-opening effect: it splits into left and right halves, which rotate inward in 3D perspective to simulate opening doors. The next photo appears from behind and becomes active after the current photo disappears.
+│   │   ├── EffectF.vue: Theme F – Please create a new theme named "Theme F". You may define custom photo sliding transitions and subtitle animations.
+│   │   ├── SettingArea.vue: Theme switching controls
+│   │   ├── SlideController.vue: Home page
+│   │   └── OrderingArea.vue: Order Photos
+│   ├── App.vue: Root component
+│   ├── main.js: Application entry file
+│   ├── config.js: Slideshow timing configuration file (created manually)
+│   ├── helper.js: File for randomly generating image names (created manually)
+│   └── store.js: Slideshow configuration matching file (created manually)
+├── jsconfig.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package-lock.json: Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
+└── README.md: Project documentation
 ```
 
 #### Step 2: Load and import the order photo file in the App.vue file.

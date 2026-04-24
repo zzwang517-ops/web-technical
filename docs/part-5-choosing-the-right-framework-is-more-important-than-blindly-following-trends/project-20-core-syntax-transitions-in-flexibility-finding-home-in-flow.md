@@ -295,16 +295,16 @@ The interactive weather query is divided into the following nine steps, detailed
 
 ```text
 weather
-├── node_modules/  # Project dependency packages directory
-├── public/  # Directory for storing public static resources
-│   └── img/  # Static resources (manually created directory)
-├── src/  # Source code directory
-│   ├── App.vue  # Root component
-│   └── main.js  # Application entry file
-├── jsconfig.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package-lock.json  # Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
-└── README.md  # Project documentation
+├── node_modules/: Project dependency packages directory
+├── public/: Directory for storing public static resources
+│   └── img/: Static resources (manually created directory)
+├── src/: Source code directory
+│   ├── App.vue: Root component
+│   └── main.js: Application entry file
+├── jsconfig.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package-lock.json: Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
+└── README.md: Project documentation
 ```
 
 #### Step 2: Go to the src/App.vue file and construct the overall structure. Use the single-file component structure, which includes the &lt;template&gt; section. The outermost layer is the .weather-app container, which is divided into two parts: the header (.app-header) and the main content (.main-content).
@@ -817,16 +817,16 @@ The cinema ticket booking system is divided into the following twelve steps, as 
 
 ```text
 power
-├── node_modules/  # Project dependency packages directory
-├── public/  # Directory for storing public static resources
-│   └── img/  # Static resources (manually created directory)
-├── src/  # Source code directory
-│   ├── App.vue  # Root component
-│   └── main.js  # Application entry file
-├── jsconfig.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package-lock.json  # Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
-└── README.md  # Project documentation
+├── node_modules/: Project dependency packages directory
+├── public/: Directory for storing public static resources
+│   └── img/: Static resources (manually created directory)
+├── src/: Source code directory
+│   ├── App.vue: Root component
+│   └── main.js: Application entry file
+├── jsconfig.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package-lock.json: Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
+└── README.md: Project documentation
 ```
 
 #### Step 2: Go to the src/App.vue page. It uses a modular structure consisting of a movie selection module, a showtime selection module, a seat selection module, and a user information module.
@@ -1342,23 +1342,23 @@ The effect display of the switching operation is shown in Figure 20-3.
 
 ```text
 module_e-src
-├── node_modules/  # Project dependency packages directory
-├── public/  # Directory for storing public static resources
-├── src/  # Source code directory
-│   ├── assets/  # Static resources (directory created manually)
-│   ├── components/  # Reusable Vue components (directory created manually)
-│   │   ├── EffectA.vue  # Load photos
-│   │   ├── SettingArea.vue  # Switch operations
-│   │   └── SlideController.vue  # Home page
-│   ├── App.vue  # Root component
-│   ├── main.js  # Application entry file
-│   ├── config.js  # File for configuring slide duration (created manually)
-│   ├── helper.js  # File for randomly generating image names (created manually)
-│   └── store.js  # File for matching slideshow configuration (created manually)
-├── jsconfig.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package.json  # Core metadata file of the project, recording project dependencies, script commands, version information, etc.
-├── package-lock.json  # Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
-└── README.md  # Project documentation
+├── node_modules/: Project dependency packages directory
+├── public/: Directory for storing public static resources
+├── src/: Source code directory
+│   ├── assets/: Static resources (directory created manually)
+│   ├── components/: Reusable Vue components (directory created manually)
+│   │   ├── EffectA.vue: Load photos
+│   │   ├── SettingArea.vue: Switch operations
+│   │   └── SlideController.vue: Home page
+│   ├── App.vue: Root component
+│   ├── main.js: Application entry file
+│   ├── config.js: File for configuring slide duration (created manually)
+│   ├── helper.js: File for randomly generating image names (created manually)
+│   └── store.js: File for matching slideshow configuration (created manually)
+├── jsconfig.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package.json: Core metadata file of the project, recording project dependencies, script commands, version information, etc.
+├── package-lock.json: Automatically generated file that locks the exact versions of all dependencies and sub-dependencies
+└── README.md: Project documentation
 ```
 
 #### Step 2: Import and load the switching file in the App.vue file.
